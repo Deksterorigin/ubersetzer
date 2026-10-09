@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeutschLern</string>
+    <string name="tab_translate">Übersetzen</string>
+    <string name="tab_words">Wörter</string>
+    <string name="tab_review">Wiederholen</string>
+    <string name="translate_placeholder_subtitle">Übersetzung von Wörtern und Texten (DE ⇄ RU)</string>
+    <string name="words_placeholder_subtitle">Übersetzungsverlauf und Lektionswortschatz</string>
+    <string name="review_placeholder_subtitle">Spaced-Repetition-Karteikarten (SM-2)</string>
+    <string name="action_process_text_label">DeutschLern – übersetzen</string>
+    <string name="action_back">Zurück</string>
+    <string name="action_select_language">Sprache wählen</string>
+
+    <!-- Phase 2: Translate Screen -->
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_russian">Russisch</string>
+    <string name="action_swap_direction">Richtung wechseln</string>
+    <string name="translate_input_hint">Text zum Übersetzen eingeben…</string>
+    <string name="action_clear">Löschen</string>
+    <string name="action_paste">Einfügen</string>
+    <string name="action_translate">Übersetzen</string>
+    <string name="action_copy">Kopieren</string>
+    <string name="action_share">Teilen</string>
+    <string name="action_retry">Wiederholen</string>
+    <string name="copied_to_clipboard">In die Zwischenablage kopiert</string>
+    <string name="char_counter_format">%1$d / %2$d</string>
+
+    <!-- Phase 2: Errors -->
+    <string name="error_no_internet">Keine Internetverbindung. Prüfen Sie das Netzwerk und versuchen Sie es erneut.</string>
+    <string name="error_quota_exceeded">Anfragekontingent überschritten. Bitte kurz warten und erneut versuchen.</string>
+    <string name="error_server_unavailable">Übersetzungsdienst vorübergehend nicht verfügbar. Versuchen Sie es gleich noch einmal.</string>
+    <string name="error_safety_block">Die Anfrage kann aufgrund von Inhaltsrichtlinien nicht verarbeitet werden.</string>
+    <string name="error_empty_response">Keine Übersetzung erhalten. Bitte erneut versuchen.</string>
+    <string name="error_api_key">Ungültiger oder fehlender Gemini-API-Schlüssel. Tragen Sie GEMINI_API_KEY in local.properties ein.</string>
+    <string name="error_generic">Ein Fehler bei der Übersetzung ist aufgetreten. Bitte erneut versuchen.</string>
+    <string name="error_parsing_dictionary">Wörterbuchantwort konnte nicht verarbeitet werden. Bitte erneut versuchen.</string>
+
+    <!-- Phase 3: WORD Mode & Dictionary Card -->
+    <string name="context_field_label">Kontext (Satz)</string>
+    <string name="context_field_hint">Beispielsatz zur Bedeutungspräzisierung…</string>
+    <string name="tts_voice_missing">Deutsche Sprachdaten sind nicht installiert.</string>
+    <string name="action_install_tts">Installieren</string>
+    <string name="action_save">Speichern</string>
+    <string name="saved_success">Gespeichert: %1$s</string>
+    <string name="section_synonyms">Synonyme</string>
+    <string name="section_collocations">Feste Wendungen</string>
+    <string name="badge_best_match">Kontext</string>
+    <string name="badge_selected_meaning">Meine Bedeutung</string>
+    <string name="action_speak">Vorlesen</string>
+
+    <!-- Parts of speech -->
+    <string name="pos_noun">Substantiv</string>
+    <string name="pos_verb">Verb</string>
+    <string name="pos_adjective">Adjektiv</string>
+    <string name="pos_adverb">Adverb</string>
+    <string name="pos_preposition">Präposition</string>
+    <string name="pos_conjunction">Konjunktion</string>
+    <string name="pos_pronoun">Pronomen</string>
+    <string name="pos_particle">Partikel</string>
+    <string name="pos_phrase">Ausdruck</string>
+
+    <!-- Phase 4: Words Screen & Filters -->
+    <string name="words_search_hint">Wort oder Übersetzung suchen…</string>
+    <string name="filter_all">Alle</string>
+    <string name="filter_new">Neu</string>
+    <string name="filter_learning">Lernen</string>
+    <string name="filter_known">Gelernt</string>
+    <string name="status_new">Neu</string>
+    <string name="status_learning">Lernen</string>
+    <string name="status_known">Gelernt</string>
+    <string name="action_new_session">Neue Lektion</string>
+    <string name="session_created">Neue Lektion erstellt: %1$s</string>
+    <string name="sort_by_date">Nach Datum</string>
+    <string name="sort_alphabetical">Alphabetisch</string>
+    <string name="sort_most_translated">Nach Häufigkeit</string>
+    <string name="sort_label">Sortierung</string>
+    <string name="action_delete">Löschen</string>
+    <string name="action_undo">Rückgängig</string>
+    <string name="word_deleted">Wort „%1$s“ gelöscht</string>
+    <string name="words_empty_title">Noch keine Wörter im Wörterbuch</string>
+    <string name="words_empty_desc">Übersetzen Sie Wörter im Reiter „Übersetzen“, um sie hier automatisch zu speichern.</string>
+    <string name="words_search_empty_title">Nichts gefunden</string>
+    <string name="words_search_empty_desc">Passen Sie Ihren Suchbegriff oder den Statusfilter an.</string>
+
+    <string name="action_export_csv">Export nach Anki (CSV)</string>
+    <string name="words_export_empty">Keine Wörter zum Exportieren vorhanden</string>
+
+    <!-- Phase 5: Review & SM-2 -->
+    <string name="review_due_today">Heute fällig: %1$d</string>
+    <string name="review_last_lesson_header">Wörter der letzten Lektion</string>
+    <string name="review_empty_title">Alle Wörter wiederholt!</string>
+    <string name="review_empty_desc">Für heute stehen keine Karten mehr an. Ausgezeichnete Leistung!</string>
+    <string name="review_option_last_lesson">Wörter der letzten Lektion</string>
+    <string name="flashcard_tap_to_flip">Karte zum Umdrehen antippen</string>
+    <string name="grade_again">Nochmal</string>
+    <string name="grade_hard">Schwer</string>
+    <string name="grade_good">Gut</string>
+    <string name="grade_easy">Einfach</string>
+    <string name="action_restart_review">Erneut wiederholen</string>
+    <string name="review_cards_remaining">%1$d von %2$d</string>
+
+    <!-- Settings & Multi-Provider -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_app_language_title">App-Sprache</string>
+    <string name="settings_app_language_desc">Wählen Sie die Sprache der Benutzeroberfläche</string>
+    <string name="settings_section_general">Allgemeine Einstellungen</string>
+    <string name="settings_section_active_providers">Aktive Übersetzer</string>
+    <string name="settings_section_providers">Übersetzungsanbieter</string>
+    <string name="settings_provider_word">Anbieter für Wörter</string>
+    <string name="settings_provider_text">Anbieter für Texte</string>
+    <string name="settings_model_label">Modell</string>
+    <string name="settings_model_prefix">Modell: %1$s</string>
+    <string name="settings_api_key_label">API-Schlüssel</string>
+    <string name="settings_api_key_hint">Geben Sie Ihren API-Schlüssel ein</string>
+    <string name="settings_action_test">Testen</string>
+    <string name="settings_action_get_key">Schlüssel holen</string>
+    <string name="settings_action_load_models">Modelle laden</string>
+    <string name="settings_test_success">Funktioniert</string>
+    <string name="settings_test_testing">Wird geprüft…</string>
+    <string name="settings_section_fallback">Automatischer Fallback</string>
+    <string name="settings_auto_fallback">Automatischer Fallback bei Fehlern</string>
+    <string name="settings_auto_fallback_desc">Bei 429, 5xx, Timeout oder 404 wird die Anfrage an den nächsten konfigurierten Anbieter weitergeleitet.</string>
+    <string name="settings_fallback_order_title">Reihenfolge der Fallback-Anbieter:</string>
+    <string name="settings_offline_mlkit">Offline-Modus für Texte (ML Kit)</string>
+    <string name="settings_offline_mlkit_desc">Lokale Textübersetzung direkt auf dem Gerät ohne Internetverbindung.</string>
+    <string name="settings_mlkit_download">Sprachmodelle herunterladen</string>
+    <string name="settings_mlkit_downloading">Modelle werden heruntergeladen (WLAN empfohlen)…</string>
+    <string name="settings_mlkit_ready">Modelle heruntergeladen</string>
+    <string name="settings_deepl_usage">DeepL-Zeichen verbraucht: %1$d / %2$d</string>
+    <string name="settings_show_model_caption">Modellangabe anzeigen</string>
+    <string name="settings_show_model_caption_desc">Zeigt den Namen des Modells unter der Übersetzungskarte an</string>
+    <string name="settings_use_cross_model_cache">Cache anderer Modelle nutzen</string>
+    <string name="settings_use_cross_model_cache_desc">Ermöglicht die Wiederverwendung gespeicherter Übersetzungen beim Modellwechsel, um Kontingent zu sparen.</string>
+    <string name="settings_clear_cache">Cache leeren</string>
+    <string name="settings_cache_cleared">Übersetzungscache geleert</string>
+    <string name="settings_custom_base_url">Server-URL (HTTPS)</string>
+    <string name="settings_openrouter_show_all">Alle Modelle anzeigen (inkl. kostenpflichtige)</string>
+    <string name="settings_openrouter_search">Modell suchen…</string>
+    <string name="settings_privacy_note">Hinweis: Kostenlose Tarife einiger LLM-Anbieter können Anfragen zum Trainieren von Modellen verwenden. Keine vertraulichen Daten übersetzen.</string>
+    <string name="settings_keystore_recovery_title">Schlüssel wurden zurückgesetzt</string>
+    <string name="settings_keystore_recovery_msg">Keystore-Verschlüsselungsschlüssel wurden zurückgesetzt oder beschädigt. Bitte geben Sie Ihre API-Schlüssel erneut ein.</string>
+    <string name="settings_deepl_word_disabled_hint">DeepL unterstützt keinen Wörterbuchmodus mit Grammatik (WORD), nur für Texte verfügbar.</string>
+    <string name="settings_mlkit_word_disabled_hint">ML Kit unterstützt keine Wörterbuchkarten mit Grammatik (WORD), nur für Texte verfügbar.</string>
+    <string name="settings_action_understood">Verstanden</string>
+    <string name="settings_badge_offline">Offline</string>
+    <string name="settings_badge_text">Text</string>
+    <string name="settings_rate_limits">Tariflimits</string>
+    <string name="settings_action_list_models">Liste</string>
+    <string name="settings_select_from_models">Aus %1$d Modellen wählen</string>
+    <string name="translate_add_key_card_title">API-Schlüssel hinzufügen</string>
+    <string name="translate_add_key_card_desc">Richten Sie für Wortübersetzungen mindestens einen kostenlosen Anbieter ein (Gemini, Groq, Mistral, Cerebras, OpenRouter).</string>
+    <string name="translate_open_settings">Einstellungen</string>
+    <string name="translate_refresh_different_model">Mit anderem Modell aktualisieren</string>
+    <string name="translate_fallback_snackbar">Gewechselt zu %1$s</string>
+    <string name="translate_download_mlkit_prompt">Laden Sie die Offline-Modelle von ML Kit herunter, um Texte ohne API-Schlüssel zu übersetzen</string>
+    <string name="translate_offline_mlkit_hint">Verwenden Sie für Textübersetzungen ohne Schlüssel das Offline-ML-Kit oder tragen Sie einen Schlüssel in den Einstellungen ein.</string>
+    <string name="translate_download_mlkit_btn">ML Kit herunterladen</string>
+    <string name="translate_downloading">Wird heruntergeladen…</string>
+    <string name="translate_model_not_found_message">Modell nicht verfügbar, bitte ein anderes wählen</string>
+    <string name="translate_action_reload_models">Modelle aktualisieren</string>
+
+    <!-- App Languages -->
+    <string name="lang_system">Systemstandard</string>
+    <string name="lang_ru">Russisch</string>
+    <string name="lang_en">Englisch</string>
+    <string name="lang_de">Deutsch</string>
+    <string name="lang_uk">Ukrainisch</string>
+    <string name="lang_ar">Arabisch</string>
+    <string name="lang_fa">Dari (Persisch)</string>
+    <string name="lang_ro">Rumänisch</string>
+
+    <!-- Phase 1: Voice Input (STT) -->
+    <string name="stt_mic_button_desc">Spracheingabe</string>
+    <string name="stt_listening">Zuhören...</string>
+    <string name="stt_stop_listening">Aufnahme beenden</string>
+    <string name="stt_alternatives_label">Meinten Sie:</string>
+    <string name="stt_permission_rationale">Für die Spracheingabe wird der Zugriff auf das Mikrofon benötigt</string>
+    <string name="stt_permission_settings">Einstellungen öffnen</string>
+    <string name="stt_download_model_title">Offline-Sprachpaket</string>
+    <string name="stt_download_model_desc">Sprachpaket für Spracherkennung ohne Internet herunterladen?</string>
+    <string name="stt_download_model_action">Herunterladen</string>
+    <string name="stt_first_use_notice">Die Spracherkennung kann beim Neustart von Sitzungen Systemsignale ausgeben.</string>
+    <string name="stt_error_no_match">Keine Sprache erkannt, bitte versuchen Sie es erneut</string>
+    <string name="stt_error_network">Netzwerkfehler bei der Spracherkennung</string>
+    <string name="stt_error_audio">Fehler bei der Tonaufnahme</string>
+
+    <!-- Phase 1: Manual Word Adding -->
+    <string name="add_word_title">Wort hinzufügen</string>
+    <string name="add_word_tab_translate">Übersetzen</string>
+    <string name="add_word_tab_manual">Eigener Eintrag</string>
+    <string name="add_word_tab_bulk">Als Liste</string>
+    <string name="add_word_german_word_label">Deutsches Wort</string>
+    <string name="add_word_article_label">Artikel</string>
+    <string name="add_word_pos_label">Wortart</string>
+    <string name="add_word_translation_label">Übersetzung</string>
+    <string name="add_word_example_label">Beispielsatz (optional)</string>
+    <string name="add_word_ai_enhance">Mit KI ergänzen</string>
+    <string name="add_word_ai_enhancing">Wird ergänzt...</string>
+    <string name="add_word_save_button">Speichern</string>
+    <string name="add_word_success">Wort erfolgreich hinzugefügt</string>
+
+    <!-- Phase 1: Duplicate Word Dialog -->
+    <string name="duplicate_word_title">Wort bereits im Wörterbuch</string>
+    <string name="duplicate_word_message">Das Wort „%1$s“ ist bereits gespeichert. Was möchten Sie tun?</string>
+    <string name="duplicate_word_open">Wort öffnen</string>
+    <string name="duplicate_word_add_to_lesson">Zu aktueller Lektion hinzufügen</string>
+    <string name="duplicate_word_cancel">Abbrechen</string>
+
+    <!-- Phase 1: Bulk Word Import -->
+    <string name="bulk_add_hint">Fügen Sie Wörter ein (bis zu 30), jeweils durch Zeilenumbrüche oder Kommas getrennt</string>
+    <string name="bulk_add_count">Hinzuzufügende Wörter: %1$d</string>
+    <string name="bulk_add_limit_warning">Maximal 30 Wörter auf einmal</string>
+    <string name="bulk_add_start">Übersetzen und hinzufügen</string>
+    <string name="bulk_add_progress">Verarbeite %1$d von %2$d...</string>
+    <string name="bulk_add_stop">Anhalten</string>
+    <string name="bulk_add_completed">%1$d von %2$d Wörtern hinzugefügt</string>
+    <string name="bulk_add_error_rate_limit">Anfragelimit erreicht. Bitte warten...</string>
+
+    <!-- Phase 1: STT Settings -->
+    <string name="settings_stt_category">Spracheingabe</string>
+    <string name="settings_stt_prefer_offline">Auf dem Gerät erkennen (offline)</string>
+    <string name="settings_stt_prefer_offline_desc">Lokales Sprachmodell verwenden, sofern verfügbar</string>
+    <string name="settings_stt_auto_detect">Sprache automatisch erkennen</string>
+    <string name="settings_stt_auto_detect_desc">Deutsch oder Partnersprache erkennen</string>
+    <string name="settings_stt_translate_immediately">Sofort übersetzen</string>
+    <string name="settings_stt_translate_immediately_desc">Übersetzung direkt nach Sprachaufnahme starten</string>
+
+    <!-- Phase 1: Common Actions -->
+    <string name="action_accept">Annehmen</string>
+    <string name="action_cancel">Abbrechen</string>
+
+    <!-- Phase 1: Navigation Tabs -->
+    <string name="tab_dialogues">Dialoge</string>
+    <string name="tab_check">Prüfung</string>
+
+    <!-- Phase 1: Check Tab -->
+    <string name="check_screen_title">Textprüfung</string>
+    <string name="check_history_action">Prüfungsverlauf</string>
+    <string name="check_input_placeholder">Deutschen Text zur Prüfung einfügen oder eingeben…</string>
+    <string name="check_camera_action">Text scannen</string>
+    <string name="check_action_button">Prüfen</string>
+    <string name="check_duden_disclaimer">Korrekturen folgen den Duden-Regeln. KI kann Fehler machen.</string>
+    <string name="check_mode_corrected">Korrigiert</string>
+    <string name="check_mode_original">Original</string>
+    <string name="check_overedit_warning">Das Modell hat möglicherweise mehr umformuliert als nötig. Bitte prüfen Sie die Änderungen.</string>
+    <string name="check_edits_count">Änderungen: %1$d</string>
+    <string name="check_action_accept_all">Alle annehmen</string>
+    <string name="check_filter_all">Alle</string>
+    <string name="check_category_spelling">Rechtschreibung</string>
+    <string name="check_category_grammar">Grammatik</string>
+    <string name="check_category_punctuation">Zeichensetzung</string>
+    <string name="check_category_word_choice">Wortwahl</string>
+    <string name="check_empty_no_errors">Keine Fehler gefunden</string>
+    <string name="check_empty_no_errors_desc">Der Text scheint grammatikalisch korrekt zu sein. Beachten Sie, dass KI subtile Fehler übersehen kann.</string>
+    <string name="check_comments_header">Anmerkungen &amp; Erklärungen</string>
+    <string name="check_action_new">Neue Prüfung</string>
+    <string name="check_hunk_accepted">Änderung übernommen</string>
+    <string name="check_hunk_rejected">Änderung abgelehnt</string>
+    <string name="check_add_to_vocab">Zum Wortschatz hinzufügen</string>
+    <string name="check_consent_title">Text zur Prüfung senden</string>
+    <string name="check_consent_message">Der Text wird an den ausgewählten KI-Anbieter gesendet, um Fehler zu finden. Der Text wird nicht auf unseren Servern gespeichert. Fortfahren?</string>
+    <string name="check_history_title">Prüfungsverlauf</string>
+    <string name="check_history_clear_action">Verlauf löschen</string>
+    <string name="check_history_clear_title">Prüfungsverlauf löschen?</string>
+    <string name="check_history_clear_confirm">Alle gespeicherten Prüfergebnisse werden gelöscht. Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="check_history_empty">Kein Prüfungsverlauf vorhanden</string>
+    <string name="settings_provider_check">Prüfungs-Anbieter</string>
+    <string name="settings_provider_check_hint">Für Grammatik- und Stilprüfungen werden stärkere Modelle empfohlen (Gemini 2.5 Pro, Mistral Large, Claude 3.5 Sonnet, GPT-4o).</string>
+
+    <!-- Phase 2: Photo-to-Text OCR -->
+    <string name="ocr_scan_button_desc">Text aus Foto erkennen</string>
+    <string name="ocr_source_dialog_title">Fotoeingabe</string>
+    <string name="ocr_source_document_scanner">Dokument scannen (ML Kit)</string>
+    <string name="ocr_source_camera">Foto aufnehmen (Kamera)</string>
+    <string name="ocr_source_gallery">Aus Galerie wählen</string>
+    <string name="ocr_preview_title">Erkannter Text</string>
+    <string name="ocr_preview_disclaimer">Text wurde lokal auf dem Gerät erkannt. Bitte vor der Prüfung kontrollieren.</string>
+    <string name="ocr_preview_insert_action">Einfügen</string>
+    <string name="ocr_preview_cancel_action">Abbrechen</string>
+    <string name="ocr_processing">Text wird erkannt...</string>
+    <string name="ocr_error_no_text">Kein Text im Bild gefunden</string>
+    <string name="ocr_error_failed">Fehler bei der Texterkennung</string>
+    <string name="ocr_scanner_unavailable">Dokumentenscanner ist auf diesem Gerät nicht verfügbar</string>
+
+    <!-- Dialogues Tab & Features -->
+    <string name="dialogs_title">Dialoge</string>
+    <string name="dialog_recording_title">Dialog aufnehmen</string>
+    <string name="dialog_detail_title">Dialoganalyse</string>
+    <string name="dialog_task_title">Dialogübung</string>
+    <string name="dialog_new_recording">Aufnahme starten</string>
+    <string name="dialog_empty_title">Keine gespeicherten Dialoge</string>
+    <string name="dialog_empty_desc">Nehmen Sie einen echten deutschen Dialog für Transkription, Zusammenfassung und Übungen auf</string>
+    <string name="dialog_duration_format">%1$02d:%2$02d</string>
+    <string name="dialog_segments_count">Beiträge: %1$d</string>
+    <string name="dialog_has_summary">Zusammenfassung bereit</string>
+    <string name="dialog_delete_confirm">Dialog gelöscht</string>
+    <string name="dialog_action_undo">Rückgängig</string>
+    <string name="dialog_record_start">Aufnahme starten</string>
+    <string name="dialog_record_pause">Pause</string>
+    <string name="dialog_record_resume">Fortsetzen</string>
+    <string name="dialog_record_stop">Dialog speichern</string>
+    <string name="dialog_record_cancel">Aufnahme abbrechen</string>
+    <string name="dialog_speaker_a">Sprecher A</string>
+    <string name="dialog_speaker_b">Sprecher B</string>
+    <string name="dialog_speaker_toggle">Sprecher wechseln</string>
+    <string name="dialog_recording_status_listening">Aufnahme läuft...</string>
+    <string name="dialog_recording_status_paused">Aufnahme pausiert</string>
+    <string name="dialog_cancel_confirm_title">Aufnahme abbrechen?</string>
+    <string name="dialog_cancel_confirm_message">Die aktuelle Aufnahme wird nicht gespeichert.</string>
+    <string name="dialog_cancel_confirm_discard">Verwerfen</string>
+    <string name="dialog_cancel_confirm_continue">Aufnahme fortsetzen</string>
+    <string name="dialog_tab_transcript">Transkript</string>
+    <string name="dialog_tab_summary">Zusammenfassung</string>
+    <string name="dialog_tab_tasks">Übungen</string>
+    <string name="dialog_word_tap_hint">Tippen Sie auf ein deutsches Wort, um es zu übersetzen</string>
+    <string name="dialog_add_to_vocab">Zum Lernen hinzufügen</string>
+    <string name="dialog_word_added">Wort zum Wörterbuch hinzugefügt</string>
+    <string name="dialog_generate_summary">KI-Zusammenfassung erstellen</string>
+    <string name="dialog_summary_generating">Dialog wird analysiert...</string>
+    <string name="dialog_summary_topic">Thema</string>
+    <string name="dialog_summary_de">Deutsche Zusammenfassung (B2)</string>
+    <string name="dialog_summary_partner">Zusammenfassung in Ihrer Sprache</string>
+    <string name="dialog_summary_key_points">Wichtige Punkte</string>
+    <string name="dialog_summary_key_vocab">Wichtiger Wortschatz</string>
+    <string name="dialog_refresh_summary">Zusammenfassung aktualisieren</string>
+    <string name="dialog_generate_tasks_title">Übungen zum Dialog</string>
+    <string name="dialog_task_type_mcq">Verständnisfragen (Multiple Choice)</string>
+    <string name="dialog_task_type_gap_fill">Lückentext</string>
+    <string name="dialog_task_type_open">Freie Antwort (Sprechübung)</string>
+    <string name="dialog_generate_task_action">Erstellen</string>
+    <string name="dialog_task_generating">Übungen werden mit KI generiert...</string>
+    <string name="dialog_task_score">Ergebnis: %1$d%%</string>
+    <string name="dialog_task_completed">Abgeschlossen</string>
+    <string name="dialog_task_not_started">Nicht begonnen</string>
+    <string name="dialog_task_open_action">Übung starten</string>
+    <string name="dialog_task_check_answer">Antwort prüfen</string>
+    <string name="dialog_task_correct">Richtig!</string>
+    <string name="dialog_task_incorrect">Falsch</string>
+    <string name="dialog_task_expected">Richtige Antwort:</string>
+    <string name="dialog_task_explanation">Erklärung:</string>
+    <string name="dialog_task_hint">Hinweis:</string>
+    <string name="dialog_task_your_answer">Ihre Antwort:</string>
+    <string name="dialog_task_evaluate_action">Antwort mit KI bewerten</string>
+    <string name="dialog_task_evaluating">Antwort wird bewertet...</string>
+    <string name="dialog_task_corrections">Grammatik- und Wortschatzhinweise:</string>
+    <string name="dialog_task_improved">Natürlichere Formulierung:</string>
+    <string name="dialog_task_feedback">Feedback des Lehrers:</string>
+    <string name="dialog_task_no_mistakes">Ausgezeichnet! Keine auffälligen Fehler gefunden.</string>
+    <string name="dialog_task_finish">Übung beenden</string>
+    <string name="dialog_open_speak_prompt">Tippen Sie auf das Mikrofon für eine Sprachantwort</string>
+</resources>

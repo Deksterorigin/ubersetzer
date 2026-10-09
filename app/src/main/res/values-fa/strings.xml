@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeutschLern</string>
+    <string name="tab_translate">ترجمه</string>
+    <string name="tab_words">واژه‌ها</string>
+    <string name="tab_review">مرور</string>
+    <string name="translate_placeholder_subtitle">ترجمه واژه‌ها و متون متصل (DE ⇄ RU)</string>
+    <string name="words_placeholder_subtitle">تاریخچه ترجمه و واژه‌نامه بر اساس درس‌ها</string>
+    <string name="review_placeholder_subtitle">مرور کارت‌ها با تکرار فاصله‌دار (SM-2)</string>
+    <string name="action_process_text_label">DeutschLern – ترجمه</string>
+    <string name="action_back">بازگشت</string>
+    <string name="action_select_language">انتخاب زبان</string>
+
+    <!-- Phase 2: Translate Screen -->
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_russian">روسی</string>
+    <string name="action_swap_direction">تغییر جهت</string>
+    <string name="translate_input_hint">متن را برای ترجمه وارد کنید…</string>
+    <string name="action_clear">پاک کردن</string>
+    <string name="action_paste">چسباندن</string>
+    <string name="action_translate">ترجمه</string>
+    <string name="action_copy">کپی</string>
+    <string name="action_share">اشتراک‌گذاری</string>
+    <string name="action_retry">تلاش مجدد</string>
+    <string name="copied_to_clipboard">در بریده‌دان کپی شد</string>
+    <string name="char_counter_format">%1$d / %2$d</string>
+
+    <!-- Phase 2: Errors -->
+    <string name="error_no_internet">اتصال به اینترنت برقرار نیست. شبکه را بررسی کرده و دوباره تلاش کنید.</string>
+    <string name="error_quota_exceeded">سهمیه درخواست مترجم به پایان رسیده است. کمی صبر کنید و دوباره تلاش نمایید.</string>
+    <string name="error_server_unavailable">سرویس ترجمه موقتاً در دسترس نیست. لطفاً یک دقیقه دیگر تلاش کنید.</string>
+    <string name="error_safety_block">درخواست به دلیل محدودیت‌های ایمنی محتوا قابل پردازش نیست.</string>
+    <string name="error_empty_response">دریافت ترجمه ناموفق بود. لطفاً دوباره تلاش کنید.</string>
+    <string name="error_api_key">کلید API جیمینای نامعتبر یا موجود نیست. GEMINI_API_KEY را در local.properties تنظیم کنید.</string>
+    <string name="error_generic">خطایی در هنگام ترجمه رخ داد. لطفاً دوباره تلاش کنید.</string>
+    <string name="error_parsing_dictionary">پاسخ واژه‌نامه قابل پردازش نبود. لطفاً دوباره تلاش کنید.</string>
+
+    <!-- Phase 3: WORD Mode & Dictionary Card -->
+    <string name="context_field_label">زمینه (جمله)</string>
+    <string name="context_field_hint">جمله برای روشن ساختن معنای واژه…</string>
+    <string name="tts_voice_missing">داده‌های صوتی زبان آلمانی نصب نشده است.</string>
+    <string name="action_install_tts">نصب</string>
+    <string name="action_save">ذخیره</string>
+    <string name="saved_success">ذخیره شد: %1$s</string>
+    <string name="section_synonyms">مترادف‌ها</string>
+    <string name="section_collocations">اصطلاحات رایج</string>
+    <string name="badge_best_match">زمینه</string>
+    <string name="badge_selected_meaning">معنای انتخابی</string>
+    <string name="action_speak">تلفظ</string>
+
+    <!-- Parts of speech -->
+    <string name="pos_noun">اسم</string>
+    <string name="pos_verb">فعل</string>
+    <string name="pos_adjective">صفت</string>
+    <string name="pos_adverb">قید</string>
+    <string name="pos_preposition">حرف اضافه</string>
+    <string name="pos_conjunction">حرف ربط</string>
+    <string name="pos_pronoun">ضمیر</string>
+    <string name="pos_particle">حرف نشانه</string>
+    <string name="pos_phrase">عبارت</string>
+
+    <!-- Phase 4: Words Screen & Filters -->
+    <string name="words_search_hint">جستجوی واژه یا ترجمه…</string>
+    <string name="filter_all">همه</string>
+    <string name="filter_new">جدید</string>
+    <string name="filter_learning">در حال یادگیری</string>
+    <string name="filter_known">آموخته</string>
+    <string name="status_new">جدید</string>
+    <string name="status_learning">در حال یادگیری</string>
+    <string name="status_known">آموخته</string>
+    <string name="action_new_session">درس جدید</string>
+    <string name="session_created">درس جدید ایجاد شد: %1$s</string>
+    <string name="sort_by_date">بر اساس تاریخ</string>
+    <string name="sort_alphabetical">بر اساس حروف الفبا</string>
+    <string name="sort_most_translated">بر اساس تعداد ترجمه</string>
+    <string name="sort_label">ترتیب</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_undo">لغو</string>
+    <string name="word_deleted">واژه «%1$s» حذف شد</string>
+    <string name="words_empty_title">هنوز واژه‌ای در واژه‌نامه نیست</string>
+    <string name="words_empty_desc">واژه‌ها را در تب «ترجمه» ترجمه کنید تا به صورت خودکار در اینجا ذخیره شوند.</string>
+    <string name="words_search_empty_title">چیزی یافت نشد</string>
+    <string name="words_search_empty_desc">عبارت جستجو یا فیلتر وضعیت را تغییر دهید.</string>
+
+    <string name="action_export_csv">صادر کردن به Anki (CSV)</string>
+    <string name="words_export_empty">واژه‌ای برای صادر کردن وجود ندارد</string>
+
+    <!-- Phase 5: Review & SM-2 -->
+    <string name="review_due_today">برای مرور امروز: %1$d</string>
+    <string name="review_last_lesson_header">واژه‌های درس اخیر</string>
+    <string name="review_empty_title">همه واژه‌ها مرور شدند!</string>
+    <string name="review_empty_desc">امروز کارتی برای مرور وجود ندارد. آفرین!</string>
+    <string name="review_option_last_lesson">واژه‌های درس اخیر</string>
+    <string name="flashcard_tap_to_flip">برای برگرداندن کارت ضربه بزنید</string>
+    <string name="grade_again">دوباره</string>
+    <string name="grade_hard">دشوار</string>
+    <string name="grade_good">خوب</string>
+    <string name="grade_easy">آسان</string>
+    <string name="action_restart_review">مرور دوباره</string>
+    <string name="review_cards_remaining">%1$d از %2$d</string>
+
+    <!-- Settings & Multi-Provider -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="settings_app_language_title">زبان برنامه</string>
+    <string name="settings_app_language_desc">زبان رابط کاربری برنامه را انتخاب کنید</string>
+    <string name="settings_section_general">تنظیمات عمومی</string>
+    <string name="settings_section_active_providers">ارائه‌دهندگان فعال ترجمه</string>
+    <string name="settings_section_providers">ارائه‌دهندگان ترجمه</string>
+    <string name="settings_provider_word">ارائه‌دهنده برای واژه‌ها</string>
+    <string name="settings_provider_text">ارائه‌دهنده برای متون</string>
+    <string name="settings_model_label">مدل</string>
+    <string name="settings_model_prefix">مدل: %1$s</string>
+    <string name="settings_api_key_label">کلید API</string>
+    <string name="settings_api_key_hint">کلید API خود را وارد کنید</string>
+    <string name="settings_action_test">بررسی</string>
+    <string name="settings_action_get_key">دریافت کلید</string>
+    <string name="settings_action_load_models">بارگیری فهرست مدل‌ها</string>
+    <string name="settings_test_success">فعال است</string>
+    <string name="settings_test_testing">در حال بررسی…</string>
+    <string name="settings_section_fallback">جابه‌جایی خودکار در صورت خطا</string>
+    <string name="settings_auto_fallback">جابه‌جایی خودکار هنگام بروز خطا</string>
+    <string name="settings_auto_fallback_desc">در صورت 429، 5xx، پایان مهلت یا 404، درخواست به ارائه‌دهنده بعدی فرستاده می‌شود.</string>
+    <string name="settings_fallback_order_title">ترتیب ارائه‌دهندگان پشتیبان:</string>
+    <string name="settings_offline_mlkit">حالت آفلاین برای متون (ML Kit)</string>
+    <string name="settings_offline_mlkit_desc">ترجمه محلی متن روی دستگاه بدون نیاز به اینترنت.</string>
+    <string name="settings_mlkit_download">دانلود مدل‌های زبانی</string>
+    <string name="settings_mlkit_downloading">در حال دانلود مدل‌ها (Wi-Fi توصیه می‌شود)…</string>
+    <string name="settings_mlkit_ready">مدل‌ها دانلود شدند</string>
+    <string name="settings_deepl_usage">حروف استفاده‌شده DeepL: %1$d / %2$d</string>
+    <string name="settings_show_model_caption">نمایش نام مدل ارائه‌دهنده ترجمه</string>
+    <string name="settings_show_model_caption_desc">نام مدل را در زیر کارت ترجمه نمایش می‌دهد</string>
+    <string name="settings_use_cross_model_cache">استفاده از حافظه پنهان سایر مدل‌ها</string>
+    <string name="settings_use_cross_model_cache_desc">امکان استفاده از ترجمه ذخیره‌شده هنگام تعویض مدل جهت صرفه‌جویی در سهمیه.</string>
+    <string name="settings_clear_cache">پاک کردن حافظه پنهان</string>
+    <string name="settings_cache_cleared">حافظه پنهان ترجمه پاک شد</string>
+    <string name="settings_custom_base_url">نشانی سرور (HTTPS)</string>
+    <string name="settings_openrouter_show_all">نمایش همه مدل‌ها (شامل پولی)</string>
+    <string name="settings_openrouter_search">جستجوی مدل…</string>
+    <string name="settings_privacy_note">توجه: پلن‌های رایگان برخی ارائه‌دهندگان LLM ممکن است از درخواست‌ها برای آموزش مدل استفاده کنند. اطلاعات محرمانه را ترجمه نکنید.</string>
+    <string name="settings_keystore_recovery_title">کلیدها بازنشانی شدند</string>
+    <string name="settings_keystore_recovery_msg">کلیدهای رمزنگاری Keystore بازنشانی یا آسیب دیده‌اند. لطفاً کلیدهای API را دوباره وارد کنید.</string>
+    <string name="settings_deepl_word_disabled_hint">DeepL از حالت واژه‌نامه با دستور زبان (WORD) پشتیبانی نمی‌کند، فقط برای متن در دسترس است.</string>
+    <string name="settings_mlkit_word_disabled_hint">ML Kit از کارت‌های واژه‌نامه با دستور زبان (WORD) پشتیبانی نمی‌کند، فقط برای متن در دسترس است.</string>
+    <string name="settings_action_understood">متوجه شدم</string>
+    <string name="settings_badge_offline">آفلاین</string>
+    <string name="settings_badge_text">متن</string>
+    <string name="settings_rate_limits">محدودیت‌های تعرفه</string>
+    <string name="settings_action_list_models">فهرست</string>
+    <string name="settings_select_from_models">انتخاب از بین %1$d مدل</string>
+    <string name="translate_add_key_card_title">افزودن کلید API</string>
+    <string name="translate_add_key_card_desc">برای ترجمه واژه‌ها، حداقل یک ارائه‌دهنده رایگان را پیکربندی کنید (Gemini, Groq, Mistral, Cerebras, OpenRouter).</string>
+    <string name="translate_open_settings">تنظیمات</string>
+    <string name="translate_refresh_different_model">بازخوانی با مدلی دیگر</string>
+    <string name="translate_fallback_snackbar">به %1$s تغییر یافت</string>
+    <string name="translate_download_mlkit_prompt">برای ترجمه متون بدون کلید API، مدل‌های آفلاین ML Kit را دانلود کنید</string>
+    <string name="translate_offline_mlkit_hint">برای ترجمه متن بدون کلید از ML Kit آفلاین استفاده کنید یا کلید API را در تنظیمات وارد نمایید.</string>
+    <string name="translate_download_mlkit_btn">دانلود ML Kit</string>
+    <string name="translate_downloading">در حال بارگیری…</string>
+    <string name="translate_model_not_found_message">مدل در دسترس نیست، مدل دیگری انتخاب کنید</string>
+    <string name="translate_action_reload_models">به‌روزرسانی مدل‌ها</string>
+
+    <!-- App Languages -->
+    <string name="lang_system">پیش‌فرض سیستم</string>
+    <string name="lang_ru">روسی</string>
+    <string name="lang_en">انگلیسی</string>
+    <string name="lang_de">آلمانی</string>
+    <string name="lang_uk">اوکراینی</string>
+    <string name="lang_ar">عربی</string>
+    <string name="lang_fa">دری</string>
+    <string name="lang_ro">رومانیایی</string>
+
+    <!-- Phase 1: Voice Input (STT) -->
+    <string name="stt_mic_button_desc">ورودی صوتی</string>
+    <string name="stt_listening">در حال گوش دادن...</string>
+    <string name="stt_stop_listening">توقف ضبط</string>
+    <string name="stt_alternatives_label">شاید منظورتان این باشد:</string>
+    <string name="stt_permission_rationale">برای ورودی صوتی، برنامه نیاز به دسترسی به میکروفون دارد</string>
+    <string name="stt_permission_settings">باز کردن تنظیمات</string>
+    <string name="stt_download_model_title">بسته صوتی آفلاین</string>
+    <string name="stt_download_model_desc">آیا مایلید بسته زبانی را برای تشخیص گفتار بدون اینترنت دانلود کنید؟</string>
+    <string name="stt_download_model_action">دانلود</string>
+    <string name="stt_first_use_notice">تشخیص گفتار ممکن است در شروع مجدد مداوم جلسات، صدای بوق سیستم پخش کند.</string>
+    <string name="stt_error_no_match">گفتار تشخیص داده نشد، لطفاً دوباره تلاش کنید</string>
+    <string name="stt_error_network">خطای شبکه در حین تشخیص گفتار</string>
+    <string name="stt_error_audio">خطای ضبط صدا</string>
+
+    <!-- Phase 1: Manual Word Adding -->
+    <string name="add_word_title">افزودن واژه</string>
+    <string name="add_word_tab_translate">ترجمه</string>
+    <string name="add_word_tab_manual">ورودی دستی</string>
+    <string name="add_word_tab_bulk">به صورت فهرست</string>
+    <string name="add_word_german_word_label">واژه آلمانی</string>
+    <string name="add_word_article_label">حرف تعریف</string>
+    <string name="add_word_pos_label">نقش دستوری</string>
+    <string name="add_word_translation_label">ترجمه</string>
+    <string name="add_word_example_label">جمله نمونه (اختیاری)</string>
+    <string name="add_word_ai_enhance">تکمیل با هوش مصنوعی</string>
+    <string name="add_word_ai_enhancing">در حال تکمیل با هوش مصنوعی...</string>
+    <string name="add_word_save_button">ذخیره</string>
+    <string name="add_word_success">واژه با موفقیت اضافه شد</string>
+
+    <!-- Phase 1: Duplicate Word Dialog -->
+    <string name="duplicate_word_title">واژه در واژه‌نامه موجود است</string>
+    <string name="duplicate_word_message">واژه «%1$s» قبلاً ذخیره شده است. مایل به انجام چه کاری هستید؟</string>
+    <string name="duplicate_word_open">باز کردن واژه</string>
+    <string name="duplicate_word_add_to_lesson">افزودن به درس فعلی</string>
+    <string name="duplicate_word_cancel">لغو</string>
+
+    <!-- Phase 1: Bulk Word Import -->
+    <string name="bulk_add_hint">واژه‌ها را وارد کنید (حداکثر ۳۰ مورد)، هر کدام در یک سطر جدید یا با کاما جدا شده باشند</string>
+    <string name="bulk_add_count">واژه‌های آماده برای افزودن: %1$d</string>
+    <string name="bulk_add_limit_warning">حداکثر ۳۰ واژه در هر بار</string>
+    <string name="bulk_add_start">ترجمه و افزودن</string>
+    <string name="bulk_add_progress">در حال پردازش %1$d از %2$d...</string>
+    <string name="bulk_add_stop">توقف</string>
+    <string name="bulk_add_completed">%1$d واژه از %2$d اضافه شد</string>
+    <string name="bulk_add_error_rate_limit">محدودیت درخواست پر شده است. لطفاً صبر کنید...</string>
+
+    <!-- Phase 1: STT Settings -->
+    <string name="settings_stt_category">ورودی صوتی</string>
+    <string name="settings_stt_prefer_offline">تشخیص روی دستگاه (آفلاین)</string>
+    <string name="settings_stt_prefer_offline_desc">استفاده از مدل صوتی محلی در صورت در دسترس بودن</string>
+    <string name="settings_stt_auto_detect">تشخیص خودکار زبان</string>
+    <string name="settings_stt_auto_detect_desc">تشخیص آلمانی یا زبان ترجمه</string>
+    <string name="settings_stt_translate_immediately">ترجمه فوری</string>
+    <string name="settings_stt_translate_immediately_desc">شروع ترجمه بلافاصله پس از اتمام گفتار</string>
+
+    <!-- Phase 1: Common Actions -->
+    <string name="action_accept">پذیرش</string>
+    <string name="action_cancel">انصراف</string>
+
+    <!-- Phase 1: Navigation Tabs -->
+    <string name="tab_dialogues">گفتگوها</string>
+    <string name="tab_check">بررسی</string>
+
+    <!-- Phase 1: Check Tab -->
+    <string name="check_screen_title">بررسی متن</string>
+    <string name="check_history_action">تاریخچه بررسی</string>
+    <string name="check_input_placeholder">متن آلمانی را برای بررسی بچسبانید یا وارد کنید…</string>
+    <string name="check_camera_action">اسکن متن</string>
+    <string name="check_action_button">بررسی</string>
+    <string name="check_duden_disclaimer">اصلاحات بر اساس قوانین Duden است. هوش مصنوعی ممکن است اشتباه کند.</string>
+    <string name="check_mode_corrected">اصلاح شده</string>
+    <string name="check_mode_original">اصلی</string>
+    <string name="check_overedit_warning">مدل ممکن است بیشتر از حد لازم بازنویسی کرده باشد. لطفاً اصلاحات پیشنهادی را بررسی کنید.</string>
+    <string name="check_edits_count">ویرایش‌ها: %1$d</string>
+    <string name="check_action_accept_all">پذیرش همه</string>
+    <string name="check_filter_all">همه</string>
+    <string name="check_category_spelling">املا</string>
+    <string name="check_category_grammar">دستور زبان</string>
+    <string name="check_category_punctuation">نشانه‌گذاری</string>
+    <string name="check_category_word_choice">انتخاب واژگان</string>
+    <string name="check_empty_no_errors">خطایی یافت نشد</string>
+    <string name="check_empty_no_errors_desc">متن از نظر دستوری درست به نظر می‌رسد. توجه داشته باشید که هوش مصنوعی ممکن است برخی خطاهای نامحسوس را نادیده بگیرد.</string>
+    <string name="check_comments_header">نکات و توضیحات</string>
+    <string name="check_action_new">بررسی جدید</string>
+    <string name="check_hunk_accepted">ویرایش پذیرفته شد</string>
+    <string name="check_hunk_rejected">ویرایش رد شد</string>
+    <string name="check_add_to_vocab">افزودن به واژگان</string>
+    <string name="check_consent_title">ارسال متن برای بررسی</string>
+    <string name="check_consent_message">متن برای بررسی خطاها به ارائه‌دهنده هوش مصنوعی انتخابی ارسال خواهد شد. متن در سرورهای ما ذخیره نمی‌شود. ادامه می‌دهید؟</string>
+    <string name="check_history_title">تاریخچه بررسی</string>
+    <string name="check_history_clear_action">پاک کردن تاریخچه</string>
+    <string name="check_history_clear_title">تاریخچه بررسی پاک شود؟</string>
+    <string name="check_history_clear_confirm">تمام نتایج ذخیره شده بررسی حذف خواهند شد. این اقدام غیرقابل بازگشت است.</string>
+    <string name="check_history_empty">تاریخچه بررسی خالی است</string>
+    <string name="settings_provider_check">ارائه‌دهنده بررسی</string>
+    <string name="settings_provider_check_hint">برای بررسی دستور زبان و سبک، مدل‌های قوی‌تر توصیه می‌شوند (Gemini 2.5 Pro, Mistral Large, Claude 3.5 Sonnet, GPT-4o).</string>
+
+    <!-- Phase 2: Photo-to-Text OCR -->
+    <string name="ocr_scan_button_desc">تشخیص متن از عکس</string>
+    <string name="ocr_source_dialog_title">ورودی از عکس</string>
+    <string name="ocr_source_document_scanner">اسکن سند (ML Kit)</string>
+    <string name="ocr_source_camera">عکس گرفتن (دوربین)</string>
+    <string name="ocr_source_gallery">انتخاب از گالری</string>
+    <string name="ocr_preview_title">متن شناسایی‌شده</string>
+    <string name="ocr_preview_disclaimer">متن به صورت محلی روی دستگاه بدون ارسال عکس شناسایی شد. لطفاً قبل از بررسی صحت آن را بازبینی کنید.</string>
+    <string name="ocr_preview_insert_action">افزودن</string>
+    <string name="ocr_preview_cancel_action">لغو</string>
+    <string name="ocr_processing">در حال تشخیص متن...</string>
+    <string name="ocr_error_no_text">هیچ متنی در تصویر یافت نشد</string>
+    <string name="ocr_error_failed">خطا در تشخیص متن</string>
+    <string name="ocr_scanner_unavailable">اسکنر اسناد در این دستگاه در دسترس نیست</string>
+
+    <!-- Dialogues Tab & Features -->
+    <string name="dialogs_title">گفتگوها</string>
+    <string name="dialog_recording_title">ضبط گفتگو</string>
+    <string name="dialog_detail_title">تحلیل گفتگو</string>
+    <string name="dialog_task_title">تمرین گفتگو</string>
+    <string name="dialog_new_recording">شروع ضبط</string>
+    <string name="dialog_empty_title">هیچ گفتگوی ذخیره‌شده‌ای وجود ندارد</string>
+    <string name="dialog_empty_desc">یک گفتگوی زنده به زبان آلمانی را برای رونوشت، خلاصه‌سازی و تمرین ضبط کنید</string>
+    <string name="dialog_duration_format">%1$02d:%2$02d</string>
+    <string name="dialog_segments_count">جملات: %1$d</string>
+    <string name="dialog_has_summary">خلاصه آماده است</string>
+    <string name="dialog_delete_confirm">گفتگو حذف شد</string>
+    <string name="dialog_action_undo">بازگردانی</string>
+    <string name="dialog_record_start">شروع ضبط</string>
+    <string name="dialog_record_pause">مکث</string>
+    <string name="dialog_record_resume">ادامه</string>
+    <string name="dialog_record_stop">ذخیره گفتگو</string>
+    <string name="dialog_record_cancel">لغو ضبط</string>
+    <string name="dialog_speaker_a">گوینده A</string>
+    <string name="dialog_speaker_b">گوینده B</string>
+    <string name="dialog_speaker_toggle">تعویض گوینده</string>
+    <string name="dialog_recording_status_listening">در حال ضبط...</string>
+    <string name="dialog_recording_status_paused">ضبط متوقف است</string>
+    <string name="dialog_cancel_confirm_title">لغو ضبط؟</string>
+    <string name="dialog_cancel_confirm_message">ضبط فعلی ذخیره نخواهد شد.</string>
+    <string name="dialog_cancel_confirm_discard">دور انداختن</string>
+    <string name="dialog_cancel_confirm_continue">ادامه ضبط</string>
+    <string name="dialog_tab_transcript">متن رونوشت</string>
+    <string name="dialog_tab_summary">خلاصه</string>
+    <string name="dialog_tab_tasks">تمرین‌ها</string>
+    <string name="dialog_word_tap_hint">برای ترجمه، روی هر کلمه آلمانی ضربه بزنید</string>
+    <string name="dialog_add_to_vocab">افزودن به یادگیری</string>
+    <string name="dialog_word_added">کلمه به واژگان اضافه شد</string>
+    <string name="dialog_generate_summary">تولید خلاصه با هوش مصنوعی</string>
+    <string name="dialog_summary_generating">در حال تحلیل گفتگو...</string>
+    <string name="dialog_summary_topic">موضوع</string>
+    <string name="dialog_summary_de">خلاصه به آلمانی (B2)</string>
+    <string name="dialog_summary_partner">خلاصه به زبان مادری</string>
+    <string name="dialog_summary_key_points">نکات کلیدی</string>
+    <string name="dialog_summary_key_vocab">واژگان کلیدی</string>
+    <string name="dialog_refresh_summary">به‌روزرسانی خلاصه</string>
+    <string name="dialog_generate_tasks_title">تمرین‌های گفتگو</string>
+    <string name="dialog_task_type_mcq">سوالات درک مطلب (چهارگزینه‌ای)</string>
+    <string name="dialog_task_type_gap_fill">کامل کردن جاهای خالی</string>
+    <string name="dialog_task_type_open">پاسخ باز (تمرین مکالمه)</string>
+    <string name="dialog_generate_task_action">ایجاد</string>
+    <string name="dialog_task_generating">در حال ایجاد تمرین با هوش مصنوعی...</string>
+    <string name="dialog_task_score">امتیاز: %1$d%%</string>
+    <string name="dialog_task_completed">تکمیل شده</string>
+    <string name="dialog_task_not_started">شروع نشده</string>
+    <string name="dialog_task_open_action">شروع تمرین</string>
+    <string name="dialog_task_check_answer">بررسی پاسخ</string>
+    <string name="dialog_task_correct">درست است!</string>
+    <string name="dialog_task_incorrect">نادرست</string>
+    <string name="dialog_task_expected">پاسخ صحیح:</string>
+    <string name="dialog_task_explanation">توضیح:</string>
+    <string name="dialog_task_hint">راهنما:</string>
+    <string name="dialog_task_your_answer">پاسخ شما:</string>
+    <string name="dialog_task_evaluate_action">ارزیابی پاسخ با هوش مصنوعی</string>
+    <string name="dialog_task_evaluating">در حال ارزیابی پاسخ...</string>
+    <string name="dialog_task_corrections">نکات گرامری و واژگانی:</string>
+    <string name="dialog_task_improved">بیان طبیعی‌تر:</string>
+    <string name="dialog_task_feedback">بازخورد استاد:</string>
+    <string name="dialog_task_no_mistakes">عالی! هیچ خطای قابل توجهی یافت نشد.</string>
+    <string name="dialog_task_finish">پایان تمرین</string>
+    <string name="dialog_open_speak_prompt">برای پاسخ صوتی روی میکروفون ضربه بزنید</string>
+</resources>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeutschLern</string>
+    <string name="tab_translate">الترجمة</string>
+    <string name="tab_words">الكلمات</string>
+    <string name="tab_review">المراجعة</string>
+    <string name="translate_placeholder_subtitle">ترجمة الكلمات والنصوص المترابطة (DE ⇄ RU)</string>
+    <string name="words_placeholder_subtitle">سجل الترجمة والقاموس حسب الدروس</string>
+    <string name="review_placeholder_subtitle">مراجعة البطاقات بالتكرار المتباعد (SM-2)</string>
+    <string name="action_process_text_label">DeutschLern – ترجمة</string>
+    <string name="action_back">رجوع</string>
+    <string name="action_select_language">اختر اللغة</string>
+
+    <!-- Phase 2: Translate Screen -->
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_russian">الروسية</string>
+    <string name="action_swap_direction">تبديل الاتجاه</string>
+    <string name="translate_input_hint">أدخل النص للترجمة…</string>
+    <string name="action_clear">مسح</string>
+    <string name="action_paste">لصق</string>
+    <string name="action_translate">ترجمة</string>
+    <string name="action_copy">نسخ</string>
+    <string name="action_share">مشاركة</string>
+    <string name="action_retry">إعادة المحاولة</string>
+    <string name="copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="char_counter_format">%1$d / %2$d</string>
+
+    <!-- Phase 2: Errors -->
+    <string name="error_no_internet">لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة وإعادة المحاولة.</string>
+    <string name="error_quota_exceeded">تم تجاوز حد طلبات المترجم. يرجى الانتظار قليلاً وإعادة المحاولة.</string>
+    <string name="error_server_unavailable">خدمة الترجمة غير متاحة مؤقتًا. يرجى المحاولة بعد دقيقة.</string>
+    <string name="error_safety_block">لا يمكن معالجة الطلب بسبب قيود أمان المحتوى.</string>
+    <string name="error_empty_response">تعذر الحصول على الترجمة. يرجى إعادة المحاولة.</string>
+    <string name="error_api_key">مفتاح Gemini API غير صالح أو مفقود. حدد GEMINI_API_KEY في local.properties.</string>
+    <string name="error_generic">حدث خطأ أثناء الترجمة. يرجى إعادة المحاولة.</string>
+    <string name="error_parsing_dictionary">تعذر تحليل استجابة القاموس. يرجى إعادة المحاولة.</string>
+
+    <!-- Phase 3: WORD Mode & Dictionary Card -->
+    <string name="context_field_label">السياق (جملة)</string>
+    <string name="context_field_hint">جملة لتوضيح معنى الكلمة…</string>
+    <string name="tts_voice_missing">البيانات الصوتية للغة الألمانية غير مثبتة.</string>
+    <string name="action_install_tts">تثبيت</string>
+    <string name="action_save">حفظ</string>
+    <string name="saved_success">تم الحفظ: %1$s</string>
+    <string name="section_synonyms">المرادفات</string>
+    <string name="section_collocations">التعبيرات الشائعة</string>
+    <string name="badge_best_match">السياق</string>
+    <string name="badge_selected_meaning">المعنى المختار</string>
+    <string name="action_speak">نطق</string>
+
+    <!-- Parts of speech -->
+    <string name="pos_noun">اسم</string>
+    <string name="pos_verb">فعل</string>
+    <string name="pos_adjective">صفة</string>
+    <string name="pos_adverb">ظرف</string>
+    <string name="pos_preposition">حرف جر</string>
+    <string name="pos_conjunction">حرف عطف</string>
+    <string name="pos_pronoun">ضمير</string>
+    <string name="pos_particle">أداة</string>
+    <string name="pos_phrase">عبارة</string>
+
+    <!-- Phase 4: Words Screen & Filters -->
+    <string name="words_search_hint">البحث عن كلمة أو ترجمة…</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_new">جديد</string>
+    <string name="filter_learning">قيد التعلم</string>
+    <string name="filter_known">مكتمل</string>
+    <string name="status_new">جديد</string>
+    <string name="status_learning">أتعلم</string>
+    <string name="status_known">محفوظ</string>
+    <string name="action_new_session">درس جديد</string>
+    <string name="session_created">تم إنشاء درس جديد: %1$s</string>
+    <string name="sort_by_date">حسب التاريخ</string>
+    <string name="sort_alphabetical">أبجديًا</string>
+    <string name="sort_most_translated">حسب عدد مرات الترجمة</string>
+    <string name="sort_label">الترتيب</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_undo">تراجع</string>
+    <string name="word_deleted">تم حذف الكلمة «%1$s»</string>
+    <string name="words_empty_title">لا توجد كلمات في القاموس بعد</string>
+    <string name="words_empty_desc">قم بترجمة الكلمات في تبويب «الترجمة» لحفظها هنا تلقائيًا.</string>
+    <string name="words_search_empty_title">لم يتم العثور على نتائج</string>
+    <string name="words_search_empty_desc">حاول تغيير استعلام البحث أو تصفية الحالة.</string>
+
+    <string name="action_export_csv">تصدير إلى Anki (CSV)</string>
+    <string name="words_export_empty">لا توجد كلمات للتصدير في القاموس</string>
+
+    <!-- Phase 5: Review & SM-2 -->
+    <string name="review_due_today">للمراجعة اليوم: %1$d</string>
+    <string name="review_last_lesson_header">كلمات الدرس الأخير</string>
+    <string name="review_empty_title">تمت مراجعة جميع الكلمات!</string>
+    <string name="review_empty_desc">لا توجد بطاقات للمراجعة اليوم. عمل رائع!</string>
+    <string name="review_option_last_lesson">كلمات الدرس الأخير</string>
+    <string name="flashcard_tap_to_flip">اضغط على البطاقة لقلبها</string>
+    <string name="grade_again">مجددًا</string>
+    <string name="grade_hard">صعب</string>
+    <string name="grade_good">جيد</string>
+    <string name="grade_easy">سهل</string>
+    <string name="action_restart_review">إعادة المراجعة</string>
+    <string name="review_cards_remaining">%1$d من %2$d</string>
+
+    <!-- Settings & Multi-Provider -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_app_language_title">لغة التطبيق</string>
+    <string name="settings_app_language_desc">اختر لغة واجهة التطبيق</string>
+    <string name="settings_section_general">الإعدادات العامة</string>
+    <string name="settings_section_active_providers">موفرو الترجمة النشطون</string>
+    <string name="settings_section_providers">موفرو الترجمة</string>
+    <string name="settings_provider_word">المزود للكلمات</string>
+    <string name="settings_provider_text">المزود للنصوص</string>
+    <string name="settings_model_label">النموذج</string>
+    <string name="settings_model_prefix">النموذج: %1$s</string>
+    <string name="settings_api_key_label">مفتاح API</string>
+    <string name="settings_api_key_hint">أدخل مفتاح API الخاص بك</string>
+    <string name="settings_action_test">اختبار</string>
+    <string name="settings_action_get_key">الحصول على المفتاح</string>
+    <string name="settings_action_load_models">تحميل قائمة النماذج</string>
+    <string name="settings_test_success">يعمل بنجاح</string>
+    <string name="settings_test_testing">جارٍ الاختبار…</string>
+    <string name="settings_section_fallback">التبديل التلقائي عند الأخطاء</string>
+    <string name="settings_auto_fallback">التبديل التلقائي عند الخطأ</string>
+    <string name="settings_auto_fallback_desc">عند حدوث خطأ 429 أو 5xx أو انتهاء المهلة أو 404، سيتم توجيه الطلب إلى المزود التالي.</string>
+    <string name="settings_fallback_order_title">ترتيب موفري النسخ الاحتياطي:</string>
+    <string name="settings_offline_mlkit">الوضع غير المتصل للنصوص (ML Kit)</string>
+    <string name="settings_offline_mlkit_desc">ترجمة نصوص محلية على الجهاز دون اتصال بالإنترنت.</string>
+    <string name="settings_mlkit_download">تنزيل النماذج اللغوية</string>
+    <string name="settings_mlkit_downloading">جارٍ تنزيل النماذج (يوصى بـ Wi-Fi)…</string>
+    <string name="settings_mlkit_ready">تم تنزيل النماذج</string>
+    <string name="settings_deepl_usage">حروف DeepL المستخدمة: %1$d / %2$d</string>
+    <string name="settings_show_model_caption">إظهار اسم نموذج الترجمة</string>
+    <string name="settings_show_model_caption_desc">يعرض اسم النموذج أسفل بطاقة الترجمة</string>
+    <string name="settings_use_cross_model_cache">استخدام الذاكرة المؤقتة للنماذج الأخرى</string>
+    <string name="settings_use_cross_model_cache_desc">يتيح استخدام الترجمات المحفوظة عند تبديل النماذج لتوفير الاستهلاك.</string>
+    <string name="settings_clear_cache">مسح الذاكرة المؤقتة</string>
+    <string name="settings_cache_cleared">تم مسح ذاكرة التخزين المؤقت للترجمات</string>
+    <string name="settings_custom_base_url">رابط الخادم (HTTPS)</string>
+    <string name="settings_openrouter_show_all">إظهار جميع النماذج (بما في ذلك المدفوعة)</string>
+    <string name="settings_openrouter_search">بحث عن نموذج…</string>
+    <string name="settings_privacy_note">ملاحظة: قد تستخدم المستويات المجانية لبعض موفري LLM الطلبات لتدريب النماذج. لا تترجم بيانات سرية.</string>
+    <string name="settings_keystore_recovery_title">تمت إعادة تعيين المفاتيح</string>
+    <string name="settings_keystore_recovery_msg">تمت إعادة تعيين مفاتيح تشفير Keystore أو تلفها. يرجى إعادة إدخال مفاتيح API الخاصة بك.</string>
+    <string name="settings_deepl_word_disabled_hint">DeepL لا يدعم وضع القاموس مع القواعد (WORD)، متاح للنصوص فقط.</string>
+    <string name="settings_mlkit_word_disabled_hint">ML Kit لا يدعم بطاقات القاموس مع القواعد (WORD)، متاح للنصوص فقط.</string>
+    <string name="settings_action_understood">فهمت</string>
+    <string name="settings_badge_offline">غير متصل</string>
+    <string name="settings_badge_text">نص</string>
+    <string name="settings_rate_limits">حدود الاستخدام</string>
+    <string name="settings_action_list_models">قائمة</string>
+    <string name="settings_select_from_models">الاختيار من بين %1$d نموذجًا</string>
+    <string name="translate_add_key_card_title">أضف مفتاح API</string>
+    <string name="translate_add_key_card_desc">لترجمة الكلمات، قم بإعداد مزود مجاني واحد على الأقل (Gemini, Groq, Mistral, Cerebras, OpenRouter).</string>
+    <string name="translate_open_settings">الإعدادات</string>
+    <string name="translate_refresh_different_model">تحديث بنموذج آخر</string>
+    <string name="translate_fallback_snackbar">تم التبديل إلى %1$s</string>
+    <string name="translate_download_mlkit_prompt">لترجمة النصوص بدون مفتاح API، قم بتنزيل نماذج ML Kit غير المتصلة</string>
+    <string name="translate_offline_mlkit_hint">لترجمة النص بدون مفتاح، استخدم ML Kit غير المتصل أو أضف مفتاح API في الإعدادات.</string>
+    <string name="translate_download_mlkit_btn">تنزيل ML Kit</string>
+    <string name="translate_downloading">جارٍ التنزيل…</string>
+    <string name="translate_model_not_found_message">النموذج غير متاح، اختر نموذجًا آخر</string>
+    <string name="translate_action_reload_models">تحديث النماذج</string>
+
+    <!-- App Languages -->
+    <string name="lang_system">لغة النظام (افتراضي)</string>
+    <string name="lang_ru">الروسية</string>
+    <string name="lang_en">الإنجليزية</string>
+    <string name="lang_de">الألمانية</string>
+    <string name="lang_uk">الأوكرانية</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_fa">دری</string>
+    <string name="lang_ro">الرومانية</string>
+
+    <!-- Phase 1: Voice Input (STT) -->
+    <string name="stt_mic_button_desc">الإدخال الصوتي</string>
+    <string name="stt_listening">جارٍ الاستماع...</string>
+    <string name="stt_stop_listening">إيقاف التسجيل</string>
+    <string name="stt_alternatives_label">هل تقصد:</string>
+    <string name="stt_permission_rationale">يتطلب الإدخال الصوتي إذن الوصول إلى الميكروفون</string>
+    <string name="stt_permission_settings">فتح الإعدادات</string>
+    <string name="stt_download_model_title">حزمة التعرف على الصوت دون اتصال</string>
+    <string name="stt_download_model_desc">هل تريد تنزيل حزمة اللغة للتعرف على الصوت دون اتصال بالإنترنت؟</string>
+    <string name="stt_download_model_action">تنزيل</string>
+    <string name="stt_first_use_notice">قد يُصدر التعرف على الصوت إشارات تنبيه صوتية من النظام أثناء إعادة تشغيل الجلسة بشكل متكرر.</string>
+    <string name="stt_error_no_match">لم يتم التعرف على الصوت، يرجى المحاولة مرة أخرى</string>
+    <string name="stt_error_network">خطأ في الشبكة أثناء التعرف على الصوت</string>
+    <string name="stt_error_audio">خطأ في تسجيل الصوت</string>
+
+    <!-- Phase 1: Manual Word Adding -->
+    <string name="add_word_title">إضافة كلمة</string>
+    <string name="add_word_tab_translate">ترجمة</string>
+    <string name="add_word_tab_manual">إدخال يدوي</string>
+    <string name="add_word_tab_bulk">قائمة كلمات</string>
+    <string name="add_word_german_word_label">الكلمة بالألمانية</string>
+    <string name="add_word_article_label">أداة التعريف</string>
+    <string name="add_word_pos_label">نوع الكلمة</string>
+    <string name="add_word_translation_label">الترجمة</string>
+    <string name="add_word_example_label">جملة توضيحية (اختياري)</string>
+    <string name="add_word_ai_enhance">تكملة بالذكاء الاصطناعي</string>
+    <string name="add_word_ai_enhancing">جارٍ التكملة بالذكاء الاصطناعي...</string>
+    <string name="add_word_save_button">حفظ</string>
+    <string name="add_word_success">تمت إضافة الكلمة بنجاح</string>
+
+    <!-- Phase 1: Duplicate Word Dialog -->
+    <string name="duplicate_word_title">الكلمة موجودة بالفعل في المفردات</string>
+    <string name="duplicate_word_message">الكلمة «%1$s» محفوظة بالفعل. ما الذي تريد فعله؟</string>
+    <string name="duplicate_word_open">فتح الكلمة</string>
+    <string name="duplicate_word_add_to_lesson">إضافة إلى الدرس الحالي</string>
+    <string name="duplicate_word_cancel">إلغاء</string>
+
+    <!-- Phase 1: Bulk Word Import -->
+    <string name="bulk_add_hint">الصق الكلمات (حتى 30 كلمة)، كل كلمة في سطر جديد أو مفصولة بفواصل</string>
+    <string name="bulk_add_count">عدد الكلمات للإضافة: %1$d</string>
+    <string name="bulk_add_limit_warning">الحد الأقصى 30 كلمة في المرة الواحدة</string>
+    <string name="bulk_add_start">ترجمة وإضافة</string>
+    <string name="bulk_add_progress">جارٍ معالجة %1$d من أصل %2$d...</string>
+    <string name="bulk_add_stop">إيقاف</string>
+    <string name="bulk_add_completed">تمت إضافة %1$d من أصل %2$d كلمة</string>
+    <string name="bulk_add_error_rate_limit">تم تجاوز الحد المسموح للطلبات. جارٍ الانتظار...</string>
+
+    <!-- Phase 1: STT Settings -->
+    <string name="settings_stt_category">الإدخال الصوتي</string>
+    <string name="settings_stt_prefer_offline">التعرف على الجهاز (دون اتصال)</string>
+    <string name="settings_stt_prefer_offline_desc">استخدام نموذج الصوت المحلي إذا كان متاحًا</string>
+    <string name="settings_stt_auto_detect">التعرف التلقائي على اللغة</string>
+    <string name="settings_stt_auto_detect_desc">اكتشاف الألمانية أو لغة الترجمة</string>
+    <string name="settings_stt_translate_immediately">ترجمة فورية</string>
+    <string name="settings_stt_translate_immediately_desc">بدء الترجمة مباشرة بعد انتهاء الكلام</string>
+
+    <!-- Phase 1: Common Actions -->
+    <string name="action_accept">قبول</string>
+    <string name="action_cancel">إلغاء</string>
+
+    <!-- Phase 1: Navigation Tabs -->
+    <string name="tab_dialogues">المحادثات</string>
+    <string name="tab_check">التدقيق</string>
+
+    <!-- Phase 1: Check Tab -->
+    <string name="check_screen_title">تدقيق النص</string>
+    <string name="check_history_action">سجل التدقيق</string>
+    <string name="check_input_placeholder">الصق أو اكتب النص الألماني للتدقيق…</string>
+    <string name="check_camera_action">مسح النص</string>
+    <string name="check_action_button">تدقيق</string>
+    <string name="check_duden_disclaimer">تتبع التصحيحات قواعد دودن. قد يرتكب الذكاء الاصطناعي أخطاء.</string>
+    <string name="check_mode_corrected">المصحح</string>
+    <string name="check_mode_original">الأصلي</string>
+    <string name="check_overedit_warning">قد يكون النموذج قد أعاد صياغة أكثر من اللازم. يرجى مراجعة التعديلات المقترحة.</string>
+    <string name="check_edits_count">التعديلات: %1$d</string>
+    <string name="check_action_accept_all">قبول الكل</string>
+    <string name="check_filter_all">الكل</string>
+    <string name="check_category_spelling">الإملاء</string>
+    <string name="check_category_grammar">القواعد</string>
+    <string name="check_category_punctuation">علامات الترقيم</string>
+    <string name="check_category_word_choice">اختيار الكلمات</string>
+    <string name="check_empty_no_errors">لم يتم العثور على أخطاء</string>
+    <string name="check_empty_no_errors_desc">يبدو النص صحيحاً نحوياً. يُرجى ملاحظة أن الذكاء الاصطناعي قد يغفل بعض الأخطاء الدقيقة.</string>
+    <string name="check_comments_header">الملاحظات والتوضيحات</string>
+    <string name="check_action_new">تدقيق جديد</string>
+    <string name="check_hunk_accepted">تم قبول التعديل</string>
+    <string name="check_hunk_rejected">تم رفض التعديل</string>
+    <string name="check_add_to_vocab">إضافة إلى المفردات</string>
+    <string name="check_consent_title">إرسال النص للتدقيق</string>
+    <string name="check_consent_message">سيتم إرسال النص إلى مزود الذكاء الاصطناعي المحدد للتحقق من الأخطاء. لا يتم حفظ النص على خوادمنا. هل تريد المتابعة؟</string>
+    <string name="check_history_title">سجل التدقيق</string>
+    <string name="check_history_clear_action">مسح السجل</string>
+    <string name="check_history_clear_title">مسح سجل التدقيق؟</string>
+    <string name="check_history_clear_confirm">سيتم حذف جميع نتائج التدقيق المحفوظة. لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="check_history_empty">سجل التدقيق فارغ</string>
+    <string name="settings_provider_check">مزود خدمة التدقيق</string>
+    <string name="settings_provider_check_hint">يُوصى باستخدام نماذج أكثر تقدماً لتدقيق القواعد والأسلوب (Gemini 2.5 Pro, Mistral Large, Claude 3.5 Sonnet, GPT-4o).</string>
+
+    <!-- Phase 2: Photo-to-Text OCR -->
+    <string name="ocr_scan_button_desc">التعرف على النص من الصورة</string>
+    <string name="ocr_source_dialog_title">إدخال من صورة</string>
+    <string name="ocr_source_document_scanner">مسح المستند (ML Kit)</string>
+    <string name="ocr_source_camera">التقاط صورة (الكاميرا)</string>
+    <string name="ocr_source_gallery">اختيار من المعرض</string>
+    <string name="ocr_preview_title">النص الذي تم التعرف عليه</string>
+    <string name="ocr_preview_disclaimer">تم التعرف على النص محلياً على الجهاز دون رفع الصور. تحقق من الدقة قبل الفحص.</string>
+    <string name="ocr_preview_insert_action">إدراج</string>
+    <string name="ocr_preview_cancel_action">إلغاء</string>
+    <string name="ocr_processing">جارٍ التعرف على النص...</string>
+    <string name="ocr_error_no_text">لم يتم العثور على نص في الصورة</string>
+    <string name="ocr_error_failed">فشل التعرف على النص</string>
+    <string name="ocr_scanner_unavailable">ماسح المستندات غير متوفر على هذا الجهاز</string>
+
+    <!-- Dialogues Tab & Features -->
+    <string name="dialogs_title">المحادثات</string>
+    <string name="dialog_recording_title">تسجيل محادثة</string>
+    <string name="dialog_detail_title">تحليل المحادثة</string>
+    <string name="dialog_task_title">تمرين على المحادثة</string>
+    <string name="dialog_new_recording">بدء التسجيل</string>
+    <string name="dialog_empty_title">لا توجد محادثات محفوظة</string>
+    <string name="dialog_empty_desc">سجّل محادثة مباشرة باللغة الألمانية لتحويلها إلى نص وتلخيصها وإنشاء تمارين</string>
+    <string name="dialog_duration_format">%1$02d:%2$02d</string>
+    <string name="dialog_segments_count">الأسطر: %1$d</string>
+    <string name="dialog_has_summary">الملخص جاهز</string>
+    <string name="dialog_delete_confirm">تم حذف المحادثة</string>
+    <string name="dialog_action_undo">تراجع</string>
+    <string name="dialog_record_start">بدء التسجيل</string>
+    <string name="dialog_record_pause">إيقاف مؤقت</string>
+    <string name="dialog_record_resume">استئناف</string>
+    <string name="dialog_record_stop">حفظ المحادثة</string>
+    <string name="dialog_record_cancel">إلغاء التسجيل</string>
+    <string name="dialog_speaker_a">المتحدث A</string>
+    <string name="dialog_speaker_b">المتحدث B</string>
+    <string name="dialog_speaker_toggle">تبديل المتحدث</string>
+    <string name="dialog_recording_status_listening">جارٍ التسجيل...</string>
+    <string name="dialog_recording_status_paused">التسجيل متوقف مؤقتاً</string>
+    <string name="dialog_cancel_confirm_title">إلغاء التسجيل؟</string>
+    <string name="dialog_cancel_confirm_message">لن يتم حفظ التسجيل الحالي.</string>
+    <string name="dialog_cancel_confirm_discard">تجاهل</string>
+    <string name="dialog_cancel_confirm_continue">متابعة التسجيل</string>
+    <string name="dialog_tab_transcript">النص المكتوب</string>
+    <string name="dialog_tab_summary">الملخص</string>
+    <string name="dialog_tab_tasks">التمارين</string>
+    <string name="dialog_word_tap_hint">اضغط على أي كلمة ألمانية لترجمتها</string>
+    <string name="dialog_add_to_vocab">إضافة إلى التعلم</string>
+    <string name="dialog_word_added">تمت إضافة الكلمة إلى المفردات</string>
+    <string name="dialog_generate_summary">إنشاء ملخص بالذكاء الاصطناعي</string>
+    <string name="dialog_summary_generating">جارٍ تحليل المحادثة...</string>
+    <string name="dialog_summary_topic">الموضوع</string>
+    <string name="dialog_summary_de">ملخص بالألمانية (B2)</string>
+    <string name="dialog_summary_partner">الملخص بلغتك</string>
+    <string name="dialog_summary_key_points">النقاط الرئيسية</string>
+    <string name="dialog_summary_key_vocab">المفردات الهامة</string>
+    <string name="dialog_refresh_summary">تحديث الملخص</string>
+    <string name="dialog_generate_tasks_title">تمارين على المحادثة</string>
+    <string name="dialog_task_type_mcq">أسئلة الفهم (اختيار من متعدد)</string>
+    <string name="dialog_task_type_gap_fill">ملء الفراغات</string>
+    <string name="dialog_task_type_open">إجابة حرة (ممارسة التحدث)</string>
+    <string name="dialog_generate_task_action">إنشاء</string>
+    <string name="dialog_task_generating">جارٍ إنشاء التمارين بالذكاء الاصطناعي...</string>
+    <string name="dialog_task_score">النتيجة: %1$d%%</string>
+    <string name="dialog_task_completed">مكتمل</string>
+    <string name="dialog_task_not_started">لم يبدأ</string>
+    <string name="dialog_task_open_action">بدء التمرين</string>
+    <string name="dialog_task_check_answer">التحقق من الإجابة</string>
+    <string name="dialog_task_correct">صحيح!</string>
+    <string name="dialog_task_incorrect">غير صحيح</string>
+    <string name="dialog_task_expected">الإجابة الصحيحة:</string>
+    <string name="dialog_task_explanation">الشرح:</string>
+    <string name="dialog_task_hint">تلميح:</string>
+    <string name="dialog_task_your_answer">إجابتك:</string>
+    <string name="dialog_task_evaluate_action">تقييم الإجابة بالذكاء الاصطناعي</string>
+    <string name="dialog_task_evaluating">جارٍ تقييم الإجابة...</string>
+    <string name="dialog_task_corrections">ملاحظات القواعد والمفردات:</string>
+    <string name="dialog_task_improved">صياغة أكثر دقة وطبيعية:</string>
+    <string name="dialog_task_feedback">ملاحظات المعلم:</string>
+    <string name="dialog_task_no_mistakes">ممتاز! لم يتم العثور على أخطاء ملحوظة.</string>
+    <string name="dialog_task_finish">إنهاء التمرين</string>
+    <string name="dialog_open_speak_prompt">اضغط على الميكروفون للإجابة بالصوت</string>
+</resources>

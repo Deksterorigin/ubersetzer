@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeutschLern</string>
+    <string name="tab_translate">Переклад</string>
+    <string name="tab_words">Слова</string>
+    <string name="tab_review">Повторення</string>
+    <string name="translate_placeholder_subtitle">Переклад слів та зв’язних текстів (DE ⇄ RU)</string>
+    <string name="words_placeholder_subtitle">Історія перекладів та словник за уроками</string>
+    <string name="review_placeholder_subtitle">Інтервальне повторення карток (SM-2)</string>
+    <string name="action_process_text_label">DeutschLern – перекласти</string>
+    <string name="action_back">Назад</string>
+    <string name="action_select_language">Вибрати мову</string>
+
+    <!-- Phase 2: Translate Screen -->
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_russian">Російська</string>
+    <string name="action_swap_direction">Змінити напрямок</string>
+    <string name="translate_input_hint">Введіть текст для перекладу…</string>
+    <string name="action_clear">Очистити</string>
+    <string name="action_paste">Вставити</string>
+    <string name="action_translate">Перекласти</string>
+    <string name="action_copy">Копіювати</string>
+    <string name="action_share">Поділитися</string>
+    <string name="action_retry">Повторити</string>
+    <string name="copied_to_clipboard">Скопійовано в буфер обміну</string>
+    <string name="char_counter_format">%1$d / %2$d</string>
+
+    <!-- Phase 2: Errors -->
+    <string name="error_no_internet">Немає підключення до інтернету. Перевірте мережу та повторіть спробу.</string>
+    <string name="error_quota_exceeded">Перевищено ліміт запитів до перекладача. Зачекайте трохи і повторіть.</string>
+    <string name="error_server_unavailable">Сервіс перекладу тимчасово недоступний. Спробуйте знову через хвилину.</string>
+    <string name="error_safety_block">Запит не може бути оброблений через обмеження безпеки вмісту.</string>
+    <string name="error_empty_response">Не вдалося отримати переклад. Спробуйте повторити запит.</string>
+    <string name="error_api_key">Недійсний або відсутній API-ключ Gemini. Вкажіть GEMINI_API_KEY у local.properties.</string>
+    <string name="error_generic">Виникла помилка під час перекладу. Спробуйте повторити запит.</string>
+    <string name="error_parsing_dictionary">Не вдалося обробити відповідь словника. Спробуйте повторити запит.</string>
+
+    <!-- Phase 3: WORD Mode & Dictionary Card -->
+    <string name="context_field_label">Контекст (речення)</string>
+    <string name="context_field_hint">Речення для уточнення значення слова…</string>
+    <string name="tts_voice_missing">Голосові дані для німецької мови не встановлені.</string>
+    <string name="action_install_tts">Встановити</string>
+    <string name="action_save">Зберегти</string>
+    <string name="saved_success">Збережено: %1$s</string>
+    <string name="section_synonyms">Синоніми</string>
+    <string name="section_collocations">Стійкі вирази</string>
+    <string name="badge_best_match">Контекст</string>
+    <string name="badge_selected_meaning">Моє значення</string>
+    <string name="action_speak">Озвучити</string>
+
+    <!-- Parts of speech -->
+    <string name="pos_noun">Іменник</string>
+    <string name="pos_verb">Дієслово</string>
+    <string name="pos_adjective">Прикметник</string>
+    <string name="pos_adverb">Прислівник</string>
+    <string name="pos_preposition">Прийменник</string>
+    <string name="pos_conjunction">Сполучник</string>
+    <string name="pos_pronoun">Займенник</string>
+    <string name="pos_particle">Частка</string>
+    <string name="pos_phrase">Вираз</string>
+
+    <!-- Phase 4: Words Screen & Filters -->
+    <string name="words_search_hint">Пошук слова або перекладу…</string>
+    <string name="filter_all">Всі</string>
+    <string name="filter_new">Нові</string>
+    <string name="filter_learning">Вчу</string>
+    <string name="filter_known">Вивчено</string>
+    <string name="status_new">Нове</string>
+    <string name="status_learning">Вчу</string>
+    <string name="status_known">Вивчено</string>
+    <string name="action_new_session">Новий урок</string>
+    <string name="session_created">Створено новий урок: %1$s</string>
+    <string name="sort_by_date">За датою</string>
+    <string name="sort_alphabetical">За алфавітом</string>
+    <string name="sort_most_translated">За кількістю перекладів</string>
+    <string name="sort_label">Сортування</string>
+    <string name="action_delete">Видалити</string>
+    <string name="action_undo">Скасувати</string>
+    <string name="word_deleted">Слово «%1$s» видалено</string>
+    <string name="words_empty_title">У словнику поки немає слів</string>
+    <string name="words_empty_desc">Перекладайте слова на вкладці «Переклад», щоб зберігати їх сюди автоматично.</string>
+    <string name="words_search_empty_title">Нічого не знайдено</string>
+    <string name="words_search_empty_desc">Спробуйте змінити пошуковий запит або фільтр статусу.</string>
+
+    <string name="action_export_csv">Експорт в Anki (CSV)</string>
+    <string name="words_export_empty">У словнику немає слів для експорту</string>
+
+    <!-- Phase 5: Review & SM-2 -->
+    <string name="review_due_today">До повторення сьогодні: %1$d</string>
+    <string name="review_last_lesson_header">Слова останнього уроку</string>
+    <string name="review_empty_title">Всі слова повторено!</string>
+    <string name="review_empty_desc">На сьогодні карток для повторення немає. Чудова робота!</string>
+    <string name="review_option_last_lesson">Слова останнього уроку</string>
+    <string name="flashcard_tap_to_flip">Натисніть на картку, щоб перевернути</string>
+    <string name="grade_again">Знову</string>
+    <string name="grade_hard">Важко</string>
+    <string name="grade_good">Добре</string>
+    <string name="grade_easy">Легко</string>
+    <string name="action_restart_review">Повторити спочатку</string>
+    <string name="review_cards_remaining">%1$d з %2$d</string>
+
+    <!-- Settings & Multi-Provider -->
+    <string name="settings_title">Налаштування</string>
+    <string name="settings_app_language_title">Мова інтерфейсу</string>
+    <string name="settings_app_language_desc">Виберіть мову інтерфейсу застосунку</string>
+    <string name="settings_section_general">Загальні налаштування</string>
+    <string name="settings_section_active_providers">Активні перекладачі</string>
+    <string name="settings_section_providers">Провайдери перекладу</string>
+    <string name="settings_provider_word">Провайдер для слів</string>
+    <string name="settings_provider_text">Провайдер для текстів</string>
+    <string name="settings_model_label">Модель</string>
+    <string name="settings_model_prefix">Модель: %1$s</string>
+    <string name="settings_api_key_label">API-ключ</string>
+    <string name="settings_api_key_hint">Введіть ваш API-ключ</string>
+    <string name="settings_action_test">Перевірити</string>
+    <string name="settings_action_get_key">Отримати ключ</string>
+    <string name="settings_action_load_models">Завантажити список моделей</string>
+    <string name="settings_test_success">Працює</string>
+    <string name="settings_test_testing">Перевірка…</string>
+    <string name="settings_section_fallback">Автоперемикання при помилках</string>
+    <string name="settings_auto_fallback">Автоперемикання при помилці</string>
+    <string name="settings_auto_fallback_desc">При 429, 5xx, таймауті або 404 запит буде перенаправлено на наступний налаштований провайдер.</string>
+    <string name="settings_fallback_order_title">Порядок резервних провайдерів:</string>
+    <string name="settings_offline_mlkit">Офлайн-режим для текстів (ML Kit)</string>
+    <string name="settings_offline_mlkit_desc">Локальний переклад текстів на пристрої за відсутності мережі.</string>
+    <string name="settings_mlkit_download">Завантажити мовні моделі</string>
+    <string name="settings_mlkit_downloading">Завантаження моделей (рекомендується Wi-Fi)…</string>
+    <string name="settings_mlkit_ready">Моделі завантажені</string>
+    <string name="settings_deepl_usage">Використано знаків DeepL: %1$d / %2$d</string>
+    <string name="settings_show_model_caption">Показувати назву моделі перекладу</string>
+    <string name="settings_show_model_caption_desc">Відображає назву моделі під карткою перекладу</string>
+    <string name="settings_use_cross_model_cache">Використовувати кеш інших моделей</string>
+    <string name="settings_use_cross_model_cache_desc">Дозволяє використовувати збережений переклад при зміні моделей, економлячи квоту.</string>
+    <string name="settings_clear_cache">Очистити кеш</string>
+    <string name="settings_cache_cleared">Кеш перекладів очищено</string>
+    <string name="settings_custom_base_url">URL сервера (HTTPS)</string>
+    <string name="settings_openrouter_show_all">Показати всі моделі (включно з платними)</string>
+    <string name="settings_openrouter_search">Пошук моделі…</string>
+    <string name="settings_privacy_note">Примітка: безкоштовні тарифи деяких LLM-провайдерів можуть використовувати запити для навчання моделей. Не перекладайте конфіденційні дані.</string>
+    <string name="settings_keystore_recovery_title">Ключі було скинуто</string>
+    <string name="settings_keystore_recovery_msg">Ключі шифрування Keystore були скинуті або пошкоджені. Будь ласка, введіть API-ключі повторно.</string>
+    <string name="settings_deepl_word_disabled_hint">DeepL не підтримує режим словника з граматикою (WORD), доступний лише для текстів.</string>
+    <string name="settings_mlkit_word_disabled_hint">ML Kit не підтримує словникові картки з граматикою (WORD), доступний лише для текстів.</string>
+    <string name="settings_action_understood">Зрозуміло</string>
+    <string name="settings_badge_offline">Офлайн</string>
+    <string name="settings_badge_text">Текст</string>
+    <string name="settings_rate_limits">Ліміти тарифу</string>
+    <string name="settings_action_list_models">Список</string>
+    <string name="settings_select_from_models">Обрати з %1$d моделей</string>
+    <string name="translate_add_key_card_title">Додайте API-ключ</string>
+    <string name="translate_add_key_card_desc">Для перекладу слів налаштуйте хоча б один безкоштовний провайдер (Gemini, Groq, Mistral, Cerebras, OpenRouter).</string>
+    <string name="translate_open_settings">Налаштування</string>
+    <string name="translate_refresh_different_model">Оновити іншою моделлю</string>
+    <string name="translate_fallback_snackbar">Перемкнуто на %1$s</string>
+    <string name="translate_download_mlkit_prompt">Для перекладу текстів без API-ключа завантажте офлайн-моделі ML Kit</string>
+    <string name="translate_offline_mlkit_hint">Для перекладу тексту без ключа використовуйте офлайн ML Kit або додайте API-ключ у налаштуваннях.</string>
+    <string name="translate_download_mlkit_btn">Завантажити ML Kit</string>
+    <string name="translate_downloading">Завантаження…</string>
+    <string name="translate_model_not_found_message">Модель недоступна, оберіть іншу</string>
+    <string name="translate_action_reload_models">Оновити моделі</string>
+
+    <!-- App Languages -->
+    <string name="lang_system">Системна (за замовчуванням)</string>
+    <string name="lang_ru">Російська</string>
+    <string name="lang_en">Англійська</string>
+    <string name="lang_de">Німецька</string>
+    <string name="lang_uk">Українська</string>
+    <string name="lang_ar">Арабська</string>
+    <string name="lang_fa">Дарі</string>
+    <string name="lang_ro">Румунська</string>
+
+    <!-- Phase 1: Voice Input (STT) -->
+    <string name="stt_mic_button_desc">Голосове введення</string>
+    <string name="stt_listening">Слухаю...</string>
+    <string name="stt_stop_listening">Зупинити запис</string>
+    <string name="stt_alternatives_label">Можливо:</string>
+    <string name="stt_permission_rationale">Для голосового введення додатку потрібен доступ до мікрофона</string>
+    <string name="stt_permission_settings">Відкрити налаштування</string>
+    <string name="stt_download_model_title">Офлайн-пакет мовлення</string>
+    <string name="stt_download_model_desc">Завантажити мовний пакет для розпізнавання мовлення без інтернету?</string>
+    <string name="stt_download_model_action">Завантажити</string>
+    <string name="stt_first_use_notice">Голосове введення може супроводжуватися системним сигналом під час перезапуску розпізнавання.</string>
+    <string name="stt_error_no_match">Мовлення не розпізнано, спробуйте ще раз</string>
+    <string name="stt_error_network">Помилка мережі під час розпізнавання мовлення</string>
+    <string name="stt_error_audio">Помилка запису звуку</string>
+
+    <!-- Phase 1: Manual Word Adding -->
+    <string name="add_word_title">Додати слово</string>
+    <string name="add_word_tab_translate">Перекласти</string>
+    <string name="add_word_tab_manual">Власне значення</string>
+    <string name="add_word_tab_bulk">Списком</string>
+    <string name="add_word_german_word_label">Німецьке слово</string>
+    <string name="add_word_article_label">Артикль</string>
+    <string name="add_word_pos_label">Частина мови</string>
+    <string name="add_word_translation_label">Переклад</string>
+    <string name="add_word_example_label">Приклад речення (необов’язково)</string>
+    <string name="add_word_ai_enhance">Доповнити за допомогою ШІ</string>
+    <string name="add_word_ai_enhancing">Доповнюємо...</string>
+    <string name="add_word_save_button">Зберегти</string>
+    <string name="add_word_success">Слово успішно додано</string>
+
+    <!-- Phase 1: Duplicate Word Dialog -->
+    <string name="duplicate_word_title">Слово вже є в словнику</string>
+    <string name="duplicate_word_message">Слово «%1$s» уже збережено. Що зробити?</string>
+    <string name="duplicate_word_open">Відкрити слово</string>
+    <string name="duplicate_word_add_to_lesson">Додати до поточного уроку</string>
+    <string name="duplicate_word_cancel">Скасувати</string>
+
+    <!-- Phase 1: Bulk Word Import -->
+    <string name="bulk_add_hint">Вставте слова (до 30), кожне з нового рядка або через кому</string>
+    <string name="bulk_add_count">Слів для додавання: %1$d</string>
+    <string name="bulk_add_limit_warning">Максимум 30 слів за раз</string>
+    <string name="bulk_add_start">Перекласти та додати</string>
+    <string name="bulk_add_progress">Обробка %1$d з %2$d...</string>
+    <string name="bulk_add_stop">Зупинити</string>
+    <string name="bulk_add_completed">Додано %1$d з %2$d слів</string>
+    <string name="bulk_add_error_rate_limit">Перевищено ліміт запитів. Очікування...</string>
+
+    <!-- Phase 1: STT Settings -->
+    <string name="settings_stt_category">Голосове введення</string>
+    <string name="settings_stt_prefer_offline">Розпізнавати на пристрої (офлайн)</string>
+    <string name="settings_stt_prefer_offline_desc">Використовувати локальну модель мовлення, якщо доступна</string>
+    <string name="settings_stt_auto_detect">Автоматичне визначення мови</string>
+    <string name="settings_stt_auto_detect_desc">Визначати німецьку або мову перекладу</string>
+    <string name="settings_stt_translate_immediately">Перекладати одразу</string>
+    <string name="settings_stt_translate_immediately_desc">Запускати переклад одразу після закінчення мовлення</string>
+
+    <!-- Phase 1: Common Actions -->
+    <string name="action_accept">Прийняти</string>
+    <string name="action_cancel">Скасувати</string>
+
+    <!-- Phase 1: Navigation Tabs -->
+    <string name="tab_dialogues">Діалоги</string>
+    <string name="tab_check">Перевірка</string>
+
+    <!-- Phase 1: Check Tab -->
+    <string name="check_screen_title">Перевірка тексту</string>
+    <string name="check_history_action">Історія перевірок</string>
+    <string name="check_input_placeholder">Вставте або введіть німецький текст для перевірки…</string>
+    <string name="check_camera_action">Сканувати текст</string>
+    <string name="check_action_button">Перевірити</string>
+    <string name="check_duden_disclaimer">Виправлення базуються на правилах Duden. ШІ може помилятися.</string>
+    <string name="check_mode_corrected">З правками</string>
+    <string name="check_mode_original">Оригінал</string>
+    <string name="check_overedit_warning">Модель могла переписати більше, ніж потрібно. Перевірте запропоновані правки.</string>
+    <string name="check_edits_count">Правок: %1$d</string>
+    <string name="check_action_accept_all">Прийняти всі</string>
+    <string name="check_filter_all">Всі</string>
+    <string name="check_category_spelling">Орфографія</string>
+    <string name="check_category_grammar">Граматика</string>
+    <string name="check_category_punctuation">Пунктуація</string>
+    <string name="check_category_word_choice">Лексика</string>
+    <string name="check_empty_no_errors">Помилок не знайдено</string>
+    <string name="check_empty_no_errors_desc">Текст виглядає граматично правильним. Зверніть увагу: ШІ може пропускати неочевидні помилки.</string>
+    <string name="check_comments_header">Зауваження та пояснення</string>
+    <string name="check_action_new">Нова перевірка</string>
+    <string name="check_hunk_accepted">Правку прийнято</string>
+    <string name="check_hunk_rejected">Правку відхилено</string>
+    <string name="check_add_to_vocab">Додати до словника</string>
+    <string name="check_consent_title">Надсилання тексту на перевірку</string>
+    <string name="check_consent_message">Текст буде надіслано обраному провайдеру ШІ для пошуку помилок. Текст не зберігається на наших серверах. Продовжити?</string>
+    <string name="check_history_title">Історія перевірок</string>
+    <string name="check_history_clear_action">Очистити історію</string>
+    <string name="check_history_clear_title">Очистити історію перевірок?</string>
+    <string name="check_history_clear_confirm">Усі збережені результати перевірок будуть видалені. Цю дію не можна скасувати.</string>
+    <string name="check_history_empty">Історія перевірок порожня</string>
+    <string name="settings_provider_check">Провайдер перевірки</string>
+    <string name="settings_provider_check_hint">Для перевірки граматики та стилю рекомендуються сильніші моделі (Gemini 2.5 Pro, Mistral Large, Claude 3.5 Sonnet, GPT-4o).</string>
+
+    <!-- Phase 2: Photo-to-Text OCR -->
+    <string name="ocr_scan_button_desc">Розпізнати текст із фото</string>
+    <string name="ocr_source_dialog_title">Введення з фото</string>
+    <string name="ocr_source_document_scanner">Сканувати документ (ML Kit)</string>
+    <string name="ocr_source_camera">Зробити знімок (Камера)</string>
+    <string name="ocr_source_gallery">Вибрати з галереї</string>
+    <string name="ocr_preview_title">Розпізнаний текст</string>
+    <string name="ocr_preview_disclaimer">Текст розпізнано на пристрої без надсилання фото в мережу. Перевірте правильність перед перевіркою.</string>
+    <string name="ocr_preview_insert_action">Вставити</string>
+    <string name="ocr_preview_cancel_action">Скасувати</string>
+    <string name="ocr_processing">Розпізнавання тексту...</string>
+    <string name="ocr_error_no_text">Текст на зображенні не знайдено</string>
+    <string name="ocr_error_failed">Помилка розпізнавання тексту</string>
+    <string name="ocr_scanner_unavailable">Сканер документів недоступний на цьому пристрої</string>
+
+    <!-- Dialogues Tab & Features -->
+    <string name="dialogs_title">Діалоги</string>
+    <string name="dialog_recording_title">Запис діалогу</string>
+    <string name="dialog_detail_title">Аналіз діалогу</string>
+    <string name="dialog_task_title">Завдання за діалогом</string>
+    <string name="dialog_new_recording">Почати запис</string>
+    <string name="dialog_empty_title">Немає збережених діалогів</string>
+    <string name="dialog_empty_desc">Запишіть живий діалог німецькою мовою для транскрипції, переказу та вправ</string>
+    <string name="dialog_duration_format">%1$02d:%2$02d</string>
+    <string name="dialog_segments_count">Реплік: %1$d</string>
+    <string name="dialog_has_summary">Переказ готовий</string>
+    <string name="dialog_delete_confirm">Діалог видалено</string>
+    <string name="dialog_action_undo">Скасувати</string>
+    <string name="dialog_record_start">Почати запис</string>
+    <string name="dialog_record_pause">Пауза</string>
+    <string name="dialog_record_resume">Продовжити</string>
+    <string name="dialog_record_stop">Зберегти діалог</string>
+    <string name="dialog_record_cancel">Скасувати запис</string>
+    <string name="dialog_speaker_a">Спікер A</string>
+    <string name="dialog_speaker_b">Спікер B</string>
+    <string name="dialog_speaker_toggle">Змінити співрозмовника</string>
+    <string name="dialog_recording_status_listening">Триває запис...</string>
+    <string name="dialog_recording_status_paused">Запис на паузі</string>
+    <string name="dialog_cancel_confirm_title">Скасувати запис?</string>
+    <string name="dialog_cancel_confirm_message">Поточний запис не буде збережено.</string>
+    <string name="dialog_cancel_confirm_discard">Скинути</string>
+    <string name="dialog_cancel_confirm_continue">Продовжити запис</string>
+    <string name="dialog_tab_transcript">Транскрипт</string>
+    <string name="dialog_tab_summary">Переказ</string>
+    <string name="dialog_tab_tasks">Завдання</string>
+    <string name="dialog_word_tap_hint">Натисніть на будь-яке німецьке слово для перекладу</string>
+    <string name="dialog_add_to_vocab">Додати до навчання</string>
+    <string name="dialog_word_added">Слово додано до словника</string>
+    <string name="dialog_generate_summary">Скласти переказ за допомогою ШІ</string>
+    <string name="dialog_summary_generating">Аналізуємо діалог...</string>
+    <string name="dialog_summary_topic">Тема</string>
+    <string name="dialog_summary_de">Переказ німецькою (B2)</string>
+    <string name="dialog_summary_partner">Переказ рідною мовою</string>
+    <string name="dialog_summary_key_points">Ключові думки</string>
+    <string name="dialog_summary_key_vocab">Корисна лексика</string>
+    <string name="dialog_refresh_summary">Оновити переказ</string>
+    <string name="dialog_generate_tasks_title">Вправи за діалогом</string>
+    <string name="dialog_task_type_mcq">Запитання за текстом (Тест)</string>
+    <string name="dialog_task_type_gap_fill">Заповнити пропуски</string>
+    <string name="dialog_task_type_open">Вільна відповідь (Практика мовлення)</string>
+    <string name="dialog_generate_task_action">Створити</string>
+    <string name="dialog_task_generating">Генерація завдань за допомогою ШІ...</string>
+    <string name="dialog_task_score">Результат: %1$d%%</string>
+    <string name="dialog_task_completed">Виконано</string>
+    <string name="dialog_task_not_started">Не розпочато</string>
+    <string name="dialog_task_open_action">Розпочати завдання</string>
+    <string name="dialog_task_check_answer">Перевірити відповідь</string>
+    <string name="dialog_task_correct">Вірно!</string>
+    <string name="dialog_task_incorrect">Невірно</string>
+    <string name="dialog_task_expected">Правильна відповідь:</string>
+    <string name="dialog_task_explanation">Пояснення:</string>
+    <string name="dialog_task_hint">Підказка:</string>
+    <string name="dialog_task_your_answer">Ваша відповідь:</string>
+    <string name="dialog_task_evaluate_action">Оцінити відповідь за допомогою ШІ</string>
+    <string name="dialog_task_evaluating">Оцінюємо відповідь...</string>
+    <string name="dialog_task_corrections">Зауваження щодо граматики та лексики:</string>
+    <string name="dialog_task_improved">Як сказати природніше:</string>
+    <string name="dialog_task_feedback">Відгук викладача:</string>
+    <string name="dialog_task_no_mistakes">Чудово! Помітних помилок не виявлено.</string>
+    <string name="dialog_task_finish">Завершити завдання</string>
+    <string name="dialog_open_speak_prompt">Натисніть на мікрофон для голосової відповіді</string>
+</resources>

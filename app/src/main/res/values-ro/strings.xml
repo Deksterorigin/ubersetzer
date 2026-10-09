@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeutschLern</string>
+    <string name="tab_translate">Traducere</string>
+    <string name="tab_words">Cuvinte</string>
+    <string name="tab_review">Repetare</string>
+    <string name="translate_placeholder_subtitle">Traducere de cuvinte și texte conectate (DE ⇄ RU)</string>
+    <string name="words_placeholder_subtitle">Istoricul traducerilor și vocabularul lecțiilor</string>
+    <string name="review_placeholder_subtitle">Repetare spațiată cu carduri (SM-2)</string>
+    <string name="action_process_text_label">DeutschLern – traduce</string>
+    <string name="action_back">Înapoi</string>
+    <string name="action_select_language">Selectează limba</string>
+
+    <!-- Phase 2: Translate Screen -->
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_russian">Rusă</string>
+    <string name="action_swap_direction">Schimbă direcția</string>
+    <string name="translate_input_hint">Introduceți textul pentru traducere…</string>
+    <string name="action_clear">Șterge</string>
+    <string name="action_paste">Lipește</string>
+    <string name="action_translate">Traduce</string>
+    <string name="action_copy">Copiază</string>
+    <string name="action_share">Trimite</string>
+    <string name="action_retry">Reîncearcă</string>
+    <string name="copied_to_clipboard">Copiat în clipboard</string>
+    <string name="char_counter_format">%1$d / %2$d</string>
+
+    <!-- Phase 2: Errors -->
+    <string name="error_no_internet">Nu există conexiune la internet. Verificați rețeaua și încercați din nou.</string>
+    <string name="error_quota_exceeded">Cota de solicitări a traducătorului a fost depășită. Așteptați puțin și încercați din nou.</string>
+    <string name="error_server_unavailable">Serviciul de traducere este temporar indisponibil. Încercați din nou într-un minut.</string>
+    <string name="error_safety_block">Solicitarea nu poate fi procesată din cauza restricțiilor de siguranță a conținutului.</string>
+    <string name="error_empty_response">Nu s-a putut obține traducerea. Vă rugăm să încercați din nou.</string>
+    <string name="error_api_key">Cheia API Gemini este nevalidă sau lipsește. Setați GEMINI_API_KEY în local.properties.</string>
+    <string name="error_generic">A apărut o eroare la traducere. Vă rugăm să încercați din nou.</string>
+    <string name="error_parsing_dictionary">Nu s-a putut analiza răspunsul dicționarului. Vă rugăm să încercați din nou.</string>
+
+    <!-- Phase 3: WORD Mode & Dictionary Card -->
+    <string name="context_field_label">Context (propoziție)</string>
+    <string name="context_field_hint">Propoziție pentru clarificarea sensului cuvântului…</string>
+    <string name="tts_voice_missing">Datele vocale pentru limba germană nu sunt instalate.</string>
+    <string name="action_install_tts">Instalează</string>
+    <string name="action_save">Salvează</string>
+    <string name="saved_success">Salvat: %1$s</string>
+    <string name="section_synonyms">Sinonime</string>
+    <string name="section_collocations">Expresii uzuale</string>
+    <string name="badge_best_match">Context</string>
+    <string name="badge_selected_meaning">Semnificația mea</string>
+    <string name="action_speak">Redare audio</string>
+
+    <!-- Parts of speech -->
+    <string name="pos_noun">Substantiv</string>
+    <string name="pos_verb">Verb</string>
+    <string name="pos_adjective">Adjectiv</string>
+    <string name="pos_adverb">Adverb</string>
+    <string name="pos_preposition">Prepoziție</string>
+    <string name="pos_conjunction">Conjuncție</string>
+    <string name="pos_pronoun">Pronume</string>
+    <string name="pos_particle">Particulă</string>
+    <string name="pos_phrase">Expresie</string>
+
+    <!-- Phase 4: Words Screen & Filters -->
+    <string name="words_search_hint">Căutare cuvânt sau traducere…</string>
+    <string name="filter_all">Toate</string>
+    <string name="filter_new">Noi</string>
+    <string name="filter_learning">Învăț</string>
+    <string name="filter_known">Învățat</string>
+    <string name="status_new">Nou</string>
+    <string name="status_learning">Învăț</string>
+    <string name="status_known">Învățat</string>
+    <string name="action_new_session">Lecție nouă</string>
+    <string name="session_created">Lecție nouă creată: %1$s</string>
+    <string name="sort_by_date">După dată</string>
+    <string name="sort_alphabetical">Alfabetic</string>
+    <string name="sort_most_translated">După numărul de traduceri</string>
+    <string name="sort_label">Sortare</string>
+    <string name="action_delete">Șterge</string>
+    <string name="action_undo">Anulează</string>
+    <string name="word_deleted">Cuvântul „%1$s” a fost șters</string>
+    <string name="words_empty_title">Nu există încă cuvinte în dicționar</string>
+    <string name="words_empty_desc">Traduceți cuvinte în fila „Traducere” pentru a le salva aici automat.</string>
+    <string name="words_search_empty_title">Nu s-a găsit nimic</string>
+    <string name="words_search_empty_desc">Încercați să modificați termenul de căutare sau filtrul de stare.</string>
+
+    <string name="action_export_csv">Export către Anki (CSV)</string>
+    <string name="words_export_empty">Nu există cuvinte de exportat în dicționar</string>
+
+    <!-- Phase 5: Review & SM-2 -->
+    <string name="review_due_today">De repetat azi: %1$d</string>
+    <string name="review_last_lesson_header">Cuvintele ultimei lecții</string>
+    <string name="review_empty_title">Toate cuvintele au fost repetate!</string>
+    <string name="review_empty_desc">Nu există carduri de repetat azi. Excelent!</string>
+    <string name="review_option_last_lesson">Cuvintele ultimei lecții</string>
+    <string name="flashcard_tap_to_flip">Atinge cardul pentru a-l întoarce</string>
+    <string name="grade_again">Din nou</string>
+    <string name="grade_hard">Greu</string>
+    <string name="grade_good">Bine</string>
+    <string name="grade_easy">Ușor</string>
+    <string name="action_restart_review">Repetă din nou</string>
+    <string name="review_cards_remaining">%1$d din %2$d</string>
+
+    <!-- Settings & Multi-Provider -->
+    <string name="settings_title">Setări</string>
+    <string name="settings_app_language_title">Limba aplicației</string>
+    <string name="settings_app_language_desc">Alegeți limba interfeței aplicației</string>
+    <string name="settings_section_general">Setări generale</string>
+    <string name="settings_section_active_providers">Furnizori activi de traducere</string>
+    <string name="settings_section_providers">Furnizori de traducere</string>
+    <string name="settings_provider_word">Furnizor pentru cuvinte</string>
+    <string name="settings_provider_text">Furnizor pentru texte</string>
+    <string name="settings_model_label">Model</string>
+    <string name="settings_model_prefix">Model: %1$s</string>
+    <string name="settings_api_key_label">Cheie API</string>
+    <string name="settings_api_key_hint">Introduceți cheia API</string>
+    <string name="settings_action_test">Testează</string>
+    <string name="settings_action_get_key">Obține cheia</string>
+    <string name="settings_action_load_models">Încarcă modelele</string>
+    <string name="settings_test_success">Funcționează</string>
+    <string name="settings_test_testing">Se testează…</string>
+    <string name="settings_section_fallback">Comutare automată la erori</string>
+    <string name="settings_auto_fallback">Comutare automată la eroare</string>
+    <string name="settings_auto_fallback_desc">La erori 429, 5xx, timeout sau 404 cererea va fi redirecționată către următorul furnizor.</string>
+    <string name="settings_fallback_order_title">Ordinea furnizorilor de rezervă:</string>
+    <string name="settings_offline_mlkit">Mod offline pentru texte (ML Kit)</string>
+    <string name="settings_offline_mlkit_desc">Traducere locală pe dispozitiv fără conexiune la internet.</string>
+    <string name="settings_mlkit_download">Descarcă modelele lingvistice</string>
+    <string name="settings_mlkit_downloading">Se descarcă modelele (se recomandă Wi-Fi)…</string>
+    <string name="settings_mlkit_ready">Modele descărcate</string>
+    <string name="settings_deepl_usage">Caractere DeepL utilizate: %1$d / %2$d</string>
+    <string name="settings_show_model_caption">Arată modelul care a oferit traducerea</string>
+    <string name="settings_show_model_caption_desc">Afișează numele modelului sub cardul de traducere</string>
+    <string name="settings_use_cross_model_cache">Utilizează memoria cache de la alte modele</string>
+    <string name="settings_use_cross_model_cache_desc">Permite reutilizarea traducerilor salvate la schimbarea modelelor, economisind cota.</string>
+    <string name="settings_clear_cache">Șterge memoria cache</string>
+    <string name="settings_cache_cleared">Memoria cache de traduceri a fost ștearsă</string>
+    <string name="settings_custom_base_url">URL server (HTTPS)</string>
+    <string name="settings_openrouter_show_all">Afișează toate modelele (inclusiv cele plătite)</string>
+    <string name="settings_openrouter_search">Căutare model…</string>
+    <string name="settings_privacy_note">Notă: planurile gratuite ale unor furnizori LLM pot utiliza solicitările pentru antrenare. Nu traduceți date confidențiale.</string>
+    <string name="settings_keystore_recovery_title">Cheile au fost resetate</string>
+    <string name="settings_keystore_recovery_msg">Cheile de criptare Keystore au fost resetate sau deteriorate. Vă rugăm să reintroduceți cheile API.</string>
+    <string name="settings_deepl_word_disabled_hint">DeepL nu acceptă modul dicționar cu gramatică (WORD), disponibil doar pentru texte.</string>
+    <string name="settings_mlkit_word_disabled_hint">ML Kit nu acceptă carduri de dicționar cu gramatică (WORD), disponibil doar pentru texte.</string>
+    <string name="settings_action_understood">Am înțeles</string>
+    <string name="settings_badge_offline">Offline</string>
+    <string name="settings_badge_text">Text</string>
+    <string name="settings_rate_limits">Limite de utilizare</string>
+    <string name="settings_action_list_models">Listă</string>
+    <string name="settings_select_from_models">Alege din %1$d modele</string>
+    <string name="translate_add_key_card_title">Adăugați cheia API</string>
+    <string name="translate_add_key_card_desc">Pentru traducerea cuvintelor, configurați cel puțin un furnizor gratuit (Gemini, Groq, Mistral, Cerebras, OpenRouter).</string>
+    <string name="translate_open_settings">Setări</string>
+    <string name="translate_refresh_different_model">Reîmprospătează cu alt model</string>
+    <string name="translate_fallback_snackbar">Comutat la %1$s</string>
+    <string name="translate_download_mlkit_prompt">Pentru traducerea textelor fără cheie API, descărcați modelele offline ML Kit</string>
+    <string name="translate_offline_mlkit_hint">Pentru traducerea textului fără cheie, utilizați ML Kit offline sau adăugați o cheie API în setări.</string>
+    <string name="translate_download_mlkit_btn">Descarcă ML Kit</string>
+    <string name="translate_downloading">Se descarcă…</string>
+    <string name="translate_model_not_found_message">Modelul nu este disponibil, alegeți altul</string>
+    <string name="translate_action_reload_models">Reîmprospătează modelele</string>
+
+    <!-- App Languages -->
+    <string name="lang_system">Implicit de sistem</string>
+    <string name="lang_ru">Rusă</string>
+    <string name="lang_en">Engleză</string>
+    <string name="lang_de">Germană</string>
+    <string name="lang_uk">Ucraineană</string>
+    <string name="lang_ar">Arabă</string>
+    <string name="lang_fa">Dari</string>
+    <string name="lang_ro">Română</string>
+
+    <!-- Phase 1: Voice Input (STT) -->
+    <string name="stt_mic_button_desc">Introducere vocală</string>
+    <string name="stt_listening">Ascultare...</string>
+    <string name="stt_stop_listening">Oprește înregistrarea</string>
+    <string name="stt_alternatives_label">Ați vrut să spuneți:</string>
+    <string name="stt_permission_rationale">Pentru introducerea vocală, aplicația are nevoie de permisiunea pentru microfon</string>
+    <string name="stt_permission_settings">Deschide setările</string>
+    <string name="stt_download_model_title">Pachet vocal offline</string>
+    <string name="stt_download_model_desc">Descărcați pachetul lingvistic pentru recunoaștere vocală fără internet?</string>
+    <string name="stt_download_model_action">Descarcă</string>
+    <string name="stt_first_use_notice">Recunoașterea vocală poate emite semnale sonore de sistem la repornirea continuă a sesiunii.</string>
+    <string name="stt_error_no_match">Vorbirea nu a fost recunoscută, vă rugăm să încercați din nou</string>
+    <string name="stt_error_network">Eroare de rețea în timpul recunoașterii vocale</string>
+    <string name="stt_error_audio">Eroare la înregistrarea audio</string>
+
+    <!-- Phase 1: Manual Word Adding -->
+    <string name="add_word_title">Adaugă cuvânt</string>
+    <string name="add_word_tab_translate">Traduce</string>
+    <string name="add_word_tab_manual">Intrare proprie</string>
+    <string name="add_word_tab_bulk">Ca listă</string>
+    <string name="add_word_german_word_label">Cuvânt în germană</string>
+    <string name="add_word_article_label">Articol</string>
+    <string name="add_word_pos_label">Parte de vorbire</string>
+    <string name="add_word_translation_label">Traducere</string>
+    <string name="add_word_example_label">Exemplu de propoziție (opțional)</string>
+    <string name="add_word_ai_enhance">Completează cu AI</string>
+    <string name="add_word_ai_enhancing">Se completează...</string>
+    <string name="add_word_save_button">Salvează</string>
+    <string name="add_word_success">Cuvântul a fost adăugat cu succes</string>
+
+    <!-- Phase 1: Duplicate Word Dialog -->
+    <string name="duplicate_word_title">Cuvântul există deja în vocabular</string>
+    <string name="duplicate_word_message">Cuvântul „%1$s” este deja salvat. Ce doriți să faceți?</string>
+    <string name="duplicate_word_open">Deschide cuvântul</string>
+    <string name="duplicate_word_add_to_lesson">Adaugă la lecția curentă</string>
+    <string name="duplicate_word_cancel">Anulează</string>
+
+    <!-- Phase 1: Bulk Word Import -->
+    <string name="bulk_add_hint">Inserați cuvinte (până la 30), fiecare pe o linie nouă sau separate prin virgulă</string>
+    <string name="bulk_add_count">Cuvinte de adăugat: %1$d</string>
+    <string name="bulk_add_limit_warning">Maxim 30 de cuvinte odată</string>
+    <string name="bulk_add_start">Traduce și adaugă</string>
+    <string name="bulk_add_progress">Se procesează %1$d din %2$d...</string>
+    <string name="bulk_add_stop">Oprește</string>
+    <string name="bulk_add_completed">Au fost adăugate %1$d din %2$d cuvinte</string>
+    <string name="bulk_add_error_rate_limit">Limita de solicitări a fost atinsă. Se așteaptă...</string>
+
+    <!-- Phase 1: STT Settings -->
+    <string name="settings_stt_category">Introducere vocală</string>
+    <string name="settings_stt_prefer_offline">Recunoaștere pe dispozitiv (offline)</string>
+    <string name="settings_stt_prefer_offline_desc">Utilizează modelul lingvistic local dacă este disponibil</string>
+    <string name="settings_stt_auto_detect">Detectare automată a limbii</string>
+    <string name="settings_stt_auto_detect_desc">Detectează germana sau limba asociată</string>
+    <string name="settings_stt_translate_immediately">Traduce imediat</string>
+    <string name="settings_stt_translate_immediately_desc">Porniți traducerea imediat după oprirea vorbirii</string>
+
+    <!-- Phase 1: Common Actions -->
+    <string name="action_accept">Acceptă</string>
+    <string name="action_cancel">Anulează</string>
+
+    <!-- Phase 1: Navigation Tabs -->
+    <string name="tab_dialogues">Dialoguri</string>
+    <string name="tab_check">Verificare</string>
+
+    <!-- Phase 1: Check Tab -->
+    <string name="check_screen_title">Verificare text</string>
+    <string name="check_history_action">Istoric verificări</string>
+    <string name="check_input_placeholder">Inserați sau introduceți textul în germană pentru verificare…</string>
+    <string name="check_camera_action">Scanează text</string>
+    <string name="check_action_button">Verifică</string>
+    <string name="check_duden_disclaimer">Corecțiile urmează regulile Duden. AI poate greși.</string>
+    <string name="check_mode_corrected">Corectat</string>
+    <string name="check_mode_original">Original</string>
+    <string name="check_overedit_warning">Modelul ar fi putut rescrie mai mult decât era necesar. Vă rugăm să verificați modificările propuse.</string>
+    <string name="check_edits_count">Modificări: %1$d</string>
+    <string name="check_action_accept_all">Acceptă tot</string>
+    <string name="check_filter_all">Toate</string>
+    <string name="check_category_spelling">Ortografie</string>
+    <string name="check_category_grammar">Gramatică</string>
+    <string name="check_category_punctuation">Punctuație</string>
+    <string name="check_category_word_choice">Vocabular</string>
+    <string name="check_empty_no_errors">Nu au fost găsite erori</string>
+    <string name="check_empty_no_errors_desc">Textul pare corect din punct de vedere gramatical. Rețineți că AI poate omite erori subtile.</string>
+    <string name="check_comments_header">Comentarii și explicații</string>
+    <string name="check_action_new">Verificare nouă</string>
+    <string name="check_hunk_accepted">Modificare acceptată</string>
+    <string name="check_hunk_rejected">Modificare respinsă</string>
+    <string name="check_add_to_vocab">Adaugă în vocabular</string>
+    <string name="check_consent_title">Trimitere text pentru verificare</string>
+    <string name="check_consent_message">Textul va fi trimis furnizorului AI selectat pentru verificarea erorilor. Textul nu este salvat pe serverele noastre. Continuați?</string>
+    <string name="check_history_title">Istoric verificări</string>
+    <string name="check_history_clear_action">Șterge istoricul</string>
+    <string name="check_history_clear_title">Ștergeți istoricul verificărilor?</string>
+    <string name="check_history_clear_confirm">Toate rezultatele salvate ale verificărilor vor fi șterse. Această acțiune nu poate fi anulată.</string>
+    <string name="check_history_empty">Istoricul verificărilor este gol</string>
+    <string name="settings_provider_check">Furnizor verificare</string>
+    <string name="settings_provider_check_hint">Pentru verificarea gramaticii și a stilului sunt recomandate modele mai puternice (Gemini 2.5 Pro, Mistral Large, Claude 3.5 Sonnet, GPT-4o).</string>
+
+    <!-- Phase 2: Photo-to-Text OCR -->
+    <string name="ocr_scan_button_desc">Recunoaștere text din fotografie</string>
+    <string name="ocr_source_dialog_title">Introducere din fotografie</string>
+    <string name="ocr_source_document_scanner">Scanează document (ML Kit)</string>
+    <string name="ocr_source_camera">Fă o fotografie (Cameră)</string>
+    <string name="ocr_source_gallery">Alege din galerie</string>
+    <string name="ocr_preview_title">Text recunoscut</string>
+    <string name="ocr_preview_disclaimer">Textul a fost recunoscut pe dispozitiv fără a trimite fotografiile online. Verificați exactitatea înainte de verificare.</string>
+    <string name="ocr_preview_insert_action">Inserează</string>
+    <string name="ocr_preview_cancel_action">Anulare</string>
+    <string name="ocr_processing">Se recunoaște textul...</string>
+    <string name="ocr_error_no_text">Nu a fost găsit niciun text în imagine</string>
+    <string name="ocr_error_failed">Eroare la recunoașterea textului</string>
+    <string name="ocr_scanner_unavailable">Scanerul de documente nu este disponibil pe acest dispozitiv</string>
+
+    <!-- Dialogues Tab & Features -->
+    <string name="dialogs_title">Dialoguri</string>
+    <string name="dialog_recording_title">Înregistrare dialog</string>
+    <string name="dialog_detail_title">Analiză dialog</string>
+    <string name="dialog_task_title">Exercițiu pe baza dialogului</string>
+    <string name="dialog_new_recording">Începe înregistrarea</string>
+    <string name="dialog_empty_title">Niciun dialog salvat</string>
+    <string name="dialog_empty_desc">Înregistrați un dialog în limba germană pentru transcriere, rezumat și exerciții</string>
+    <string name="dialog_duration_format">%1$02d:%2$02d</string>
+    <string name="dialog_segments_count">Replici: %1$d</string>
+    <string name="dialog_has_summary">Rezumat disponibil</string>
+    <string name="dialog_delete_confirm">Dialog șters</string>
+    <string name="dialog_action_undo">Anulează</string>
+    <string name="dialog_record_start">Începe înregistrarea</string>
+    <string name="dialog_record_pause">Pauză</string>
+    <string name="dialog_record_resume">Continuă</string>
+    <string name="dialog_record_stop">Salvează dialogul</string>
+    <string name="dialog_record_cancel">Anulează înregistrarea</string>
+    <string name="dialog_speaker_a">Vorbitor A</string>
+    <string name="dialog_speaker_b">Vorbitor B</string>
+    <string name="dialog_speaker_toggle">Schimbă vorbitorul</string>
+    <string name="dialog_recording_status_listening">Înregistrare în curs...</string>
+    <string name="dialog_recording_status_paused">Înregistrare întreruptă</string>
+    <string name="dialog_cancel_confirm_title">Anulați înregistrarea?</string>
+    <string name="dialog_cancel_confirm_message">Înregistrarea curentă nu va fi salvată.</string>
+    <string name="dialog_cancel_confirm_discard">Renunță</string>
+    <string name="dialog_cancel_confirm_continue">Continuă înregistrarea</string>
+    <string name="dialog_tab_transcript">Transcriere</string>
+    <string name="dialog_tab_summary">Rezumat</string>
+    <string name="dialog_tab_tasks">Exerciții</string>
+    <string name="dialog_word_tap_hint">Atingeți orice cuvânt în germană pentru traducere</string>
+    <string name="dialog_add_to_vocab">Adaugă la vocabular</string>
+    <string name="dialog_word_added">Cuvânt adăugat în vocabular</string>
+    <string name="dialog_generate_summary">Generează rezumat cu IA</string>
+    <string name="dialog_summary_generating">Se analizează dialogul...</string>
+    <string name="dialog_summary_topic">Subiect</string>
+    <string name="dialog_summary_de">Rezumat în germană (B2)</string>
+    <string name="dialog_summary_partner">Rezumat în limba maternă</string>
+    <string name="dialog_summary_key_points">Idei principale</string>
+    <string name="dialog_summary_key_vocab">Vocabular util</string>
+    <string name="dialog_refresh_summary">Actualizează rezumatul</string>
+    <string name="dialog_generate_tasks_title">Exerciții pe baza dialogului</string>
+    <string name="dialog_task_type_mcq">Întrebări de înțelegere (Grilă)</string>
+    <string name="dialog_task_type_gap_fill">Completare spații libere</string>
+    <string name="dialog_task_type_open">Răspuns liber (Practică orală)</string>
+    <string name="dialog_generate_task_action">Generează</string>
+    <string name="dialog_task_generating">Se generează exercițiile cu IA...</string>
+    <string name="dialog_task_score">Scor: %1$d%%</string>
+    <string name="dialog_task_completed">Finalizat</string>
+    <string name="dialog_task_not_started">Neînceput</string>
+    <string name="dialog_task_open_action">Începe exercițiul</string>
+    <string name="dialog_task_check_answer">Verifică răspunsul</string>
+    <string name="dialog_task_correct">Corect!</string>
+    <string name="dialog_task_incorrect">Incorect</string>
+    <string name="dialog_task_expected">Răspuns corect:</string>
+    <string name="dialog_task_explanation">Explicație:</string>
+    <string name="dialog_task_hint">Indiciu:</string>
+    <string name="dialog_task_your_answer">Răspunsul dumneavoastră:</string>
+    <string name="dialog_task_evaluate_action">Evaluează răspunsul cu IA</string>
+    <string name="dialog_task_evaluating">Se evaluează răspunsul...</string>
+    <string name="dialog_task_corrections">Note de gramatică și vocabular:</string>
+    <string name="dialog_task_improved">Formulare mai naturală:</string>
+    <string name="dialog_task_feedback">Feedback-ul profesorului:</string>
+    <string name="dialog_task_no_mistakes">Excelent! Nu au fost găsite erori notabile.</string>
+    <string name="dialog_task_finish">Finalizează exercițiul</string>
+    <string name="dialog_open_speak_prompt">Atingeți microfonul pentru răspuns vocal</string>
+</resources>
