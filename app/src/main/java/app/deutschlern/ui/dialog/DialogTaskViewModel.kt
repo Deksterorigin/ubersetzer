@@ -1,6 +1,7 @@
 package app.deutschlern.ui.dialog
 
 import androidx.lifecycle.SavedStateHandle
+import app.deutschlern.ui.navigation.getNavigationLong
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.dialog.GapFillEvaluator
@@ -60,13 +61,8 @@ class DialogTaskViewModel @Inject constructor(
     private val json: Json
 ) : ViewModel() {
 
-    val dialogId: Long = savedStateHandle.get<String>("dialogId")?.toLongOrNull()
-        ?: savedStateHandle.get<Long>("dialogId")
-        ?: 0L
-
-    val taskId: Long = savedStateHandle.get<String>("taskId")?.toLongOrNull()
-        ?: savedStateHandle.get<Long>("taskId")
-        ?: 0L
+    val dialogId: Long = savedStateHandle.getNavigationLong("dialogId")
+    val taskId: Long = savedStateHandle.getNavigationLong("taskId")
 
     private val _uiState = MutableStateFlow(DialogTaskUiState())
     val uiState: StateFlow<DialogTaskUiState> = _uiState.asStateFlow()

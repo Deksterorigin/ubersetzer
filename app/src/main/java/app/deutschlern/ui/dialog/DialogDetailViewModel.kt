@@ -1,6 +1,7 @@
 package app.deutschlern.ui.dialog
 
 import androidx.lifecycle.SavedStateHandle
+import app.deutschlern.ui.navigation.getNavigationLong
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.model.PartnerLanguage
@@ -54,9 +55,7 @@ class DialogDetailViewModel @Inject constructor(
     private val vocabularyRepository: VocabularyRepository
 ) : ViewModel() {
 
-    val dialogId: Long = savedStateHandle.get<String>("dialogId")?.toLongOrNull()
-        ?: savedStateHandle.get<Long>("dialogId")
-        ?: 0L
+    val dialogId: Long = savedStateHandle.getNavigationLong("dialogId")
 
     private val _selectedTab = MutableStateFlow(0)
     private val _isGeneratingSummary = MutableStateFlow(false)
