@@ -14,7 +14,7 @@ object TranscriptTokenizer {
 
     private val WORD_REGEX = Regex("""[\p{L}\p{M}\-]+|[^\p{L}\p{M}\-]+""")
 
-    private const val MAX_CACHE_SIZE = 1000
+    private const val MAX_CACHE_SIZE = 5000
 
     private val cache: MutableMap<String, AnnotatedString> = Collections.synchronizedMap(
         object : LinkedHashMap<String, AnnotatedString>(128, 0.75f, true) {
