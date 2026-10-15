@@ -1,12 +1,16 @@
 package app.deutschlern.data.local
 
+import android.util.Log
 import app.deutschlern.data.local.dao.WordDao
 import app.deutschlern.data.local.entity.WordEntryEntity
 import app.deutschlern.domain.repository.SettingsRepository
 import app.deutschlern.domain.repository.UserSettings
 import io.mockk.coEvery
 import io.mockk.coVerify
+import io.mockk.every
 import io.mockk.mockk
+import io.mockk.mockkStatic
+import io.mockk.slot
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.Json
 import org.junit.Assert.assertEquals
@@ -22,6 +26,15 @@ class LegacyArticleRepairTest {
 
     @Before
     fun setUp() {
+        mockkStatic(Log::class)
+        every { Log.d(any(), any()) } returns 0
+        every { Log.i(any(), any()) } returns 0
+        every { Log.w(any(), any<String>()) } returns 0
+        every { Log.w(any(), any<Throwable>()) } returns 0
+        every { Log.w(any(), any<String>(), any()) } returns 0
+        every { Log.e(any(), any()) } returns 0
+        every { Log.e(any(), any(), any()) } returns 0
+
         repairManager = LegacyArticleRepairManager(wordDao, settingsRepository)
     }
 
@@ -99,10 +112,8 @@ class LegacyArticleRepairTest {
         val capturedUpdates = mutableListOf<WordEntryEntity>()
         coEvery { wordDao.update(capture(capturedUpdates)) } returns Unit
 
-        var capturedBackupJson = ""
-        coEvery { settingsRepository.markArticlesRepaired(captureLambda()) } coAnswers {
-            capturedBackupJson = firstArg()
-        }
+        val backupJsonSlot = slot<String>()
+        coEvery { settingsRepository.markArticlesRepaired(capture(backupJsonSlot)) } returns Unit
 
         val repairedCount = repairManager.repairIfNeeded()
 
@@ -114,7 +125,7 @@ class LegacyArticleRepairTest {
         assertTrue(capturedUpdates.any { it.id == 4L && it.article == null && it.lemma == "erwähnen" })
 
         // Verify backup JSON content
-        val records = Json.decodeFromString<List<RepairedArticleBackupRecord>>(capturedBackupJson)
+        val records = Json.decodeFromString<List<RepairedArticleBackupRecord>>(backupJsonSlot.captured)
         assertEquals(2, records.size)
         assertEquals(3L, records[0].id)
         assertEquals("ausüblich", records[0].lemma)
