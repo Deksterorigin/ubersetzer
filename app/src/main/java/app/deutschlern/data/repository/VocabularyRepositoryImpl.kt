@@ -132,7 +132,13 @@ class VocabularyRepositoryImpl @Inject constructor(
         val activeSession = getOrCreateActiveSession()
         val now = System.currentTimeMillis()
 
-        val existing = wordDao.getByLemmaPosAndPartner(normalizedLemma, cleanPos, partnerLang)
+        val equivalentPosList = app.deutschlern.domain.sanitizer.PosNormalizer.getEquivalentPosList(cleanPos)
+        val existing = wordDao.getByLemmaEquivalentPosAndPartner(
+            lemma = normalizedLemma,
+            posList = equivalentPosList,
+            canonicalPos = cleanPos,
+            partnerLanguage = partnerLang
+        )
 
         if (existing != null) {
             // Re-translation: increment timesTranslated, update lastSeenAt, KEEP sessionId and SM-2 progress
@@ -216,7 +222,13 @@ class VocabularyRepositoryImpl @Inject constructor(
         val normalizedLemma = TextNormalizer.normalizeLemma(baseLemma)
         val cleanPos = app.deutschlern.domain.sanitizer.PosNormalizer.normalize(pos)
         val partner = partnerLanguage.trim().lowercase().ifBlank { "ru" }
-        wordDao.getByLemmaPosAndPartner(normalizedLemma, cleanPos, partner)?.let {
+        val equivalentPosList = app.deutschlern.domain.sanitizer.PosNormalizer.getEquivalentPosList(cleanPos)
+        wordDao.getByLemmaEquivalentPosAndPartner(
+            lemma = normalizedLemma,
+            posList = equivalentPosList,
+            canonicalPos = cleanPos,
+            partnerLanguage = partner
+        )?.let {
             WordEntryMapper.entityToDomain(it, json)
         }
     }

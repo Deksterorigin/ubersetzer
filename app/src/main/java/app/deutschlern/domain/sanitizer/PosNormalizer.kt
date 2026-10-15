@@ -84,4 +84,32 @@ object PosNormalizer {
     fun isNoun(rawPos: String?): Boolean {
         return normalize(rawPos) == POS_NOUN
     }
+
+    /**
+     * Returns all known legacy and variant strings that normalize to the same POS.
+     * Used for database queries to match existing words regardless of whether they
+     * were stored as "n", "nomen", "noun", etc.
+     */
+    fun getEquivalentPosList(rawOrNormalizedPos: String?): List<String> {
+        val norm = normalize(rawOrNormalizedPos)
+        return when (norm) {
+            POS_NOUN -> listOf("noun", "n", "nomen", "substantiv")
+            POS_VERB -> listOf("verb", "v", "verbum")
+            POS_ADJECTIVE -> listOf("adjective", "adj", "adjektiv")
+            POS_ADVERB -> listOf("adverb", "adv")
+            POS_PREPOSITION -> listOf("preposition", "prep", "präposition", "praeposition")
+            POS_CONJUNCTION -> listOf("conjunction", "conj", "konjunktion")
+            POS_PRONOUN -> listOf("pronoun", "pron", "pronomen")
+            POS_PARTICLE -> listOf("particle", "part", "partikel")
+            POS_PHRASE -> listOf("phrase", "adverbial_phrase", "idiom", "redewendung", "ausdruck")
+            POS_OTHER -> {
+                val raw = rawOrNormalizedPos?.trim()?.lowercase().orEmpty()
+                if (raw.isBlank() || raw == "other") listOf("other") else listOf("other", raw)
+            }
+            else -> {
+                val raw = rawOrNormalizedPos?.trim()?.lowercase().orEmpty()
+                if (raw.isNotBlank() && raw != norm) listOf(norm, raw) else listOf(norm)
+            }
+        }
+    }
 }

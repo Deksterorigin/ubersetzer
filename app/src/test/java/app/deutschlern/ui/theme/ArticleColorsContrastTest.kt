@@ -168,6 +168,34 @@ class ArticleColorsContrastTest {
     }
 
     @Test
+    fun validateCiede2000_againstSharmaTestPairs() {
+        // Published test pairs from Sharma, Wu, Dalal (2005), Table I/II
+        data class SharmaPair(
+            val lab1: Triple<Double, Double, Double>,
+            val lab2: Triple<Double, Double, Double>,
+            val expected: Double
+        )
+
+        val pairs = listOf(
+            // Pair 1
+            SharmaPair(Triple(50.0000, 2.6772, -79.7751), Triple(50.0000, 0.0000, -82.7485), 2.0425),
+            // Pair 2
+            SharmaPair(Triple(50.0000, 3.1571, -77.2803), Triple(50.0000, 0.0000, -82.7485), 2.8615),
+            // Pair 3
+            SharmaPair(Triple(50.0000, 2.8361, -74.0200), Triple(50.0000, 0.0000, -82.7485), 3.4412),
+            // Identical colors
+            SharmaPair(Triple(50.0000, 2.6772, -79.7751), Triple(50.0000, 2.6772, -79.7751), 0.0000),
+            SharmaPair(Triple(60.0000, 0.0000, 0.0000), Triple(60.0000, 0.0000, 0.0000), 0.0000)
+        )
+
+        for ((index, pair) in pairs.withIndex()) {
+            val actual = ciede2000(pair.lab1, pair.lab2)
+            println("Sharma test pair $index: actual=${"%.4f".format(actual)}, expected=${"%.4f".format(pair.expected)}")
+            org.junit.Assert.assertEquals(pair.expected, actual, 0.0005)
+        }
+    }
+
+    @Test
     fun computeAndVerifyContrastRatios_allExceedWcagAa4_5() {
         val lightBg = Color(0xFFFAFAFA)
         val darkBg = Color(0xFF0E0E0E)
@@ -219,7 +247,7 @@ class ArticleColorsContrastTest {
 
         val conditions = listOf("normal", "protanopia", "deuteranopia", "tritanopia")
 
-        println("\n=== LIGHT THEME CIEDE2000 COLOR DISTANCES ===")
+        println("\n=== LIGHT THEME CURRENT CIEDE2000 COLOR DISTANCES ===")
         for (cond in conditions) {
             val sDie = simulateColorBlindness(lightDie, cond)
             val sDer = simulateColorBlindness(lightDer, cond)
@@ -232,7 +260,7 @@ class ArticleColorsContrastTest {
             println("  [$cond] die vs das: ${"%.2f".format(dDieDas)} | der vs die: ${"%.2f".format(dDerDie)} | der vs das: ${"%.2f".format(dDerDas)}")
         }
 
-        println("\n=== DARK THEME CIEDE2000 COLOR DISTANCES ===")
+        println("\n=== DARK THEME CURRENT CIEDE2000 COLOR DISTANCES ===")
         for (cond in conditions) {
             val sDie = simulateColorBlindness(darkDie, cond)
             val sDer = simulateColorBlindness(darkDer, cond)
@@ -245,35 +273,72 @@ class ArticleColorsContrastTest {
             println("  [$cond] die vs das: ${"%.2f".format(dDieDas)} | der vs die: ${"%.2f".format(dDerDie)} | der vs das: ${"%.2f".format(dDerDas)}")
         }
 
-        // Test alternative colors for light-theme das
-        val candidates = listOf(
-            "Current #7F6000" to Color(0xFF7F6000),
-            "Candidate #8A6000 (Ochre)" to Color(0xFF8A6000),
-            "Candidate #6B5B00 (Dark Mustard)" to Color(0xFF6B5B00),
-            "Candidate #5C5200 (Olive Ochre)" to Color(0xFF5C5200),
-            "Candidate #665200" to Color(0xFF665200),
-            "Candidate #594800" to Color(0xFF594800),
-            "Candidate #996500" to Color(0xFF996500),
-            "Candidate #B26A00" to Color(0xFFB26A00),
-            "Candidate #615600" to Color(0xFF615600),
-            "Candidate #4D4400" to Color(0xFF4D4400)
+        // Systematic sweep of hue 40..62 deg for light "das"
+        data class Candidate(
+            val name: String,
+            val hex: String,
+            val color: Color,
+            val hue: Double,
+            val contrast: Double,
+            val normDist: Double,
+            val protDist: Double,
+            val deutDist: Double,
+            val tritDist: Double,
+            val minCbdDist: Double
         )
-        println("\n=== CANDIDATE LIGHT-THEME DAS COLORS (WCAG & CIEDE2000 under Protanopia) ===")
-        for ((name, color) in candidates) {
-            val cr = contrastRatio(color, Color(0xFFFAFAFA))
-            val sDie = simulateColorBlindness(lightDie, "protanopia")
-            val sDas = simulateColorBlindness(color, "protanopia")
-            val distProt = colorDistanceCiede2000(sDie, sDas)
+
+        fun evalCandidate(label: String, c: Color, h: Double): Candidate {
+            val cr = contrastRatio(c, Color(0xFFFAFAFA))
+            val sDieNorm = simulateColorBlindness(lightDie, "normal")
+            val sDasNorm = simulateColorBlindness(c, "normal")
+            val dNorm = colorDistanceCiede2000(sDieNorm, sDasNorm)
+
+            val sDieProt = simulateColorBlindness(lightDie, "protanopia")
+            val sDasProt = simulateColorBlindness(c, "protanopia")
+            val dProt = colorDistanceCiede2000(sDieProt, sDasProt)
 
             val sDieDeut = simulateColorBlindness(lightDie, "deuteranopia")
-            val sDasDeut = simulateColorBlindness(color, "deuteranopia")
-            val distDeut = colorDistanceCiede2000(sDieDeut, sDasDeut)
+            val sDasDeut = simulateColorBlindness(c, "deuteranopia")
+            val dDeut = colorDistanceCiede2000(sDieDeut, sDasDeut)
 
             val sDieTrit = simulateColorBlindness(lightDie, "tritanopia")
-            val sDasTrit = simulateColorBlindness(color, "tritanopia")
-            val distTrit = colorDistanceCiede2000(sDieTrit, sDasTrit)
+            val sDasTrit = simulateColorBlindness(c, "tritanopia")
+            val dTrit = colorDistanceCiede2000(sDieTrit, sDasTrit)
 
-            println("  $name: WCAG=${"%.2f".format(cr)}:1 | Protanopia ΔE00=${"%.2f".format(distProt)} | Deuteranopia ΔE00=${"%.2f".format(distDeut)} | Tritanopia ΔE00=${"%.2f".format(distTrit)}")
+            val r = (c.red * 255).toInt().coerceIn(0, 255)
+            val g = (c.green * 255).toInt().coerceIn(0, 255)
+            val b = (c.blue * 255).toInt().coerceIn(0, 255)
+            val hexStr = "#%02X%02X%02X".format(r, g, b)
+
+            return Candidate(
+                name = label,
+                hex = hexStr,
+                color = c,
+                hue = h,
+                contrast = cr,
+                normDist = dNorm,
+                protDist = dProt,
+                deutDist = dDeut,
+                tritDist = dTrit,
+                minCbdDist = min(dProt, min(dDeut, dTrit))
+            )
+        }
+
+        // Specific named candidates to compare
+        val candidatePool = mutableListOf(
+            evalCandidate("Current Golden Amber", Color(0xFF7F6000), 45.4),
+            evalCandidate("Candidate A: Ochre", Color(0xFF8A6000), 41.7),
+            evalCandidate("Candidate B: Dark Mustard", Color(0xFF6B5B00), 51.0),
+            evalCandidate("Candidate C: Deep Olive Ochre", Color(0xFF5C5200), 53.5),
+            evalCandidate("Candidate D: Amber Olive", Color(0xFF665200), 48.2),
+            evalCandidate("Candidate E: Dark Goldenrod", Color(0xFF725800), 46.0),
+            evalCandidate("Candidate F: Deep Dijon", Color(0xFF615600), 52.8)
+        )
+
+        println("\n=== CANDIDATE LIGHT-THEME DAS COMPARISON ===")
+        for (cand in candidatePool) {
+            println("  ${cand.name} (${cand.hex}, Hue=${"%.1f".format(cand.hue)}°): WCAG=${"%.2f".format(cand.contrast)}:1 | Normal=${"%.2f".format(cand.normDist)} | Prot=${"%.2f".format(cand.protDist)} | Deut=${"%.2f".format(cand.deutDist)} | Trit=${"%.2f".format(cand.tritDist)} | MinCBD=${"%.2f".format(cand.minCbdDist)}")
         }
     }
 }
+

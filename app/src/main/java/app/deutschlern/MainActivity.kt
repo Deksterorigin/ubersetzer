@@ -67,6 +67,7 @@ class MainActivity : ComponentActivity() {
                 appDatabase.openHelper.writableDatabase
                 android.util.Log.i("MainActivity", "AppDatabase initialized successfully")
                 legacyArticleRepairManager.repairIfNeeded()
+                legacyArticleRepairManager.normalizePosIfNeeded()
             } catch (e: Exception) {
                 android.util.Log.e("MainActivity", "AppDatabase initialization or repair error", e)
             }

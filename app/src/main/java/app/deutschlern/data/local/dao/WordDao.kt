@@ -33,6 +33,21 @@ interface WordDao {
     @Query("SELECT * FROM words WHERE lemma = :lemma AND pos = :pos AND partnerLanguage = :partnerLanguage LIMIT 1")
     suspend fun getByLemmaPosAndPartner(lemma: String, pos: String, partnerLanguage: String): WordEntryEntity?
 
+    @Query("""
+        SELECT * FROM words 
+        WHERE lemma = :lemma 
+          AND LOWER(pos) IN (:posList) 
+          AND partnerLanguage = :partnerLanguage 
+        ORDER BY CASE WHEN LOWER(pos) = LOWER(:canonicalPos) THEN 0 ELSE 1 END, id ASC 
+        LIMIT 1
+    """)
+    suspend fun getByLemmaEquivalentPosAndPartner(
+        lemma: String,
+        posList: List<String>,
+        canonicalPos: String,
+        partnerLanguage: String
+    ): WordEntryEntity?
+
     @Query("SELECT * FROM words WHERE lemma = :lemma AND pos = :pos AND partnerLanguage = 'ru' LIMIT 1")
     suspend fun getByLemmaAndPos(lemma: String, pos: String): WordEntryEntity?
 

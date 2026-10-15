@@ -44,6 +44,8 @@ class SettingsRepositoryImpl @Inject constructor(
         private val KEY_COLORED_ARTICLES = booleanPreferencesKey("colored_articles_enabled")
         private val KEY_REPAIRED_ARTICLES = booleanPreferencesKey("has_repaired_non_noun_articles")
         private val KEY_REPAIRED_BACKUP = stringPreferencesKey("repaired_articles_backup_json")
+        private val KEY_NORMALIZED_POS = booleanPreferencesKey("has_normalized_pos_in_db")
+        private val KEY_REPAIRED_POS_BACKUP = stringPreferencesKey("repaired_pos_backup_json")
 
         private const val MODEL_PREFIX_WORD = "model_word_"
         private const val MODEL_PREFIX_TEXT = "model_text_"
@@ -154,6 +156,25 @@ class SettingsRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun resetArticlesRepairedFlag() {
+        context.settingsDataStore.edit {
+            it[KEY_REPAIRED_ARTICLES] = false
+        }
+    }
+
+    override suspend fun markPosNormalized(backupJson: String) {
+        context.settingsDataStore.edit {
+            it[KEY_NORMALIZED_POS] = true
+            it[KEY_REPAIRED_POS_BACKUP] = backupJson
+        }
+    }
+
+    override suspend fun resetPosNormalizedFlag() {
+        context.settingsDataStore.edit {
+            it[KEY_NORMALIZED_POS] = false
+        }
+    }
+
     private fun mapPreferencesToSettings(prefs: Preferences): UserSettings {
         val wordModels = mutableMapOf<String, String>()
         val textModels = mutableMapOf<String, String>()
@@ -196,7 +217,9 @@ class SettingsRepositoryImpl @Inject constructor(
             hasAcceptedCheckConsent = prefs[KEY_CHECK_CONSENT] ?: false,
             coloredArticlesEnabled = prefs[KEY_COLORED_ARTICLES] ?: true,
             hasRepairedNonNounArticles = prefs[KEY_REPAIRED_ARTICLES] ?: false,
-            repairedArticlesBackupJson = prefs[KEY_REPAIRED_BACKUP] ?: ""
+            repairedArticlesBackupJson = prefs[KEY_REPAIRED_BACKUP] ?: "",
+            hasNormalizedPosInDb = prefs[KEY_NORMALIZED_POS] ?: false,
+            repairedPosBackupJson = prefs[KEY_REPAIRED_POS_BACKUP] ?: ""
         )
     }
 }
