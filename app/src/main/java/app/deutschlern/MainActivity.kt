@@ -52,6 +52,11 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var appDatabase: AppDatabase
 
+    @Inject
+    lateinit var legacyArticleRepairManager: app.deutschlern.data.local.LegacyArticleRepairManager
+
+    private val pendingNavRoute = androidx.compose.runtime.mutableStateOf<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         handleIntent(intent)
@@ -61,8 +66,10 @@ class MainActivity : ComponentActivity() {
             try {
                 appDatabase.openHelper.writableDatabase
                 android.util.Log.i("MainActivity", "AppDatabase initialized successfully")
+                legacyArticleRepairManager.repairIfNeeded()
+                legacyArticleRepairManager.normalizePosIfNeeded()
             } catch (e: Exception) {
-                android.util.Log.e("MainActivity", "AppDatabase initialization error", e)
+                android.util.Log.e("MainActivity", "AppDatabase initialization or repair error", e)
             }
         }
 
@@ -155,14 +162,23 @@ class MainActivity : ComponentActivity() {
             CompositionLocalProvider(
                 LocalConfiguration provides localizedConfig,
                 LocalContext provides localizedContext,
-                LocalLayoutDirection provides layoutDirection
+                LocalLayoutDirection provides layoutDirection,
+                app.deutschlern.ui.theme.LocalColoredArticlesEnabled provides currentSettings.coloredArticlesEnabled
             ) {
                 DeutschLernTheme {
                     Surface(
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        AppNavigation()
+                        val navController = androidx.navigation.compose.rememberNavController()
+                        val targetRoute = pendingNavRoute.value
+                        LaunchedEffect(targetRoute) {
+                            if (!targetRoute.isNullOrBlank()) {
+                                navController.navigate(targetRoute)
+                                pendingNavRoute.value = null
+                            }
+                        }
+                        AppNavigation(navController = navController)
                     }
                 }
             }
@@ -181,6 +197,9 @@ class MainActivity : ComponentActivity() {
 
     private fun handleIntent(intent: Intent?) {
         if (intent == null) return
+        intent.getStringExtra("navigate_route")?.let { route ->
+            pendingNavRoute.value = route
+        }
         val text = when (intent.action) {
             Intent.ACTION_PROCESS_TEXT -> {
                 intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT)?.toString()

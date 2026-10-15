@@ -20,10 +20,16 @@ object CsvExporter {
         sb.append("\"Front\",\"Back\"\r\n")
 
         for (word in words) {
-            val front = if (!word.article.isNullOrBlank()) "${word.article} ${word.lemma}" else word.lemma
+            val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                rawLemma = word.lemma,
+                rawPos = word.pos,
+                rawArticle = word.article
+            )
+            val front = if (!sanitized.article.isNullOrBlank()) "${sanitized.article} ${sanitized.lemma}" else sanitized.lemma
             val meaning = word.selectedMeaning ?: word.meanings.firstOrNull()
             val translation = meaning?.translation.orEmpty()
-            val note = if (!meaning?.note.isNullOrBlank()) " (${meaning?.note})" else ""
+            val cleanNote = app.deutschlern.domain.sanitizer.MeaningDeduplicator.cleanNote(meaning?.note)
+            val note = if (!cleanNote.isNullOrBlank()) " ($cleanNote)" else ""
             val exDe = meaning?.exampleDe.orEmpty()
             val exRu = meaning?.exampleRu.orEmpty()
 

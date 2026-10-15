@@ -110,28 +110,58 @@ class VocabularyRepositoryImpl @Inject constructor(
     }
 
     override suspend fun saveWordTranslation(wordTranslation: WordTranslation): WordEntry = withContext(ioDispatcher) {
-        // Extract article and normalize lemma (trim, Unicode NFC)
+        // Extract article and sanitize lemma, pos, and article
         val (extractedArticle, baseLemma) = TextNormalizer.extractArticleAndLemma(wordTranslation.lemma)
-        val resolvedArticle = wordTranslation.article?.trim()?.ifBlank { null } ?: extractedArticle
-        val normalizedLemma = TextNormalizer.normalizeLemma(baseLemma)
-        val cleanPos = wordTranslation.pos.trim().lowercase().ifBlank { "other" }
+        val candidateArticle = wordTranslation.article?.trim()?.ifBlank { null } ?: extractedArticle
+        val rawLemma = if (extractedArticle != null) baseLemma else wordTranslation.lemma
+
+        val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+            rawLemma = rawLemma,
+            rawPos = wordTranslation.pos,
+            rawArticle = candidateArticle
+        )
+
+        val normalizedLemma = TextNormalizer.normalizeLemma(sanitized.lemma)
+        val cleanPos = sanitized.pos
+        val resolvedArticle = sanitized.article
         val partnerLang = wordTranslation.partnerLanguage.trim().lowercase().ifBlank { "ru" }
+
+        // Deduplicate meanings and clean notes
+        val deduplicatedMeanings = app.deutschlern.domain.sanitizer.MeaningDeduplicator.deduplicate(wordTranslation.meanings)
 
         val activeSession = getOrCreateActiveSession()
         val now = System.currentTimeMillis()
 
-        val existing = wordDao.getByLemmaPosAndPartner(normalizedLemma, cleanPos, partnerLang)
+        val equivalentPosList = app.deutschlern.domain.sanitizer.PosNormalizer.getEquivalentPosList(cleanPos)
+        val existing = wordDao.getByLemmaEquivalentPosAndPartner(
+            lemma = normalizedLemma,
+            posList = equivalentPosList,
+            canonicalPos = cleanPos,
+            partnerLanguage = partnerLang
+        )
 
         if (existing != null) {
             // Re-translation: increment timesTranslated, update lastSeenAt, KEEP sessionId and SM-2 progress
             val newTimesTranslated = existing.timesTranslated + 1
-            val selectedIndex = wordTranslation.selectedMeaningIndex ?: existing.selectedMeaningIndex
+
+            // Remap selectedMeaningIndex safely: match selected meaning text, or reset to null
+            val oldMeanings = WordEntryMapper.parseMeanings(existing.meaningsJson, json)
+            val selectedIndex = if (wordTranslation.selectedMeaningIndex != null) {
+                wordTranslation.selectedMeaningIndex
+            } else {
+                app.deutschlern.domain.sanitizer.MeaningDeduplicator.remapSelectedMeaningIndex(
+                    oldMeanings = oldMeanings,
+                    oldIndex = existing.selectedMeaningIndex,
+                    newMeanings = deduplicatedMeanings
+                )
+            }
 
             val updatedEntity = WordEntryMapper.wordTranslationToEntity(
                 word = wordTranslation.copy(
                     lemma = normalizedLemma,
                     article = resolvedArticle,
                     pos = cleanPos,
+                    meanings = deduplicatedMeanings,
                     selectedMeaningIndex = selectedIndex,
                     partnerLanguage = partnerLang
                 ),
@@ -162,6 +192,7 @@ class VocabularyRepositoryImpl @Inject constructor(
                     lemma = normalizedLemma,
                     article = resolvedArticle,
                     pos = cleanPos,
+                    meanings = deduplicatedMeanings,
                     partnerLanguage = partnerLang
                 ),
                 sessionId = activeSession.id,
@@ -189,9 +220,15 @@ class VocabularyRepositoryImpl @Inject constructor(
     override suspend fun findWord(lemma: String, pos: String, partnerLanguage: String): WordEntry? = withContext(ioDispatcher) {
         val (_, baseLemma) = TextNormalizer.extractArticleAndLemma(lemma)
         val normalizedLemma = TextNormalizer.normalizeLemma(baseLemma)
-        val cleanPos = pos.trim().lowercase().ifBlank { "other" }
+        val cleanPos = app.deutschlern.domain.sanitizer.PosNormalizer.normalize(pos)
         val partner = partnerLanguage.trim().lowercase().ifBlank { "ru" }
-        wordDao.getByLemmaPosAndPartner(normalizedLemma, cleanPos, partner)?.let {
+        val equivalentPosList = app.deutschlern.domain.sanitizer.PosNormalizer.getEquivalentPosList(cleanPos)
+        wordDao.getByLemmaEquivalentPosAndPartner(
+            lemma = normalizedLemma,
+            posList = equivalentPosList,
+            canonicalPos = cleanPos,
+            partnerLanguage = partner
+        )?.let {
             WordEntryMapper.entityToDomain(it, json)
         }
     }
@@ -212,17 +249,20 @@ class VocabularyRepositoryImpl @Inject constructor(
         russianTranslation: String,
         pos: String
     ): WordEntry = withContext(ioDispatcher) {
-        val (article, baseLemma) = TextNormalizer.extractArticleAndLemma(germanLemmaWithArticle)
+        val (sanitizedArticle, baseLemma) = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitizeGermanEquivalent(
+            equivalentText = germanLemmaWithArticle,
+            expectedPos = pos
+        )
         val normalizedLemma = TextNormalizer.normalizeLemma(baseLemma)
         val cleanPos = if (pos.isBlank() || pos == "other") {
-            if (article != null) "noun" else "other"
+            if (sanitizedArticle != null) "noun" else "other"
         } else {
-            pos.trim().lowercase()
+            app.deutschlern.domain.sanitizer.PosNormalizer.normalize(pos)
         }
 
         val wordTranslation = WordTranslation(
             lemma = normalizedLemma,
-            article = article,
+            article = sanitizedArticle,
             pos = cleanPos,
             meanings = listOf(
                 Meaning(

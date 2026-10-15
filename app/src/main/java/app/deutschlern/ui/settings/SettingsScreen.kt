@@ -64,6 +64,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -76,21 +77,26 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import app.deutschlern.BuildConfig
 import app.deutschlern.R
 import app.deutschlern.domain.model.AppLanguage
 import app.deutschlern.ui.components.HairlineDivider
+import app.deutschlern.update.UpdateViewModel
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: SettingsViewModel = hiltViewModel()
+    viewModel: SettingsViewModel = hiltViewModel(),
+    updateViewModel: UpdateViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val clipboardManager = LocalClipboardManager.current
     val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
 
     LaunchedEffect(uiState.infoMessage) {
@@ -220,9 +226,11 @@ fun SettingsScreen(
                 isOfflineMlKitEnabled = uiState.isOfflineMlKitEnabled,
                 showModelCaption = uiState.showModelCaption,
                 useCrossModelCache = uiState.useCrossModelCache,
+                coloredArticlesEnabled = uiState.coloredArticlesEnabled,
                 onToggleOfflineMlKit = { viewModel.onToggleOfflineMlKit(it) },
                 onToggleShowModelCaption = { viewModel.onToggleShowModelCaption(it) },
                 onToggleUseCrossModelCache = { viewModel.onToggleUseCrossModelCache(it) },
+                onToggleColoredArticles = { viewModel.onToggleColoredArticles(it) },
                 onClearCache = { viewModel.onClearCacheClicked() }
             )
 
@@ -237,6 +245,20 @@ fun SettingsScreen(
                 onToggleAutoDetect = { viewModel.onToggleSttAutoDetect(it) },
                 onToggleTranslateImmediately = { viewModel.onToggleSttTranslateImmediately(it) }
             )
+
+            // 6. App Updates (sideloaded builds only)
+            if (BuildConfig.ENABLE_SELF_UPDATE) {
+                HairlineDivider()
+
+                UpdateSection(
+                    viewModel = updateViewModel,
+                    onShowSnackbar = { message ->
+                        coroutineScope.launch {
+                            snackbarHostState.showSnackbar(message)
+                        }
+                    }
+                )
+            }
 
             Spacer(modifier = Modifier.height(24.dp))
         }
@@ -813,12 +835,22 @@ private fun GeneralSettingsSection(
     isOfflineMlKitEnabled: Boolean,
     showModelCaption: Boolean,
     useCrossModelCache: Boolean,
+    coloredArticlesEnabled: Boolean,
     onToggleOfflineMlKit: (Boolean) -> Unit,
     onToggleShowModelCaption: (Boolean) -> Unit,
     onToggleUseCrossModelCache: (Boolean) -> Unit,
+    onToggleColoredArticles: (Boolean) -> Unit,
     onClearCache: () -> Unit
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        // Colored articles toggle
+        SettingSwitchRow(
+            title = stringResource(R.string.settings_colored_articles),
+            subtitle = stringResource(R.string.settings_colored_articles_desc),
+            checked = coloredArticlesEnabled,
+            onCheckedChange = onToggleColoredArticles
+        )
+
         // ML Kit offline toggle
         SettingSwitchRow(
             title = stringResource(R.string.settings_offline_mlkit),

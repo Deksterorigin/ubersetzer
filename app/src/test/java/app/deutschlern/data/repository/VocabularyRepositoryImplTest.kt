@@ -92,7 +92,7 @@ class VocabularyRepositoryImplTest {
         val sessionEntity = SessionEntity(id = 5L, title = "Урок, 4 окт", date = today, isManual = false)
         coEvery { sessionDao.getSessionsForDate(any()) } returns listOf(sessionEntity)
 
-        coEvery { wordDao.getByLemmaPosAndPartner("Haus", "noun", "ru") } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Haus", any(), "noun", "ru") } returns null
         coEvery { wordDao.insert(any()) } returns 101L
 
         val wordTranslation = WordTranslation(
@@ -148,7 +148,7 @@ class VocabularyRepositoryImplTest {
             status = WordStatus.LEARNING.name,
             partnerLanguage = "ru"
         )
-        coEvery { wordDao.getByLemmaPosAndPartner("Apfel", "noun", "ru") } returns existingWord
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Apfel", any(), "noun", "ru") } returns existingWord
 
         val retranslatedWord = WordTranslation(
             lemma = "Apfel",
@@ -180,13 +180,111 @@ class VocabularyRepositoryImplTest {
     }
 
     @Test
+    fun saveWordTranslation_existingRowWithPosN_retranslatedWithPosNoun_updatesRowWithoutDuplicate() = runTest {
+        val today = VocabularyRepositoryImpl.getStartOfDay()
+        val currentSession = SessionEntity(id = 20L, title = "Урок, 4 окт", date = today, isManual = false)
+        coEvery { sessionDao.getSessionsForDate(any()) } returns listOf(currentSession)
+
+        // Existing row in DB has legacy pos = "n" and timesTranslated = 2
+        val legacyRow = WordEntryEntity(
+            id = 40L,
+            sessionId = 3L,
+            lemma = "Kündigung",
+            article = "die",
+            pos = "n", // legacy POS from older versions
+            meaningsJson = "[{\"translation\":\"увольнение\"}]",
+            timesTranslated = 2,
+            firstSeenAt = 1000L,
+            lastSeenAt = 2000L,
+            status = WordStatus.NEW.name,
+            partnerLanguage = "ru"
+        )
+        // Dao returns legacy row when queried with equivalent POS list containing "noun", "n", "nomen", etc.
+        coEvery {
+            wordDao.getByLemmaEquivalentPosAndPartner(
+                lemma = "Kündigung",
+                posList = match { it.contains("n") && it.contains("noun") },
+                canonicalPos = "noun",
+                partnerLanguage = "ru"
+            )
+        } returns legacyRow
+
+        // Incoming translation from parser now returns canonical pos = "noun"
+        val incoming = WordTranslation(
+            lemma = "die Kündigung",
+            article = "die",
+            pos = "noun",
+            meanings = listOf(Meaning(translation = "расторжение, увольнение")),
+            partnerLanguage = "ru"
+        )
+
+        val result = repository.saveWordTranslation(incoming)
+
+        // Verifies existing row was updated, NOT inserted as a duplicate
+        assertEquals(40L, result.id)
+        assertEquals("Kündigung", result.lemma)
+        assertEquals("noun", result.pos) // Smoothly upgraded to canonical pos
+        assertEquals(3, result.timesTranslated) // 2 + 1
+        assertEquals(3L, result.sessionId) // Preserved original session id
+
+        coVerify(exactly = 0) { wordDao.insert(any()) } // NO duplicate insert!
+        coVerify(exactly = 1) { wordDao.update(match { it.id == 40L && it.pos == "noun" && it.timesTranslated == 3 }) }
+    }
+
+    @Test
+    fun saveWordTranslation_existingRowWithPosAdverbialPhrase_retranslatedWithPhrase_updatesRow() = runTest {
+        val today = VocabularyRepositoryImpl.getStartOfDay()
+        val currentSession = SessionEntity(id = 20L, title = "Урок, 4 окт", date = today, isManual = false)
+        coEvery { sessionDao.getSessionsForDate(any()) } returns listOf(currentSession)
+
+        val legacyRow = WordEntryEntity(
+            id = 8L,
+            sessionId = 1L,
+            lemma = "auf dem Laufenden",
+            article = null,
+            pos = "adverbial_phrase", // legacy POS
+            meaningsJson = "[{\"translation\":\"в курсе\"}]",
+            timesTranslated = 1,
+            firstSeenAt = 500L,
+            lastSeenAt = 1500L,
+            status = WordStatus.NEW.name,
+            partnerLanguage = "ru"
+        )
+        coEvery {
+            wordDao.getByLemmaEquivalentPosAndPartner(
+                lemma = "auf dem Laufenden",
+                posList = match { it.contains("adverbial_phrase") && it.contains("phrase") },
+                canonicalPos = "phrase",
+                partnerLanguage = "ru"
+            )
+        } returns legacyRow
+
+        val incoming = WordTranslation(
+            lemma = "auf dem Laufenden",
+            article = null,
+            pos = "phrase",
+            meanings = listOf(Meaning(translation = "в курсе дела")),
+            partnerLanguage = "ru"
+        )
+
+        val result = repository.saveWordTranslation(incoming)
+
+        assertEquals(8L, result.id)
+        assertEquals("phrase", result.pos)
+        assertEquals(2, result.timesTranslated)
+
+        coVerify(exactly = 0) { wordDao.insert(any()) }
+        coVerify(exactly = 1) { wordDao.update(match { it.id == 8L && it.pos == "phrase" && it.timesTranslated == 2 }) }
+    }
+
+    @Test
     fun saveWordTranslation_withPartnerLanguage_differentiatesSameLemma() = runTest {
         val today = VocabularyRepositoryImpl.getStartOfDay()
         val currentSession = SessionEntity(id = 12L, title = "Урок, 4 окт", date = today, isManual = false)
         coEvery { sessionDao.getSessionsForDate(any()) } returns listOf(currentSession)
 
         // Look up for "uk" returns null even if "ru" might exist
-        coEvery { wordDao.getByLemmaPosAndPartner("Buch", "noun", "uk") } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Buch", any(), "noun", "uk") } returns null
         coEvery { wordDao.insert(any()) } returns 200L
 
         val ukrainianTranslation = WordTranslation(
@@ -221,7 +319,7 @@ class VocabularyRepositoryImplTest {
             lastSeenAt = 2000L,
             partnerLanguage = "ru"
         )
-        coEvery { wordDao.getByLemmaPosAndPartner("Hund", "noun", "ru") } returns existingEntity
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Hund", any(), "noun", "ru") } returns existingEntity
 
         val found = repository.findWord("der Hund", "noun", "ru")
 
@@ -234,8 +332,37 @@ class VocabularyRepositoryImplTest {
     }
 
     @Test
+    fun findWord_withLegacyPosNomen_matchesIncomingNoun() = runTest {
+        val legacyEntity = WordEntryEntity(
+            id = 32L,
+            sessionId = 2L,
+            lemma = "Bescheid",
+            article = "der",
+            pos = "nomen", // legacy POS in DB
+            meaningsJson = "[{\"translation\":\"решение, ответ\"}]",
+            firstSeenAt = 1000L,
+            lastSeenAt = 2000L,
+            partnerLanguage = "ru"
+        )
+        coEvery {
+            wordDao.getByLemmaEquivalentPosAndPartner(
+                lemma = "Bescheid",
+                posList = match { it.contains("nomen") && it.contains("noun") },
+                canonicalPos = "noun",
+                partnerLanguage = "ru"
+            )
+        } returns legacyEntity
+
+        val found = repository.findWord("der Bescheid", "noun", "ru")
+
+        assertNotNull(found)
+        assertEquals(32L, found?.id)
+        assertEquals("Bescheid", found?.lemma)
+    }
+
+    @Test
     fun findWord_whenDoesNotExist_returnsNull() = runTest {
-        coEvery { wordDao.getByLemmaPosAndPartner("Katze", "noun", "fa") } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Katze", any(), "noun", "fa") } returns null
 
         val found = repository.findWord("die Katze", "noun", "fa")
 
@@ -248,7 +375,7 @@ class VocabularyRepositoryImplTest {
         val currentSession = SessionEntity(id = 8L, title = "Урок, 4 окт", date = today, isManual = false)
         coEvery { sessionDao.getSessionsForDate(any()) } returns listOf(currentSession)
 
-        coEvery { wordDao.getByLemmaPosAndPartner("Schloss", "noun", "ru") } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner("Schloss", any(), "noun", "ru") } returns null
         coEvery { wordDao.insert(any()) } returns 77L
 
         val result = repository.saveGermanEquivalent(

@@ -14,7 +14,9 @@ build/
 *.apk
 *.aab
 backup_db/
+backups/
 *.db
 *.db-shm
 *.db-wal
 Thumbs.db
+ui_settings_dump.xml

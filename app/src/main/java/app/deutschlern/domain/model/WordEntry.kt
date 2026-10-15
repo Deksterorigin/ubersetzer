@@ -26,10 +26,15 @@ data class WordEntry(
         get() = selectedMeaningIndex?.let { meanings.getOrNull(it) } ?: meanings.firstOrNull()
 
     fun toWordTranslation(): WordTranslation {
+        val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+            rawLemma = lemma,
+            rawPos = pos,
+            rawArticle = article
+        )
         return WordTranslation(
-            lemma = lemma,
-            article = article,
-            pos = pos,
+            lemma = sanitized.lemma,
+            article = sanitized.article,
+            pos = sanitized.pos,
             plural = plural,
             genitive = genitive,
             verbForms = verbForms,

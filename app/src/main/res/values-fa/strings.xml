@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">عالی! هیچ خطای قابل توجهی یافت نشد.</string>
     <string name="dialog_task_finish">پایان تمرین</string>
     <string name="dialog_open_speak_prompt">برای پاسخ صوتی روی میکروفون ضربه بزنید</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">به‌روزرسانی‌ها</string>
+    <string name="update_current_version">نسخه %1$s (ساخت %2$d)</string>
+    <string name="update_action_check">بررسی به‌روزرسانی‌ها</string>
+    <string name="update_status_checking">در حال بررسی به‌روزرسانی‌ها…</string>
+    <string name="update_status_up_to_date">آخرین نسخه نصب شده است</string>
+    <string name="update_dialog_title">به‌روزرسانی در دسترس است</string>
+    <string name="update_version_available">نسخه جدید: %1$s</string>
+    <string name="update_size_format">اندازه: %1$s</string>
+    <string name="update_release_notes_title">تغییرات جدید:</string>
+    <string name="update_action_download_install">دانلود و نصب</string>
+    <string name="update_action_later">بعداً</string>
+    <string name="update_wifi_only_title">دانلود فقط از طریق Wi-Fi</string>
+    <string name="update_wifi_only_desc">صرفه‌جویی در مصرف داده هنگام دانلود به‌روزرسانی</string>
+    <string name="update_backup_reminder_title">توصیه می‌کنیم از واژگان خود نسخه پشتیبان تهیه کنید</string>
+    <string name="update_backup_action_export_csv">خروجی واژگان به CSV</string>
+    <string name="update_permission_explanation">برای نصب به‌روزرسانی، به DeutschLern در تنظیمات سیستم اجازه نصب برنامه‌های ناشناخته را بدهید.</string>
+    <string name="update_action_open_settings">باز کردن تنظیمات</string>
+    <string name="update_progress_downloading">در حال دانلود به‌روزرسانی: %1$d%%</string>
+    <string name="update_action_cancel">لغو</string>
+    <string name="update_status_verifying">در حال بررسی سلامت و امضای بسته…</string>
+    <string name="update_status_installing">در حال شروع نصب به‌روزرسانی…</string>
+    <string name="update_error_network">خطای شبکه. لطفاً اتصال اینترنت خود را بررسی کنید.</string>
+    <string name="update_error_rate_limit">محدودیت درخواست‌های گیت‌هاب پر شده است. لطفاً بعداً دوباره امتحان کنید.</string>
+    <string name="update_error_not_found">هیچ نسخه‌ای در مخزن یافت نشد.</string>
+    <string name="update_error_parse_version">تشخیص نسخه ممکن نشد: %1$s</string>
+    <string name="update_error_no_apk_asset">فایل APK در این نسخه یافت نشد.</string>
+    <string name="update_error_multiple_apk_assets">چند فایل APK پیدا شد. به‌روزرسانی برای امنیت لغو شد.</string>
+    <string name="update_error_wifi_required">دانلود لغو شد: گزینه «فقط Wi-Fi» فعال است.</string>
+    <string name="update_error_insufficient_space">فضای ذخیره‌سازی کافی برای دانلود به‌روزرسانی وجود ندارد.</string>
+    <string name="update_error_hash_mismatch">بررسی سلامت ناموفق بود: اثر انگشت فایل همخوانی ندارد.</string>
+    <string name="update_error_invalid_package">خطای اعتبارسنجی: شناسه برنامه همخوانی ندارد.</string>
+    <string name="update_error_downgrade">خطا: نسخه دانلود شده کمتر یا برابر با نسخه فعلی است.</string>
+    <string name="update_error_signature_mismatch">خطای امنیتی: امضای دیجیتال بسته با برنامه نصب شده همخوانی ندارد.</string>
+    <string name="update_error_file_too_large">حجم فایل بیش از حد مجاز امنیتی است.</string>
+    <string name="update_error_install_failed">خطای نصب (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">به‌روزرسانی در نسخه آزمایشی غیرفعال است</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">گفتاری</string>
+    <string name="register_formal">رسمی</string>
+    <string name="register_dated">کهن</string>
+    <string name="settings_colored_articles">حروف تعریف رنگی</string>
+    <string name="settings_colored_articles_desc">آبی (der)، قرمز (die)، زرد (das)</string>
 </resources>

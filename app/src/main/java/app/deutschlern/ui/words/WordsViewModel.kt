@@ -398,10 +398,16 @@ class WordsViewModel @Inject constructor(
                     )
                 }
             } else {
+                val rawArt = if (_uiState.value.manualArticle == "none") null else _uiState.value.manualArticle
+                val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                    rawLemma = word,
+                    rawPos = pos,
+                    rawArticle = rawArt
+                )
                 val wordTrans = WordTranslation(
-                    lemma = word,
-                    article = if (_uiState.value.manualArticle == "none") null else _uiState.value.manualArticle,
-                    pos = pos,
+                    lemma = sanitized.lemma,
+                    article = sanitized.article,
+                    pos = sanitized.pos,
                     meanings = listOf(
                         Meaning(
                             translation = translation,

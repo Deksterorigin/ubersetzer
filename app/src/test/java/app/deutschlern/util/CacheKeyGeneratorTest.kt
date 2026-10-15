@@ -104,4 +104,23 @@ class CacheKeyGeneratorTest {
         assertNotEquals(keyBase, keyDiffDir)
         assertNotEquals(keyBase, keyDiffContext)
     }
+
+    @Test
+    fun generateSemanticKey_differentPartnerLanguages_produceDifferentKeys() {
+        val word = "Haus"
+        val keyDeRu = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_RU.name, word)
+        val keyDeEn = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_EN.name, word)
+        val keyDeUk = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_UK.name, word)
+        val keyDeAr = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_AR.name, word)
+        val keyDeFa = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_FA.name, word)
+        val keyDeRo = CacheKeyGenerator.generateSemanticKey(promptVersion, mode, app.deutschlern.domain.model.TranslationDirection.DE_RO.name, word)
+
+        // Ensure DE->RU cached translation is NEVER returned for DE->EN or any other partner language
+        assertNotEquals("DE_RU must differ from DE_EN", keyDeRu, keyDeEn)
+        assertNotEquals("DE_RU must differ from DE_UK", keyDeRu, keyDeUk)
+        assertNotEquals("DE_RU must differ from DE_AR", keyDeRu, keyDeAr)
+        assertNotEquals("DE_RU must differ from DE_FA", keyDeRu, keyDeFa)
+        assertNotEquals("DE_RU must differ from DE_RO", keyDeRu, keyDeRo)
+        assertNotEquals("DE_EN must differ from DE_UK", keyDeEn, keyDeUk)
+    }
 }

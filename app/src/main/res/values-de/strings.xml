@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">Ausgezeichnet! Keine auffälligen Fehler gefunden.</string>
     <string name="dialog_task_finish">Übung beenden</string>
     <string name="dialog_open_speak_prompt">Tippen Sie auf das Mikrofon für eine Sprachantwort</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">Aktualisierungen</string>
+    <string name="update_current_version">Version %1$s (Build %2$d)</string>
+    <string name="update_action_check">Nach Updates suchen</string>
+    <string name="update_status_checking">Suche nach Updates…</string>
+    <string name="update_status_up_to_date">Die neueste Version ist installiert</string>
+    <string name="update_dialog_title">Update verfügbar</string>
+    <string name="update_version_available">Neue Version: %1$s</string>
+    <string name="update_size_format">Größe: %1$s</string>
+    <string name="update_release_notes_title">Was gibt\'s Neues:</string>
+    <string name="update_action_download_install">Herunterladen und installieren</string>
+    <string name="update_action_later">Später</string>
+    <string name="update_wifi_only_title">Nur über WLAN herunterladen</string>
+    <string name="update_wifi_only_desc">Spart mobile Daten beim Herunterladen von Updates</string>
+    <string name="update_backup_reminder_title">Es wird empfohlen, den Wortschatz zu sichern</string>
+    <string name="update_backup_action_export_csv">Wortschatz als CSV exportieren</string>
+    <string name="update_permission_explanation">Um das Update zu installieren, erlauben Sie DeutschLern in den Systemeinstellungen die Installation unbekannter Apps.</string>
+    <string name="update_action_open_settings">Einstellungen öffnen</string>
+    <string name="update_progress_downloading">Update wird heruntergeladen: %1$d%%</string>
+    <string name="update_action_cancel">Abbrechen</string>
+    <string name="update_status_verifying">APK-Integrität und Signatur werden überprüft…</string>
+    <string name="update_status_installing">Update-Installation wird gestartet…</string>
+    <string name="update_error_network">Netzwerkfehler. Bitte überprüfen Sie Ihre Internetverbindung.</string>
+    <string name="update_error_rate_limit">GitHub-API-Ratenlimit überschritten. Bitte versuchen Sie es später erneut.</string>
+    <string name="update_error_not_found">Keine Releases im Repository gefunden.</string>
+    <string name="update_error_parse_version">Release-Version konnte nicht erkannt werden: %1$s</string>
+    <string name="update_error_no_apk_asset">Keine APK-Datei in den Release-Dateien gefunden.</string>
+    <string name="update_error_multiple_apk_assets">Mehrere APK-Dateien gefunden. Update zur Sicherheit abgebrochen.</string>
+    <string name="update_error_wifi_required">Download abgebrochen: Einstellung „Nur über WLAN“ ist aktiv.</string>
+    <string name="update_error_insufficient_space">Nicht genügend freier Speicherplatz für das Update.</string>
+    <string name="update_error_hash_mismatch">Integritätsprüfung fehlgeschlagen: APK-Prüfsumme stimmt nicht überein.</string>
+    <string name="update_error_invalid_package">Überprüfungsfehler: Paketname stimmt nicht mit der Anwendung überein.</string>
+    <string name="update_error_downgrade">Fehler: Version der heruntergeladenen APK ist niedriger oder gleich der installierten.</string>
+    <string name="update_error_signature_mismatch">Sicherheitsfehler: Digitale Signatur der APK stimmt nicht mit der installierten App überein.</string>
+    <string name="update_error_file_too_large">Die APK-Dateigröße überschreitet das zulässige Sicherheitslimit.</string>
+    <string name="update_error_install_failed">Installationsfehler (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">Selbst-Update ist in Debug-Builds deaktiviert</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">ugs.</string>
+    <string name="register_formal">formell</string>
+    <string name="register_dated">veraltet</string>
+    <string name="settings_colored_articles">Farbige Artikel</string>
+    <string name="settings_colored_articles_desc">Blau (der), Rot (die), Gelb (das)</string>
 </resources>

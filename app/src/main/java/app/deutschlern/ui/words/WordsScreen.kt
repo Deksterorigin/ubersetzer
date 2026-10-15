@@ -600,23 +600,28 @@ private fun WordRowContent(
                 verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
                 // Article + Lemma
+                val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                    rawLemma = word.lemma,
+                    rawPos = word.pos,
+                    rawArticle = word.article
+                )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
-                    if (!word.article.isNullOrBlank()) {
-                        Text(
-                            text = word.article,
+                    if (!sanitized.article.isNullOrBlank()) {
+                        app.deutschlern.ui.theme.ArticleLabel(
+                            article = sanitized.article,
                             style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Normal,
-                            color = MaterialTheme.colorScheme.primary
+                            fontWeight = FontWeight.Normal
                         )
                     }
                     Text(
-                        text = word.lemma,
+                        text = sanitized.lemma,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.weight(1f, fill = false)
                     )
 
                     // Counter badge if timesTranslated > 1

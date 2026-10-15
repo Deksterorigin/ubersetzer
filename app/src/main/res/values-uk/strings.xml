@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">Чудово! Помітних помилок не виявлено.</string>
     <string name="dialog_task_finish">Завершити завдання</string>
     <string name="dialog_open_speak_prompt">Натисніть на мікрофон для голосової відповіді</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">Оновлення</string>
+    <string name="update_current_version">Версія %1$s (збірка %2$d)</string>
+    <string name="update_action_check">Перевірити оновлення</string>
+    <string name="update_status_checking">Перевірка наявності оновлень…</string>
+    <string name="update_status_up_to_date">Встановлено останню версію</string>
+    <string name="update_dialog_title">Доступне оновлення</string>
+    <string name="update_version_available">Нова версія: %1$s</string>
+    <string name="update_size_format">Розмір: %1$s</string>
+    <string name="update_release_notes_title">Що нового:</string>
+    <string name="update_action_download_install">Завантажити та встановити</string>
+    <string name="update_action_later">Пізніше</string>
+    <string name="update_wifi_only_title">Завантажувати лише через Wi-Fi</string>
+    <string name="update_wifi_only_desc">Заощаджує мобільний трафік під час завантаження оновлень</string>
+    <string name="update_backup_reminder_title">Рекомендуємо створити резервну копію словника</string>
+    <string name="update_backup_action_export_csv">Експорт словника в CSV</string>
+    <string name="update_permission_explanation">Для встановлення оновлення дозвольте DeutschLern встановлення невідомих додатків у налаштуваннях системи.</string>
+    <string name="update_action_open_settings">Відкрити налаштування</string>
+    <string name="update_progress_downloading">Завантаження оновлення: %1$d%%</string>
+    <string name="update_action_cancel">Скасувати</string>
+    <string name="update_status_verifying">Перевірка цілісності та підпису APK…</string>
+    <string name="update_status_installing">Запуск встановлення оновлення…</string>
+    <string name="update_error_network">Помилка мережі. Перевірте підключення до інтернету.</string>
+    <string name="update_error_rate_limit">Перевищено ліміт запитів до GitHub API. Спробуйте пізніше.</string>
+    <string name="update_error_not_found">Релізи не знайдені в репозиторії.</string>
+    <string name="update_error_parse_version">Не вдалося розпізнати версію релізу: %1$s</string>
+    <string name="update_error_no_apk_asset">У релізі не знайдено файл APK для встановлення.</string>
+    <string name="update_error_multiple_apk_assets">У релізі знайдено кілька файлів APK. Оновлення скасовано для безпеки.</string>
+    <string name="update_error_wifi_required">Завантаження скасовано: увімкнено параметр «Лише через Wi-Fi».</string>
+    <string name="update_error_insufficient_space">Недостатньо вільного місця на пристрої для завантаження оновлення.</string>
+    <string name="update_error_hash_mismatch">Помилка перевірки цілісності: контрольна сума APK не збігається.</string>
+    <string name="update_error_invalid_package">Помилка перевірки: ім\'я пакета не збігається з додатком.</string>
+    <string name="update_error_downgrade">Помилка: версія завантаженого APK нижча або дорівнює встановленій.</string>
+    <string name="update_error_signature_mismatch">Помилка безпеки: цифровий підпис APK не збігається зі встановленим додатком.</string>
+    <string name="update_error_file_too_large">Розмір файлу APK перевищує допустимий ліміт безпеки.</string>
+    <string name="update_error_install_failed">Помилка встановлення (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">Самооновлення вимкнено у Debug-збірці</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">розг.</string>
+    <string name="register_formal">офіц.</string>
+    <string name="register_dated">застар.</string>
+    <string name="settings_colored_articles">Кольорові артиклі</string>
+    <string name="settings_colored_articles_desc">Синій (der), червоний (die), жовтий (das)</string>
 </resources>

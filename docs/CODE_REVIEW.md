@@ -119,9 +119,92 @@ The German proofreading engine enforces minimal-edit correction:
 
 | Metric | Target | Actual Result | Status |
 | :--- | :--- | :--- | :--- |
-| **Unit Tests** | $\ge 253$ passing | **272 passed, 0 failures** | ✅ PASSED |
-| **Lint** | Zero errors | `lintDebug` clean | ✅ PASSED |
+| **Unit Tests** | $\ge 300$ passing | **322 passed, 0 failures** | ✅ PASSED |
+| **Lint** | Zero errors | `lintDebug` clean (0 errors) | ✅ PASSED |
 | **Release Build** | R8 Minified | `assembleRelease` succeeded | ✅ PASSED |
-| **Real Device Smoke Test** | Android 16 | PID active, 0 crash logs | ✅ PASSED |
-| **Database Migrations** | Non-destructive | Migrated v5 $\rightarrow$ v6 | ✅ PASSED |
-| **String Parity** | 8 locales | 246 / 246 in all 8 files | ✅ PASSED |
+| **Real Device Smoke Test** | Android 16 (API 36) | PID active, 0 crash logs | ✅ PASSED |
+| **Data Repair** | Non-destructive | Repaired live DB (1 non-noun nulled) | ✅ PASSED |
+| **String Parity** | 8 locales | 352 / 352 in all 8 files | ✅ PASSED |
+
+---
+
+## 8. Word-Card Meanings Layout & Quality Overhaul (Part A)
+
+1. **Unweighted Row Restructuring**:
+   - **Root Cause**: `MeaningRow` previously arranged translation text, register label, and note horizontally in a single `Row` without layout weights. When translation text expanded, the note received nearly zero width, causing it to wrap 1 character per line. This ballooned the item height to full screen height, leaving vast blank space and centering contents.
+   - **Fix**:
+     - Line 1: Translation Text with `Modifier.weight(1f, fill = false)` + `bestMatch` indicator + localized register tag (`softWrap = false, maxLines = 1`) + selection / TTS action icons.
+     - Line 2: Clarification Note full width, secondary body style, max 3 lines with tap-to-expand.
+     - Line 3+: German example sentence and localized partner language translation.
+   - **Audit of Other Screens**:
+     - `WordsScreen.kt` (`WordRowContent`): Lemma text guarded with `Modifier.weight(1f, fill = false)`.
+     - `WordCard.kt` (`CollocationsContent`): Replaced unweighted multi-text `Row` with single `Text(buildAnnotatedString)` with `fillMaxWidth()`.
+     - `WordDetailBottomSheet.kt` (`StatusSegmentedSwitch`): Added `Modifier.weight(1f)` to each `StatusOption`.
+     - `CheckScreen.kt`: Added `Modifier.weight(1f, fill = false)` to hunk comparison row.
+2. **Raw Enum Elimination & Localization**:
+   - Register values (`neutral`, `umgangssprachlich`, `formell`, `veraltet`): `neutral` is hidden; non-neutral registers are localized across all 8 locales via `R.string.register_*`.
+   - Word statuses (`NEW`, `LEARNING`, `KNOWN`): Localized via `R.string.status_*`.
+   - POS labels (`noun`, `verb`, `n`, `nomen`, etc.): Localized via `PosNormalizer` and `R.string.pos_*`.
+3. **Meaning Quality & Deduplication**:
+   - `MeaningDeduplicator`: Normalizes translations (stripping parenthetical qualifiers and punctuation) to collapse duplicate definitions.
+   - Notes are stripped of wrapping parentheses, frequency statements ("most common meaning"), and grammar claims, capped at 8 words.
+   - Safely remaps `selectedMeaningIndex` matching selected meaning text; resets to null if omitted, preventing invalid meaning pointers.
+4. **Prompt Optimization**:
+   - Bumped `PROMPT_VERSION_WORD = "v1.2"` to invalidate legacy caches.
+   - Prompt strictly limits note length (max 8 words), forbids frequency padding, and instructs model to return only 1 entry for core meanings.
+
+---
+
+## 9. Article Sanitization & Database Repair (Part B)
+
+1. **Pure `ArticleSanitizer` at All Boundaries**:
+   - Boundary enforcement at Gemini/provider parsing, Room persistence (`VocabularyRepositoryImpl`), mapping (`WordEntryMapper`), Anki CSV export (`CsvExporter`), and flashcard rendering (`FlashcardComponent`).
+   - Ensures articles are kept ONLY when POS is `noun` and article is one of `der`, `die`, `das`.
+   - Speech-to-text lowercase lemma fix: lowercase noun lemmas (e.g. voice input "apfel") are capitalized ("Apfel") rather than dropping the article.
+   - Strong suffix rules: `-ung`, `-heit`, `-keit`, `-schaft`, `-tion`, `-ität` $\rightarrow$ `die`; `-chen`, `-lein` $\rightarrow$ `das`; `-ismus` $\rightarrow$ `der`. Includes masculine exceptions list (`der Kuchen`, `der Drachen`, `der Rachen`, `der Rechen`, `der Knochen`). Suffix rule triggers at most 1 verification retry without overriding the model.
+   - German equivalent sanitization for RU$\rightarrow$DE: leading articles are permitted only for single noun equivalents.
+2. **Live Database Audit & Idempotent Repair**:
+   - **Live DB Audit (Xiaomi 14 / Android 16)**: Total 43 saved words.
+     - Distinct POS values: `noun`, `n`, `nomen`, `verb`, `adjective`, `adjektiv`, `adverb`, `adverbial_phrase`, `phrase`.
+     - Exact non-nouns with invalid article: **1 word** (`id=13, lemma="ausüblich", pos="adjective", article="die"`).
+     - Non-canonical noun POS (`n`, `nomen`) preserved with valid articles.
+   - **`LegacyArticleRepairManager`**: Idempotent startup job guarded by DataStore flag (`hasRepairedNonNounArticles`). Nulls article ONLY for `NON_NOUN_ALLOWLIST`.
+   - **Reversible Backup**: Backed up `id=13, ausüblich` to DataStore JSON before modification.
+   - **Verification**: Verified on real device: `SELECT id, lemma, pos, quote(article) FROM words WHERE id=13;` $\rightarrow$ `13|ausüblich|adjective|NULL`.
+
+---
+
+## 10. Semantic Colored Articles (Part C)
+
+1. **Semantic Color Palette**:
+   - `der`: Blue
+   - `die` (including plural): Red
+   - `das`: Dark Amber / Golden Yellow
+2. **WCAG 2.1 AA Contrast ($\ge 4.5:1$) & Color-Blindness Safety**:
+   - Real computed contrast ratios verified in `ArticleColorsContrastTest`:
+     - Light Theme (against `#FAFAFA`):
+       - `der` (`#1565C0`): **5.51:1**
+       - `die` (`#C62828`): **5.39:1**
+       - `das` (`#7F6000`): **5.63:1** (adjusted from initial draft for protanopia safety)
+     - Dark Theme (against `#0E0E0E`):
+       - `der` (`#64B5F6`): **8.72:1**
+       - `die` (`#EF5350`): **5.54:1**
+       - `das` (`#FDD835`): **13.84:1**
+   - **Color-Blindness Simulation (Brettel/Vienot sRGB)**:
+     - Distance between `die` and `das` in Light Theme under Protanopia: **0.1081** (well above 0.05 threshold).
+     - Deuteranopia: **0.1642**.
+     - Tritanopia: **0.2546**.
+3. **Application & Settings Toggle**:
+   - Rendered on BOTH front and back of Flashcards (`FlashcardComponent.kt`), `WordCard.kt`, and `WordsScreen.kt`.
+   - User toggle in Settings: "Цветные артикли" (DataStore-backed, default ON).
+
+---
+
+## 11. Thin Vertical Lines Investigation (Part A.4)
+
+- **Source**: When `WordCard` height ballooned to full screen due to the unweighted text wrap bug, its outer border (`border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline)`) with 20dp horizontal screen margin stretched from the top to the bottom of the display. On a 1220x2712 device, this created two thin 1dp vertical lines near the screen edges.
+- **Resolution**:
+  - Restructured `MeaningRow` and `WordCard` layouts to prevent uncontrolled height expansion.
+  - Eliminated nested/redundant borders between `Surface` and modifier chains.
+  - Verified on live device with gesture navigation (mode `2`): screen borders now strictly wrap compact card content.
+

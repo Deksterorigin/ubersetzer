@@ -100,7 +100,8 @@ class SettingsViewModel @Inject constructor(
                         sttPreferOnDevice = settings.sttPreferOnDevice,
                         sttAutoDetect = settings.sttAutoDetect,
                         sttTranslateImmediately = settings.sttTranslateImmediately,
-                        selectedCheckProviderId = settings.selectedCheckProviderId
+                        selectedCheckProviderId = settings.selectedCheckProviderId,
+                        coloredArticlesEnabled = settings.coloredArticlesEnabled
                     )
                 }
             }
@@ -353,6 +354,12 @@ class SettingsViewModel @Inject constructor(
     fun onToggleSttTranslateImmediately(immediate: Boolean) {
         viewModelScope.launch {
             settingsRepository.setSttTranslateImmediately(immediate)
+        }
+    }
+
+    fun onToggleColoredArticles(enabled: Boolean) {
+        viewModelScope.launch {
+            settingsRepository.setColoredArticlesEnabled(enabled)
         }
     }
 
