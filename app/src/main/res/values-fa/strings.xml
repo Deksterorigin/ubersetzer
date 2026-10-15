@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">عالی! هیچ خطای قابل توجهی یافت نشد.</string>
     <string name="dialog_task_finish">پایان تمرین</string>
     <string name="dialog_open_speak_prompt">برای پاسخ صوتی روی میکروفون ضربه بزنید</string>
+    <string name="dialog_detail_empty_title">گفتگوی خالی</string>
+    <string name="dialog_detail_empty_desc">هیچ بخش ضبط‌شده‌ای در این گفتگو وجود ندارد.</string>
+    <string name="dialog_status_interrupted">ضبط قطع شد</string>
+    <string name="dialog_action_resume">ادامه ضبط</string>
+    <string name="dialog_action_delete">حذف گفتگو</string>
 </resources>

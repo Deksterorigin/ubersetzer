@@ -228,6 +228,13 @@ class DialogDetailViewModel @Inject constructor(
         }
     }
 
+    fun deleteDialog(onDeleted: () -> Unit) {
+        viewModelScope.launch {
+            dialogRepository.deleteDialog(dialogId)
+            onDeleted()
+        }
+    }
+
     private fun buildTranscript(segments: List<DialogSegment>): String {
         return segments.joinToString("\n") { seg ->
             val speaker = seg.speakerLabel?.let { "Sprecher $it" } ?: "Sprecher"

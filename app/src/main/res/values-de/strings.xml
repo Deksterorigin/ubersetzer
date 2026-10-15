@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">Ausgezeichnet! Keine auffälligen Fehler gefunden.</string>
     <string name="dialog_task_finish">Übung beenden</string>
     <string name="dialog_open_speak_prompt">Tippen Sie auf das Mikrofon für eine Sprachantwort</string>
+    <string name="dialog_detail_empty_title">Leerer Dialog</string>
+    <string name="dialog_detail_empty_desc">In diesem Dialog gibt es keine aufgezeichneten Segmente.</string>
+    <string name="dialog_status_interrupted">Aufnahme unterbrochen</string>
+    <string name="dialog_action_resume">Aufnahme fortsetzen</string>
+    <string name="dialog_action_delete">Dialog löschen</string>
 </resources>

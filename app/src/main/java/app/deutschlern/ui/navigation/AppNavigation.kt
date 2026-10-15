@@ -113,12 +113,21 @@ fun AppNavigation(
             }
             composable(Screen.Dialogues.route) {
                 app.deutschlern.ui.dialog.DialoguesScreen(
-                    onNavigateToRecording = { navController.navigate(Screen.DialogRecording.route) },
+                    onNavigateToRecording = { navController.navigate(Screen.DialogRecording.createRoute()) },
+                    onResumeRecording = { dialogId -> navController.navigate(Screen.DialogRecording.createRoute(dialogId)) },
                     onNavigateToDetail = { dialogId -> navController.navigate(Screen.DialogDetail.createRoute(dialogId)) },
                     onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
                 )
             }
-            composable(Screen.DialogRecording.route) {
+            composable(
+                route = Screen.DialogRecording.route,
+                arguments = listOf(
+                    androidx.navigation.navArgument("dialogId") {
+                        type = androidx.navigation.NavType.LongType
+                        defaultValue = 0L
+                    }
+                )
+            ) {
                 app.deutschlern.ui.dialog.DialogRecordingScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onRecordingSaved = { dialogId ->
@@ -135,6 +144,9 @@ fun AppNavigation(
             ) {
                 app.deutschlern.ui.dialog.DialogDetailScreen(
                     onNavigateBack = { navController.popBackStack() },
+                    onResumeRecording = { id ->
+                        navController.navigate(Screen.DialogRecording.createRoute(id))
+                    },
                     onNavigateToTask = { dialogId, taskId ->
                         navController.navigate(Screen.DialogTask.createRoute(dialogId, taskId))
                     }

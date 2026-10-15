@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">Чудово! Помітних помилок не виявлено.</string>
     <string name="dialog_task_finish">Завершити завдання</string>
     <string name="dialog_open_speak_prompt">Натисніть на мікрофон для голосової відповіді</string>
+    <string name="dialog_detail_empty_title">Порожній діалог</string>
+    <string name="dialog_detail_empty_desc">У цьому діалозі немає збережених реплік.</string>
+    <string name="dialog_status_interrupted">Запис перервано</string>
+    <string name="dialog_action_resume">Продовжити запис</string>
+    <string name="dialog_action_delete">Видалити діалог</string>
 </resources>

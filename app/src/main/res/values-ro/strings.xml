@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">Excelent! Nu au fost găsite erori notabile.</string>
     <string name="dialog_task_finish">Finalizează exercițiul</string>
     <string name="dialog_open_speak_prompt">Atingeți microfonul pentru răspuns vocal</string>
+    <string name="dialog_detail_empty_title">Dialog gol</string>
+    <string name="dialog_detail_empty_desc">Nu există replici înregistrate în acest dialog.</string>
+    <string name="dialog_status_interrupted">Înregistrare întreruptă</string>
+    <string name="dialog_action_resume">Continuă înregistrarea</string>
+    <string name="dialog_action_delete">Șterge dialogul</string>
 </resources>

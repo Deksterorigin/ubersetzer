@@ -34,6 +34,7 @@ class DialoguesViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
+            dialogRepository.markInterruptedRecordings()
             combine(
                 dialogRepository.getAllDialogs(),
                 _deletedDialogBackup

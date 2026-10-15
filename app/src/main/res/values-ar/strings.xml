@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">ممتاز! لم يتم العثور على أخطاء ملحوظة.</string>
     <string name="dialog_task_finish">إنهاء التمرين</string>
     <string name="dialog_open_speak_prompt">اضغط على الميكروفون للإجابة بالصوت</string>
+    <string name="dialog_detail_empty_title">حوار فارغ</string>
+    <string name="dialog_detail_empty_desc">لا توجد مقاطع مسجلة في هذا الحوار.</string>
+    <string name="dialog_status_interrupted">انقطع التسجيل</string>
+    <string name="dialog_action_resume">استئناف التسجيل</string>
+    <string name="dialog_action_delete">حذف الحوار</string>
 </resources>

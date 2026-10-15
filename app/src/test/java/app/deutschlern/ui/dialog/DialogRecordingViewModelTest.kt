@@ -1,5 +1,6 @@
 package app.deutschlern.ui.dialog
 
+import androidx.lifecycle.SavedStateHandle
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.repository.DialogRepository
 import app.deutschlern.domain.repository.SettingsRepository
@@ -33,6 +34,7 @@ class DialogRecordingViewModelTest {
     private val sttEngine = mockk<SpeechToTextEngine>(relaxed = true)
     private val dialogRepository = mockk<DialogRepository>(relaxed = true)
     private val settingsRepository = mockk<SettingsRepository>(relaxed = true)
+    private val savedStateHandle = SavedStateHandle()
 
     @Before
     fun setUp() {
@@ -51,7 +53,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun init_createsDraftDialogAndStartsRecording() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         assertEquals(42L, viewModel.uiState.value.draftDialogId)
@@ -61,7 +63,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun toggleSpeaker_switchesBetweenAAndB() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         assertEquals("A", viewModel.uiState.value.activeSpeaker)
@@ -77,7 +79,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun pauseAndResume_updatesRecordingState() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         viewModel.pauseRecording()
@@ -91,7 +93,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun stopAndSave_finalizesAndSetsSavedDialogId() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         viewModel.stopAndSave()
@@ -104,7 +106,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun cancelRecording_deletesDraftDialog() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         viewModel.cancelRecording()
@@ -119,7 +121,7 @@ class DialogRecordingViewModelTest {
         val errorFlow = flowOf(SttEvent.Error("Network glitch", isRecoverable = true))
         every { sttEngine.startListening(any(), any()) } returns errorFlow
 
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         assertTrue(viewModel.uiState.value.isReconnecting)
@@ -132,7 +134,7 @@ class DialogRecordingViewModelTest {
         val errorFlow = flowOf(SttEvent.Error("Connection exhausted", isRecoverable = false))
         every { sttEngine.startListening(any(), any()) } returns errorFlow
 
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         assertFalse(viewModel.uiState.value.isRecording)
@@ -142,7 +144,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun permissionDenied_setsAudioPermissionFalseAndPauses() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         viewModel.onPermissionDenied()
@@ -155,7 +157,7 @@ class DialogRecordingViewModelTest {
 
     @Test
     fun audioFocusLost_pausesRecordingWithReason() = runTest(testDispatcher) {
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         viewModel.onAudioFocusLost(isTransient = true)
@@ -171,7 +173,7 @@ class DialogRecordingViewModelTest {
         val partialFlow = flowOf(SttEvent.Partial("Ich möchte zahlen"))
         every { sttEngine.startListening(any(), any()) } returns partialFlow
 
-        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
         assertEquals("Ich möchte zahlen", viewModel.uiState.value.currentPartialText)
@@ -181,5 +183,22 @@ class DialogRecordingViewModelTest {
 
         coVerify { dialogRepository.insertSegment(match { it.text == "Ich möchte zahlen" }) }
         assertEquals(42L, viewModel.uiState.value.savedDialogId)
+    }
+
+    @Test
+    fun init_withDialogIdInSavedState_resumesRecordingSession() = runTest(testDispatcher) {
+        val resumeHandle = SavedStateHandle(mapOf("dialogId" to 99L))
+        coEvery { dialogRepository.getDialogById(99L) } returns Dialog(id = 99L, title = "Resumed Dialog", startedAt = 1000L, durationMs = 5000)
+        coEvery { dialogRepository.getSegmentsSync(99L) } returns listOf(
+            app.deutschlern.domain.model.dialog.DialogSegment(id = 1L, dialogId = 99L, speakerLabel = "B", text = "Hallo", orderIndex = 0, startOffsetMs = 0)
+        )
+
+        val viewModel = DialogRecordingViewModel(resumeHandle, sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        assertEquals(99L, viewModel.uiState.value.draftDialogId)
+        assertTrue(viewModel.uiState.value.isRecording)
+        assertEquals(1, viewModel.uiState.value.segments.size)
+        assertEquals("B", viewModel.uiState.value.activeSpeaker)
     }
 }

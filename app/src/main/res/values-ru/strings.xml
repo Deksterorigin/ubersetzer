@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">Отлично! Заметных ошибок не обнаружено.</string>
     <string name="dialog_task_finish">Завершить задание</string>
     <string name="dialog_open_speak_prompt">Нажмите на микрофон для голосового ответа</string>
+    <string name="dialog_detail_empty_title">Пустой диалог</string>
+    <string name="dialog_detail_empty_desc">В этом диалоге нет сохранённых реплик.</string>
+    <string name="dialog_status_interrupted">Запись прервана</string>
+    <string name="dialog_action_resume">Продолжить запись</string>
+    <string name="dialog_action_delete">Удалить диалог</string>
 </resources>

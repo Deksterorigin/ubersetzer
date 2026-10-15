@@ -11,6 +11,7 @@ interface DialogRepository {
     suspend fun saveDialog(dialog: Dialog): Long
     suspend fun updateDialog(dialog: Dialog)
     suspend fun deleteDialog(id: Long)
+    suspend fun markInterruptedRecordings()
 
     fun getSegmentsForDialog(dialogId: Long): Flow<List<DialogSegment>>
     suspend fun getSegmentsSync(dialogId: Long): List<DialogSegment>

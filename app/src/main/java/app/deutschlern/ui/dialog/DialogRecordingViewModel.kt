@@ -1,13 +1,16 @@
 package app.deutschlern.ui.dialog
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.model.dialog.DialogSegment
+import app.deutschlern.domain.model.dialog.DialogStatus
 import app.deutschlern.domain.repository.DialogRepository
 import app.deutschlern.domain.repository.SettingsRepository
 import app.deutschlern.domain.stt.SpeechToTextEngine
 import app.deutschlern.domain.stt.SttEvent
+import app.deutschlern.ui.navigation.getNavigationLong
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -48,6 +51,7 @@ data class DialogRecordingUiState(
 
 @HiltViewModel
 class DialogRecordingViewModel @Inject constructor(
+    private val savedStateHandle: SavedStateHandle = SavedStateHandle(),
     private val sttEngine: SpeechToTextEngine,
     private val dialogRepository: DialogRepository,
     private val settingsRepository: SettingsRepository
@@ -60,7 +64,12 @@ class DialogRecordingViewModel @Inject constructor(
     private var sttJob: Job? = null
 
     init {
-        startNewRecordingSession()
+        val targetDialogId = savedStateHandle.getNavigationLong("dialogId")
+        if (targetDialogId > 0L) {
+            resumeRecordingSession(targetDialogId)
+        } else {
+            startNewRecordingSession()
+        }
     }
 
     private fun startNewRecordingSession() {
@@ -72,7 +81,8 @@ class DialogRecordingViewModel @Inject constructor(
                 title = initialTitle,
                 startedAt = now,
                 durationMs = 0,
-                segmentCount = 0
+                segmentCount = 0,
+                status = DialogStatus.RECORDING
             )
             val dialogId = withContext(NonCancellable) {
                 dialogRepository.saveDialog(newDialog)
@@ -87,6 +97,39 @@ class DialogRecordingViewModel @Inject constructor(
                     elapsedSeconds = 0,
                     activeSpeaker = "A",
                     segments = emptyList(),
+                    currentPartialText = ""
+                )
+            }
+
+            startTimer()
+            startListening()
+        }
+    }
+
+    private fun resumeRecordingSession(dialogId: Long) {
+        viewModelScope.launch {
+            val existing = dialogRepository.getDialogById(dialogId)
+            if (existing == null) {
+                startNewRecordingSession()
+                return@launch
+            }
+            val existingSegments = dialogRepository.getSegmentsSync(dialogId)
+            val elapsed = existing.durationMs / 1000L
+            val lastSpeaker = existingSegments.lastOrNull()?.speakerLabel ?: "A"
+
+            withContext(NonCancellable) {
+                dialogRepository.updateDialog(existing.copy(status = DialogStatus.RECORDING))
+            }
+
+            _uiState.update {
+                it.copy(
+                    draftDialogId = dialogId,
+                    isRecording = true,
+                    isPaused = false,
+                    isReconnecting = false,
+                    elapsedSeconds = elapsed,
+                    activeSpeaker = lastSpeaker,
+                    segments = existingSegments,
                     currentPartialText = ""
                 )
             }
@@ -338,7 +381,8 @@ class DialogRecordingViewModel @Inject constructor(
                     dialogRepository.updateDialog(
                         existing.copy(
                             durationMs = finalState.elapsedSeconds * 1000L,
-                            segmentCount = finalState.segments.size
+                            segmentCount = finalState.segments.size,
+                            status = DialogStatus.COMPLETE
                         )
                     )
                 }

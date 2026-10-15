@@ -1,5 +1,6 @@
 package app.deutschlern.data.local.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -14,5 +15,7 @@ data class DialogEntity(
     val segmentCount: Int = 0,
     val summaryJson: String? = null,
     val summaryProviderModel: String? = null,
-    val summaryUpdatedAt: Long? = null
+    val summaryUpdatedAt: Long? = null,
+    @ColumnInfo(defaultValue = "'COMPLETE'")
+    val status: String = "COMPLETE"
 )

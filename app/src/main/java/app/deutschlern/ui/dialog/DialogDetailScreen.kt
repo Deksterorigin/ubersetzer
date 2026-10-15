@@ -83,10 +83,14 @@ import app.deutschlern.ui.components.WordCard
 import app.deutschlern.ui.dialog.components.ClickableTranscriptText
 import java.util.Locale
 
+import androidx.compose.material.icons.outlined.Forum
+import app.deutschlern.domain.model.dialog.DialogStatus
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DialogDetailScreen(
     onNavigateBack: () -> Unit,
+    onResumeRecording: (dialogId: Long) -> Unit = {},
     onNavigateToTask: (dialogId: Long, taskId: Long) -> Unit,
     viewModel: DialogDetailViewModel = hiltViewModel()
 ) {
@@ -130,7 +134,7 @@ fun DialogDetailScreen(
                             maxLines = 1
                         )
                         uiState.dialog?.let { d ->
-                            val durationSecs = d.durationMs / 1000
+                            val durationSecs = (d.durationMs / 1000).coerceAtLeast(0)
                             val mins = durationSecs / 60
                             val secs = durationSecs % 60
                             Text(
@@ -149,6 +153,15 @@ fun DialogDetailScreen(
                         )
                     }
                 },
+                actions = {
+                    IconButton(onClick = { viewModel.deleteDialog(onNavigateBack) }) {
+                        Icon(
+                            imageVector = Icons.Default.Delete,
+                            contentDescription = stringResource(R.string.dialog_action_delete),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
@@ -161,6 +174,32 @@ fun DialogDetailScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
+            if (uiState.dialog?.status == DialogStatus.INTERRUPTED) {
+                Surface(
+                    color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.8f),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 8.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = stringResource(R.string.dialog_status_interrupted),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onErrorContainer
+                        )
+                        Button(
+                            onClick = { onResumeRecording(viewModel.dialogId) },
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+                        ) {
+                            Text(stringResource(R.string.dialog_action_resume))
+                        }
+                    }
+                }
+            }
             // Tab Selector: Transcript, Summary, Tasks
             TabRow(
                 selectedTabIndex = uiState.selectedTab,
@@ -191,6 +230,9 @@ fun DialogDetailScreen(
                 when (uiState.selectedTab) {
                     0 -> TranscriptTabContent(
                         segments = uiState.segments,
+                        isInterrupted = uiState.dialog?.status == DialogStatus.INTERRUPTED,
+                        onResumeRecording = { onResumeRecording(viewModel.dialogId) },
+                        onDeleteDialog = { viewModel.deleteDialog(onNavigateBack) },
                         onWordClick = { word, context -> viewModel.onWordClick(word, context) }
                     )
                     1 -> SummaryTabContent(
@@ -276,19 +318,67 @@ fun DialogDetailScreen(
 @Composable
 private fun TranscriptTabContent(
     segments: List<DialogSegment>,
+    isInterrupted: Boolean = false,
+    onResumeRecording: () -> Unit = {},
+    onDeleteDialog: () -> Unit = {},
     onWordClick: (word: String, context: String) -> Unit
 ) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        item {
-            Surface(
-                shape = RoundedCornerShape(8.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-                modifier = Modifier.fillMaxWidth()
+    if (segments.isEmpty()) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(32.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
+                Icon(
+                    imageVector = Icons.Outlined.Forum,
+                    contentDescription = null,
+                    modifier = Modifier.size(64.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = stringResource(R.string.dialog_detail_empty_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = stringResource(R.string.dialog_detail_empty_desc),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+                Spacer(modifier = Modifier.height(20.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    if (isInterrupted) {
+                        Button(onClick = onResumeRecording) {
+                            Text(stringResource(R.string.dialog_action_resume))
+                        }
+                    }
+                    OutlinedButton(onClick = onDeleteDialog) {
+                        Text(stringResource(R.string.dialog_action_delete))
+                    }
+                }
+            }
+        }
+    } else {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item {
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -357,6 +447,7 @@ private fun TranscriptTabContent(
             }
         }
     }
+}
 }
 
 @Composable

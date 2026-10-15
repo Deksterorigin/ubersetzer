@@ -272,6 +272,12 @@ object DatabaseMigrations {
         }
     }
 
+    val MIGRATION_7_8: Migration = object : Migration(7, 8) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE dialogs ADD COLUMN status TEXT NOT NULL DEFAULT 'COMPLETE'")
+        }
+    }
+
     val MIGRATION_5_7: Migration = object : Migration(5, 7) {
         override fun migrate(db: SupportSQLiteDatabase) {
             MIGRATION_5_6.migrate(db)

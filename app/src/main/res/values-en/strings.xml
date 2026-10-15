@@ -354,4 +354,9 @@
     <string name="dialog_task_no_mistakes">Excellent! No noticeable errors found.</string>
     <string name="dialog_task_finish">Finish exercise</string>
     <string name="dialog_open_speak_prompt">Tap microphone to record spoken answer</string>
+    <string name="dialog_detail_empty_title">Empty dialogue</string>
+    <string name="dialog_detail_empty_desc">There are no recorded segments in this dialogue.</string>
+    <string name="dialog_status_interrupted">Recording interrupted</string>
+    <string name="dialog_action_resume">Resume recording</string>
+    <string name="dialog_action_delete">Delete dialogue</string>
 </resources>
