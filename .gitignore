@@ -20,3 +20,5 @@ backups/
 *.db-wal
 Thumbs.db
 ui_settings_dump.xml
+__pycache__/
+*.py[cod]

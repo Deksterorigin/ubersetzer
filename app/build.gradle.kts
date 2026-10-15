@@ -25,8 +25,8 @@ android {
         applicationId = "app.deutschlern"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -56,7 +56,7 @@ android {
         }
         debug {
             isMinifyEnabled = false
-            buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "false")
+            buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "true")
         }
     }
 
@@ -167,16 +167,22 @@ layout.buildDirectory.set(file("E:/tmp/deutschlern_build/app"))
 
 tasks.register("copyApkToStandardPath") {
     doLast {
-        val src = file("E:/tmp/deutschlern_build/app/outputs/apk/debug/app-debug.apk")
-        val dst = file("${rootDir}/app/build/outputs/apk/debug/app-debug.apk")
-        if (src.exists()) {
-            dst.parentFile.mkdirs()
-            src.copyTo(dst, overwrite = true)
+        val srcDebug = file("E:/tmp/deutschlern_build/app/outputs/apk/debug/app-debug.apk")
+        val dstDebug = file("${rootDir}/app/build/outputs/apk/debug/app-debug.apk")
+        if (srcDebug.exists()) {
+            dstDebug.parentFile.mkdirs()
+            srcDebug.copyTo(dstDebug, overwrite = true)
+        }
+        val srcRelease = file("E:/tmp/deutschlern_build/app/outputs/apk/release/app-release.apk")
+        val dstRelease = file("${rootDir}/app/build/outputs/apk/release/app-release.apk")
+        if (srcRelease.exists()) {
+            dstRelease.parentFile.mkdirs()
+            srcRelease.copyTo(dstRelease, overwrite = true)
         }
     }
 }
 
-tasks.matching { it.name == "assembleDebug" }.configureEach {
+tasks.matching { it.name in listOf("assembleDebug", "assembleRelease", "assemble") }.configureEach {
     finalizedBy("copyApkToStandardPath")
 }
 
