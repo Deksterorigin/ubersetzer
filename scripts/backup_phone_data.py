@@ -48,7 +48,19 @@ def find_adb():
         candidate = os.path.join(local_app_data, "Android", "Sdk", "platform-tools", "adb.exe")
         if os.path.exists(candidate):
             return candidate
-    raise RuntimeError("adb executable not found in PATH or %ANDROID_HOME%")
+    local_props = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "local.properties")
+    if os.path.exists(local_props):
+        try:
+            with open(local_props, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.startswith("sdk.dir="):
+                        sdk_dir = line.split("=", 1)[1].strip().replace("\\:", ":").replace("\\\\", "\\")
+                        candidate = os.path.join(sdk_dir, "platform-tools", "adb.exe" if os.name == 'nt' else "adb")
+                        if os.path.exists(candidate):
+                            return candidate
+        except Exception:
+            pass
+    raise RuntimeError("adb executable not found in PATH, %ANDROID_HOME%, or local.properties")
 
 PACKAGE_NAME = "app.deutschlern"
 
