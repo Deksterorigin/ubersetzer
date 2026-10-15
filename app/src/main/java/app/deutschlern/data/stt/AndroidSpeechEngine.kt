@@ -128,6 +128,7 @@ open class AndroidSpeechEngine(
 
             var hasReceivedSegments = false
             var consecutiveTransientErrors = 0
+            var consecutiveBenignErrors = 0
             var firstTransientErrorTimestamp = 0L
 
             lateinit var listener: RecognitionListener
@@ -135,6 +136,7 @@ open class AndroidSpeechEngine(
                 override fun onReadyForSpeech(params: Bundle?) {
                     SpeechDebugLogger.onCallback("onReadyForSpeech")
                     consecutiveTransientErrors = 0
+                    consecutiveBenignErrors = 0
                     firstTransientErrorTimestamp = 0L
                     trySend(SttEvent.StateChanged(true))
                 }
@@ -142,6 +144,7 @@ open class AndroidSpeechEngine(
                 override fun onBeginningOfSpeech() {
                     SpeechDebugLogger.onCallback("onBeginningOfSpeech")
                     consecutiveTransientErrors = 0
+                    consecutiveBenignErrors = 0
                     firstTransientErrorTimestamp = 0L
                 }
 
@@ -167,16 +170,41 @@ open class AndroidSpeechEngine(
                     val fatal = isFatalError(errorCode)
 
                     if (benign) {
+                        consecutiveBenignErrors++
                         SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = isListeningActive)
                         if (isListeningActive) {
                             launch {
                                 delay(50L)
                                 if (isListeningActive) {
+                                    // If multiple consecutive benign timeouts occurred, the internal binder may be wedged: recreate recognizer
+                                    if (consecutiveBenignErrors >= 3) {
+                                        try {
+                                            activeRecognizer?.cancel()
+                                            activeRecognizer?.destroy()
+                                        } catch (e: Exception) {
+                                            // ignore
+                                        }
+                                        activeRecognizer = try {
+                                            recognizerFactory(context, preferOffline)?.also {
+                                                it.setRecognitionListener(listener)
+                                            }
+                                        } catch (e: Exception) {
+                                            null
+                                        }
+                                        consecutiveBenignErrors = 0
+                                    }
                                     try {
                                         SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
                                         activeRecognizer?.startListening(recognitionIntent)
                                     } catch (e: Exception) {
                                         SpeechDebugLogger.onError(-1, "benign_restart_failed: ${e.message}", true, false)
+                                        try {
+                                            activeRecognizer?.cancel()
+                                            activeRecognizer?.destroy()
+                                        } catch (_: Exception) {}
+                                        activeRecognizer = recognizerFactory(context, preferOffline)?.also {
+                                            it.setRecognitionListener(listener)
+                                        }
                                     }
                                 }
                             }
@@ -251,6 +279,7 @@ open class AndroidSpeechEngine(
                     SpeechDebugLogger.onPartialToFinal(lastPartialText?.length ?: 0, finalText.length)
 
                     consecutiveTransientErrors = 0
+                    consecutiveBenignErrors = 0
                     firstTransientErrorTimestamp = 0L
 
                     if (finalText.isNotEmpty()) {
@@ -280,6 +309,7 @@ open class AndroidSpeechEngine(
                 }
 
                 override fun onPartialResults(partialResults: Bundle?) {
+                    consecutiveBenignErrors = 0
                     val matches = partialResults?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
                     val text = matches?.firstOrNull()?.trim()
                     if (!text.isNullOrEmpty()) {
@@ -292,6 +322,7 @@ open class AndroidSpeechEngine(
                 override fun onSegmentResults(segmentResults: Bundle) {
                     hasReceivedSegments = true
                     consecutiveTransientErrors = 0
+                    consecutiveBenignErrors = 0
                     firstTransientErrorTimestamp = 0L
 
                     val matches = segmentResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) ?: arrayListOf()

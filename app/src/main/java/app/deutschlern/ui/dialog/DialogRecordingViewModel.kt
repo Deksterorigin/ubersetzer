@@ -312,6 +312,7 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     fun pauseRecording(reason: String? = null) {
+        if (_uiState.value.isPaused) return
         viewModelScope.launch {
             val partial = _uiState.value.currentPartialText.trim()
             if (partial.isNotBlank()) {
@@ -333,6 +334,7 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     fun resumeRecording() {
+        if (_uiState.value.isRecording && !_uiState.value.isPaused) return
         _uiState.update {
             it.copy(
                 isRecording = true,
@@ -361,6 +363,7 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     fun stopAndSave() {
+        if (_uiState.value.isSaving || _uiState.value.savedDialogId != null) return
         viewModelScope.launch {
             _uiState.update { it.copy(isSaving = true, isRecording = false, isPaused = true) }
             sttEngine.stopListening()
@@ -393,6 +396,7 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     fun cancelRecording() {
+        if (_uiState.value.isDismissed) return
         viewModelScope.launch {
             sttEngine.cancel()
             sttJob?.cancel()
