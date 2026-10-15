@@ -21,16 +21,24 @@ try:
 except Exception:
     pass
 
-DEFAULT_ADB_PATH = r"C:\Users\Sasha\android-sdk\platform-tools\adb.exe"
-PACKAGE_NAME = "app.deutschlern"
-
 def find_adb():
-    if os.path.exists(DEFAULT_ADB_PATH):
-        return DEFAULT_ADB_PATH
     adb = shutil.which("adb")
     if adb:
         return adb
-    raise RuntimeError("adb executable not found in PATH or at " + DEFAULT_ADB_PATH)
+    for env_var in ["ANDROID_HOME", "ANDROID_SDK_ROOT"]:
+        base = os.environ.get(env_var)
+        if base:
+            candidate = os.path.join(base, "platform-tools", "adb.exe" if os.name == 'nt' else "adb")
+            if os.path.exists(candidate):
+                return candidate
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if local_app_data:
+        candidate = os.path.join(local_app_data, "Android", "Sdk", "platform-tools", "adb.exe")
+        if os.path.exists(candidate):
+            return candidate
+    raise RuntimeError("adb executable not found in PATH or %ANDROID_HOME%")
+
+PACKAGE_NAME = "app.deutschlern"
 
 def run_adb(adb, args, check=True):
     cmd = [adb] + args
@@ -74,12 +82,16 @@ def restore(backup_dir=None):
         raise RuntimeError(f"Package {PACKAGE_NAME} is not installed on device {device_id}!")
 
     # Stop app
-    print(f"[3/5] Stopping {PACKAGE_NAME}...")
+    print(f"[3/5] Force-stopping {PACKAGE_NAME}...")
     run_adb(adb, ["shell", "am", "force-stop", PACKAGE_NAME], check=False)
 
-    # Ensure target dirs exist inside app
-    print(f"[4/5] Preparing app storage directories...")
+    # Ensure target dirs exist and remove stale DB/WAL/SHM files
+    print(f"[4/5] Preparing app storage and removing existing DB/WAL/SHM files...")
     run_adb(adb, ["shell", "run-as", PACKAGE_NAME, "mkdir", "-p", f"/data/data/{PACKAGE_NAME}/databases", f"/data/data/{PACKAGE_NAME}/files/datastore", f"/data/data/{PACKAGE_NAME}/shared_prefs"])
+    run_adb(adb, ["shell", "run-as", PACKAGE_NAME, "rm", "-f",
+                  f"/data/data/{PACKAGE_NAME}/databases/deutschlern.db",
+                  f"/data/data/{PACKAGE_NAME}/databases/deutschlern.db-wal",
+                  f"/data/data/{PACKAGE_NAME}/databases/deutschlern.db-shm"])
 
     # Stream tar archive into device
     print(f"[5/5] Extracting tar archive into /data/data/{PACKAGE_NAME}...")

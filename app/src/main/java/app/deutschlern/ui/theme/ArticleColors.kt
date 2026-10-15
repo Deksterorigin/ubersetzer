@@ -31,7 +31,7 @@ object ArticleColors {
     // Light theme values (evaluated against #FAFAFA background)
     val LightDer = Color(0xFF1565C0) // Deep Blue (5.51:1 contrast)
     val LightDie = Color(0xFFC62828) // Crimson Red (5.39:1 contrast)
-    val LightDas = Color(0xFF7F6000) // Deep Golden Amber (5.62:1 contrast, distinct from die under protanopia)
+    val LightDas = Color(0xFF6B5B00) // Dark Mustard (6.45:1 contrast on #FAFAFA, deltaE00 >= 11 across all vision modes)
 
     // Dark theme values (evaluated against #0E0E0E background)
     val DarkDer = Color(0xFF64B5F6) // Sky Blue (8.72:1 contrast)

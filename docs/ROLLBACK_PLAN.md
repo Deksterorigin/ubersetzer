@@ -45,12 +45,12 @@ $env:PATH = ($env:PATH.Split(';') | Where-Object { $_ -notlike '*Tailscale*' }) 
 
 Install the APK while preserving data:
 ```powershell
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" install -r "app\build\outputs\apk\debug\app-debug.apk"
+adb install -r "app\build\outputs\apk\debug\app-debug.apk"
 ```
 
 Launch the app:
 ```powershell
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" shell monkey -p app.deutschlern -c android.intent.category.LAUNCHER 1
+adb shell monkey -p app.deutschlern -c android.intent.category.LAUNCHER 1
 ```
 
 ---
@@ -63,7 +63,7 @@ Immediately upon launch, verify:
 3. **Dialogues**: Opening saved dialogues does not crash (`ClassCastException` fix).
 4. **Logcat Monitoring**: Check for any SQLite or migration errors:
    ```powershell
-   & "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" logcat -d -s "AndroidRuntime" "Room" "SQLite"
+   adb logcat -d -s "AndroidRuntime" "Room" "SQLite"
    ```
 
 ---
@@ -74,7 +74,7 @@ If the new build crashes on launch, throws a `Room` / `SQLite` migration error, 
 
 ### Step 5.1: Force-stop the failing app
 ```powershell
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" shell am force-stop app.deutschlern
+adb shell am force-stop app.deutschlern
 ```
 
 ### Step 5.2: Restore the database and keys from backup
@@ -86,23 +86,23 @@ py scripts/restore_phone_data.py
 Or via direct ADB commands:
 ```powershell
 # Ensure directories exist
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" shell "run-as app.deutschlern mkdir -p /data/data/app.deutschlern/databases /data/data/app.deutschlern/files/datastore /data/data/app.deutschlern/shared_prefs"
+adb shell "run-as app.deutschlern mkdir -p /data/data/app.deutschlern/databases /data/data/app.deutschlern/files/datastore /data/data/app.deutschlern/shared_prefs"
 
 # Stream backup tar into device app sandbox
-Get-Content -Path "backups\phone_backup_20261015_225730\deutschlern_backup.tar" -Encoding Byte | & "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" exec-in run-as app.deutschlern tar -xf - -C /data/data/app.deutschlern
+Get-Content -Path "backups\phone_backup_20261015_225730\deutschlern_backup.tar" -Encoding Byte | adb exec-in run-as app.deutschlern tar -xf - -C /data/data/app.deutschlern
 
 # Fix permissions
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" shell "run-as app.deutschlern chmod -R u+rwX /data/data/app.deutschlern/databases /data/data/app.deutschlern/files /data/data/app.deutschlern/shared_prefs"
+adb shell "run-as app.deutschlern chmod -R u+rwX /data/data/app.deutschlern/databases /data/data/app.deutschlern/files /data/data/app.deutschlern/shared_prefs"
 ```
 
 ### Step 5.3: Downgrade / Reinstall previous working build with `-r -d`
 The `-d` flag permits version downgrade while `-r` preserves existing data:
 ```powershell
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" install -r -d "<path_to_previous_working_apk>"
+adb install -r -d "<path_to_previous_working_apk>"
 ```
 
 ### Step 5.4: Relaunch and verify data
 ```powershell
-& "C:\Users\Sasha\android-sdk\platform-tools\adb.exe" shell monkey -p app.deutschlern -c android.intent.category.LAUNCHER 1
+adb shell monkey -p app.deutschlern -c android.intent.category.LAUNCHER 1
 ```
 Verify that all 41 words and API keys are intact.
