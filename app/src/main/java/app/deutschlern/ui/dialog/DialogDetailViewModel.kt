@@ -80,6 +80,11 @@ class DialogDetailViewModel @Inject constructor(
     ) { args ->
         val dialog = args[0] as? Dialog
         val segments = (args[1] as? List<*>)?.filterIsInstance<DialogSegment>() ?: emptyList()
+        if (segments.isNotEmpty()) {
+            viewModelScope.launch(kotlinx.coroutines.Dispatchers.Default) {
+                app.deutschlern.ui.dialog.components.TranscriptTokenizer.prewarm(segments.map { it.text })
+            }
+        }
         val tasks = (args[2] as? List<*>)?.filterIsInstance<DialogTask>() ?: emptyList()
         val tab = args[3] as Int
         val genSummary = args[4] as Boolean

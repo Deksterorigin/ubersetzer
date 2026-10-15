@@ -21,28 +21,8 @@ fun ClickableTranscriptText(
 ) {
     // German text is always rendered strictly LTR
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
-        val wordRegex = Regex("""[\p{L}\p{M}\-]+|[^\p{L}\p{M}\-]+""")
-        val matches = wordRegex.findAll(text).toList()
-
-        val annotatedString = buildAnnotatedString {
-            matches.forEach { matchResult ->
-                val token = matchResult.value
-                val isWord = token.any { it.isLetter() }
-
-                if (isWord) {
-                    val startIndex = length
-                    append(token)
-                    val endIndex = length
-                    addStringAnnotation(
-                        tag = "WORD",
-                        annotation = token,
-                        start = startIndex,
-                        end = endIndex
-                    )
-                } else {
-                    append(token)
-                }
-            }
+        val annotatedString = androidx.compose.runtime.remember(text) {
+            TranscriptTokenizer.tokenize(text)
         }
 
         val defaultStyle = MaterialTheme.typography.bodyLarge.copy(

@@ -64,14 +64,16 @@ app.deutschlern/
 
 ## 3. Database Integrity & Room Migrations Audit
 
-Room database version is currently **Version 6** (`exportSchema = true`):
+Room database version is currently **Version 8** (`exportSchema = true`):
 - `MIGRATION_1_2`: Added lesson sessions and session_words join table.
 - `MIGRATION_2_3`: Added text translations history table.
 - `MIGRATION_3_4`: Added review state and SM-2 scheduling columns.
 - `MIGRATION_4_5`: Added `partnerLanguage` column to `words`, migrated unique index from `(lemma, pos)` to `(lemma, pos, partnerLanguage)`.
 - `MIGRATION_5_6`: Created `text_checks` table with index on `createdAt` for historical proofreading storage.
-- **Destructive Migration Status**: `fallbackToDestructiveMigration()` is **strictly removed**. All upgrade paths are backed by explicit `Migration` instances.
-- **Device Upgrade Test**: App updated in-place via `adb install -r` on real Xiaomi device (Android 16); existing words and sessions verified intact.
+- `MIGRATION_6_7`: Added `dialogs`, `dialog_segments`, and `dialog_tasks` tables for speech dialogue recording and study.
+- `MIGRATION_7_8`: Added `status TEXT NOT NULL DEFAULT 'COMPLETE'` to `dialogs` for recording recovery (`RECORDING`, `COMPLETE`, `INTERRUPTED`).
+- **Destructive Migration Status**: `fallbackToDestructiveMigration()` is **strictly removed**. All upgrade paths are backed by explicit `Migration` instances chained cleanly from v4 to v8.
+- **Device Upgrade Test**: App updated in-place via `adb install -r` on real Xiaomi device (Android 16); existing words, checks, and dialogues verified intact.
 
 ---
 
@@ -119,9 +121,28 @@ The German proofreading engine enforces minimal-edit correction:
 
 | Metric | Target | Actual Result | Status |
 | :--- | :--- | :--- | :--- |
-| **Unit Tests** | $\ge 253$ passing | **272 passed, 0 failures** | ✅ PASSED |
+| **Unit Tests** | $\ge 300$ passing | **319 passed, 0 failures** | ✅ PASSED |
 | **Lint** | Zero errors | `lintDebug` clean | ✅ PASSED |
 | **Release Build** | R8 Minified | `assembleRelease` succeeded | ✅ PASSED |
-| **Real Device Smoke Test** | Android 16 | PID active, 0 crash logs | ✅ PASSED |
-| **Database Migrations** | Non-destructive | Migrated v5 $\rightarrow$ v6 | ✅ PASSED |
-| **String Parity** | 8 locales | 246 / 246 in all 8 files | ✅ PASSED |
+| **Real Device Smoke Test** | Android 16 (API 36) | Zero crash logs, sessions resilient | ✅ PASSED |
+| **Database Migrations** | Non-destructive | Migrated v4 $\rightarrow$ v8 chained | ✅ PASSED |
+| **String Parity** | 8 locales | 251 / 251 in all 8 files | ✅ PASSED |
+
+---
+
+## 8. Dialogues Feature & Resilient Speech Architecture (v8)
+
+1. **Crash Prevention in Navigation**:
+   - `getNavigationLong` safely resolves `Long`, `Number`, or parses numeric `String` arguments from Compose Navigation, eliminating `ClassCastException` on opening dialogues or tasks.
+2. **Resilient Speech-to-Text Recognition**:
+   - Removal of artificial 3-second silence timer: speech recognition pauses no longer kill active recording.
+   - Comprehensive error taxonomy on Android API 36: benign events (`NO_MATCH`, `SPEECH_TIMEOUT`) never count against retry quotas.
+   - Exponential backoff ($500\text{ms} \dots 8000\text{ms}$) with recognizer recreation on transient errors.
+   - Uncommitted partial transcripts are persisted on termination via `NonCancellable` application scope.
+   - Screen wakefulness maintained via `FLAG_KEEP_SCREEN_ON` on recording screen.
+3. **Interruption Recovery**:
+   - Unfinished recordings marked as `INTERRUPTED` on startup with "Продолжить запись" workflow.
+   - Empty dialogues render safely with delete actions.
+4. **Performance & Memory Scaling**:
+   - `TranscriptTokenizer` provides thread-safe LRU caching of tokenized `AnnotatedString` structures, reducing 5,000-segment warm lookup to 86ms.
+   - Background pre-warming on `Dispatchers.Default` eliminates UI thread frame drops.

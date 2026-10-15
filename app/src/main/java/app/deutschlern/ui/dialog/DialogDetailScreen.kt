@@ -399,7 +399,11 @@ private fun TranscriptTabContent(
             }
         }
 
-        items(segments, key = { it.id }) { segment ->
+        items(
+            items = segments,
+            key = { it.id },
+            contentType = { "dialog_segment" }
+        ) { segment ->
             val isSpeakerA = segment.speakerLabel == "A"
             val offsetSecs = segment.startOffsetMs / 1000
             val offsetMins = offsetSecs / 60
