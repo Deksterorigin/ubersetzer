@@ -87,21 +87,25 @@ fun FlashcardComponent(
                     when (direction) {
                         FlashcardDirection.DE_RU -> {
                             // German front
+                            val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                                rawLemma = card.word.lemma,
+                                rawPos = card.word.pos,
+                                rawArticle = card.word.article
+                            )
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
                                 horizontalArrangement = Arrangement.Center
                             ) {
-                                if (!card.word.article.isNullOrBlank()) {
-                                    Text(
-                                        text = card.word.article,
+                                if (!sanitized.article.isNullOrBlank()) {
+                                    app.deutschlern.ui.theme.ArticleLabel(
+                                        article = sanitized.article,
                                         style = MaterialTheme.typography.headlineMedium,
-                                        fontWeight = FontWeight.Normal,
-                                        color = MaterialTheme.colorScheme.primary
+                                        fontWeight = FontWeight.Normal
                                     )
                                     Spacer(modifier = Modifier.size(8.dp))
                                 }
                                 Text(
-                                    text = card.word.lemma,
+                                    text = sanitized.lemma,
                                     style = MaterialTheme.typography.headlineMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurface
@@ -187,21 +191,25 @@ fun FlashcardComponent(
                         }
                         FlashcardDirection.RU_DE -> {
                             // German back
+                            val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                                rawLemma = card.word.lemma,
+                                rawPos = card.word.pos,
+                                rawArticle = card.word.article
+                            )
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
                                 horizontalArrangement = Arrangement.Center
                             ) {
-                                if (!card.word.article.isNullOrBlank()) {
-                                    Text(
-                                        text = card.word.article,
+                                if (!sanitized.article.isNullOrBlank()) {
+                                    app.deutschlern.ui.theme.ArticleLabel(
+                                        article = sanitized.article,
                                         style = MaterialTheme.typography.headlineSmall,
-                                        fontWeight = FontWeight.Normal,
-                                        color = MaterialTheme.colorScheme.primary
+                                        fontWeight = FontWeight.Normal
                                     )
                                     Spacer(modifier = Modifier.size(6.dp))
                                 }
                                 Text(
-                                    text = card.word.lemma,
+                                    text = sanitized.lemma,
                                     style = MaterialTheme.typography.headlineSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurface

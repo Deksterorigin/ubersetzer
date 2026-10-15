@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">Excellent! No noticeable errors found.</string>
     <string name="dialog_task_finish">Finish exercise</string>
     <string name="dialog_open_speak_prompt">Tap microphone to record spoken answer</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">Updates</string>
+    <string name="update_current_version">Version %1$s (build %2$d)</string>
+    <string name="update_action_check">Check for updates</string>
+    <string name="update_status_checking">Checking for updates…</string>
+    <string name="update_status_up_to_date">You have the latest version installed</string>
+    <string name="update_dialog_title">Update available</string>
+    <string name="update_version_available">New version: %1$s</string>
+    <string name="update_size_format">Size: %1$s</string>
+    <string name="update_release_notes_title">What\'s new:</string>
+    <string name="update_action_download_install">Download and install</string>
+    <string name="update_action_later">Later</string>
+    <string name="update_wifi_only_title">Download over Wi-Fi only</string>
+    <string name="update_wifi_only_desc">Saves mobile data when downloading updates</string>
+    <string name="update_backup_reminder_title">We recommend backing up your vocabulary</string>
+    <string name="update_backup_action_export_csv">Export vocabulary to CSV</string>
+    <string name="update_permission_explanation">To install the update, allow DeutschLern to install unknown apps in system settings.</string>
+    <string name="update_action_open_settings">Open settings</string>
+    <string name="update_progress_downloading">Downloading update: %1$d%%</string>
+    <string name="update_action_cancel">Cancel</string>
+    <string name="update_status_verifying">Verifying APK integrity and signature…</string>
+    <string name="update_status_installing">Starting update installation…</string>
+    <string name="update_error_network">Network error. Please check your internet connection.</string>
+    <string name="update_error_rate_limit">GitHub API rate limit exceeded. Please try again later.</string>
+    <string name="update_error_not_found">No releases found in repository.</string>
+    <string name="update_error_parse_version">Failed to parse release version: %1$s</string>
+    <string name="update_error_no_apk_asset">No APK file found in the release assets.</string>
+    <string name="update_error_multiple_apk_assets">Multiple APK files found in release. Update cancelled for safety.</string>
+    <string name="update_error_wifi_required">Download cancelled: \"Wi-Fi only\" setting is enabled.</string>
+    <string name="update_error_insufficient_space">Not enough free storage space to download the update.</string>
+    <string name="update_error_hash_mismatch">Integrity check failed: APK checksum mismatch.</string>
+    <string name="update_error_invalid_package">Verification error: package name does not match application.</string>
+    <string name="update_error_downgrade">Error: downloaded APK version is lower than or equal to installed version.</string>
+    <string name="update_error_signature_mismatch">Security error: APK digital signature does not match installed app.</string>
+    <string name="update_error_file_too_large">APK file size exceeds the allowed safety limit.</string>
+    <string name="update_error_install_failed">Installation error (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">Self-update is disabled in Debug builds</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">colloq.</string>
+    <string name="register_formal">formal</string>
+    <string name="register_dated">dated</string>
+    <string name="settings_colored_articles">Colored articles</string>
+    <string name="settings_colored_articles_desc">Blue (der), red (die), yellow (das)</string>
 </resources>

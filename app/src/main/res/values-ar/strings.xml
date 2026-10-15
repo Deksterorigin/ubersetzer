@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">ممتاز! لم يتم العثور على أخطاء ملحوظة.</string>
     <string name="dialog_task_finish">إنهاء التمرين</string>
     <string name="dialog_open_speak_prompt">اضغط على الميكروفون للإجابة بالصوت</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">التحديثات</string>
+    <string name="update_current_version">الإصدار %1$s (البنية %2$d)</string>
+    <string name="update_action_check">التحقق من وجود تحديثات</string>
+    <string name="update_status_checking">جاري التحقق من التحديثات…</string>
+    <string name="update_status_up_to_date">تم تثبيت أحدث إصدار</string>
+    <string name="update_dialog_title">يتوفر تحديث جديد</string>
+    <string name="update_version_available">الإصدار الجديد: %1$s</string>
+    <string name="update_size_format">الحجم: %1$s</string>
+    <string name="update_release_notes_title">ما الجديد:</string>
+    <string name="update_action_download_install">تنزيل وتثبيت</string>
+    <string name="update_action_later">لاحقًا</string>
+    <string name="update_wifi_only_title">التنزيل عبر Wi-Fi فقط</string>
+    <string name="update_wifi_only_desc">يوفر بيانات الهاتف المحمول عند تنزيل التحديثات</string>
+    <string name="update_backup_reminder_title">نوصي بعمل نسخة احتياطية من مفرداتك</string>
+    <string name="update_backup_action_export_csv">تصدير المفردات إلى CSV</string>
+    <string name="update_permission_explanation">لتثبيت التحديث، اسمح لـ DeutschLern بتثبيت التطبيقات غير المعروفة في إعدادات النظام.</string>
+    <string name="update_action_open_settings">فتح الإعدادات</string>
+    <string name="update_progress_downloading">جاري تنزيل التحديث: %1$d%%</string>
+    <string name="update_action_cancel">إلغاء</string>
+    <string name="update_status_verifying">جاري التحقق من سلامة وتوقيع الحزمة…</string>
+    <string name="update_status_installing">بدء تثبيت التحديث…</string>
+    <string name="update_error_network">خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت.</string>
+    <string name="update_error_rate_limit">تم تجاوز حد طلبات واجهة GitHub. يرجى المحاولة لاحقًا.</string>
+    <string name="update_error_not_found">لم يتم العثور على إصدارات في المستودع.</string>
+    <string name="update_error_parse_version">فشل في قراءة إصدار التحديث: %1$s</string>
+    <string name="update_error_no_apk_asset">لم يتم العثور على ملف APK في التحديث.</string>
+    <string name="update_error_multiple_apk_assets">تم العثور على أكثر من ملف APK. تم إلغاء التحديث كإجراء أمان.</string>
+    <string name="update_error_wifi_required">تم إلغاء التنزيل: تم تفعيل خيار «عبر Wi-Fi فقط».</string>
+    <string name="update_error_insufficient_space">لا توجد مساحة تخزين كافية لتنزيل التحديث.</string>
+    <string name="update_error_hash_mismatch">فشل التحقق من السلامة: عدم تطابق رمز التحقق من الحزمة.</string>
+    <string name="update_error_invalid_package">خطأ في التحقق: اسم الحزمة غير مطابق للتطبيق.</string>
+    <string name="update_error_downgrade">خطأ: إصدار الحزمة المحملة أقدم من أو يساوي المثبت حاليًا.</string>
+    <string name="update_error_signature_mismatch">خطأ أمني: التوقيع الرقمي للملف لا يتطابق مع التطبيق المثبت.</string>
+    <string name="update_error_file_too_large">حجم ملف APK يتجاوز الحد المسموح به للأمان.</string>
+    <string name="update_error_install_failed">فشل التثبيت (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">التحديث التلقائي معطل في إصدار تصحيح الأخطاء</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">عامية</string>
+    <string name="register_formal">رسمي</string>
+    <string name="register_dated">قديم</string>
+    <string name="settings_colored_articles">أدوات التعريف الملونة</string>
+    <string name="settings_colored_articles_desc">أزرق (der)، أحمر (die)، أصفر (das)</string>
 </resources>

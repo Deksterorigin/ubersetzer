@@ -30,6 +30,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.ui.text.withStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -62,14 +63,12 @@ fun WordCard(
     var areCollocationsExpanded by remember { mutableStateOf(false) }
 
     Surface(
-        modifier = modifier
-            .fillMaxWidth()
-            .border(
-                width = 1.dp,
-                color = MaterialTheme.colorScheme.outline,
-                shape = RoundedCornerShape(8.dp)
-            ),
+        modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(8.dp),
+        border = androidx.compose.foundation.BorderStroke(
+            width = 1.dp,
+            color = MaterialTheme.colorScheme.outline
+        ),
         color = MaterialTheme.colorScheme.surface
     ) {
         Column(
@@ -89,22 +88,31 @@ fun WordCard(
                     modifier = Modifier.weight(1f, fill = false)
                 ) {
                     val (extractedArticle, baseLemma) = TextNormalizer.extractArticleAndLemma(word.lemma)
-                    val article = word.article?.trim()?.ifBlank { null } ?: extractedArticle
-                    val cleanLemma = if (extractedArticle != null) baseLemma else word.lemma.trim()
+                    val rawLemma = if (extractedArticle != null) baseLemma else word.lemma
+                    val candidateArticle = word.article?.trim()?.ifBlank { null } ?: extractedArticle
+                    val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                        rawLemma = rawLemma,
+                        rawPos = word.pos,
+                        rawArticle = candidateArticle
+                    )
+                    val article = sanitized.article
+                    val cleanLemma = sanitized.lemma
+                    val displayLemma = if (!article.isNullOrBlank()) "$article $cleanLemma" else cleanLemma
 
-                    val displayLemma = if (!article.isNullOrBlank()) {
-                        "$article $cleanLemma"
-                    } else {
-                        cleanLemma
-                    }
+                    val annotatedLemma = app.deutschlern.ui.theme.buildArticleLemmaAnnotatedString(
+                        article = article,
+                        lemma = cleanLemma,
+                        articleWeight = FontWeight.Normal,
+                        lemmaWeight = FontWeight.Bold,
+                        defaultColor = MaterialTheme.colorScheme.onSurface
+                    )
 
                     Text(
-                        text = displayLemma,
+                        text = annotatedLemma,
                         style = MaterialTheme.typography.headlineMedium.copy(
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.Bold
+                            fontSize = 24.sp
                         ),
-                        color = MaterialTheme.colorScheme.onSurface
+                        modifier = Modifier.weight(1f, fill = false)
                     )
 
                     Spacer(modifier = Modifier.width(6.dp))
@@ -232,12 +240,12 @@ private fun MeaningRow(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
+            // Line 1: Translation (weighted) + Best match + Register label (non-neutral only) + Action
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                // Translation + Badges
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.weight(1f, fill = false),
@@ -247,7 +255,8 @@ private fun MeaningRow(
                         text = "${index + 1}. ${meaning.translation}",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.weight(1f, fill = false)
                     )
 
                     if (meaning.bestMatch) {
@@ -261,25 +270,29 @@ private fun MeaningRow(
                                 text = stringResource(R.string.badge_best_match),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.primary,
-                                fontWeight = FontWeight.Medium
+                                fontWeight = FontWeight.Medium,
+                                softWrap = false,
+                                maxLines = 1
                             )
                         }
                     }
 
-                    meaning.register?.let { reg ->
-                        Text(
-                            text = reg,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    meaning.note?.let { note ->
-                        Text(
-                            text = "($note)",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
+                    val registerResId = formatRegisterLabel(meaning.register)
+                    if (registerResId != null) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(4.dp))
+                                .background(MaterialTheme.colorScheme.surfaceVariant)
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = stringResource(registerResId),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                softWrap = false,
+                                maxLines = 1
+                            )
+                        }
                     }
                 }
 
@@ -318,7 +331,22 @@ private fun MeaningRow(
                 }
             }
 
-            // German Example
+            // Line 2: Note (if present, on its own line, full width, secondary style, maxLines 3 with expand)
+            val cleanNote = app.deutschlern.domain.sanitizer.MeaningDeduplicator.cleanNote(meaning.note)
+            if (!cleanNote.isNullOrBlank()) {
+                var isNoteExpanded by remember { mutableStateOf(false) }
+                Text(
+                    text = cleanNote,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = if (isNoteExpanded) Int.MAX_VALUE else 3,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { isNoteExpanded = !isNoteExpanded }
+                )
+            }
+
+            // Line 3+: German Example
             if (meaning.exampleDe.isNotBlank()) {
                 Text(
                     text = meaning.exampleDe,
@@ -328,7 +356,7 @@ private fun MeaningRow(
                 )
             }
 
-            // Russian Translation of Example
+            // Line 4+: Partner Translation of Example
             if (meaning.exampleRu.isNotBlank()) {
                 Text(
                     text = meaning.exampleRu,
@@ -410,44 +438,42 @@ private fun CollocationsContent(collocations: List<app.deutschlern.domain.model.
         verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         collocations.forEach { col ->
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = col.de,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Medium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Text(
-                    text = " — ",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = col.ru,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+            Text(
+                text = androidx.compose.ui.text.buildAnnotatedString {
+                    withStyle(
+                        androidx.compose.ui.text.SpanStyle(
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    ) {
+                        append(col.de)
+                    }
+                    withStyle(
+                        androidx.compose.ui.text.SpanStyle(
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    ) {
+                        append(" — ")
+                        append(col.ru)
+                    }
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     }
 }
 
-@Composable
-private fun formatPosLabel(pos: String): String {
-    return when (pos.lowercase()) {
-        "noun" -> stringResource(R.string.pos_noun)
-        "verb" -> stringResource(R.string.pos_verb)
-        "adjective" -> stringResource(R.string.pos_adjective)
-        "adverb" -> stringResource(R.string.pos_adverb)
-        "preposition" -> stringResource(R.string.pos_preposition)
-        "conjunction" -> stringResource(R.string.pos_conjunction)
-        "pronoun" -> stringResource(R.string.pos_pronoun)
-        "particle" -> stringResource(R.string.pos_particle)
-        "phrase" -> stringResource(R.string.pos_phrase)
-        else -> pos
+
+private fun formatRegisterLabel(register: String?): Int? {
+    if (register.isNullOrBlank()) return null
+    val reg = register.trim().lowercase()
+    return when {
+        reg == "neutral" -> null
+        reg == "umgangssprachlich" || reg == "colloquial" || reg == "разг" || reg == "разговорное" -> R.string.register_colloquial
+        reg == "formell" || reg == "formal" || reg == "офиц" || reg == "официальное" -> R.string.register_formal
+        reg == "veraltet" || reg == "dated" || reg == "устар" || reg == "устаревшее" -> R.string.register_dated
+        else -> null
     }
 }
 
@@ -490,4 +516,132 @@ private fun buildGrammarLine(word: WordTranslation): String {
     }
 
     return parts.joinToString(" • ")
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "Pathological 320dp FontScale 1.0", widthDp = 320, showBackground = true)
+@Composable
+fun WordCardPathologicalNarrowPreview() {
+    MaterialTheme {
+        WordCard(
+            word = WordTranslation(
+                lemma = "erwähnen",
+                article = null,
+                pos = "verb",
+                meanings = listOf(
+                    Meaning(
+                        translation = "Очень длинный перевод слова на русском языке ровно шестьдесят знаков",
+                        note = "Это экстремально длинное примечание для тестирования поведения переноса строк и ограничения высоты карточки, состоящее из множества слов для проверки того, что оно не сжимается в одну букву на строку",
+                        exampleDe = "Er erwähnte dieses Thema nur kurz.",
+                        exampleRu = "Он упомянул эту тему лишь вскользь."
+                    )
+                )
+            ),
+            direction = TranslationDirection.DE_RU
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "Pathological 360dp FontScale 2.0", widthDp = 360, fontScale = 2.0f, showBackground = true)
+@Composable
+fun WordCardPathologicalFontScale2Preview() {
+    MaterialTheme {
+        WordCard(
+            word = WordTranslation(
+                lemma = "erwähnen",
+                article = null,
+                pos = "verb",
+                meanings = listOf(
+                    Meaning(
+                        translation = "Очень длинный перевод слова на русском языке ровно шестьдесят знаков",
+                        note = "Это экстремально длинное примечание для тестирования поведения переноса строк и ограничения высоты карточки, состоящее из множества слов для проверки того, что оно не сжимается в одну букву на строку",
+                        exampleDe = "Er erwähnte dieses Thema nur kurz.",
+                        exampleRu = "Он упомянул эту тему лишь вскользь."
+                    )
+                )
+            ),
+            direction = TranslationDirection.DE_RU
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "All Registers and 5 Meanings", widthDp = 360, showBackground = true)
+@Composable
+fun WordCardAllRegistersAndMeaningsPreview() {
+    MaterialTheme {
+        WordCard(
+            word = WordTranslation(
+                lemma = "erwähnen",
+                article = null,
+                pos = "verb",
+                meanings = listOf(
+                    Meaning(
+                        translation = "упоминать",
+                        note = null,
+                        register = "neutral",
+                        exampleDe = "Er erwähnte das Buch.",
+                        exampleRu = "Он упомянул книгу."
+                    ),
+                    Meaning(
+                        translation = "затрагивать",
+                        note = "в разговоре",
+                        register = "umgangssprachlich",
+                        exampleDe = "Das hat er kurz erwähnt.",
+                        exampleRu = "Он обмолвился об этом."
+                    ),
+                    Meaning(
+                        translation = "ссылаться на",
+                        note = "в протоколе",
+                        register = "formell",
+                        exampleDe = "Der Bericht erwähnt die Fakten.",
+                        exampleRu = "В отчете упомянуты факты."
+                    ),
+                    Meaning(
+                        translation = "поминать",
+                        note = "в старых текстах",
+                        register = "veraltet",
+                        exampleDe = "Man erwähnte seiner mit Lob.",
+                        exampleRu = "Его поминали с похвалой."
+                    ),
+                    Meaning(
+                        translation = "называть по имени",
+                        note = null,
+                        register = null,
+                        exampleDe = "Namen wurden nicht erwähnt.",
+                        exampleRu = "Имена не назывались."
+                    )
+                )
+            ),
+            direction = TranslationDirection.DE_RU
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "RTL Dark Theme", widthDp = 360, showBackground = true)
+@Composable
+fun WordCardRtlDarkPreview() {
+    androidx.compose.runtime.CompositionLocalProvider(
+        androidx.compose.ui.platform.LocalLayoutDirection provides androidx.compose.ui.unit.LayoutDirection.Rtl
+    ) {
+        MaterialTheme(
+            colorScheme = androidx.compose.material3.darkColorScheme()
+        ) {
+            WordCard(
+                word = WordTranslation(
+                    lemma = "Apfel",
+                    article = "der",
+                    pos = "noun",
+                    meanings = listOf(
+                        Meaning(
+                            translation = "تفاحة (فاكهة لذيذة ومفيدة جداً للصحة)",
+                            note = "فاكهة",
+                            register = "neutral",
+                            exampleDe = "Ich esse einen Apfel.",
+                            exampleRu = "أنا آكل تفاحة."
+                        )
+                    )
+                ),
+                direction = TranslationDirection.DE_RU
+            )
+        }
+    }
 }

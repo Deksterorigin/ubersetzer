@@ -51,9 +51,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
+            buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "true")
         }
         debug {
             isMinifyEnabled = false
+            buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "false")
         }
     }
 

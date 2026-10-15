@@ -7,6 +7,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -191,17 +193,22 @@ private fun TranslateTabContent(
                     .padding(14.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                val sanitizedResult = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                    rawLemma = result.lemma,
+                    rawPos = result.pos,
+                    rawArticle = result.article
+                )
                 Text(
                     text = buildString {
-                        if (!result.article.isNullOrBlank()) append("${result.article} ")
-                        append(result.lemma)
+                        if (!sanitizedResult.article.isNullOrBlank()) append("${sanitizedResult.article} ")
+                        append(sanitizedResult.lemma)
                     },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    text = result.pos,
+                    text = app.deutschlern.ui.components.formatPosLabel(sanitizedResult.pos),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -316,9 +323,11 @@ private fun ManualTabContent(
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
-        Row(
+        @OptIn(ExperimentalLayoutApi::class)
+        FlowRow(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             poses.forEach { posOption ->
                 FilterChip(
@@ -334,7 +343,7 @@ private fun ManualTabContent(
                             )
                         )
                     },
-                    label = { Text(posOption, style = MaterialTheme.typography.labelSmall) }
+                    label = { Text(app.deutschlern.ui.components.formatPosLabel(posOption), style = MaterialTheme.typography.labelSmall) }
                 )
             }
         }

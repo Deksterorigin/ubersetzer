@@ -41,5 +41,6 @@ data class SettingsUiState(
     val sttPreferOnDevice: Boolean = false,
     val sttAutoDetect: Boolean = true,
     val sttTranslateImmediately: Boolean = false,
-    val selectedCheckProviderId: String = "gemini"
+    val selectedCheckProviderId: String = "gemini",
+    val coloredArticlesEnabled: Boolean = true
 )

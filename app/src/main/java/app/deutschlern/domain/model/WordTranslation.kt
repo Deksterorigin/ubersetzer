@@ -51,17 +51,25 @@ data class Collocation(
 )
 
 fun WordTranslationDto.toDomain(partnerLanguage: String = "ru"): WordTranslation {
+    val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+        rawLemma = lemma,
+        rawPos = pos,
+        rawArticle = article
+    )
+    val rawMeanings = meanings.orEmpty().map { it.toDomain() }
+    val deduplicatedMeanings = app.deutschlern.domain.sanitizer.MeaningDeduplicator.deduplicate(rawMeanings)
+
     return WordTranslation(
-        lemma = lemma,
-        article = article,
-        pos = pos,
+        lemma = sanitized.lemma,
+        article = sanitized.article,
+        pos = sanitized.pos,
         plural = plural,
         genitive = genitive,
         verbForms = verb_forms?.toDomain(),
         government = government,
         comparative = comparative,
         superlative = superlative,
-        meanings = meanings.orEmpty().map { it.toDomain() },
+        meanings = deduplicatedMeanings,
         synonyms = synonyms.orEmpty(),
         collocations = common_collocations.orEmpty().map { it.toDomain() },
         selectedMeaningIndex = null,

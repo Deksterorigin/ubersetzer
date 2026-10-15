@@ -58,7 +58,7 @@ data class DialogTask(
     val payloadJson: String,
     val resultJson: String? = null,
     val scorePercent: Int? = null,
-    val createdAt: Long,
+    val createdAt: Long = System.currentTimeMillis(),
     val completedAt: Long? = null
 )
 

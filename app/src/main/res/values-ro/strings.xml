@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">Excelent! Nu au fost găsite erori notabile.</string>
     <string name="dialog_task_finish">Finalizează exercițiul</string>
     <string name="dialog_open_speak_prompt">Atingeți microfonul pentru răspuns vocal</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">Actualizări</string>
+    <string name="update_current_version">Versiunea %1$s (compilarea %2$d)</string>
+    <string name="update_action_check">Verifică actualizări</string>
+    <string name="update_status_checking">Se verifică actualizările…</string>
+    <string name="update_status_up_to_date">Este instalată cea mai recentă versiune</string>
+    <string name="update_dialog_title">Actualizare disponibilă</string>
+    <string name="update_version_available">Versiune nouă: %1$s</string>
+    <string name="update_size_format">Mărime: %1$s</string>
+    <string name="update_release_notes_title">Noutăți:</string>
+    <string name="update_action_download_install">Descarcă și instalează</string>
+    <string name="update_action_later">Mai târziu</string>
+    <string name="update_wifi_only_title">Descarcă doar prin Wi-Fi</string>
+    <string name="update_wifi_only_desc">Economisește datele mobile la descărcarea actualizărilor</string>
+    <string name="update_backup_reminder_title">Vă recomandăm să faceți o copie de rezervă a vocabularului</string>
+    <string name="update_backup_action_export_csv">Exportă vocabularul în CSV</string>
+    <string name="update_permission_explanation">Pentru a instala actualizarea, permiteți DeutschLern să instaleze aplicații necunoscute în setările de sistem.</string>
+    <string name="update_action_open_settings">Deschide setările</string>
+    <string name="update_progress_downloading">Se descarcă actualizarea: %1$d%%</string>
+    <string name="update_action_cancel">Anulare</string>
+    <string name="update_status_verifying">Se verifică integritatea și semnătura APK-ului…</string>
+    <string name="update_status_installing">Se pornește instalarea actualizării…</string>
+    <string name="update_error_network">Eroare de rețea. Vă rugăm să verificați conexiunea la internet.</string>
+    <string name="update_error_rate_limit">Limita de solicitări GitHub API a fost depășită. Vă rugăm să încercați mai târziu.</string>
+    <string name="update_error_not_found">Nu au fost găsite versiuni în depozit.</string>
+    <string name="update_error_parse_version">Nu s-a putut analiza versiunea: %1$s</string>
+    <string name="update_error_no_apk_asset">Nu a fost găsit niciun fișier APK în fișierele versiunii.</string>
+    <string name="update_error_multiple_apk_assets">Au fost găsite mai multe fișiere APK. Actualizare anulată pentru siguranță.</string>
+    <string name="update_error_wifi_required">Descărcare anulată: setarea „Doar prin Wi-Fi” este activată.</string>
+    <string name="update_error_insufficient_space">Spațiu de stocare insuficient pentru descărcarea actualizării.</string>
+    <string name="update_error_hash_mismatch">Verificarea integrității a eșuat: suma de control APK nu corespunde.</string>
+    <string name="update_error_invalid_package">Eroare de verificare: numele pachetului nu corespunde aplicației.</string>
+    <string name="update_error_downgrade">Eroare: versiunea APK descărcată este mai veche sau identică cu cea instalată.</string>
+    <string name="update_error_signature_mismatch">Eroare de securitate: semnătura digitală a APK-ului nu corespunde aplicației instalate.</string>
+    <string name="update_error_file_too_large">Mărimea fișierului APK depășește limita de securitate permisă.</string>
+    <string name="update_error_install_failed">Eroare de instalare (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">Actualizarea automată este dezactivată în compilările Debug</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">colocv.</string>
+    <string name="register_formal">formal</string>
+    <string name="register_dated">învechit</string>
+    <string name="settings_colored_articles">Articole colorate</string>
+    <string name="settings_colored_articles_desc">Albastru (der), roșu (die), galben (das)</string>
 </resources>

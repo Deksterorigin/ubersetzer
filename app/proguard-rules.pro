@@ -24,6 +24,8 @@
 -keep,allowobfuscation,allowoptimization class app.deutschlern.data.remote.dto.** { *; }
 -keepclassmembers class app.deutschlern.data.remote.dto.** { *; }
 -keep class app.deutschlern.domain.model.** { *; }
+-keep class app.deutschlern.update.data.dto.** { *; }
+-keepclassmembers class app.deutschlern.update.data.dto.** { *; }
 
 # Room
 -keep class * extends androidx.room.RoomDatabase

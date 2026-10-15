@@ -137,7 +137,8 @@ private fun StatusSegmentedSwitch(
         StatusOption(
             title = stringResource(R.string.status_new),
             isSelected = currentStatus == WordStatus.NEW,
-            onClick = { onStatusSelected(WordStatus.NEW) }
+            onClick = { onStatusSelected(WordStatus.NEW) },
+            modifier = Modifier.weight(1f)
         )
         Box(
             modifier = Modifier
@@ -148,7 +149,8 @@ private fun StatusSegmentedSwitch(
         StatusOption(
             title = stringResource(R.string.status_learning),
             isSelected = currentStatus == WordStatus.LEARNING,
-            onClick = { onStatusSelected(WordStatus.LEARNING) }
+            onClick = { onStatusSelected(WordStatus.LEARNING) },
+            modifier = Modifier.weight(1f)
         )
         Box(
             modifier = Modifier
@@ -159,7 +161,8 @@ private fun StatusSegmentedSwitch(
         StatusOption(
             title = stringResource(R.string.status_known),
             isSelected = currentStatus == WordStatus.KNOWN,
-            onClick = { onStatusSelected(WordStatus.KNOWN) }
+            onClick = { onStatusSelected(WordStatus.KNOWN) },
+            modifier = Modifier.weight(1f)
         )
     }
 }
@@ -168,7 +171,8 @@ private fun StatusSegmentedSwitch(
 private fun StatusOption(
     title: String,
     isSelected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val background = if (isSelected) {
         MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)
@@ -182,17 +186,18 @@ private fun StatusOption(
     }
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .background(background)
             .clickable(onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = 8.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = title,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
-            color = textColor
+            color = textColor,
+            maxLines = 1
         )
     }
 }

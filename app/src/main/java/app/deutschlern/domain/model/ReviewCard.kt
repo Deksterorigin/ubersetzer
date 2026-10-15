@@ -4,13 +4,20 @@ import app.deutschlern.domain.sm2.Sm2State
 
 data class ReviewCard(
     val word: WordEntry,
-    val sm2State: Sm2State
+    val sm2State: Sm2State = Sm2State()
 ) {
     val displayMeaning: Meaning?
         get() = word.selectedMeaning
 
     val frontDeText: String
-        get() = if (!word.article.isNullOrBlank()) "${word.article} ${word.lemma}" else word.lemma
+        get() {
+            val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+                rawLemma = word.lemma,
+                rawPos = word.pos,
+                rawArticle = word.article
+            )
+            return if (!sanitized.article.isNullOrBlank()) "${sanitized.article} ${sanitized.lemma}" else sanitized.lemma
+        }
 
     val backDeText: String
         get() = frontDeText

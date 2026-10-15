@@ -5,7 +5,7 @@ import app.deutschlern.domain.model.TranslationDirection
 
 object Prompts {
     const val PROMPT_VERSION_TEXT = "v1.1"
-    const val PROMPT_VERSION_WORD = "v1.1"
+    const val PROMPT_VERSION_WORD = "v1.2"
     const val PROMPT_VERSION_CHECK = "v1.0"
     const val PROMPT_VERSION_DIALOG_SUMMARY = "v1.0"
     const val PROMPT_VERSION_DIALOG_TASKS = "v1.0"
@@ -210,17 +210,20 @@ All other words, sentence structures, and line breaks must remain completely ide
                 "Given a German word, separable verb, or collocation, provide a rich dictionary entry strictly adhering to the JSON schema. " +
                 "Requirements:\n" +
                 "1. 'lemma' MUST be the canonical German base form (nominative singular for nouns, infinitive for verbs, positive degree for adjectives/adverbs).\n" +
-                "2. If it is a noun, provide 'article' ('der', 'die', or 'das'), 'plural', and 'genitive' singular.\n" +
-                "3. If it is a verb, provide 'verb_forms' with praesens_er, praeteritum, partizip2, auxiliary ('haben' or 'sein'), separable (boolean), and prefix (if separable).\n" +
-                "4. 'government' should contain prepositional or case government if applicable (e.g. 'auf + Akk', '+ Dat').\n" +
-                "5. 'meanings' must contain 1 to 5 most frequent, natural equivalents ranked by frequency. " +
-                "For each meaning: 'translation' is the natural equivalent in ${targetLang}. " +
-                "'example_de' must be a modern, authentic German B2-level example sentence. " +
-                "'example_ru' MUST contain the natural, accurate translation of example_de in ${targetLang}. " +
-                "Include 'note' and 'register' where appropriate.\n" +
-                "6. If a context sentence is provided by the user, identify the meaning that best fits that context and set 'best_match' to true for that meaning, and false for others. If no context is provided, set 'best_match' to false for all.\n" +
-                "7. 'synonyms': up to 5 German synonyms.\n" +
-                "8. 'common_collocations': 2 to 4 frequent B2 collocations (German 'de' and its ${targetLang} translation in 'ru').\n" +
+                "2. 'article' MUST be provided ONLY for nouns ('der', 'die', or 'das'). It MUST be null for verbs (e.g. 'erwähnen' -> null), adjectives (e.g. 'ausüblich' -> null), adverbs (e.g. 'kaum' -> null), prepositions, conjunctions, and phrases. Never provide an article for non-nouns.\n" +
+                "3. If it is a noun, provide 'plural' and 'genitive' singular. Plural-only nouns (e.g. 'die Eltern') keep 'die'.\n" +
+                "4. If it is a verb, provide 'verb_forms' with praesens_er, praeteritum, partizip2, auxiliary ('haben' or 'sein'), separable (boolean), and prefix (if separable).\n" +
+                "5. 'government' should contain prepositional or case government if applicable (e.g. 'auf + Akk', '+ Dat'). Government information belongs ONLY in the 'government' field, NEVER in 'note'.\n" +
+                "6. 'meanings' must contain 1 to 5 distinct equivalents ranked by frequency. Include a second meaning ONLY when its translation is clearly different. One core meaning means ONE entry; NEVER duplicate or pad the list.\n" +
+                "For each meaning:\n" +
+                "- 'translation': natural equivalent in ${targetLang}.\n" +
+                "- 'note': optional short clarification, AT MOST 8 words, NO parentheses, NO frequency statements (e.g. do not write 'most common meaning'), and NO grammar or government claims.\n" +
+                "- 'register': 'neutral', 'umgangssprachlich', 'formell', 'veraltet', or null.\n" +
+                "- 'example_de': modern authentic German B2-level example sentence.\n" +
+                "- 'example_ru': natural, accurate translation of example_de in ${targetLang}.\n" +
+                "7. If a context sentence is provided by the user, identify the meaning that best fits that context and set 'best_match' to true for that meaning, and false for others. If no context is provided, set 'best_match' to false for all.\n" +
+                "8. 'synonyms': up to 5 German synonyms.\n" +
+                "9. 'common_collocations': 2 to 4 frequent B2 collocations (German 'de' and its ${targetLang} translation in 'ru').\n" +
                 "Output strictly valid JSON matching the schema without markdown fences or extra commentary."
         } else {
             val sourceLang = direction.sourceDisplayName
@@ -228,13 +231,15 @@ All other words, sentence structures, and line breaks must remain completely ide
                 "Given a ${sourceLang} word or expression, provide its German translation equivalents strictly adhering to the JSON schema. " +
                 "Requirements:\n" +
                 "1. 'lemma' MUST be the primary German equivalent in its canonical German base form (e.g. if query is 'замок' or 'castle', lemma could be 'Schloss', article 'das'). NEVER use the ${sourceLang} word as lemma.\n" +
-                "2. For nouns, provide German 'article' ('der', 'die', or 'das'), 'plural', and 'genitive'.\n" +
-                "3. For verbs, provide German 'verb_forms'.\n" +
-                "4. In 'meanings', list 1 to 5 German equivalents for the ${sourceLang} query, ranked by appropriateness. " +
-                "For each equivalent: 'translation' is the German equivalent (with article if noun, e.g. 'das Schloss', 'die Burg'), " +
-                "'note' explains in ${sourceLang} the specific meaning/nuance, " +
-                "'example_de' is a modern German B2-level example sentence using this German equivalent, and " +
-                "'example_ru' is its ${sourceLang} translation.\n" +
+                "2. 'article' MUST be provided ONLY if the German lemma is a noun ('der', 'die', or 'das'). It MUST be null for verbs, adjectives, adverbs, and phrases.\n" +
+                "3. For nouns, provide German 'plural' and 'genitive'. For verbs, provide German 'verb_forms'.\n" +
+                "4. In 'meanings', list 1 to 5 German equivalents for the ${sourceLang} query, ranked by appropriateness. Include a second meaning ONLY when its translation is clearly different; do NOT pad the list.\n" +
+                "For each equivalent:\n" +
+                "- 'translation': German equivalent. An article prefix is allowed ONLY for a single noun (e.g. 'das Schloss', 'die Burg'). For verbs, adjectives, or phrases, do NOT include an article prefix (e.g. 'erwähnen', not 'das erwähnen').\n" +
+                "- 'note': optional short nuance in ${sourceLang}, AT MOST 8 words, NO parentheses.\n" +
+                "- 'register': 'neutral', 'umgangssprachlich', 'formell', 'veraltet', or null.\n" +
+                "- 'example_de': modern German B2-level example sentence using this German equivalent.\n" +
+                "- 'example_ru': its natural ${sourceLang} translation.\n" +
                 "5. If a context sentence is provided by the user, mark the best-fitting German equivalent with 'best_match' = true.\n" +
                 "6. 'synonyms': alternative German words/synonyms.\n" +
                 "7. 'common_collocations': common German collocations ('de') with ${sourceLang} translations in 'ru'.\n" +
@@ -255,7 +260,10 @@ All other words, sentence structures, and line breaks must remain completely ide
             type = "OBJECT",
             properties = mapOf(
                 "lemma" to GeminiSchemaDto(type = "STRING", description = "German base form (infinitive or nom. sg.)"),
-                "article" to GeminiSchemaDto(type = "STRING", description = "German article for nouns: der, die, das or null"),
+                "article" to GeminiSchemaDto(
+                    type = "STRING",
+                    description = "German article for nouns ONLY: 'der', 'die', 'das'. MUST be null for verbs, adjectives, adverbs, prepositions, phrases and non-noun parts of speech."
+                ),
                 "pos" to GeminiSchemaDto(
                     type = "STRING",
                     description = "Part of speech: noun, verb, adjective, adverb, preposition, conjunction, pronoun, particle, phrase, other"
@@ -278,13 +286,13 @@ All other words, sentence structures, and line breaks must remain completely ide
                 "superlative" to GeminiSchemaDto(type = "STRING", description = "Superlative form for adjectives/adverbs"),
                 "meanings" to GeminiSchemaDto(
                     type = "ARRAY",
-                    description = "1 to 5 ranked meanings or equivalents",
+                    description = "1 to 5 distinct ranked meanings or equivalents",
                     items = GeminiSchemaDto(
                         type = "OBJECT",
                         properties = mapOf(
                             "translation" to GeminiSchemaDto(type = "STRING", description = "Translation or German equivalent"),
-                            "note" to GeminiSchemaDto(type = "STRING", description = "Grammar note or semantic nuance"),
-                            "register" to GeminiSchemaDto(type = "STRING", description = "Style register if non-neutral"),
+                            "note" to GeminiSchemaDto(type = "STRING", description = "Short clarification (max 8 words, no parentheses, no grammar claims)"),
+                            "register" to GeminiSchemaDto(type = "STRING", description = "Style register: neutral, umgangssprachlich, formell, veraltet, or null"),
                             "example_de" to GeminiSchemaDto(type = "STRING", description = "German B2 example sentence"),
                             "example_ru" to GeminiSchemaDto(type = "STRING", description = "Translation of example"),
                             "best_match" to GeminiSchemaDto(type = "BOOLEAN", description = "True if this meaning best fits the provided context")

@@ -614,7 +614,8 @@ fun CheckResultSection(
                     Text(
                         text = stringResource(R.string.check_overedit_warning),
                         style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onTertiaryContainer
+                        color = MaterialTheme.colorScheme.onTertiaryContainer,
+                        modifier = Modifier.weight(1f)
                     )
                 }
             }
@@ -944,7 +945,8 @@ fun HunkDetailBottomSheet(
                         text = hunk.original,
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-                        textDecoration = TextDecoration.LineThrough
+                        textDecoration = TextDecoration.LineThrough,
+                        modifier = Modifier.weight(1f, fill = false)
                     )
                     Spacer(modifier = Modifier.width(12.dp))
                     Text(
@@ -957,7 +959,8 @@ fun HunkDetailBottomSheet(
                         text = hunk.corrected,
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.primary,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.weight(1f, fill = false)
                     )
                 }
             }

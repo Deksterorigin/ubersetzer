@@ -227,7 +227,15 @@ class TranslationRepositoryImpl @Inject constructor(
             if (exactCached != null && (now - exactCached.createdAt) <= CACHE_TTL_MILLIS) {
                 val cachedWord = runCatching {
                     json.decodeFromString<WordTranslation>(exactCached.responseJson)
-                }.getOrNull()
+                }.getOrNull()?.let { word ->
+                    val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(word.lemma, word.pos, word.article)
+                    word.copy(
+                        lemma = sanitized.lemma,
+                        article = sanitized.article,
+                        pos = sanitized.pos,
+                        meanings = app.deutschlern.domain.sanitizer.MeaningDeduplicator.deduplicate(word.meanings)
+                    )
+                }
                 if (cachedWord != null) {
                     val attribution = if (exactCached.providerId.isNotBlank()) {
                         "${exactCached.providerId} · ${exactCached.modelName}"
@@ -243,7 +251,15 @@ class TranslationRepositoryImpl @Inject constructor(
                 if (semanticCached != null && (now - semanticCached.createdAt) <= CACHE_TTL_MILLIS) {
                     val cachedWord = runCatching {
                         json.decodeFromString<WordTranslation>(semanticCached.responseJson)
-                    }.getOrNull()
+                    }.getOrNull()?.let { word ->
+                        val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(word.lemma, word.pos, word.article)
+                        word.copy(
+                            lemma = sanitized.lemma,
+                            article = sanitized.article,
+                            pos = sanitized.pos,
+                            meanings = app.deutschlern.domain.sanitizer.MeaningDeduplicator.deduplicate(word.meanings)
+                        )
+                    }
                     if (cachedWord != null) {
                         val attribution = if (semanticCached.providerId.isNotBlank()) {
                             "${semanticCached.providerId} · ${semanticCached.modelName}"

@@ -308,4 +308,34 @@ class DatabaseMigrationsTest {
         verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `text_checks`") }) }
         verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialogs`") }) }
     }
+
+    @Test
+    fun migration4To7_skippingMultipleVersions_executesProperly() {
+        val db = mockk<SupportSQLiteDatabase>(relaxed = true)
+        val cursor = mockk<Cursor>(relaxed = true)
+        every { cursor.moveToNext() } returns false
+        every { db.query(any<String>()) } returns cursor
+
+        DatabaseMigrations.MIGRATION_4_7.migrate(db)
+
+        verify { db.execSQL(match { it.contains("partnerLanguage") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `text_checks`") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialogs`") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialog_segments`") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialog_tasks`") }) }
+    }
+
+    @Test
+    fun migration3To7_skippingMultipleVersions_executesProperly() {
+        val db = mockk<SupportSQLiteDatabase>(relaxed = true)
+        val cursor = mockk<Cursor>(relaxed = true)
+        every { cursor.moveToNext() } returns false
+        every { db.query(any<String>()) } returns cursor
+
+        DatabaseMigrations.MIGRATION_3_7.migrate(db)
+
+        verify { db.execSQL(match { it.contains("words") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `text_checks`") }) }
+        verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialogs`") }) }
+    }
 }

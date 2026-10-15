@@ -348,4 +348,49 @@
     <string name="dialog_task_no_mistakes">Отлично! Заметных ошибок не обнаружено.</string>
     <string name="dialog_task_finish">Завершить задание</string>
     <string name="dialog_open_speak_prompt">Нажмите на микрофон для голосового ответа</string>
+
+    <!-- Self-Update from GitHub Releases -->
+    <string name="update_section_title">Обновления</string>
+    <string name="update_current_version">Версия %1$s (сборка %2$d)</string>
+    <string name="update_action_check">Проверить обновления</string>
+    <string name="update_status_checking">Проверка наличия обновлений…</string>
+    <string name="update_status_up_to_date">Установлена последняя версия</string>
+    <string name="update_dialog_title">Доступно обновление</string>
+    <string name="update_version_available">Новая версия: %1$s</string>
+    <string name="update_size_format">Размер: %1$s</string>
+    <string name="update_release_notes_title">Что нового:</string>
+    <string name="update_action_download_install">Скачать и установить</string>
+    <string name="update_action_later">Позже</string>
+    <string name="update_wifi_only_title">Скачивать только по Wi-Fi</string>
+    <string name="update_wifi_only_desc">Экономит мобильный трафик при загрузке обновлений</string>
+    <string name="update_backup_reminder_title">Рекомендуем сделать резервную копию словаря</string>
+    <string name="update_backup_action_export_csv">Экспорт словаря в CSV</string>
+    <string name="update_permission_explanation">Для установки обновления разрешите DeutschLern установку неизвестных приложений в настройках системы.</string>
+    <string name="update_action_open_settings">Открыть настройки</string>
+    <string name="update_progress_downloading">Загрузка обновления: %1$d%%</string>
+    <string name="update_action_cancel">Отмена</string>
+    <string name="update_status_verifying">Проверка целостности и подписи APK…</string>
+    <string name="update_status_installing">Запуск установки обновления…</string>
+    <string name="update_error_network">Ошибка сети. Проверьте подключение к интернету.</string>
+    <string name="update_error_rate_limit">Превышен лимит запросов к GitHub API. Попробуйте позже.</string>
+    <string name="update_error_not_found">Релизы не найдены в репозитории.</string>
+    <string name="update_error_parse_version">Не удалось распознать версию релиза: %1$s</string>
+    <string name="update_error_no_apk_asset">В релизе не найден файл APK для установки.</string>
+    <string name="update_error_multiple_apk_assets">В релизе обнаружено несколько файлов APK. Обновление отменено во избежание ошибки.</string>
+    <string name="update_error_wifi_required">Загрузка отменена: включена настройка «Только по Wi-Fi».</string>
+    <string name="update_error_insufficient_space">Недостаточно свободного места на устройстве для загрузки обновления.</string>
+    <string name="update_error_hash_mismatch">Ошибка проверки целостности: контрольная сумма APK не совпадает.</string>
+    <string name="update_error_invalid_package">Ошибка верификации: имя пакета не совпадает с приложением.</string>
+    <string name="update_error_downgrade">Ошибка: версия скачанного APK ниже или равна установленной.</string>
+    <string name="update_error_signature_mismatch">Ошибка безопасности: цифровая подпись APK не совпадает с установленным приложением.</string>
+    <string name="update_error_file_too_large">Размер файла APK превышает допустимый лимит безопасности.</string>
+    <string name="update_error_install_failed">Ошибка установки (%1$s): %2$s</string>
+    <string name="update_disabled_in_debug">Самообновление отключено в Debug-сборке</string>
+
+    <!-- Article & Register Localizations -->
+    <string name="register_colloquial">разг.</string>
+    <string name="register_formal">офиц.</string>
+    <string name="register_dated">устар.</string>
+    <string name="settings_colored_articles">Цветные артикли</string>
+    <string name="settings_colored_articles_desc">Синий (der), красный (die), жёлтый (das)</string>
 </resources>

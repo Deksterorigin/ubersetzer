@@ -54,14 +54,18 @@ object WordEntryMapper {
         )
     }
 
+    fun parseMeanings(meaningsJson: String, json: Json = defaultJson): List<Meaning> {
+        return runCatching {
+            json.decodeFromString<List<MeaningDto>>(meaningsJson).map { it.toDomain() }
+        }.getOrDefault(emptyList())
+    }
+
     fun entityToDomain(entity: WordEntryEntity, json: Json = defaultJson): WordEntry {
         val grammar: GrammarJsonDto? = entity.grammarJson?.let {
             runCatching { json.decodeFromString<GrammarJsonDto>(it) }.getOrNull()
         }
 
-        val meanings: List<Meaning> = runCatching {
-            json.decodeFromString<List<MeaningDto>>(entity.meaningsJson).map { it.toDomain() }
-        }.getOrDefault(emptyList())
+        val meanings: List<Meaning> = parseMeanings(entity.meaningsJson, json)
 
         val synonyms: List<String> = runCatching {
             json.decodeFromString<List<String>>(entity.synonymsJson)
@@ -71,11 +75,17 @@ object WordEntryMapper {
             json.decodeFromString<List<CollocationDto>>(entity.collocationsJson).map { it.toDomain() }
         }.getOrDefault(emptyList())
 
+        val sanitized = app.deutschlern.domain.sanitizer.ArticleSanitizer.sanitize(
+            rawLemma = entity.lemma,
+            rawPos = entity.pos,
+            rawArticle = entity.article
+        )
+
         return WordEntry(
             id = entity.id,
-            lemma = entity.lemma,
-            article = entity.article,
-            pos = entity.pos,
+            lemma = sanitized.lemma,
+            article = sanitized.article,
+            pos = sanitized.pos,
             plural = entity.plural,
             genitive = entity.genitive,
             verbForms = grammar?.verb_forms?.toDomain(),
