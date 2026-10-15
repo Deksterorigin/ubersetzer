@@ -1,6 +1,5 @@
 package app.deutschlern.data.stt
 
-import android.os.SystemClock
 import android.util.Log
 import app.deutschlern.BuildConfig
 

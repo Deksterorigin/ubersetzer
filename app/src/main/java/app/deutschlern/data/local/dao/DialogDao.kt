@@ -32,4 +32,7 @@ interface DialogDao {
 
     @Query("SELECT COUNT(*) FROM dialogs")
     suspend fun getDialogCount(): Int
+
+    @Query("UPDATE dialogs SET status = 'INTERRUPTED' WHERE status = 'RECORDING'")
+    suspend fun markInterruptedRecordings()
 }

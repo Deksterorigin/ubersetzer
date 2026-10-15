@@ -338,4 +338,37 @@ class DatabaseMigrationsTest {
         verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `text_checks`") }) }
         verify { db.execSQL(match { it.contains("CREATE TABLE IF NOT EXISTS `dialogs`") }) }
     }
+
+    @Test
+    fun migration7To8_executesSqlStatements() {
+        val db = mockk<SupportSQLiteDatabase>(relaxed = true)
+
+        DatabaseMigrations.MIGRATION_7_8.migrate(db)
+
+        verify {
+            db.execSQL(match { it.contains("ALTER TABLE dialogs ADD COLUMN status TEXT NOT NULL DEFAULT 'COMPLETE'") })
+        }
+    }
+
+    @Test
+    fun schemasValidation_v7VsV8() {
+        val schemasDir = File("schemas/app.deutschlern.data.local.AppDatabase")
+        val schema7File = File(schemasDir, "7.json")
+        val schema8File = File(schemasDir, "8.json")
+
+        assertTrue("7.json must exist", schema7File.exists())
+        assertTrue("8.json must exist", schema8File.exists())
+
+        val schema7Content = schema7File.readText()
+        val schema8Content = schema8File.readText()
+
+        // Version 7 has version 7 and no status column in dialogs table createSql
+        assertTrue(schema7Content.contains("\"version\": 7"))
+        assertFalse(schema7Content.contains("`status` TEXT NOT NULL DEFAULT 'COMPLETE'"))
+
+        // Version 8 has version 8, status column in dialogs with default 'COMPLETE'
+        assertTrue(schema8Content.contains("\"version\": 8"))
+        assertTrue(schema8Content.contains("`status` TEXT NOT NULL DEFAULT 'COMPLETE'"))
+        assertTrue(schema8Content.contains("\"defaultValue\": \"'COMPLETE'\""))
+    }
 }

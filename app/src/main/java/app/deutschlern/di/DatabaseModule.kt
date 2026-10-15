@@ -31,6 +31,7 @@ object DatabaseModule {
             "deutschlern.db"
         )
         .addMigrations(
+            DatabaseMigrations.MIGRATION_7_8,
             DatabaseMigrations.MIGRATION_6_7,
             DatabaseMigrations.MIGRATION_5_7,
             DatabaseMigrations.MIGRATION_4_7,

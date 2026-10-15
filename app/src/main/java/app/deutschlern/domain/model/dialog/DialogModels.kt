@@ -2,6 +2,12 @@ package app.deutschlern.domain.model.dialog
 
 import kotlinx.serialization.Serializable
 
+object DialogStatus {
+    const val RECORDING = "RECORDING"
+    const val COMPLETE = "COMPLETE"
+    const val INTERRUPTED = "INTERRUPTED"
+}
+
 data class Dialog(
     val id: Long = 0,
     val title: String,
@@ -11,7 +17,8 @@ data class Dialog(
     val segmentCount: Int = 0,
     val summary: DialogSummary? = null,
     val summaryProviderModel: String? = null,
-    val summaryUpdatedAt: Long? = null
+    val summaryUpdatedAt: Long? = null,
+    val status: String = DialogStatus.COMPLETE
 )
 
 data class DialogSegment(

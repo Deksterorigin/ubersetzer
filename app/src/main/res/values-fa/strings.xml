@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DeutschLern</string>
     <string name="tab_translate">ترجمه</string>
@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">تعویض گوینده</string>
     <string name="dialog_recording_status_listening">در حال ضبط...</string>
     <string name="dialog_recording_status_paused">ضبط متوقف است</string>
+    <string name="dialog_recording_reconnecting">اتصال مجدد تشخیص گفتار...</string>
+    <string name="dialog_recording_paused_reason">ضبط متوقف شد: %1$s</string>
+    <string name="dialog_permission_mic_title">دسترسی به میکروفون لازم است</string>
+    <string name="dialog_permission_mic_desc">برای ضبط گفتگو، برنامه نیاز به دسترسی به میکروفون دستگاه دارد.</string>
+    <string name="dialog_permission_mic_grant">اعطای دسترسی</string>
+    <string name="dialog_permission_mic_settings">باز کردن تنظیمات</string>
     <string name="dialog_cancel_confirm_title">لغو ضبط؟</string>
     <string name="dialog_cancel_confirm_message">ضبط فعلی ذخیره نخواهد شد.</string>
     <string name="dialog_cancel_confirm_discard">دور انداختن</string>
@@ -393,4 +399,11 @@
     <string name="register_dated">کهن</string>
     <string name="settings_colored_articles">حروف تعریف رنگی</string>
     <string name="settings_colored_articles_desc">آبی (der)، قرمز (die)، زرد (das)</string>
+
+    <string name="dialog_detail_empty_title">گفتگوی خالی</string>
+    <string name="dialog_detail_empty_desc">هیچ بخش ضبط‌شده‌ای در این گفتگو وجود ندارد.</string>
+    <string name="dialog_status_interrupted">ضبط قطع شد</string>
+    <string name="dialog_action_resume">ادامه ضبط</string>
+    <string name="dialog_action_delete">حذف گفتگو</string>
 </resources>
+

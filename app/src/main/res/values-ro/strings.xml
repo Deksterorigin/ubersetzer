@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DeutschLern</string>
     <string name="tab_translate">Traducere</string>
@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Schimbă vorbitorul</string>
     <string name="dialog_recording_status_listening">Înregistrare în curs...</string>
     <string name="dialog_recording_status_paused">Înregistrare întreruptă</string>
+    <string name="dialog_recording_reconnecting">Reconectare recunoaștere vocală...</string>
+    <string name="dialog_recording_paused_reason">Înregistrare întreruptă: %1$s</string>
+    <string name="dialog_permission_mic_title">Acces la microfon necesar</string>
+    <string name="dialog_permission_mic_desc">Pentru înregistrarea dialogului, aplicația are nevoie de acces la microfon.</string>
+    <string name="dialog_permission_mic_grant">Permite accesul</string>
+    <string name="dialog_permission_mic_settings">Deschide setările</string>
     <string name="dialog_cancel_confirm_title">Anulați înregistrarea?</string>
     <string name="dialog_cancel_confirm_message">Înregistrarea curentă nu va fi salvată.</string>
     <string name="dialog_cancel_confirm_discard">Renunță</string>
@@ -393,4 +399,11 @@
     <string name="register_dated">învechit</string>
     <string name="settings_colored_articles">Articole colorate</string>
     <string name="settings_colored_articles_desc">Albastru (der), roșu (die), galben (das)</string>
+
+    <string name="dialog_detail_empty_title">Dialog gol</string>
+    <string name="dialog_detail_empty_desc">Nu există replici înregistrate în acest dialog.</string>
+    <string name="dialog_status_interrupted">Înregistrare întreruptă</string>
+    <string name="dialog_action_resume">Continuă înregistrarea</string>
+    <string name="dialog_action_delete">Șterge dialogul</string>
 </resources>
+

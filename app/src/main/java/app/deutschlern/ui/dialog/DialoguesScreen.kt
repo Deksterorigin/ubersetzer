@@ -58,10 +58,14 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+import app.deutschlern.domain.model.dialog.DialogStatus
+import androidx.compose.material3.TextButton
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DialoguesScreen(
     onNavigateToRecording: () -> Unit,
+    onResumeRecording: (dialogId: Long) -> Unit = {},
     onNavigateToDetail: (dialogId: Long) -> Unit,
     onNavigateToSettings: () -> Unit,
     viewModel: DialoguesViewModel = hiltViewModel()
@@ -175,6 +179,7 @@ fun DialoguesScreen(
                     DialogItemCard(
                         dialog = dialog,
                         onClick = { onNavigateToDetail(dialog.id) },
+                        onResume = { onResumeRecording(dialog.id) },
                         onDelete = { viewModel.deleteDialog(dialog) }
                     )
                 }
@@ -187,6 +192,7 @@ fun DialoguesScreen(
 private fun DialogItemCard(
     dialog: Dialog,
     onClick: () -> Unit,
+    onResume: () -> Unit = {},
     onDelete: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -293,6 +299,37 @@ private fun DialogItemCard(
                         color = MaterialTheme.colorScheme.onPrimaryContainer,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
+                }
+            }
+
+            if (dialog.status == DialogStatus.INTERRUPTED) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Surface(
+                        shape = RoundedCornerShape(6.dp),
+                        color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.7f)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.dialog_status_interrupted),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onErrorContainer,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        )
+                    }
+
+                    TextButton(
+                        onClick = onResume,
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.dialog_action_resume),
+                            style = MaterialTheme.typography.labelMedium
+                        )
+                    }
                 }
             }
         }

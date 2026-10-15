@@ -164,4 +164,53 @@ class AppDatabaseMigrationTest {
             assertEquals(2L, c.getLong(0))
         }
     }
+
+    @Test
+    fun migrate7To8_validatesSchemaAndDefaultStatus() {
+        // 1. Create database in version 7
+        var db: SupportSQLiteDatabase = helper.createDatabase(TEST_DB, 7)
+
+        // 2. Insert test dialog without status column (v7 schema)
+        db.execSQL(
+            """
+            INSERT INTO dialogs (
+                id, title, createdAt, durationMs, segmentCount, audioUri, summaryJson
+            ) VALUES (
+                42, 'Test Dialog', 1700000000000, 120000, 5, NULL, NULL
+            )
+            """.trimIndent()
+        )
+        db.close()
+
+        // 3. Run migration 7 to 8 and validate schema
+        db = helper.runMigrationsAndValidate(TEST_DB, 8, true, DatabaseMigrations.MIGRATION_7_8)
+
+        // 4. Verify existing dialog got default status 'COMPLETE'
+        val cursor = db.query("SELECT id, title, status FROM dialogs WHERE id = 42")
+        cursor.use { c ->
+            assertTrue(c.moveToNext())
+            assertEquals(42L, c.getLong(c.getColumnIndexOrThrow("id")))
+            assertEquals("Test Dialog", c.getString(c.getColumnIndexOrThrow("title")))
+            assertEquals("COMPLETE", c.getString(c.getColumnIndexOrThrow("status")))
+        }
+    }
+
+    @Test
+    fun migrateAll_fromOldestExportedSchemaTo8_runsChain() {
+        // 1. Create database in oldest exported schema (v4)
+        var db: SupportSQLiteDatabase = helper.createDatabase(TEST_DB, 4)
+        db.close()
+
+        // 2. Run chained migrations from 4 to 8
+        db = helper.runMigrationsAndValidate(
+            TEST_DB,
+            8,
+            true,
+            DatabaseMigrations.MIGRATION_4_5,
+            DatabaseMigrations.MIGRATION_5_6,
+            DatabaseMigrations.MIGRATION_6_7,
+            DatabaseMigrations.MIGRATION_7_8
+        )
+        assertNotNull(db)
+    }
 }

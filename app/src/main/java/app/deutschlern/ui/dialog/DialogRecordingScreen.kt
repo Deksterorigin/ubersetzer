@@ -75,6 +75,27 @@ import app.deutschlern.R
 import app.deutschlern.domain.model.dialog.DialogSegment
 import java.util.Locale
 
+import android.Manifest
+import android.app.Activity
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.ContextWrapper
+import android.content.Intent
+import android.content.IntentFilter
+import android.content.pm.PackageManager
+import android.media.AudioManager
+import android.net.Uri
+import android.provider.Settings
+import android.view.WindowManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DialogRecordingScreen(
@@ -84,6 +105,80 @@ fun DialogRecordingScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     var showCancelDialog by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+
+    // Keep screen on while on recording screen
+    DisposableEffect(Unit) {
+        val activity = context.findActivity()
+        activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        onDispose {
+            activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+    }
+
+    // Audio focus & headphone disconnection receiver
+    DisposableEffect(Unit) {
+        val focusChangeListener = AudioManager.OnAudioFocusChangeListener { focusChange ->
+            when (focusChange) {
+                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT,
+                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> {
+                    viewModel.onAudioFocusLost(isTransient = true)
+                }
+                AudioManager.AUDIOFOCUS_LOSS -> {
+                    viewModel.onAudioFocusLost(isTransient = false)
+                }
+            }
+        }
+
+        val noisyReceiver = object : BroadcastReceiver() {
+            override fun onReceive(c: Context?, intent: Intent?) {
+                if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY) {
+                    viewModel.onAudioBecomingNoisy()
+                }
+            }
+        }
+
+        try {
+            context.registerReceiver(
+                noisyReceiver,
+                IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY)
+            )
+        } catch (e: Exception) {
+            // ignore
+        }
+
+        onDispose {
+            try {
+                context.unregisterReceiver(noisyReceiver)
+            } catch (e: Exception) {
+                // ignore
+            }
+        }
+    }
+
+    // Runtime permission launcher
+    val hasMicPermission = ContextCompat.checkSelfPermission(
+        context,
+        Manifest.permission.RECORD_AUDIO
+    ) == PackageManager.PERMISSION_GRANTED
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            viewModel.onPermissionGranted()
+        } else {
+            viewModel.onPermissionDenied()
+        }
+    }
+
+    LaunchedEffect(Unit) {
+        if (!hasMicPermission) {
+            permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+        } else {
+            viewModel.onPermissionGranted()
+        }
+    }
 
     LaunchedEffect(uiState.savedDialogId) {
         val id = uiState.savedDialogId
@@ -181,8 +276,84 @@ fun DialogRecordingScreen(
             // Header timer and status
             HeaderTimerSection(
                 elapsedSeconds = uiState.elapsedSeconds,
-                isRecording = uiState.isRecording
+                isRecording = uiState.isRecording && !uiState.isPaused
             )
+
+            // Reconnecting status chip
+            if (uiState.isReconnecting) {
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.tertiaryContainer
+                    )
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(16.dp),
+                            strokeWidth = 2.dp,
+                            color = MaterialTheme.colorScheme.onTertiaryContainer
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = uiState.reconnectingMessage ?: stringResource(R.string.dialog_recording_reconnecting),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onTertiaryContainer
+                        )
+                    }
+                }
+            }
+
+            // Paused banner with reason & Resume button
+            if (uiState.isPaused && uiState.pauseReason != null) {
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 6.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.85f)
+                    )
+                ) {
+                    Row(
+                        modifier = Modifier.padding(12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Warning,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onErrorContainer,
+                                modifier = Modifier.size(20.dp)
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = stringResource(R.string.dialog_recording_paused_reason, uiState.pauseReason ?: ""),
+                                style = MaterialTheme.typography.bodySmall,
+                                fontWeight = FontWeight.Medium,
+                                color = MaterialTheme.colorScheme.onErrorContainer
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Button(
+                            onClick = { viewModel.resumeRecording() },
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+                        ) {
+                            Text(
+                                text = stringResource(R.string.dialog_record_resume),
+                                style = MaterialTheme.typography.labelMedium
+                            )
+                        }
+                    }
+                }
+            }
 
             // Speaker selector bar
             SpeakerSelectionBar(
@@ -191,20 +362,77 @@ fun DialogRecordingScreen(
                 onToggleSpeaker = { viewModel.toggleSpeaker() }
             )
 
-            // Live Transcript list
+            // Live Transcript list or permission prompt
             Box(
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
             ) {
-                if (uiState.segments.isEmpty() && uiState.currentPartialText.isBlank()) {
+                if (!uiState.hasAudioPermission) {
+                    // Microphone permission required card
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            shape = RoundedCornerShape(16.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(20.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Mic,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.size(40.dp)
+                                )
+                                Spacer(modifier = Modifier.height(12.dp))
+                                Text(
+                                    text = stringResource(R.string.dialog_permission_mic_title),
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = stringResource(R.string.dialog_permission_mic_desc),
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                                Spacer(modifier = Modifier.height(16.dp))
+                                Button(
+                                    onClick = { permissionLauncher.launch(Manifest.permission.RECORD_AUDIO) },
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(text = stringResource(R.string.dialog_permission_mic_grant))
+                                }
+                                Spacer(modifier = Modifier.height(8.dp))
+                                OutlinedButton(
+                                    onClick = {
+                                        val intent = Intent(
+                                            Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                                            Uri.fromParts("package", context.packageName, null)
+                                        )
+                                        context.startActivity(intent)
+                                    },
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(text = stringResource(R.string.dialog_permission_mic_settings))
+                                }
+                            }
+                        }
+                    }
+                } else if (uiState.segments.isEmpty() && uiState.currentPartialText.isBlank()) {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = if (uiState.isRecording) {
+                            text = if (uiState.isRecording && !uiState.isPaused) {
                                 stringResource(R.string.dialog_recording_status_listening)
                             } else {
                                 stringResource(R.string.dialog_recording_status_paused)
@@ -238,10 +466,10 @@ fun DialogRecordingScreen(
 
             // Bottom control actions
             BottomControlsBar(
-                isRecording = uiState.isRecording,
+                isRecording = uiState.isRecording && !uiState.isPaused,
                 isSaving = uiState.isSaving,
                 onPauseToggle = {
-                    if (uiState.isRecording) viewModel.pauseRecording() else viewModel.resumeRecording()
+                    if (uiState.isRecording && !uiState.isPaused) viewModel.pauseRecording() else viewModel.resumeRecording()
                 },
                 onSave = { viewModel.stopAndSave() },
                 onCancel = {
@@ -526,4 +754,13 @@ private fun BottomControlsBar(
             }
         }
     }
+}
+
+private fun Context.findActivity(): Activity? {
+    var currentContext = this
+    while (currentContext is ContextWrapper) {
+        if (currentContext is Activity) return currentContext
+        currentContext = currentContext.baseContext
+    }
+    return null
 }

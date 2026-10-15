@@ -66,6 +66,7 @@ class MainActivity : ComponentActivity() {
             try {
                 appDatabase.openHelper.writableDatabase
                 android.util.Log.i("MainActivity", "AppDatabase initialized successfully")
+                appDatabase.dialogDao().markInterruptedRecordings()
                 legacyArticleRepairManager.repairIfNeeded()
                 legacyArticleRepairManager.normalizePosIfNeeded()
             } catch (e: Exception) {

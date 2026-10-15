@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DeutschLern</string>
     <string name="tab_translate">الترجمة</string>
@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">تبديل المتحدث</string>
     <string name="dialog_recording_status_listening">جارٍ التسجيل...</string>
     <string name="dialog_recording_status_paused">التسجيل متوقف مؤقتاً</string>
+    <string name="dialog_recording_reconnecting">إعادة الاتصال بالتعرف على الصوت...</string>
+    <string name="dialog_recording_paused_reason">تم إيقاف التسجيل مؤقتاً: %1$s</string>
+    <string name="dialog_permission_mic_title">مطلوب إذن الوصول إلى الميكروفون</string>
+    <string name="dialog_permission_mic_desc">لتسجيل الحوار، يحتاج التطبيق إلى الوصول إلى ميكروفون الجهاز.</string>
+    <string name="dialog_permission_mic_grant">منح الإذن</string>
+    <string name="dialog_permission_mic_settings">فتح الإعدادات</string>
     <string name="dialog_cancel_confirm_title">إلغاء التسجيل؟</string>
     <string name="dialog_cancel_confirm_message">لن يتم حفظ التسجيل الحالي.</string>
     <string name="dialog_cancel_confirm_discard">تجاهل</string>
@@ -393,4 +399,11 @@
     <string name="register_dated">قديم</string>
     <string name="settings_colored_articles">أدوات التعريف الملونة</string>
     <string name="settings_colored_articles_desc">أزرق (der)، أحمر (die)، أصفر (das)</string>
+
+    <string name="dialog_detail_empty_title">حوار فارغ</string>
+    <string name="dialog_detail_empty_desc">لا توجد مقاطع مسجلة في هذا الحوار.</string>
+    <string name="dialog_status_interrupted">انقطع التسجيل</string>
+    <string name="dialog_action_resume">استئناف التسجيل</string>
+    <string name="dialog_action_delete">حذف الحوار</string>
 </resources>
+

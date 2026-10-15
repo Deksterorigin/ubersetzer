@@ -51,6 +51,10 @@ class DialogRepositoryImpl @Inject constructor(
         dialogDao.deleteDialogById(id)
     }
 
+    override suspend fun markInterruptedRecordings() {
+        dialogDao.markInterruptedRecordings()
+    }
+
     override fun getSegmentsForDialog(dialogId: Long): Flow<List<DialogSegment>> {
         return dialogSegmentDao.getSegmentsForDialog(dialogId).map { list ->
             list.map { segmentEntityToDomain(it) }
@@ -108,7 +112,8 @@ class DialogRepositoryImpl @Inject constructor(
             segmentCount = entity.segmentCount,
             summary = summary,
             summaryProviderModel = entity.summaryProviderModel,
-            summaryUpdatedAt = entity.summaryUpdatedAt
+            summaryUpdatedAt = entity.summaryUpdatedAt,
+            status = entity.status
         )
     }
 
@@ -127,7 +132,8 @@ class DialogRepositoryImpl @Inject constructor(
             segmentCount = dialog.segmentCount,
             summaryJson = summaryJson,
             summaryProviderModel = dialog.summaryProviderModel,
-            summaryUpdatedAt = dialog.summaryUpdatedAt
+            summaryUpdatedAt = dialog.summaryUpdatedAt,
+            status = dialog.status
         )
     }
 

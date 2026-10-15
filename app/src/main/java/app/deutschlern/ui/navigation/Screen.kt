@@ -61,10 +61,12 @@ sealed class Screen(
     )
 
     data object DialogRecording : Screen(
-        route = "dialog_recording",
+        route = "dialog_recording?dialogId={dialogId}",
         titleRes = R.string.dialog_recording_title,
         icon = Icons.Outlined.Forum
-    )
+    ) {
+        fun createRoute(dialogId: Long = 0L): String = if (dialogId > 0L) "dialog_recording?dialogId=$dialogId" else "dialog_recording"
+    }
 
     data object DialogDetail : Screen(
         route = "dialog_detail/{dialogId}",

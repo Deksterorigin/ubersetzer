@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DeutschLern</string>
     <string name="tab_translate">Перевод</string>
@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Сменить говорящего</string>
     <string name="dialog_recording_status_listening">Идёт запись...</string>
     <string name="dialog_recording_status_paused">Запись на паузе</string>
+    <string name="dialog_recording_reconnecting">Восстановление распознавания речи...</string>
+    <string name="dialog_recording_paused_reason">Запись приостановлена: %1$s</string>
+    <string name="dialog_permission_mic_title">Требуется доступ к микрофону</string>
+    <string name="dialog_permission_mic_desc">Для записи диалога приложению необходим доступ к микрофону устройства.</string>
+    <string name="dialog_permission_mic_grant">Предоставить доступ</string>
+    <string name="dialog_permission_mic_settings">Открыть настройки</string>
     <string name="dialog_cancel_confirm_title">Отменить запись?</string>
     <string name="dialog_cancel_confirm_message">Текущая запись не будет сохранена.</string>
     <string name="dialog_cancel_confirm_discard">Сбросить</string>
@@ -393,4 +399,11 @@
     <string name="register_dated">устар.</string>
     <string name="settings_colored_articles">Цветные артикли</string>
     <string name="settings_colored_articles_desc">Синий (der), красный (die), жёлтый (das)</string>
+
+    <string name="dialog_detail_empty_title">Пустой диалог</string>
+    <string name="dialog_detail_empty_desc">В этом диалоге нет сохранённых реплик.</string>
+    <string name="dialog_status_interrupted">Запись прервана</string>
+    <string name="dialog_action_resume">Продолжить запись</string>
+    <string name="dialog_action_delete">Удалить диалог</string>
 </resources>
+
