@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Сменить говорящего</string>
     <string name="dialog_recording_status_listening">Идёт запись...</string>
     <string name="dialog_recording_status_paused">Запись на паузе</string>
+    <string name="dialog_recording_reconnecting">Восстановление распознавания речи...</string>
+    <string name="dialog_recording_paused_reason">Запись приостановлена: %1$s</string>
+    <string name="dialog_permission_mic_title">Требуется доступ к микрофону</string>
+    <string name="dialog_permission_mic_desc">Для записи диалога приложению необходим доступ к микрофону устройства.</string>
+    <string name="dialog_permission_mic_grant">Предоставить доступ</string>
+    <string name="dialog_permission_mic_settings">Открыть настройки</string>
     <string name="dialog_cancel_confirm_title">Отменить запись?</string>
     <string name="dialog_cancel_confirm_message">Текущая запись не будет сохранена.</string>
     <string name="dialog_cancel_confirm_discard">Сбросить</string>

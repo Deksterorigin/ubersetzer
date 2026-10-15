@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Schimbă vorbitorul</string>
     <string name="dialog_recording_status_listening">Înregistrare în curs...</string>
     <string name="dialog_recording_status_paused">Înregistrare întreruptă</string>
+    <string name="dialog_recording_reconnecting">Reconectare recunoaștere vocală...</string>
+    <string name="dialog_recording_paused_reason">Înregistrare întreruptă: %1$s</string>
+    <string name="dialog_permission_mic_title">Acces la microfon necesar</string>
+    <string name="dialog_permission_mic_desc">Pentru înregistrarea dialogului, aplicația are nevoie de acces la microfon.</string>
+    <string name="dialog_permission_mic_grant">Permite accesul</string>
+    <string name="dialog_permission_mic_settings">Deschide setările</string>
     <string name="dialog_cancel_confirm_title">Anulați înregistrarea?</string>
     <string name="dialog_cancel_confirm_message">Înregistrarea curentă nu va fi salvată.</string>
     <string name="dialog_cancel_confirm_discard">Renunță</string>

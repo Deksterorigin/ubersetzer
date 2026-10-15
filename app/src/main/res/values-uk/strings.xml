@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Змінити співрозмовника</string>
     <string name="dialog_recording_status_listening">Триває запис...</string>
     <string name="dialog_recording_status_paused">Запис на паузі</string>
+    <string name="dialog_recording_reconnecting">Відновлення розпізнавання мови...</string>
+    <string name="dialog_recording_paused_reason">Запис призупинено: %1$s</string>
+    <string name="dialog_permission_mic_title">Потрібен доступ до мікрофона</string>
+    <string name="dialog_permission_mic_desc">Для запису діалогу додатку потрібен доступ до мікрофона пристрою.</string>
+    <string name="dialog_permission_mic_grant">Надати доступ</string>
+    <string name="dialog_permission_mic_settings">Відкрити налаштування</string>
     <string name="dialog_cancel_confirm_title">Скасувати запис?</string>
     <string name="dialog_cancel_confirm_message">Поточний запис не буде збережено.</string>
     <string name="dialog_cancel_confirm_discard">Скинути</string>

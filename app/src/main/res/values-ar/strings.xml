@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">تبديل المتحدث</string>
     <string name="dialog_recording_status_listening">جارٍ التسجيل...</string>
     <string name="dialog_recording_status_paused">التسجيل متوقف مؤقتاً</string>
+    <string name="dialog_recording_reconnecting">إعادة الاتصال بالتعرف على الصوت...</string>
+    <string name="dialog_recording_paused_reason">تم إيقاف التسجيل مؤقتاً: %1$s</string>
+    <string name="dialog_permission_mic_title">مطلوب إذن الوصول إلى الميكروفون</string>
+    <string name="dialog_permission_mic_desc">لتسجيل الحوار، يحتاج التطبيق إلى الوصول إلى ميكروفون الجهاز.</string>
+    <string name="dialog_permission_mic_grant">منح الإذن</string>
+    <string name="dialog_permission_mic_settings">فتح الإعدادات</string>
     <string name="dialog_cancel_confirm_title">إلغاء التسجيل؟</string>
     <string name="dialog_cancel_confirm_message">لن يتم حفظ التسجيل الحالي.</string>
     <string name="dialog_cancel_confirm_discard">تجاهل</string>

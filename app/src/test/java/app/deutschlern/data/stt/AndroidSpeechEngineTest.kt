@@ -114,22 +114,34 @@ class AndroidSpeechEngineTest {
         val (noMatchMsg, noMatchRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_NO_MATCH)
         assertTrue(noMatchRecoverable)
         assertTrue(noMatchMsg.isNotBlank())
+        assertTrue(engine.isBenignError(SpeechRecognizer.ERROR_NO_MATCH))
 
         val (timeoutMsg, timeoutRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_SPEECH_TIMEOUT)
         assertTrue(timeoutRecoverable)
         assertTrue(timeoutMsg.isNotBlank())
+        assertTrue(engine.isBenignError(SpeechRecognizer.ERROR_SPEECH_TIMEOUT))
 
         val (busyMsg, busyRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_RECOGNIZER_BUSY)
         assertTrue(busyRecoverable)
         assertTrue(busyMsg.isNotBlank())
+        assertFalse(engine.isBenignError(SpeechRecognizer.ERROR_RECOGNIZER_BUSY))
 
         val (permMsg, permRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS)
         assertFalse(permRecoverable)
         assertTrue(permMsg.isNotBlank())
+        assertTrue(engine.isFatalError(SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS))
 
         val (audioMsg, audioRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_AUDIO)
-        assertFalse(audioRecoverable)
+        assertTrue(audioRecoverable)
         assertTrue(audioMsg.isNotBlank())
+
+        val (clientMsg, clientRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_CLIENT)
+        assertTrue(clientRecoverable)
+        assertTrue(clientMsg.isNotBlank())
+
+        val (langNotSupportedMsg, langNotSupportedRecoverable) = engine.mapErrorCode(SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED)
+        assertFalse(langNotSupportedRecoverable)
+        assertTrue(engine.isFatalError(SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED))
     }
 
     @Test
@@ -313,6 +325,56 @@ class AndroidSpeechEngineTest {
 
             verify(atLeast = 1) { mockRecognizer.cancel() }
             cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun startListening_commitsLastPartialOnBenignError() = runTest {
+        val flow = engine.startListening("de")
+
+        flow.test {
+            advanceUntilIdle()
+            awaitItem() // StateChanged(true)
+
+            val listener = listenerSlot.captured
+
+            // Send partial
+            val partialBundle = mockk<Bundle>()
+            every { partialBundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) } returns arrayListOf("Teilweiser Text")
+            listener.onPartialResults(partialBundle)
+            val partialEvent = awaitItem()
+            assertEquals(SttEvent.Partial("Teilweiser Text"), partialEvent)
+
+            // Trigger benign error (e.g. silence timeout / no match)
+            listener.onError(SpeechRecognizer.ERROR_NO_MATCH)
+
+            // The engine must commit the pending partial as Final
+            val finalEvent = awaitItem()
+            assertTrue(finalEvent is SttEvent.Final && finalEvent.text == "Teilweiser Text")
+
+            cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun startListening_commitsLastPartialOnCancel() = runTest {
+        val flow = engine.startListening("de")
+
+        flow.test {
+            advanceUntilIdle()
+            awaitItem() // StateChanged(true)
+
+            val listener = listenerSlot.captured
+
+            // Send partial
+            val partialBundle = mockk<Bundle>()
+            every { partialBundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) } returns arrayListOf("Letzte Worte")
+            listener.onPartialResults(partialBundle)
+            val partialEvent = awaitItem()
+            assertEquals(SttEvent.Partial("Letzte Worte"), partialEvent)
+
+            // Cancel flow
+            cancelAndConsumeRemainingEvents()
         }
     }
 }

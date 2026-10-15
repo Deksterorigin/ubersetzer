@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Switch speaker</string>
     <string name="dialog_recording_status_listening">Recording in progress...</string>
     <string name="dialog_recording_status_paused">Recording paused</string>
+    <string name="dialog_recording_reconnecting">Reconnecting speech recognition...</string>
+    <string name="dialog_recording_paused_reason">Recording paused: %1$s</string>
+    <string name="dialog_permission_mic_title">Microphone access required</string>
+    <string name="dialog_permission_mic_desc">To record a dialogue, the app requires access to the device microphone.</string>
+    <string name="dialog_permission_mic_grant">Grant access</string>
+    <string name="dialog_permission_mic_settings">Open settings</string>
     <string name="dialog_cancel_confirm_title">Cancel recording?</string>
     <string name="dialog_cancel_confirm_message">The current recording will not be saved.</string>
     <string name="dialog_cancel_confirm_discard">Discard</string>

@@ -113,4 +113,73 @@ class DialogRecordingViewModelTest {
         assertTrue(viewModel.uiState.value.isDismissed)
         coVerify { dialogRepository.deleteDialog(42L) }
     }
+
+    @Test
+    fun recoverableError_setsReconnectingState() = runTest(testDispatcher) {
+        val errorFlow = flowOf(SttEvent.Error("Network glitch", isRecoverable = true))
+        every { sttEngine.startListening(any(), any()) } returns errorFlow
+
+        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        assertTrue(viewModel.uiState.value.isReconnecting)
+        assertEquals("Network glitch", viewModel.uiState.value.reconnectingMessage)
+        assertTrue(viewModel.uiState.value.isRecording)
+    }
+
+    @Test
+    fun fatalError_pausesRecordingWithReasonWithoutDataLoss() = runTest(testDispatcher) {
+        val errorFlow = flowOf(SttEvent.Error("Connection exhausted", isRecoverable = false))
+        every { sttEngine.startListening(any(), any()) } returns errorFlow
+
+        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        assertFalse(viewModel.uiState.value.isRecording)
+        assertTrue(viewModel.uiState.value.isPaused)
+        assertEquals("Connection exhausted", viewModel.uiState.value.pauseReason)
+    }
+
+    @Test
+    fun permissionDenied_setsAudioPermissionFalseAndPauses() = runTest(testDispatcher) {
+        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        viewModel.onPermissionDenied()
+        advanceUntilIdle()
+
+        assertFalse(viewModel.uiState.value.hasAudioPermission)
+        assertFalse(viewModel.uiState.value.isRecording)
+        assertTrue(viewModel.uiState.value.isPaused)
+    }
+
+    @Test
+    fun audioFocusLost_pausesRecordingWithReason() = runTest(testDispatcher) {
+        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        viewModel.onAudioFocusLost(isTransient = true)
+        advanceUntilIdle()
+
+        assertFalse(viewModel.uiState.value.isRecording)
+        assertTrue(viewModel.uiState.value.isPaused)
+        assertEquals("Аудиофокус временно потерян", viewModel.uiState.value.pauseReason)
+    }
+
+    @Test
+    fun stopAndSave_commitsPendingPartialText() = runTest(testDispatcher) {
+        val partialFlow = flowOf(SttEvent.Partial("Ich möchte zahlen"))
+        every { sttEngine.startListening(any(), any()) } returns partialFlow
+
+        val viewModel = DialogRecordingViewModel(sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        assertEquals("Ich möchte zahlen", viewModel.uiState.value.currentPartialText)
+
+        viewModel.stopAndSave()
+        advanceUntilIdle()
+
+        coVerify { dialogRepository.insertSegment(match { it.text == "Ich möchte zahlen" }) }
+        assertEquals(42L, viewModel.uiState.value.savedDialogId)
+    }
 }

@@ -52,9 +52,6 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var appDatabase: AppDatabase
 
-    @Inject
-    lateinit var legacyArticleRepairManager: app.deutschlern.data.local.LegacyArticleRepairManager
-
     private val pendingNavRoute = androidx.compose.runtime.mutableStateOf<String?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,9 +63,8 @@ class MainActivity : ComponentActivity() {
             try {
                 appDatabase.openHelper.writableDatabase
                 android.util.Log.i("MainActivity", "AppDatabase initialized successfully")
-                legacyArticleRepairManager.repairIfNeeded()
             } catch (e: Exception) {
-                android.util.Log.e("MainActivity", "AppDatabase initialization or repair error", e)
+                android.util.Log.e("MainActivity", "AppDatabase initialization error", e)
             }
         }
 
@@ -161,8 +157,7 @@ class MainActivity : ComponentActivity() {
             CompositionLocalProvider(
                 LocalConfiguration provides localizedConfig,
                 LocalContext provides localizedContext,
-                LocalLayoutDirection provides layoutDirection,
-                app.deutschlern.ui.theme.LocalColoredArticlesEnabled provides currentSettings.coloredArticlesEnabled
+                LocalLayoutDirection provides layoutDirection
             ) {
                 DeutschLernTheme {
                     Surface(

@@ -305,6 +305,12 @@
     <string name="dialog_speaker_toggle">Sprecher wechseln</string>
     <string name="dialog_recording_status_listening">Aufnahme läuft...</string>
     <string name="dialog_recording_status_paused">Aufnahme pausiert</string>
+    <string name="dialog_recording_reconnecting">Spracherkennung wird wiederhergestellt...</string>
+    <string name="dialog_recording_paused_reason">Aufnahme pausiert: %1$s</string>
+    <string name="dialog_permission_mic_title">Mikrofonzugriff erforderlich</string>
+    <string name="dialog_permission_mic_desc">Für die Dialogaufnahme benötigt die App Zugriff auf das Gerätemikrofon.</string>
+    <string name="dialog_permission_mic_grant">Zugriff gewähren</string>
+    <string name="dialog_permission_mic_settings">Einstellungen öffnen</string>
     <string name="dialog_cancel_confirm_title">Aufnahme abbrechen?</string>
     <string name="dialog_cancel_confirm_message">Die aktuelle Aufnahme wird nicht gespeichert.</string>
     <string name="dialog_cancel_confirm_discard">Verwerfen</string>
