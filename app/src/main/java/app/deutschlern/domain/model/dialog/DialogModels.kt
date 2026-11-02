@@ -21,6 +21,13 @@ data class Dialog(
     val status: String = DialogStatus.COMPLETE
 )
 
+/** Everything removed together with a dialog (cascade), kept for undo. */
+data class DeletedDialog(
+    val dialog: Dialog,
+    val segments: List<DialogSegment>,
+    val tasks: List<DialogTask>
+)
+
 data class DialogSegment(
     val id: Long = 0,
     val dialogId: Long,

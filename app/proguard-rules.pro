@@ -34,9 +34,8 @@
 -keep class androidx.room.** { *; }
 -dontwarn androidx.room.paging.**
 
-# Retrofit, OkHttp, Okio
+# OkHttp, Okio
 -dontwarn okio.**
--dontwarn retrofit2.**
 -dontwarn okhttp3.**
 
 # Coroutines

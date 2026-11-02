@@ -1,5 +1,6 @@
 package app.deutschlern.ui.translate
 
+import app.deutschlern.util.runSuspendCatching
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -297,7 +298,7 @@ class TranslateViewModel @Inject constructor(
 
                         // Word mode auto-saves entry to Room upon successful translation whenever translating from German
                         if (currentState.direction.isFromGerman) {
-                            val saved = runCatching { vocabularyRepository.saveWordTranslation(finalWord) }.getOrNull()
+                            val saved = runSuspendCatching { vocabularyRepository.saveWordTranslation(finalWord) }.getOrNull()
                             currentWordEntryId = saved?.id
                         } else {
                             currentWordEntryId = null
@@ -336,7 +337,7 @@ class TranslateViewModel @Inject constructor(
                     onSuccess = { translationResult ->
                         val translated = translationResult.data
                         // Save long text translation history
-                        runCatching {
+                        runSuspendCatching {
                             vocabularyRepository.saveTextTranslation(
                                 source = currentState.inputText,
                                 result = translated,
@@ -383,7 +384,7 @@ class TranslateViewModel @Inject constructor(
         val selection = _uiState.value.selectedMeaningIndex
         if (wordId != null) {
             viewModelScope.launch {
-                runCatching { vocabularyRepository.updateSelectedMeaning(wordId, selection) }
+                runSuspendCatching { vocabularyRepository.updateSelectedMeaning(wordId, selection) }
             }
         }
     }
@@ -394,7 +395,7 @@ class TranslateViewModel @Inject constructor(
         val meaning = word.meanings.getOrNull(meaningIndex) ?: return
 
         viewModelScope.launch {
-            val saved = runCatching {
+            val saved = runSuspendCatching {
                 vocabularyRepository.saveGermanEquivalent(
                     germanLemmaWithArticle = meaning.translation.trim(),
                     russianTranslation = current.inputText.trim(),

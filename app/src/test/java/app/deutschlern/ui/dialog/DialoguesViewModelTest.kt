@@ -1,22 +1,27 @@
 package app.deutschlern.ui.dialog
 
+import app.deutschlern.domain.model.dialog.DeletedDialog
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.model.dialog.DialogSegment
+import app.deutschlern.domain.model.dialog.DialogTask
+import app.deutschlern.domain.model.dialog.DialogTaskType
 import app.deutschlern.domain.repository.DialogRepository
 import io.mockk.coEvery
 import io.mockk.coVerify
+import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
@@ -27,9 +32,21 @@ class DialoguesViewModelTest {
     private val testDispatcher = StandardTestDispatcher()
     private val dialogRepository = mockk<DialogRepository>(relaxed = true)
 
+    private val testDialog = Dialog(id = 1L, title = "Test Dialog", startedAt = 1000L, durationMs = 5000L, segmentCount = 1)
+    private val deleted = DeletedDialog(
+        dialog = testDialog,
+        segments = listOf(
+            DialogSegment(id = 10L, dialogId = 1L, orderIndex = 0, text = "Hallo", speakerLabel = "A", startOffsetMs = 0L)
+        ),
+        tasks = listOf(
+            DialogTask(id = 20L, dialogId = 1L, type = DialogTaskType.MCQ, payloadJson = "{}", createdAt = 1L)
+        )
+    )
+
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
+        every { dialogRepository.getAllDialogs() } returns flowOf(listOf(testDialog))
     }
 
     @After
@@ -37,61 +54,61 @@ class DialoguesViewModelTest {
         Dispatchers.resetMain()
     }
 
-    @Test
-    fun init_loadsDialogues() = runTest(testDispatcher) {
-        val testDialogs = listOf(
-            Dialog(id = 1L, title = "Test Dialog", startedAt = 1000L, durationMs = 5000L, segmentCount = 2)
-        )
-        coEvery { dialogRepository.getAllDialogs() } returns flowOf(testDialogs)
-
+    private fun TestScope.createSubscribedViewModel(): DialoguesViewModel {
         val viewModel = DialoguesViewModel(dialogRepository)
-        advanceUntilIdle()
-
-        assertEquals(1, viewModel.uiState.value.dialogs.size)
-        assertEquals("Test Dialog", viewModel.uiState.value.dialogs[0].title)
+        backgroundScope.launch { viewModel.uiState.collect {} }
+        return viewModel
     }
 
     @Test
-    fun deleteDialog_callsRepositoryAndSetsBackup() = runTest(testDispatcher) {
-        val testDialog = Dialog(id = 1L, title = "To Delete", startedAt = 1000L, durationMs = 5000L)
-        val testSegments = listOf(
-            DialogSegment(id = 10L, dialogId = 1L, orderIndex = 0, text = "Hallo", startOffsetMs = 0)
-        )
-        coEvery { dialogRepository.getAllDialogs() } returns flowOf(emptyList())
-        coEvery { dialogRepository.getSegmentsSync(1L) } returns testSegments
+    fun init_loadsDialogues() = runTest(testDispatcher) {
+        val viewModel = createSubscribedViewModel()
+        advanceUntilIdle()
 
-        val viewModel = DialoguesViewModel(dialogRepository)
+        val state = viewModel.uiState.value
+        assertEquals(1, state.dialogs.size)
+        assertEquals(false, state.isLoading)
+    }
+
+    @Test
+    fun deleteDialog_exposesDeletedDialogForUndo() = runTest(testDispatcher) {
+        coEvery { dialogRepository.deleteDialog(1L) } returns deleted
+        val viewModel = createSubscribedViewModel()
         advanceUntilIdle()
 
         viewModel.deleteDialog(testDialog)
         advanceUntilIdle()
 
         coVerify { dialogRepository.deleteDialog(1L) }
-        assertNotNull(viewModel.uiState.value.deletedDialog)
-        assertEquals("To Delete", viewModel.uiState.value.deletedDialog?.title)
+        assertEquals(testDialog, viewModel.uiState.value.deletedDialog)
     }
 
     @Test
-    fun undoDelete_restoresDialogAndSegments() = runTest(testDispatcher) {
-        val testDialog = Dialog(id = 1L, title = "Restored Dialog", startedAt = 1000L, durationMs = 5000L)
-        val testSegments = listOf(
-            DialogSegment(id = 10L, dialogId = 1L, orderIndex = 0, text = "Hallo", startOffsetMs = 0)
-        )
-        coEvery { dialogRepository.getAllDialogs() } returns flowOf(emptyList())
-        coEvery { dialogRepository.getSegmentsSync(1L) } returns testSegments
-        coEvery { dialogRepository.saveDialog(any()) } returns 2L
-
-        val viewModel = DialoguesViewModel(dialogRepository)
+    fun undoDelete_restoresFullSnapshotIncludingTasks() = runTest(testDispatcher) {
+        coEvery { dialogRepository.deleteDialog(1L) } returns deleted
+        val viewModel = createSubscribedViewModel()
         advanceUntilIdle()
 
         viewModel.deleteDialog(testDialog)
         advanceUntilIdle()
-
         viewModel.undoDelete()
         advanceUntilIdle()
 
-        coVerify { dialogRepository.saveDialog(match { it.title == "Restored Dialog" }) }
-        coVerify { dialogRepository.insertSegments(match { it.size == 1 && it[0].dialogId == 2L }) }
+        coVerify(exactly = 1) { dialogRepository.restoreDialog(deleted) }
         assertNull(viewModel.uiState.value.deletedDialog)
+    }
+
+    @Test
+    fun clearUndo_dropsSnapshot() = runTest(testDispatcher) {
+        coEvery { dialogRepository.deleteDialog(1L) } returns deleted
+        val viewModel = createSubscribedViewModel()
+        viewModel.deleteDialog(testDialog)
+        advanceUntilIdle()
+
+        viewModel.clearUndo()
+        viewModel.undoDelete()
+        advanceUntilIdle()
+
+        coVerify(exactly = 0) { dialogRepository.restoreDialog(any()) }
     }
 }

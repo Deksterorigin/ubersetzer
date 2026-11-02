@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.data.remote.http.await
+import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
 import app.deutschlern.data.remote.dto.GeminiContentDto
 import app.deutschlern.data.remote.dto.GeminiErrorResponseDto
@@ -185,13 +187,15 @@ class GeminiProvider @Inject constructor(
             .build()
 
         try {
-            okHttpClient.newCall(request).execute().use { response ->
+            okHttpClient.newCall(request).await().use { response ->
                 if (response.isSuccessful) {
                     Result.success("Работает")
                 } else {
                     Result.failure(parseError(response.code, response.body?.string(), cleanModel, response.header("Retry-After")))
                 }
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }
@@ -211,7 +215,7 @@ class GeminiProvider @Inject constructor(
             .build()
 
         try {
-            okHttpClient.newCall(request).execute().use { response ->
+            okHttpClient.newCall(request).await().use { response ->
                 if (!response.isSuccessful) {
                     return@withContext Result.failure(
                         parseError(response.code, response.body?.string(), "models", response.header("Retry-After"))
@@ -226,6 +230,8 @@ class GeminiProvider @Inject constructor(
 
                 Result.success(supported)
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }
@@ -265,7 +271,7 @@ class GeminiProvider @Inject constructor(
         executeGenerateContent(model, apiKey, request)
     }
 
-    private fun executeGenerateContent(
+    private suspend fun executeGenerateContent(
         model: String,
         apiKey: String,
         requestDto: GeminiRequestDto
@@ -281,7 +287,7 @@ class GeminiProvider @Inject constructor(
             .build()
 
         return try {
-            okHttpClient.newCall(request).execute().use { response ->
+            okHttpClient.newCall(request).await().use { response ->
                 val responseBody = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     val retryAfter = response.header("Retry-After")
@@ -312,6 +318,8 @@ class GeminiProvider @Inject constructor(
                     Result.success(content)
                 }
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }

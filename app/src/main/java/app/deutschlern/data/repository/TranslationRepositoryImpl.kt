@@ -1,5 +1,6 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.util.runSuspendCatching
 import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.entity.CacheEntryEntity
 import app.deutschlern.data.local.security.SecureKeyStorage
@@ -87,7 +88,7 @@ class TranslationRepositoryImpl @Inject constructor(
 
         // 1. Check Cache
         if (!bypassCache) {
-            val exactCached = runCatching { cacheDao.get(exactCacheKey) }.getOrNull()
+            val exactCached = runSuspendCatching { cacheDao.get(exactCacheKey) }.getOrNull()
             if (exactCached != null && (now - exactCached.createdAt) <= CACHE_TTL_MILLIS) {
                 val attribution = if (exactCached.providerId.isNotBlank()) {
                     "${exactCached.providerId} · ${exactCached.modelName}"
@@ -98,7 +99,7 @@ class TranslationRepositoryImpl @Inject constructor(
             }
 
             if (settings.useCrossModelCache) {
-                val semanticCached = runCatching { cacheDao.getBySemanticKey(semanticCacheKey) }.getOrNull()
+                val semanticCached = runSuspendCatching { cacheDao.getBySemanticKey(semanticCacheKey) }.getOrNull()
                 if (semanticCached != null && (now - semanticCached.createdAt) <= CACHE_TTL_MILLIS) {
                     val attribution = if (semanticCached.providerId.isNotBlank()) {
                         "${semanticCached.providerId} · ${semanticCached.modelName}"
@@ -159,7 +160,7 @@ class TranslationRepositoryImpl @Inject constructor(
         // 4. Return or Cache
         if (result.isSuccess) {
             val translated = result.getOrThrow()
-            runCatching {
+            runSuspendCatching {
                 cacheDao.insert(
                     CacheEntryEntity(
                         cacheKey = exactCacheKey,
@@ -223,7 +224,7 @@ class TranslationRepositoryImpl @Inject constructor(
 
         // 1. Check Cache
         if (!bypassCache) {
-            val exactCached = runCatching { cacheDao.get(exactCacheKey) }.getOrNull()
+            val exactCached = runSuspendCatching { cacheDao.get(exactCacheKey) }.getOrNull()
             if (exactCached != null && (now - exactCached.createdAt) <= CACHE_TTL_MILLIS) {
                 val cachedWord = runCatching {
                     json.decodeFromString<WordTranslation>(exactCached.responseJson)
@@ -247,7 +248,7 @@ class TranslationRepositoryImpl @Inject constructor(
             }
 
             if (settings.useCrossModelCache) {
-                val semanticCached = runCatching { cacheDao.getBySemanticKey(semanticCacheKey) }.getOrNull()
+                val semanticCached = runSuspendCatching { cacheDao.getBySemanticKey(semanticCacheKey) }.getOrNull()
                 if (semanticCached != null && (now - semanticCached.createdAt) <= CACHE_TTL_MILLIS) {
                     val cachedWord = runCatching {
                         json.decodeFromString<WordTranslation>(semanticCached.responseJson)

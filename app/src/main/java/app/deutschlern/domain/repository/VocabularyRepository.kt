@@ -1,5 +1,6 @@
 package app.deutschlern.domain.repository
 
+import app.deutschlern.domain.model.DeletedWord
 import app.deutschlern.domain.model.Session
 import app.deutschlern.domain.model.SessionWithWords
 import app.deutschlern.domain.model.WordEntry
@@ -32,9 +33,10 @@ interface VocabularyRepository {
 
     suspend fun updateWordStatus(wordId: Long, status: WordStatus)
 
-    suspend fun deleteWord(wordId: Long): WordEntry?
+    suspend fun deleteWord(wordId: Long): DeletedWord?
 
-    suspend fun restoreWord(word: WordEntry)
+    /** Returns false when the word can no longer be restored (e.g. it was added again meanwhile). */
+    suspend fun restoreWord(deleted: DeletedWord): Boolean
 
     suspend fun saveTextTranslation(source: String, result: String, direction: String)
 }

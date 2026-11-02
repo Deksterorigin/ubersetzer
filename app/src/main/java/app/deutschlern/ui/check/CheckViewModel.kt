@@ -1,12 +1,11 @@
 package app.deutschlern.ui.check
 
+import kotlinx.coroutines.CancellationException
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.check.TokenDiffEngine
-import app.deutschlern.domain.model.PartnerLanguage
 import app.deutschlern.domain.model.TranslationDirection
-import app.deutschlern.domain.model.check.CheckCategory
 import app.deutschlern.domain.model.check.CheckEditHunk
 import app.deutschlern.domain.model.check.TextCheckEntry
 import app.deutschlern.domain.model.check.TextCheckResult
@@ -20,7 +19,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import app.deutschlern.domain.ocr.TextRecognitionEngine
 import app.deutschlern.util.TempImageCleaner
@@ -333,6 +331,8 @@ class CheckViewModel @Inject constructor(
                 } else {
                     _uiState.update { it.copy(isOcrLoading = false, ocrErrorMessage = "ocr_error_no_text") }
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.update { it.copy(isOcrLoading = false, ocrErrorMessage = "ocr_error_failed") }
             }

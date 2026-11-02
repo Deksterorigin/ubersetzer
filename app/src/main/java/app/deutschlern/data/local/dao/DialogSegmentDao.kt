@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface DialogSegmentDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insertSegment(segment: DialogSegmentEntity): Long
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insertSegments(segments: List<DialogSegmentEntity>)
 
     @Query("SELECT * FROM dialog_segments WHERE dialogId = :dialogId ORDER BY orderIndex ASC")
@@ -22,6 +22,6 @@ interface DialogSegmentDao {
     @Query("SELECT * FROM dialog_segments WHERE dialogId = :dialogId ORDER BY orderIndex ASC")
     suspend fun getSegmentsSync(dialogId: Long): List<DialogSegmentEntity>
 
-    @Query("DELETE FROM dialog_segments WHERE dialogId = :dialogId")
-    suspend fun deleteSegmentsForDialog(dialogId: Long)
+    @Query("DELETE FROM dialog_segments WHERE id IN (:ids)")
+    suspend fun deleteSegments(ids: List<Long>)
 }

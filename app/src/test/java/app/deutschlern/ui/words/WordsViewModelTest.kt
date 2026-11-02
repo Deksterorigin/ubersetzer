@@ -1,5 +1,6 @@
 package app.deutschlern.ui.words
 
+import app.deutschlern.domain.model.DeletedWord
 import app.deutschlern.domain.model.Meaning
 import app.deutschlern.domain.model.Session
 import app.deutschlern.domain.model.SessionWithWords
@@ -222,7 +223,9 @@ class WordsViewModelTest {
     @Test
     fun onDeleteWord_and_onUndoDelete() = runTest {
         advanceUntilIdle()
-        coEvery { vocabularyRepository.deleteWord(1L) } returns wordNew
+        val deleted = DeletedWord(word = wordNew, review = null, sessionLinks = emptyList())
+        coEvery { vocabularyRepository.deleteWord(1L) } returns deleted
+        coEvery { vocabularyRepository.restoreWord(deleted) } returns true
 
         viewModel.onEvent(WordsUiEvent.OnDeleteWord(wordNew))
         advanceUntilIdle()
@@ -231,13 +234,13 @@ class WordsViewModelTest {
         var state = viewModel.uiState.value
         assertTrue(state.showUndoAction)
         assertEquals("Слово «Apfel» удалено", state.snackbarMessage)
-        assertEquals(wordNew, state.lastDeletedWord)
+        assertEquals(deleted, state.lastDeletedWord)
 
         // Undo
         viewModel.onEvent(WordsUiEvent.OnUndoDelete)
         advanceUntilIdle()
 
-        coVerify(exactly = 1) { vocabularyRepository.restoreWord(wordNew) }
+        coVerify(exactly = 1) { vocabularyRepository.restoreWord(deleted) }
         state = viewModel.uiState.value
         assertFalse(state.showUndoAction)
         assertNull(state.lastDeletedWord)

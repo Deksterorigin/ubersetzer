@@ -1,9 +1,12 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.data.local.ImmediateTransactionRunner
+import app.deutschlern.data.local.dao.ReviewDao
 import app.deutschlern.data.local.dao.SessionDao
 import app.deutschlern.data.local.dao.SessionWordDao
 import app.deutschlern.data.local.dao.TextTranslationDao
 import app.deutschlern.data.local.dao.WordDao
+import app.deutschlern.data.local.entity.ReviewStateEntity
 import app.deutschlern.data.local.entity.SessionEntity
 import app.deutschlern.data.local.entity.SessionWordEntity
 import app.deutschlern.data.local.entity.TextTranslationEntity
@@ -20,6 +23,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -30,6 +34,7 @@ class VocabularyRepositoryImplTest {
     private val wordDao = mockk<WordDao>(relaxed = true)
     private val sessionDao = mockk<SessionDao>(relaxed = true)
     private val sessionWordDao = mockk<SessionWordDao>(relaxed = true)
+    private val reviewDao = mockk<ReviewDao>(relaxed = true)
     private val textTranslationDao = mockk<TextTranslationDao>(relaxed = true)
     private val json = NetworkModule.provideJson()
     private val testDispatcher = UnconfinedTestDispatcher()
@@ -38,7 +43,9 @@ class VocabularyRepositoryImplTest {
         wordDao = wordDao,
         sessionDao = sessionDao,
         sessionWordDao = sessionWordDao,
+        reviewDao = reviewDao,
         textTranslationDao = textTranslationDao,
+        transactionRunner = ImmediateTransactionRunner,
         json = json,
         ioDispatcher = testDispatcher
     )
@@ -427,17 +434,48 @@ class VocabularyRepositoryImplTest {
             partnerLanguage = "ru"
         )
         coEvery { wordDao.getById(88L) } returns existingEntity
+        coEvery { reviewDao.getByWordId(88L) } returns ReviewStateEntity(
+            wordId = 88L, easeFactor = 2.1, intervalDays = 6, repetitions = 3, dueAt = 999L
+        )
+        coEvery { sessionWordDao.getByWordId(88L) } returns listOf(
+            SessionWordEntity(sessionId = 3L, wordId = 88L, translatedAt = 200L),
+            SessionWordEntity(sessionId = 7L, wordId = 88L, translatedAt = 300L)
+        )
 
         val deleted = repository.deleteWord(88L)
         assertNotNull(deleted)
-        assertEquals(88L, deleted?.id)
-        assertEquals("ru", deleted?.partnerLanguage)
+        assertEquals(88L, deleted?.word?.id)
+        assertEquals("ru", deleted?.word?.partnerLanguage)
+        assertEquals(3, deleted?.review?.repetitions)
+        assertEquals(2, deleted?.sessionLinks?.size)
         coVerify(exactly = 1) { wordDao.deleteById(88L) }
 
-        // Restore
-        repository.restoreWord(deleted!!)
-        coVerify(exactly = 1) { wordDao.insertOrReplace(match { it.id == 88L && it.lemma == "Buch" && it.partnerLanguage == "ru" }) }
+        // Restore: word, SM-2 progress and every lesson link come back
+        coEvery { wordDao.getById(88L) } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner(any(), any(), any(), any()) } returns null
+        coEvery { sessionDao.getById(any()) } returns SessionEntity(id = 3L, title = "t", date = 0L, isManual = false)
+
+        assertTrue(repository.restoreWord(deleted!!))
+        coVerify(exactly = 1) { wordDao.insert(match { it.id == 88L && it.lemma == "Buch" && it.partnerLanguage == "ru" }) }
+        coVerify(exactly = 1) { reviewDao.insertOrReplace(match { it.wordId == 88L && it.repetitions == 3 && it.dueAt == 999L }) }
         coVerify(exactly = 1) { sessionWordDao.insert(match { it.sessionId == 3L && it.wordId == 88L }) }
+        coVerify(exactly = 1) { sessionWordDao.insert(match { it.sessionId == 7L && it.wordId == 88L }) }
+    }
+
+    @Test
+    fun restoreWord_whenWordWasAddedAgain_doesNotOverwrite() = runTest {
+        val existing = WordEntryEntity(
+            id = 120L, sessionId = 3L, lemma = "Buch", article = "das", pos = "noun",
+            meaningsJson = "[]", firstSeenAt = 1L, lastSeenAt = 1L
+        )
+        coEvery { wordDao.getById(88L) } returns existing.copy(id = 88L)
+        val deleted = repository.deleteWord(88L)!!
+
+        coEvery { wordDao.getById(88L) } returns null
+        coEvery { wordDao.getByLemmaEquivalentPosAndPartner(any(), any(), any(), any()) } returns existing
+
+        assertFalse(repository.restoreWord(deleted))
+        coVerify(exactly = 0) { wordDao.insert(any()) }
     }
 
     @Test

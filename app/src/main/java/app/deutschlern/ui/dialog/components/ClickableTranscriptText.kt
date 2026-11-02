@@ -6,9 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.sp
 import app.deutschlern.util.TextNormalizer
@@ -35,7 +32,7 @@ fun ClickableTranscriptText(
             modifier = modifier,
             style = defaultStyle,
             onClick = { offset ->
-                annotatedString.getStringAnnotations(tag = "WORD", start = offset, end = offset)
+                annotatedString.getStringAnnotations(tag = TranscriptTokenizer.TAG_WORD, start = offset, end = offset)
                     .firstOrNull()?.let { annotation ->
                         val cleaned = TextNormalizer.normalize(annotation.item).trim()
                         if (cleaned.isNotBlank()) {

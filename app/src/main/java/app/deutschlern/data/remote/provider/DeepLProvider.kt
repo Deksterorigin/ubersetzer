@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.data.remote.http.await
+import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
 import app.deutschlern.data.remote.dto.DeepLTranslateRequestDto
 import app.deutschlern.data.remote.dto.DeepLTranslateResponseDto
@@ -108,7 +110,7 @@ class DeepLProvider @Inject constructor(
             .build()
 
         try {
-            okHttpClient.newCall(request).execute().use { response ->
+            okHttpClient.newCall(request).await().use { response ->
                 val responseBody = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     val retryAfter = response.header("Retry-After")
@@ -123,6 +125,8 @@ class DeepLProvider @Inject constructor(
                     Result.success(translated)
                 }
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }
@@ -156,7 +160,7 @@ class DeepLProvider @Inject constructor(
             .build()
 
         try {
-            okHttpClient.newCall(request).execute().use { response ->
+            okHttpClient.newCall(request).await().use { response ->
                 val responseBody = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     val retryAfter = response.header("Retry-After")
@@ -166,6 +170,8 @@ class DeepLProvider @Inject constructor(
                 val parsed = json.decodeFromString<DeepLUsageResponseDto>(responseBody)
                 Result.success(DeepLUsage(parsed.characterCount, parsed.characterLimit))
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }

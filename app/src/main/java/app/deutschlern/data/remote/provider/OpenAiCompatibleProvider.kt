@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.data.remote.http.await
+import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
 import app.deutschlern.data.remote.dto.OpenAiChatRequestDto
 import app.deutschlern.data.remote.dto.OpenAiChatResponseDto
@@ -412,7 +414,7 @@ $SCHEMA_SPEC
         }
 
         try {
-            okHttpClient.newCall(requestBuilder.build()).execute().use { response ->
+            okHttpClient.newCall(requestBuilder.build()).await().use { response ->
                 val bodyStr = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     val retryAfter = response.header("Retry-After")
@@ -424,12 +426,14 @@ $SCHEMA_SPEC
 
                 Result.success(modelIds)
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }
     }
 
-    private fun executeChatCompletion(
+    private suspend fun executeChatCompletion(
         model: String,
         apiKey: String,
         requestDto: OpenAiChatRequestDto
@@ -448,7 +452,7 @@ $SCHEMA_SPEC
         }
 
         return try {
-            okHttpClient.newCall(requestBuilder.build()).execute().use { response ->
+            okHttpClient.newCall(requestBuilder.build()).await().use { response ->
                 val responseBody = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     val retryAfter = response.header("Retry-After")
@@ -466,6 +470,8 @@ $SCHEMA_SPEC
                     Result.success(content)
                 }
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Result.failure(mapException(e))
         }

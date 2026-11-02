@@ -2,6 +2,7 @@ package app.deutschlern.ui.dialog
 
 import androidx.lifecycle.SavedStateHandle
 import app.deutschlern.domain.model.dialog.Dialog
+import app.deutschlern.domain.model.dialog.DialogSegment
 import app.deutschlern.domain.repository.DialogRepository
 import app.deutschlern.domain.repository.SettingsRepository
 import app.deutschlern.domain.repository.UserSettings
@@ -14,6 +15,7 @@ import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
@@ -156,16 +158,61 @@ class DialogRecordingViewModelTest {
     }
 
     @Test
-    fun audioFocusLost_pausesRecordingWithReason() = runTest(testDispatcher) {
+    fun appBackgrounded_pausesRecordingWithReason() = runTest(testDispatcher) {
         val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
         advanceUntilIdle()
 
-        viewModel.onAudioFocusLost(isTransient = true)
+        viewModel.onAppBackgrounded()
         advanceUntilIdle()
 
         assertFalse(viewModel.uiState.value.isRecording)
         assertTrue(viewModel.uiState.value.isPaused)
-        assertEquals("Аудиофокус временно потерян", viewModel.uiState.value.pauseReason)
+        assertEquals("Приложение свёрнуто", viewModel.uiState.value.pauseReason)
+    }
+
+    @Test
+    fun cancelRecording_ofResumedDialog_keepsOriginalAndDropsOnlyNewSegments() = runTest(testDispatcher) {
+        val original = Dialog(id = 99L, title = "Saved", startedAt = 1000L, durationMs = 5000, segmentCount = 1)
+        val resumeHandle = SavedStateHandle(mapOf("dialogId" to 99L))
+        coEvery { dialogRepository.getDialogById(99L) } returns original
+        coEvery { dialogRepository.getSegmentsSync(99L) } returns listOf(
+            DialogSegment(id = 1L, dialogId = 99L, speakerLabel = "A", text = "Alt", orderIndex = 0, startOffsetMs = 0)
+        )
+        coEvery { dialogRepository.insertSegment(any()) } returns 2L
+        every { sttEngine.startListening(any(), any()) } returns flowOf(SttEvent.Final("Neu"))
+
+        val viewModel = DialogRecordingViewModel(resumeHandle, sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+        viewModel.cancelRecording()
+        advanceUntilIdle()
+
+        coVerify(exactly = 0) { dialogRepository.deleteDialog(any()) }
+        coVerify { dialogRepository.deleteSegments(listOf(2L)) }
+        coVerify { dialogRepository.updateDialog(original) }
+        assertTrue(viewModel.uiState.value.isDismissed)
+    }
+
+    @Test
+    fun finalAfterManuallyCommittedPartial_isNotDuplicated() = runTest(testDispatcher) {
+        val events = MutableSharedFlow<SttEvent>()
+        every { sttEngine.startListening(any(), any()) } returns events
+        var nextId = 1L
+        coEvery { dialogRepository.insertSegment(any()) } answers { nextId++ }
+
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        events.emit(SttEvent.Partial("Guten Tag"))
+        advanceUntilIdle()
+        viewModel.toggleSpeaker()
+        advanceUntilIdle()
+        events.emit(SttEvent.Final("Guten Tag wie geht es"))
+        advanceUntilIdle()
+
+        val segments = viewModel.uiState.value.segments
+        assertEquals(listOf("Guten Tag", "wie geht es"), segments.map { it.text })
+        assertEquals(listOf("A", "B"), segments.map { it.speakerLabel })
+        assertEquals(listOf(0, 1), segments.map { it.orderIndex })
     }
 
     @Test
@@ -190,7 +237,7 @@ class DialogRecordingViewModelTest {
         val resumeHandle = SavedStateHandle(mapOf("dialogId" to 99L))
         coEvery { dialogRepository.getDialogById(99L) } returns Dialog(id = 99L, title = "Resumed Dialog", startedAt = 1000L, durationMs = 5000)
         coEvery { dialogRepository.getSegmentsSync(99L) } returns listOf(
-            app.deutschlern.domain.model.dialog.DialogSegment(id = 1L, dialogId = 99L, speakerLabel = "B", text = "Hallo", orderIndex = 0, startOffsetMs = 0)
+            DialogSegment(id = 1L, dialogId = 99L, speakerLabel = "B", text = "Hallo", orderIndex = 0, startOffsetMs = 0)
         )
 
         val viewModel = DialogRecordingViewModel(resumeHandle, sttEngine, dialogRepository, settingsRepository)

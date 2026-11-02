@@ -21,9 +21,6 @@ interface CacheDao {
     @Query("DELETE FROM translation_cache WHERE createdAt < :threshold")
     suspend fun deleteOlderThan(threshold: Long): Int
 
-    @Query("SELECT COUNT(*) FROM translation_cache")
-    suspend fun count(): Int
-
     @Query("DELETE FROM translation_cache")
     suspend fun clearAll(): Int
 }

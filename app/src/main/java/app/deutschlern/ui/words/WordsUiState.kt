@@ -1,5 +1,6 @@
 package app.deutschlern.ui.words
 
+import app.deutschlern.domain.model.DeletedWord
 import app.deutschlern.domain.model.SessionWithWords
 import app.deutschlern.domain.model.WordEntry
 import app.deutschlern.domain.model.WordTranslation
@@ -35,7 +36,7 @@ data class WordsUiState(
     val sort: WordSort = WordSort.BY_DATE,
     val searchQuery: String = "",
     val selectedWordForDetail: WordEntry? = null,
-    val lastDeletedWord: WordEntry? = null,
+    val lastDeletedWord: DeletedWord? = null,
     val snackbarMessage: String? = null,
     val showUndoAction: Boolean = false,
     val isLoading: Boolean = true,

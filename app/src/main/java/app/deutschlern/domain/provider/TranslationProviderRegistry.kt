@@ -67,12 +67,4 @@ class TranslationProviderRegistry @Inject constructor(
         list.add(mlKitOfflineProvider)
         return list
     }
-
-    fun getWordProviders(): List<TranslationProvider> {
-        return getAllProviders().filter { it.capabilities.supportsWordMode }
-    }
-
-    fun getTextProviders(): List<TranslationProvider> {
-        return getAllProviders().filter { it.capabilities.supportsTextMode }
-    }
 }

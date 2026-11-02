@@ -1,7 +1,6 @@
 package app.deutschlern.ui.dialog
 
 import androidx.lifecycle.SavedStateHandle
-import app.deutschlern.ui.navigation.getNavigationLong
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.model.PartnerLanguage
@@ -17,15 +16,21 @@ import app.deutschlern.domain.repository.VocabularyRepository
 import app.deutschlern.domain.usecase.GenerateDialogSummaryUseCase
 import app.deutschlern.domain.usecase.GenerateDialogTasksUseCase
 import app.deutschlern.domain.usecase.TranslateWordUseCase
+import app.deutschlern.ui.navigation.getNavigationLong
+import app.deutschlern.util.runSuspendCatching
 import dagger.hilt.android.lifecycle.HiltViewModel
+import app.deutschlern.ui.dialog.components.TranscriptTokenizer
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -67,32 +72,23 @@ class DialogDetailViewModel @Inject constructor(
     private val _errorMessage = MutableStateFlow<String?>(null)
     private val _dialogFlow = MutableStateFlow<Dialog?>(null)
 
-    val uiState: StateFlow<DialogDetailUiState> = combine(
+    private val contentFlow = combine(
         _dialogFlow,
         dialogRepository.getSegmentsForDialog(dialogId),
         dialogRepository.getTasksForDialog(dialogId),
-        _selectedTab,
-        _isGeneratingSummary,
-        _isGeneratingTask,
-        _selectedWordCard,
-        _isWordLoading,
-        settingsRepository.settingsFlow
-    ) { args ->
-        val dialog = args[0] as? Dialog
-        val segments = (args[1] as? List<*>)?.filterIsInstance<DialogSegment>() ?: emptyList()
-        if (segments.isNotEmpty()) {
-            viewModelScope.launch(kotlinx.coroutines.Dispatchers.Default) {
-                app.deutschlern.ui.dialog.components.TranscriptTokenizer.prewarm(segments.map { it.text })
-            }
-        }
-        val tasks = (args[2] as? List<*>)?.filterIsInstance<DialogTask>() ?: emptyList()
-        val tab = args[3] as Int
-        val genSummary = args[4] as Boolean
-        val genTask = args[5] as Boolean
-        val wordCard = args[6] as? WordTranslation
-        val wordLoading = args[7] as Boolean
-        val settings = args[8] as app.deutschlern.domain.repository.UserSettings
+        ::Triple
+    )
+    private val generationFlow = combine(_isGeneratingSummary, _isGeneratingTask, _generatingTaskType, ::Triple)
+    private val wordFlow = combine(_selectedWordCard, _isWordLoading, _wordMessage, ::Triple)
+    private val errorAndSettingsFlow = combine(_errorMessage, settingsRepository.settingsFlow, ::Pair)
 
+    val uiState: StateFlow<DialogDetailUiState> = combine(
+        contentFlow,
+        generationFlow,
+        wordFlow,
+        _selectedTab,
+        errorAndSettingsFlow
+    ) { (dialog, segments, tasks), (genSummary, genTask, genTaskType), (wordCard, wordLoading, wordMessage), tab, (error, settings) ->
         DialogDetailUiState(
             dialog = dialog,
             segments = segments,
@@ -100,11 +96,11 @@ class DialogDetailViewModel @Inject constructor(
             selectedTab = tab,
             isGeneratingSummary = genSummary,
             isGeneratingTask = genTask,
-            generatingTaskType = _generatingTaskType.value,
+            generatingTaskType = genTaskType,
             selectedWordCard = wordCard,
             isWordLoading = wordLoading,
-            wordMessage = _wordMessage.value,
-            errorMessage = _errorMessage.value,
+            wordMessage = wordMessage,
+            errorMessage = error,
             partnerLanguage = settings.selectedPartnerLanguage
         )
     }.stateIn(
@@ -115,6 +111,13 @@ class DialogDetailViewModel @Inject constructor(
 
     init {
         loadDialog()
+        // Tokenize transcript off the main thread once per content change, not on every UI state emission
+        dialogRepository.getSegmentsForDialog(dialogId)
+            .map { segments -> segments.map(DialogSegment::text) }
+            .distinctUntilChanged()
+            .onEach(TranscriptTokenizer::prewarm)
+            .flowOn(Dispatchers.Default)
+            .launchIn(viewModelScope)
     }
 
     private fun loadDialog() {
@@ -159,7 +162,7 @@ class DialogDetailViewModel @Inject constructor(
 
     fun saveWordToVocab(word: WordTranslation) {
         viewModelScope.launch {
-            runCatching {
+            runSuspendCatching {
                 vocabularyRepository.saveWordTranslation(word)
                 _wordMessage.value = word.lemma
             }.onFailure { err ->
@@ -178,7 +181,7 @@ class DialogDetailViewModel @Inject constructor(
 
     fun generateSummary() {
         val currentSegments = uiState.value.segments
-        if (currentSegments.isEmpty()) return
+        if (currentSegments.isEmpty() || _isGeneratingSummary.value) return
 
         viewModelScope.launch {
             _isGeneratingSummary.value = true
@@ -203,7 +206,7 @@ class DialogDetailViewModel @Inject constructor(
 
     fun generateTask(type: DialogTaskType) {
         val currentSegments = uiState.value.segments
-        if (currentSegments.isEmpty()) return
+        if (currentSegments.isEmpty() || _isGeneratingTask.value) return
 
         viewModelScope.launch {
             _isGeneratingTask.value = true

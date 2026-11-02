@@ -1,58 +1,59 @@
 package app.deutschlern.di
 
+import app.deutschlern.data.local.RoomTransactionRunner
+import app.deutschlern.data.local.TransactionRunner
+import app.deutschlern.data.ocr.MlKitTextRecognitionEngine
+import app.deutschlern.data.repository.DialogRepositoryImpl
+import app.deutschlern.data.repository.ReviewRepositoryImpl
+import app.deutschlern.data.repository.SettingsRepositoryImpl
+import app.deutschlern.data.repository.TextCheckRepositoryImpl
 import app.deutschlern.data.repository.TranslationRepositoryImpl
 import app.deutschlern.data.repository.VocabularyRepositoryImpl
+import app.deutschlern.domain.ocr.TextRecognitionEngine
+import app.deutschlern.domain.repository.DialogRepository
+import app.deutschlern.domain.repository.ReviewRepository
+import app.deutschlern.domain.repository.SettingsRepository
+import app.deutschlern.domain.repository.TextCheckRepository
 import app.deutschlern.domain.repository.TranslationRepository
 import app.deutschlern.domain.repository.VocabularyRepository
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RepositoryModule {
+abstract class RepositoryModule {
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideTranslationRepository(
-        impl: TranslationRepositoryImpl
-    ): TranslationRepository = impl
+    abstract fun bindTranslationRepository(impl: TranslationRepositoryImpl): TranslationRepository
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideVocabularyRepository(
-        impl: VocabularyRepositoryImpl
-    ): VocabularyRepository = impl
+    abstract fun bindVocabularyRepository(impl: VocabularyRepositoryImpl): VocabularyRepository
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideReviewRepository(
-        impl: app.deutschlern.data.repository.ReviewRepositoryImpl
-    ): app.deutschlern.domain.repository.ReviewRepository = impl
+    abstract fun bindReviewRepository(impl: ReviewRepositoryImpl): ReviewRepository
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideSettingsRepository(
-        impl: app.deutschlern.data.repository.SettingsRepositoryImpl
-    ): app.deutschlern.domain.repository.SettingsRepository = impl
+    abstract fun bindSettingsRepository(impl: SettingsRepositoryImpl): SettingsRepository
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideTextCheckRepository(
-        impl: app.deutschlern.data.repository.TextCheckRepositoryImpl
-    ): app.deutschlern.domain.repository.TextCheckRepository = impl
+    abstract fun bindTextCheckRepository(impl: TextCheckRepositoryImpl): TextCheckRepository
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideTextRecognitionEngine(
-        impl: app.deutschlern.data.ocr.MlKitTextRecognitionEngine
-    ): app.deutschlern.domain.ocr.TextRecognitionEngine = impl
+    abstract fun bindTextRecognitionEngine(impl: MlKitTextRecognitionEngine): TextRecognitionEngine
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideDialogRepository(
-        impl: app.deutschlern.data.repository.DialogRepositoryImpl
-    ): app.deutschlern.domain.repository.DialogRepository = impl
+    abstract fun bindDialogRepository(impl: DialogRepositoryImpl): DialogRepository
+
+    @Binds
+    abstract fun bindTransactionRunner(impl: RoomTransactionRunner): TransactionRunner
 }

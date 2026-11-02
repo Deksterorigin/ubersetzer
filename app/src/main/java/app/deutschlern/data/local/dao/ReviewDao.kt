@@ -20,15 +20,7 @@ interface ReviewDao {
     @Query("SELECT * FROM review_states WHERE wordId = :wordId LIMIT 1")
     suspend fun getByWordId(wordId: Long): ReviewStateEntity?
 
-    @Query("SELECT * FROM review_states WHERE dueAt <= :now ORDER BY dueAt ASC")
-    suspend fun getDueReviewStates(now: Long): List<ReviewStateEntity>
-
     @Query("SELECT * FROM review_states")
     fun getAllReviewStates(): Flow<List<ReviewStateEntity>>
 
-    @Query("SELECT * FROM review_states")
-    suspend fun getAllReviewStatesSync(): List<ReviewStateEntity>
-
-    @Query("DELETE FROM review_states WHERE wordId = :wordId")
-    suspend fun deleteByWordId(wordId: Long)
 }

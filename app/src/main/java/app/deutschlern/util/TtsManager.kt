@@ -12,8 +12,14 @@ class TtsManager @Inject constructor(
     @ApplicationContext private val context: Context
 ) : TextToSpeech.OnInitListener {
 
+    @Volatile
     private var tts: TextToSpeech? = null
+
+    @Volatile
     private var isInitialized: Boolean = false
+
+    // Holds a ViewModel callback inside a singleton: cleared in stop() so a ViewModel is never retained
+    @Volatile
     private var pendingSpeech: Pair<String, () -> Unit>? = null
 
     init {
@@ -90,23 +96,11 @@ class TtsManager @Inject constructor(
     }
 
     fun stop() {
+        pendingSpeech = null
         try {
             tts?.stop()
         } catch (e: Exception) {
             // ignore
-        }
-    }
-
-    fun shutdown() {
-        try {
-            tts?.stop()
-            tts?.shutdown()
-        } catch (e: Exception) {
-            // ignore
-        } finally {
-            tts = null
-            isInitialized = false
-            pendingSpeech = null
         }
     }
 }

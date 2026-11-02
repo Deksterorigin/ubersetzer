@@ -1,7 +1,6 @@
 package app.deutschlern.ui.dialog
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -95,6 +94,9 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -116,20 +118,10 @@ fun DialogRecordingScreen(
         }
     }
 
-    // Audio focus & headphone disconnection receiver
-    DisposableEffect(Unit) {
-        val focusChangeListener = AudioManager.OnAudioFocusChangeListener { focusChange ->
-            when (focusChange) {
-                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT,
-                AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> {
-                    viewModel.onAudioFocusLost(isTransient = true)
-                }
-                AudioManager.AUDIOFOCUS_LOSS -> {
-                    viewModel.onAudioFocusLost(isTransient = false)
-                }
-            }
-        }
-
+    // Pause on headphone disconnection and when the app goes to background
+    // (background apps lose microphone access, so recognition would only produce errors)
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
         val noisyReceiver = object : BroadcastReceiver() {
             override fun onReceive(c: Context?, intent: Intent?) {
                 if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY) {
@@ -137,22 +129,21 @@ fun DialogRecordingScreen(
                 }
             }
         }
+        ContextCompat.registerReceiver(
+            context,
+            noisyReceiver,
+            IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY),
+            ContextCompat.RECEIVER_NOT_EXPORTED
+        )
 
-        try {
-            context.registerReceiver(
-                noisyReceiver,
-                IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY)
-            )
-        } catch (e: Exception) {
-            // ignore
+        val lifecycleObserver = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_STOP) viewModel.onAppBackgrounded()
         }
+        lifecycleOwner.lifecycle.addObserver(lifecycleObserver)
 
         onDispose {
-            try {
-                context.unregisterReceiver(noisyReceiver)
-            } catch (e: Exception) {
-                // ignore
-            }
+            lifecycleOwner.lifecycle.removeObserver(lifecycleObserver)
+            context.unregisterReceiver(noisyReceiver)
         }
     }
 

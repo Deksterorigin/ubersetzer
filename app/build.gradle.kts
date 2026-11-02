@@ -25,23 +25,13 @@ android {
         applicationId = "app.deutschlern"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        val geminiApiKey = localProperties.getProperty("GEMINI_API_KEY")
-            ?: System.getenv("GEMINI_API_KEY")
-            ?: ""
-        val geminiModel = localProperties.getProperty("GEMINI_MODEL")
-            ?: System.getenv("GEMINI_MODEL")
-            ?: "gemini-3.5-flash"
-
-        buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
-        buildConfigField("String", "GEMINI_MODEL", "\"$geminiModel\"")
     }
 
     buildTypes {
@@ -53,10 +43,16 @@ android {
             )
             signingConfig = signingConfigs.getByName("debug")
             buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "true")
+            // Never ship a developer key in an APK that is published on GitHub Releases
+            buildConfigField("String", "GEMINI_API_KEY", "\"\"")
         }
         debug {
             isMinifyEnabled = false
             buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "true")
+            val geminiApiKey = localProperties.getProperty("GEMINI_API_KEY")
+                ?: System.getenv("GEMINI_API_KEY")
+                ?: ""
+            buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
         }
     }
 
@@ -125,8 +121,6 @@ dependencies {
     ksp(libs.room.compiler)
 
     // Network & Serialization
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.kotlinx.serialization)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.kotlinx.serialization.json)

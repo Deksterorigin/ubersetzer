@@ -1,17 +1,16 @@
 package app.deutschlern.domain.usecase
 
+import app.deutschlern.util.runSuspendCatching
 import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.entity.CacheEntryEntity
 import app.deutschlern.data.remote.dto.check.CorrectionResponseDto
 import app.deutschlern.domain.check.OverEditGuard
 import app.deutschlern.domain.check.TokenDiffEngine
 import app.deutschlern.domain.model.PartnerLanguage
-import app.deutschlern.domain.model.check.CheckCategory
 import app.deutschlern.domain.model.check.CheckComment
 import app.deutschlern.domain.model.check.CommentIssue
 import app.deutschlern.domain.model.check.TextCheckResult
 import app.deutschlern.domain.parser.StructuredJsonParser
-import app.deutschlern.domain.provider.ProviderError
 import app.deutschlern.domain.provider.StructuredGenerationProvider
 import app.deutschlern.domain.provider.TranslationProviderRegistry
 import app.deutschlern.domain.repository.SettingsRepository
@@ -86,7 +85,7 @@ class CheckTextUseCase @Inject constructor(
 
             var cachedDto: CorrectionResponseDto? = null
             if (!bypassCache) {
-                val cached = runCatching { cacheDao.get(cacheKey) }.getOrNull()
+                val cached = runSuspendCatching { cacheDao.get(cacheKey) }.getOrNull()
                 if (cached != null) {
                     cachedDto = runCatching {
                         json.decodeFromString<CorrectionResponseDto>(cached.responseJson)
@@ -154,7 +153,7 @@ class CheckTextUseCase @Inject constructor(
                 }
 
                 // Cache successful result
-                runCatching {
+                runSuspendCatching {
                     cacheDao.insert(
                         CacheEntryEntity(
                             cacheKey = cacheKey,

@@ -9,7 +9,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.test.assertHeightIsAtMost
+import androidx.compose.ui.test.getUnclippedBoundsInRoot
 import androidx.compose.ui.test.assertWidthIsAtLeast
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -17,11 +17,13 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.height
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import app.deutschlern.domain.model.Meaning
 import app.deutschlern.domain.model.TranslationDirection
 import app.deutschlern.domain.model.WordTranslation
 import app.deutschlern.ui.components.WordCard
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -85,9 +87,9 @@ class WordCardLayoutTest {
         )
 
         // Note must be full width (>= 200dp in a 320dp container), never squeezed to one char per line (< 50dp)
-        composeTestRule.onNodeWithText(pathologicalNote, substring = true)
+        val note = composeTestRule.onNodeWithText(pathologicalNote, substring = true)
             .assertWidthIsAtLeast(200.dp)
-            .assertHeightIsAtMost(400.dp)
+        assertTrue(note.getUnclippedBoundsInRoot().height <= 400.dp)
     }
 
     @Test

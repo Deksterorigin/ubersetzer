@@ -159,12 +159,4 @@ object WordEntryMapper {
         )
     }
 
-    fun Session.toEntity(): SessionEntity {
-        return SessionEntity(
-            id = id,
-            title = title,
-            date = date,
-            isManual = isManual
-        )
-    }
 }

@@ -13,15 +13,13 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import app.deutschlern.BuildConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
-import java.security.GeneralSecurityException
 import java.security.KeyStore
-import java.security.ProviderException
+import javax.crypto.AEADBadTagException
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
@@ -90,18 +88,6 @@ class SecureKeyStorage @Inject constructor(
         context.secureKeysDataStore.edit { it.remove(prefKey) }
     }
 
-    fun observeHasKey(providerId: String): Flow<Boolean> {
-        val prefKey = stringPreferencesKey("enc_key_$providerId")
-        return context.secureKeysDataStore.data.map { prefs ->
-            val hasStored = !prefs[prefKey].isNullOrBlank()
-            if (!hasStored && BuildConfig.DEBUG && providerId == "gemini") {
-                BuildConfig.GEMINI_API_KEY.isNotBlank()
-            } else {
-                hasStored
-            }
-        }
-    }
-
     fun dismissRecoveryNotice() {
         _isKeyRecoveryNeeded.value = false
     }
@@ -137,22 +123,22 @@ class SecureKeyStorage @Inject constructor(
 
             val decryptedBytes = cipher.doFinal(cipherText)
             String(decryptedBytes, Charsets.UTF_8)
+        } catch (e: AEADBadTagException) {
+            onUnrecoverableKey(providerId)
+        } catch (e: KeyPermanentlyInvalidatedException) {
+            onUnrecoverableKey(providerId)
+        } catch (e: IllegalArgumentException) {
+            onUnrecoverableKey(providerId)
         } catch (e: Exception) {
-            when (e) {
-                is KeyPermanentlyInvalidatedException,
-                is GeneralSecurityException -> {
-                    // Lost or invalidated hardware key: clear corrupted ciphertext and request re-entry
-                    deleteKey(providerId)
-                    _isKeyRecoveryNeeded.value = true
-                    null
-                }
-                else -> {
-                    deleteKey(providerId)
-                    _isKeyRecoveryNeeded.value = true
-                    null
-                }
-            }
+            // Transient Keystore failure (e.g. right after boot): keep the ciphertext and retry later
+            null
         }
+    }
+
+    private suspend fun onUnrecoverableKey(providerId: String): String? {
+        deleteKey(providerId)
+        _isKeyRecoveryNeeded.value = true
+        return null
     }
 
     @Synchronized
@@ -168,14 +154,7 @@ class SecureKeyStorage @Inject constructor(
         return try {
             generateSecretKey(isStrongBox = true)
         } catch (e: Exception) {
-            when (e) {
-                is ProviderException,
-                is GeneralSecurityException -> {
-                    // StrongBox unavailable on this hardware, fall back to standard TEE
-                    generateSecretKey(isStrongBox = false)
-                }
-                else -> generateSecretKey(isStrongBox = false)
-            }
+            generateSecretKey(isStrongBox = false)
         }
     }
 
@@ -197,16 +176,5 @@ class SecureKeyStorage @Inject constructor(
 
         keyGenerator.init(specBuilder.build())
         return keyGenerator.generateKey()
-    }
-
-    /**
-     * Clears all encrypted stored keys and regenerates master key (e.g. for testing or recovery).
-     */
-    suspend fun resetAllKeys() {
-        context.secureKeysDataStore.edit { it.clear() }
-        if (keyStore.containsAlias(MASTER_KEY_ALIAS)) {
-            keyStore.deleteEntry(MASTER_KEY_ALIAS)
-        }
-        _isKeyRecoveryNeeded.value = false
     }
 }

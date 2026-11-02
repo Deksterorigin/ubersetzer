@@ -1,11 +1,13 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.data.local.TransactionRunner
 import app.deutschlern.data.local.dao.DialogDao
 import app.deutschlern.data.local.dao.DialogSegmentDao
 import app.deutschlern.data.local.dao.DialogTaskDao
 import app.deutschlern.data.local.entity.DialogEntity
 import app.deutschlern.data.local.entity.DialogSegmentEntity
 import app.deutschlern.data.local.entity.DialogTaskEntity
+import app.deutschlern.domain.model.dialog.DeletedDialog
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.model.dialog.DialogSegment
 import app.deutschlern.domain.model.dialog.DialogSummary
@@ -23,6 +25,7 @@ class DialogRepositoryImpl @Inject constructor(
     private val dialogDao: DialogDao,
     private val dialogSegmentDao: DialogSegmentDao,
     private val dialogTaskDao: DialogTaskDao,
+    private val transactionRunner: TransactionRunner,
     private val json: Json
 ) : DialogRepository {
 
@@ -47,8 +50,23 @@ class DialogRepositoryImpl @Inject constructor(
         dialogDao.updateDialog(entity)
     }
 
-    override suspend fun deleteDialog(id: Long) {
+    override suspend fun deleteDialog(id: Long): DeletedDialog? = transactionRunner.run {
+        val dialog = dialogDao.getDialogById(id) ?: return@run null
+        val snapshot = DeletedDialog(
+            dialog = entityToDialog(dialog),
+            segments = dialogSegmentDao.getSegmentsSync(id).map(::segmentEntityToDomain),
+            tasks = dialogTaskDao.getTasksForDialogSync(id).map(::taskEntityToDomain)
+        )
         dialogDao.deleteDialogById(id)
+        snapshot
+    }
+
+    // Restores with the original ids so open screens and navigation arguments stay valid
+    override suspend fun restoreDialog(deleted: DeletedDialog) = transactionRunner.run {
+        if (dialogDao.getDialogById(deleted.dialog.id) != null) return@run
+        dialogDao.insertDialog(dialogToEntity(deleted.dialog))
+        dialogSegmentDao.insertSegments(deleted.segments.map(::segmentDomainToEntity))
+        dialogTaskDao.insertTasks(deleted.tasks.map(::taskDomainToEntity))
     }
 
     override suspend fun markInterruptedRecordings() {
@@ -69,8 +87,8 @@ class DialogRepositoryImpl @Inject constructor(
         return dialogSegmentDao.insertSegment(segmentDomainToEntity(segment))
     }
 
-    override suspend fun insertSegments(segments: List<DialogSegment>) {
-        dialogSegmentDao.insertSegments(segments.map { segmentDomainToEntity(it) })
+    override suspend fun deleteSegments(ids: List<Long>) {
+        if (ids.isNotEmpty()) dialogSegmentDao.deleteSegments(ids)
     }
 
     override fun getTasksForDialog(dialogId: Long): Flow<List<DialogTask>> {

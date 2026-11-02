@@ -3,6 +3,7 @@ package app.deutschlern.ui.dialog
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import app.deutschlern.data.stt.SpeechDebugLogger
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.model.dialog.DialogSegment
 import app.deutschlern.domain.model.dialog.DialogStatus
@@ -14,6 +15,7 @@ import app.deutschlern.ui.navigation.getNavigationLong
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -22,9 +24,9 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import app.deutschlern.data.stt.SpeechDebugLogger
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -63,6 +65,18 @@ class DialogRecordingViewModel @Inject constructor(
     private var timerJob: Job? = null
     private var sttJob: Job? = null
 
+    // Segments are committed from the STT collector and from user actions concurrently;
+    // the lock keeps orderIndex unique and the in-memory list in sync with the database.
+    private val commitMutex = Mutex()
+
+    // Dialog as it was before "continue recording"; cancel must restore it, not delete it.
+    private var resumedOriginal: Dialog? = null
+    private val segmentIdsAddedThisSession = mutableListOf<Long>()
+
+    // A partial committed manually (speaker switch, pause) is usually delivered again by the
+    // recognizer as the beginning of the next Final; this prefix is stripped to avoid duplicates.
+    private var committedPartialPrefix: String? = null
+
     init {
         val targetDialogId = savedStateHandle.getNavigationLong("dialogId")
         if (targetDialogId > 0L) {
@@ -76,9 +90,8 @@ class DialogRecordingViewModel @Inject constructor(
         viewModelScope.launch {
             val now = System.currentTimeMillis()
             val timeStr = SimpleDateFormat("dd.MM HH:mm", Locale.getDefault()).format(Date(now))
-            val initialTitle = "Dialog $timeStr"
             val newDialog = Dialog(
-                title = initialTitle,
+                title = "Dialog $timeStr",
                 startedAt = now,
                 durationMs = 0,
                 segmentCount = 0,
@@ -113,9 +126,8 @@ class DialogRecordingViewModel @Inject constructor(
                 startNewRecordingSession()
                 return@launch
             }
+            resumedOriginal = existing
             val existingSegments = dialogRepository.getSegmentsSync(dialogId)
-            val elapsed = existing.durationMs / 1000L
-            val lastSpeaker = existingSegments.lastOrNull()?.speakerLabel ?: "A"
 
             withContext(NonCancellable) {
                 dialogRepository.updateDialog(existing.copy(status = DialogStatus.RECORDING))
@@ -127,8 +139,8 @@ class DialogRecordingViewModel @Inject constructor(
                     isRecording = true,
                     isPaused = false,
                     isReconnecting = false,
-                    elapsedSeconds = elapsed,
-                    activeSpeaker = lastSpeaker,
+                    elapsedSeconds = existing.durationMs / 1000L,
+                    activeSpeaker = existingSegments.lastOrNull()?.speakerLabel ?: "A",
                     segments = existingSegments,
                     currentPartialText = ""
                 )
@@ -140,19 +152,18 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     fun onPermissionGranted() {
-        if (!_uiState.value.hasAudioPermission) {
-            _uiState.update {
-                it.copy(
-                    hasAudioPermission = true,
-                    isRecording = true,
-                    isPaused = false,
-                    pauseReason = null,
-                    errorMessage = null
-                )
-            }
-            startTimer()
-            startListening()
+        if (_uiState.value.hasAudioPermission) return
+        _uiState.update {
+            it.copy(
+                hasAudioPermission = true,
+                isRecording = true,
+                isPaused = false,
+                pauseReason = null,
+                errorMessage = null
+            )
         }
+        startTimer()
+        startListening()
     }
 
     fun onPermissionDenied() {
@@ -164,9 +175,7 @@ class DialogRecordingViewModel @Inject constructor(
                 pauseReason = "Отсутствует доступ к микрофону"
             )
         }
-        sttEngine.stopListening()
-        sttJob?.cancel()
-        timerJob?.cancel()
+        stopEngine()
     }
 
     private fun startTimer() {
@@ -174,58 +183,53 @@ class DialogRecordingViewModel @Inject constructor(
         timerJob = viewModelScope.launch(Dispatchers.Default) {
             while (isActive) {
                 delay(1000L)
-                if (_uiState.value.isRecording && !_uiState.value.isPaused) {
-                    _uiState.update { it.copy(elapsedSeconds = it.elapsedSeconds + 1) }
+                _uiState.update {
+                    if (it.isRecording && !it.isPaused) it.copy(elapsedSeconds = it.elapsedSeconds + 1) else it
                 }
             }
         }
     }
 
+    private fun stopEngine() {
+        sttEngine.stopListening()
+        sttJob?.cancel()
+        timerJob?.cancel()
+    }
+
     private fun startListening() {
         sttJob?.cancel()
         sttJob = viewModelScope.launch {
-            val settings = settingsRepository.settingsFlow.first()
-            val preferOffline = settings.sttPreferOnDevice
+            val preferOffline = settingsRepository.settingsFlow.first().sttPreferOnDevice
 
             sttEngine.startListening(languageCode = "de-DE", preferOffline = preferOffline).collect { event ->
                 when (event) {
                     is SttEvent.Partial -> {
+                        val visible = stripCommittedPrefix(event.text, consume = false)
                         _uiState.update {
-                            it.copy(
-                                currentPartialText = event.text,
-                                isReconnecting = false,
-                                reconnectingMessage = null
-                            )
+                            it.copy(currentPartialText = visible, isReconnecting = false, reconnectingMessage = null)
                         }
                     }
+
                     is SttEvent.Final -> {
-                        val text = event.text.trim()
+                        val text = stripCommittedPrefix(event.text.trim(), consume = true)
                         if (text.isNotBlank()) {
                             commitSegment(text)
                         } else {
                             _uiState.update { it.copy(currentPartialText = "") }
                         }
-                        _uiState.update {
-                            it.copy(isReconnecting = false, reconnectingMessage = null)
-                        }
+                        _uiState.update { it.copy(isReconnecting = false, reconnectingMessage = null) }
                     }
+
                     is SttEvent.SoundLevel -> {
                         _uiState.update { it.copy(soundLevelRms = event.rmsDb) }
                     }
+
                     is SttEvent.Error -> {
                         if (event.isRecoverable) {
-                            _uiState.update {
-                                it.copy(
-                                    isReconnecting = true,
-                                    reconnectingMessage = event.message
-                                )
-                            }
+                            _uiState.update { it.copy(isReconnecting = true, reconnectingMessage = event.message) }
                         } else {
-                            // Non-recoverable error or retries exhausted: pause recording with reason (no silent loss)
-                            val partial = _uiState.value.currentPartialText.trim()
-                            if (partial.isNotBlank()) {
-                                commitSegment(partial)
-                            }
+                            // Retries exhausted: keep what was heard and pause with a visible reason
+                            commitPendingPartial()
                             _uiState.update {
                                 it.copy(
                                     isRecording = false,
@@ -239,74 +243,74 @@ class DialogRecordingViewModel @Inject constructor(
                             timerJob?.cancel()
                         }
                     }
-                    is SttEvent.StateChanged -> {
-                        // Handled by engine lifecycle
-                    }
+
+                    is SttEvent.StateChanged -> Unit
                 }
             }
         }
     }
 
+    private fun stripCommittedPrefix(text: String, consume: Boolean): String {
+        val prefix = committedPartialPrefix ?: return text
+        if (!text.startsWith(prefix)) {
+            committedPartialPrefix = null
+            return text
+        }
+        if (consume) committedPartialPrefix = null
+        return text.removePrefix(prefix).trim()
+    }
+
+    private suspend fun commitPendingPartial() {
+        val partial = _uiState.value.currentPartialText.trim()
+        if (partial.isBlank()) return
+        commitSegment(partial)
+        committedPartialPrefix = (committedPartialPrefix?.let { "$it " } ?: "") + partial
+    }
+
     private suspend fun commitSegment(text: String) {
-        val currentState = _uiState.value
-        val dialogId = currentState.draftDialogId
-        if (dialogId == 0L || text.isBlank()) return
-
+        if (text.isBlank()) return
         withContext(NonCancellable) {
-            val segment = DialogSegment(
-                dialogId = dialogId,
-                orderIndex = currentState.segments.size,
-                text = text,
-                speakerLabel = currentState.activeSpeaker,
-                startOffsetMs = currentState.elapsedSeconds * 1000L
-            )
-            val insertedId = dialogRepository.insertSegment(segment)
-            val savedSegment = segment.copy(id = insertedId)
+            commitMutex.withLock {
+                val state = _uiState.value
+                val dialogId = state.draftDialogId
+                if (dialogId == 0L) return@withLock
 
-            val updatedList = currentState.segments + savedSegment
-            _uiState.update {
-                it.copy(
-                    segments = updatedList,
-                    currentPartialText = ""
+                val segment = DialogSegment(
+                    dialogId = dialogId,
+                    orderIndex = state.segments.size,
+                    text = text,
+                    speakerLabel = state.activeSpeaker,
+                    startOffsetMs = state.elapsedSeconds * 1000L
                 )
-            }
+                val savedSegment = segment.copy(id = dialogRepository.insertSegment(segment))
+                segmentIdsAddedThisSession += savedSegment.id
 
-            val currentDialog = dialogRepository.getDialogById(dialogId)
-            if (currentDialog != null) {
-                dialogRepository.updateDialog(
-                    currentDialog.copy(
-                        segmentCount = updatedList.size,
-                        durationMs = currentState.elapsedSeconds * 1000L
+                _uiState.update { it.copy(segments = it.segments + savedSegment, currentPartialText = "") }
+                val segmentCount = _uiState.value.segments.size
+
+                dialogRepository.getDialogById(dialogId)?.let { current ->
+                    dialogRepository.updateDialog(
+                        current.copy(segmentCount = segmentCount, durationMs = state.elapsedSeconds * 1000L)
                     )
+                }
+
+                SpeechDebugLogger.onSegmentCommitted(
+                    speaker = state.activeSpeaker,
+                    charCount = text.length,
+                    totalSegments = segmentCount
                 )
             }
-
-            SpeechDebugLogger.onSegmentCommitted(
-                speaker = currentState.activeSpeaker,
-                charCount = text.length,
-                totalSegments = updatedList.size
-            )
         }
     }
 
     fun toggleSpeaker() {
-        viewModelScope.launch {
-            val partial = _uiState.value.currentPartialText.trim()
-            if (partial.isNotBlank()) {
-                commitSegment(partial)
-            }
-            val newSpeaker = if (_uiState.value.activeSpeaker == "A") "B" else "A"
-            _uiState.update { it.copy(activeSpeaker = newSpeaker) }
-        }
+        setSpeaker(if (_uiState.value.activeSpeaker == "A") "B" else "A")
     }
 
     fun setSpeaker(speaker: String) {
         if (_uiState.value.activeSpeaker == speaker) return
         viewModelScope.launch {
-            val partial = _uiState.value.currentPartialText.trim()
-            if (partial.isNotBlank()) {
-                commitSegment(partial)
-            }
+            commitPendingPartial()
             _uiState.update { it.copy(activeSpeaker = speaker) }
         }
     }
@@ -314,10 +318,7 @@ class DialogRecordingViewModel @Inject constructor(
     fun pauseRecording(reason: String? = null) {
         if (_uiState.value.isPaused) return
         viewModelScope.launch {
-            val partial = _uiState.value.currentPartialText.trim()
-            if (partial.isNotBlank()) {
-                commitSegment(partial)
-            }
+            commitPendingPartial()
             _uiState.update {
                 it.copy(
                     isRecording = false,
@@ -327,14 +328,13 @@ class DialogRecordingViewModel @Inject constructor(
                     reconnectingMessage = null
                 )
             }
-            sttEngine.stopListening()
-            sttJob?.cancel()
-            timerJob?.cancel()
+            stopEngine()
         }
     }
 
     fun resumeRecording() {
         if (_uiState.value.isRecording && !_uiState.value.isPaused) return
+        committedPartialPrefix = null
         _uiState.update {
             it.copy(
                 isRecording = true,
@@ -349,16 +349,16 @@ class DialogRecordingViewModel @Inject constructor(
         startListening()
     }
 
-    fun onAudioFocusLost(isTransient: Boolean) {
-        if (_uiState.value.isRecording && !_uiState.value.isPaused) {
-            val reason = if (isTransient) "Аудиофокус временно потерян" else "Другое приложение использует микрофон"
-            pauseRecording(reason)
-        }
-    }
-
     fun onAudioBecomingNoisy() {
         if (_uiState.value.isRecording && !_uiState.value.isPaused) {
             pauseRecording("Наушники отключены")
+        }
+    }
+
+    /** Background apps lose microphone access on Android 11+, so recording pauses explicitly. */
+    fun onAppBackgrounded() {
+        if (_uiState.value.isRecording && !_uiState.value.isPaused) {
+            pauseRecording("Приложение свёрнуто")
         }
     }
 
@@ -366,21 +366,14 @@ class DialogRecordingViewModel @Inject constructor(
         if (_uiState.value.isSaving || _uiState.value.savedDialogId != null) return
         viewModelScope.launch {
             _uiState.update { it.copy(isSaving = true, isRecording = false, isPaused = true) }
-            sttEngine.stopListening()
-            sttJob?.cancel()
-            timerJob?.cancel()
+            stopEngine()
 
             withContext(NonCancellable) {
-                val currentState = _uiState.value
-                val partial = currentState.currentPartialText.trim()
-                if (partial.isNotBlank()) {
-                    commitSegment(partial)
-                }
+                commitPendingPartial()
 
                 val finalState = _uiState.value
                 val dialogId = finalState.draftDialogId
-                val existing = dialogRepository.getDialogById(dialogId)
-                if (existing != null) {
+                dialogRepository.getDialogById(dialogId)?.let { existing ->
                     dialogRepository.updateDialog(
                         existing.copy(
                             durationMs = finalState.elapsedSeconds * 1000L,
@@ -403,9 +396,17 @@ class DialogRecordingViewModel @Inject constructor(
             timerJob?.cancel()
 
             withContext(NonCancellable) {
-                val dialogId = _uiState.value.draftDialogId
-                if (dialogId > 0L) {
-                    dialogRepository.deleteDialog(dialogId)
+                commitMutex.withLock {
+                    val dialogId = _uiState.value.draftDialogId
+                    val original = resumedOriginal
+                    when {
+                        original != null -> {
+                            // Discard only what was recorded now; the earlier dialog stays intact
+                            dialogRepository.deleteSegments(segmentIdsAddedThisSession.toList())
+                            dialogRepository.updateDialog(original)
+                        }
+                        dialogId > 0L -> dialogRepository.deleteDialog(dialogId)
+                    }
                 }
                 _uiState.update { it.copy(isDismissed = true) }
             }

@@ -5,8 +5,13 @@ import androidx.room.Room
 import app.deutschlern.data.local.AppDatabase
 import app.deutschlern.data.local.DatabaseMigrations
 import app.deutschlern.data.local.dao.CacheDao
+import app.deutschlern.data.local.dao.DialogDao
+import app.deutschlern.data.local.dao.DialogSegmentDao
+import app.deutschlern.data.local.dao.DialogTaskDao
+import app.deutschlern.data.local.dao.ReviewDao
 import app.deutschlern.data.local.dao.SessionDao
 import app.deutschlern.data.local.dao.SessionWordDao
+import app.deutschlern.data.local.dao.TextCheckDao
 import app.deutschlern.data.local.dao.TextTranslationDao
 import app.deutschlern.data.local.dao.WordDao
 import dagger.Module
@@ -80,27 +85,27 @@ object DatabaseModule {
     }
 
     @Provides
-    fun provideReviewDao(database: AppDatabase): app.deutschlern.data.local.dao.ReviewDao {
+    fun provideReviewDao(database: AppDatabase): ReviewDao {
         return database.reviewDao()
     }
 
     @Provides
-    fun provideTextCheckDao(database: AppDatabase): app.deutschlern.data.local.dao.TextCheckDao {
+    fun provideTextCheckDao(database: AppDatabase): TextCheckDao {
         return database.textCheckDao()
     }
 
     @Provides
-    fun provideDialogDao(database: AppDatabase): app.deutschlern.data.local.dao.DialogDao {
+    fun provideDialogDao(database: AppDatabase): DialogDao {
         return database.dialogDao()
     }
 
     @Provides
-    fun provideDialogSegmentDao(database: AppDatabase): app.deutschlern.data.local.dao.DialogSegmentDao {
+    fun provideDialogSegmentDao(database: AppDatabase): DialogSegmentDao {
         return database.dialogSegmentDao()
     }
 
     @Provides
-    fun provideDialogTaskDao(database: AppDatabase): app.deutschlern.data.local.dao.DialogTaskDao {
+    fun provideDialogTaskDao(database: AppDatabase): DialogTaskDao {
         return database.dialogTaskDao()
     }
 }

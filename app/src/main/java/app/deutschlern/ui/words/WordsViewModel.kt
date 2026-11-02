@@ -208,9 +208,9 @@ class WordsViewModel @Inject constructor(
             _uiState.update { current ->
                 current.copy(
                     selectedWordForDetail = null,
-                    lastDeletedWord = deleted ?: word,
+                    lastDeletedWord = deleted,
                     snackbarMessage = "Слово «${word.lemma}» удалено",
-                    showUndoAction = true
+                    showUndoAction = deleted != null
                 )
             }
         }
@@ -219,11 +219,11 @@ class WordsViewModel @Inject constructor(
     private fun handleUndoDelete() {
         val wordToRestore = _uiState.value.lastDeletedWord ?: return
         viewModelScope.launch {
-            vocabularyRepository.restoreWord(wordToRestore)
+            val restored = vocabularyRepository.restoreWord(wordToRestore)
             _uiState.update {
                 it.copy(
                     lastDeletedWord = null,
-                    snackbarMessage = null,
+                    snackbarMessage = if (restored) null else "Слово «${wordToRestore.word.lemma}» уже добавлено заново",
                     showUndoAction = false
                 )
             }

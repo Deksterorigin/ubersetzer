@@ -2,27 +2,22 @@ package app.deutschlern.ui.dialog.components
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.buildAnnotatedString
-import java.util.Collections
-import java.util.LinkedHashMap
 
 /**
- * Thread-safe cached tokenizer for dialogue transcript segments.
- * Pre-compiles the regex pattern and maintains a memory-bounded LRU cache
- * to avoid expensive tokenization on the Android main/UI thread during LazyColumn scrolling.
+ * Tokenizes transcript segments into clickable words and caches the result, so that
+ * scrolling long dialogues does not re-run the regex on the main thread.
+ *
+ * The cache is bounded by the total number of cached characters (not entries): a few very
+ * long segments must not be able to hold megabytes in this process-wide object.
  */
 object TranscriptTokenizer {
 
     private val WORD_REGEX = Regex("""[\p{L}\p{M}\-]+|[^\p{L}\p{M}\-]+""")
 
-    private const val MAX_CACHE_SIZE = 5000
+    private const val MAX_CACHED_CHARS = 1_000_000
 
-    private val cache: MutableMap<String, AnnotatedString> = Collections.synchronizedMap(
-        object : LinkedHashMap<String, AnnotatedString>(128, 0.75f, true) {
-            override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, AnnotatedString>?): Boolean {
-                return size > MAX_CACHE_SIZE
-            }
-        }
-    )
+    private val cache = LinkedHashMap<String, AnnotatedString>(128, 0.75f, true)
+    private var cachedChars = 0
 
     const val TAG_WORD = "WORD"
 
@@ -35,7 +30,7 @@ object TranscriptTokenizer {
             return AnnotatedString("")
         }
 
-        cache[text]?.let { return it }
+        synchronized(cache) { cache[text] }?.let { return it }
 
         val matches = WORD_REGEX.findAll(text).toList()
         val annotated = buildAnnotatedString {
@@ -59,7 +54,16 @@ object TranscriptTokenizer {
             }
         }
 
-        cache[text] = annotated
+        synchronized(cache) {
+            if (cache.put(text, annotated) == null) cachedChars += text.length
+            val iterator = cache.entries.iterator()
+            while (cachedChars > MAX_CACHED_CHARS && iterator.hasNext()) {
+                val eldest = iterator.next()
+                if (eldest.key === text) continue
+                cachedChars -= eldest.key.length
+                iterator.remove()
+            }
+        }
         return annotated
     }
 
@@ -68,7 +72,7 @@ object TranscriptTokenizer {
      */
     fun prewarm(texts: Iterable<String>) {
         for (text in texts) {
-            if (text.isNotEmpty() && !cache.containsKey(text)) {
+            if (text.isNotEmpty() && synchronized(cache) { !cache.containsKey(text) }) {
                 tokenize(text)
             }
         }
@@ -78,11 +82,14 @@ object TranscriptTokenizer {
      * Clears cache (useful in tests or when memory trim is received).
      */
     fun clearCache() {
-        cache.clear()
+        synchronized(cache) {
+            cache.clear()
+            cachedChars = 0
+        }
     }
 
     /**
      * Returns current cache item count.
      */
-    fun cacheSize(): Int = cache.size
+    fun cacheSize(): Int = synchronized(cache) { cache.size }
 }

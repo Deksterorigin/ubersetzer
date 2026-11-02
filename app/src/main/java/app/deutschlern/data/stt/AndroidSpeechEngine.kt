@@ -18,8 +18,6 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.channels.awaitClose
@@ -64,45 +62,54 @@ open class AndroidSpeechEngine(
     private val engineScope = CoroutineScope(mainDispatcher + SupervisorJob())
     private val supportCache = ConcurrentHashMap<String, SttSupportStatus>()
 
-    @Volatile
-    private var activeRecognizer: SpeechRecognizer? = null
+    /**
+     * State of one startListening() collection. Kept per session so that a late cleanup of a
+     * previous session can never stop or destroy the recognizer of the current one.
+     */
+    private class ListeningSession(val channel: ProducerScope<SttEvent>) {
+        @Volatile
+        var active: Boolean = true
+        var recognizer: SpeechRecognizer? = null
+
+        fun destroyRecognizer() {
+            val current = recognizer ?: return
+            recognizer = null
+            try {
+                current.cancel()
+                current.destroy()
+            } catch (_: Exception) {
+            }
+        }
+    }
 
     @Volatile
-    private var isListeningActive: Boolean = false
+    private var currentSession: ListeningSession? = null
 
-    @Volatile
-    private var activeChannel: ProducerScope<SttEvent>? = null
+    private fun createRecognizer(preferOffline: Boolean): SpeechRecognizer? = try {
+        recognizerFactory(context, preferOffline)
+    } catch (_: Exception) {
+        null
+    }
 
     override fun startListening(languageCode: String, preferOffline: Boolean): Flow<SttEvent> = callbackFlow {
-        activeChannel = this
-        isListeningActive = true
+        val session = ListeningSession(this)
         var lastPartialText: String? = null
 
         withContext(mainDispatcher) {
-            // Cancel any previously running recognizer
-            activeRecognizer?.let { prev ->
-                try {
-                    prev.cancel()
-                    prev.destroy()
-                } catch (e: Exception) {
-                    // ignore
-                }
+            currentSession?.let { previous ->
+                previous.active = false
+                previous.destroyRecognizer()
             }
+            currentSession = session
 
-            val recognizer = try {
-                recognizerFactory(context, preferOffline)
-            } catch (e: Exception) {
-                null
-            }
-
+            val recognizer = createRecognizer(preferOffline)
             if (recognizer == null) {
                 trySend(SttEvent.Error("Сервис распознавания речи недоступен на этом устройстве", isRecoverable = false))
                 trySend(SttEvent.StateChanged(false))
                 close()
                 return@withContext
             }
-
-            activeRecognizer = recognizer
+            session.recognizer = recognizer
 
             val resolvedLanguage = resolveLanguageCode(languageCode, onDevice = preferOffline)
             SpeechDebugLogger.resetStats()
@@ -132,6 +139,21 @@ open class AndroidSpeechEngine(
             var firstTransientErrorTimestamp = 0L
 
             lateinit var listener: RecognitionListener
+
+            fun recreateRecognizer() {
+                session.destroyRecognizer()
+                session.recognizer = createRecognizer(preferOffline)?.also { it.setRecognitionListener(listener) }
+            }
+
+            fun restartListening(failureTag: String) {
+                try {
+                    SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
+                    session.recognizer?.startListening(recognitionIntent)
+                } catch (e: Exception) {
+                    SpeechDebugLogger.onError(-1, "$failureTag: ${e.message}", true, false)
+                }
+            }
+
             listener = object : RecognitionListener {
                 override fun onReadyForSpeech(params: Bundle?) {
                     SpeechDebugLogger.onCallback("onReadyForSpeech")
@@ -166,105 +188,69 @@ open class AndroidSpeechEngine(
                     }
 
                     val (errorMessage, _) = mapErrorCode(errorCode)
-                    val benign = isBenignError(errorCode)
-                    val fatal = isFatalError(errorCode)
 
-                    if (benign) {
-                        consecutiveBenignErrors++
-                        SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = isListeningActive)
-                        if (isListeningActive) {
+                    when {
+                        isBenignError(errorCode) -> {
+                            consecutiveBenignErrors++
+                            SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = session.active)
+                            if (!session.active) return
                             launch {
                                 delay(50L)
-                                if (isListeningActive) {
-                                    // If multiple consecutive benign timeouts occurred, the internal binder may be wedged: recreate recognizer
-                                    if (consecutiveBenignErrors >= 3) {
-                                        try {
-                                            activeRecognizer?.cancel()
-                                            activeRecognizer?.destroy()
-                                        } catch (e: Exception) {
-                                            // ignore
-                                        }
-                                        activeRecognizer = try {
-                                            recognizerFactory(context, preferOffline)?.also {
-                                                it.setRecognitionListener(listener)
-                                            }
-                                        } catch (e: Exception) {
-                                            null
-                                        }
-                                        consecutiveBenignErrors = 0
-                                    }
-                                    try {
-                                        SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
-                                        activeRecognizer?.startListening(recognitionIntent)
-                                    } catch (e: Exception) {
-                                        SpeechDebugLogger.onError(-1, "benign_restart_failed: ${e.message}", true, false)
-                                        try {
-                                            activeRecognizer?.cancel()
-                                            activeRecognizer?.destroy()
-                                        } catch (_: Exception) {}
-                                        activeRecognizer = recognizerFactory(context, preferOffline)?.also {
-                                            it.setRecognitionListener(listener)
-                                        }
-                                    }
+                                if (!session.active) return@launch
+                                // Several benign timeouts in a row usually mean a wedged binder: recreate the recognizer
+                                if (consecutiveBenignErrors >= 3) {
+                                    recreateRecognizer()
+                                    consecutiveBenignErrors = 0
+                                }
+                                try {
+                                    SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
+                                    session.recognizer?.startListening(recognitionIntent)
+                                } catch (e: Exception) {
+                                    SpeechDebugLogger.onError(-1, "benign_restart_failed: ${e.message}", true, false)
+                                    recreateRecognizer()
                                 }
                             }
                         }
-                    } else if (fatal) {
-                        isListeningActive = false
-                        SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = false, willRestart = false)
-                        SpeechDebugLogger.onEndOfSession("fatal_error_$errorCode")
-                        trySend(SttEvent.Error(errorMessage, isRecoverable = false, errorCode = errorCode))
-                        trySend(SttEvent.StateChanged(false))
-                    } else {
-                        val now = System.currentTimeMillis()
-                        if (firstTransientErrorTimestamp == 0L) {
-                            firstTransientErrorTimestamp = now
-                        }
-                        val elapsedRetryMs = now - firstTransientErrorTimestamp
-                        consecutiveTransientErrors++
 
-                        val isExhausted = consecutiveTransientErrors > 8 || elapsedRetryMs > 25000L
-
-                        if (isExhausted) {
-                            isListeningActive = false
+                        isFatalError(errorCode) -> {
+                            session.active = false
                             SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = false, willRestart = false)
-                            SpeechDebugLogger.onEndOfSession("transient_retry_exhausted_$errorCode")
+                            SpeechDebugLogger.onEndOfSession("fatal_error_$errorCode")
                             trySend(SttEvent.Error(errorMessage, isRecoverable = false, errorCode = errorCode))
                             trySend(SttEvent.StateChanged(false))
-                        } else {
-                            SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = isListeningActive)
+                        }
+
+                        else -> {
+                            val now = System.currentTimeMillis()
+                            if (firstTransientErrorTimestamp == 0L) {
+                                firstTransientErrorTimestamp = now
+                            }
+                            consecutiveTransientErrors++
+                            val isExhausted = consecutiveTransientErrors > 8 || now - firstTransientErrorTimestamp > 25000L
+
+                            if (isExhausted) {
+                                session.active = false
+                                SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = false, willRestart = false)
+                                SpeechDebugLogger.onEndOfSession("transient_retry_exhausted_$errorCode")
+                                trySend(SttEvent.Error(errorMessage, isRecoverable = false, errorCode = errorCode))
+                                trySend(SttEvent.StateChanged(false))
+                                return
+                            }
+
+                            SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = session.active)
                             trySend(SttEvent.Error(errorMessage, isRecoverable = true, errorCode = errorCode))
 
                             val backoffDelayMs = minOf(300L * (1L shl (consecutiveTransientErrors - 1)), 4000L)
                             launch {
                                 delay(backoffDelayMs)
-                                if (isListeningActive) {
-                                    if (errorCode == SpeechRecognizer.ERROR_CLIENT ||
-                                        errorCode == SpeechRecognizer.ERROR_RECOGNIZER_BUSY ||
-                                        consecutiveTransientErrors >= 2
-                                    ) {
-                                        try {
-                                            activeRecognizer?.cancel()
-                                            activeRecognizer?.destroy()
-                                        } catch (e: Exception) {
-                                            // ignore
-                                        }
-                                        activeRecognizer = try {
-                                            recognizerFactory(context, preferOffline)?.also {
-                                                it.setRecognitionListener(listener)
-                                            }
-                                        } catch (e: Exception) {
-                                            null
-                                        }
-                                    }
-
-                                    try {
-                                        SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
-                                        activeRecognizer?.startListening(recognitionIntent)
-                                    } catch (e: Exception) {
-                                        SpeechDebugLogger.onError(-1, "transient_restart_failed: ${e.message}", true, false)
-                                    }
+                                if (!session.active) return@launch
+                                if (errorCode == SpeechRecognizer.ERROR_CLIENT ||
+                                    errorCode == SpeechRecognizer.ERROR_RECOGNIZER_BUSY ||
+                                    consecutiveTransientErrors >= 2
+                                ) {
+                                    recreateRecognizer()
                                 }
+                                restartListening("transient_restart_failed")
                             }
                         }
                     }
@@ -273,7 +259,7 @@ open class AndroidSpeechEngine(
                 override fun onResults(results: Bundle?) {
                     val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) ?: arrayListOf()
                     val finalText = matches.firstOrNull()?.trim().orEmpty()
-                    val alternatives = if (matches.size > 1) matches.drop(1) else emptyList()
+                    val alternatives = matches.drop(1)
 
                     SpeechDebugLogger.onCallback("onResults", "matches=${matches.size}, len=${finalText.length}")
                     SpeechDebugLogger.onPartialToFinal(lastPartialText?.length ?: 0, finalText.length)
@@ -285,24 +271,13 @@ open class AndroidSpeechEngine(
                     if (finalText.isNotEmpty()) {
                         trySend(SttEvent.Final(finalText, alternatives))
                     } else {
-                        lastPartialText?.let { partial ->
-                            if (partial.isNotBlank()) {
-                                trySend(SttEvent.Final(partial))
-                            }
-                        }
+                        lastPartialText?.takeIf { it.isNotBlank() }?.let { trySend(SttEvent.Final(it)) }
                     }
                     lastPartialText = null
 
-                    if (isListeningActive && !hasReceivedSegments) {
-                        launch {
-                            try {
-                                SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
-                                activeRecognizer?.startListening(recognitionIntent)
-                            } catch (e: Exception) {
-                                SpeechDebugLogger.onError(-1, "fallback_restart_failed: ${e.message}", true, false)
-                            }
-                        }
-                    } else if (!isListeningActive) {
+                    if (session.active && !hasReceivedSegments) {
+                        launch { restartListening("fallback_restart_failed") }
+                    } else if (!session.active) {
                         SpeechDebugLogger.onEndOfSession("results_and_not_active")
                         trySend(SttEvent.StateChanged(false))
                     }
@@ -310,8 +285,7 @@ open class AndroidSpeechEngine(
 
                 override fun onPartialResults(partialResults: Bundle?) {
                     consecutiveBenignErrors = 0
-                    val matches = partialResults?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-                    val text = matches?.firstOrNull()?.trim()
+                    val text = partialResults?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)?.firstOrNull()?.trim()
                     if (!text.isNullOrEmpty()) {
                         lastPartialText = text
                         SpeechDebugLogger.onCallback("onPartialResults", "len=${text.length}")
@@ -327,35 +301,24 @@ open class AndroidSpeechEngine(
 
                     val matches = segmentResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) ?: arrayListOf()
                     val text = matches.firstOrNull()?.trim().orEmpty()
-                    val alternatives = if (matches.size > 1) matches.drop(1) else emptyList()
                     SpeechDebugLogger.onCallback("onSegmentResults", "len=${text.length}")
                     if (text.isNotEmpty()) {
-                        trySend(SttEvent.Final(text, alternatives))
+                        trySend(SttEvent.Final(text, matches.drop(1)))
                     }
                     lastPartialText = null
                 }
 
                 override fun onEndOfSegmentedSession() {
                     SpeechDebugLogger.onEndOfSession("onEndOfSegmentedSession")
-                    if (isListeningActive) {
-                        val partial = lastPartialText
-                        if (!partial.isNullOrBlank()) {
-                            trySend(SttEvent.Final(partial))
-                            lastPartialText = null
-                        }
-                        launch {
-                            delay(100L)
-                            if (isListeningActive) {
-                                try {
-                                    SpeechDebugLogger.onSessionStart(preferOffline, resolvedLanguage)
-                                    activeRecognizer?.startListening(recognitionIntent)
-                                } catch (e: Exception) {
-                                    SpeechDebugLogger.onError(-1, "segmented_restart_failed: ${e.message}", true, false)
-                                }
-                            }
-                        }
-                    } else {
+                    if (!session.active) {
                         trySend(SttEvent.StateChanged(false))
+                        return
+                    }
+                    lastPartialText?.takeIf { it.isNotBlank() }?.let { trySend(SttEvent.Final(it)) }
+                    lastPartialText = null
+                    launch {
+                        delay(100L)
+                        if (session.active) restartListening("segmented_restart_failed")
                     }
                 }
 
@@ -376,49 +339,37 @@ open class AndroidSpeechEngine(
         }
 
         awaitClose {
-            isListeningActive = false
-            val partial = lastPartialText
-            if (!partial.isNullOrBlank()) {
-                trySend(SttEvent.Final(partial))
-                lastPartialText = null
+            session.active = false
+            if (currentSession === session) {
+                currentSession = null
             }
-            activeChannel = null
             SpeechDebugLogger.onEndOfSession("awaitClose")
-            engineScope.launch {
-                try {
-                    activeRecognizer?.cancel()
-                    activeRecognizer?.destroy()
-                } catch (e: Exception) {
-                    // ignore
-                } finally {
-                    activeRecognizer = null
-                }
-            }
+            engineScope.launch { session.destroyRecognizer() }
         }
     }
 
     override fun stopListening() {
-        isListeningActive = false
+        val session = currentSession ?: return
+        session.active = false
         SpeechDebugLogger.onEndOfSession("user_stop")
         engineScope.launch {
             try {
-                activeRecognizer?.stopListening()
-            } catch (e: Exception) {
-                // ignore
+                session.recognizer?.stopListening()
+            } catch (_: Exception) {
             }
         }
     }
 
     override fun cancel() {
-        isListeningActive = false
+        val session = currentSession ?: return
+        session.active = false
         SpeechDebugLogger.onEndOfSession("user_cancel")
         engineScope.launch {
             try {
-                activeRecognizer?.cancel()
-            } catch (e: Exception) {
-                // ignore
+                session.recognizer?.cancel()
+            } catch (_: Exception) {
             }
-            activeChannel?.trySend(SttEvent.StateChanged(false))
+            session.channel.trySend(SttEvent.StateChanged(false))
         }
     }
 
@@ -513,6 +464,7 @@ open class AndroidSpeechEngine(
             }
         } finally {
             executor.shutdown()
+            recognizer.destroy()
         }
 
         supportCache[cacheKey] = resultStatus
@@ -526,10 +478,8 @@ open class AndroidSpeechEngine(
                 putExtra(RecognizerIntent.EXTRA_LANGUAGE, resolved)
             }
             try {
-                val recognizer = recognizerFactory(context, true)
-                recognizer?.triggerModelDownload(intent)
-            } catch (e: Exception) {
-                // ignore
+                createRecognizer(preferOffline = true)?.triggerModelDownload(intent)
+            } catch (_: Exception) {
             }
         }
     }

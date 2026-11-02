@@ -15,6 +15,9 @@ interface DialogTaskDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(task: DialogTaskEntity): Long
 
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun insertTasks(tasks: List<DialogTaskEntity>)
+
     @Update
     suspend fun updateTask(task: DialogTaskEntity)
 
@@ -24,9 +27,9 @@ interface DialogTaskDao {
     @Query("SELECT * FROM dialog_tasks WHERE dialogId = :dialogId ORDER BY createdAt ASC")
     fun getTasksForDialog(dialogId: Long): Flow<List<DialogTaskEntity>>
 
+    @Query("SELECT * FROM dialog_tasks WHERE dialogId = :dialogId ORDER BY createdAt ASC")
+    suspend fun getTasksForDialogSync(dialogId: Long): List<DialogTaskEntity>
+
     @Query("SELECT * FROM dialog_tasks WHERE id = :id")
     suspend fun getTaskById(id: Long): DialogTaskEntity?
-
-    @Query("DELETE FROM dialog_tasks WHERE dialogId = :dialogId")
-    suspend fun deleteTasksForDialog(dialogId: Long)
 }
