@@ -44,6 +44,15 @@ interface WordDao {
     @Query("UPDATE words SET status = :status WHERE id = :id")
     suspend fun updateStatus(id: Long, status: String)
 
+    @Query("UPDATE words SET isDifficult = :isDifficult WHERE id = :id")
+    suspend fun updateDifficult(id: Long, isDifficult: Boolean)
+
+    @Query("UPDATE words SET topicsJson = :topicsJson WHERE id = :id")
+    suspend fun updateTopics(id: Long, topicsJson: String)
+
+    @Query("SELECT * FROM words WHERE topicsJson IS NULL ORDER BY lastSeenAt DESC LIMIT :limit")
+    suspend fun getWithoutTopics(limit: Int): List<WordEntryEntity>
+
     @Query("SELECT * FROM words ORDER BY lastSeenAt DESC")
     fun getAllWords(): Flow<List<WordEntryEntity>>
 

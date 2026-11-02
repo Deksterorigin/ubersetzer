@@ -3,6 +3,7 @@ package app.deutschlern.ui.words
 import app.deutschlern.domain.model.DeletedWord
 import app.deutschlern.domain.model.SessionWithWords
 import app.deutschlern.domain.model.WordEntry
+import app.deutschlern.domain.model.WordTopic
 import app.deutschlern.domain.model.WordTranslation
 
 enum class WordFilter {
@@ -33,8 +34,15 @@ data class WordsUiState(
     val sessionsWithWords: List<SessionWithWords> = emptyList(),
     val rawSessionsWithWords: List<SessionWithWords> = emptyList(),
     val filter: WordFilter = WordFilter.ALL,
+    val difficultOnly: Boolean = false,
+    val posFilter: String? = null,
+    val topicFilter: WordTopic? = null,
     val sort: WordSort = WordSort.BY_DATE,
     val searchQuery: String = "",
+    // Search or any category filter shows one de-duplicated list instead of lesson groups
+    val flatWords: List<WordEntry> = emptyList(),
+    val availablePos: List<String> = emptyList(),
+    val availableTopics: List<WordTopic> = emptyList(),
     val selectedWordForDetail: WordEntry? = null,
     val lastDeletedWord: DeletedWord? = null,
     val snackbarMessage: String? = null,
@@ -69,8 +77,14 @@ data class WordsUiState(
     val isLibraryEmpty: Boolean
         get() = rawSessionsWithWords.all { it.words.isEmpty() }
 
+    val isFlatList: Boolean
+        get() = searchQuery.isNotBlank() || difficultOnly || posFilter != null || topicFilter != null
+
+    val hasActiveFilters: Boolean
+        get() = filter != WordFilter.ALL || difficultOnly || posFilter != null || topicFilter != null
+
     val isSearchOrFilterEmpty: Boolean
-        get() = !isLibraryEmpty && sessionsWithWords.all { it.words.isEmpty() }
+        get() = !isLibraryEmpty && if (isFlatList) flatWords.isEmpty() else sessionsWithWords.all { it.words.isEmpty() }
 
     val bulkWordsCount: Int
         get() = bulkInputText.split("[\n,]+".toRegex()).map { it.trim() }.filter { it.isNotBlank() }.size

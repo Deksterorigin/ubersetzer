@@ -27,10 +27,13 @@ class DefaultPackageInstallerWrapper(
 ) : PackageInstallerWrapper {
 
     override fun canRequestPackageInstalls(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return true
+        // Throws SecurityException when the permission is missing from the merged manifest;
+        // treat that as "not allowed" instead of crashing the app on the update button.
+        return try {
             context.packageManager.canRequestPackageInstalls()
-        } else {
-            true
+        } catch (e: SecurityException) {
+            false
         }
     }
 

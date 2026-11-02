@@ -5,6 +5,9 @@ import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.model.SessionWithWords
 import app.deutschlern.domain.model.WordEntry
 import app.deutschlern.domain.model.WordStatus
+import app.deutschlern.domain.model.WordTopic
+import app.deutschlern.domain.sanitizer.PosNormalizer
+import app.deutschlern.domain.usecase.ClassifyWordTopicsUseCase
 import app.deutschlern.domain.repository.VocabularyRepository
 import app.deutschlern.util.TtsManager
 import app.deutschlern.util.WordSearchHelper
@@ -33,7 +36,8 @@ class WordsViewModel @Inject constructor(
     private val ttsManager: TtsManager,
     private val translateWordUseCase: TranslateWordUseCase,
     private val settingsRepository: SettingsRepository,
-    private val speechToTextEngine: SpeechToTextEngine
+    private val speechToTextEngine: SpeechToTextEngine,
+    private val classifyWordTopics: ClassifyWordTopicsUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(WordsUiState())
@@ -50,31 +54,43 @@ class WordsViewModel @Inject constructor(
         viewModelScope.launch {
             vocabularyRepository.getSessionsWithWords().collectLatest { sessions ->
                 _uiState.update { current ->
-                    val filtered = applyFilterAndSort(
-                        sessions = sessions,
-                        filter = current.filter,
-                        sort = current.sort,
-                        query = current.searchQuery
-                    )
                     current.copy(
                         rawSessionsWithWords = sessions,
-                        sessionsWithWords = filtered,
                         isLoading = false,
                         // Update bottom sheet word if it's currently open
                         selectedWordForDetail = current.selectedWordForDetail?.let { selected ->
                             sessions.flatMap { it.words }.find { it.id == selected.id } ?: selected
                         }
-                    )
+                    ).withFilteredWords()
                 }
+                maybeClassifyTopics(sessions.flatMap { it.words })
             }
         }
     }
 
+    // Runs again only when the number of unclassified words changes, so a missing key or
+    // network does not trigger a request on every database emission.
+    private var lastPendingTopicCount = -1
+
+    private fun maybeClassifyTopics(words: List<WordEntry>) {
+        val pending = words.distinctBy { it.id }.count { it.topics == null }
+        if (pending == 0 || pending == lastPendingTopicCount) return
+        lastPendingTopicCount = pending
+        viewModelScope.launch { classifyWordTopics() }
+    }
+
     fun onEvent(event: WordsUiEvent) {
         when (event) {
-            is WordsUiEvent.OnFilterChanged -> handleFilterChanged(event.filter)
-            is WordsUiEvent.OnSortChanged -> handleSortChanged(event.sort)
-            is WordsUiEvent.OnSearchQueryChanged -> handleSearchQueryChanged(event.query)
+            is WordsUiEvent.OnFilterChanged -> updateFilters { it.copy(filter = event.filter) }
+            is WordsUiEvent.OnDifficultFilterToggled -> updateFilters { it.copy(difficultOnly = !it.difficultOnly) }
+            is WordsUiEvent.OnPosFilterChanged -> updateFilters { it.copy(posFilter = event.pos) }
+            is WordsUiEvent.OnTopicFilterChanged -> updateFilters { it.copy(topicFilter = event.topic) }
+            is WordsUiEvent.OnResetFilters -> updateFilters {
+                it.copy(filter = WordFilter.ALL, difficultOnly = false, posFilter = null, topicFilter = null)
+            }
+            is WordsUiEvent.OnDifficultChanged -> handleDifficultChanged(event.wordId, event.isDifficult)
+            is WordsUiEvent.OnSortChanged -> updateFilters { it.copy(sort = event.sort) }
+            is WordsUiEvent.OnSearchQueryChanged -> updateFilters { it.copy(searchQuery = event.query) }
             is WordsUiEvent.OnWordClicked -> handleWordClicked(event.word)
             is WordsUiEvent.OnDismissBottomSheet -> _uiState.update { it.copy(selectedWordForDetail = null) }
             is WordsUiEvent.OnStatusChanged -> handleStatusChanged(event.wordId, event.newStatus)
@@ -130,45 +146,13 @@ class WordsViewModel @Inject constructor(
         }
     }
 
-    private fun handleFilterChanged(filter: WordFilter) {
-        _uiState.update { current ->
-            current.copy(
-                filter = filter,
-                sessionsWithWords = applyFilterAndSort(
-                    sessions = current.rawSessionsWithWords,
-                    filter = filter,
-                    sort = current.sort,
-                    query = current.searchQuery
-                )
-            )
-        }
+    private fun updateFilters(change: (WordsUiState) -> WordsUiState) {
+        _uiState.update { change(it).withFilteredWords() }
     }
 
-    private fun handleSortChanged(sort: WordSort) {
-        _uiState.update { current ->
-            current.copy(
-                sort = sort,
-                sessionsWithWords = applyFilterAndSort(
-                    sessions = current.rawSessionsWithWords,
-                    filter = current.filter,
-                    sort = sort,
-                    query = current.searchQuery
-                )
-            )
-        }
-    }
-
-    private fun handleSearchQueryChanged(query: String) {
-        _uiState.update { current ->
-            current.copy(
-                searchQuery = query,
-                sessionsWithWords = applyFilterAndSort(
-                    sessions = current.rawSessionsWithWords,
-                    filter = current.filter,
-                    sort = current.sort,
-                    query = query
-                )
-            )
+    private fun handleDifficultChanged(wordId: Long, isDifficult: Boolean) {
+        viewModelScope.launch {
+            vocabularyRepository.updateWordDifficulty(wordId, isDifficult)
         }
     }
 
@@ -242,46 +226,56 @@ class WordsViewModel @Inject constructor(
         }
     }
 
-    private fun applyFilterAndSort(
-        sessions: List<SessionWithWords>,
-        filter: WordFilter,
-        sort: WordSort,
-        query: String
-    ): List<SessionWithWords> {
-        val trimmedQuery = query.trim()
+    private fun WordsUiState.withFilteredWords(): WordsUiState {
+        val allWords = rawSessionsWithWords.flatMap { it.words }.distinctBy { it.id }
+        val query = searchQuery.trim()
 
-        return sessions.mapNotNull { sessionGroup ->
-            val filteredWords = sessionGroup.words.filter { word ->
-                val matchesFilter = when (filter) {
-                    WordFilter.ALL -> true
-                    WordFilter.NEW -> word.status == WordStatus.NEW
-                    WordFilter.LEARNING -> word.status == WordStatus.LEARNING
-                    WordFilter.KNOWN -> word.status == WordStatus.KNOWN
-                }
-                val matchesSearch = if (trimmedQuery.isEmpty()) true else WordSearchHelper.matchesWord(word, trimmedQuery)
-                matchesFilter && matchesSearch
+        fun WordEntry.matches(): Boolean {
+            val matchesStatus = when (filter) {
+                WordFilter.ALL -> true
+                WordFilter.NEW -> status == WordStatus.NEW
+                WordFilter.LEARNING -> status == WordStatus.LEARNING
+                WordFilter.KNOWN -> status == WordStatus.KNOWN
             }
+            return matchesStatus &&
+                (!difficultOnly || isDifficult) &&
+                (posFilter == null || PosNormalizer.normalize(pos) == posFilter) &&
+                (topicFilter == null || topics.orEmpty().contains(topicFilter.key)) &&
+                (query.isEmpty() || WordSearchHelper.matchesWord(this, query))
+        }
 
-            val sortedWords = when (sort) {
-                WordSort.BY_DATE -> filteredWords
-                WordSort.ALPHABETICAL -> filteredWords.sortedBy { it.lemma.lowercase() }
-                WordSort.MOST_TRANSLATED -> filteredWords.sortedWith(
-                    compareByDescending<WordEntry> { it.timesTranslated }
-                        .thenBy { it.lemma.lowercase() }
-                )
-            }
+        val comparator: Comparator<WordEntry>? = when (sort) {
+            WordSort.BY_DATE -> null
+            WordSort.ALPHABETICAL -> compareBy { it.lemma.lowercase() }
+            WordSort.MOST_TRANSLATED -> compareByDescending<WordEntry> { it.timesTranslated }.thenBy { it.lemma.lowercase() }
+        }
 
-            if (sortedWords.isEmpty() && sessionGroup.words.isNotEmpty()) {
-                null
-            } else if (sortedWords.isEmpty() && !sessionGroup.session.isManual) {
-                null
-            } else {
-                SessionWithWords(
-                    session = sessionGroup.session,
-                    words = sortedWords
-                )
+        val grouped = rawSessionsWithWords.mapNotNull { group ->
+            val words = group.words.filter { it.matches() }.let { list -> comparator?.let(list::sortedWith) ?: list }
+            when {
+                words.isEmpty() && (group.words.isNotEmpty() || !group.session.isManual) -> null
+                else -> SessionWithWords(session = group.session, words = words)
             }
         }
+
+        val flat = allWords.filter { it.matches() }.let { list ->
+            when {
+                // While searching, best matches come first regardless of the chosen sort
+                query.isNotEmpty() -> list.sortedBy { WordSearchHelper.relevance(it, query) }
+                comparator != null -> list.sortedWith(comparator)
+                else -> list.sortedByDescending { it.lastSeenAt }
+            }
+        }
+
+        return copy(
+            sessionsWithWords = grouped,
+            flatWords = flat,
+            availablePos = allWords.map { PosNormalizer.normalize(it.pos) }
+                .groupingBy { it }.eachCount()
+                .entries.sortedByDescending { it.value }.map { it.key }
+                .filter { it != PosNormalizer.POS_OTHER },
+            availableTopics = WordTopic.entries.filter { topic -> allWords.any { it.topics.orEmpty().contains(topic.key) } }
+        )
     }
 
     private fun handleAddWordTranslate() {
@@ -501,7 +495,6 @@ class WordsViewModel @Inject constructor(
     private fun handleAddWordMic() {
         ttsManager.stop()
         if (speechJob?.isActive == true) {
-            speechToTextEngine.stopListening()
             speechJob?.cancel()
             speechJob = null
             return
@@ -531,7 +524,6 @@ class WordsViewModel @Inject constructor(
         super.onCleared()
         bulkJob?.cancel()
         speechJob?.cancel()
-        speechToTextEngine.cancel()
         ttsManager.stop()
     }
 }

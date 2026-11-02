@@ -329,7 +329,6 @@ class DialogTaskViewModel @Inject constructor(
 
     private fun stopVoiceInput() {
         _uiState.update { it.copy(isListeningVoice = false) }
-        sttEngine.stopListening()
         sttJob?.cancel()
     }
 
@@ -339,7 +338,6 @@ class DialogTaskViewModel @Inject constructor(
 
     override fun onCleared() {
         super.onCleared()
-        sttEngine.cancel()
         sttJob?.cancel()
     }
 }

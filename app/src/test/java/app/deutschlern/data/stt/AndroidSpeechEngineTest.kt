@@ -300,32 +300,132 @@ class AndroidSpeechEngineTest {
         }
     }
 
+    private fun resultsBundle(vararg texts: String): Bundle = mockk<Bundle>().also {
+        every { it.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) } returns arrayListOf(*texts)
+    }
+
     @Test
-    fun stopListening_callsSpeechRecognizerStop() = runTest {
+    fun onResults_afterSegmentResults_stillRestartsListening() = runTest {
         engine.startListening("de").test {
             advanceUntilIdle()
             awaitItem() // StateChanged(true)
+            val listener = listenerSlot.captured
 
-            engine.stopListening()
+            // Previously a single segment result disabled restarts after onResults for the whole session
+            listener.onSegmentResults(resultsBundle("Guten Tag"))
+            awaitItem()
+            listener.onResults(resultsBundle("Wie geht es"))
+            awaitItem()
             advanceUntilIdle()
 
-            verify(atLeast = 1) { mockRecognizer.stopListening() }
+            verify(exactly = 2) { mockRecognizer.startListening(any()) }
             cancelAndIgnoreRemainingEvents()
         }
     }
 
     @Test
-    fun cancel_callsSpeechRecognizerCancel() = runTest {
+    fun endOfSegmentedSessionFollowedByResults_restartsOnlyOnce() = runTest {
+        engine.startListening("de").test {
+            advanceUntilIdle()
+            awaitItem() // StateChanged(true)
+            val listener = listenerSlot.captured
+
+            listener.onEndOfSegmentedSession()
+            listener.onResults(resultsBundle())
+            advanceUntilIdle()
+
+            // A second startListening() while the first is running causes ERROR_RECOGNIZER_BUSY
+            verify(exactly = 2) { mockRecognizer.startListening(any()) }
+            cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun benignError_restartsQuietlyWithoutErrorEvent() = runTest {
         engine.startListening("de").test {
             advanceUntilIdle()
             awaitItem() // StateChanged(true)
 
-            engine.cancel()
+            listenerSlot.captured.onError(SpeechRecognizer.ERROR_SPEECH_TIMEOUT)
             advanceUntilIdle()
 
-            verify(atLeast = 1) { mockRecognizer.cancel() }
+            verify(exactly = 2) { mockRecognizer.startListening(any()) }
+            expectNoEvents()
             cancelAndIgnoreRemainingEvents()
         }
+    }
+
+    @Test
+    fun onDeviceLanguageError_fallsBackToOnlineRecognizer() = runTest {
+        val requestedOnDevice = mutableListOf<Boolean>()
+        val fallbackEngine = AndroidSpeechEngine(
+            context = context,
+            mainDispatcher = testDispatcher,
+            recognizerFactory = { _, onDevice -> requestedOnDevice += onDevice; mockRecognizer },
+            intentFactory = { mockIntent }
+        )
+
+        fallbackEngine.startListening("de", preferOffline = true).test {
+            advanceUntilIdle()
+            awaitItem() // StateChanged(true)
+
+            listenerSlot.captured.onError(SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE)
+            val event = awaitItem()
+            assertTrue(event is SttEvent.Error && event.isRecoverable)
+            advanceUntilIdle()
+
+            assertEquals(listOf(true, false), requestedOnDevice)
+            verify(exactly = 2) { mockRecognizer.startListening(any()) }
+            cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun transientErrors_giveUpAfterRetryLimit() = runTest {
+        engine.startListening("de").test {
+            advanceUntilIdle()
+            awaitItem() // StateChanged(true)
+            val listener = listenerSlot.captured
+
+            repeat(8) {
+                listener.onError(SpeechRecognizer.ERROR_NETWORK)
+                val retry = awaitItem()
+                assertTrue(retry is SttEvent.Error && retry.isRecoverable)
+                advanceUntilIdle()
+            }
+            listener.onError(SpeechRecognizer.ERROR_NETWORK)
+            val fatal = awaitItem()
+            assertTrue(fatal is SttEvent.Error && !fatal.isRecoverable)
+            assertEquals(SttEvent.StateChanged(false), awaitItem())
+            cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun newSession_tearsDownPreviousRecognizerFirst() = runTest {
+        val first = mockk<SpeechRecognizer>(relaxed = true)
+        val second = mockk<SpeechRecognizer>(relaxed = true)
+        val recognizers = ArrayDeque(listOf(first, second))
+        val twoSessionEngine = AndroidSpeechEngine(
+            context = context,
+            mainDispatcher = testDispatcher,
+            recognizerFactory = { _, _ -> recognizers.removeFirst() },
+            intentFactory = { mockIntent }
+        )
+
+        twoSessionEngine.startListening("de").test {
+            advanceUntilIdle()
+            awaitItem()
+            twoSessionEngine.startListening("de").test {
+                advanceUntilIdle()
+                awaitItem()
+                verify { first.destroy() }
+                verify(exactly = 0) { second.destroy() }
+                cancelAndIgnoreRemainingEvents()
+            }
+            cancelAndIgnoreRemainingEvents()
+        }
+        advanceUntilIdle()
     }
 
     @Test

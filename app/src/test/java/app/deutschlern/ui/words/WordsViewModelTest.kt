@@ -1,5 +1,7 @@
 package app.deutschlern.ui.words
 
+import app.deutschlern.domain.model.WordTopic
+import app.deutschlern.domain.usecase.ClassifyWordTopicsUseCase
 import app.deutschlern.domain.model.DeletedWord
 import app.deutschlern.domain.model.Meaning
 import app.deutschlern.domain.model.Session
@@ -87,6 +89,19 @@ class WordsViewModelTest {
         status = WordStatus.KNOWN
     )
 
+    private val classifyWordTopics = mockk<ClassifyWordTopicsUseCase>(relaxed = true)
+
+    private val wordVerbDifficult = WordEntry(
+        id = 4L,
+        sessionId = 2L,
+        lemma = "kündigen",
+        pos = "verb",
+        meanings = listOf(Meaning(translation = "увольняться", exampleDe = "", exampleRu = "")),
+        status = WordStatus.LEARNING,
+        isDifficult = true,
+        topics = listOf("work", "bureaucracy")
+    )
+
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
@@ -103,7 +118,8 @@ class WordsViewModelTest {
             ttsManager = ttsManager,
             translateWordUseCase = translateWordUseCase,
             settingsRepository = settingsRepository,
-            speechToTextEngine = speechToTextEngine
+            speechToTextEngine = speechToTextEngine,
+            classifyWordTopics = classifyWordTopics
         )
     }
 
@@ -331,5 +347,66 @@ class WordsViewModelTest {
         assertNull(viewModel.uiState.value.duplicateWordDialogData)
         assertFalse(viewModel.uiState.value.isAddWordSheetVisible)
         assertEquals("Слово добавлено в текущий урок", viewModel.uiState.value.snackbarMessage)
+    }
+
+    @Test
+    fun categoryFilters_combineAndShowFlatDeduplicatedList() = runTest {
+        // The same word linked to two lessons must appear once in filtered results
+        sessionsFlow.value = listOf(
+            SessionWithWords(session = sampleSession, words = listOf(wordNew, wordVerbDifficult)),
+            SessionWithWords(session = sampleSession.copy(id = 2L), words = listOf(wordVerbDifficult, wordLearning))
+        )
+        advanceUntilIdle()
+
+        viewModel.onEvent(WordsUiEvent.OnPosFilterChanged("verb"))
+        var state = viewModel.uiState.value
+        assertTrue(state.isFlatList)
+        assertEquals(listOf(4L), state.flatWords.map { it.id })
+
+        viewModel.onEvent(WordsUiEvent.OnResetFilters)
+        viewModel.onEvent(WordsUiEvent.OnDifficultFilterToggled)
+        assertEquals(listOf(4L), viewModel.uiState.value.flatWords.map { it.id })
+
+        viewModel.onEvent(WordsUiEvent.OnResetFilters)
+        viewModel.onEvent(WordsUiEvent.OnTopicFilterChanged(WordTopic.WORK))
+        state = viewModel.uiState.value
+        assertEquals(listOf(4L), state.flatWords.map { it.id })
+        assertEquals(listOf(WordTopic.WORK, WordTopic.BUREAUCRACY), state.availableTopics)
+        assertTrue(state.availablePos.containsAll(listOf("noun", "verb")))
+
+        viewModel.onEvent(WordsUiEvent.OnResetFilters)
+        assertFalse(viewModel.uiState.value.isFlatList)
+        assertFalse(viewModel.uiState.value.hasActiveFilters)
+    }
+
+    @Test
+    fun search_ranksLemmaMatchesBeforeTranslationMatches() = runTest {
+        val buchhaltung = wordNew.copy(id = 10L, lemma = "Buchhaltung", meanings = listOf(Meaning("бухгалтерия", exampleDe = "", exampleRu = "")))
+        val translationHit = wordNew.copy(id = 11L, lemma = "Lektüre", meanings = listOf(Meaning("чтение, buch", exampleDe = "", exampleRu = "")))
+        sessionsFlow.value = listOf(SessionWithWords(session = sampleSession, words = listOf(translationHit, buchhaltung, wordLearning)))
+        advanceUntilIdle()
+
+        viewModel.onEvent(WordsUiEvent.OnSearchQueryChanged("buch"))
+
+        assertEquals(listOf(2L, 10L, 11L), viewModel.uiState.value.flatWords.map { it.id })
+    }
+
+    @Test
+    fun difficultToggle_isPersisted() = runTest {
+        advanceUntilIdle()
+        viewModel.onEvent(WordsUiEvent.OnDifficultChanged(1L, true))
+        advanceUntilIdle()
+        coVerify(exactly = 1) { vocabularyRepository.updateWordDifficulty(1L, true) }
+    }
+
+    @Test
+    fun unclassifiedWords_triggerTopicClassificationOnce() = runTest {
+        advanceUntilIdle()
+        coVerify(exactly = 1) { classifyWordTopics(any()) }
+
+        // Same number of unclassified words: no new request (no key / offline must not spam)
+        sessionsFlow.value = sessionsFlow.value.toList()
+        advanceUntilIdle()
+        coVerify(exactly = 1) { classifyWordTopics(any()) }
     }
 }

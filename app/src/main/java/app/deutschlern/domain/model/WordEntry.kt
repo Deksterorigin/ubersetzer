@@ -20,7 +20,10 @@ data class WordEntry(
     val lastSeenAt: Long = System.currentTimeMillis(),
     val sessionId: Long,
     val status: WordStatus = WordStatus.NEW,
-    val partnerLanguage: String = "ru"
+    val partnerLanguage: String = "ru",
+    val isDifficult: Boolean = false,
+    /** WordTopic keys; null while the word has not been classified yet. */
+    val topics: List<String>? = null
 ) {
     val selectedMeaning: Meaning?
         get() = selectedMeaningIndex?.let { meanings.getOrNull(it) } ?: meanings.firstOrNull()

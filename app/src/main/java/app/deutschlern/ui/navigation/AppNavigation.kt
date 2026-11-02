@@ -25,6 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import app.deutschlern.R
 import app.deutschlern.ui.review.ReviewScreen
+import app.deutschlern.ui.trainer.TrainerScreen
 import app.deutschlern.ui.settings.SettingsScreen
 import app.deutschlern.ui.translate.TranslateScreen
 import app.deutschlern.ui.words.WordsScreen
@@ -178,7 +179,12 @@ fun AppNavigation(
                 )
             }
             composable(Screen.Review.route) {
-                ReviewScreen()
+                ReviewScreen(
+                    onOpenTrainer = { mode, pool -> navController.navigate(Screen.Trainer.createRoute(mode, pool)) }
+                )
+            }
+            composable(Screen.Trainer.route) {
+                TrainerScreen(onBack = { navController.popBackStack() })
             }
             composable(Screen.Settings.route) {
                 SettingsScreen(

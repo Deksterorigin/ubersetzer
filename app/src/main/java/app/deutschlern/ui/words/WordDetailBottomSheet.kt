@@ -20,6 +20,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DeleteOutline
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.StarBorder
+import androidx.compose.material3.Switch
+import app.deutschlern.domain.model.WordTopic
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -47,6 +51,7 @@ fun WordDetailBottomSheet(
     word: WordEntry,
     onDismiss: () -> Unit,
     onStatusChanged: (WordStatus) -> Unit,
+    onDifficultChanged: (Boolean) -> Unit,
     onSelectMeaning: (Int) -> Unit,
     onDelete: () -> Unit,
     onSpeak: (String) -> Unit
@@ -102,6 +107,8 @@ fun WordDetailBottomSheet(
                     )
                 }
             }
+
+            DifficultyAndTopicsRow(word = word, onDifficultChanged = onDifficultChanged)
 
             HairlineDivider()
 
@@ -199,5 +206,44 @@ private fun StatusOption(
             color = textColor,
             maxLines = 1
         )
+    }
+}
+
+@Composable
+private fun DifficultyAndTopicsRow(
+    word: WordEntry,
+    onDifficultChanged: (Boolean) -> Unit
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(6.dp))
+                .clickable { onDifficultChanged(!word.isDifficult) }
+                .padding(vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = if (word.isDifficult) Icons.Default.Star else Icons.Default.StarBorder,
+                contentDescription = null,
+                tint = if (word.isDifficult) DifficultStarColor else MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.width(10.dp))
+            Text(
+                text = stringResource(R.string.words_marked_difficult),
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.weight(1f)
+            )
+            Switch(checked = word.isDifficult, onCheckedChange = onDifficultChanged)
+        }
+
+        val topics = word.topics.orEmpty().mapNotNull { WordTopic.fromKey(it) }
+        if (topics.isNotEmpty()) {
+            Text(
+                text = topics.map { topicLabel(it) }.joinToString(" · "),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
     }
 }

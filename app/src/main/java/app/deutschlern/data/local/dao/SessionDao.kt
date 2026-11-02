@@ -22,4 +22,9 @@ interface SessionDao {
     @Query("SELECT * FROM sessions ORDER BY date DESC, id DESC")
     fun getAllSessions(): Flow<List<SessionEntity>>
 
+    @Query("SELECT * FROM sessions ORDER BY date DESC, id DESC")
+    suspend fun getAllSessionsSync(): List<SessionEntity>
+
+    @Query("SELECT * FROM sessions WHERE date = :date AND title = :title LIMIT 1")
+    suspend fun getByDateAndTitle(date: Long, title: String): SessionEntity?
 }

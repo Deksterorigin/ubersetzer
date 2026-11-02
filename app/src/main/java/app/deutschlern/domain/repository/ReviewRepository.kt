@@ -28,6 +28,9 @@ interface ReviewRepository {
         now: Long = System.currentTimeMillis()
     ): ReviewCard
 
+    /** Every word with its SM-2 state, for building practice sessions. */
+    suspend fun getAllCards(): List<ReviewCard>
+
     /**
      * Emits the count of cards due today.
      */

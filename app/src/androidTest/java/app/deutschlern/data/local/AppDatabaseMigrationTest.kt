@@ -196,20 +196,44 @@ class AppDatabaseMigrationTest {
     }
 
     @Test
-    fun migrateAll_fromOldestExportedSchemaTo8_runsChain() {
+    fun migrate8To9_keepsWordsAndAddsDifficultyAndTopics() {
+        var db: SupportSQLiteDatabase = helper.createDatabase(TEST_DB, 8)
+        db.execSQL(
+            """
+            INSERT INTO words (id, lemma, article, pos, meaningsJson, synonymsJson, collocationsJson,
+                timesTranslated, firstSeenAt, lastSeenAt, sessionId, status, partnerLanguage)
+            VALUES (7, 'Apfel', 'der', 'noun', '[]', '[]', '[]', 2, 1, 2, 1, 'LEARNING', 'ru')
+            """.trimIndent()
+        )
+        db.close()
+
+        db = helper.runMigrationsAndValidate(TEST_DB, 9, true, DatabaseMigrations.MIGRATION_8_9)
+
+        db.query("SELECT lemma, status, isDifficult, topicsJson FROM words WHERE id = 7").use { c ->
+            assertTrue(c.moveToNext())
+            assertEquals("Apfel", c.getString(0))
+            assertEquals("LEARNING", c.getString(1))
+            assertEquals(0, c.getInt(2))
+            assertTrue(c.isNull(3))
+        }
+    }
+
+    @Test
+    fun migrateAll_fromOldestExportedSchemaToLatest_runsChain() {
         // 1. Create database in oldest exported schema (v4)
         var db: SupportSQLiteDatabase = helper.createDatabase(TEST_DB, 4)
         db.close()
 
-        // 2. Run chained migrations from 4 to 8
+        // 2. Run chained migrations from 4 to 9
         db = helper.runMigrationsAndValidate(
             TEST_DB,
-            8,
+            9,
             true,
             DatabaseMigrations.MIGRATION_4_5,
             DatabaseMigrations.MIGRATION_5_6,
             DatabaseMigrations.MIGRATION_6_7,
-            DatabaseMigrations.MIGRATION_7_8
+            DatabaseMigrations.MIGRATION_7_8,
+            DatabaseMigrations.MIGRATION_8_9
         )
         assertNotNull(db)
     }

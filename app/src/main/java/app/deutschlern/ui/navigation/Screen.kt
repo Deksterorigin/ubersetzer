@@ -1,5 +1,7 @@
 package app.deutschlern.ui.navigation
 
+import app.deutschlern.domain.trainer.TrainerMode
+import app.deutschlern.domain.trainer.WordPool
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
@@ -82,6 +84,14 @@ sealed class Screen(
         icon = Icons.Outlined.School
     ) {
         fun createRoute(dialogId: Long, taskId: Long): String = "dialog_task/$dialogId/$taskId"
+    }
+
+    data object Trainer : Screen(
+        route = "trainer/{mode}/{pool}",
+        titleRes = R.string.review_tab_trainers,
+        icon = Icons.Outlined.School
+    ) {
+        fun createRoute(mode: TrainerMode, pool: WordPool): String = "trainer/${mode.name}/${pool.name}"
     }
 
     companion object {

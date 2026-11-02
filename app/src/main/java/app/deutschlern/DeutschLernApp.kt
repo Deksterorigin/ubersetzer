@@ -1,6 +1,7 @@
 package app.deutschlern
 
 import android.app.Application
+import app.deutschlern.data.backup.BackupManager
 import app.deutschlern.di.ApplicationScope
 import app.deutschlern.domain.repository.DialogRepository
 import app.deutschlern.ui.dialog.components.TranscriptTokenizer
@@ -17,6 +18,9 @@ class DeutschLernApp : Application() {
     lateinit var dialogRepository: DialogRepository
 
     @Inject
+    lateinit var backupManager: BackupManager
+
+    @Inject
     @ApplicationScope
     lateinit var applicationScope: CoroutineScope
 
@@ -25,6 +29,7 @@ class DeutschLernApp : Application() {
         TempImageCleaner.clearTempOcrDirectory(this)
         // No recording can be active in a fresh process, so any RECORDING dialog was interrupted
         applicationScope.launch { dialogRepository.markInterruptedRecordings() }
+        applicationScope.launch { backupManager.runAutoBackup() }
     }
 
     override fun onTrimMemory(level: Int) {

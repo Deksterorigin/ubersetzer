@@ -71,10 +71,31 @@ object WordSearchHelper {
         if (matches(word.lemma, query)) return true
         if (word.article != null && matches("${word.article} ${word.lemma}", query)) return true
 
+        if (word.synonyms.any { matches(it, query) }) return true
+
         return word.meanings.any { meaning ->
             matches(meaning.translation, query) ||
                     matches(meaning.exampleDe, query) ||
                     matches(meaning.exampleRu, query)
+        }
+    }
+
+    /**
+     * Rank of a matching word for result ordering, lower is better: exact lemma, lemma prefix,
+     * lemma substring, translation prefix, translation substring, anything else (examples, synonyms).
+     */
+    fun relevance(word: WordEntry, query: String): Int {
+        val q = normalizeForSearch(query)
+        if (q.isEmpty()) return 0
+        val lemma = normalizeForSearch(word.lemma)
+        val translations = word.meanings.map { normalizeForSearch(it.translation) }
+        return when {
+            lemma == q -> 0
+            lemma.startsWith(q) -> 1
+            lemma.contains(q) -> 2
+            translations.any { it.startsWith(q) } -> 3
+            translations.any { it.contains(q) } -> 4
+            else -> 5
         }
     }
 }

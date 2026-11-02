@@ -23,4 +23,7 @@ interface ReviewDao {
     @Query("SELECT * FROM review_states")
     fun getAllReviewStates(): Flow<List<ReviewStateEntity>>
 
+    @Query("SELECT * FROM review_states")
+    suspend fun getAllReviewStatesSync(): List<ReviewStateEntity>
+
 }

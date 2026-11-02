@@ -40,6 +40,7 @@ class SecureKeyStorage @Inject constructor(
         private const val AES_GCM_NO_PADDING = "AES/GCM/NoPadding"
         private const val GCM_IV_LENGTH = 12
         private const val GCM_TAG_LENGTH_BITS = 128
+        private const val KEY_PREFIX = "enc_key_"
     }
 
     private val _isKeyRecoveryNeeded = MutableStateFlow(false)
@@ -81,6 +82,19 @@ class SecureKeyStorage @Inject constructor(
         context.secureKeysDataStore.edit { prefs ->
             prefs[prefKey] = encrypted
         }
+    }
+
+    /** All stored provider keys, decrypted, for the backup file. */
+    suspend fun exportKeys(): Map<String, String> {
+        val prefs = context.secureKeysDataStore.data.first()
+        return prefs.asMap().keys
+            .map { it.name }
+            .filter { it.startsWith(KEY_PREFIX) }
+            .mapNotNull { name ->
+                val providerId = name.removePrefix(KEY_PREFIX)
+                getKey(providerId)?.let { providerId to it }
+            }
+            .toMap()
     }
 
     suspend fun deleteKey(providerId: String) {

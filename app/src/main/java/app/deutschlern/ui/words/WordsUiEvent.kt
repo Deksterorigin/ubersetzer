@@ -2,9 +2,15 @@ package app.deutschlern.ui.words
 
 import app.deutschlern.domain.model.WordEntry
 import app.deutschlern.domain.model.WordStatus
+import app.deutschlern.domain.model.WordTopic
 
 sealed interface WordsUiEvent {
     data class OnFilterChanged(val filter: WordFilter) : WordsUiEvent
+    data object OnDifficultFilterToggled : WordsUiEvent
+    data class OnPosFilterChanged(val pos: String?) : WordsUiEvent
+    data class OnTopicFilterChanged(val topic: WordTopic?) : WordsUiEvent
+    data object OnResetFilters : WordsUiEvent
+    data class OnDifficultChanged(val wordId: Long, val isDifficult: Boolean) : WordsUiEvent
     data class OnSortChanged(val sort: WordSort) : WordsUiEvent
     data class OnSearchQueryChanged(val query: String) : WordsUiEvent
     data class OnWordClicked(val word: WordEntry) : WordsUiEvent

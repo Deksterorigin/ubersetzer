@@ -32,6 +32,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import app.deutschlern.domain.trainer.TrainerMode
+import app.deutschlern.domain.trainer.WordPool
+import app.deutschlern.ui.trainer.TrainerHub
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,10 +58,12 @@ import app.deutschlern.ui.components.HairlineDivider
 
 @Composable
 fun ReviewScreen(
+    onOpenTrainer: (TrainerMode, WordPool) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: ReviewViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    var selectedTab by rememberSaveable { mutableIntStateOf(0) }
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -66,6 +76,24 @@ fun ReviewScreen(
                 .padding(horizontal = 20.dp, vertical = 12.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            TabRow(selectedTabIndex = selectedTab, containerColor = MaterialTheme.colorScheme.background) {
+                Tab(
+                    selected = selectedTab == 0,
+                    onClick = { selectedTab = 0 },
+                    text = { Text(stringResource(R.string.review_tab_flashcards)) }
+                )
+                Tab(
+                    selected = selectedTab == 1,
+                    onClick = { selectedTab = 1 },
+                    text = { Text(stringResource(R.string.review_tab_trainers)) }
+                )
+            }
+
+            if (selectedTab == 1) {
+                TrainerHub(onOpenTrainer = onOpenTrainer, modifier = Modifier.weight(1f))
+                return@Column
+            }
+
             // Header Row: Counter / Title + Controls
             ReviewHeader(
                 uiState = uiState,

@@ -83,6 +83,14 @@ class ReviewRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun getAllCards(): List<ReviewCard> = withContext(ioDispatcher) {
+        val reviewMap = reviewDao.getAllReviewStatesSync().associateBy { it.wordId }
+        wordDao.getAllWordsSync().map { entity ->
+            val word = WordEntryMapper.entityToDomain(entity, json)
+            ReviewCard(word = word, sm2State = reviewMap[word.id]?.toDomain() ?: Sm2State(dueAt = 0L))
+        }
+    }
+
     override suspend fun reviewCard(
         wordId: Long,
         grade: Sm2Grade,

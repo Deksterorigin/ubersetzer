@@ -216,6 +216,39 @@ class DialogRecordingViewModelTest {
     }
 
     @Test
+    fun finalWithDifferentPunctuationAndCase_isStillRecognizedAsDuplicate() = runTest(testDispatcher) {
+        val events = MutableSharedFlow<SttEvent>()
+        every { sttEngine.startListening(any(), any()) } returns events
+        var nextId = 1L
+        coEvery { dialogRepository.insertSegment(any()) } answers { nextId++ }
+
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        events.emit(SttEvent.Partial("guten tag"))
+        advanceUntilIdle()
+        viewModel.toggleSpeaker()
+        advanceUntilIdle()
+        events.emit(SttEvent.Final("Guten Tag."))
+        advanceUntilIdle()
+
+        assertEquals(listOf("guten tag"), viewModel.uiState.value.segments.map { it.text })
+    }
+
+    @Test
+    fun recognizerReadyAgain_clearsReconnectingBanner() = runTest(testDispatcher) {
+        every { sttEngine.startListening(any(), any()) } returns flowOf(
+            SttEvent.Error("Ошибка сети", isRecoverable = true),
+            SttEvent.StateChanged(true)
+        )
+
+        val viewModel = DialogRecordingViewModel(savedStateHandle, sttEngine, dialogRepository, settingsRepository)
+        advanceUntilIdle()
+
+        assertFalse(viewModel.uiState.value.isReconnecting)
+    }
+
+    @Test
     fun stopAndSave_commitsPendingPartialText() = runTest(testDispatcher) {
         val partialFlow = flowOf(SttEvent.Partial("Ich möchte zahlen"))
         every { sttEngine.startListening(any(), any()) } returns partialFlow

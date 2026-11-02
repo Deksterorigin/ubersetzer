@@ -31,6 +31,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
+import kotlin.math.abs
 
 data class DialogRecordingUiState(
     val draftDialogId: Long = 0,
@@ -191,7 +192,6 @@ class DialogRecordingViewModel @Inject constructor(
     }
 
     private fun stopEngine() {
-        sttEngine.stopListening()
         sttJob?.cancel()
         timerJob?.cancel()
     }
@@ -221,7 +221,10 @@ class DialogRecordingViewModel @Inject constructor(
                     }
 
                     is SttEvent.SoundLevel -> {
-                        _uiState.update { it.copy(soundLevelRms = event.rmsDb) }
+                        // RMS arrives ~20x per second; skip imperceptible changes to avoid recomposing the screen
+                        _uiState.update {
+                            if (abs(it.soundLevelRms - event.rmsDb) < 1f) it else it.copy(soundLevelRms = event.rmsDb)
+                        }
                     }
 
                     is SttEvent.Error -> {
@@ -244,21 +247,39 @@ class DialogRecordingViewModel @Inject constructor(
                         }
                     }
 
-                    is SttEvent.StateChanged -> Unit
+                    is SttEvent.StateChanged -> {
+                        // Recognizer is ready again after a retry: drop the "reconnecting" banner
+                        if (event.isListening) {
+                            _uiState.update { it.copy(isReconnecting = false, reconnectingMessage = null) }
+                        }
+                    }
                 }
             }
         }
     }
 
+    /**
+     * Removes the words that were already committed manually from the start of a recognizer result.
+     * Compared word by word ignoring case and punctuation, because the recognizer usually
+     * re-punctuates and re-capitalizes the final text ("guten tag" -> "Guten Tag.").
+     */
     private fun stripCommittedPrefix(text: String, consume: Boolean): String {
-        val prefix = committedPartialPrefix ?: return text
-        if (!text.startsWith(prefix)) {
+        val committed = committedPartialPrefix ?: return text
+        val committedWords = words(committed).map { it.second }
+        val tokens = words(text)
+        val overlap = minOf(committedWords.size, tokens.size)
+        if (overlap == 0 || tokens.take(overlap).map { it.second } != committedWords.take(overlap)) {
             committedPartialPrefix = null
             return text
         }
         if (consume) committedPartialPrefix = null
-        return text.removePrefix(prefix).trim()
+        return tokens.drop(overlap).joinToString(" ") { it.first }
     }
+
+    private fun words(text: String): List<Pair<String, String>> =
+        text.split(WHITESPACE)
+            .map { token -> token to token.lowercase().filter(Char::isLetterOrDigit) }
+            .filter { it.second.isNotEmpty() }
 
     private suspend fun commitPendingPartial() {
         val partial = _uiState.value.currentPartialText.trim()
@@ -391,7 +412,6 @@ class DialogRecordingViewModel @Inject constructor(
     fun cancelRecording() {
         if (_uiState.value.isDismissed) return
         viewModelScope.launch {
-            sttEngine.cancel()
             sttJob?.cancel()
             timerJob?.cancel()
 
@@ -415,8 +435,11 @@ class DialogRecordingViewModel @Inject constructor(
 
     override fun onCleared() {
         super.onCleared()
-        sttEngine.cancel()
         timerJob?.cancel()
         sttJob?.cancel()
+    }
+
+    private companion object {
+        val WHITESPACE = Regex("\\s+")
     }
 }

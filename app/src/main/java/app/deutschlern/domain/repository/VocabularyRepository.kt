@@ -33,6 +33,13 @@ interface VocabularyRepository {
 
     suspend fun updateWordStatus(wordId: Long, status: WordStatus)
 
+    suspend fun updateWordDifficulty(wordId: Long, isDifficult: Boolean)
+
+    /** Words that have not been assigned topics yet, newest first. */
+    suspend fun getWordsWithoutTopics(limit: Int): List<WordEntry>
+
+    suspend fun updateWordTopics(wordId: Long, topics: List<String>)
+
     suspend fun deleteWord(wordId: Long): DeletedWord?
 
     /** Returns false when the word can no longer be restored (e.g. it was added again meanwhile). */

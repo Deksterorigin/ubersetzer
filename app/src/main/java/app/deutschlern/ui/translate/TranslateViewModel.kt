@@ -540,7 +540,6 @@ class TranslateViewModel @Inject constructor(
     }
 
     private fun handleStopListening() {
-        speechToTextEngine.stopListening()
         speechJob?.cancel()
         speechJob = null
         _uiState.update { it.copy(isListening = false, isListeningContext = false, speechPartialText = null) }
@@ -558,7 +557,6 @@ class TranslateViewModel @Inject constructor(
         super.onCleared()
         translationJob?.cancel()
         speechJob?.cancel()
-        speechToTextEngine.cancel()
         ttsManager.stop()
     }
 }

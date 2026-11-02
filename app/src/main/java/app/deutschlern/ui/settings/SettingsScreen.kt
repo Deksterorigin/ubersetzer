@@ -246,7 +246,16 @@ fun SettingsScreen(
                 onToggleTranslateImmediately = { viewModel.onToggleSttTranslateImmediately(it) }
             )
 
-            // 6. App Updates (sideloaded builds only)
+            HairlineDivider()
+
+            // 6. Backup of words and API keys
+            BackupSection(
+                onShowMessage = { message ->
+                    coroutineScope.launch { snackbarHostState.showSnackbar(message) }
+                }
+            )
+
+            // 7. App Updates (sideloaded builds only)
             if (BuildConfig.ENABLE_SELF_UPDATE) {
                 HairlineDivider()
 
@@ -892,7 +901,7 @@ private fun GeneralSettingsSection(
 }
 
 @Composable
-private fun SettingSwitchRow(
+internal fun SettingSwitchRow(
     title: String,
     subtitle: String,
     checked: Boolean,

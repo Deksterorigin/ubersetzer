@@ -101,7 +101,11 @@ object WordEntryMapper {
             lastSeenAt = entity.lastSeenAt,
             sessionId = entity.sessionId,
             status = WordStatus.fromString(entity.status),
-            partnerLanguage = entity.partnerLanguage
+            partnerLanguage = entity.partnerLanguage,
+            isDifficult = entity.isDifficult,
+            topics = entity.topicsJson?.let { raw ->
+                runCatching { json.decodeFromString<List<String>>(raw) }.getOrDefault(emptyList())
+            }
         )
     }
 

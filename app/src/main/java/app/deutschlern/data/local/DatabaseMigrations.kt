@@ -278,6 +278,13 @@ object DatabaseMigrations {
         }
     }
 
+    val MIGRATION_8_9: Migration = object : Migration(8, 9) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE words ADD COLUMN isDifficult INTEGER NOT NULL DEFAULT 0")
+            db.execSQL("ALTER TABLE words ADD COLUMN topicsJson TEXT")
+        }
+    }
+
     val MIGRATION_5_7: Migration = object : Migration(5, 7) {
         override fun migrate(db: SupportSQLiteDatabase) {
             MIGRATION_5_6.migrate(db)

@@ -39,9 +39,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
@@ -67,13 +64,27 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.StarBorder
+import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.InputChip
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import app.deutschlern.R
 import app.deutschlern.domain.model.WordEntry
 import app.deutschlern.domain.model.WordStatus
-import app.deutschlern.ui.components.HairlineDivider
 import app.deutschlern.util.CsvExporter
 import kotlinx.coroutines.launch
 
@@ -113,53 +124,61 @@ fun WordsScreen(
         }
     }
 
+    val listState = rememberLazyListState()
+    val focusManager = LocalFocusManager.current
+
     Scaffold(
         modifier = modifier.fillMaxSize(),
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
+        floatingActionButton = {
+            ExtendedFloatingActionButton(
+                onClick = { viewModel.onEvent(WordsUiEvent.OnOpenAddWordClicked) },
+                expanded = listState.firstVisibleItemIndex == 0,
+                icon = { Icon(Icons.Default.Add, contentDescription = null) },
+                text = { Text(stringResource(R.string.words_add_fab)) }
+            )
+        },
         containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-                .padding(horizontal = 20.dp, vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // Header: Title + Add Word button + "Новый урок" button + Sort selector + Export CSV
-            HeaderRow(
+            // One compact row instead of a title block: search gets the space, actions stay one tap away
+            SearchToolbar(
+                query = uiState.searchQuery,
+                onQueryChanged = { viewModel.onEvent(WordsUiEvent.OnSearchQueryChanged(it)) },
+                onSearch = { focusManager.clearFocus() },
                 sort = uiState.sort,
                 onSortChanged = { viewModel.onEvent(WordsUiEvent.OnSortChanged(it)) },
                 onCreateNewSession = { viewModel.onEvent(WordsUiEvent.OnCreateNewSession) },
-                onOpenAddWord = { viewModel.onEvent(WordsUiEvent.OnOpenAddWordClicked) },
                 onExportCsv = {
-                    val allWords = uiState.rawSessionsWithWords.flatMap { it.words }
+                    val allWords = uiState.rawSessionsWithWords.flatMap { it.words }.distinctBy { it.id }
                     if (allWords.isEmpty()) {
-                        coroutineScope.launch {
-                            snackbarHostState.showSnackbar(exportEmptyMessage)
-                        }
+                        coroutineScope.launch { snackbarHostState.showSnackbar(exportEmptyMessage) }
                     } else {
                         CsvExporter.shareAnkiCsv(context, allWords)
                     }
                 }
             )
 
-            // Search Bar
-            SearchBar(
-                query = uiState.searchQuery,
-                onQueryChanged = { viewModel.onEvent(WordsUiEvent.OnSearchQueryChanged(it)) }
-            )
+            if (!uiState.isLibraryEmpty) {
+                FilterChipsRow(uiState = uiState, onEvent = viewModel::onEvent)
+            }
 
-            // Segmented Filter: «Все» / «Новые» / «Учу» / «Выучено»
-            SegmentedFilterRow(
-                currentFilter = uiState.filter,
-                onFilterChanged = { viewModel.onEvent(WordsUiEvent.OnFilterChanged(it)) }
-            )
+            if (uiState.isFlatList && !uiState.isSearchOrFilterEmpty) {
+                Text(
+                    text = stringResource(R.string.words_results_count, uiState.flatWords.size),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
 
-            HairlineDivider()
-
-            // Main Content: Loading, Empty, or Grouped List
-            if (uiState.isLoading) {
-                Box(
+            when {
+                uiState.isLoading -> Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f),
@@ -171,38 +190,48 @@ fun WordsScreen(
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
-            } else if (uiState.isLibraryEmpty) {
-                EmptyStateView(
+
+                uiState.isLibraryEmpty -> EmptyStateView(
                     title = stringResource(R.string.words_empty_title),
                     subtitle = stringResource(R.string.words_empty_desc)
                 )
-            } else if (uiState.isSearchOrFilterEmpty) {
-                EmptyStateView(
+
+                uiState.isSearchOrFilterEmpty -> EmptyStateView(
                     title = stringResource(R.string.words_search_empty_title),
                     subtitle = stringResource(R.string.words_search_empty_desc)
                 )
-            } else {
-                LazyColumn(
+
+                else -> LazyColumn(
+                    state = listState,
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f),
-                    contentPadding = PaddingValues(bottom = 24.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                    // Bottom padding keeps the last row clear of the floating button
+                    contentPadding = PaddingValues(bottom = 88.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    uiState.sessionsWithWords.forEach { sessionGroup ->
-                        item(key = "header_${sessionGroup.session.id}") {
-                            SessionHeader(title = sessionGroup.session.title)
-                        }
+                    val rowContent: @Composable (WordEntry) -> Unit = { word ->
+                        SwipeableWordRow(
+                            word = word,
+                            onClick = { viewModel.onEvent(WordsUiEvent.OnWordClicked(word)) },
+                            onDelete = { viewModel.onEvent(WordsUiEvent.OnDeleteWord(word)) },
+                            onToggleDifficult = {
+                                viewModel.onEvent(WordsUiEvent.OnDifficultChanged(word.id, !word.isDifficult))
+                            }
+                        )
+                    }
 
-                        items(
-                            items = sessionGroup.words,
-                            key = { "word_${sessionGroup.session.id}_${it.id}" }
-                        ) { word ->
-                            SwipeableWordRow(
-                                word = word,
-                                onClick = { viewModel.onEvent(WordsUiEvent.OnWordClicked(word)) },
-                                onDelete = { viewModel.onEvent(WordsUiEvent.OnDeleteWord(word)) }
-                            )
+                    if (uiState.isFlatList) {
+                        items(items = uiState.flatWords, key = { "word_${it.id}" }) { word -> rowContent(word) }
+                    } else {
+                        uiState.sessionsWithWords.forEach { sessionGroup ->
+                            item(key = "header_${sessionGroup.session.id}") {
+                                SessionHeader(title = sessionGroup.session.title)
+                            }
+                            items(
+                                items = sessionGroup.words,
+                                key = { "word_${sessionGroup.session.id}_${it.id}" }
+                            ) { word -> rowContent(word) }
                         }
                     }
                 }
@@ -217,6 +246,9 @@ fun WordsScreen(
             onDismiss = { viewModel.onEvent(WordsUiEvent.OnDismissBottomSheet) },
             onStatusChanged = { newStatus ->
                 viewModel.onEvent(WordsUiEvent.OnStatusChanged(selectedWord.id, newStatus))
+            },
+            onDifficultChanged = { isDifficult ->
+                viewModel.onEvent(WordsUiEvent.OnDifficultChanged(selectedWord.id, isDifficult))
             },
             onSelectMeaning = { meaningIndex ->
                 viewModel.onEvent(WordsUiEvent.OnSelectMeaning(selectedWord.id, meaningIndex))
@@ -258,244 +290,215 @@ fun WordsScreen(
 }
 
 @Composable
-private fun HeaderRow(
+private fun SearchToolbar(
+    query: String,
+    onQueryChanged: (String) -> Unit,
+    onSearch: () -> Unit,
     sort: WordSort,
     onSortChanged: (WordSort) -> Unit,
     onCreateNewSession: () -> Unit,
-    onOpenAddWord: () -> Unit,
     onExportCsv: () -> Unit
 ) {
     var isSortMenuExpanded by remember { mutableStateOf(false) }
+    var isMoreMenuExpanded by remember { mutableStateOf(false) }
 
     Row(
         modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Column {
-            Text(
-                text = stringResource(R.string.tab_words),
-                style = MaterialTheme.typography.headlineLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            Text(
-                text = stringResource(R.string.words_placeholder_subtitle),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            // Add Word button
-            IconButton(
-                onClick = onOpenAddWord,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = stringResource(R.string.add_word_title),
-                    tint = MaterialTheme.colorScheme.primary
-                )
-            }
-
-            // "Новый урок" button
-            OutlinedButton(
-                onClick = onCreateNewSession,
-                modifier = Modifier.heightIn(min = 40.dp),
-                shape = RoundedCornerShape(6.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(16.dp)
-                )
-                Spacer(modifier = Modifier.width(4.dp))
+        TextField(
+            value = query,
+            onValueChange = onQueryChanged,
+            modifier = Modifier
+                .weight(1f)
+                .heightIn(min = 48.dp),
+            placeholder = {
                 Text(
-                    text = stringResource(R.string.action_new_session),
-                    style = MaterialTheme.typography.labelMedium
+                    text = stringResource(R.string.words_search_hint),
+                    style = MaterialTheme.typography.bodyMedium
                 )
-            }
-
-            // Sort Menu Button
-            Box {
-                IconButton(
-                    onClick = { isSortMenuExpanded = true },
-                    modifier = Modifier.size(40.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.Sort,
-                        contentDescription = stringResource(R.string.sort_label),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                DropdownMenu(
-                    expanded = isSortMenuExpanded,
-                    onDismissRequest = { isSortMenuExpanded = false }
-                ) {
-                    DropdownMenuItem(
-                        text = {
-                            Text(
-                                text = stringResource(R.string.sort_by_date),
-                                fontWeight = if (sort == WordSort.BY_DATE) FontWeight.Bold else FontWeight.Normal
-                            )
-                        },
-                        onClick = {
-                            onSortChanged(WordSort.BY_DATE)
-                            isSortMenuExpanded = false
-                        }
-                    )
-                    DropdownMenuItem(
-                        text = {
-                            Text(
-                                text = stringResource(R.string.sort_alphabetical),
-                                fontWeight = if (sort == WordSort.ALPHABETICAL) FontWeight.Bold else FontWeight.Normal
-                            )
-                        },
-                        onClick = {
-                            onSortChanged(WordSort.ALPHABETICAL)
-                            isSortMenuExpanded = false
-                        }
-                    )
-                    DropdownMenuItem(
-                        text = {
-                            Text(
-                                text = stringResource(R.string.sort_most_translated),
-                                fontWeight = if (sort == WordSort.MOST_TRANSLATED) FontWeight.Bold else FontWeight.Normal
-                            )
-                        },
-                        onClick = {
-                            onSortChanged(WordSort.MOST_TRANSLATED)
-                            isSortMenuExpanded = false
-                        }
-                    )
-                }
-            }
-
-            // Export Anki CSV button
-            IconButton(
-                onClick = onExportCsv,
-                modifier = Modifier.size(40.dp)
-            ) {
+            },
+            leadingIcon = {
                 Icon(
-                    imageVector = Icons.Default.Share,
-                    contentDescription = stringResource(R.string.action_export_csv),
+                    imageVector = Icons.Default.Search,
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp)
+                )
+            },
+            trailingIcon = {
+                if (query.isNotEmpty()) {
+                    IconButton(onClick = { onQueryChanged("") }) {
+                        Icon(
+                            imageVector = Icons.Default.Clear,
+                            contentDescription = stringResource(R.string.action_clear),
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
+                }
+            },
+            singleLine = true,
+            textStyle = MaterialTheme.typography.bodyMedium,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { onSearch() }),
+            shape = RoundedCornerShape(24.dp),
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
+            )
+        )
+
+        Box {
+            IconButton(onClick = { isSortMenuExpanded = true }) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.Sort,
+                    contentDescription = stringResource(R.string.sort_label),
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-        }
-    }
-}
-
-@Composable
-private fun SearchBar(
-    query: String,
-    onQueryChanged: (String) -> Unit
-) {
-    OutlinedTextField(
-        value = query,
-        onValueChange = onQueryChanged,
-        modifier = Modifier.fillMaxWidth(),
-        placeholder = {
-            Text(
-                text = stringResource(R.string.words_search_hint),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        },
-        leadingIcon = {
-            Icon(
-                imageVector = Icons.Default.Search,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(20.dp)
-            )
-        },
-        trailingIcon = {
-            if (query.isNotEmpty()) {
-                IconButton(onClick = { onQueryChanged("") }) {
-                    Icon(
-                        imageVector = Icons.Default.Clear,
-                        contentDescription = stringResource(R.string.action_clear),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(20.dp)
+            DropdownMenu(
+                expanded = isSortMenuExpanded,
+                onDismissRequest = { isSortMenuExpanded = false }
+            ) {
+                listOf(
+                    WordSort.BY_DATE to R.string.sort_by_date,
+                    WordSort.ALPHABETICAL to R.string.sort_alphabetical,
+                    WordSort.MOST_TRANSLATED to R.string.sort_most_translated
+                ).forEach { (option, labelRes) ->
+                    DropdownMenuItem(
+                        text = {
+                            Text(
+                                text = stringResource(labelRes),
+                                fontWeight = if (sort == option) FontWeight.Bold else FontWeight.Normal
+                            )
+                        },
+                        onClick = {
+                            onSortChanged(option)
+                            isSortMenuExpanded = false
+                        }
                     )
                 }
             }
-        },
-        singleLine = true,
-        shape = RoundedCornerShape(8.dp),
-        colors = OutlinedTextFieldDefaults.colors(
-            focusedBorderColor = MaterialTheme.colorScheme.primary,
-            unfocusedBorderColor = MaterialTheme.colorScheme.outline
-        )
-    )
-}
+        }
 
-@Composable
-private fun SegmentedFilterRow(
-    currentFilter: WordFilter,
-    onFilterChanged: (WordFilter) -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(6.dp))
-            .border(
-                width = 1.dp,
-                color = MaterialTheme.colorScheme.outline,
-                shape = RoundedCornerShape(6.dp)
-            )
-    ) {
-        val filters = listOf(
-            WordFilter.ALL to stringResource(R.string.filter_all),
-            WordFilter.NEW to stringResource(R.string.filter_new),
-            WordFilter.LEARNING to stringResource(R.string.filter_learning),
-            WordFilter.KNOWN to stringResource(R.string.filter_known)
-        )
-
-        filters.forEachIndexed { index, (filter, title) ->
-            val isSelected = currentFilter == filter
-            val background = if (isSelected) {
-                MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)
-            } else {
-                MaterialTheme.colorScheme.surface
-            }
-            val textColor = if (isSelected) {
-                MaterialTheme.colorScheme.primary
-            } else {
-                MaterialTheme.colorScheme.onSurfaceVariant
-            }
-
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .background(background)
-                    .clickable { onFilterChanged(filter) }
-                    .padding(vertical = 8.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
-                    color = textColor
+        Box {
+            IconButton(onClick = { isMoreMenuExpanded = true }) {
+                Icon(
+                    imageVector = Icons.Default.MoreVert,
+                    contentDescription = stringResource(R.string.words_more_actions),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-
-            if (index < filters.size - 1) {
-                Box(
-                    modifier = Modifier
-                        .width(1.dp)
-                        .height(34.dp)
-                        .background(MaterialTheme.colorScheme.outline)
+            DropdownMenu(
+                expanded = isMoreMenuExpanded,
+                onDismissRequest = { isMoreMenuExpanded = false }
+            ) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.action_new_session)) },
+                    leadingIcon = { Icon(Icons.Default.Add, contentDescription = null) },
+                    onClick = {
+                        isMoreMenuExpanded = false
+                        onCreateNewSession()
+                    }
+                )
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.action_export_csv)) },
+                    leadingIcon = { Icon(Icons.Default.Share, contentDescription = null) },
+                    onClick = {
+                        isMoreMenuExpanded = false
+                        onExportCsv()
+                    }
                 )
             }
         }
     }
+}
+
+@Composable
+private fun FilterChipsRow(
+    uiState: WordsUiState,
+    onEvent: (WordsUiEvent) -> Unit
+) {
+    val statusOptions = listOf(
+        WordFilter.NEW to stringResource(R.string.filter_new),
+        WordFilter.LEARNING to stringResource(R.string.filter_learning),
+        WordFilter.KNOWN to stringResource(R.string.filter_known)
+    )
+
+    LazyRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (uiState.hasActiveFilters) {
+            item(key = "reset") {
+                InputChip(
+                    selected = false,
+                    onClick = { onEvent(WordsUiEvent.OnResetFilters) },
+                    label = { Text(stringResource(R.string.words_filter_reset)) },
+                    leadingIcon = {
+                        Icon(Icons.Default.Close, contentDescription = null, modifier = Modifier.size(16.dp))
+                    }
+                )
+            }
+        }
+
+        item(key = "difficult") {
+            FilterChip(
+                selected = uiState.difficultOnly,
+                onClick = { onEvent(WordsUiEvent.OnDifficultFilterToggled) },
+                label = { Text(stringResource(R.string.words_filter_difficult)) },
+                leadingIcon = {
+                    Icon(Icons.Default.Star, contentDescription = null, modifier = Modifier.size(16.dp))
+                }
+            )
+        }
+
+        items(statusOptions, key = { "status_${it.first}" }) { (filter, label) ->
+            FilterChip(
+                selected = uiState.filter == filter,
+                onClick = {
+                    onEvent(WordsUiEvent.OnFilterChanged(if (uiState.filter == filter) WordFilter.ALL else filter))
+                },
+                label = { Text(label) }
+            )
+        }
+
+        if (uiState.availablePos.isNotEmpty()) {
+            item(key = "divider_pos") { ChipGroupDivider() }
+            items(uiState.availablePos, key = { "pos_$it" }) { pos ->
+                FilterChip(
+                    selected = uiState.posFilter == pos,
+                    onClick = { onEvent(WordsUiEvent.OnPosFilterChanged(if (uiState.posFilter == pos) null else pos)) },
+                    label = { Text(posFilterLabel(pos)) }
+                )
+            }
+        }
+
+        if (uiState.availableTopics.isNotEmpty()) {
+            item(key = "divider_topics") { ChipGroupDivider() }
+            items(uiState.availableTopics, key = { "topic_${it.key}" }) { topic ->
+                FilterChip(
+                    selected = uiState.topicFilter == topic,
+                    onClick = {
+                        onEvent(WordsUiEvent.OnTopicFilterChanged(if (uiState.topicFilter == topic) null else topic))
+                    },
+                    label = { Text(topicLabel(topic)) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ChipGroupDivider() {
+    Box(
+        modifier = Modifier
+            .width(1.dp)
+            .height(24.dp)
+            .background(MaterialTheme.colorScheme.outline)
+    )
 }
 
 @Composable
@@ -527,7 +530,8 @@ private fun SessionHeader(title: String) {
 private fun SwipeableWordRow(
     word: WordEntry,
     onClick: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: () -> Unit,
+    onToggleDifficult: () -> Unit
 ) {
     val dismissState = rememberSwipeToDismissBoxState(
         confirmValueChange = { value ->
@@ -566,7 +570,8 @@ private fun SwipeableWordRow(
     ) {
         WordRowContent(
             word = word,
-            onClick = onClick
+            onClick = onClick,
+            onToggleDifficult = onToggleDifficult
         )
     }
 }
@@ -574,7 +579,8 @@ private fun SwipeableWordRow(
 @Composable
 private fun WordRowContent(
     word: WordEntry,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    onToggleDifficult: () -> Unit
 ) {
     Surface(
         modifier = Modifier
@@ -591,7 +597,7 @@ private fun WordRowContent(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 14.dp, vertical = 12.dp),
+                .padding(start = 14.dp, end = 4.dp, top = 10.dp, bottom = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -653,8 +659,15 @@ private fun WordRowContent(
                 }
             }
 
-            // Status Badge
             StatusBadge(status = word.status)
+
+            IconButton(onClick = onToggleDifficult) {
+                Icon(
+                    imageVector = if (word.isDifficult) Icons.Default.Star else Icons.Default.StarBorder,
+                    contentDescription = stringResource(R.string.words_mark_difficult),
+                    tint = if (word.isDifficult) DifficultStarColor else MaterialTheme.colorScheme.outline
+                )
+            }
         }
     }
 }
@@ -725,3 +738,6 @@ private fun EmptyStateView(
         }
     }
 }
+
+// Amber reads as "attention" on both themes without clashing with the der/die/das article colors
+internal val DifficultStarColor = Color(0xFFF2A900)

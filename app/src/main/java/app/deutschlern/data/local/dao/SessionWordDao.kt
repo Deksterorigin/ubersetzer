@@ -21,4 +21,7 @@ interface SessionWordDao {
 
     @Query("SELECT * FROM session_words")
     fun getAll(): Flow<List<SessionWordEntity>>
+
+    @Query("SELECT * FROM session_words")
+    suspend fun getAllSync(): List<SessionWordEntity>
 }

@@ -36,7 +36,7 @@ import app.deutschlern.data.local.entity.WordEntryEntity
         DialogSegmentEntity::class,
         DialogTaskEntity::class
     ],
-    version = 8,
+    version = 9,
     exportSchema = true
 )
 abstract class AppDatabase : RoomDatabase() {

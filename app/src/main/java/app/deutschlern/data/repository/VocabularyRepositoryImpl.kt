@@ -31,6 +31,8 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -165,7 +167,11 @@ class VocabularyRepositoryImpl @Inject constructor(
                     lastSeenAt = now,
                     status = existing.status,
                     json = json
-                ).copy(id = existing.id).also { wordDao.update(it) }
+                ).copy(
+                    id = existing.id,
+                    isDifficult = existing.isDifficult,
+                    topicsJson = existing.topicsJson
+                ).also { wordDao.update(it) }
             } else {
                 val newEntity = WordEntryMapper.wordTranslationToEntity(
                     word = normalizedWord,
@@ -247,6 +253,18 @@ class VocabularyRepositoryImpl @Inject constructor(
         wordDao.updateStatus(wordId, status.name)
     }
 
+    override suspend fun updateWordDifficulty(wordId: Long, isDifficult: Boolean) = withContext(ioDispatcher) {
+        wordDao.updateDifficult(wordId, isDifficult)
+    }
+
+    override suspend fun getWordsWithoutTopics(limit: Int): List<WordEntry> = withContext(ioDispatcher) {
+        wordDao.getWithoutTopics(limit).map { WordEntryMapper.entityToDomain(it, json) }
+    }
+
+    override suspend fun updateWordTopics(wordId: Long, topics: List<String>) = withContext(ioDispatcher) {
+        wordDao.updateTopics(wordId, json.encodeToString(ListSerializer(String.serializer()), topics))
+    }
+
     override suspend fun deleteWord(wordId: Long): DeletedWord? = withContext(ioDispatcher) {
         transactionRunner.run {
             val existing = wordDao.getById(wordId) ?: return@run null
@@ -289,7 +307,11 @@ class VocabularyRepositoryImpl @Inject constructor(
                 lastSeenAt = word.lastSeenAt,
                 status = word.status.name,
                 json = json
-            ).copy(id = word.id)
+            ).copy(
+                id = word.id,
+                isDifficult = word.isDifficult,
+                topicsJson = word.topics?.let { json.encodeToString(ListSerializer(String.serializer()), it) }
+            )
             wordDao.insert(entity)
 
             deleted.review?.let {

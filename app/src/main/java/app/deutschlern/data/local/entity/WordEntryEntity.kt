@@ -30,5 +30,9 @@ data class WordEntryEntity(
     val sessionId: Long,
     val status: String = "NEW",
     @ColumnInfo(defaultValue = "'ru'")
-    val partnerLanguage: String = "ru"
+    val partnerLanguage: String = "ru",
+    @ColumnInfo(defaultValue = "0")
+    val isDifficult: Boolean = false,
+    // JSON array of WordTopic keys; NULL means "not classified yet"
+    val topicsJson: String? = null
 )
