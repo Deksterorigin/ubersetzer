@@ -16,7 +16,9 @@ data class EditItemDto(
     val corrected: String = "",
     val category: String = "grammar",
     val explanation: String = "",
-    val rule: String? = null
+    val rule: String? = null,
+    // Written by the app when saving to history, never part of the model's response
+    val accepted: Boolean = true
 )
 
 @Serializable

@@ -26,6 +26,8 @@ object OcrPostProcessor {
         return processedParagraphs.joinToString("\n\n")
     }
 
+    fun endsWithHyphen(text: String): Boolean = findTrailingHyphen(text) != -1
+
     private fun processSingleParagraph(paragraphText: String): String {
         val lines = paragraphText.lines().map { it.trim() }.filter { it.isNotEmpty() }
         if (lines.isEmpty()) return ""

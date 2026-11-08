@@ -36,7 +36,8 @@ class TextCheckRepositoryImpl @Inject constructor(
                 corrected = hunk.corrected,
                 category = hunk.category.name.lowercase(),
                 explanation = hunk.explanation,
-                rule = hunk.rule
+                rule = hunk.rule,
+                accepted = hunk.isAccepted
             )
         }
         val commentsDtoList = entry.comments.map { comment ->
@@ -91,7 +92,7 @@ class TextCheckRepositoryImpl @Inject constructor(
                 category = CheckCategory.fromString(dto.category),
                 explanation = dto.explanation,
                 rule = dto.rule,
-                isAccepted = true
+                isAccepted = dto.accepted
             )
         }
 

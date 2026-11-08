@@ -1,22 +1,28 @@
 package app.deutschlern.ui.check
 
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DeleteSweep
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -44,6 +50,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -53,6 +60,9 @@ import androidx.lifecycle.viewModelScope
 import app.deutschlern.R
 import app.deutschlern.domain.model.check.TextCheckEntry
 import app.deutschlern.domain.repository.TextCheckRepository
+import app.deutschlern.ui.components.ControlShape
+import app.deutschlern.ui.components.appearOnce
+import app.deutschlern.ui.components.pressScale
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -71,20 +81,15 @@ class CheckHistoryViewModel @Inject constructor(
     val historyItems: StateFlow<List<TextCheckEntry>> = textCheckRepository.getAllChecks()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    private var recentlyDeleted: TextCheckEntry? = null
-
     fun deleteCheck(entry: TextCheckEntry) {
-        recentlyDeleted = entry
         viewModelScope.launch {
             textCheckRepository.deleteCheck(entry.id)
         }
     }
 
-    fun undoDelete() {
-        val toRestore = recentlyDeleted ?: return
-        recentlyDeleted = null
+    fun restoreCheck(entry: TextCheckEntry) {
         viewModelScope.launch {
-            textCheckRepository.saveCheck(toRestore)
+            textCheckRepository.saveCheck(entry)
         }
     }
 
@@ -122,13 +127,14 @@ fun CheckHistoryScreen(
                         showClearDialog = false
                         viewModel.clearAllHistory()
                     },
+                    shape = ControlShape,
                     colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
                 ) {
                     Text(stringResource(R.string.check_history_clear_action))
                 }
             },
             dismissButton = {
-                TextButton(onClick = { showClearDialog = false }) {
+                TextButton(onClick = { showClearDialog = false }, shape = ControlShape) {
                     Text(stringResource(R.string.action_cancel))
                 }
             }
@@ -136,6 +142,8 @@ fun CheckHistoryScreen(
     }
 
     Scaffold(
+        // The app-level scaffold already pads for the navigation bar
+        contentWindowInsets = WindowInsets(0),
         topBar = {
             TopAppBar(
                 title = {
@@ -171,90 +179,135 @@ fun CheckHistoryScreen(
         snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { paddingValues ->
         if (items.isEmpty()) {
-            Box(
+            HistoryEmptyState(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.check_history_empty),
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+                    .padding(paddingValues)
+            )
         } else {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues)
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                    .padding(paddingValues),
+                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 items(items, key = { it.id }) { entry ->
-                    Surface(
-                        color = MaterialTheme.colorScheme.surface,
-                        shape = RoundedCornerShape(8.dp),
-                        tonalElevation = 1.dp,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { onSelectCheck(entry.id) }
-                    ) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Column(modifier = Modifier.weight(1f)) {
-                                Text(
-                                    text = dateFormat.format(Date(entry.createdAt)),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    HistoryCard(
+                        entry = entry,
+                        dateText = dateFormat.format(Date(entry.createdAt)),
+                        onClick = { onSelectCheck(entry.id) },
+                        onDelete = {
+                            viewModel.deleteCheck(entry)
+                            scope.launch {
+                                val res = snackbarHostState.showSnackbar(
+                                    message = deletedMessage,
+                                    actionLabel = undoLabel,
+                                    duration = SnackbarDuration.Short
                                 )
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(
-                                    text = entry.originalText,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    fontWeight = FontWeight.Medium,
-                                    maxLines = 2,
-                                    overflow = TextOverflow.Ellipsis
-                                )
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(
-                                    text = stringResource(R.string.check_edits_count, entry.hunks.size),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.primary,
-                                    fontWeight = FontWeight.SemiBold
-                                )
-                            }
-
-                            IconButton(
-                                onClick = {
-                                    viewModel.deleteCheck(entry)
-                                    scope.launch {
-                                        val res = snackbarHostState.showSnackbar(
-                                            message = deletedMessage,
-                                            actionLabel = undoLabel,
-                                            duration = SnackbarDuration.Short
-                                        )
-                                        if (res == SnackbarResult.ActionPerformed) {
-                                            viewModel.undoDelete()
-                                        }
-                                    }
+                                if (res == SnackbarResult.ActionPerformed) {
+                                    viewModel.restoreCheck(entry)
                                 }
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Default.Delete,
-                                    contentDescription = stringResource(R.string.action_delete),
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
-                                )
                             }
-                        }
-                    }
+                        },
+                        modifier = Modifier.animateItem()
+                    )
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun HistoryCard(
+    entry: TextCheckEntry,
+    dateText: String,
+    onClick: () -> Unit,
+    onDelete: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val interactionSource = remember { MutableInteractionSource() }
+    Surface(
+        onClick = onClick,
+        interactionSource = interactionSource,
+        shape = ControlShape,
+        color = MaterialTheme.colorScheme.surface,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        modifier = modifier
+            .fillMaxWidth()
+            .pressScale(interactionSource)
+    ) {
+        Row(
+            modifier = Modifier.padding(start = 16.dp, end = 4.dp, top = 12.dp, bottom = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = dateText,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = entry.originalText,
+                    style = MaterialTheme.typography.bodyMedium.germanText(),
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = stringResource(R.string.check_edits_count, entry.hunks.size),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+            IconButton(onClick = onDelete) {
+                Icon(
+                    imageVector = Icons.Default.Delete,
+                    contentDescription = stringResource(R.string.action_delete),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun HistoryEmptyState(modifier: Modifier = Modifier) {
+    Box(modifier = modifier.padding(32.dp), contentAlignment = Alignment.Center) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.appearOnce()
+        ) {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .size(56.dp)
+                    .background(MaterialTheme.colorScheme.primaryContainer, CircleShape)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.History,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(28.dp)
+                )
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = stringResource(R.string.check_history_empty),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
+                textAlign = TextAlign.Center
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = stringResource(R.string.check_history_empty_desc),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center
+            )
         }
     }
 }

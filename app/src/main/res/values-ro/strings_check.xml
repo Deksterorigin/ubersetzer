@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="check_text_truncated">Text scurtat la %1$d caractere</string>
+    <string name="check_no_key_desc">Verificarea necesită o cheie API pentru furnizorul AI selectat. O poți adăuga în Setări.</string>
+    <string name="check_scan_subtitle">Fotografiază o pagină și marchează doar cuvintele necesare</string>
+    <string name="check_loading">Căutăm greșeli…</string>
+    <string name="check_action_reject_all">Respinge tot</string>
+    <string name="check_accepted_count">Acceptate: %1$d din %2$d</string>
+    <string name="check_hunk_hint">Atinge o corectură evidențiată ca să o accepți sau să o respingi.</string>
+    <string name="check_hunk_apply">Aplică corectura</string>
+    <string name="check_hunk_keep_original">Păstrează originalul</string>
+    <string name="check_history_empty_desc">Aici vor apărea textele verificate</string>
+    <string name="ocr_source_scanner_title">Scaner de documente</string>
+    <string name="ocr_source_scanner_desc">Decupează și îndreaptă pagina automat</string>
+    <string name="ocr_source_camera_title">Cameră</string>
+    <string name="ocr_source_camera_desc">Fă o fotografie obișnuită a textului</string>
+    <string name="ocr_source_gallery_title">Galerie</string>
+    <string name="ocr_source_gallery_desc">Alege până la 3 imagini existente</string>
+    <string name="ocr_select_title">Marchează textul</string>
+    <string name="ocr_select_hint">Trage cu degetul peste textul dorit</string>
+    <string name="ocr_select_all">Selectează tot</string>
+    <string name="ocr_select_next">Înainte (%1$d)</string>
+    <string name="ocr_select_empty_preview">Textul marcat va apărea aici</string>
+    <string name="ocr_page_tab">Pagina %1$d</string>
+    <string name="ocr_page_no_text">Nu s-a găsit text pe această pagină</string>
+    <string name="ocr_pages_failed">Pagini care nu au putut fi procesate: %1$d</string>
+    <string name="ocr_error_source_unavailable">Camera sau galeria nu a putut fi deschisă</string>
+</resources>

@@ -31,6 +31,13 @@ class CheckTextUseCase @Inject constructor(
     private val json: Json
 ) {
 
+    /** The provider a check would actually run on, after falling back from non-structured ones. */
+    suspend fun activeProviderId(): String = resolveProvider(settingsRepository.getSettings().selectedCheckProviderId).id
+
+    private fun resolveProvider(providerId: String): StructuredGenerationProvider =
+        (registry.getProvider(providerId) ?: registry.geminiProvider) as? StructuredGenerationProvider
+            ?: registry.geminiProvider as StructuredGenerationProvider
+
     suspend operator fun invoke(
         text: String,
         partnerLanguage: PartnerLanguage,
@@ -50,9 +57,7 @@ class CheckTextUseCase @Inject constructor(
         }
 
         val settings = settingsRepository.getSettings()
-        val providerId = settings.selectedCheckProviderId
-        val provider = (registry.getProvider(providerId) ?: registry.geminiProvider) as? StructuredGenerationProvider
-            ?: registry.geminiProvider as StructuredGenerationProvider
+        val provider = resolveProvider(settings.selectedCheckProviderId)
 
         val defaultModel = if (provider.id == "gemini") "gemini-2.5-flash" else "default"
         val model = settings.getSelectedModel(provider.id, isWordMode = false, defaultModel)

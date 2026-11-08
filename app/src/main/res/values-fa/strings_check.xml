@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="check_text_truncated">متن به %1$d حرف کوتاه شد</string>
+    <string name="check_no_key_desc">برای بررسی، کلید API فراهم‌کنندهٔ هوش مصنوعی انتخاب‌شده لازم است. می‌توانید آن را در تنظیمات اضافه کنید.</string>
+    <string name="check_scan_subtitle">از صفحه عکس بگیرید و فقط کلمه‌های لازم را نشانی کنید</string>
+    <string name="check_loading">در جستجوی اشتباهات…</string>
+    <string name="check_action_reject_all">رد کردن همه</string>
+    <string name="check_accepted_count">پذیرفته‌شده: %1$d از %2$d</string>
+    <string name="check_hunk_hint">روی اصلاح نشانی‌شده بزنید تا آن را بپذیرید یا رد کنید.</string>
+    <string name="check_hunk_apply">اعمال اصلاح</string>
+    <string name="check_hunk_keep_original">نگه‌داشتن اصل متن</string>
+    <string name="check_history_empty_desc">متن‌های بررسی‌شدهٔ شما اینجا نمایش داده می‌شوند</string>
+    <string name="ocr_source_scanner_title">اسکنر اسناد</string>
+    <string name="ocr_source_scanner_desc">صفحه را خودکار برش می‌دهد و صاف می‌کند</string>
+    <string name="ocr_source_camera_title">کمره</string>
+    <string name="ocr_source_camera_desc">یک عکس عادی از متن بگیرید</string>
+    <string name="ocr_source_gallery_title">گالری</string>
+    <string name="ocr_source_gallery_desc">تا ۳ تصویر موجود را انتخاب کنید</string>
+    <string name="ocr_select_title">متن را نشانی کنید</string>
+    <string name="ocr_select_hint">انگشت خود را روی متن لازم بکشید</string>
+    <string name="ocr_select_all">انتخاب همه</string>
+    <string name="ocr_select_next">بعدی (%1$d)</string>
+    <string name="ocr_select_empty_preview">متن نشانی‌شده اینجا نمایش داده می‌شود</string>
+    <string name="ocr_page_tab">صفحه %1$d</string>
+    <string name="ocr_page_no_text">در این صفحه متنی پیدا نشد</string>
+    <string name="ocr_pages_failed">صفحه‌هایی که پردازش نشدند: %1$d</string>
+    <string name="ocr_error_source_unavailable">باز کردن کمره یا گالری ممکن نشد</string>
+</resources>
