@@ -1,5 +1,7 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.entity.CacheEntryEntity
 import app.deutschlern.data.local.security.SecureKeyStorage
@@ -182,7 +184,7 @@ class TranslationRepositoryImplTest {
         assertTrue(result.isSuccess)
         val translationResult = result.getOrThrow()
         assertEquals("Tisch", translationResult.data.lemma)
-        assertEquals("Переключено на Groq", translationResult.fallbackMessage)
+        assertEquals(AppStrings.get(R.string.translate_switched_to, "Groq"), translationResult.fallbackMessage)
         assertTrue(translationResult.modelAttribution.contains("Groq"))
     }
 
@@ -228,7 +230,7 @@ class TranslationRepositoryImplTest {
         assertTrue(result.isSuccess)
         val translationResult = result.getOrThrow()
         assertEquals("Fenster", translationResult.data.lemma)
-        assertEquals("Переключено на Groq", translationResult.fallbackMessage)
+        assertEquals(AppStrings.get(R.string.translate_switched_to, "Groq"), translationResult.fallbackMessage)
         coVerify(exactly = 1) { groqProvider.translateWord("Fenster", TranslationDirection.DE_RU, null, any()) }
     }
 }

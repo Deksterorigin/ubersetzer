@@ -1,5 +1,7 @@
 package app.deutschlern.domain.usecase
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.dto.dialog.DialogSummaryResponseDto
 import app.deutschlern.domain.model.PartnerLanguage
 import app.deutschlern.domain.model.dialog.DialogSummary
@@ -29,7 +31,7 @@ class GenerateDialogSummaryUseCase @Inject constructor(
         partnerLanguage: PartnerLanguage
     ): Result<DialogSummary> = withContext(Dispatchers.Default) {
         if (transcript.isBlank()) {
-            return@withContext Result.failure(IllegalArgumentException("Transcript is empty"))
+            return@withContext Result.failure(IllegalArgumentException(AppStrings.get(R.string.dialog_error_transcript_empty)))
         }
 
         val settings = settingsRepository.getSettings()

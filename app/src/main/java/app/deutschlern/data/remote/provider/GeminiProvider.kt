@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.http.await
 import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
@@ -92,7 +94,7 @@ class GeminiProvider @Inject constructor(
 
         val firstAttempt = executeGenerateContent(cleanModel, apiKey, requestDto)
         if (firstAttempt.isFailure) {
-            return@withContext Result.failure(firstAttempt.exceptionOrNull() ?: ProviderError.Generic(displayName, "Ошибка выполнения"))
+            return@withContext Result.failure(firstAttempt.exceptionOrNull() ?: ProviderError.Generic(displayName, AppStrings.get(R.string.perr_execution)))
         }
 
         val firstParsed = RobustWordJsonParser.parse(firstAttempt.getOrThrow(), direction, displayName)
@@ -129,7 +131,7 @@ class GeminiProvider @Inject constructor(
 
         val retryAttempt = executeGenerateContent(cleanModel, apiKey, repairDto)
         if (retryAttempt.isFailure) {
-            return@withContext Result.failure(retryAttempt.exceptionOrNull() ?: ProviderError.Generic(displayName, "Ошибка выполнения"))
+            return@withContext Result.failure(retryAttempt.exceptionOrNull() ?: ProviderError.Generic(displayName, AppStrings.get(R.string.perr_execution)))
         }
 
         val retryParsed = RobustWordJsonParser.parse(retryAttempt.getOrThrow(), direction, displayName)
@@ -189,7 +191,7 @@ class GeminiProvider @Inject constructor(
         try {
             okHttpClient.newCall(request).await().use { response ->
                 if (response.isSuccessful) {
-                    Result.success("Работает")
+                    Result.success(AppStrings.get(R.string.settings_test_ok))
                 } else {
                     Result.failure(parseError(response.code, response.body?.string(), cleanModel, response.header("Retry-After")))
                 }
@@ -300,7 +302,7 @@ class GeminiProvider @Inject constructor(
                 }
 
                 val candidate = parsed.candidates?.firstOrNull()
-                    ?: return Result.failure(ProviderError.Generic(displayName, "Пустой ответ от модели"))
+                    ?: return Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_empty_response)))
 
                 if (candidate.finishReason.equals("SAFETY", ignoreCase = true)) {
                     return Result.failure(ProviderError.SafetyBlocked(displayName))
@@ -313,7 +315,7 @@ class GeminiProvider @Inject constructor(
                     .trim()
 
                 if (content.isEmpty()) {
-                    Result.failure(ProviderError.Generic(displayName, "Пустой ответ от модели"))
+                    Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_empty_response)))
                 } else {
                     Result.success(content)
                 }
@@ -373,7 +375,7 @@ class GeminiProvider @Inject constructor(
             is SocketTimeoutException -> ProviderError.Timeout(displayName)
             is UnknownHostException, is IOException -> ProviderError.Offline
             is ProviderError -> e
-            else -> ProviderError.Generic(displayName, e.localizedMessage ?: "Сетевая ошибка")
+            else -> ProviderError.Generic(displayName, e.localizedMessage ?: AppStrings.get(R.string.perr_network))
         }
     }
 }

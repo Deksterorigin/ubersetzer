@@ -1,5 +1,7 @@
 package app.deutschlern.ui.dialog
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -46,7 +48,8 @@ data class DialogDetailUiState(
     val isWordLoading: Boolean = false,
     val wordMessage: String? = null,
     val errorMessage: String? = null,
-    val partnerLanguage: PartnerLanguage = PartnerLanguage.RUSSIAN
+    val partnerLanguage: PartnerLanguage = PartnerLanguage.RUSSIAN,
+    val showConsentDialog: Boolean = false
 )
 
 @HiltViewModel
@@ -71,6 +74,8 @@ class DialogDetailViewModel @Inject constructor(
     private val _wordMessage = MutableStateFlow<String?>(null)
     private val _errorMessage = MutableStateFlow<String?>(null)
     private val _dialogFlow = MutableStateFlow<Dialog?>(null)
+    private val _showConsentDialog = MutableStateFlow(false)
+    private var actionAwaitingConsent: (() -> Unit)? = null
 
     private val contentFlow = combine(
         _dialogFlow,
@@ -80,7 +85,7 @@ class DialogDetailViewModel @Inject constructor(
     )
     private val generationFlow = combine(_isGeneratingSummary, _isGeneratingTask, _generatingTaskType, ::Triple)
     private val wordFlow = combine(_selectedWordCard, _isWordLoading, _wordMessage, ::Triple)
-    private val errorAndSettingsFlow = combine(_errorMessage, settingsRepository.settingsFlow, ::Pair)
+    private val errorAndSettingsFlow = combine(_errorMessage, settingsRepository.settingsFlow, _showConsentDialog, ::Triple)
 
     val uiState: StateFlow<DialogDetailUiState> = combine(
         contentFlow,
@@ -88,7 +93,7 @@ class DialogDetailViewModel @Inject constructor(
         wordFlow,
         _selectedTab,
         errorAndSettingsFlow
-    ) { (dialog, segments, tasks), (genSummary, genTask, genTaskType), (wordCard, wordLoading, wordMessage), tab, (error, settings) ->
+    ) { (dialog, segments, tasks), (genSummary, genTask, genTaskType), (wordCard, wordLoading, wordMessage), tab, (error, settings, showConsent) ->
         DialogDetailUiState(
             dialog = dialog,
             segments = segments,
@@ -101,7 +106,8 @@ class DialogDetailViewModel @Inject constructor(
             isWordLoading = wordLoading,
             wordMessage = wordMessage,
             errorMessage = error,
-            partnerLanguage = settings.selectedPartnerLanguage
+            partnerLanguage = settings.selectedPartnerLanguage,
+            showConsentDialog = showConsent
         )
     }.stateIn(
         scope = viewModelScope,
@@ -131,7 +137,33 @@ class DialogDetailViewModel @Inject constructor(
         _selectedTab.value = index
     }
 
-    fun onWordClick(word: String, segmentContext: String) {
+    /** Dialogue text includes other people's words, so it never leaves the phone without consent. */
+    private fun withConsent(action: () -> Unit) {
+        viewModelScope.launch {
+            if (settingsRepository.getSettings().hasAcceptedDialogConsent) {
+                action()
+            } else {
+                actionAwaitingConsent = action
+                _showConsentDialog.value = true
+            }
+        }
+    }
+
+    fun onConsentAccepted() {
+        viewModelScope.launch {
+            settingsRepository.setHasAcceptedDialogConsent(true)
+            _showConsentDialog.value = false
+            actionAwaitingConsent?.invoke()
+            actionAwaitingConsent = null
+        }
+    }
+
+    fun onConsentDeclined() {
+        actionAwaitingConsent = null
+        _showConsentDialog.value = false
+    }
+
+    fun onWordClick(word: String, segmentContext: String) = withConsent {
         viewModelScope.launch {
             _isWordLoading.value = true
             _errorMessage.value = null
@@ -179,9 +211,9 @@ class DialogDetailViewModel @Inject constructor(
         _errorMessage.value = null
     }
 
-    fun generateSummary() {
+    fun generateSummary() = withConsent {
         val currentSegments = uiState.value.segments
-        if (currentSegments.isEmpty() || _isGeneratingSummary.value) return
+        if (currentSegments.isEmpty() || _isGeneratingSummary.value) return@withConsent
 
         viewModelScope.launch {
             _isGeneratingSummary.value = true
@@ -199,14 +231,14 @@ class DialogDetailViewModel @Inject constructor(
             result.onSuccess {
                 loadDialog()
             }.onFailure { err ->
-                _errorMessage.value = err.message ?: "Failed to generate summary"
+                _errorMessage.value = err.message ?: AppStrings.get(R.string.dialog_error_summary)
             }
         }
     }
 
-    fun generateTask(type: DialogTaskType) {
+    fun generateTask(type: DialogTaskType) = withConsent {
         val currentSegments = uiState.value.segments
-        if (currentSegments.isEmpty() || _isGeneratingTask.value) return
+        if (currentSegments.isEmpty() || _isGeneratingTask.value) return@withConsent
 
         viewModelScope.launch {
             _isGeneratingTask.value = true
@@ -225,7 +257,7 @@ class DialogDetailViewModel @Inject constructor(
             _isGeneratingTask.value = false
             _generatingTaskType.value = null
             result.onFailure { err ->
-                _errorMessage.value = err.message ?: "Failed to generate exercise"
+                _errorMessage.value = err.message ?: AppStrings.get(R.string.dialog_error_exercise)
             }
         }
     }

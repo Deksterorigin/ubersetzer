@@ -1,5 +1,6 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.R
 import app.deutschlern.data.local.ImmediateTransactionRunner
 import app.deutschlern.data.local.dao.ReviewDao
 import app.deutschlern.data.local.dao.SessionDao
@@ -75,7 +76,7 @@ class VocabularyRepositoryImplTest {
         val session = repository.getOrCreateActiveSession()
 
         assertEquals(25L, session.id)
-        assertTrue(session.title.startsWith("Урок,"))
+        assertTrue(session.title.startsWith("${R.string.session_title}|"))
         coVerify(exactly = 1) { sessionDao.insert(match { !it.isManual }) }
     }
 
@@ -89,7 +90,8 @@ class VocabularyRepositoryImplTest {
         val manualSession = repository.createManualSession()
 
         assertEquals(2L, manualSession.id)
-        assertTrue(manualSession.title.contains("(2)"))
+        assertTrue(manualSession.title.startsWith("${R.string.session_title_numbered}|"))
+        assertTrue(manualSession.title.endsWith("|2"))
         coVerify(exactly = 1) { sessionDao.insert(match { it.isManual }) }
     }
 

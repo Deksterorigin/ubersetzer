@@ -41,6 +41,7 @@ class SettingsRepositoryImpl @Inject constructor(
         private val KEY_STT_TRANSLATE_IMMEDIATELY = booleanPreferencesKey("stt_translate_immediately")
         private val KEY_CHECK_PROVIDER = stringPreferencesKey("selected_check_provider")
         private val KEY_CHECK_CONSENT = booleanPreferencesKey("has_accepted_check_consent")
+        private val KEY_DIALOG_CONSENT = booleanPreferencesKey("has_accepted_dialog_consent")
         private val KEY_COLORED_ARTICLES = booleanPreferencesKey("colored_articles_enabled")
         private val KEY_REPAIRED_ARTICLES = booleanPreferencesKey("has_repaired_non_noun_articles")
         private val KEY_REPAIRED_BACKUP = stringPreferencesKey("repaired_articles_backup_json")
@@ -145,6 +146,10 @@ class SettingsRepositoryImpl @Inject constructor(
         context.settingsDataStore.edit { it[KEY_CHECK_CONSENT] = accepted }
     }
 
+    override suspend fun setHasAcceptedDialogConsent(accepted: Boolean) {
+        context.settingsDataStore.edit { it[KEY_DIALOG_CONSENT] = accepted }
+    }
+
     override suspend fun setColoredArticlesEnabled(enabled: Boolean) {
         context.settingsDataStore.edit { it[KEY_COLORED_ARTICLES] = enabled }
     }
@@ -215,6 +220,7 @@ class SettingsRepositoryImpl @Inject constructor(
             sttTranslateImmediately = prefs[KEY_STT_TRANSLATE_IMMEDIATELY] ?: false,
             selectedCheckProviderId = prefs[KEY_CHECK_PROVIDER] ?: prefs[KEY_TEXT_PROVIDER] ?: "gemini",
             hasAcceptedCheckConsent = prefs[KEY_CHECK_CONSENT] ?: false,
+            hasAcceptedDialogConsent = prefs[KEY_DIALOG_CONSENT] ?: false,
             coloredArticlesEnabled = prefs[KEY_COLORED_ARTICLES] ?: true,
             hasRepairedNonNounArticles = prefs[KEY_REPAIRED_ARTICLES] ?: false,
             repairedArticlesBackupJson = prefs[KEY_REPAIRED_BACKUP] ?: "",

@@ -1,5 +1,7 @@
 package app.deutschlern.update.data
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -83,7 +85,7 @@ class DefaultPackageInstallerWrapper(
 
             Result.success(Unit)
         } catch (e: Exception) {
-            Result.failure(UpdateError.GenericError("PackageInstaller session error: ${e.message}"))
+            Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_install_session, e.message.orEmpty())))
         }
     }
 }

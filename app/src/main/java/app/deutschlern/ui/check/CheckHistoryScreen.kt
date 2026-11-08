@@ -107,6 +107,8 @@ fun CheckHistoryScreen(
     val scope = rememberCoroutineScope()
     var showClearDialog by remember { mutableStateOf(false) }
 
+    val deletedMessage = stringResource(R.string.check_deleted)
+    val undoLabel = stringResource(R.string.action_undo)
     val dateFormat = remember { SimpleDateFormat("d MMM, HH:mm", Locale.getDefault()) }
 
     if (showClearDialog) {
@@ -196,10 +198,7 @@ fun CheckHistoryScreen(
                         tonalElevation = 1.dp,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable {
-                                onSelectCheck(entry.id)
-                                onNavigateBack()
-                            }
+                            .clickable { onSelectCheck(entry.id) }
                     ) {
                         Row(
                             modifier = Modifier
@@ -236,8 +235,8 @@ fun CheckHistoryScreen(
                                     viewModel.deleteCheck(entry)
                                     scope.launch {
                                         val res = snackbarHostState.showSnackbar(
-                                            message = "Проверка удалена",
-                                            actionLabel = "Отмена",
+                                            message = deletedMessage,
+                                            actionLabel = undoLabel,
                                             duration = SnackbarDuration.Short
                                         )
                                         if (res == SnackbarResult.ActionPerformed) {

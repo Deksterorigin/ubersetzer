@@ -1,5 +1,7 @@
 package app.deutschlern.ui.dialog
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.SavedStateHandle
 import app.deutschlern.domain.model.dialog.Dialog
 import app.deutschlern.domain.model.dialog.DialogSegment
@@ -167,7 +169,7 @@ class DialogRecordingViewModelTest {
 
         assertFalse(viewModel.uiState.value.isRecording)
         assertTrue(viewModel.uiState.value.isPaused)
-        assertEquals("Приложение свёрнуто", viewModel.uiState.value.pauseReason)
+        assertEquals(AppStrings.get(R.string.dialog_pause_background), viewModel.uiState.value.pauseReason)
     }
 
     @Test

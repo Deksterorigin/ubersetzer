@@ -3,11 +3,12 @@ package app.deutschlern.domain.sm2
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import java.time.ZoneId
+import java.time.ZonedDateTime
 
 class Sm2SchedulerTest {
 
     private val fixedNow = 1000000000L
-    private val oneDayMs = 24 * 60 * 60 * 1000L
 
     @Test
     fun again_grade_resetsRepetitionsToZero_andSetsIntervalToOneDay() {
@@ -23,7 +24,32 @@ class Sm2SchedulerTest {
         assertEquals(0, next.repetitions)
         assertEquals(1, next.intervalDays)
         assertEquals(2.30, next.easeFactor, 0.001)
-        assertEquals(fixedNow + oneDayMs, next.dueAt)
+    }
+
+    @Test
+    fun dueAt_isStartOfLocalDay_soEveningReviewIsReadyNextMorning() {
+        val berlin = ZoneId.of("Europe/Berlin")
+        val mondayEvening = ZonedDateTime.of(2026, 11, 9, 20, 0, 0, 0, berlin).toInstant().toEpochMilli()
+        val tuesdayMorning = ZonedDateTime.of(2026, 11, 10, 8, 0, 0, 0, berlin).toInstant().toEpochMilli()
+        val tuesdayMidnight = ZonedDateTime.of(2026, 11, 10, 0, 0, 0, 0, berlin).toInstant().toEpochMilli()
+
+        val next = Sm2Scheduler.calculateNextState(Sm2State(), Sm2Grade.GOOD, mondayEvening, berlin)
+
+        assertEquals(tuesdayMidnight, next.dueAt)
+        assertTrue(next.dueAt <= tuesdayMorning)
+    }
+
+    @Test
+    fun dueAt_keepsCalendarDaysAcrossDaylightSavingChange() {
+        val berlin = ZoneId.of("Europe/Berlin")
+        // Clocks go back on 25 Oct 2026, so that day lasts 25 hours
+        val before = ZonedDateTime.of(2026, 10, 24, 20, 0, 0, 0, berlin).toInstant().toEpochMilli()
+        val expected = ZonedDateTime.of(2026, 10, 26, 0, 0, 0, 0, berlin).toInstant().toEpochMilli()
+
+        val next = Sm2Scheduler.calculateNextState(Sm2State(), Sm2Grade.EASY, before, berlin)
+
+        assertEquals(2, next.intervalDays)
+        assertEquals(expected, next.dueAt)
     }
 
     @Test

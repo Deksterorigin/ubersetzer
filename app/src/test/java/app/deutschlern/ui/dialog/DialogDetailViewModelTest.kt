@@ -12,6 +12,7 @@ import app.deutschlern.domain.usecase.GenerateDialogSummaryUseCase
 import app.deutschlern.domain.usecase.GenerateDialogTasksUseCase
 import app.deutschlern.domain.usecase.TranslateWordUseCase
 import io.mockk.coEvery
+import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
@@ -108,6 +109,72 @@ class DialogDetailViewModelTest {
         advanceUntilIdle()
 
         assertEquals(0L, viewModel.dialogId)
+    }
+
+    @Test
+    fun generateSummary_withoutConsent_asksFirstAndSendsNothing() = runTest(testDispatcher) {
+        val viewModel = viewModelWithTranscript(UserSettings(hasAcceptedDialogConsent = false))
+        backgroundScope.launch { viewModel.uiState.collect() }
+        advanceUntilIdle()
+
+        viewModel.generateSummary()
+        advanceUntilIdle()
+
+        assertEquals(true, viewModel.uiState.value.showConsentDialog)
+        coVerify(exactly = 0) { generateDialogSummaryUseCase(any(), any(), any()) }
+    }
+
+    @Test
+    fun consentAccepted_savesChoiceAndRunsPendingAction() = runTest(testDispatcher) {
+        val viewModel = viewModelWithTranscript(UserSettings(hasAcceptedDialogConsent = false))
+        backgroundScope.launch { viewModel.uiState.collect() }
+        advanceUntilIdle()
+        viewModel.generateSummary()
+        advanceUntilIdle()
+
+        viewModel.onConsentAccepted()
+        advanceUntilIdle()
+
+        assertEquals(false, viewModel.uiState.value.showConsentDialog)
+        coVerify { settingsRepository.setHasAcceptedDialogConsent(true) }
+        coVerify(exactly = 1) { generateDialogSummaryUseCase(any(), any(), any()) }
+    }
+
+    @Test
+    fun consentDeclined_sendsNothing() = runTest(testDispatcher) {
+        val viewModel = viewModelWithTranscript(UserSettings(hasAcceptedDialogConsent = false))
+        backgroundScope.launch { viewModel.uiState.collect() }
+        advanceUntilIdle()
+        viewModel.onWordClick("Hallo", "Hallo Welt")
+        advanceUntilIdle()
+
+        viewModel.onConsentDeclined()
+        advanceUntilIdle()
+
+        assertEquals(false, viewModel.uiState.value.showConsentDialog)
+        coVerify(exactly = 0) { translateWordUseCase(any(), any(), any()) }
+    }
+
+    @Test
+    fun existingConsent_sendsWithoutAsking() = runTest(testDispatcher) {
+        val viewModel = viewModelWithTranscript(UserSettings(hasAcceptedDialogConsent = true))
+        backgroundScope.launch { viewModel.uiState.collect() }
+        advanceUntilIdle()
+
+        viewModel.generateSummary()
+        advanceUntilIdle()
+
+        assertEquals(false, viewModel.uiState.value.showConsentDialog)
+        coVerify(exactly = 1) { generateDialogSummaryUseCase(any(), any(), any()) }
+    }
+
+    private fun viewModelWithTranscript(settings: UserSettings): DialogDetailViewModel {
+        coEvery { settingsRepository.getSettings() } returns settings
+        coEvery { generateDialogSummaryUseCase(any(), any(), any()) } returns Result.failure(IllegalStateException())
+        every { dialogRepository.getSegmentsForDialog(1L) } returns flowOf(
+            listOf(DialogSegment(id = 1L, dialogId = 1L, orderIndex = 0, text = "Hallo", startOffsetMs = 0L))
+        )
+        return createViewModel(SavedStateHandle(mapOf("dialogId" to 1L)))
     }
 
     @Test

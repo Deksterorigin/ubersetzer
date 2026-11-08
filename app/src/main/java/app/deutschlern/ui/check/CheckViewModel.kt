@@ -1,5 +1,7 @@
 package app.deutschlern.ui.check
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import kotlinx.coroutines.CancellationException
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -188,7 +190,7 @@ class CheckViewModel @Inject constructor(
                     _uiState.update {
                         it.copy(
                             isLoading = false,
-                            errorMessage = error.localizedMessage ?: "Ошибка при проверке текста"
+                            errorMessage = error.localizedMessage ?: AppStrings.get(R.string.check_error_generic)
                         )
                     }
                 }
@@ -254,7 +256,7 @@ class CheckViewModel @Inject constructor(
                     _uiState.update {
                         it.copy(
                             isAddingWordToVocab = false,
-                            addWordSuccessMessage = "«$word» добавлено в словарь"
+                            addWordSuccessMessage = AppStrings.get(R.string.check_word_added, word)
                         )
                     }
                 },
@@ -262,7 +264,7 @@ class CheckViewModel @Inject constructor(
                     _uiState.update {
                         it.copy(
                             isAddingWordToVocab = false,
-                            errorMessage = err.localizedMessage ?: "Не удалось добавить слово"
+                            errorMessage = err.localizedMessage ?: AppStrings.get(R.string.check_word_add_failed)
                         )
                     }
                 }

@@ -2,11 +2,13 @@ package app.deutschlern.ui.review
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import app.deutschlern.data.trainer.TrainerStatsStore
 import app.deutschlern.domain.model.FlashcardDirection
 import app.deutschlern.domain.model.ReviewCard
 import app.deutschlern.domain.repository.ReviewRepository
 import app.deutschlern.domain.sm2.Sm2Grade
 import app.deutschlern.util.TtsManager
+import app.deutschlern.util.runSuspendCatching
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +23,8 @@ import javax.inject.Inject
 @HiltViewModel
 class ReviewViewModel @Inject constructor(
     private val reviewRepository: ReviewRepository,
-    private val ttsManager: TtsManager
+    private val ttsManager: TtsManager,
+    private val statsStore: TrainerStatsStore
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ReviewUiState(isLoading = true))
@@ -96,6 +99,9 @@ class ReviewViewModel @Inject constructor(
 
         queueCollectionJob = flow.onEach { cards ->
             _uiState.update { current ->
+                // A graded card leaves the due list. Replacing the queue mid-session would shift the
+                // remaining cards under currentIndex and drop the cards re-added after "Again".
+                if (current.reviewedInSessionCount > 0) return@update current
                 val adjustedIndex = current.currentIndex.coerceAtMost(cards.size)
                 current.copy(
                     cards = cards,
@@ -117,7 +123,9 @@ class ReviewViewModel @Inject constructor(
         val card = current.currentCard ?: return
 
         viewModelScope.launch {
-            reviewRepository.reviewCard(card.word.id, grade)
+            // The queue is a snapshot, so the word may have been deleted on another tab meanwhile
+            runSuspendCatching { reviewRepository.reviewCard(card.word.id, grade) }
+                .onSuccess { statsStore.recordAnswer() }
 
             _uiState.update { state ->
                 val currentCards = state.cards.toMutableList()

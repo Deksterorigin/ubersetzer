@@ -23,6 +23,7 @@ data class UserSettings(
     val sttTranslateImmediately: Boolean = false,
     val selectedCheckProviderId: String = "gemini",
     val hasAcceptedCheckConsent: Boolean = false,
+    val hasAcceptedDialogConsent: Boolean = false,
     val coloredArticlesEnabled: Boolean = true,
     val hasRepairedNonNounArticles: Boolean = false,
     val repairedArticlesBackupJson: String = "",
@@ -68,6 +69,7 @@ interface SettingsRepository {
 
     suspend fun setSelectedCheckProvider(providerId: String)
     suspend fun setHasAcceptedCheckConsent(accepted: Boolean)
+    suspend fun setHasAcceptedDialogConsent(accepted: Boolean)
     suspend fun setColoredArticlesEnabled(enabled: Boolean)
     suspend fun markArticlesRepaired(backupJson: String)
     suspend fun resetArticlesRepairedFlag()

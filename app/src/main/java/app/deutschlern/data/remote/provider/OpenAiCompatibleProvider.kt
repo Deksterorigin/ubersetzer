@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.http.await
 import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
@@ -44,7 +46,8 @@ class OpenAiCompatibleProvider(
 ) : TranslationProvider, StructuredGenerationProvider {
 
     override val id: String = config.id
-    override val displayName: String = config.name
+    override val displayName: String
+        get() = config.nameRes?.let { AppStrings.get(it) } ?: config.name
     override val capabilities: ProviderCapabilities = ProviderCapabilities(
         supportsWordMode = true,
         supportsTextMode = true,
@@ -157,7 +160,7 @@ $SCHEMA_SPEC
 
         if (id == "custom" && !config.baseUrl.startsWith("https://", ignoreCase = true)) {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Пользовательский сервер должен использовать протокол HTTPS.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_https_required))
             )
         }
 
@@ -219,7 +222,7 @@ $SCHEMA_SPEC
                         continue
                     }
                 }
-                return@withContext Result.failure(error ?: ProviderError.Generic(displayName, "Ошибка запроса"))
+                return@withContext Result.failure(error ?: ProviderError.Generic(displayName, AppStrings.get(R.string.perr_request)))
             }
         }
 
@@ -245,7 +248,7 @@ $SCHEMA_SPEC
         rateLimiter.acquire(id, config.minDelayBetweenRequestsMs)
         val repairCallResult = executeChatCompletion(model, apiKey, repairRequest)
         if (repairCallResult.isFailure) {
-            return@withContext Result.failure(repairCallResult.exceptionOrNull() ?: ProviderError.Generic(displayName, "Ошибка выполнения"))
+            return@withContext Result.failure(repairCallResult.exceptionOrNull() ?: ProviderError.Generic(displayName, AppStrings.get(R.string.perr_execution)))
         }
 
         val repairParsed = RobustWordJsonParser.parse(repairCallResult.getOrThrow(), direction, displayName)
@@ -268,7 +271,7 @@ $SCHEMA_SPEC
 
         if (id == "custom" && !config.baseUrl.startsWith("https://", ignoreCase = true)) {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Пользовательский сервер должен использовать протокол HTTPS.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_https_required))
             )
         }
 
@@ -294,7 +297,7 @@ $SCHEMA_SPEC
 
         if (id == "custom" && !config.baseUrl.startsWith("https://", ignoreCase = true)) {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Пользовательский сервер должен использовать протокол HTTPS.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_https_required))
             )
         }
 
@@ -309,9 +312,9 @@ $SCHEMA_SPEC
 
         val result = executeChatCompletion(model, apiKey, request)
         if (result.isSuccess) {
-            Result.success("Работает")
+            Result.success(AppStrings.get(R.string.settings_test_ok))
         } else {
-            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(displayName, "Ошибка соединения"))
+            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(displayName, AppStrings.get(R.string.settings_connection_failed)))
         }
     }
 
@@ -328,7 +331,7 @@ $SCHEMA_SPEC
 
         if (id == "custom" && !config.baseUrl.startsWith("https://", ignoreCase = true)) {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Пользовательский сервер должен использовать протокол HTTPS.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_https_required))
             )
         }
 
@@ -385,7 +388,7 @@ $SCHEMA_SPEC
                         continue
                     }
                 }
-                return@withContext Result.failure(error ?: ProviderError.Generic(displayName, "Ошибка запроса"))
+                return@withContext Result.failure(error ?: ProviderError.Generic(displayName, AppStrings.get(R.string.perr_request)))
             }
         }
         executionResult
@@ -399,7 +402,7 @@ $SCHEMA_SPEC
 
         if (id == "custom" && !config.baseUrl.startsWith("https://", ignoreCase = true)) {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Пользовательский сервер должен использовать протокол HTTPS.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_https_required))
             )
         }
 
@@ -461,11 +464,11 @@ $SCHEMA_SPEC
 
                 val parsed = json.decodeFromString<OpenAiChatResponseDto>(responseBody)
                 val choice = parsed.choices?.firstOrNull()
-                    ?: return Result.failure(ProviderError.Generic(displayName, "Ответ не содержит данных"))
+                    ?: return Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_no_data)))
 
                 val content = choice.message?.content?.trim().orEmpty()
                 if (content.isEmpty()) {
-                    Result.failure(ProviderError.Generic(displayName, "Пустой ответ от модели"))
+                    Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_empty_response)))
                 } else {
                     Result.success(content)
                 }
@@ -519,7 +522,7 @@ $SCHEMA_SPEC
             is SocketTimeoutException -> ProviderError.Timeout(displayName)
             is UnknownHostException, is IOException -> ProviderError.Offline
             is ProviderError -> e
-            else -> ProviderError.Generic(displayName, e.localizedMessage ?: "Сетевая ошибка")
+            else -> ProviderError.Generic(displayName, e.localizedMessage ?: AppStrings.get(R.string.perr_network))
         }
     }
 }

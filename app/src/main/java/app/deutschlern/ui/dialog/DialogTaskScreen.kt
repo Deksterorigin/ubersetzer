@@ -178,7 +178,7 @@ fun DialogTaskScreen(
                     modifier = Modifier.fillMaxSize().padding(innerPadding),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "Task not found")
+                    Text(text = stringResource(R.string.dialog_task_not_found))
                 }
             }
         }

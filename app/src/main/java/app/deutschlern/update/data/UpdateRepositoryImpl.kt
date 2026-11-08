@@ -1,5 +1,7 @@
 package app.deutschlern.update.data
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import android.content.Context
 import app.deutschlern.BuildConfig
 import app.deutschlern.update.data.dto.GitHubReleaseDto
@@ -96,7 +98,7 @@ class UpdateRepositoryImpl(
                         val releaseDto = try {
                             json.decodeFromString<GitHubReleaseDto>(body)
                         } catch (e: Exception) {
-                            return@withContext Result.failure(UpdateError.GenericError("Failed to parse release JSON: ${e.message}"))
+                            return@withContext Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_release_parse, e.message.orEmpty())))
                         }
 
                         val rawTag = releaseDto.tagName
@@ -136,13 +138,13 @@ class UpdateRepositoryImpl(
 
                     403, 429 -> Result.failure(UpdateError.RateLimitExceeded)
                     404 -> Result.failure(UpdateError.NoReleasesFound)
-                    else -> Result.failure(UpdateError.GenericError("GitHub API returned HTTP ${response.code}"))
+                    else -> Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_github_http, response.code)))
                 }
             }
         } catch (_: IOException) {
             Result.failure(UpdateError.NetworkError)
         } catch (e: Exception) {
-            Result.failure(UpdateError.GenericError(e.message ?: "Unknown error"))
+            Result.failure(UpdateError.GenericError(e.message ?: AppStrings.get(R.string.upd_unknown)))
         }
     }
 
@@ -193,7 +195,7 @@ class UpdateRepositoryImpl(
             call.execute().use { response ->
                 if (!response.isSuccessful) {
                     partFile.delete()
-                    return@withContext Result.failure(UpdateError.GenericError("Download failed with HTTP ${response.code}"))
+                    return@withContext Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_download_http, response.code)))
                 }
 
                 val body = response.body ?: run {
@@ -212,7 +214,7 @@ class UpdateRepositoryImpl(
                         while (input.read(buffer).also { read = it } != -1) {
                             if (!isActive || call.isCanceled()) {
                                 partFile.delete()
-                                return@withContext Result.failure(UpdateError.GenericError("Download cancelled"))
+                                return@withContext Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_download_cancelled)))
                             }
                             output.write(buffer, 0, read)
                             bytesRead += read
@@ -233,24 +235,24 @@ class UpdateRepositoryImpl(
                         Result.success(targetFile)
                     } else {
                         partFile.delete()
-                        Result.failure(UpdateError.GenericError("Failed to rename temporary APK file"))
+                        Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_rename_failed)))
                     }
                 } else {
-                    Result.failure(UpdateError.GenericError("Downloaded file missing"))
+                    Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_file_missing)))
                 }
             }
         } catch (e: IOException) {
             partFile.delete()
             targetFile.delete()
             if (call.isCanceled()) {
-                Result.failure(UpdateError.GenericError("Download cancelled"))
+                Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_download_cancelled)))
             } else {
                 Result.failure(UpdateError.NetworkError)
             }
         } catch (e: Exception) {
             partFile.delete()
             targetFile.delete()
-            Result.failure(UpdateError.GenericError(e.message ?: "Download failed"))
+            Result.failure(UpdateError.GenericError(e.message ?: AppStrings.get(R.string.upd_download_failed)))
         } finally {
             synchronized(downloadLock) {
                 if (activeCall == call) {

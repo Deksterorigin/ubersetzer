@@ -1,5 +1,7 @@
 package app.deutschlern.ui.words
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.domain.model.WordTopic
 import app.deutschlern.domain.usecase.ClassifyWordTopicsUseCase
 import app.deutschlern.domain.model.DeletedWord
@@ -249,7 +251,7 @@ class WordsViewModelTest {
         coVerify(exactly = 1) { vocabularyRepository.deleteWord(1L) }
         var state = viewModel.uiState.value
         assertTrue(state.showUndoAction)
-        assertEquals("Слово «Apfel» удалено", state.snackbarMessage)
+        assertEquals(AppStrings.get(R.string.words_deleted, "Apfel"), state.snackbarMessage)
         assertEquals(deleted, state.lastDeletedWord)
 
         // Undo
@@ -272,7 +274,7 @@ class WordsViewModelTest {
         advanceUntilIdle()
 
         coVerify(exactly = 1) { vocabularyRepository.createManualSession() }
-        assertEquals("Создан новый урок: Урок, 4 окт (2)", viewModel.uiState.value.snackbarMessage)
+        assertEquals(AppStrings.get(R.string.words_session_created, "Урок, 4 окт (2)"), viewModel.uiState.value.snackbarMessage)
     }
 
     @Test
@@ -315,7 +317,7 @@ class WordsViewModelTest {
             )
         }
         assertFalse(viewModel.uiState.value.isAddWordSheetVisible)
-        assertEquals("Слово успешно добавлено", viewModel.uiState.value.snackbarMessage)
+        assertEquals(AppStrings.get(R.string.words_added), viewModel.uiState.value.snackbarMessage)
     }
 
     @Test
@@ -346,7 +348,7 @@ class WordsViewModelTest {
         coVerify(exactly = 1) { vocabularyRepository.addWordToCurrentSession(1L) }
         assertNull(viewModel.uiState.value.duplicateWordDialogData)
         assertFalse(viewModel.uiState.value.isAddWordSheetVisible)
-        assertEquals("Слово добавлено в текущий урок", viewModel.uiState.value.snackbarMessage)
+        assertEquals(AppStrings.get(R.string.words_added_to_session), viewModel.uiState.value.snackbarMessage)
     }
 
     @Test

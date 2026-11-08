@@ -8,7 +8,9 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
+import app.deutschlern.data.backup.BackupTrainerStats
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import java.time.LocalDate
 import javax.inject.Inject
@@ -52,6 +54,23 @@ class TrainerStatsStore @Inject constructor(
                 }
             }
             prefs[KEY_LAST_DAY] = today
+        }
+    }
+
+    suspend fun exportStats(): BackupTrainerStats? {
+        val prefs = context.trainerStatsDataStore.data.first()
+        val lastDay = prefs[KEY_LAST_DAY] ?: return null
+        return BackupTrainerStats(lastDay, prefs[KEY_STREAK] ?: 0, prefs[KEY_TODAY_COUNT] ?: 0)
+    }
+
+    /** Only a more recent history replaces the current one, so restoring never shortens a streak. */
+    suspend fun restoreStats(stats: BackupTrainerStats) {
+        context.trainerStatsDataStore.edit { prefs ->
+            if (stats.lastDay > (prefs[KEY_LAST_DAY] ?: Long.MIN_VALUE)) {
+                prefs[KEY_LAST_DAY] = stats.lastDay
+                prefs[KEY_STREAK] = stats.streakDays
+                prefs[KEY_TODAY_COUNT] = stats.answersToday
+            }
         }
     }
 

@@ -1,5 +1,7 @@
 package app.deutschlern.ui.dialog
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.SavedStateHandle
 import app.deutschlern.ui.navigation.getNavigationLong
 import androidx.lifecycle.ViewModel
@@ -289,7 +291,7 @@ class DialogTaskViewModel @Inject constructor(
                 dialogRepository.updateTask(updated)
                 _uiState.update { it.copy(task = updated) }
             }.onFailure { err ->
-                _uiState.update { it.copy(errorMessage = err.message ?: "Failed to evaluate answer") }
+                _uiState.update { it.copy(errorMessage = err.message ?: AppStrings.get(R.string.dialog_error_evaluate)) }
             }
         }
     }

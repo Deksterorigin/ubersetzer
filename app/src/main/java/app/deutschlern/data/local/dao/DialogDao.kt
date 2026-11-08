@@ -27,6 +27,12 @@ interface DialogDao {
     @Query("SELECT * FROM dialogs ORDER BY startedAt DESC")
     fun getAllDialogs(): Flow<List<DialogEntity>>
 
+    @Query("SELECT * FROM dialogs")
+    suspend fun getAllDialogsSync(): List<DialogEntity>
+
+    @Query("SELECT * FROM dialogs WHERE startedAt = :startedAt AND title = :title LIMIT 1")
+    suspend fun getByStartedAtAndTitle(startedAt: Long, title: String): DialogEntity?
+
     @Query("UPDATE dialogs SET status = 'INTERRUPTED' WHERE status = 'RECORDING'")
     suspend fun markInterruptedRecordings()
 }

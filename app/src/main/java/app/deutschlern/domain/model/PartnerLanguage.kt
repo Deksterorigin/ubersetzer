@@ -10,7 +10,7 @@ enum class PartnerLanguage(
     ENGLISH(code = "en", displayName = "English", isRtl = false, bcp47Tag = "en-US"),
     UKRAINIAN(code = "uk", displayName = "Українська", isRtl = false, bcp47Tag = "uk-UA"),
     ARABIC(code = "ar", displayName = "العربية", isRtl = true, bcp47Tag = "ar-SA"),
-    DARI(code = "fa", displayName = "دری (Дари)", isRtl = true, bcp47Tag = "fa-AF"),
+    DARI(code = "fa", displayName = "دری", isRtl = true, bcp47Tag = "fa-AF"),
     ROMANIAN(code = "ro", displayName = "Română", isRtl = false, bcp47Tag = "ro-RO");
 
     companion object {

@@ -1,10 +1,13 @@
 package app.deutschlern.ui.settings
 
+import androidx.annotation.StringRes
+
 import app.deutschlern.data.remote.provider.DeepLUsage
 
 data class ProviderUiModel(
     val id: String,
     val displayName: String,
+    @StringRes val displayNameRes: Int? = null,
     val supportsWordMode: Boolean,
     val supportsTextMode: Boolean,
     val isOffline: Boolean,
@@ -14,10 +17,11 @@ data class ProviderUiModel(
     val availableModels: List<String> = emptyList(),
     val isLoadingModels: Boolean = false,
     val testStatus: String? = null,
+    val testStatusIsError: Boolean = false,
     val isTesting: Boolean = false,
     val keyUrl: String? = null,
     val rateLimitDocsUrl: String? = null,
-    val freeTierNote: String = "",
+    @StringRes val freeTierNoteRes: Int? = null,
     val deeplUsage: DeepLUsage? = null,
     val isMlKitDownloaded: Boolean = false,
     val isMlKitDownloading: Boolean = false

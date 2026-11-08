@@ -1,44 +1,66 @@
 package app.deutschlern.domain.provider
 
-sealed class ProviderError(open val userMessage: String) : Exception(userMessage) {
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 
-    data class InvalidKey(val providerName: String) :
-        ProviderError("Неверный API-ключ для $providerName. Проверьте ключ в настройках.")
+sealed class ProviderError : Exception() {
 
-    data class ModelNotFound(val providerName: String, val model: String) :
-        ProviderError("Модель «$model» недоступна, выберите другую.")
+    /** Resolved on every read, so a message shown after a language switch uses the new language. */
+    abstract val userMessage: String
 
-    data class RateLimitExceeded(val providerName: String, val retryAfterSeconds: Long? = null) :
-        ProviderError(
-            if (retryAfterSeconds != null && retryAfterSeconds > 0)
-                "Лимит исчерпан, повторите через $retryAfterSeconds сек."
-            else
-                "Превышен лимит запросов к $providerName. Подождите немного и повторите."
-        )
+    override val message: String
+        get() = userMessage
 
-    data class ServerError(val providerName: String, val code: Int) :
-        ProviderError("Сервер $providerName временно недоступен (код $code). Попробуйте снова через минуту.")
+    data class InvalidKey(val providerName: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_invalid_key, providerName)
+    }
 
-    data class Timeout(val providerName: String) :
-        ProviderError("Превышено время ожидания ответа от $providerName.")
+    data class ModelNotFound(val providerName: String, val model: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_model_not_found, model)
+    }
 
-    data object Offline :
-        ProviderError("Нет подключения к интернету. Проверьте сеть и повторите попытку.")
+    data class RateLimitExceeded(val providerName: String, val retryAfterSeconds: Long? = null) : ProviderError() {
+        override val userMessage
+            get() = if (retryAfterSeconds != null && retryAfterSeconds > 0) {
+                AppStrings.get(R.string.err_provider_rate_limit_retry, retryAfterSeconds)
+            } else {
+                AppStrings.get(R.string.err_provider_rate_limit, providerName)
+            }
+    }
 
-    data class MalformedJson(val providerName: String) :
-        ProviderError("Не удалось обработать ответ словаря от $providerName.")
+    data class ServerError(val providerName: String, val code: Int) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_server, providerName, code)
+    }
 
-    data class SafetyBlocked(val providerName: String) :
-        ProviderError("Запрос заблокирован фильтром безопасности содержимого $providerName.")
+    data class Timeout(val providerName: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_timeout, providerName)
+    }
 
-    data class NoKeyConfigured(val providerName: String) :
-        ProviderError("API-ключ для $providerName не настроен. Добавьте его в настройках.")
+    data object Offline : ProviderError() {
+        private fun readResolve(): Any = Offline
+        override val userMessage get() = AppStrings.get(R.string.err_provider_offline)
+    }
 
-    data object NoProvidersConfigured :
-        ProviderError("Не настроен ни один провайдер для перевода. Добавьте API-ключ в настройках.")
+    data class MalformedJson(val providerName: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_malformed, providerName)
+    }
 
-    data class Generic(val providerName: String, val details: String) :
-        ProviderError("Ошибка при обращении к $providerName: $details")
+    data class SafetyBlocked(val providerName: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_safety, providerName)
+    }
+
+    data class NoKeyConfigured(val providerName: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_no_key, providerName)
+    }
+
+    data object NoProvidersConfigured : ProviderError() {
+        private fun readResolve(): Any = NoProvidersConfigured
+        override val userMessage get() = AppStrings.get(R.string.err_provider_none_configured)
+    }
+
+    data class Generic(val providerName: String, val details: String) : ProviderError() {
+        override val userMessage get() = AppStrings.get(R.string.err_provider_generic, providerName, details)
+    }
 
     /**
      * Determines whether this error should automatically trigger fallback to the next provider.

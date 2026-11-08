@@ -23,12 +23,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.deutschlern.R
 import app.deutschlern.ui.review.ReviewScreen
 import app.deutschlern.ui.trainer.TrainerScreen
 import app.deutschlern.ui.settings.SettingsScreen
 import app.deutschlern.ui.translate.TranslateScreen
 import app.deutschlern.ui.words.WordsScreen
+
+private const val KEY_SELECTED_CHECK_ID = "selected_check_id"
 
 @Composable
 fun AppNavigation(
@@ -164,16 +167,22 @@ fun AppNavigation(
                     onNavigateBack = { navController.popBackStack() }
                 )
             }
-            composable(Screen.Check.route) {
+            composable(Screen.Check.route) { entry ->
+                val savedCheckId by entry.savedStateHandle
+                    .getStateFlow<Long?>(KEY_SELECTED_CHECK_ID, null)
+                    .collectAsStateWithLifecycle()
                 app.deutschlern.ui.check.CheckScreen(
                     onNavigateToHistory = { navController.navigate(Screen.CheckHistory.route) },
-                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
+                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) },
+                    savedCheckId = savedCheckId,
+                    onSavedCheckOpened = { entry.savedStateHandle[KEY_SELECTED_CHECK_ID] = null }
                 )
             }
             composable(Screen.CheckHistory.route) {
                 app.deutschlern.ui.check.CheckHistoryScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSelectCheck = { checkId ->
+                        navController.previousBackStackEntry?.savedStateHandle?.set(KEY_SELECTED_CHECK_ID, checkId)
                         navController.popBackStack()
                     }
                 )

@@ -1,5 +1,7 @@
 package app.deutschlern.update
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -121,7 +123,7 @@ class UpdateViewModel(
                     }
                 },
                 onFailure = { throwable ->
-                    val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: "Unknown error")
+                    val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: AppStrings.get(R.string.upd_unknown))
                     _uiState.update { it.copy(updateState = UpdateState.Error(error)) }
                 }
             )
@@ -176,13 +178,13 @@ class UpdateViewModel(
                             }
                         },
                         onFailure = { throwable ->
-                            val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: "Verification failed")
+                            val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: AppStrings.get(R.string.upd_verify_failed))
                             _uiState.update { it.copy(updateState = UpdateState.Error(error)) }
                         }
                     )
                 },
                 onFailure = { throwable ->
-                    val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: "Download failed")
+                    val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: AppStrings.get(R.string.upd_download_failed))
                     _uiState.update { it.copy(updateState = UpdateState.Error(error)) }
                 }
             )
@@ -193,7 +195,7 @@ class UpdateViewModel(
         _uiState.update { it.copy(updateState = UpdateState.Installing(release)) }
         val installResult = updateRepository.installApk(apkFile)
         installResult.onFailure { throwable ->
-            val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: "Install session failed")
+            val error = (throwable as? UpdateError) ?: UpdateError.GenericError(throwable.message ?: AppStrings.get(R.string.upd_session_failed))
             _uiState.update { it.copy(updateState = UpdateState.Error(error)) }
         }
     }

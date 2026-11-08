@@ -1,5 +1,7 @@
 package app.deutschlern.domain.usecase
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.dto.dialog.OpenAnswerEvaluationResponseDto
 import app.deutschlern.domain.model.PartnerLanguage
 import app.deutschlern.domain.model.dialog.OpenEvaluation
@@ -25,7 +27,7 @@ class EvaluateOpenResponseUseCase @Inject constructor(
         partnerLanguage: PartnerLanguage
     ): Result<OpenEvaluation> = withContext(Dispatchers.Default) {
         if (studentAnswer.isBlank()) {
-            return@withContext Result.failure(IllegalArgumentException("Student answer is empty"))
+            return@withContext Result.failure(IllegalArgumentException(AppStrings.get(R.string.dialog_error_answer_empty)))
         }
 
         val settings = settingsRepository.getSettings()

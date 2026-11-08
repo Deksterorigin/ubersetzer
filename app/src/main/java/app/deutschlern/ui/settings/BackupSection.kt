@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.deutschlern.R
+import app.deutschlern.data.backup.BackupManager
 import java.text.DateFormat
 import java.util.Date
 
@@ -51,7 +52,7 @@ fun BackupSection(
     val restoreFailedText = stringResource(R.string.backup_import_failed)
     val restoredResult = (message as? BackupMessage.Restored)?.result
     val restoredText = restoredResult?.let {
-        stringResource(R.string.backup_import_done, it.wordsAdded, it.keysRestored)
+        stringResource(R.string.backup_import_done, it.wordsAdded, it.dialogsAdded, it.checksAdded, it.keysRestored)
     }
 
     LaunchedEffect(message) {
@@ -81,17 +82,25 @@ fun BackupSection(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
-        SettingSwitchRow(
-            title = stringResource(R.string.backup_auto_title),
-            subtitle = settings.lastAutoBackupAt?.let {
-                stringResource(
-                    R.string.backup_last_time,
-                    DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT).format(Date(it))
-                )
-            } ?: stringResource(R.string.backup_auto_desc),
-            checked = settings.autoBackupEnabled,
-            onCheckedChange = viewModel::onAutoBackupChanged
-        )
+        if (BackupManager.isAutoBackupSupported) {
+            SettingSwitchRow(
+                title = stringResource(R.string.backup_auto_title),
+                subtitle = settings.lastAutoBackupAt?.let {
+                    stringResource(
+                        R.string.backup_last_time,
+                        DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT).format(Date(it))
+                    )
+                } ?: stringResource(R.string.backup_auto_desc),
+                checked = settings.autoBackupEnabled,
+                onCheckedChange = viewModel::onAutoBackupChanged
+            )
+        } else {
+            Text(
+                text = stringResource(R.string.backup_auto_unavailable),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.error
+            )
+        }
 
         SettingSwitchRow(
             title = stringResource(R.string.backup_include_keys_title),

@@ -1,5 +1,7 @@
 package app.deutschlern.domain.sm2
 
+import java.time.Instant
+import java.time.ZoneId
 import kotlin.math.roundToInt
 
 enum class Sm2Grade(val score: Int) {
@@ -21,7 +23,6 @@ object Sm2Scheduler {
     const val MIN_EASE_FACTOR = 1.3
     const val MAX_EASE_FACTOR = 3.0
     const val INITIAL_EASE_FACTOR = 2.5
-    private const val ONE_DAY_MS = 24 * 60 * 60 * 1000L
 
     /**
      * Calculates the next SM-2 state based on the selected rating.
@@ -30,7 +31,8 @@ object Sm2Scheduler {
     fun calculateNextState(
         currentState: Sm2State,
         grade: Sm2Grade,
-        now: Long = System.currentTimeMillis()
+        now: Long = System.currentTimeMillis(),
+        zone: ZoneId = ZoneId.systemDefault()
     ): Sm2State {
         val n = currentState.repetitions
         val i = currentState.intervalDays
@@ -71,7 +73,12 @@ object Sm2Scheduler {
             }
         }
 
-        val nextDueAt = now + nextInterval * ONE_DAY_MS
+        // Due at the start of the local day, so a card rated in the evening is ready the next morning
+        val nextDueAt = Instant.ofEpochMilli(now).atZone(zone).toLocalDate()
+            .plusDays(nextInterval.toLong())
+            .atStartOfDay(zone)
+            .toInstant()
+            .toEpochMilli()
 
         return Sm2State(
             easeFactor = nextEf,

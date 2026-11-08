@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.http.await
 import kotlinx.coroutines.CancellationException
 import app.deutschlern.data.local.security.SecureKeyStorage
@@ -64,7 +66,7 @@ class DeepLProvider @Inject constructor(
         model: String
     ): Result<WordTranslation> {
         return Result.failure(
-            ProviderError.Generic(displayName, "DeepL доступен только для перевода текстов.")
+            ProviderError.Generic(displayName, AppStrings.get(R.string.perr_deepl_text_only))
         )
     }
 
@@ -86,7 +88,7 @@ class DeepLProvider @Inject constructor(
 
         if (sourceCode == "FA" || targetCode == "FA") {
             return@withContext Result.failure(
-                ProviderError.Generic(displayName, "Язык Дари не поддерживается сервисом DeepL.")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_deepl_no_dari))
             )
         }
 
@@ -120,7 +122,7 @@ class DeepLProvider @Inject constructor(
                 val parsed = json.decodeFromString<DeepLTranslateResponseDto>(responseBody)
                 val translated = parsed.translations?.firstOrNull()?.text
                 if (translated.isNullOrBlank()) {
-                    Result.failure(ProviderError.Generic(displayName, "Пустой ответ от DeepL"))
+                    Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_empty_response)))
                 } else {
                     Result.success(translated)
                 }
@@ -140,9 +142,9 @@ class DeepLProvider @Inject constructor(
 
         val usageResult = getUsage()
         if (usageResult.isSuccess) {
-            Result.success("Работает")
+            Result.success(AppStrings.get(R.string.settings_test_ok))
         } else {
-            Result.failure(usageResult.exceptionOrNull() ?: ProviderError.Generic(displayName, "Ошибка соединения"))
+            Result.failure(usageResult.exceptionOrNull() ?: ProviderError.Generic(displayName, AppStrings.get(R.string.settings_connection_failed)))
         }
     }
 
@@ -206,7 +208,7 @@ class DeepLProvider @Inject constructor(
             is SocketTimeoutException -> ProviderError.Timeout(displayName)
             is UnknownHostException, is IOException -> ProviderError.Offline
             is ProviderError -> e
-            else -> ProviderError.Generic(displayName, e.localizedMessage ?: "Сетевая ошибка")
+            else -> ProviderError.Generic(displayName, e.localizedMessage ?: AppStrings.get(R.string.perr_network))
         }
     }
 }

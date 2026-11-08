@@ -1,5 +1,7 @@
 package app.deutschlern.update.data
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -148,7 +150,7 @@ class ApkVerifier(
     fun verify(file: File, expectedDigest: String?): Result<Unit> {
         // 5. Sanity check on file size
         if (!file.exists()) {
-            return Result.failure(UpdateError.GenericError("APK file does not exist"))
+            return Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_apk_missing)))
         }
 
         val fileSize = file.length()
@@ -171,7 +173,7 @@ class ApkVerifier(
         val archiveInfo = metadataProvider.getArchiveInfo(file)
         if (archiveInfo == null) {
             file.delete()
-            return Result.failure(UpdateError.GenericError("Failed to parse APK archive metadata"))
+            return Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_apk_parse)))
         }
 
         val expectedPackage = metadataProvider.getInstalledPackageName()
@@ -198,7 +200,7 @@ class ApkVerifier(
 
         if (installedCert.isNullOrBlank() || downloadedCert.isNullOrBlank()) {
             file.delete()
-            return Result.failure(UpdateError.GenericError("Missing signing certificate information"))
+            return Result.failure(UpdateError.GenericError(AppStrings.get(R.string.upd_cert_missing)))
         }
 
         val normalizedInstalled = installedCert.replace(":", "").lowercase()

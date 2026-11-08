@@ -30,6 +30,9 @@ interface DialogTaskDao {
     @Query("SELECT * FROM dialog_tasks WHERE dialogId = :dialogId ORDER BY createdAt ASC")
     suspend fun getTasksForDialogSync(dialogId: Long): List<DialogTaskEntity>
 
+    @Query("SELECT * FROM dialog_tasks")
+    fun getAllTasks(): Flow<List<DialogTaskEntity>>
+
     @Query("SELECT * FROM dialog_tasks WHERE id = :id")
     suspend fun getTaskById(id: Long): DialogTaskEntity?
 }

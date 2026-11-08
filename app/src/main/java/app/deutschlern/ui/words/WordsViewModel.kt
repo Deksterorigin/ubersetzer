@@ -1,5 +1,7 @@
 package app.deutschlern.ui.words
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.domain.model.SessionWithWords
@@ -99,7 +101,7 @@ class WordsViewModel @Inject constructor(
             is WordsUiEvent.OnUndoDelete -> handleUndoDelete()
             is WordsUiEvent.OnCreateNewSession -> handleCreateNewSession()
             is WordsUiEvent.OnSpeakWord -> ttsManager.speak(event.text) {
-                _uiState.update { it.copy(snackbarMessage = "Голосовые данные для немецкого языка не установлены.") }
+                _uiState.update { it.copy(snackbarMessage = AppStrings.get(R.string.words_tts_missing)) }
             }
             is WordsUiEvent.OnDismissSnackbar -> _uiState.update { it.copy(snackbarMessage = null, showUndoAction = false) }
             // Add Word events
@@ -193,7 +195,7 @@ class WordsViewModel @Inject constructor(
                 current.copy(
                     selectedWordForDetail = null,
                     lastDeletedWord = deleted,
-                    snackbarMessage = "Слово «${word.lemma}» удалено",
+                    snackbarMessage = AppStrings.get(R.string.words_deleted, word.lemma),
                     showUndoAction = deleted != null
                 )
             }
@@ -207,7 +209,7 @@ class WordsViewModel @Inject constructor(
             _uiState.update {
                 it.copy(
                     lastDeletedWord = null,
-                    snackbarMessage = if (restored) null else "Слово «${wordToRestore.word.lemma}» уже добавлено заново",
+                    snackbarMessage = if (restored) null else AppStrings.get(R.string.words_already_readded, wordToRestore.word.lemma),
                     showUndoAction = false
                 )
             }
@@ -219,7 +221,7 @@ class WordsViewModel @Inject constructor(
             val session = vocabularyRepository.createManualSession()
             _uiState.update {
                 it.copy(
-                    snackbarMessage = "Создан новый урок: ${session.title}",
+                    snackbarMessage = AppStrings.get(R.string.words_session_created, session.title),
                     showUndoAction = false
                 )
             }
@@ -299,7 +301,7 @@ class WordsViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isAddWordTranslating = false,
-                        addWordTranslateError = result.exceptionOrNull()?.localizedMessage ?: "Ошибка перевода"
+                        addWordTranslateError = result.exceptionOrNull()?.localizedMessage ?: AppStrings.get(R.string.words_translate_failed)
                     )
                 }
             }
@@ -332,7 +334,7 @@ class WordsViewModel @Inject constructor(
                         isAddWordSheetVisible = false,
                         addWordTranslateInput = "",
                         addWordTranslatedResult = null,
-                        snackbarMessage = "Слово успешно добавлено",
+                        snackbarMessage = AppStrings.get(R.string.words_added),
                         showUndoAction = false
                     )
                 }
@@ -367,7 +369,7 @@ class WordsViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isEnhancingWithAi = false,
-                        manualError = result.exceptionOrNull()?.localizedMessage ?: "Ошибка дополнения"
+                        manualError = result.exceptionOrNull()?.localizedMessage ?: AppStrings.get(R.string.words_autofill_failed)
                     )
                 }
             }
@@ -378,7 +380,7 @@ class WordsViewModel @Inject constructor(
         val word = _uiState.value.manualGermanWord.trim()
         val translation = _uiState.value.manualTranslation.trim()
         if (word.isBlank() || translation.isBlank()) {
-            _uiState.update { it.copy(manualError = "Заполните слово и перевод") }
+            _uiState.update { it.copy(manualError = AppStrings.get(R.string.words_fill_required)) }
             return
         }
         viewModelScope.launch {
@@ -418,7 +420,7 @@ class WordsViewModel @Inject constructor(
                         manualTranslation = "",
                         manualExample = "",
                         manualArticle = null,
-                        snackbarMessage = "Слово успешно добавлено",
+                        snackbarMessage = AppStrings.get(R.string.words_added),
                         showUndoAction = false
                     )
                 }
@@ -465,7 +467,7 @@ class WordsViewModel @Inject constructor(
                     isBulkTranslating = false,
                     isAddWordSheetVisible = false,
                     bulkInputText = "",
-                    snackbarMessage = "Добавлено $addedCount из ${words.size} слов",
+                    snackbarMessage = AppStrings.get(R.string.words_added_count, addedCount, words.size),
                     showUndoAction = false
                 )
             }
@@ -485,7 +487,7 @@ class WordsViewModel @Inject constructor(
                 it.copy(
                     duplicateWordDialogData = null,
                     isAddWordSheetVisible = false,
-                    snackbarMessage = "Слово добавлено в текущий урок",
+                    snackbarMessage = AppStrings.get(R.string.words_added_to_session),
                     showUndoAction = false
                 )
             }

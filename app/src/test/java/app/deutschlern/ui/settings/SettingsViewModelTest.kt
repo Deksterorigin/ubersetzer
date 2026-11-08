@@ -1,5 +1,7 @@
 package app.deutschlern.ui.settings
 
+import app.deutschlern.util.AppStrings
+import app.deutschlern.R
 import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.security.SecureKeyStorage
 import app.deutschlern.data.remote.provider.DeepLProvider
@@ -22,6 +24,7 @@ import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -120,6 +123,19 @@ class SettingsViewModelTest {
 
         val groqModel = viewModel.uiState.value.providers.find { it.id == "groq" }
         assertEquals("Работает", groqModel?.testStatus)
+        assertFalse(groqModel!!.testStatusIsError)
+    }
+
+    @Test
+    fun onTestConnectionClicked_failure_marksStatusAsError() = runTest {
+        coEvery { groqProvider.testConnection(any()) } returns Result.failure(IllegalStateException("nope"))
+
+        viewModel.onTestConnectionClicked("groq")
+        advanceUntilIdle()
+
+        val groqModel = viewModel.uiState.value.providers.find { it.id == "groq" }
+        assertEquals("nope", groqModel?.testStatus)
+        assertTrue(groqModel!!.testStatusIsError)
     }
 
     @Test
@@ -128,7 +144,7 @@ class SettingsViewModelTest {
         advanceUntilIdle()
 
         coVerify(exactly = 1) { cacheDao.clearAll() }
-        assertEquals("Кэш переводов очищен", viewModel.uiState.value.infoMessage)
+        assertEquals(AppStrings.get(R.string.settings_cache_cleared), viewModel.uiState.value.infoMessage)
     }
 
     @Test

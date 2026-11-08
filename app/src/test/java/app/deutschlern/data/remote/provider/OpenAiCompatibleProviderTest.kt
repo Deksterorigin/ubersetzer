@@ -46,7 +46,7 @@ class OpenAiCompatibleProviderTest {
             baseUrl = mockWebServer.url("/v1").toString().removeSuffix("/"),
             defaultModel = "llama-3.3-70b-versatile",
             rateLimitDocsUrl = "https://groq.com",
-            freeTierNote = "Free LPU"
+            freeTierNoteRes = 0
         )
 
         provider = OpenAiCompatibleProvider(

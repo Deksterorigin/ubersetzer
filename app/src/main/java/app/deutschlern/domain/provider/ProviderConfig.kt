@@ -1,5 +1,7 @@
 package app.deutschlern.domain.provider
 
+import androidx.annotation.StringRes
+
 data class ProviderConfig(
     val id: String,
     val name: String,
@@ -7,7 +9,8 @@ data class ProviderConfig(
     val defaultModel: String,
     val keyUrl: String? = null,
     val rateLimitDocsUrl: String,
-    val freeTierNote: String,
+    @StringRes val freeTierNoteRes: Int,
     val minDelayBetweenRequestsMs: Long = 0L,
-    val extraHeaders: Map<String, String> = emptyMap()
+    val extraHeaders: Map<String, String> = emptyMap(),
+    @StringRes val nameRes: Int? = null
 )

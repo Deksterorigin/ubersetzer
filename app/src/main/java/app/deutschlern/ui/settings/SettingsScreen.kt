@@ -408,7 +408,7 @@ private fun ProviderDropdownField(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = currentProvider?.displayName ?: selectedId,
+                    text = currentProvider?.localizedName() ?: selectedId,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.onSurface
@@ -432,7 +432,7 @@ private fun ProviderDropdownField(
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(p.displayName)
+                                Text(p.localizedName())
                                 if (p.id == selectedId) {
                                     Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp))
                                 }
@@ -491,7 +491,7 @@ private fun ProviderConfigCard(
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
-                        text = provider.displayName,
+                        text = provider.localizedName(),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurface
@@ -527,9 +527,9 @@ private fun ProviderConfigCard(
                 HairlineDivider()
 
                 // Free tier note and links
-                if (provider.freeTierNote.isNotBlank()) {
+                if (provider.freeTierNoteRes != null) {
                     Text(
-                        text = provider.freeTierNote,
+                        text = stringResource(provider.freeTierNoteRes),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -743,10 +743,7 @@ private fun ProviderConfigCard(
                         Text(
                             text = status,
                             style = MaterialTheme.typography.bodySmall,
-                            color = if (status.contains("Работает", ignoreCase = true) || status.contains("загружен", ignoreCase = true))
-                                MaterialTheme.colorScheme.primary
-                            else
-                                MaterialTheme.colorScheme.error,
+                            color = if (provider.testStatusIsError) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.weight(1f).padding(start = 12.dp)
                         )
@@ -812,7 +809,7 @@ private fun AutoFallbackSection(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "${index + 1}. ${p?.displayName ?: providerId}",
+                        text = "${index + 1}. ${p?.localizedName() ?: providerId}",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Medium
                     )
@@ -899,6 +896,10 @@ private fun GeneralSettingsSection(
         }
     }
 }
+
+@Composable
+private fun ProviderUiModel.localizedName(): String =
+    displayNameRes?.let { stringResource(it) } ?: displayName
 
 @Composable
 internal fun SettingSwitchRow(

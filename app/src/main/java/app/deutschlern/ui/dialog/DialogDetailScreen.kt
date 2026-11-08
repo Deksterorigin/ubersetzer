@@ -31,6 +31,7 @@ import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.School
 import androidx.compose.material.icons.outlined.Timer
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -53,6 +54,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -121,6 +123,30 @@ fun DialogDetailScreen(
     }
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    if (uiState.showConsentDialog) {
+        AlertDialog(
+            onDismissRequest = viewModel::onConsentDeclined,
+            title = {
+                Text(
+                    text = stringResource(R.string.dialog_consent_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+            },
+            text = { Text(stringResource(R.string.dialog_consent_message)) },
+            confirmButton = {
+                Button(onClick = viewModel::onConsentAccepted) {
+                    Text(stringResource(R.string.action_accept))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = viewModel::onConsentDeclined) {
+                    Text(stringResource(R.string.action_cancel))
+                }
+            }
+        )
+    }
 
     Scaffold(
         topBar = {

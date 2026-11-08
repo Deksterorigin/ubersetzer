@@ -1,5 +1,7 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.util.runSuspendCatching
 import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.entity.CacheEntryEntity
@@ -130,7 +132,7 @@ class TranslationRepositoryImpl @Inject constructor(
                         result = mlKitAttempt
                         activeProvider = registry.mlKitOfflineProvider
                         activeModel = "on-device"
-                        fallbackNotice = "Офлайн-режим (ML Kit)"
+                        fallbackNotice = AppStrings.get(R.string.translate_offline_mode)
                     }
                 }
 
@@ -149,7 +151,7 @@ class TranslationRepositoryImpl @Inject constructor(
                             result = fallbackAttempt
                             activeProvider = candidate
                             activeModel = candidateModel
-                            fallbackNotice = "Переключено на ${candidate.displayName}"
+                            fallbackNotice = AppStrings.get(R.string.translate_switched_to, candidate.displayName)
                             break
                         }
                     }
@@ -181,7 +183,7 @@ class TranslationRepositoryImpl @Inject constructor(
                 )
             )
         } else {
-            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(provider.displayName, "Ошибка перевода"))
+            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(provider.displayName, AppStrings.get(R.string.words_translate_failed)))
         }
     }
 
@@ -193,7 +195,7 @@ class TranslationRepositoryImpl @Inject constructor(
     ): Result<TranslationResult<WordTranslation>> = withContext(ioDispatcher) {
         val normalizedWord = TextNormalizer.normalize(word)
         if (normalizedWord.isBlank()) {
-            return@withContext Result.failure(IllegalArgumentException("Слово не может быть пустым"))
+            return@withContext Result.failure(IllegalArgumentException(AppStrings.get(R.string.translate_word_empty)))
         }
 
         val normalizedContext = if (context.isNullOrBlank()) null else TextNormalizer.normalize(context)
@@ -299,7 +301,7 @@ class TranslationRepositoryImpl @Inject constructor(
                         result = fallbackAttempt
                         activeProvider = candidate
                         activeModel = candidateModel
-                        fallbackNotice = "Переключено на ${candidate.displayName}"
+                        fallbackNotice = AppStrings.get(R.string.translate_switched_to, candidate.displayName)
                         break
                     }
                 }
@@ -331,7 +333,7 @@ class TranslationRepositoryImpl @Inject constructor(
                 )
             )
         } else {
-            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(provider.displayName, "Ошибка перевода"))
+            Result.failure(result.exceptionOrNull() ?: ProviderError.Generic(provider.displayName, AppStrings.get(R.string.words_translate_failed)))
         }
     }
 }

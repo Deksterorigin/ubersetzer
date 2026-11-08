@@ -1,5 +1,7 @@
 package app.deutschlern.data.stt
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -138,7 +140,7 @@ open class AndroidSpeechEngine(
             var onDevice = preferOffline
             val recognizer = createRecognizer(onDevice)
             if (recognizer == null) {
-                trySend(SttEvent.Error("Сервис распознавания речи недоступен на этом устройстве", isRecoverable = false))
+                trySend(SttEvent.Error(AppStrings.get(R.string.stt_unavailable), isRecoverable = false))
                 trySend(SttEvent.StateChanged(false))
                 close()
                 return@withContext
@@ -295,7 +297,7 @@ open class AndroidSpeechEngine(
                             SpeechDebugLogger.onError(errorCode, errorMessage, isRecoverable = true, willRestart = true)
                             trySend(
                                 SttEvent.Error(
-                                    "Офлайн-модель недоступна, используется онлайн-распознавание",
+                                    AppStrings.get(R.string.stt_offline_fallback),
                                     isRecoverable = true,
                                     errorCode = errorCode
                                 )
@@ -534,22 +536,22 @@ open class AndroidSpeechEngine(
 
     open fun mapErrorCode(errorCode: Int): Pair<String, Boolean> {
         return when (errorCode) {
-            SpeechRecognizer.ERROR_AUDIO -> "Ошибка аудиозаписи" to true
-            SpeechRecognizer.ERROR_CLIENT -> "Внутренняя ошибка сервиса распознавания" to true
-            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Отсутствует разрешение на запись аудио" to false
-            SpeechRecognizer.ERROR_NETWORK -> "Ошибка сети при распознавании" to true
-            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Таймаут соединения с сетью" to true
-            SpeechRecognizer.ERROR_NO_MATCH -> "Речь не распознана" to true
-            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Служба распознавания речи занята" to true
-            SpeechRecognizer.ERROR_SERVER -> "Ошибка сервера распознавания" to true
-            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "Речь не обнаружена" to true
-            SpeechRecognizer.ERROR_SERVER_DISCONNECTED -> "Сервер распознавания отключен" to true
-            SpeechRecognizer.ERROR_TOO_MANY_REQUESTS -> "Слишком много запросов на распознавание" to true
-            SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED -> "Язык не поддерживается" to false
-            SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE -> "Языковая модель недоступна" to false
-            SpeechRecognizer.ERROR_CANNOT_CHECK_SUPPORT -> "Не удалось проверить поддержку языка" to false
-            SpeechRecognizer.ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS -> "Не удалось отследить загрузку модели" to false
-            else -> "Неизвестная ошибка распознавания ($errorCode)" to false
+            SpeechRecognizer.ERROR_AUDIO -> AppStrings.get(R.string.stt_err_audio) to true
+            SpeechRecognizer.ERROR_CLIENT -> AppStrings.get(R.string.stt_err_client) to true
+            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> AppStrings.get(R.string.stt_err_permission) to false
+            SpeechRecognizer.ERROR_NETWORK -> AppStrings.get(R.string.stt_err_network) to true
+            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> AppStrings.get(R.string.stt_err_network_timeout) to true
+            SpeechRecognizer.ERROR_NO_MATCH -> AppStrings.get(R.string.stt_err_no_match) to true
+            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> AppStrings.get(R.string.stt_err_busy) to true
+            SpeechRecognizer.ERROR_SERVER -> AppStrings.get(R.string.stt_err_server) to true
+            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> AppStrings.get(R.string.stt_err_speech_timeout) to true
+            SpeechRecognizer.ERROR_SERVER_DISCONNECTED -> AppStrings.get(R.string.stt_err_server_disconnected) to true
+            SpeechRecognizer.ERROR_TOO_MANY_REQUESTS -> AppStrings.get(R.string.stt_err_too_many) to true
+            SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED -> AppStrings.get(R.string.stt_err_lang_unsupported) to false
+            SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE -> AppStrings.get(R.string.stt_err_lang_unavailable) to false
+            SpeechRecognizer.ERROR_CANNOT_CHECK_SUPPORT -> AppStrings.get(R.string.stt_err_check_support) to false
+            SpeechRecognizer.ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS -> AppStrings.get(R.string.stt_err_download_events) to false
+            else -> AppStrings.get(R.string.stt_err_unknown, errorCode) to false
         }
     }
 

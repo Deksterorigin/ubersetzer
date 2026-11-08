@@ -1,5 +1,6 @@
 package app.deutschlern.ui.review
 
+import app.deutschlern.data.trainer.TrainerStatsStore
 import app.deutschlern.domain.model.FlashcardDirection
 import app.deutschlern.domain.model.Meaning
 import app.deutschlern.domain.model.ReviewCard
@@ -34,6 +35,7 @@ class ReviewViewModelTest {
 
     private val reviewRepository = mockk<ReviewRepository>(relaxed = true)
     private val ttsManager = mockk<TtsManager>(relaxed = true)
+    private val statsStore = mockk<TrainerStatsStore>(relaxed = true)
     private val testDispatcher = StandardTestDispatcher()
 
     private val dueCardsFlow = MutableStateFlow<List<ReviewCard>>(emptyList())
@@ -93,7 +95,8 @@ class ReviewViewModelTest {
 
         viewModel = ReviewViewModel(
             reviewRepository = reviewRepository,
-            ttsManager = ttsManager
+            ttsManager = ttsManager,
+            statsStore = statsStore
         )
     }
 
@@ -200,6 +203,55 @@ class ReviewViewModelTest {
         // Original 2 cards + re-added card1 at the end = 3 cards total
         assertEquals(3, state.cards.size)
         assertEquals(card1, state.cards[2])
+    }
+
+    @Test
+    fun gradedCardLeavingDueList_doesNotSkipNextCard() = runTest {
+        val card3 = card2.copy(word = card2.word.copy(id = 30L, lemma = "das Haus"))
+        dueCardsFlow.value = listOf(card1, card2, card3)
+        advanceUntilIdle()
+
+        viewModel.onEvent(ReviewUiEvent.OnGradeAnswer(Sm2Grade.GOOD))
+        advanceUntilIdle()
+        // Room re-emits the due list without the card that was just graded
+        dueCardsFlow.value = listOf(card2, card3)
+        advanceUntilIdle()
+
+        assertEquals(card2, viewModel.uiState.value.currentCard)
+    }
+
+    @Test
+    fun againCard_survivesDueListUpdate() = runTest {
+        advanceUntilIdle()
+
+        viewModel.onEvent(ReviewUiEvent.OnGradeAnswer(Sm2Grade.AGAIN))
+        advanceUntilIdle()
+        dueCardsFlow.value = listOf(card2)
+        advanceUntilIdle()
+
+        assertEquals(listOf(card1, card2, card1), viewModel.uiState.value.cards)
+    }
+
+    @Test
+    fun deletedWord_doesNotCrashAndAdvancesQueue() = runTest {
+        advanceUntilIdle()
+        coEvery { reviewRepository.reviewCard(10L, any(), any()) } throws IllegalArgumentException("gone")
+
+        viewModel.onEvent(ReviewUiEvent.OnGradeAnswer(Sm2Grade.GOOD))
+        advanceUntilIdle()
+
+        assertEquals(card2, viewModel.uiState.value.currentCard)
+        coVerify(exactly = 0) { statsStore.recordAnswer(any()) }
+    }
+
+    @Test
+    fun gradedCard_countsTowardsDailyStreak() = runTest {
+        advanceUntilIdle()
+
+        viewModel.onEvent(ReviewUiEvent.OnGradeAnswer(Sm2Grade.GOOD))
+        advanceUntilIdle()
+
+        coVerify(exactly = 1) { statsStore.recordAnswer(any()) }
     }
 
     @Test

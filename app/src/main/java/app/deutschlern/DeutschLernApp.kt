@@ -5,6 +5,7 @@ import app.deutschlern.data.backup.BackupManager
 import app.deutschlern.di.ApplicationScope
 import app.deutschlern.domain.repository.DialogRepository
 import app.deutschlern.ui.dialog.components.TranscriptTokenizer
+import app.deutschlern.util.AppStrings
 import app.deutschlern.util.TempImageCleaner
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -26,6 +27,7 @@ class DeutschLernApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        AppStrings.init(this)
         TempImageCleaner.clearTempOcrDirectory(this)
         // No recording can be active in a fresh process, so any RECORDING dialog was interrupted
         applicationScope.launch { dialogRepository.markInterruptedRecordings() }

@@ -13,7 +13,7 @@ enum class AppLanguage(
     GERMAN(code = "de", displayName = "Deutsch", nativeName = "Deutsch", isRtl = false, bcp47Tag = "de"),
     UKRAINIAN(code = "uk", displayName = "Українська", nativeName = "Українська", isRtl = false, bcp47Tag = "uk"),
     ARABIC(code = "ar", displayName = "العربية", nativeName = "العربية", isRtl = true, bcp47Tag = "ar"),
-    DARI(code = "fa", displayName = "دری (Дари)", nativeName = "دری (Дари)", isRtl = true, bcp47Tag = "fa"),
+    DARI(code = "fa", displayName = "Dari", nativeName = "دری", isRtl = true, bcp47Tag = "fa"),
     ROMANIAN(code = "ro", displayName = "Română", nativeName = "Română", isRtl = false, bcp47Tag = "ro");
 
     companion object {

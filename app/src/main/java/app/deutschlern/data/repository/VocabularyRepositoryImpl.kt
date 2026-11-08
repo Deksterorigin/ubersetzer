@@ -1,5 +1,7 @@
 package app.deutschlern.data.repository
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.local.TransactionRunner
 import app.deutschlern.data.local.dao.ReviewDao
 import app.deutschlern.data.local.dao.SessionDao
@@ -59,7 +61,7 @@ class VocabularyRepositoryImpl @Inject constructor(
             sessionDao.getSessionsForDate(startOfDay).firstOrNull()?.toDomain()
                 ?: run {
                     val newSession = SessionEntity(
-                        title = "Урок, ${formatSessionDate(now)}",
+                        title = AppStrings.get(R.string.session_title, formatSessionDate(now)),
                         date = startOfDay,
                         isManual = false
                     )
@@ -76,9 +78,9 @@ class VocabularyRepositoryImpl @Inject constructor(
 
             val formattedDate = formatSessionDate(now)
             val title = if (todaySessions.isEmpty()) {
-                "Урок, $formattedDate"
+                AppStrings.get(R.string.session_title, formattedDate)
             } else {
-                "Урок, $formattedDate (${todaySessions.size + 1})"
+                AppStrings.get(R.string.session_title_numbered, formattedDate, todaySessions.size + 1)
             }
 
             val newSession = SessionEntity(title = title, date = startOfDay, isManual = true)
@@ -350,7 +352,7 @@ class VocabularyRepositoryImpl @Inject constructor(
 
     companion object {
         fun formatSessionDate(timestamp: Long): String {
-            val formatter = SimpleDateFormat("d MMM", Locale("ru"))
+            val formatter = SimpleDateFormat("d MMM", Locale.getDefault())
             return formatter.format(Date(timestamp)).trimEnd('.')
         }
 

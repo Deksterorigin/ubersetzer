@@ -1,5 +1,7 @@
 package app.deutschlern.domain.check
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.dto.check.CommentItemDto
 import app.deutschlern.data.remote.dto.check.EditItemDto
 import app.deutschlern.domain.model.check.CheckCategory
@@ -211,7 +213,7 @@ object TokenDiffEngine {
         rawHunks: List<RawHunk>,
         modelEdits: List<EditItemDto>,
         defaultCategory: CheckCategory = CheckCategory.GRAMMAR,
-        defaultExplanation: String = "Исправление"
+        defaultExplanation: String = AppStrings.get(R.string.check_default_explanation)
     ): List<CheckEditHunk> {
         val result = mutableListOf<CheckEditHunk>()
 

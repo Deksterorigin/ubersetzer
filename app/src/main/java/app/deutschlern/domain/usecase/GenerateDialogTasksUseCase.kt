@@ -1,5 +1,7 @@
 package app.deutschlern.domain.usecase
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import app.deutschlern.data.remote.dto.dialog.DialogGapFillResponseDto
 import app.deutschlern.data.remote.dto.dialog.DialogOpenQuestionsResponseDto
 import app.deutschlern.data.remote.dto.dialog.DialogQuizResponseDto
@@ -40,7 +42,7 @@ class GenerateDialogTasksUseCase @Inject constructor(
         partnerLanguage: PartnerLanguage
     ): Result<DialogTask> = withContext(Dispatchers.Default) {
         if (transcript.isBlank()) {
-            return@withContext Result.failure(IllegalArgumentException("Transcript is empty"))
+            return@withContext Result.failure(IllegalArgumentException(AppStrings.get(R.string.dialog_error_transcript_empty)))
         }
 
         val settings = settingsRepository.getSettings()

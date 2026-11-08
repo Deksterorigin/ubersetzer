@@ -111,9 +111,19 @@ import app.deutschlern.ui.components.HairlineDivider
 fun CheckScreen(
     onNavigateToHistory: () -> Unit,
     onNavigateToSettings: () -> Unit,
+    savedCheckId: Long? = null,
+    onSavedCheckOpened: () -> Unit = {},
     viewModel: CheckViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    LaunchedEffect(savedCheckId) {
+        if (savedCheckId != null) {
+            viewModel.onEvent(CheckUiEvent.OnLoadSavedCheck(savedCheckId))
+            onSavedCheckOpened()
+        }
+    }
+
     val clipboardManager = LocalClipboardManager.current
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }

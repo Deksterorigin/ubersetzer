@@ -1,5 +1,7 @@
 package app.deutschlern.ui.settings
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.deutschlern.data.local.dao.CacheDao
@@ -52,6 +54,11 @@ class SettingsViewModel @Inject constructor(
                     ProviderUiModel(
                         id = provider.id,
                         displayName = provider.displayName,
+                        displayNameRes = when (provider.id) {
+                            "mlkit" -> R.string.provider_mlkit_name
+                            "custom" -> R.string.provider_custom_name
+                            else -> null
+                        },
                         supportsWordMode = provider.capabilities.supportsWordMode,
                         supportsTextMode = provider.capabilities.supportsTextMode,
                         isOffline = provider.capabilities.isOffline,
@@ -61,6 +68,7 @@ class SettingsViewModel @Inject constructor(
                         availableModels = existingModel?.availableModels ?: emptyList(),
                         isLoadingModels = existingModel?.isLoadingModels ?: false,
                         testStatus = existingModel?.testStatus,
+                        testStatusIsError = existingModel?.testStatusIsError ?: false,
                         isTesting = existingModel?.isTesting ?: false,
                         keyUrl = when (provider.id) {
                             "gemini" -> "https://aistudio.google.com/app/apikey"
@@ -72,11 +80,11 @@ class SettingsViewModel @Inject constructor(
                             "deepl" -> "https://www.deepl.com/pro-api"
                             else -> presetConfig?.rateLimitDocsUrl
                         },
-                        freeTierNote = when (provider.id) {
-                            "gemini" -> "Google Gemini Free Tier (до 15 запросов в минуту):"
-                            "deepl" -> "DeepL API Free: 500 000 знаков в месяц бесплатно."
-                            "mlkit" -> "Полностью бесплатно и работает без интернета."
-                            else -> presetConfig?.freeTierNote.orEmpty()
+                        freeTierNoteRes = when (provider.id) {
+                            "gemini" -> R.string.tier_gemini
+                            "deepl" -> R.string.tier_deepl
+                            "mlkit" -> R.string.tier_mlkit
+                            else -> presetConfig?.freeTierNoteRes
                         },
                         deeplUsage = existingModel?.deeplUsage,
                         isMlKitDownloaded = isMlKitDownloaded
@@ -199,12 +207,14 @@ class SettingsViewModel @Inject constructor(
                             p.copy(
                                 isLoadingModels = false,
                                 availableModels = models,
-                                testStatus = "Загружено ${models.size} моделей"
+                                testStatus = AppStrings.get(R.string.settings_models_loaded_count, models.size),
+                                testStatusIsError = false
                             )
                         } else {
                             p.copy(
                                 isLoadingModels = false,
-                                testStatus = result.exceptionOrNull()?.localizedMessage ?: "Ошибка загрузки моделей"
+                                testStatus = result.exceptionOrNull()?.localizedMessage ?: AppStrings.get(R.string.settings_models_load_failed),
+                                testStatusIsError = true
                             )
                         }
                     } else p
@@ -221,19 +231,22 @@ class SettingsViewModel @Inject constructor(
 
         _uiState.update { state ->
             val updated = state.providers.map { p ->
-                if (p.id == providerId) p.copy(isTesting = true, testStatus = "Проверка…") else p
+                if (p.id == providerId) p.copy(isTesting = true, testStatus = AppStrings.get(R.string.settings_testing), testStatusIsError = false) else p
             }
             state.copy(providers = updated)
         }
 
         viewModelScope.launch {
             val result = provider.testConnection(currentModel)
+            // ML Kit answers successfully even when its models still have to be downloaded
+            val needsDownload = providerId == "mlkit" && !mlKitOfflineProvider.areModelsDownloaded()
             _uiState.update { state ->
                 val updated = state.providers.map { p ->
                     if (p.id == providerId) {
                         p.copy(
                             isTesting = false,
-                            testStatus = if (result.isSuccess) result.getOrThrow() else (result.exceptionOrNull()?.localizedMessage ?: "Ошибка соединения")
+                            testStatus = if (result.isSuccess) result.getOrThrow() else (result.exceptionOrNull()?.localizedMessage ?: AppStrings.get(R.string.settings_connection_failed)),
+                            testStatusIsError = result.isFailure || needsDownload
                         )
                     } else p
                 }
@@ -297,7 +310,8 @@ class SettingsViewModel @Inject constructor(
                         p.copy(
                             isMlKitDownloading = false,
                             isMlKitDownloaded = downloaded,
-                            testStatus = if (result.isSuccess) "Модели загружены" else result.exceptionOrNull()?.localizedMessage
+                            testStatus = if (result.isSuccess) AppStrings.get(R.string.settings_models_downloaded) else result.exceptionOrNull()?.localizedMessage,
+                            testStatusIsError = result.isFailure
                         )
                     } else p
                 }
@@ -321,7 +335,7 @@ class SettingsViewModel @Inject constructor(
     fun onClearCacheClicked() {
         viewModelScope.launch {
             cacheDao.clearAll()
-            _uiState.update { it.copy(infoMessage = "Кэш переводов очищен") }
+            _uiState.update { it.copy(infoMessage = AppStrings.get(R.string.settings_cache_cleared)) }
         }
     }
 

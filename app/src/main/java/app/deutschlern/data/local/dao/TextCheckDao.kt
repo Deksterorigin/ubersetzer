@@ -13,6 +13,12 @@ interface TextCheckDao {
     @Query("SELECT * FROM text_checks ORDER BY createdAt DESC")
     fun getAll(): Flow<List<TextCheckEntity>>
 
+    @Query("SELECT * FROM text_checks")
+    suspend fun getAllSync(): List<TextCheckEntity>
+
+    @Query("SELECT EXISTS(SELECT 1 FROM text_checks WHERE createdAt = :createdAt AND originalText = :originalText)")
+    suspend fun exists(createdAt: Long, originalText: String): Boolean
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(entity: TextCheckEntity): Long
 

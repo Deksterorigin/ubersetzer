@@ -1,5 +1,7 @@
 package app.deutschlern.ui.dialog
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -92,7 +94,7 @@ class DialogRecordingViewModel @Inject constructor(
             val now = System.currentTimeMillis()
             val timeStr = SimpleDateFormat("dd.MM HH:mm", Locale.getDefault()).format(Date(now))
             val newDialog = Dialog(
-                title = "Dialog $timeStr",
+                title = AppStrings.get(R.string.dialog_default_title, timeStr),
                 startedAt = now,
                 durationMs = 0,
                 segmentCount = 0,
@@ -173,7 +175,7 @@ class DialogRecordingViewModel @Inject constructor(
                 hasAudioPermission = false,
                 isRecording = false,
                 isPaused = true,
-                pauseReason = "Отсутствует доступ к микрофону"
+                pauseReason = AppStrings.get(R.string.dialog_pause_no_mic)
             )
         }
         stopEngine()
@@ -372,14 +374,14 @@ class DialogRecordingViewModel @Inject constructor(
 
     fun onAudioBecomingNoisy() {
         if (_uiState.value.isRecording && !_uiState.value.isPaused) {
-            pauseRecording("Наушники отключены")
+            pauseRecording(AppStrings.get(R.string.dialog_pause_headset))
         }
     }
 
     /** Background apps lose microphone access on Android 11+, so recording pauses explicitly. */
     fun onAppBackgrounded() {
         if (_uiState.value.isRecording && !_uiState.value.isPaused) {
-            pauseRecording("Приложение свёрнуто")
+            pauseRecording(AppStrings.get(R.string.dialog_pause_background))
         }
     }
 

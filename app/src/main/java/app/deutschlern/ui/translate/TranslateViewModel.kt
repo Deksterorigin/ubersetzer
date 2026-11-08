@@ -1,5 +1,7 @@
 package app.deutschlern.ui.translate
 
+import app.deutschlern.util.AppStrings
+import app.deutschlern.R
 import app.deutschlern.util.runSuspendCatching
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -317,7 +319,7 @@ class TranslateViewModel @Inject constructor(
                         }
                     },
                     onFailure = { error ->
-                        val msg = if (error is ProviderError) error.userMessage else (error.localizedMessage ?: "Произошла ошибка при переводе слова.")
+                        val msg = if (error is ProviderError) error.userMessage else (error.localizedMessage ?: AppStrings.get(R.string.err_translate_generic))
                         _uiState.update {
                             it.copy(
                                 isLoading = false,
@@ -358,7 +360,7 @@ class TranslateViewModel @Inject constructor(
                         }
                     },
                     onFailure = { error ->
-                        val msg = if (error is ProviderError) error.userMessage else (error.localizedMessage ?: "Произошла ошибка при переводе текста.")
+                        val msg = if (error is ProviderError) error.userMessage else (error.localizedMessage ?: AppStrings.get(R.string.err_translate_generic))
                         _uiState.update {
                             it.copy(
                                 isLoading = false,

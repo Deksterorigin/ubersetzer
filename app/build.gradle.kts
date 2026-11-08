@@ -25,12 +25,28 @@ android {
         applicationId = "app.deutschlern"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 4
-        versionName = "1.3"
+        versionCode = 5
+        versionName = "1.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
+        }
+    }
+
+    signingConfigs {
+        val storeFilePath = localProperties.getProperty("RELEASE_STORE_FILE")
+            ?: System.getenv("RELEASE_STORE_FILE")
+        if (storeFilePath != null) {
+            create("release") {
+                storeFile = file(storeFilePath)
+                storePassword = localProperties.getProperty("RELEASE_STORE_PASSWORD")
+                    ?: System.getenv("RELEASE_STORE_PASSWORD")
+                keyAlias = localProperties.getProperty("RELEASE_KEY_ALIAS")
+                    ?: System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = localProperties.getProperty("RELEASE_KEY_PASSWORD")
+                    ?: System.getenv("RELEASE_KEY_PASSWORD")
+            }
         }
     }
 
@@ -41,7 +57,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug")
+            // Falls back to the debug key until a release keystore is configured in local.properties
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
+            // x86 is only needed by emulators, which run debug builds; it doubled the APK size
+            ndk {
+                abiFilters += listOf("arm64-v8a", "armeabi-v7a")
+            }
             buildConfigField("Boolean", "ENABLE_SELF_UPDATE", "true")
             // Never ship a developer key in an APK that is published on GitHub Releases
             buildConfigField("String", "GEMINI_API_KEY", "\"\"")

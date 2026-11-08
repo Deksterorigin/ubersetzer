@@ -1,5 +1,7 @@
 package app.deutschlern.data.remote.provider
 
+import app.deutschlern.R
+import app.deutschlern.util.AppStrings
 import android.content.Context
 import app.deutschlern.domain.model.TranslationDirection
 import app.deutschlern.domain.model.WordTranslation
@@ -32,7 +34,8 @@ class MlKitOfflineProvider @Inject constructor(
 ) : TranslationProvider {
 
     override val id: String = "mlkit"
-    override val displayName: String = "ML Kit (Офлайн)"
+    override val displayName: String
+        get() = AppStrings.get(R.string.provider_mlkit_name)
     override val capabilities: ProviderCapabilities = ProviderCapabilities(
         supportsWordMode = false,
         supportsTextMode = true,
@@ -76,7 +79,7 @@ class MlKitOfflineProvider @Inject constructor(
             Result.success(Unit)
         } catch (e: Exception) {
             _isDownloading.value = false
-            Result.failure(ProviderError.Generic(displayName, "Ошибка скачивания моделей: ${e.localizedMessage}"))
+            Result.failure(ProviderError.Generic(displayName, AppStrings.get(R.string.perr_mlkit_download, e.localizedMessage.orEmpty())))
         }
     }
 
@@ -112,7 +115,7 @@ class MlKitOfflineProvider @Inject constructor(
         model: String
     ): Result<WordTranslation> {
         return Result.failure(
-            ProviderError.Generic(displayName, "ML Kit не поддерживает словарный режим (WORD). Доступен только для текста.")
+            ProviderError.Generic(displayName, AppStrings.get(R.string.perr_mlkit_no_word_mode))
         )
     }
 
@@ -131,7 +134,7 @@ class MlKitOfflineProvider @Inject constructor(
             Result.success(translated)
         } catch (e: Exception) {
             Result.failure(
-                ProviderError.Generic(displayName, "Ошибка офлайн-перевода ML Kit: ${e.localizedMessage}")
+                ProviderError.Generic(displayName, AppStrings.get(R.string.perr_mlkit_translate, e.localizedMessage.orEmpty()))
             )
         }
     }
@@ -139,9 +142,9 @@ class MlKitOfflineProvider @Inject constructor(
     override suspend fun testConnection(model: String): Result<String> = withContext(Dispatchers.IO) {
         val downloaded = areModelsDownloaded()
         if (downloaded) {
-            Result.success("Модели загружены и готовы к работе")
+            Result.success(AppStrings.get(R.string.mlkit_ready))
         } else {
-            Result.success("Требуется загрузка языковых моделей (DE/RU)")
+            Result.success(AppStrings.get(R.string.mlkit_needs_download))
         }
     }
 

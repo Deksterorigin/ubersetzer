@@ -2,13 +2,19 @@ package app.deutschlern.data.backup
 
 import android.content.Context
 import app.deutschlern.data.local.ImmediateTransactionRunner
+import app.deutschlern.data.local.dao.DialogDao
+import app.deutschlern.data.local.dao.DialogSegmentDao
+import app.deutschlern.data.local.dao.DialogTaskDao
 import app.deutschlern.data.local.dao.ReviewDao
 import app.deutschlern.data.local.dao.SessionDao
 import app.deutschlern.data.local.dao.SessionWordDao
+import app.deutschlern.data.local.dao.TextCheckDao
 import app.deutschlern.data.local.dao.WordDao
+import app.deutschlern.data.local.entity.DialogEntity
 import app.deutschlern.data.local.entity.SessionEntity
 import app.deutschlern.data.local.entity.WordEntryEntity
 import app.deutschlern.data.local.security.SecureKeyStorage
+import app.deutschlern.data.trainer.TrainerStatsStore
 import app.deutschlern.di.NetworkModule
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -18,6 +24,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
 import org.junit.Test
+import java.time.LocalDate
 
 class BackupManagerTest {
 
@@ -25,6 +32,11 @@ class BackupManagerTest {
     private val sessionDao = mockk<SessionDao>(relaxed = true)
     private val sessionWordDao = mockk<SessionWordDao>(relaxed = true)
     private val reviewDao = mockk<ReviewDao>(relaxed = true)
+    private val dialogDao = mockk<DialogDao>(relaxed = true)
+    private val dialogSegmentDao = mockk<DialogSegmentDao>(relaxed = true)
+    private val dialogTaskDao = mockk<DialogTaskDao>(relaxed = true)
+    private val textCheckDao = mockk<TextCheckDao>(relaxed = true)
+    private val trainerStatsStore = mockk<TrainerStatsStore>(relaxed = true)
     private val secureKeyStorage = mockk<SecureKeyStorage>(relaxed = true)
     private val json = NetworkModule.provideJson()
 
@@ -34,6 +46,11 @@ class BackupManagerTest {
         sessionDao = sessionDao,
         sessionWordDao = sessionWordDao,
         reviewDao = reviewDao,
+        dialogDao = dialogDao,
+        dialogSegmentDao = dialogSegmentDao,
+        dialogTaskDao = dialogTaskDao,
+        textCheckDao = textCheckDao,
+        trainerStatsStore = trainerStatsStore,
         secureKeyStorage = secureKeyStorage,
         transactionRunner = ImmediateTransactionRunner,
         json = json,
@@ -91,6 +108,86 @@ class BackupManagerTest {
 
         coVerify(exactly = 0) { sessionDao.insert(any()) }
         coVerify { wordDao.insert(match { it.sessionId == 5L }) }
+    }
+
+    @Test
+    fun restore_addsDialogsWithContent_andSkipsOnesAlreadyPresent() = runTest {
+        val newDialog = BackupDialog(
+            title = "Beim Arzt", startedAt = 10L, durationMs = 5L, status = "RECORDING",
+            segments = listOf(BackupDialogSegment(0, "Guten Tag", "A", 0L)),
+            tasks = listOf(BackupDialogTask("MCQ", "{}", createdAt = 11L))
+        )
+        val knownDialog = newDialog.copy(title = "Im Amt", startedAt = 20L)
+        coEvery { dialogDao.getByStartedAtAndTitle(10L, "Beim Arzt") } returns null
+        coEvery { dialogDao.getByStartedAtAndTitle(20L, "Im Amt") } returns
+            DialogEntity(id = 2L, title = "Im Amt", startedAt = 20L, durationMs = 5L)
+        coEvery { dialogDao.insertDialog(any()) } returns 77L
+
+        val result = manager.restore(
+            json.encodeToString(BackupFile.serializer(), BackupFile(createdAt = 1L, dialogs = listOf(newDialog, knownDialog)))
+        )
+
+        assertEquals(1, result.dialogsAdded)
+        coVerify(exactly = 1) { dialogDao.insertDialog(match { it.title == "Beim Arzt" && it.status == "INTERRUPTED" && it.segmentCount == 1 }) }
+        coVerify { dialogSegmentDao.insertSegments(match { it.single().dialogId == 77L && it.single().text == "Guten Tag" }) }
+        coVerify { dialogTaskDao.insertTasks(match { it.single().dialogId == 77L }) }
+    }
+
+    @Test
+    fun restore_addsOnlyNewTextChecks_andRestoresStreak() = runTest {
+        fun check(createdAt: Long) = BackupTextCheck("Text", "Text", "[]", "[]", "Text", createdAt, "m", "ru")
+        val stats = BackupTrainerStats(lastDay = 100L, streakDays = 5, answersToday = 3)
+        coEvery { textCheckDao.exists(1L, "Text") } returns true
+        coEvery { textCheckDao.exists(2L, "Text") } returns false
+
+        val result = manager.restore(
+            json.encodeToString(
+                BackupFile.serializer(),
+                BackupFile(createdAt = 1L, textChecks = listOf(check(1L), check(2L)), trainerStats = stats)
+            )
+        )
+
+        assertEquals(1, result.checksAdded)
+        coVerify(exactly = 1) { textCheckDao.insert(match { it.createdAt == 2L }) }
+        coVerify { trainerStatsStore.restoreStats(stats) }
+    }
+
+    @Test
+    fun restore_readsOldBackupWithoutNewFields() = runTest {
+        val result = manager.restore("""{"format":"deutschlern-backup","version":1,"createdAt":1}""")
+
+        assertEquals(RestoreResult(wordsAdded = 0, wordsAlreadyPresent = 0, keysRestored = 0), result)
+    }
+
+    @Test
+    fun createBackupJson_leavesOutKeysByDefaultSetting() {
+        assertEquals(false, BackupSettings().includeApiKeys)
+    }
+
+    @Test
+    fun hasUserContent_isTrueForDialogsWithoutWords() {
+        val dialog = BackupDialog(title = "t", startedAt = 1L, durationMs = 1L)
+
+        assertEquals(false, BackupFile(createdAt = 1L).hasUserContent)
+        assertEquals(true, BackupFile(createdAt = 1L, dialogs = listOf(dialog)).hasUserContent)
+    }
+
+    @Test
+    fun backupsToDelete_keepsNewestDays_removesLegacyFile_ignoresForeignFiles() {
+        val names = (1..9).map { "deutschlern-backup-2026-11-0$it.json" } +
+            listOf("deutschlern-backup.json", "my-notes.json", "deutschlern-backup-2026-11-01 (1).json")
+
+        val toDelete = BackupManager.backupsToDelete(names, keep = 7)
+
+        assertEquals(
+            listOf("deutschlern-backup-2026-11-02.json", "deutschlern-backup-2026-11-01.json", "deutschlern-backup.json"),
+            toDelete
+        )
+    }
+
+    @Test
+    fun dailyBackupName_usesIsoDate() {
+        assertEquals("deutschlern-backup-2026-11-08.json", BackupManager.dailyBackupName(LocalDate.of(2026, 11, 8)))
     }
 
     @Test
