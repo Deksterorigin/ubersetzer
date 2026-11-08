@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="check_text_truncated">Текст скорочено до %1$d символів</string>
+    <string name="check_no_key_desc">Для перевірки потрібен API-ключ вибраного постачальника ШІ. Його можна додати в налаштуваннях.</string>
+    <string name="check_scan_subtitle">Сфотографуйте сторінку й виділіть лише потрібні слова</string>
+    <string name="check_loading">Шукаємо помилки…</string>
+    <string name="check_action_reject_all">Відхилити все</string>
+    <string name="check_accepted_count">Прийнято: %1$d із %2$d</string>
+    <string name="check_hunk_hint">Натисніть виділену правку, щоб прийняти або відхилити її.</string>
+    <string name="check_hunk_apply">Застосувати правку</string>
+    <string name="check_hunk_keep_original">Залишити як було</string>
+    <string name="check_history_empty_desc">Тут з\'являться ваші перевірені тексти</string>
+    <string name="ocr_source_scanner_title">Сканер документів</string>
+    <string name="ocr_source_scanner_desc">Сам обріже й вирівняє сторінку</string>
+    <string name="ocr_source_camera_title">Камера</string>
+    <string name="ocr_source_camera_desc">Зробити звичайне фото тексту</string>
+    <string name="ocr_source_gallery_title">Галерея</string>
+    <string name="ocr_source_gallery_desc">Вибрати до 3 готових зображень</string>
+    <string name="ocr_select_title">Виділіть текст</string>
+    <string name="ocr_select_hint">Проведіть пальцем по потрібному тексту</string>
+    <string name="ocr_select_all">Вибрати все</string>
+    <string name="ocr_select_next">Далі (%1$d)</string>
+    <string name="ocr_select_empty_preview">Виділений текст з\'явиться тут</string>
+    <string name="ocr_page_tab">Стор. %1$d</string>
+    <string name="ocr_page_no_text">На цій сторінці текст не знайдено</string>
+    <string name="ocr_pages_failed">Не вдалося обробити сторінок: %1$d</string>
+    <string name="ocr_error_source_unavailable">Не вдалося відкрити камеру чи галерею</string>
+</resources>

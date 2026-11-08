@@ -269,6 +269,36 @@ object TokenDiffEngine {
         return result
     }
 
+    /**
+     * History stores no offsets, and the inline diff and final text cannot work without them. The
+     * diff is deterministic, so recomputing it from the stored texts yields the saved hunks in order.
+     */
+    fun restoreSavedHunks(
+        originalText: String,
+        correctedText: String,
+        saved: List<CheckEditHunk>
+    ): List<CheckEditHunk> {
+        return computeDiff(originalText, correctedText).mapIndexed { index, raw ->
+            val match = saved.getOrNull(index)
+                ?.takeIf { it.original == raw.originalText && it.corrected == raw.correctedText }
+                ?: saved.firstOrNull { it.original == raw.originalText && it.corrected == raw.correctedText }
+            val isSingle = isSingleGermanWord(raw.correctedText)
+            CheckEditHunk(
+                id = match?.id ?: UUID.randomUUID().toString(),
+                original = raw.originalText,
+                corrected = raw.correctedText,
+                category = match?.category ?: CheckCategory.GRAMMAR,
+                explanation = match?.explanation ?: AppStrings.get(R.string.check_default_explanation),
+                rule = match?.rule,
+                isAccepted = match?.isAccepted ?: true,
+                startOffset = raw.startOffset,
+                endOffset = raw.endOffset,
+                isSingleWord = isSingle,
+                cleanCorrectedWord = if (isSingle) raw.correctedText.trim() else null
+            )
+        }
+    }
+
     fun isPunctuationOnly(orig: String, corr: String): Boolean {
         val strippedOrig = orig.filter { !it.isWhitespace() && it !in PUNCTUATION_CHARS }
         val strippedCorr = corr.filter { !it.isWhitespace() && it !in PUNCTUATION_CHARS }

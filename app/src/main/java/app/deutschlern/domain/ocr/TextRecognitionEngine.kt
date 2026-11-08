@@ -3,15 +3,16 @@ package app.deutschlern.domain.ocr
 import android.graphics.Bitmap
 import android.net.Uri
 
-interface TextRecognitionEngine {
-    /**
-     * Recognizes German text from an image URI (e.g. from scanner or camera).
-     * Applies OcrPostProcessor to dehyphenate, clean whitespace and assemble paragraphs.
-     */
-    suspend fun recognizeTextFromUri(imageUri: Uri): Result<String>
+/**
+ * A page ready for word selection. The layout coordinates refer to [bitmap] itself, so whatever
+ * draws the bitmap can overlay the words without knowing about EXIF rotation or downsampling.
+ */
+data class OcrScannedPage(
+    val bitmap: Bitmap,
+    val layout: OcrPageLayout
+)
 
-    /**
-     * Recognizes German text from an in-memory Bitmap.
-     */
-    suspend fun recognizeTextFromBitmap(bitmap: Bitmap): Result<String>
+interface TextRecognitionEngine {
+    /** Recognises the words of an image, on the device only. A page without text is a success. */
+    suspend fun scanPage(imageUri: Uri): Result<OcrScannedPage>
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="check_text_truncated">Text auf %1$d Zeichen gekürzt</string>
+    <string name="check_no_key_desc">Für die Prüfung wird ein API-Schlüssel des gewählten KI-Anbieters benötigt. Du kannst ihn in den Einstellungen hinzufügen.</string>
+    <string name="check_scan_subtitle">Seite fotografieren und nur die gewünschten Wörter markieren</string>
+    <string name="check_loading">Fehler werden gesucht…</string>
+    <string name="check_action_reject_all">Alle ablehnen</string>
+    <string name="check_accepted_count">Angenommen: %1$d von %2$d</string>
+    <string name="check_hunk_hint">Tippe auf eine markierte Korrektur, um sie anzunehmen oder abzulehnen.</string>
+    <string name="check_hunk_apply">Korrektur übernehmen</string>
+    <string name="check_hunk_keep_original">Original behalten</string>
+    <string name="check_history_empty_desc">Hier erscheinen deine geprüften Texte</string>
+    <string name="ocr_source_scanner_title">Dokumentenscanner</string>
+    <string name="ocr_source_scanner_desc">Schneidet die Seite zu und richtet sie aus</string>
+    <string name="ocr_source_camera_title">Kamera</string>
+    <string name="ocr_source_camera_desc">Normales Foto vom Text aufnehmen</string>
+    <string name="ocr_source_gallery_title">Galerie</string>
+    <string name="ocr_source_gallery_desc">Bis zu 3 vorhandene Bilder auswählen</string>
+    <string name="ocr_select_title">Text markieren</string>
+    <string name="ocr_select_hint">Streiche über den gewünschten Text</string>
+    <string name="ocr_select_all">Alles auswählen</string>
+    <string name="ocr_select_next">Weiter (%1$d)</string>
+    <string name="ocr_select_empty_preview">Der markierte Text erscheint hier</string>
+    <string name="ocr_page_tab">Seite %1$d</string>
+    <string name="ocr_page_no_text">Auf dieser Seite wurde kein Text gefunden</string>
+    <string name="ocr_pages_failed">Nicht verarbeitete Seiten: %1$d</string>
+    <string name="ocr_error_source_unavailable">Kamera oder Galerie konnte nicht geöffnet werden</string>
+</resources>

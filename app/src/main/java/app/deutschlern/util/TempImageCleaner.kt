@@ -7,32 +7,31 @@ import java.io.File
 object TempImageCleaner {
 
     /**
-     * Deletes a temporary image by its URI (either content:// or file://).
-     * If the URI points to a file inside the app cache, it deletes the file.
-     * Also calls contentResolver.delete if applicable.
+     * Deletes an image only if it is the app's own temporary copy: a file in the app cache (camera
+     * capture, document scanner) or a URI of the app's own FileProvider. Anything else is the
+     * user's media picked from the gallery and must survive, whatever grants the URI carries.
      */
     fun deleteTempUri(context: Context, uri: Uri?) {
         if (uri == null) return
         try {
-            if (uri.scheme == "file") {
-                val path = uri.path
-                if (path != null) {
-                    val file = File(path)
-                    if (file.exists()) {
-                        file.delete()
-                    }
+            when (uri.scheme) {
+                "file" -> {
+                    val file = File(uri.path ?: return)
+                    if (file.isInside(context.cacheDir)) file.delete()
                 }
-            } else if (uri.scheme == "content") {
-                try {
-                    context.contentResolver.delete(uri, null, null)
-                } catch (_: Exception) {
-                    // Ignored if provider does not support deletion
+                "content" -> {
+                    if (uri.authority == "${context.packageName}.fileprovider") {
+                        context.contentResolver.delete(uri, null, null)
+                    }
                 }
             }
         } catch (_: Exception) {
-            // Best effort cleanup
+            // Best effort: temp_ocr is also wiped on the next app start
         }
     }
+
+    private fun File.isInside(directory: File): Boolean =
+        canonicalPath.startsWith(directory.canonicalPath + File.separator)
 
     /**
      * Clears all temporary images inside the `temp_ocr` cache directory.
