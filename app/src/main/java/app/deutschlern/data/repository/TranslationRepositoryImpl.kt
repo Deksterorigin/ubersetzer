@@ -123,8 +123,9 @@ class TranslationRepositoryImpl @Inject constructor(
         if (result.isFailure) {
             val error = result.exceptionOrNull()
             val triggersFallback = (error is ProviderError && error.triggersFallback) || error !is ProviderError
+            val primaryHasNoKey = error is ProviderError.NoKeyConfigured
 
-            if (settings.isAutoFallbackEnabled && triggersFallback) {
+            if (settings.isAutoFallbackEnabled && (triggersFallback || primaryHasNoKey)) {
                 // If offline and ML Kit is enabled, try ML Kit first
                 if (error is ProviderError.Offline && settings.isOfflineMlKitEnabled && primaryProviderId != "mlkit") {
                     val mlKitAttempt = registry.mlKitOfflineProvider.translateText(normalizedText, direction, "on-device")
@@ -156,24 +157,39 @@ class TranslationRepositoryImpl @Inject constructor(
                         }
                     }
                 }
+
+                // A fresh install has no keys at all: on-device translation is what still works
+                if (result.isFailure && primaryHasNoKey && settings.isOfflineMlKitEnabled && primaryProviderId != "mlkit") {
+                    val mlKitAttempt = registry.mlKitOfflineProvider.translateText(normalizedText, direction, "on-device")
+                    if (mlKitAttempt.isSuccess) {
+                        result = mlKitAttempt
+                        activeProvider = registry.mlKitOfflineProvider
+                        activeModel = "on-device"
+                        fallbackNotice = AppStrings.get(R.string.translate_offline_mode)
+                    }
+                }
             }
         }
 
         // 4. Return or Cache
         if (result.isSuccess) {
             val translated = result.getOrThrow()
-            runSuspendCatching {
-                cacheDao.insert(
-                    CacheEntryEntity(
-                        cacheKey = exactCacheKey,
-                        semanticKey = semanticCacheKey,
-                        responseJson = translated,
-                        providerId = activeProvider.displayName,
-                        modelName = activeModel,
-                        createdAt = now
+            // A stand-in on-device result must not outlive the moment the chosen provider is usable again
+            val isOnDeviceStandIn = activeModel == "on-device" && primaryProviderId != "mlkit"
+            if (!isOnDeviceStandIn) {
+                runSuspendCatching {
+                    cacheDao.insert(
+                        CacheEntryEntity(
+                            cacheKey = exactCacheKey,
+                            semanticKey = semanticCacheKey,
+                            responseJson = translated,
+                            providerId = activeProvider.displayName,
+                            modelName = activeModel,
+                            createdAt = now
+                        )
                     )
-                )
-                cacheDao.deleteOlderThan(now - CACHE_TTL_MILLIS)
+                    cacheDao.deleteOlderThan(now - CACHE_TTL_MILLIS)
+                }
             }
             Result.success(
                 TranslationResult(

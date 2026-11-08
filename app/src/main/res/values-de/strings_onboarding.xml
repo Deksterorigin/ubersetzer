@@ -22,5 +22,5 @@
     <string name="onboarding_key_title">API-Schlüssel</string>
     <string name="onboarding_key_need">Für die Wortübersetzung und die KI-Funktionen brauchen Sie einen eigenen API-Schlüssel, den Sie kostenlos bekommen.</string>
     <string name="onboarding_key_privacy">Text geht nur an den von Ihnen gewählten Anbieter und nur, wenn Sie diese Funktionen nutzen.</string>
-    <string name="onboarding_key_offline">Die Offline-Textübersetzung funktioniert ohne Schlüssel: Wählen Sie in den Einstellungen ML Kit als Anbieter für Texte.</string>
+    <string name="onboarding_key_offline">Die Textübersetzung funktioniert auch ohne Schlüssel: Die App nutzt Offline-Modelle auf Ihrem Telefon.</string>
 </resources>

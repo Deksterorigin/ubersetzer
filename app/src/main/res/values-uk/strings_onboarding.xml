@@ -22,5 +22,5 @@
     <string name="onboarding_key_title">Ключ API</string>
     <string name="onboarding_key_need">Для перекладу слів і функцій ШІ потрібен ваш власний API-ключ, його можна отримати безкоштовно.</string>
     <string name="onboarding_key_privacy">Текст надсилається обраному вами провайдеру, лише коли ви користуєтеся цими функціями.</string>
-    <string name="onboarding_key_offline">Офлайн-переклад текстів працює без ключа: оберіть ML Kit провайдером для текстів у налаштуваннях.</string>
+    <string name="onboarding_key_offline">Переклад текстів працює і без ключа: застосунок використовує офлайн-моделі на телефоні.</string>
 </resources>

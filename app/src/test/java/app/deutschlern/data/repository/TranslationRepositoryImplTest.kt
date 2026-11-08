@@ -6,6 +6,7 @@ import app.deutschlern.data.local.dao.CacheDao
 import app.deutschlern.data.local.entity.CacheEntryEntity
 import app.deutschlern.data.local.security.SecureKeyStorage
 import app.deutschlern.data.remote.provider.GeminiProvider
+import app.deutschlern.data.remote.provider.MlKitOfflineProvider
 import app.deutschlern.domain.model.Meaning
 import app.deutschlern.domain.model.TranslationDirection
 import app.deutschlern.domain.model.WordTranslation
@@ -232,5 +233,43 @@ class TranslationRepositoryImplTest {
         assertEquals("Fenster", translationResult.data.lemma)
         assertEquals(AppStrings.get(R.string.translate_switched_to, "Groq"), translationResult.fallbackMessage)
         coVerify(exactly = 1) { groqProvider.translateWord("Fenster", TranslationDirection.DE_RU, null, any()) }
+    }
+
+    @Test
+    fun translateText_noKeysAtAll_usesOnDeviceModelsWithoutCaching() = runTest {
+        val mlKit = mockk<MlKitOfflineProvider>()
+        coEvery { registry.mlKitOfflineProvider } returns mlKit
+        coEvery { mlKit.displayName } returns "ML Kit"
+        coEvery { mlKit.translateText(any(), any(), any()) } returns Result.success("Привет")
+        coEvery { secureKeyStorage.getKey(any()) } returns null
+        coEvery { cacheDao.get(any()) } returns null
+        coEvery { cacheDao.getBySemanticKey(any()) } returns null
+        coEvery { geminiProvider.displayName } returns "Gemini"
+        coEvery { geminiProvider.translateText(any(), any(), any()) } returns
+            Result.failure(ProviderError.NoKeyConfigured("Gemini"))
+
+        val result = repository.translateText("Hallo", TranslationDirection.DE_RU)
+
+        assertEquals("Привет", result.getOrThrow().data)
+        coVerify(exactly = 0) { cacheDao.insert(any()) }
+    }
+
+    @Test
+    fun translateText_primaryWithoutKey_prefersConfiguredProviderOverOnDevice() = runTest {
+        val mlKit = mockk<MlKitOfflineProvider>()
+        coEvery { registry.mlKitOfflineProvider } returns mlKit
+        coEvery { secureKeyStorage.getKey("gemini") } returns null
+        coEvery { cacheDao.get(any()) } returns null
+        coEvery { cacheDao.getBySemanticKey(any()) } returns null
+        coEvery { geminiProvider.displayName } returns "Gemini"
+        coEvery { groqProvider.displayName } returns "Groq"
+        coEvery { geminiProvider.translateText(any(), any(), any()) } returns
+            Result.failure(ProviderError.NoKeyConfigured("Gemini"))
+        coEvery { groqProvider.translateText(any(), any(), any()) } returns Result.success("Привет")
+
+        val result = repository.translateText("Hallo", TranslationDirection.DE_RU)
+
+        assertEquals("Привет", result.getOrThrow().data)
+        coVerify(exactly = 0) { mlKit.translateText(any(), any(), any()) }
     }
 }

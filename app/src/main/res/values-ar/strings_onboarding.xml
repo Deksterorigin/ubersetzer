@@ -22,5 +22,5 @@
     <string name="onboarding_key_title">مفتاح API</string>
     <string name="onboarding_key_need">تحتاج ترجمة الكلمات وميزات الذكاء الاصطناعي إلى مفتاح API خاص بك، ويمكنك الحصول عليه مجانًا.</string>
     <string name="onboarding_key_privacy">لا يُرسل النص إلى المزود الذي تختاره إلا عند استخدامك هذه الميزات.</string>
-    <string name="onboarding_key_offline">تعمل ترجمة النصوص دون اتصال بلا مفتاح: اختر ML Kit مزودًا للنصوص في الإعدادات.</string>
+    <string name="onboarding_key_offline">تعمل ترجمة النصوص أيضًا دون مفتاح: يستخدم التطبيق نماذج غير متصلة على هاتفك.</string>
 </resources>
