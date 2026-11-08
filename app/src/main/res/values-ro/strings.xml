@@ -658,7 +658,7 @@
     <string name="onboarding_key_title">Cheie API</string>
     <string name="onboarding_key_need">Traducerea cuvintelor și funcțiile AI necesită propria dvs. cheie API, pe care o puteți obține gratuit.</string>
     <string name="onboarding_key_privacy">Textul ajunge la furnizorul ales de dvs. și numai când folosiți aceste funcții.</string>
-    <string name="onboarding_key_offline">Traducerea textelor funcționează și fără cheie: aplicația folosește modele offline de pe telefon.</string>
+    <string name="onboarding_key_offline">Traducerea textelor funcționează și fără cheie: descărcați modelele offline pe ecranul principal.</string>
 
     <string name="translate_mode_word">Cuvânt</string>
     <string name="translate_mode_text">Text</string>

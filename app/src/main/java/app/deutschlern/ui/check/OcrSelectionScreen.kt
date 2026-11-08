@@ -426,7 +426,7 @@ private class OcrPageGestures(
     private val onWordChanged: () -> Unit,
     private val onBlockChanged: () -> Unit
 ) {
-    private class LastTap(val position: Offset, val timeMs: Long, val selectionBefore: Set<Int>)
+    private class LastTap(val wordId: Int?, val timeMs: Long, val selectionBefore: Set<Int>)
 
     private var stroke: OcrPaintStroke? = null
     private var selectionBeforeStroke: Set<Int> = emptySet()
@@ -468,12 +468,11 @@ private class OcrPageGestures(
         stroke = null
     }
 
-    fun tap(position: Offset, timeMs: Long, doubleTapTimeoutMs: Long, doubleTapSlopPx: Float) {
+    fun tap(position: Offset, timeMs: Long, doubleTapTimeoutMs: Long) {
         val previous = lastTap
-        if (previous != null &&
-            timeMs - previous.timeMs <= doubleTapTimeoutMs &&
-            (position - previous.position).getDistance() <= doubleTapSlopPx
-        ) {
+        val word = wordAt(position, tapSlopPx)
+        // Same word only: two quick taps on neighbouring short words are two selections, not a zoom
+        if (previous != null && timeMs - previous.timeMs <= doubleTapTimeoutMs && previous.wordId == word?.id) {
             lastTap = null
             writeSelection(previous.selectionBefore)
             toggleZoom(position)
@@ -481,11 +480,11 @@ private class OcrPageGestures(
         }
 
         val selectionBefore = readSelection()
-        wordAt(position, tapSlopPx)?.let { word ->
-            writeSelection(OcrSelection.toggleWord(selectionBefore, word.id))
+        word?.let {
+            writeSelection(OcrSelection.toggleWord(selectionBefore, it.id))
             onWordChanged()
         }
-        lastTap = LastTap(position, timeMs, selectionBefore)
+        lastTap = LastTap(word?.id, timeMs, selectionBefore)
     }
 
     fun longPress(position: Offset) {
@@ -526,7 +525,6 @@ private suspend fun PointerInputScope.ocrSelectionGestures(gestures: OcrPageGest
     val touchSlop = viewConfiguration.touchSlop
     val longPressMs = viewConfiguration.longPressTimeoutMillis
     val doubleTapMs = viewConfiguration.doubleTapTimeoutMillis
-    val doubleTapSlop = TapSlop.toPx() * 2
 
     awaitEachGesture {
         val down = awaitFirstDown(requireUnconsumed = false)
@@ -553,7 +551,7 @@ private suspend fun PointerInputScope.ocrSelectionGestures(gestures: OcrPageGest
             val timeMs = event.changes.first().uptimeMillis
             if (pressed.isEmpty()) {
                 when (phase) {
-                    GesturePhase.PENDING -> gestures.tap(down.position, timeMs, doubleTapMs, doubleTapSlop)
+                    GesturePhase.PENDING -> gestures.tap(down.position, timeMs, doubleTapMs)
                     GesturePhase.PAINTING -> gestures.endStroke()
                     else -> Unit
                 }

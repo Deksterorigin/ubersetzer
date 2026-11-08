@@ -658,7 +658,7 @@
     <string name="onboarding_key_title">Ключ API</string>
     <string name="onboarding_key_need">Для перевода слов и функций ИИ нужен ваш собственный API-ключ, его можно получить бесплатно.</string>
     <string name="onboarding_key_privacy">Текст уходит выбранному вами провайдеру, только когда вы пользуетесь этими функциями.</string>
-    <string name="onboarding_key_offline">Перевод текстов работает и без ключа: приложение использует офлайн-модели на телефоне.</string>
+    <string name="onboarding_key_offline">Перевод текстов работает и без ключа: скачайте офлайн-модели на главном экране.</string>
 
     <string name="translate_mode_word">Слово</string>
     <string name="translate_mode_text">Текст</string>

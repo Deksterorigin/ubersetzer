@@ -658,7 +658,7 @@
     <string name="onboarding_key_title">API key</string>
     <string name="onboarding_key_need">Translating words and the AI features need your own API key, which you can get for free.</string>
     <string name="onboarding_key_privacy">Text goes to the provider you choose, and only when you use these features.</string>
-    <string name="onboarding_key_offline">Text translation also works without a key: the app uses offline models on your phone.</string>
+    <string name="onboarding_key_offline">Text translation also works without a key: download the offline models on the main screen.</string>
 
     <string name="translate_mode_word">Word</string>
     <string name="translate_mode_text">Text</string>

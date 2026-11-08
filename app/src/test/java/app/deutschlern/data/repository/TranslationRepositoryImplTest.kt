@@ -240,6 +240,7 @@ class TranslationRepositoryImplTest {
         val mlKit = mockk<MlKitOfflineProvider>()
         coEvery { registry.mlKitOfflineProvider } returns mlKit
         coEvery { mlKit.displayName } returns "ML Kit"
+        coEvery { mlKit.areModelsDownloaded() } returns true
         coEvery { mlKit.translateText(any(), any(), any()) } returns Result.success("Привет")
         coEvery { secureKeyStorage.getKey(any()) } returns null
         coEvery { cacheDao.get(any()) } returns null
@@ -270,6 +271,24 @@ class TranslationRepositoryImplTest {
         val result = repository.translateText("Hallo", TranslationDirection.DE_RU)
 
         assertEquals("Привет", result.getOrThrow().data)
+        coVerify(exactly = 0) { mlKit.translateText(any(), any(), any()) }
+    }
+
+    @Test
+    fun translateText_noKeysAndNoModels_reportsMissingKeyWithoutDownloading() = runTest {
+        val mlKit = mockk<MlKitOfflineProvider>()
+        coEvery { registry.mlKitOfflineProvider } returns mlKit
+        coEvery { mlKit.areModelsDownloaded() } returns false
+        coEvery { secureKeyStorage.getKey(any()) } returns null
+        coEvery { cacheDao.get(any()) } returns null
+        coEvery { cacheDao.getBySemanticKey(any()) } returns null
+        coEvery { geminiProvider.displayName } returns "Gemini"
+        coEvery { geminiProvider.translateText(any(), any(), any()) } returns
+            Result.failure(ProviderError.NoKeyConfigured("Gemini"))
+
+        val result = repository.translateText("Hallo", TranslationDirection.DE_RU)
+
+        assertTrue(result.exceptionOrNull() is ProviderError.NoKeyConfigured)
         coVerify(exactly = 0) { mlKit.translateText(any(), any(), any()) }
     }
 }

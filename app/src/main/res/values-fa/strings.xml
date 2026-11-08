@@ -658,7 +658,7 @@
     <string name="onboarding_key_title">کلید API</string>
     <string name="onboarding_key_need">برای ترجمهٔ واژه‌ها و قابلیت‌های هوش مصنوعی به کلید API خودتان نیاز دارید که می‌توانید رایگان بگیرید.</string>
     <string name="onboarding_key_privacy">متن فقط زمانی به ارائه‌دهندهٔ انتخابی شما فرستاده می‌شود که از این قابلیت‌ها استفاده کنید.</string>
-    <string name="onboarding_key_offline">ترجمهٔ متن بدون کلید هم کار می‌کند: برنامه از مدل‌های آفلاین روی تلفن شما استفاده می‌کند.</string>
+    <string name="onboarding_key_offline">ترجمهٔ متن بدون کلید هم کار می‌کند: مدل‌های آفلاین را از صفحهٔ اصلی دانلود کنید.</string>
 
     <string name="translate_mode_word">واژه</string>
     <string name="translate_mode_text">متن</string>

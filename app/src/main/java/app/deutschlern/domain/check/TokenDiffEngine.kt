@@ -278,10 +278,12 @@ object TokenDiffEngine {
         correctedText: String,
         saved: List<CheckEditHunk>
     ): List<CheckEditHunk> {
+        val unmatched = saved.toMutableList()
         return computeDiff(originalText, correctedText).mapIndexed { index, raw ->
             val match = saved.getOrNull(index)
-                ?.takeIf { it.original == raw.originalText && it.corrected == raw.correctedText }
-                ?: saved.firstOrNull { it.original == raw.originalText && it.corrected == raw.correctedText }
+                ?.takeIf { it in unmatched && it.original == raw.originalText && it.corrected == raw.correctedText }
+                ?: unmatched.firstOrNull { it.original == raw.originalText && it.corrected == raw.correctedText }
+            match?.let { unmatched.remove(it) }
             val isSingle = isSingleGermanWord(raw.correctedText)
             CheckEditHunk(
                 id = match?.id ?: UUID.randomUUID().toString(),

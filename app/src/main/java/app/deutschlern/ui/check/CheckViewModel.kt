@@ -235,7 +235,12 @@ class CheckViewModel @Inject constructor(
         savedEntry = null
         historySaveJob = viewModelScope.launch {
             runSuspendCatching { textCheckRepository.saveCheck(entry) }
-                .onSuccess { id -> savedEntry = entry.copy(id = id) }
+                .onSuccess { id ->
+                    // The user may have moved on to another check while this one was being written
+                    if (_uiState.value.result?.originalText == res.originalText) {
+                        savedEntry = entry.copy(id = id)
+                    }
+                }
         }
     }
 

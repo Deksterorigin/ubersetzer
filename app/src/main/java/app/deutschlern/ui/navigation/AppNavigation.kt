@@ -113,6 +113,7 @@ fun AppNavigation(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .consumeWindowInsets(innerPadding)
         ) {
             composable(
                 route = Screen.Onboarding.route,
@@ -121,8 +122,7 @@ fun AppNavigation(
                 popExitTransition = { fadeOut(tween(200)) }
             ) {
                 OnboardingScreen(
-                    onFinished = { exit -> navController.leaveOnboarding(exit) },
-                    modifier = Modifier.consumeWindowInsets(innerPadding)
+                    onFinished = { exit -> navController.leaveOnboarding(exit) }
                 )
             }
             composable(Screen.Translate.route) {

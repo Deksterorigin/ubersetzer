@@ -144,6 +144,7 @@ fun TranslateResultArea(
         when (slot) {
             ResultSlot.Empty -> Box(modifier = Modifier.fillMaxWidth())
             ResultSlot.Examples -> ExamplesHint(
+                canTranslateWords = state.hasAnyKeyConfigured,
                 onExampleClicked = { onEvent(TranslateUiEvent.OnInputTextChanged(it)) }
             )
             ResultSlot.Loading -> AppCard {
@@ -309,7 +310,10 @@ private fun ModelRow(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ExamplesHint(onExampleClicked: (String) -> Unit) {
+private fun ExamplesHint(
+    canTranslateWords: Boolean,
+    onExampleClicked: (String) -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -325,7 +329,8 @@ private fun ExamplesHint(onExampleClicked: (String) -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            ExampleInputs.forEach { example ->
+            // A single word needs a key, and a first try should not end in an error
+            ExampleInputs.filter { canTranslateWords || ' ' in it }.forEach { example ->
                 ExampleChip(text = example, onClick = { onExampleClicked(example) })
             }
         }

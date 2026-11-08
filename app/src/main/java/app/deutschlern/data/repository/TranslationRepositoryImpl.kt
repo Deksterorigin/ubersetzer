@@ -158,8 +158,11 @@ class TranslationRepositoryImpl @Inject constructor(
                     }
                 }
 
-                // A fresh install has no keys at all: on-device translation is what still works
-                if (result.isFailure && primaryHasNoKey && settings.isOfflineMlKitEnabled && primaryProviderId != "mlkit") {
+                // A fresh install has no keys at all: on-device translation is what still works.
+                // Only with models the user chose to download, the provider would otherwise fetch them on any network.
+                if (result.isFailure && primaryHasNoKey && settings.isOfflineMlKitEnabled && primaryProviderId != "mlkit" &&
+                    registry.mlKitOfflineProvider.areModelsDownloaded()
+                ) {
                     val mlKitAttempt = registry.mlKitOfflineProvider.translateText(normalizedText, direction, "on-device")
                     if (mlKitAttempt.isSuccess) {
                         result = mlKitAttempt

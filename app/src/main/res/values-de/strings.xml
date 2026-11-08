@@ -658,7 +658,7 @@
     <string name="onboarding_key_title">API-Schlüssel</string>
     <string name="onboarding_key_need">Für die Wortübersetzung und die KI-Funktionen brauchen Sie einen eigenen API-Schlüssel, den Sie kostenlos bekommen.</string>
     <string name="onboarding_key_privacy">Text geht nur an den von Ihnen gewählten Anbieter und nur, wenn Sie diese Funktionen nutzen.</string>
-    <string name="onboarding_key_offline">Die Textübersetzung funktioniert auch ohne Schlüssel: Die App nutzt Offline-Modelle auf Ihrem Telefon.</string>
+    <string name="onboarding_key_offline">Die Textübersetzung funktioniert auch ohne Schlüssel: Laden Sie die Offline-Modelle auf dem Hauptbildschirm herunter.</string>
 
     <string name="translate_mode_word">Wort</string>
     <string name="translate_mode_text">Text</string>
