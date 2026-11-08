@@ -97,6 +97,10 @@ class SecureKeyStorage @Inject constructor(
             .toMap()
     }
 
+    /** Looks at stored entries only: decrypting could fail transiently or wipe a broken key. */
+    suspend fun hasAnyKey(): Boolean =
+        context.secureKeysDataStore.data.first().asMap().keys.any { it.name.startsWith(KEY_PREFIX) }
+
     suspend fun deleteKey(providerId: String) {
         val prefKey = stringPreferencesKey("enc_key_$providerId")
         context.secureKeysDataStore.edit { it.remove(prefKey) }

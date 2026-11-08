@@ -94,6 +94,12 @@ sealed class Screen(
         fun createRoute(mode: TrainerMode, pool: WordPool): String = "trainer/${mode.name}/${pool.name}"
     }
 
+    data object Onboarding : Screen(
+        route = "onboarding",
+        titleRes = R.string.app_name,
+        icon = Icons.Outlined.Translate
+    )
+
     companion object {
         val bottomNavItems = listOf(Translate, Words, Dialogues, Check, Review)
     }

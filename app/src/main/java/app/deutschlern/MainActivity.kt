@@ -14,6 +14,7 @@ import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -28,10 +29,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.compose.currentBackStackEntryAsState
 import app.deutschlern.data.local.AppDatabase
 import app.deutschlern.domain.model.AppLanguage
 import app.deutschlern.domain.repository.SettingsRepository
 import app.deutschlern.ui.navigation.AppNavigation
+import app.deutschlern.ui.navigation.Screen
+import app.deutschlern.ui.onboarding.OnboardingGateViewModel
 import app.deutschlern.ui.theme.DeutschLernTheme
 import app.deutschlern.util.PendingTranslationHolder
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,6 +58,8 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var legacyArticleRepairManager: app.deutschlern.data.local.LegacyArticleRepairManager
+
+    private val onboardingGate: OnboardingGateViewModel by viewModels()
 
     private val pendingNavRoute = androidx.compose.runtime.mutableStateOf<String?>(null)
 
@@ -97,13 +103,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             val settings by settingsRepository.settingsFlow.collectAsState(initial = null)
             val currentSettings = settings
+            val showOnboarding by onboardingGate.showOnboarding.collectAsState()
 
             // Do not run effects or resolve incomplete locale state while settings are loading
             if (currentSettings == null) {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {}
+                DeutschLernTheme {
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.background
+                    ) {}
+                }
                 return@setContent
             }
 
@@ -171,15 +180,29 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        val navController = androidx.navigation.compose.rememberNavController()
-                        val targetRoute = pendingNavRoute.value
-                        LaunchedEffect(targetRoute) {
-                            if (!targetRoute.isNullOrBlank()) {
-                                navController.navigate(targetRoute)
-                                pendingNavRoute.value = null
+                        // Stays blank until decided, so nobody sees Translate or onboarding by mistake
+                        showOnboarding?.let { startsWithOnboarding ->
+                            val navController = androidx.navigation.compose.rememberNavController()
+                            val currentEntry by navController.currentBackStackEntryAsState()
+                            val targetRoute = pendingNavRoute.value
+                            // A route arriving during onboarding waits for it to finish instead of landing on top
+                            val canNavigate = currentEntry != null &&
+                                currentEntry?.destination?.route != Screen.Onboarding.route
+                            LaunchedEffect(targetRoute, canNavigate) {
+                                if (!targetRoute.isNullOrBlank() && canNavigate) {
+                                    navController.navigate(targetRoute)
+                                    pendingNavRoute.value = null
+                                }
                             }
+                            AppNavigation(
+                                navController = navController,
+                                startDestination = if (startsWithOnboarding) {
+                                    Screen.Onboarding.route
+                                } else {
+                                    Screen.Translate.route
+                                }
+                            )
                         }
-                        AppNavigation(navController = navController)
                     }
                 }
             }
