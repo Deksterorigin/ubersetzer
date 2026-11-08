@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="translate_mode_word">واژه</string>
+    <string name="translate_mode_text">متن</string>
+    <string name="translate_examples_title">یک نمونه را امتحان کنید</string>
+</resources>
