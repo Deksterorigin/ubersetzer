@@ -101,6 +101,7 @@ sealed class Screen(
     )
 
     companion object {
-        val bottomNavItems = listOf(Translate, Words, Dialogues, Check, Review)
+        // Lazy: built in Screen's static init, this list would hold null for a screen object initialized first
+        val bottomNavItems by lazy { listOf(Translate, Words, Dialogues, Check, Review) }
     }
 }
