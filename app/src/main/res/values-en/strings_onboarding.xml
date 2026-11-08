@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_start">Start</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_step_of">Step %1$d of %2$d</string>
+    <string name="onboarding_add_key">Add key</string>
+    <string name="onboarding_show_again">Show welcome screen again</string>
+    <string name="onboarding_welcome_promise">Translate German, remember the words and check your writing, all in one app.</string>
+    <string name="onboarding_features_title">What the app can do</string>
+    <string name="onboarding_feature_translate_title">Translate</string>
+    <string name="onboarding_feature_translate_desc">Words with a dictionary card and whole texts, from and into German.</string>
+    <string name="onboarding_feature_words_title">Words and review</string>
+    <string name="onboarding_feature_words_desc">Translated words go to your vocabulary, and spaced repetition and trainers help them stick.</string>
+    <string name="onboarding_feature_dialogues_title">Dialogues</string>
+    <string name="onboarding_feature_dialogues_desc">Record a conversation in German and get the transcript, a summary and exercises.</string>
+    <string name="onboarding_feature_check_title">Writing check</string>
+    <string name="onboarding_feature_check_desc">Fixes mistakes in your German text. Type it or take a photo of it.</string>
+    <string name="onboarding_setup_title">Choose your languages</string>
+    <string name="onboarding_partner_language_title">Your native language</string>
+    <string name="onboarding_partner_language_hint">German words and texts are translated into it.</string>
+    <string name="onboarding_key_title">API key</string>
+    <string name="onboarding_key_need">Translating words and the AI features need your own API key, which you can get for free.</string>
+    <string name="onboarding_key_privacy">Text goes to the provider you choose, and only when you use these features.</string>
+    <string name="onboarding_key_offline">Offline text translation works without a key: choose ML Kit as the provider for texts in Settings.</string>
+</resources>

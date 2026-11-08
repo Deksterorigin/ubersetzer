@@ -42,6 +42,7 @@ class SettingsRepositoryImpl @Inject constructor(
         private val KEY_CHECK_PROVIDER = stringPreferencesKey("selected_check_provider")
         private val KEY_CHECK_CONSENT = booleanPreferencesKey("has_accepted_check_consent")
         private val KEY_DIALOG_CONSENT = booleanPreferencesKey("has_accepted_dialog_consent")
+        private val KEY_COMPLETED_ONBOARDING = booleanPreferencesKey("has_completed_onboarding")
         private val KEY_COLORED_ARTICLES = booleanPreferencesKey("colored_articles_enabled")
         private val KEY_REPAIRED_ARTICLES = booleanPreferencesKey("has_repaired_non_noun_articles")
         private val KEY_REPAIRED_BACKUP = stringPreferencesKey("repaired_articles_backup_json")
@@ -150,6 +151,10 @@ class SettingsRepositoryImpl @Inject constructor(
         context.settingsDataStore.edit { it[KEY_DIALOG_CONSENT] = accepted }
     }
 
+    override suspend fun setHasCompletedOnboarding(completed: Boolean) {
+        context.settingsDataStore.edit { it[KEY_COMPLETED_ONBOARDING] = completed }
+    }
+
     override suspend fun setColoredArticlesEnabled(enabled: Boolean) {
         context.settingsDataStore.edit { it[KEY_COLORED_ARTICLES] = enabled }
     }
@@ -221,6 +226,7 @@ class SettingsRepositoryImpl @Inject constructor(
             selectedCheckProviderId = prefs[KEY_CHECK_PROVIDER] ?: prefs[KEY_TEXT_PROVIDER] ?: "gemini",
             hasAcceptedCheckConsent = prefs[KEY_CHECK_CONSENT] ?: false,
             hasAcceptedDialogConsent = prefs[KEY_DIALOG_CONSENT] ?: false,
+            hasCompletedOnboarding = prefs[KEY_COMPLETED_ONBOARDING] ?: false,
             coloredArticlesEnabled = prefs[KEY_COLORED_ARTICLES] ?: true,
             hasRepairedNonNounArticles = prefs[KEY_REPAIRED_ARTICLES] ?: false,
             repairedArticlesBackupJson = prefs[KEY_REPAIRED_BACKUP] ?: "",

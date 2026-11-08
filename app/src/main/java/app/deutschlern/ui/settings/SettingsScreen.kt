@@ -88,6 +88,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun SettingsScreen(
     onNavigateBack: () -> Unit,
+    onShowWelcomeAgain: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: SettingsViewModel = hiltViewModel(),
     updateViewModel: UpdateViewModel = hiltViewModel()
@@ -268,6 +269,19 @@ fun SettingsScreen(
                     }
                 )
             }
+
+            HairlineDivider()
+
+            Text(
+                text = stringResource(R.string.onboarding_show_again),
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                color = MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onShowWelcomeAgain)
+                    .padding(vertical = 12.dp)
+            )
 
             Spacer(modifier = Modifier.height(24.dp))
         }

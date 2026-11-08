@@ -1,5 +1,9 @@
 package app.deutschlern.ui.navigation
 
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -17,7 +21,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -25,6 +28,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.deutschlern.R
+import app.deutschlern.ui.onboarding.OnboardingExit
+import app.deutschlern.ui.onboarding.OnboardingScreen
 import app.deutschlern.ui.review.ReviewScreen
 import app.deutschlern.ui.trainer.TrainerScreen
 import app.deutschlern.ui.settings.SettingsScreen
@@ -35,7 +40,8 @@ private const val KEY_SELECTED_CHECK_ID = "selected_check_id"
 
 @Composable
 fun AppNavigation(
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
+    startDestination: String = Screen.Translate.route
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -66,7 +72,8 @@ fun AppNavigation(
                             onClick = {
                                 if (currentRoute != screen.route) {
                                     navController.navigate(screen.route) {
-                                        popUpTo(navController.graph.findStartDestination().id) {
+                                        // Not the graph's start destination: onboarding can be that, and it is gone by now
+                                        popUpTo(Screen.Translate.route) {
                                             saveState = true
                                         }
                                         launchSingleTop = true
@@ -102,11 +109,22 @@ fun AppNavigation(
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = Screen.Translate.route,
+            startDestination = startDestination,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
+            composable(
+                route = Screen.Onboarding.route,
+                enterTransition = { fadeIn(tween(300)) },
+                exitTransition = { fadeOut(tween(200)) },
+                popExitTransition = { fadeOut(tween(200)) }
+            ) {
+                OnboardingScreen(
+                    onFinished = { exit -> navController.leaveOnboarding(exit) },
+                    modifier = Modifier.consumeWindowInsets(innerPadding)
+                )
+            }
             composable(Screen.Translate.route) {
                 TranslateScreen(
                     onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
@@ -197,9 +215,24 @@ fun AppNavigation(
             }
             composable(Screen.Settings.route) {
                 SettingsScreen(
-                    onNavigateBack = { navController.popBackStack() }
+                    onNavigateBack = { navController.popBackStack() },
+                    onShowWelcomeAgain = { navController.navigate(Screen.Onboarding.route) }
                 )
             }
         }
+    }
+}
+
+private fun NavHostController.leaveOnboarding(exit: OnboardingExit) {
+    // Something underneath means a replay from Settings: go back there whatever was chosen
+    if (previousBackStackEntry != null) {
+        popBackStack()
+        return
+    }
+    navigate(Screen.Translate.route) {
+        popUpTo(Screen.Onboarding.route) { inclusive = true }
+    }
+    if (exit == OnboardingExit.SETTINGS) {
+        navigate(Screen.Settings.route)
     }
 }

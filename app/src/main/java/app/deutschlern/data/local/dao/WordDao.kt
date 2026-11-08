@@ -59,4 +59,7 @@ interface WordDao {
     @Query("SELECT * FROM words ORDER BY lastSeenAt DESC")
     suspend fun getAllWordsSync(): List<WordEntryEntity>
 
+    @Query("SELECT EXISTS(SELECT 1 FROM words)")
+    suspend fun hasAnyWord(): Boolean
+
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip">رد کردن</string>
+    <string name="onboarding_start">شروع</string>
+    <string name="onboarding_next">بعدی</string>
+    <string name="onboarding_step_of">مرحله %1$d از %2$d</string>
+    <string name="onboarding_add_key">افزودن کلید</string>
+    <string name="onboarding_show_again">نمایش دوبارهٔ صفحهٔ خوش‌آمد</string>
+    <string name="onboarding_welcome_promise">از آلمانی ترجمه کنید، واژه‌ها را به خاطر بسپارید و متن‌های تان را در یک برنامه بررسی کنید.</string>
+    <string name="onboarding_features_title">این برنامه چه کارهایی می‌کند</string>
+    <string name="onboarding_feature_translate_title">ترجمه</string>
+    <string name="onboarding_feature_translate_desc">واژه‌ها با کارت فرهنگ لغت و متن‌های کامل، از آلمانی و به آلمانی.</string>
+    <string name="onboarding_feature_words_title">واژه‌ها و مرور</string>
+    <string name="onboarding_feature_words_desc">واژه‌های ترجمه‌شده به واژه‌نامهٔ شما اضافه می‌شوند و مرور فاصله‌دار و تمرین‌ها به یادسپاری آن‌ها کمک می‌کند.</string>
+    <string name="onboarding_feature_dialogues_title">گفتگوها</string>
+    <string name="onboarding_feature_dialogues_desc">یک گفتگو به آلمانی را ضبط کنید و متن، خلاصه و تمرین‌های آن را بگیرید.</string>
+    <string name="onboarding_feature_check_title">بررسی متن</string>
+    <string name="onboarding_feature_check_desc">اشتباهات متن آلمانی تان را اصلاح می‌کند: آن را تایپ کنید یا از آن عکس بگیرید.</string>
+    <string name="onboarding_setup_title">زبان‌های تان را انتخاب کنید</string>
+    <string name="onboarding_partner_language_title">زبان مادری شما</string>
+    <string name="onboarding_partner_language_hint">واژه‌ها و متن‌های آلمانی به این زبان ترجمه می‌شوند.</string>
+    <string name="onboarding_key_title">کلید API</string>
+    <string name="onboarding_key_need">برای ترجمهٔ واژه‌ها و قابلیت‌های هوش مصنوعی به کلید API خودتان نیاز دارید که می‌توانید رایگان بگیرید.</string>
+    <string name="onboarding_key_privacy">متن فقط زمانی به ارائه‌دهندهٔ انتخابی شما فرستاده می‌شود که از این قابلیت‌ها استفاده کنید.</string>
+    <string name="onboarding_key_offline">ترجمهٔ آفلاین متن بدون کلید کار می‌کند: در تنظیمات، ML Kit را به‌عنوان ارائه‌دهنده برای متون انتخاب کنید.</string>
+</resources>
