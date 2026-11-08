@@ -22,7 +22,28 @@ private val LightColorScheme = lightColorScheme(
     outline = LightDivider,
     outlineVariant = LightDivider,
     error = LightError,
-    onError = LightSurface
+    onError = LightSurface,
+    // Without these Material falls back to its baseline lilac in dialogs, sheets and chips
+    primaryContainer = LightAccentTint,
+    onPrimaryContainer = LightOnAccentTint,
+    secondary = LightAccent,
+    onSecondary = LightSurface,
+    secondaryContainer = LightAccentTint,
+    onSecondaryContainer = LightOnAccentTint,
+    tertiary = LightOnWarningTint,
+    onTertiary = LightSurface,
+    tertiaryContainer = LightWarningTint,
+    onTertiaryContainer = LightOnWarningTint,
+    errorContainer = LightErrorTint,
+    onErrorContainer = LightOnErrorTint,
+    surfaceTint = LightSurface,
+    surfaceBright = LightSurface,
+    surfaceDim = LightMutedSurface,
+    surfaceContainerLowest = LightSurface,
+    surfaceContainerLow = LightSurface,
+    surfaceContainer = LightSurface,
+    surfaceContainerHigh = LightSurface,
+    surfaceContainerHighest = LightMutedSurface
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -37,7 +58,27 @@ private val DarkColorScheme = darkColorScheme(
     outline = DarkDivider,
     outlineVariant = DarkDivider,
     error = DarkError,
-    onError = DarkBackground
+    onError = DarkBackground,
+    primaryContainer = DarkAccentTint,
+    onPrimaryContainer = DarkOnAccentTint,
+    secondary = DarkAccent,
+    onSecondary = DarkBackground,
+    secondaryContainer = DarkAccentTint,
+    onSecondaryContainer = DarkOnAccentTint,
+    tertiary = DarkOnWarningTint,
+    onTertiary = DarkBackground,
+    tertiaryContainer = DarkWarningTint,
+    onTertiaryContainer = DarkOnWarningTint,
+    errorContainer = DarkErrorTint,
+    onErrorContainer = DarkOnErrorTint,
+    surfaceTint = DarkSurface,
+    surfaceBright = DarkMutedSurface,
+    surfaceDim = DarkBackground,
+    surfaceContainerLowest = DarkBackground,
+    surfaceContainerLow = DarkSurface,
+    surfaceContainer = DarkSurface,
+    surfaceContainerHigh = DarkMutedSurface,
+    surfaceContainerHighest = DarkMutedSurface
 )
 
 @Composable

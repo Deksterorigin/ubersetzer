@@ -178,7 +178,8 @@ tasks.withType<Test>().configureEach {
     jvmArgs("-Dfile.encoding=UTF-8", "-Dsun.jnu.encoding=UTF-8")
 }
 
-layout.buildDirectory.set(file("E:/tmp/deutschlern_build/app"))
+// Parallel worktrees pass their own -PbuildRoot so that builds do not overwrite each other
+layout.buildDirectory.set(file(findProperty("buildRoot") ?: "E:/tmp/deutschlern_build/app"))
 
 tasks.register("copyApkToStandardPath") {
     doLast {
