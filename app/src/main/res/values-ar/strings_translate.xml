@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="translate_mode_word">كلمة</string>
-    <string name="translate_mode_text">نص</string>
-    <string name="translate_examples_title">جرّب مثالًا</string>
-</resources>
