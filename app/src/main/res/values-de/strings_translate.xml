@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="translate_mode_word">Wort</string>
+    <string name="translate_mode_text">Text</string>
+    <string name="translate_examples_title">Beispiel ausprobieren</string>
+</resources>

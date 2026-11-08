@@ -5,6 +5,8 @@ import app.deutschlern.domain.model.TranslationDirection
 import app.deutschlern.domain.model.TranslationMode
 import app.deutschlern.domain.model.WordTranslation
 
+const val MAX_INPUT_LENGTH = 5000
+
 data class TranslateUiState(
     val inputText: String = "",
     val contextText: String = "",
@@ -37,13 +39,13 @@ data class TranslateUiState(
     val speechModelDownloadLanguage: String? = null
 ) {
     val canTranslate: Boolean
-        get() = inputText.isNotBlank() && inputText.length <= 5000 && !isLoading
+        get() = inputText.isNotBlank() && inputText.length <= MAX_INPUT_LENGTH && !isLoading
 
     val charCount: Int
         get() = inputText.length
 
     val isOverLimit: Boolean
-        get() = inputText.length > 5000
+        get() = inputText.length > MAX_INPUT_LENGTH
 
     val isWordMode: Boolean
         get() = mode == TranslationMode.WORD

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="translate_mode_word">Слово</string>
+    <string name="translate_mode_text">Текст</string>
+    <string name="translate_examples_title">Спробуйте приклад</string>
+</resources>
