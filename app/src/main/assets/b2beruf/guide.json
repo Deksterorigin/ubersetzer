@@ -1,0 +1,782 @@
+{
+ "sections": [
+  {
+   "id": "format_overview",
+   "title": "Testformat Deutsch-Test für den Beruf B2",
+   "category": "FORMAT",
+   "body": "Subtest | Teil | Ziel | Aufgabe\nLesen (45 Min.)\n- Teil 1 | Informationen zum Arbeitsmarkt suchen | 5 Zuordnungsaufgaben\n- Teil 2 | Einweisungen und Unterweisungen verstehen | 2 Richtig/Falsch-Aufgaben, 2 Multiple-Choice-Aufgaben\n- Teil 3 | Rahmenbedingungen der Arbeit verstehen | 4 Zuordnungsaufgaben\n- Teil 4 | Aufgaben und Aufgabenverteilung nachvollziehen | 5 Multiple-Choice-Aufgaben\nLesen und Schreiben (20 Min.)\n- Teil 1 | Beschwerden und Anweisungen verstehen | 2 Multiple-Choice-Aufgaben\n- Teil 2 | Auf Beschwerden reagieren | Eine Klärung ermöglichen\nHören (20 Min.)\n- Teil 1 | Arbeitsabläufe, Probleme und Vorschläge verstehen | 3 Richtig/Falsch- und 3 Multiple-Choice-Aufgaben\n- Teil 2 | Argumentationen nachvollziehen | 4 Zuordnungsaufgaben\n- Teil 3 | Betriebsbezogene Informationen nachvollziehen | 4 Multiple-Choice-Aufgaben\n- Teil 4 | Anliegen und Bitten erfassen | 5 Multiple-Choice-Aufgaben\nHören und Schreiben (5 Min.)\n- Teil 1 | Kundenanfragen entgegennehmen | 1 Multiple-Choice-Aufgabe\n- Teil 2 | Kundenanfragen dokumentieren | Inhalte übertragen\nSprachbausteine und Schreiben (35 Min.)\n- Teil 1 | Rückfragen zu Bewerbungen stellen | 6 Zuordnungsaufgaben\n- Teil 2 | Auf Anfragen reagieren und Angebote machen | 6 Multiple-Choice-Aufgaben\n- Teil 3 | Meinungen begründen und durch Argumente stützen | Forumsbeitrag schreiben\nSprechen (ca. 16 Min., keine Vorbereitungszeit)\n- Teil 1A | Über ein Thema sprechen | Etwas monologisch beschreiben\n- Teil 1B | Prüferfragen | Anschlussfragen beantworten\n- Teil 1C | Erläuterung eines Aspekts | Relevante Aspekte vermitteln\n- Teil 2 | Mit Kolleginnen und Kollegen sprechen | Sich über Themen austauschen\n- Teil 3 | Lösungswege diskutieren | Eine Situation am Arbeitsplatz besprechen"
+  },
+  {
+   "id": "faq_telc_1",
+   "title": "Часто задаваемые вопросы: ответы от telc",
+   "category": "FORMAT",
+   "body": "ГОТОВИМСЯ К ЭКЗАМЕНУ В2!!!!\nF: Нужно ли на странице с жалобой заполнять “AN CC Betreff”\nA: Эти маленькие строки не заполняются.\nF: Будет ли мой ответ полностью проверен и оценен, если я напишу два предложения на одной строчке?\nА: Да, почему бы и нет.\nF: Могу ли я запросить дополнительный лист для ответа на жалобу, если например мой почерк сильно широкий?\nА: Бумага для заметок не предоставляется и если вам выдадут второй лист, он не будет оцениваться. На B2 Вы должны уметь четко и грамотно использовать место и формулировать мысли."
+  },
+  {
+   "id": "faq_telc_2",
+   "title": "Часто задаваемые вопросы 2",
+   "category": "FORMAT",
+   "body": "F: Могу ли я листать экзаменационную тетрадь и распределить своё время как мне хочется? (Например, приступить к части Schreiben и посмотреть жалобу раньше, чем пройдет часть Lesen)\nA: Нет. Хотя с одной стороны два последних вопроса в части Lesen вам это позволяют это сделать. Но вам нужно, следовательно, четко по регламенту экзамена выполнять, что говорят люди, следящие за его проведением. Если заметят вас за нарушением регламента - имеют полное право забрать ваш экзаменационный лист и отправить на пересдачу.\nF: Где мне искать информацию для подготовки к экзамену?\nА: Вся актуальная на данный момент информация по экзаменам собрана в этом документе. Вы найдёте все варианты экзаменов, которые уже были у других участников и другую полезную информацию.\nF: Точно ли тут все правильные ответы?\nА: Информация собиралась разными участниками группы, которые успешно сдавали экзамен и проверялась не один десяток раз. бОльшая часть ответов - правильные. Используйте информацию грамотно, дополнительно сами проверяя правильность каждого ответа.\nF: У меня экзамен **.**.202*. Помогите мне пожалуйста узнать какой возможно у меня будет вариант теста.\nА: Вам никто и никогда не предоставит точную информацию. Если кто-то будет вас уверять в обратном – это мошенники. Нет никакого четкого алгоритма, где и когда какой тест будет. Telc регулярно меняет номера тестов по землям, добавляет новые задания в уже существующие тесты, изменяет формулировки ответов. Поэтому, для успешной сдачи экзамена, вам нужно готовиться комплексно и структурировано ко всем возможным заданиям, а не полагаться на свою удачу."
+  },
+  {
+   "id": "passing_rules",
+   "title": "Условия сдачи экзамена (баллы)",
+   "category": "SCORING",
+   "body": "F: Помогите мне. У меня осталось 2 недели до экзамена, и я не знаю с чего начать.\nА: Итак. Для начала вы должны знать, что для успешной сдачи экзамена вы должны соблюдать все условия сразу:\n- 3 части должны быть написаны минимум на 36 баллов.\n- 1 часть разрешается быть написана от 24 до 36 баллов.\n- Минимальное количество баллов за 4 части – 144 (из 240).\nПример успешной и неуспешной части экзамена:\nBestanden bei: Lesen 40, Hören 50P, Schreiben 25P, Sprechen 50P -> 165 Punkte\nNicht Bestanden: Lesen 36P, Hören 24P, Schreiben 36P, Sprechen 36P -> 132 Punkte\nNicht Bestanden: Lesen 40P, Hören 50P, Schreiben 20P, Sprechen 50P -> 160 Punkte\nNicht Bestanden: Lesen 35P, Hören 35P, Schreiben 60P, Sprechen 60P -> 190 Punkte\nТаким образом обратите внимание, что вы должны успешными частями перекрыть неуспешную, чтобы выполнить все условия сразу и набрать вместе минимум 144P. 36 36 36 24 - Не хватит для сдачи экзамена."
+  },
+  {
+   "id": "prep_plan",
+   "title": "План подготовки: общие принципы",
+   "category": "TIPS",
+   "body": "Перейдем непосредственно к плану подготовки. Каждый человек индивидуальный, поэтому следовать этому плану или составить свой собственный, более подходящий для Вас - решать Вам.\n1. Четко оцените свои силы и определите свою самую слабую часть, будьте готовы, что эту одну часть вы себе допускаете сдать до 36 баллов. Но минимум от 24! Вы должны быть в этом так же уверены! (для этого прорешайте несколько модульных тестов из подготовительных заданий в этой группе) Чем больше вы наберете баллов в своей самой слабой части, тем лучше конечно. Согласитесь, лучше закрепить свои сильные части за 2-3 недели и быть в них уверенным, чем потратить большинство времени на слабую и не факт, что она усилится и дотянет до 36, а время, которые можно было бы потратить на укрепление 3-х своих сильных сторон (частей) - уже будет утрачено.\n2. Разбейте свой день на подготовку своих сильных 3ёх частей. Каждый день уделяйте каждой части минимум 1 час времени, а лучше от 2ух часов.\nРазберем план, когда у вас, допустим, слабая часть – Hören."
+  },
+  {
+   "id": "prep_lesen",
+   "title": "Подготовка: LESEN",
+   "category": "TIPS",
+   "body": "Распечатайте все возможные LESEN части, которые были у других людей на экзамене (они все собраны ниже), прочитайте, переведите каждое предложение, чтобы понимать всё досконально. Найти правильный ответ – закрепить его в голове.\nПроведите анализ неправильных ответов и запомнить для себя - почему эти ответы точно не подходят.\nВыделите/подчеркните одним цветом аргументацию правильного ответа и другим цветом аргументацию неправильного ответа. Так вы запомните и забетонируете весь Lesen всех возможных частей экзамена буквально за несколько дней и потом только время от времени придется повторять их."
+  },
+  {
+   "id": "prep_schreiben",
+   "title": "Подготовка: SCHREIBEN",
+   "category": "TIPS",
+   "body": "Каждый день пишите минимум 2 письма. (1 письмо - ответ на жалобу, 2 - ответ на форум)\nПисьмо-ответ на жалобу.\nПосмотрите в примерах ниже в этом документе ответы на жалобу, но придумайте ОБЯЗАТЕЛЬНО свой ответ, который будет отличаться, но включать в себя ВСЕ пункты, которые просил указать ШЕФ.\nПисьмо - ответ на форуме. Посмотрите в закрепленных возможные темы форумов, которые были. Посмотрите на ютубе форму-шаблон по которой можно писать каждое письмо. Например если поделить на абзацы (В письме пишите все только строчкой, предложение за предложением!). То вы должны следовать плану - “Приветствие → Вступление → Аргументы “за” → Аргументы “против” → ваше Мнение → имя”\nВозможные шаблоны (больше вы можете найти в интернете или написать свои персональные):"
+  },
+  {
+   "id": "prep_schreiben_templates",
+   "title": "Шаблонные фразы для форума (Приветствие … Ваше мнение)",
+   "category": "FORUM",
+   "body": "Возможные шаблоны по плану письма: Приветствие → Вступление → Аргументы «за» → Аргументы «против» → Ваше мнение → имя.",
+   "items": [
+    {
+     "de": "Приветствие: Hey Leute, / Liebe Kolleginnen und Kollegen, / Hallo zusammen,"
+    },
+    {
+     "de": "Вступление: Habt ihr/Haben Sie schon davon gehört, dass … / Wisst ihr/Wissen Sie schon, dass ... / Viele von euch/ihnen wissen wahrscheinlich schon, dass die Firma vorhat, ... zu …"
+    },
+    {
+     "de": "Аргументы за: Einerseits ... / Auf der einen Seite … / Dafür spricht aus meiner Perspektive auf jeden Fall, dass … / Ein klarer Vorteil wäre, dass ..."
+    },
+    {
+     "de": "Аргументы против: Andererseits … / Auf der anderen Seite … / Dagegen spricht allerdings, dass … / Man sollte aber auch daran denken, dass ..."
+    },
+    {
+     "de": "Ваше Мнение: Abschließend möchte ich sagen, dass … / Meiner Meinung nach … / Persönlich halte ich ... für eine gute/schlechte Idee."
+    }
+   ]
+  },
+  {
+   "id": "forum_example_fitness",
+   "title": "Шаблон и пример письма на форум (Fitnessraum)",
+   "category": "FORUM",
+   "body": "Вот, к примеру шаблон и пример письма, по которому вы можете составлять свои письма:\nLiebe Kolleginnen und Kollegen,\nviele von Ihnen wissen wahrscheinlich schon, dass die Firma vorhat, einen Fitnessraum für uns zu bauen. Wenn man den Raum dann auch nutzen möchte, muss man eine monatliche Gebühr dafür bezahlen.\nEinerseits halte ich es echt für eine gute Idee, dass wir in unseren Pausen etwas für die Gesundheit machen können. Meistens sitzen wir den ganzen Tag, deshalb würde uns ein bisschen Bewegung mit Sicherheit guttun.\nAndererseits bin ich mir unsicher, wie viele von uns dieses Angebot wirklich nutzen würden. Es gibt auch noch ein paar Fragen, die für mich offen sind: Mich würde interessieren, wo wir z.B. duschen können und auch, wie hoch die monatliche Gebühr genau ist.\nPersönlich halte ich diesen Raum also für keine gute Idee. Ich frage mich, ob man mit dem Geld nicht etwas Besseres machen könnte.\nВаше имя."
+  },
+  {
+   "id": "letter_recommendations",
+   "title": "Рекомендации к письмам",
+   "category": "TIPS",
+   "body": "1. Посмотрите видео на ютубе с шаблонами и выберите тот, который вам больше подходит и следуйте ему в ваших письмах. Например есть хорошие видео c шаблонами от Benjamin - Richtig guten Forumsbeitrag schreiben | TELC B2 Beruf + REDEMITTEL\n2. В ответе на жалобу в 1 письме указывайте только то, о чем просил Вас Шеф. Если он не упоминал слова про то что-бы дать скидку - отбросьте эту идею и не вздумайте её упоминать. Это будет считаться ошибкой.\n3. Придумайте свои ответы на жалобу и свои ответы для форума. Так вам будет их легче запомнить и тренировать. Плюс к тому же копирование из интернета готового и заучивание или отсюда - только на свой страх и риск. Это может быть расценено проверяющими как копипаста и не быть зачтено (случаи были).\n4. В письме пишите все только строчкой, предложение за предложением. Не делите свой текст на абзацы.\n5. Выберите один стиль письма на форуме. Формальный или неформальный в письме и следуйте только ему. Использование двух стилей одновременно будет считаться грубой ошибкой."
+  },
+  {
+   "id": "prep_sprachbausteine",
+   "title": "ОБЯЗАТЕЛЬНО! Sprachbausteine - 6 баллов",
+   "category": "TIPS",
+   "body": "Проработайте все ШБШ (Sprachbausteine) которые будут в этом документе. Вариантов тоже не так много, запоминать там тоже не так много - а это целые 6 баллов!!! А в Schreiben части злую шутку может сыграть даже 0.5 балла. Имейте это ввиду. Не поленитесь и найдите несколько часов своего времени чтобы получить дополнительные 6 баллов!"
+  },
+  {
+   "id": "prep_notizen",
+   "title": "ОБЯЗАТЕЛЬНО! Notizen - 6 баллов",
+   "category": "TIPS",
+   "body": "Их всего базисно несколько штук. Выучите каждый, но учите только суть. Например Mayer - Жалоба: маляр не пришел, цвета - зеленый и белый принести с собой. Должен прийти до завтрашнего утра. В заключении - позвонить.\nОБРАТИТЕ ВНИМАНИЕ! они меняют эти нотицены (но смысл пока не меняли). Например имя уже было не \"Mayer\", a \"Meier\".\nТак же поменяли цвета, вместо зеленого и белого были другие. Так что учите БАЗУ, но будьте готовы, что могут внести изменения и не расслабляйтесь, а слушайте на экзамене (на этом тоже многие погорели)!"
+  },
+  {
+   "id": "prep_sprechen",
+   "title": "Подготовка: SPRECHEN",
+   "category": "TIPS",
+   "body": "Разбитие на 3 части. (12 баллов,, 8 баллов, 10 баллов)\nШпрехен состоит из 3 главных частей. Первая часть поделена ещё на 3 части. Вот сколько баллов вы можете получить за раскрытие каждой темы:\n1A - 5 баллов. 1B - 5 баллов. 1C - 2 балла. 2 - 8 баллов. 3 - 10 баллов.\nОставшиеся 30 баллов будут вам ставить за четкое произношение, использование сложных структур предложений (грамматики) Б2 уровня, использование б2 слов.\n1А. Подготовьте 7 СВОИХ презентаций на каждую тему. Выучить их. На экзамене рассказывайте их своими словами, а не стихотворением (это конечно тоже увидят и снизят баллы). И главное не нервничать, если что-то забыли – ничего страшного. Постарайтесь на 10-15 секунд переключить внимание и продолжить рассказывать с другого предложения или абзаца (план на каждую презентацию благо у вас уже будет в голове, т.к. вы выучите его дома),\n1B. Вам по вашей презентации прюфер задаст вопрос. По моему опыту, чем лучше вы расскажите презентацию – тем сложнее вам зададут вопрос (так было у меня) и будут ожидать развернутый ответ.(Например у меня была тема представление приложения Дуолинго и прюферы задали вопрос: Какие я ещё знаю приложения по типу Дуолинго, и почему я отдал предпочтение именно ему, что его выделяет на рынке среди других приложений). В любом случае не нервничайте и грамотно отвечайте. Если вы уверены в своем шпрехене, то вопрос вы точно поймёте и будете отвечать.\n1C. Вам дадут карандаш и листок на котором вы будете делать заметки, когда отвечает ваш партнер. Мне дали листок и карандаш перед 1B частью моего партнера и когда он закончил отвечать, попросили меня объяснять, что он только что сказал в части *** ***.\n1. Smalltalk mit Kolleg*innen. Я лично импровизировал и все темы, как по мне, были очень легкие. Но так же можно посмотреть видео в ютубе на B2 für den Beruf mündlicher Teil 2 и записать для себя пару тройку интересных постоянных фраз, которые можно будет использовать.\n2. Lösungswege diskutieren. Найти решение проблемы. Самая тяжелая часть, как по мне. Как подготовиться - посмотреть какие у других людей были задания в Teil 3 (тоже вся актуальная информация будет ниже) - в первую очередь тренировать диалоги этих заданий. Посмотреть в интернете темы и шаблонные фразы, которые там используют при решении проблемы - написать их себе. Или свои фразы, если можете придумать - тоже написать и выучить (так даже будет лучше). Идеально - если вы сдаете первый раз и знаете, кто у вас будет партнер - тогда вы можете натренировать диалоги дома, выучить, и встретиться лично и непосредственно 1х1 проработать каждую тему желательно хотя бы по 2 раза."
+  },
+  {
+   "id": "faq_results",
+   "title": "Где смотреть результат экзамена",
+   "category": "FORMAT",
+   "body": "F: Где можно смотреть результат своего экзамена?\nA: Они могут появляться на сайте telc уже начиная с 10 дня. Вам нужно знать свой семизначный экзаменационный номер участника, который начинается на 03 или 04 или 05 и находится в правом верхнем углу экзаменационного бланка. Во второй колонке указать свою дату рождения и в третьей - дату проверки экзамена. Потом выбрать – бумажный сертификат. В среднем, можно начинать проверять с 10 дня. Включая выходные. Учтите,что сертификаты на сайт могут загружать немного позже даты проверки. Поэтому нужно проверять не только сегодняшнюю дату, но и предыдущие дни.\nВторой вариант:\nМногие сертификаты идут уже в цифре и номер (код) учасника генирируется автоматически во время проверки результатов. Соответственно он никому не известен до получения результата. Есть два варианта получения результата:\n1. Во время регистрации на экзамен учасники указывали свой адрес ел. почты – тогда рузультат прийдет вам напрямую.\n2. Регистрировала всех на прюфунг школа на основании данных с с контрактов и во время регистрации указала ел. адрес школы – тогда результат прийдет на школу, школа его распечатает и выдаст вам под роспись.\nF: Если я не могу найти свой сертификат на сайте, это значит, что я не сдал ?\nA: Не обязательно. Возможно, вы неверные данные вводите, или не на том сайте смотрите, или результаты еще на сайт не выложены. Стопроцентным подтверждением того, что экзамен не сдан, может быть только Ergebnisbogen с соответствующим результатом, выданным в школе."
+  },
+  {
+   "id": "prep_closing",
+   "title": "Итог плана подготовки",
+   "category": "TIPS",
+   "body": "Вот в принципе приблизительный план, как имея слабый хёрен можно сроком за 2 недели подготовиться и успешно сдать экзамен. Ну и конечно учите БАЗУ (почему именно этот вариант правильный, а этот не подходит) в заданиях - а не просто заучивайте правильные ответы, что бы это не сыграло с вами злую шутку на экзамене. Удачи!"
+  },
+  {
+   "id": "scoring_sprechen",
+   "title": "Ermittlung des Teilergebnisses Sprechen",
+   "category": "SCORING",
+   "body": "Der Subtest Sprechen setzt sich aus folgenden Aufgaben zusammen:\n- Über ein Thema sprechen, Prüferfragen und Erläuterung eines Aspekts\n- Mit Kolleginnen und Kollegen sprechen\n- Lösungswege diskutieren\nDie erreichbaren Punktewerte setzen sich wie folgt zusammen (nach Kriterien):\nAufgabe | Kriterium | A | B | C | D\n1A Über ein Thema sprechen | Kriterium I | 5 | 3,5 | 2 | 0\n1B Prüferfragen | Kriterium I | 5 | 3,5 | 2 | 0\n1C Erläuterung eines Aspekts | Kriterium I | 2 | 1,5 | 1 | 0\n2 Mit Kolleginnen/Kollegen sprechen | Kriterium I | 8 | 6 | 3 | 0\n3 Lösungswege diskutieren | Kriterium I | 10 | 7,5 | 4 | 0\nStufen: A = B2 gut erfüllt, B = B2 erfüllt, C = B1 erfüllt, D = unter B1\nAufgabenübergreifende Bewertung:\nKriterium II | 10 | 7,5 | 4 | 0\nKriterium III | 10 | 7,5 | 4 | 0\nKriterium IV | 10 | 7,5 | 4 | 0"
+  },
+  {
+   "id": "scoring_passing",
+   "title": "Bestehen der Prüfung",
+   "category": "SCORING",
+   "body": "Zum Bestehen der Prüfung müssen 60 Prozent der Gesamtpunkte erreicht werden (144 Punkte). Zudem müssen mindestens drei der vier Subtests Lesen, Hören, Schreiben und Sprechen ein Ergebnis über 60 Prozent aufweisen (36 Punkte); in einem Subtest kann eine schwächere Leistung ausgeglichen werden, sofern das erreichte Teilergebnis im Bereich zwischen 40 und 60 Prozent liegt."
+  },
+  {
+   "id": "scoring_points",
+   "title": "Punkte und Gewichtung",
+   "category": "SCORING",
+   "body": "In der Prüfung Deutsch-Test für den Beruf B2 können insgesamt 240 Punkte erreicht werden, die sich zu jeweils 25 Prozent auf die vier Fertigkeiten Lesen, Hören, Schreiben und Sprechen verteilen.\nFertigkeit | Aufgaben | Items | Punkte pro Item | Punkte\nLesen | 5 | 20 | 3 | 60\nHören | 5 | 20 | 3 | 60\nSchreiben | 5 | | | 60\nSprechen | 3 | | | 60\nTotal | | | | 240\nZu jeder Fertigkeit sind mehrere Aufgaben zu bearbeiten. Eine Besonderheit der Prüfung Deutsch-Test für den Beruf B2 ist, dass es gemischte Aufgaben gibt, die sowohl die rezeptiven Fertigkeiten Lesen und Hören prüfen als auch die produktive Fertigkeit Schreiben. Die folgende Tabelle gibt einen Überblick über die Aufgaben- und Punkteverteilung:\nAufgabe | Fertigkeit | Item | Punkte | Summe\nLesen Teil 1 | Lesen | 1–5 | 5x3 | 15\nLesen Teil 2 | Lesen | 6–9 | 4x3 | 12\nLesen Teil 3 | Lesen | 10–13 | 4x3 | 12\nLesen Teil 4 | Lesen | 14–18 | 5x3 | 15\nLesen und Schreiben Teil 1 | Lesen | 19–20 | 2x3 | 6\nLesen und Schreiben Teil 2 | Schreiben | 21 | 7 | 7\nHören Teil 1 | Hören | 22–27 | 6x3 | 18\nHören Teil 2 | Hören | 28–31 | 4x3 | 12\nHören Teil 3 | Hören | 32–35 | 4x3 | 12\nHören Teil 4 | Hören | 36–40 | 5x3 | 15\nHören und Schreiben Teil 1 | Hören | 41 | 1x3 | 3\nHören und Schreiben Teil 2 | Schreiben | 42–45 | 6 | 6\nSprachbausteine Teil 1 | Schreiben | 46–51 | 6x0,5 | 3\nSprachbausteine Teil 2 | Schreiben | 52–57 | 6x0,5 | 3\nSchreiben | Schreiben | 58 | 14 | 14\nSprechen Teil 1A | Sprechen | | 5 | 5\nSprechen Teil 1B | Sprechen | | 5 | 5\nSprechen Teil 1C | Sprechen | | 2 | 2\nSprechen Teil 2 | Sprechen | | 8 | 8\nSprechen Teil 3 | Sprechen | | 10 | 10\nAufgabenübergreifende Bewertung Kriterium II–IV | Schreiben | | | 27\nAufgabenübergreifende Bewertung Kriterium II–IV | Sprechen | | | 30"
+  },
+  {
+   "id": "scoring_schreiben",
+   "title": "Ermittlung des Teilergebnisses Schreiben",
+   "category": "SCORING",
+   "body": "Der Subtest Schreiben setzt sich aus folgenden Aufgaben zusammen:\n- Lesen und Schreiben Teil 2\n- Hören und Schreiben Teil 2\n- Schreiben\n- Sprachbausteine\nDie Bewertung erfolgt auf Grundlage von Kriterien oder bei weniger komplexen Aufgaben als Entscheidung darüber, ob die richtige Lösung gefunden wurde oder nicht.\nDie erreichbaren Punktewerte setzen sich wie folgt zusammen (nach Kriterien):\nAufgabe | Kriterium | A | B | C | D\nLesen und Schreiben Teil 2 (21) | Kriterium I | 7 | 5 | 3 | 0\nSchreiben (58) | Kriterium I | 14 | 10,5 | 5,5 | 0\nStufen: A = B2 gut erfüllt, B = B2 erfüllt, C = B1 erfüllt, D = unter B1\nAufgabenübergreifende Bewertung:\nKriterium II | 9 | 7 | 3,5 | 0\nKriterium III | 9 | 7 | 3,5 | 0\nKriterium IV | 9 | 7 | 3,5 | 0\nRichtig / falsch:\nAufgabe | Item | Anzahl der Items | Punkte pro Item | Gesamtpunktzahl\nHören und Schreiben Teil 2 | 42–43 | 2 | 0,5 | 1\nHören und Schreiben Teil 2 | 44 | 1 | 4 | 4\nHören und Schreiben Teil 2 | 45 | 1 | 1 | 1\nSprachbausteine Teil 1 und 2 | 46–57 | 12 | 0,5 | 6"
+  },
+  {
+   "id": "sprechen_teil1",
+   "title": "Mündliche Prüfung Teil 1",
+   "category": "SPEAKING",
+   "body": "Teilnehmer/in A und B\nTeil 1A Über ein Thema sprechen (ca. 2 Minuten pro TN): Wählen Sie ein Thema aus und sprechen Sie ca. zwei Minuten darüber. Zeigen Sie, was Sie können. Den Teilnehmern werden jeweils zwei der folgenden acht Themen angeboten (die Themen stehen unter den Sprechen-Aufgaben).\nTeil 1B Prüferfragen (ca. 2 Minuten pro TN): Im Anschluss an Ihre Ausführungen stellt Ihnen die Prüferin bzw. der Prüfer Fragen. Während Sie sprechen, macht sich Ihre Gesprächspartnerin bzw. Ihr Gesprächspartner Notizen.\nTeil 1C Erläuterung eines Aspekts (ca. ½ Minute pro TN): Die zweite Prüferin/der zweite Prüfer bittet Ihre Gesprächspartnerin bzw. Ihren Gesprächspartner, einen Aspekt aus Ihren Antworten zu erläutern. Zum Beispiel mit diesen Worten: „TN A/B hat über ... gesprochen. Das habe ich leider nicht ganz verstanden. Können Sie mir das noch einmal erläutern?“"
+  },
+  {
+   "id": "redemittel_sprechen_einleitung",
+   "title": "Redemittel Sprechen Teil 2: Einleitung",
+   "category": "SPEAKING",
+   "items": [
+    {
+     "de": "Hallo, wie läuft's bei dir momentan? / Was geht ab? / Alles klar bei dir? / Alles gut bei dir? / Alles in Ordnung bei dir?"
+    },
+    {
+     "de": "Weißt du, da gibt's ja eine Sache, die öfter im Raum steht: … (Das Thema nennen)"
+    },
+    {
+     "de": "Ich hab schon mit dem Gedanken gespielt, wollte aber mal deine Sichtweise hören. Was hältst du davon?"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_sprechen_meinung_fragen",
+   "title": "Redemittel Sprechen Teil 2: Nach der Meinung fragen",
+   "category": "SPEAKING",
+   "items": [
+    {
+     "de": "Wie siehst du das? / Wie siehst du das Ganze?"
+    },
+    {
+     "de": "Hast du da vielleicht eine gute Idee?"
+    },
+    {
+     "de": "Wie machst du das? / Was ist dein Ansatz?"
+    },
+    {
+     "de": "Wie gehst du damit um? / Wie handhabst du das?"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_sprechen_zustimmen",
+   "title": "Redemittel Sprechen Teil 2: Zustimmen",
+   "category": "SPEAKING",
+   "items": [
+    {
+     "de": "Ja, ich kann dich vollkommen verstehen."
+    },
+    {
+     "de": "Genau, so sehe ich das auch. / Sehe ich genauso."
+    },
+    {
+     "de": "Da bin ich ganz bei dir / Da bin ich voll bei dir."
+    },
+    {
+     "de": "Stimmt, das könnte man definitiv mal ausprobieren."
+    },
+    {
+     "de": "Ja, guter Punkt."
+    },
+    {
+     "de": "Ja, genau, da sind wir uns einig."
+    },
+    {
+     "de": "Ja, klingt nach einem guten Ansatz / Ja, das ist ein guter Ansatz."
+    },
+    {
+     "de": "Stimmt, das ergibt Sinn. / Stimmt, das ist wohl das Sinnvollste."
+    },
+    {
+     "de": "Genau, so in etwa hab ich mir das auch gedacht."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_sprechen_andere_meinung",
+   "title": "Redemittel Sprechen Teil 2: Andere Meinung äußern",
+   "category": "SPEAKING",
+   "items": [
+    {
+     "de": "Ich versteh, was du sagst, aber ehrlich gesagt, bin ich da nicht ganz deiner Meinung."
+    },
+    {
+     "de": "Ich verstehe deinen Standpunkt, allerdings denke ich, dass man auch die anderen Aspekte berücksichtigen sollte… / Ich verstehe schon, was du meinst, doch ich sehe das etwas (ein wenig / ein bisschen) anders. Für mich spielt da noch …. eine Rolle."
+    },
+    {
+     "de": "Da hast du sicher recht, allerdings…"
+    },
+    {
+     "de": "Ich stimme dir grundsätzlich zu, aber…"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_sprechen_abschluss",
+   "title": "Redemittel Sprechen Teil 2: Abschluss",
+   "category": "SPEAKING",
+   "items": [
+    {
+     "de": "Letztlich muss jeder für sich entscheiden, was am besten passt. / Letztlich muss man immer schauen, was am besten für alle funktioniert. / Ja, letztlich muss man schauen, was am besten passt. / Im Grunde geht es ja darum, die richtige Balance zu finden."
+    },
+    {
+     "de": "Man muss das immer von mehreren Seiten betrachten. / Es ist immer gut, mal eine andere Perspektive zu hören. / Es lohnt sich immer, mal von jemand anderem eine Meinung einzuholen. / Es war auf jeden Fall gut, mal eine andere Sichtweise zu hören. / Am Ende ist es ja immer eine Frage der Perspektive."
+    },
+    {
+     "de": "Schön, dass wir das kurz besprechen konnten. / Schön, dass wir uns darüber austauschen konnten. / Ja, das war echt hilfreich, sich darüber auszutauschen."
+    },
+    {
+     "de": "Danke dir für die Einblicke, hat mir echt weitergeholfen / Danke für das nette Gespräch, war wirklich hilfreich! / Danke dir, hat mich weitergebracht. / Vielen Dank für den Austausch, das hat mir nochmal einen neuen Blick gegeben. / Vielen Dank für deine Gedanken, das hilft mir auf jeden Fall weiter. / Danke für deine Sichtweise!"
+    },
+    {
+     "de": "Tschüss!"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_1",
+   "title": "Beschwerde 1: Anrede / Обращение",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Sehr geehrte Frau [Name], / Sehr geehrter Herr [Name],",
+     "ru": "Уважаемая г-жа [Фамилия], / Уважаемый г-н [Фамилия],"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_2",
+   "title": "Beschwerde 2: Dank & Bezugnahme / Благодарность и указание темы",
+   "category": "LETTER",
+   "body": "vielen Dank für Ihre Nachricht, in der Sie uns über Probleme mit … informiert haben. / благодарим вас за сообщение, в котором вы о проблемах с … информируете нас.",
+   "items": [
+    {
+     "de": "unserem Service (für alle Themen: Putzdienst, Webseite, Umzug etc.)",
+     "ru": "нашим сервисом (универсально — для всех тем)"
+    },
+    {
+     "de": "dem Gerät (Spülmaschine, Drucker)",
+     "ru": "устройством (посудомоечная машина, принтер)"
+    },
+    {
+     "de": "der Rechnung (Rechnung)",
+     "ru": "счетом (счет)"
+    },
+    {
+     "de": "der Lieferung (Tischlampe, Mangelhafte Lieferung)",
+     "ru": "доставкой (настольная лампа, некачественная доставка)"
+    },
+    {
+     "de": "der Bestellung (Pflanzenlieferung)",
+     "ru": "заказом (поставка растений)"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_3",
+   "title": "Beschwerde 3: Entschuldigung / Извинения",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Wenn Firma schuld ist: Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten Sie um Entschuldigung.",
+     "ru": "Когда виновата компания: Мы глубоко сожалеем о причиненных неудобствах и приносим свои извинения."
+    },
+    {
+     "de": "Wenn Verantwortung unklar (Drucker / Schmidt & Zeller): Wir bedauern, dass es zu dieser Situation gekommen ist.",
+     "ru": "Когда ответственность неясна (Принтер / Schmidt & Zeller): Мы сожалеем, что сложилась такая ситуация."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_4",
+   "title": "Beschwerde 4: Erklärung / Объяснение причины",
+   "category": "LETTER",
+   "body": "Nach interner Prüfung wurde festgestellt, dass es aufgrund von … zu diesem Vorfall gekommen ist. / По результатам внутренней проверки было установлено, что вследствие … возникла данная ситуация.",
+   "items": [
+    {
+     "de": "internen organisatorischen Problemen (Reinigung, Umzug)",
+     "ru": "внутренних организационных проблем (уборка, переезд)"
+    },
+    {
+     "de": "personellen Engpässen (Umzug, Mangelhafte Lieferung)",
+     "ru": "нехватки персонала (переезд, некачественная доставка)"
+    },
+    {
+     "de": "einem technischen Defekt am Gerät (Spülmaschine)",
+     "ru": "технической неисправности устройства (посудомоечная машина)"
+    },
+    {
+     "de": "eines Computerproblems (Rechnung)",
+     "ru": "сбоя в компьютерной системе (счет)"
+    },
+    {
+     "de": "unvorhergesehener Lieferschwierigkeiten (Tischlampe, Mangelhafte Lieferung)",
+     "ru": "непредвиденных трудностей с поставкой (настольная лампа, некачественная доставка)"
+    },
+    {
+     "de": "einer Verwechslung bei der Bearbeitung (Pflanzenlieferung, Webseite, Rechnung)",
+     "ru": "ошибки при обработке заказа (растения, сайт, счет)"
+    },
+    {
+     "de": "einer fehlerhaften Bedienung des Geräts (Drucker)",
+     "ru": "неправильной эксплуатации устройства (принтер)"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_5",
+   "title": "Beschwerde 5: Verständnis zeigen / Понимание важности решения",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Darüber hinaus verstehen wir, wie wichtig eine schnelle Lösung für Ihr Unternehmen ist.",
+     "ru": "Мы понимаем, насколько важно для вашей компании скорейшее решение вопроса."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_6",
+   "title": "Beschwerde 6: Lösung / Решение",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Putzdienst / Lassner: Wir haben heute mit unseren Mitarbeitern gesprochen und die Situation geklärt. Wir möchten Ihnen versichern, dass sich dies nicht wiederholen wird.",
+     "ru": "Уборка / Lassner: Сегодня мы провели беседу с нашими сотрудниками и прояснили ситуацию. Заверяем вас, что подобное не повторится."
+    },
+    {
+     "de": "Tischlampe / Berger & Lutz: Wir bitten Sie, noch bis nächste Woche Montag zu warten. Falls Ihre Bestellung bis dahin nicht eingetroffen ist, bieten wir Ihnen gerne ein vergleichbares Modell aus unserem Lagerbestand an.",
+     "ru": "Настольная лампа / Berger & Lutz: Просим вас подождать до следующего понедельника. Если ваш заказ не поступит к этому сроку, мы с удовольствием предложим вам аналогичную модель из нашего складского запаса."
+    },
+    {
+     "de": "Webseite / Stiller: Den Fehler bei den Namen werden wir bis Ende dieser Woche kostenfrei korrigieren. Bitte beachten Sie, dass das vereinbarte Farbschema laut Vertrag korrekt umgesetzt wurde. Weitere Korrekturen sind leider nur gegen einen Aufpreis von [X€] möglich.",
+     "ru": "Сайт / Stiller: Ошибку с именами мы исправим бесплатно до конца этой недели. Обращаем ваше внимание, что цветовая схема была реализована в соответствии с договором. Любые дополнительные правки возможны только за доплату в размере [X€]."
+    },
+    {
+     "de": "Spülmaschine / Krüger: Unser Techniker kann am [Datum] um [Uhrzeit] Uhr zu Ihnen kommen und das Gerät überprüfen. Bitte teilen Sie uns mit, ob der Termin passt. Bitte beachten Sie, dass eine sofortige Reparatur nicht möglich ist, falls wir Ersatzteile bestellen müssen. In diesem Fall informieren wir Sie umgehend.",
+     "ru": "Посудомоечная машина / Krüger: Наш технический специалист может приехать к вам [дата] в [время]. Пожалуйста, сообщите нам, подходит ли вам это время. Обращаем ваше внимание, что в случае необходимости заказа запчастей незамедлительный ремонт будет невозможен — в таком случае мы сразу же вас уведомим."
+    },
+    {
+     "de": "Umzug / Zaun & Lozano: Am Mittwochmorgen werden pünktlich zwei unserer Mitarbeiter bei Ihnen sein und den Möbelaufbau abschließen. Für die beschädigten Gegenstände übernehmen wir selbstverständlich die Kosten.",
+     "ru": "Переезд / Zaun & Lozano: В среду утром ровно в назначенное время к вам прибудут двое наших сотрудников и завершат сборку мебели. Расходы на поврежденное имущество мы, разумеется, берем на себя."
+    },
+    {
+     "de": "Drucker / Schmidt & Zeller: Nach Rücksprache mit unserem Techniker wurde festgestellt, dass die Fehler auf eine fehlerhafte Bedienung zurückzuführen sind. Wir möchten Sie daher höflich darauf hinweisen, dass die Lösung dieses Problems nicht in unserem Verantwortungsbereich liegt. Gerne kommt unser Techniker erneut zu Ihnen und weist Ihre Mitarbeiterinnen und Mitarbeiter kostenfrei in die Bedienung ein. Bitte beachten Sie, dass die Kosten für [die bisherigen Technikerbesuche] / [die Überprüfung des Geräts] bei Ihnen verbleiben.",
+     "ru": "Принтер / Schmidt & Zeller: По результатам консультации с нашим техническим специалистом было установлено, что неполадки вызваны неправильной эксплуатацией устройства. Мы хотели бы вежливо указать вам, что решение данной проблемы не входит в нашу зону ответственности. Наш специалист готов повторно посетить вашу компанию и бесплатно провести обучение сотрудников. Обращаем ваше внимание, что расходы за [предыдущие визиты технического специалиста] / [диагностику устройства] остаются на вашей стороне."
+    },
+    {
+     "de": "Rechnung / Schmidt: Wir haben Ihren Auftrag überprüft und die erforderlichen Korrekturen vorgenommen. Ihr üblicher Rabatt von [X%] wurde dabei selbstverständlich berücksichtigt. Die korrigierte Rechnung erhalten Sie in Kürze erneut zugesandt.",
+     "ru": "Счет / Schmidt: Мы проверили ваш заказ и внесли необходимые исправления. Ваша обычная скидка в размере [X%] была учтена. Исправленный счет будет выслан вам в ближайшее время."
+    },
+    {
+     "de": "Mangelhafte Lieferung / Schramm: Für die beschädigten Waren bieten wir Ihnen einen Preisnachlass von [X%] an. Alternativ können Sie uns die Artikel zurücksenden und wir liefern Ersatz in einwandfreier Qualität. Die fehlenden T-Shirts liefern wir aufgrund unserer aktuellen Personalsituation leider erst bis zum [Datum] nach. Die Versandkosten übernehmen selbstverständlich wir.",
+     "ru": "Неполная поврежденная поставка / Schramm: За поврежденный товар мы предлагаем вам скидку в размере [X%]. В качестве альтернативы вы можете вернуть нам товар и мы доставим замену надлежащего качества. Недостающие футболки мы отправим как можно скорее, однако в связи с текущей кадровой ситуацией это возможно не ранее [дата]. Расходы на доставку мы берем на себя."
+    },
+    {
+     "de": "Pflanzenlieferung / Talheim: Die durch unseren Fehler entstandenen Zusatzkosten übernehmen wir selbstverständlich. Bitte senden Sie uns die entsprechenden Belege zu. Wir würden uns freuen, Sie weiterhin zu unseren Kunden zählen zu dürfen.",
+     "ru": "Поставка растений / Talheim: Дополнительные расходы, возникшие по нашей вине, мы, разумеется, компенсируем в полном объеме. Просим вас направить нам соответствующие подтверждающие документы. Мы будем рады продолжить сотрудничество с вами."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_7",
+   "title": "Beschwerde 7: Entgegenkommen / Компенсация",
+   "category": "LETTER",
+   "body": "Nur verwenden, wenn im Vorgesetzten-Brief ein Rabatt erwähnt wird (Putzdienst / Lassner, Pflanzenlieferung / Talheim). / Только в том случае, если скидка указана в письме руководителя (Услуги уборки / Ласснер, Доставка растений / Тальхайм).",
+   "items": [
+    {
+     "de": "Als Zeichen unseres Entgegenkommens bieten wir Ihnen einen Rabatt von [X%] auf Ihren nächsten Auftrag an.",
+     "ru": "В знак нашей доброй воли мы предлагаем вам скидку в размере [X%] на ваш следующий заказ."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_8",
+   "title": "Beschwerde 8: Dank & Zusammenarbeit / Благодарность и сохранение сотрудничества",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Abschließend danken wir Ihnen für Ihr Verständnis und hoffen auf eine weiterhin gute Zusammenarbeit.",
+     "ru": "В заключение, благодарим вас за понимание и надеемся на дальнейшее плодотворное сотрудничество."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_9",
+   "title": "Beschwerde 9: Service-Satz / Готовность к обратной связи",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Für Rückfragen stehen wir Ihnen jederzeit gerne zur Verfügung.",
+     "ru": "По всем вопросам Вы можете обратиться к нам в любое время."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_beschwerde_10",
+   "title": "Beschwerde 10: Grußformel / Вежливое завершение письма",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Mit freundlichen Grüßen\n[Ihr Vorname und Nachname]",
+     "ru": "С уважением,\n[Ваше имя и фамилия]"
+    }
+   ]
+  },
+  {
+   "id": "telefonnotiz_beispiele",
+   "title": "Telefonnotiz: Beispiele aus realen Prüfungsaufgaben",
+   "category": "PHONE_NOTE",
+   "body": "Jede Notiz: Thema, Grund, Namen (Schreibvarianten), Kontakt, Weitere Informationen (Varianten durch / getrennt), Zu erledigen.",
+   "items": [
+    {
+     "de": "Thema: Autovermietung\nGrund: Angebot\nNamen: Schmitt / Schmidt / Schmid / Schmitz\nKontakt: 0 171 88 45 545 / 0 173 721 572 6 / 0 173 916 94 42\nWeitere Informationen:\n- Preis: 75€ / 80€ / 99€ / 55€ pro Tag für ein kleines Auto / Fahrzeug / Mittelklassewagen / Wagen\n- das Auto mit vollem Tank Benzin\n- kein großes Auto verfügbar haben\n- Die Rückgabe des Autos persönlich oder sie können organisieren\n- Auto vollgetankt zurückgeben oder Firma macht es kostenpflichtig\n- Man muss die Versicherung besprechen / bilden / regeln\nZu erledigen: Rückruf und Details klären / ob Angebot angenommen wird"
+    },
+    {
+     "de": "Thema: Getränke nicht geliefert\nGrund: Beschwerde\nNamen: Wolff / Knopper / Knooper\nKontakt: 0162 744 642 8\nWeitere Informationen:\n- Die Getränke für die Veranstaltung mit über 200 / 100 Personen sind für heute bestellt\n- Die Lieferung: um 11.00 Uhr ist nicht da (ist nicht angekommen)\n- Sie warten auf 50 Kästen Wasser und 15 gemischte Saftkisten / 30 Kisten Wasser und 10 Kisten gemischte Säfte\n- Die Sachen müssen bis spätestens 14:30 Uhr ankommen\nZu erledigen: Die Lieferung so schnell wie möglich schicken und bis 12 Uhr Bescheid geben"
+    },
+    {
+     "de": "Thema: Wände streichen\nGrund: Beschwerde\nNamen: Mayer / Meyer / Meier / Maier / Schröder\nKontakt: 0 5123 72 85 618 / 0155 623 66 85\nWeitere Informationen:\n- Die Firma soll heute eine Praxis / ein Geschäft / einen Friseursalon streichen\n- Die Maler sind: gar nicht gekommen / überhaupt nicht erschienen\n- weiße und grüne / blaue / pinke Farbe mitbringen\n- Die Wände müssen bis morgen Mittag / bis morgen Um 13 Uhr / bis Montag Mittag gestrichen werden\nZu erledigen: Dringend Rückruf / umgehend zurückrufen"
+    },
+    {
+     "de": "Thema: Defekter Kopierer\nGrund: Angebot\nNamen: Schulze / Scholtz\nKontakt: 0160 335 101 8 / 0 174 0254831\nWeitere Informationen:\n- Defekter Kopierer hat ein großes Problem mit Elektronik\n- Die Reparatur ist nur in der Werkstatt möglich\n- Austausch dauert 3 Wochen / ca. 4 Wochen wegen Lieferschwierigkeiten\n- Für die Reparatur müssen Ersatzteile bestellt werden. Das wird 5 Tage / 2 Werktage dauern\n- Momentan kein Leihgerät verfügbar\nZu erledigen: Rückruf bis morgen. Entscheiden, ob Reparatur oder Austausch"
+    },
+    {
+     "de": "Thema: Fehlende Materialien liefern\nGrund: Beschwerde\nNamen: Städtler / Hoffmann / Hofmann / Becker / Brandt / Brand\nKontakt: 0 173 536 47 15 / 0 175 933 797 6 / 0 173 715 720 3\nWeitere Informationen:\n- 180 / 200 / 500 Prospekte / Prospekthüllen / Schnellhefter / Briefumschläge bestellt haben, aber nur 100 / 120 / 150 / 400 angekommen sind\n- Man braucht fehlenden 80 Prospekte / Hüllen / Schnellhefter bis morgen / übermorgen\n- Lieferung: spätestens morgen abschicken / sofort fehlende Schnellhefter abschicken / sofort losschicken\nZu erledigen: Rückruf zur Bestätigung der Lieferung"
+    },
+    {
+     "de": "Thema: Rotwein / Weißwein fehlen\nGrund: Beschwerde\nNamen: Günther / Günter\nKontakt: 0135 821 76 49\nWeitere Informationen:\n- 30 Flaschen / Kisten / Kartons Weißwein bestellt, aber nur 20 / 25 erhalten; ODER statt 15 Kartons Weißwein 30 Kartons bekommen haben\n- 50 / 15 Flaschen / Kisten / Kartons Rotwein statt, nur 30 / 20 erhalten\n- Schaden: 2 Flaschen Saft / Wein sind zerbrochen / wurden beschädigt / kaputt gegangen\n- Bis morgen / so schnell wie möglich / fehlenden Rotwein schnell nachliefern\n- Neue Rechnung erstellen\nZu erledigen: Rückruf und neue Rechnung schicken / Rotwein schnell nachliefern"
+    },
+    {
+     "de": "Thema: Premiumpapier\nGrund: Angebot\nNamen: Kienzle / Strauß / Strauss / Walter / Walther\nKontakt: 0 179 335 36 37 / 0 174 113 806 6 / 0 173 417 47 37\nWeitere Informationen:\n- Angebot: Visitenkarten / Kopierpapier aus Premiumpapier\n- Preis: 100 Stück für 60,99€ / 150 Stück für 90,99€ / 16,99€ für 100 Stück / 4,49€ pro 500 Blatt / ab 7,89€ für 500 Blatt / 16 oder 20% Rabatt\n- Lieferung: per Expressversand innerhalb von 2 Tagen / bis morgen bei Bestellung bis 15:00 Uhr / innerhalb eines Tages bei Bestellung bis 18:00 Uhr / in 2 Tagen lieferbar\nZu erledigen: Rückruf zur Bestätigung der Papiersorte"
+    },
+    {
+     "de": "Thema: Gebrochene Teller\nGrund: Beschwerde\nNamen: Schweizer / Schwietzler / Schwalzer\nWeitere Informationen:\n- Der Karton mit Tellern ist zerbrochen angekommen\n- Es gibt 7 zerbrochene Teller\n- Ersatz so schnell wie möglich nachliefern\nZu erledigen: Rückruf und schnelle Nachlieferung"
+    },
+    {
+     "de": "Thema: Tischreservierung\nGrund: Buchung\nNamen: Messner / Meßner / Herrmann / Lorenz / Möller / Müller\nKontakt: 0 4133 784 30 09 / 0 172 439 378 6 / 0 157 340 4825 / 0 151 130 686 4\nWeitere Informationen:\n- Einen Tisch reservieren für 2 Personen / 5 Personen / für 6 Personen (5 Kunden + Chef/ Leiter)\n- Am Freitagabend um 12:30 / 19:30 Uhr / Am Donnerstagabend um 18:30 Uhr / am Mittwochabend um 18:00 Uhr\n- Haben Sie einen Parkplatz für Gäste?\n- Menu №1 / №3 / №4 vorbereiten / Menu №2 bestätigen\nZu erledigen: Rückruf zur Bestätigung der Reservierung / der Reservierung und Parkplätze"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_1",
+   "title": "Forumsbeitrag 1: Anrede / Приветствие",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "DUZEN: Hallo zusammen, / Hallo Leute,",
+     "ru": "НЕФОРМАЛЬНЫЙ СТИЛЬ: Привет всем, / Привет, народ,"
+    },
+    {
+     "de": "SIEZEN: Liebe Kolleginnen und Kollegen, / Sehr geehrte Damen und Herren,",
+     "ru": "ФОРМАЛЬНЫЙ СТИЛЬ: Дорогие коллеги, / Уважаемые дамы и господа,"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_2",
+   "title": "Forumsbeitrag 2: Einleitung / Введение",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "Ich habe gehört / gelesen, dass [Thema]. Dazu möchte ich meine Meinung äußern.",
+     "ru": "Я слышал(а) / читал(а), что [тема]. По этому поводу хочу высказать своё мнение."
+    },
+    {
+     "de": "Mir ist zu Ohren gekommen, dass [Thema]. Auch ich möchte dazu etwas schreiben.",
+     "ru": "До меня дошли сведения, что [тема]. Я тоже хочу написать об этом."
+    },
+    {
+     "de": "Ich habe vor Kurzem erfahren, dass [Thema]. Ich finde diesen Vorschlag (nicht) gut.",
+     "ru": "Я недавно узнал(а), что [тема]. Я нахожу это предложение (не очень) хорошим."
+    },
+    {
+     "de": "Auch ich möchte heute in unserem Forum etwas zum Thema [Thema] schreiben.",
+     "ru": "Я тоже хочу сегодня написать кое-что на нашем форуме по теме [тема]."
+    },
+    {
+     "de": "Mich hat die Information erreicht, dass unsere Firma plant, [Thema].",
+     "ru": "До меня дошла информация о том, что наша компания планирует [тема]."
+    },
+    {
+     "de": "[Habt ihr / Haben Sie] schon gehört? Unsere Firma plant, [Thema].",
+     "ru": "Вы уже слышали? Наша компания планирует [тема]."
+    },
+    {
+     "de": "Ich habe mitbekommen, dass unsere Firma plant, [Thema]. Dazu möchte ich Stellung nehmen.",
+     "ru": "Я узнал(а), что наша компания планирует [тема]. Я хотел бы прокомментировать это."
+    },
+    {
+     "de": "Wie wir alle wissen, möchte unsere Geschäftsleitung [Thema]. Ich bin ehrlich gesagt überrascht.",
+     "ru": "Как вам всем известно, наше руководство планирует [тема]. Честно говоря, я удивлён(а)."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_3",
+   "title": "Forumsbeitrag 3: Eigene Meinung / Собственное мнение",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "Ich bin [dafür / dagegen], weil …",
+     "ru": "Я [за / против], потому что…"
+    },
+    {
+     "de": "Ich persönlich finde, dass [Ihre Position].",
+     "ru": "Лично я считаю, что [твоя позиция]."
+    },
+    {
+     "de": "Meiner Meinung nach ist [Ihre Sichtweise].",
+     "ru": "По моему мнению, [твоя точка зрения]."
+    },
+    {
+     "de": "Ich finde den Vorschlag gut, [weil / denn] …",
+     "ru": "Я нахожу это предложение хорошим, [потому что / так как]…"
+    },
+    {
+     "de": "Was mich betrifft / angeht, bin ich [dafür / dagegen], weil …",
+     "ru": "Что касается меня, я за / против, потому что…"
+    },
+    {
+     "de": "Grundsätzlich befürworte ich den Vorschlag, weil …",
+     "ru": "В целом я поддерживаю это предложение, потому что…"
+    },
+    {
+     "de": "Ich bin (nicht) mit dem Vorschlag einverstanden, weil …",
+     "ru": "Я (не) согласен(а) с этим предложением, потому что…"
+    },
+    {
+     "de": "Ich bin geteilter Meinung: Einerseits … Andererseits …",
+     "ru": "У меня двоякое мнение: с одной стороны… с другой стороны…"
+    },
+    {
+     "de": "In Bezug auf diesen Vorschlag bin ich der Meinung, dass …",
+     "ru": "Что касается этого предложения, я считаю, что…"
+    },
+    {
+     "de": "Was mich betrifft, fällt es mir schwer, eine klare Meinung zu vertreten, weil ich geteilter Meinung bin.",
+     "ru": "Что касается меня, мне трудно занять чёткую позицию, так как у меня двоякое мнение."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_4",
+   "title": "Forumsbeitrag 4: Argument 1 (Vorteil) / Аргумент 1 (Преимущество)",
+   "category": "FORUM",
+   "body": "Gerne eigene Erfahrungen! / Приветствуется личный опыт!",
+   "items": [
+    {
+     "de": "Einerseits hat diese Idee einige Vorteile.",
+     "ru": "С одной стороны, у этой идеи есть преимущества."
+    },
+    {
+     "de": "Zum Beispiel [Vorteil 1-2 Sätze].",
+     "ru": "Например, [преимущество 1-2 предложения]."
+    },
+    {
+     "de": "Ein weiterer Vorteil ist, dass [Vorteil 2].",
+     "ru": "Ещё одно преимущество состоит в том, что [преимущество 2]."
+    },
+    {
+     "de": "Außerdem könnte es für viele Menschen praktisch oder hilfreich sein.",
+     "ru": "Кроме того, это может быть удобно или полезно для многих."
+    },
+    {
+     "de": "Ich persönlich habe erlebt, dass … (eigene Erfahrung!)",
+     "ru": "Лично я сталкивался(ась) с тем, что… (личный опыт!)"
+    },
+    {
+     "de": "In meinem früheren Unternehmen war es so, dass … (eigene Erfahrung!)",
+     "ru": "На моей прежней работе было так, что… (личный опыт!)"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_5",
+   "title": "Forumsbeitrag 5: Argument 2 (Nachteil) / Аргумент 2 (Недостаток)",
+   "category": "FORUM",
+   "body": "Gerne eigene Erfahrungen! / Приветствуется личный опыт!",
+   "items": [
+    {
+     "de": "Andererseits gibt es auch Nachteile.",
+     "ru": "С другой стороны, есть и недостатки."
+    },
+    {
+     "de": "Viele Leute finden, dass [Nachteil 1-2 Sätze].",
+     "ru": "Многие считают, что [недостаток 1-2 предложения]."
+    },
+    {
+     "de": "Besonders problematisch ist, dass [Folgen / Risiken].",
+     "ru": "Особенно проблематично то, что [последствия / риски]."
+    },
+    {
+     "de": "Das könnte dazu führen, dass [negative Folge].",
+     "ru": "Это может привести к [негативные последствия]."
+    },
+    {
+     "de": "Andererseits weiß ich, dass … (eigene Erfahrung!)",
+     "ru": "С другой стороны, я знаю по опыту, что… (личный опыт!)"
+    },
+    {
+     "de": "Aus eigener Erfahrung weiß ich, dass … (eigene Erfahrung!)",
+     "ru": "Из личного опыта я знаю, что… (личный опыт!)"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_connectors",
+   "title": "Redemittel: Universelle Phrasen / Универсальные фразы-связки",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "Einerseits … Andererseits … | Zum Beispiel … | Außerdem … | Ein weiterer Vorteil / Nachteil ist, dass …",
+     "ru": "С одной стороны… С другой стороны… | Например… | Кроме того… | Ещё одно преимущество/недостаток…"
+    },
+    {
+     "de": "Meiner Meinung nach … | Ich persönlich finde, dass … | Ich bin der Meinung, dass … | Ich finde den Vorschlag gut, weil …",
+     "ru": "По моему мнению… | Лично я считаю, что… | Я убеждён(а), что… | Я нахожу это предложение хорошим, потому что"
+    },
+    {
+     "de": "Es wäre sinnvoll, … | Vielleicht könnte man … | Deshalb schlage ich vor, dass … | Wichtig ist, dass …",
+     "ru": "Было бы разумно… | Возможно, стоит… | Поэтому я предлагаю… | Важно, чтобы…"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_6",
+   "title": "Forumsbeitrag 6: Vorschlag / Kompromiss / Предложение / Компромисс",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "Deshalb schlage ich vor, dass …",
+     "ru": "Поэтому я предлагаю, чтобы…"
+    },
+    {
+     "de": "Ich schlage vor, dass wir gemeinsam eine Lösung finden, die für alle fair ist.",
+     "ru": "Я предлагаю вместе найти решение, справедливое для всех."
+    },
+    {
+     "de": "Es wäre sinnvoll, die Meinungen aller Mitarbeitenden zuerst zu erfragen.",
+     "ru": "Было бы разумно сначала узнать мнение всех сотрудников."
+    },
+    {
+     "de": "Man könnte eine Testphase einführen und danach gemeinsam entscheiden.",
+     "ru": "Можно ввести пробный период и потом решить вместе."
+    },
+    {
+     "de": "Es ist wichtig, dass alle Mitarbeitenden selbst entscheiden können.",
+     "ru": "Важно, чтобы все сотрудники могли сами принимать решение."
+    },
+    {
+     "de": "Wichtig ist, dass alle Beteiligten in die Entscheidung einbezogen werden.",
+     "ru": "Важно, чтобы все заинтересованные стороны были включены в решение."
+    },
+    {
+     "de": "Eine gute Lösung wäre, wenn man [Kompromiss] anbieten würde.",
+     "ru": "Хорошим решением было бы, если бы предложили [компромисс]."
+    },
+    {
+     "de": "Wichtig ist, dass man die Interessen aller Beteiligten berücksichtigt.",
+     "ru": "Важно учитывать интересы всех участников."
+    },
+    {
+     "de": "Außerdem könnte es für viele Menschen praktisch oder hilfreich sein.",
+     "ru": "Кроме того, это может быть удобно или полезно для многих."
+    },
+    {
+     "de": "Am besten wäre es, wenn die Teilnahme freiwillig bliebe.",
+     "ru": "Было бы лучше, если бы участие оставалось добровольным."
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_7",
+   "title": "Forumsbeitrag 7: Schlusssatz / Заключение",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "Was [denkt ihr / denken Sie] darüber?",
+     "ru": "Что вы об этом думаете?"
+    },
+    {
+     "de": "Was [haltet ihr / halten Sie] davon?",
+     "ru": "Как вы к этому относитесь?"
+    },
+    {
+     "de": "Wie [findet ihr / finden Sie] diese Idee?",
+     "ru": "Как вы оцениваете эту идею?"
+    },
+    {
+     "de": "Das ist im Großen und Ganzen, wie ich zu diesem Thema stehe.",
+     "ru": "В целом, таково моё мнение по этой теме."
+    },
+    {
+     "de": "[Seid ihr / Sind Sie] mit mir einverstanden?",
+     "ru": "Вы со мной согласны?"
+    },
+    {
+     "de": "Ich bin gespannt darauf, was ihr davon haltet.",
+     "ru": "Мне интересно, что вы об этом думаете."
+    },
+    {
+     "de": "Ich freue mich darauf, eure Beiträge zu dieser Forumsdiskussion zu lesen.",
+     "ru": "Я с интересом жду ваших комментариев к этой дискуссии на форуме."
+    },
+    {
+     "de": "Was [sagt ihr / sagen Sie] dazu? Ich freue mich auf [eure / Ihre] Meinung.",
+     "ru": "Что вы скажете по этому поводу? Я буду рад(а) вашему мнению."
+    },
+    {
+     "de": "Ich bin gespannt, [eure / Ihre] Meinungen zum Thema zu lesen!",
+     "ru": "Мне интересно прочитать ваши мнения по этой теме!"
+    },
+    {
+     "de": "Ich freue mich sehr, [eure / Ihre] Meinungen dazu zu lesen.",
+     "ru": "Я буду рад(а) прочитать ваши мнения по этому поводу."
+    },
+    {
+     "de": "Ich würde mich über [eure / Ihre] Rückmeldungen freuen!",
+     "ru": "Я буду рад(а) вашей обратной связи!"
+    }
+   ]
+  },
+  {
+   "id": "redemittel_forum_8",
+   "title": "Forumsbeitrag 8: Grußformel / Вежливое завершение письма",
+   "category": "FORUM",
+   "items": [
+    {
+     "de": "DUZEN: Liebe Grüße, / Viele Grüße,",
+     "ru": "НЕФОРМАЛЬНЫЙ СТИЛЬ: С наилучшими пожеланиями, / Всего хорошего,"
+    },
+    {
+     "de": "SIEZEN: Mit freundlichen Grüßen, / Freundliche Grüße,",
+     "ru": "ФОРМАЛЬНЫЙ СТИЛЬ: С уважением, / С наилучшими пожеланиями,"
+    },
+    {
+     "de": "[Ihr Name] / [Ihr Vorname und Nachname]",
+     "ru": "[Ваше имя] / [Ваше имя и фамилия]"
+    }
+   ]
+  },
+  {
+   "id": "forum_style_tips",
+   "title": "Forumsbeitrag: Wichtige Hinweise / Важные советы",
+   "category": "FORUM",
+   "body": "Выбирай ТОЛЬКО ОДИН стиль: либо всё через Sie, либо всё через ihr. Не смешивай.\nПиши ПРОСТО, а не «умно»: короткие предложения, без риска ошибок. Не используй слова, в которых не уверен.\nВсегда пиши минимум 1 Vorteil + 1 Nachteil: Ein Vorteil ist, dass … / Ein Problem ist, dass … Не пиши только плюсы.\nИспользуй связки — это даёт B2: Einerseits … andererseits … / Darüber hinaus … Не пиши короткие несвязанные фразы."
+  }
+ ]
+}

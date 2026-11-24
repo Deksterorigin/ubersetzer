@@ -1,0 +1,1088 @@
+{
+ "part": "SPRACHBAUSTEINE_1",
+ "variants": [
+  {
+   "id": "sprachbausteine_1_v1",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 1",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Bewerbung um ein Praktikum",
+       "body": "Sehr geehrte Damen und Herren,\nzunächst bedanke ich mich für das freundliche, informative Telefonat. Wie besprochen übersende ich Ihnen meine Bewerbungsunterlagen. Auf Ihrer Homepage habe ich mich bereits über das Ausbildungskonzept Ihrer Hotelkette informiert und bin {{46}}, in Ihrem Haus vielfältige Einblicke in die Arbeit eines Hotelkaufmannes erhalten zu können.\nIch arbeite sehr gerne mit Menschen zusammen. Teamfähigkeit und Flexibilität bringe ich als Voraussetzung mit und interessiere mich {{47}} die Abläufe in der Hotelverwaltung. Ein Praktikum in der Hotelbranche möchte ich deshalb absolvieren, {{48}} ich nicht nur im Umgang mit Menschen, {{49}} auch im Planen und Organisieren meine großen Stärken sehe.\nIch erwarte von diesem Praktikum, mein theoretisches Wissen durch praktische Erfahrung weiter vertiefen zu können, {{50}} mir dann mit meiner Berufswahl endgültig sicher zu sein. {{51}} überzeuge ich Sie in einem persönlichen Gespräch. Über eine Einladung würde ich mich sehr freuen.\nMit freundlichen Grüßen\nAlexander Thiel"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Bestimmt"
+      },
+      {
+       "key": "b",
+       "text": "da"
+      },
+      {
+       "key": "c",
+       "text": "Damit"
+      },
+      {
+       "key": "d",
+       "text": "für"
+      },
+      {
+       "key": "e",
+       "text": "sicher"
+      },
+      {
+       "key": "f",
+       "text": "sondern"
+      },
+      {
+       "key": "g",
+       "text": "um"
+      },
+      {
+       "key": "h",
+       "text": "Über"
+      },
+      {
+       "key": "i",
+       "text": "Wegen"
+      },
+      {
+       "key": "j",
+       "text": "Wie"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v1_b",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 1 · версия 08.2024",
+   "note": "Новый вариант от 08.2024, новые люки",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Bewerbung um ein Praktikum",
+       "body": "Sehr geehrte Damen und Herren,\nzunächst bedanke ich mich für das freundliche, informative Telefonat. {{46}} besprochen übersende ich Ihnen meine Bewerbungsunterlagen. Auf Ihrer Homepage habe ich mich {{47}} über das Ausbildungskonzept Ihrer Hotelkette informiert und bin sicher, in Ihrem Haus vielfältige Einblicke in die Arbeit eines Hotelkaufmannes erhalten zu können. Ich arbeite sehr gerne mit Menschen zusammen. Teamfähigkeit und Flexibilität bringe ich als Voraussetzung mit und interessiere mich {{48}} die Abläufe in der Hotelverwaltung. Ein Praktikum in der Hotelbranche möchte ich deshalb absolvieren, {{49}} ich nicht nur im Umgang mit Menschen, sondern auch im Planen und Organisieren meine großen Stärken sehe.\nIch erwarte von diesem Praktikum, mein theoretisches Wissen durch praktische Erfahrung weiter vertiefen zu können, {{50}} mir dann mit meiner Berufswahl endgültig sicher zu sein. {{51}} überzeuge ich Sie in einem persönlichen Gespräch. Über eine Einladung würde ich mich sehr freuen.\nMit freundlichen Grüßen\nAlexander Thiel"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Gerne"
+      },
+      {
+       "key": "b",
+       "text": "da"
+      },
+      {
+       "key": "c",
+       "text": "Damit"
+      },
+      {
+       "key": "d",
+       "text": "für"
+      },
+      {
+       "key": "e",
+       "text": "um"
+      },
+      {
+       "key": "f",
+       "text": "Über"
+      },
+      {
+       "key": "g",
+       "text": "Wegen"
+      },
+      {
+       "key": "h",
+       "text": "Wie"
+      },
+      {
+       "key": "i",
+       "text": "bereits"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "h"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "i"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v2",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 2",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Arbeitsvertrag",
+       "body": "Sehr geehrter Herr Salzmann,\nmeinen Arbeitsvertrag habe ich heute mit der Post erhalten und möchte mich hiermit herzlich bedanken. Ich habe ihn ausführlich geprüft und {{46}} haben sich noch einige Fragen ergeben.\nBei meinem Vorstellungsgespräch hatte Frau Ott mir mündlich ein Jobticket zugesagt, das im Vertrag nicht erwähnt wird. Kann ich {{47}} fest mit dieser Zusatzleistung rechnen?\nMeine zweite Frage bezieht sich auf den Arbeitsort. Im Vertrag steht, {{48}} Mitarbeiter bei Bedarf auch an einem anderen Ort in Deutschland eingesetzt werden können. Gilt das auch für meine Stelle? Das war mir nicht bewusst und wäre {{49}} meiner familiären Situation momentan schwierig. {{50}} ich, wie Sie wissen, zwei schulpflichtige Kinder habe, wäre ein Umzug für meine Familie nicht möglich.\nIch freue mich auf Ihre Rückmeldung und schicke Ihnen den Vertrag unverzüglich unterschrieben zurück, {{51}} diese Punkte geklärt sind.\nIch freue mich auf meinen Arbeitsbeginn am 1. Juli.\nMit freundlichen Grüßen\nIrina Lopez"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "aufgrund"
+      },
+      {
+       "key": "b",
+       "text": "Da"
+      },
+      {
+       "key": "c",
+       "text": "dabei"
+      },
+      {
+       "key": "d",
+       "text": "Damit"
+      },
+      {
+       "key": "e",
+       "text": "dass"
+      },
+      {
+       "key": "f",
+       "text": "dennoch"
+      },
+      {
+       "key": "g",
+       "text": "Indem"
+      },
+      {
+       "key": "h",
+       "text": "Ob"
+      },
+      {
+       "key": "i",
+       "text": "Obwohl"
+      },
+      {
+       "key": "j",
+       "text": "sobald"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "a"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "j"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v3",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 3",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Arbeitsvertrag",
+       "body": "Sehr geehrte Frau Klingosbergr,\nvielen Dank für die positive Nachricht, bereits ab dem ersten März bei Ihnen anfangen zu dürfen. {{46}} freue ich mich wirklich sehr. In der Anlage sende ich Ihnen den unterschriebenen Arbeitsvertrag zurück. Nun bin ich gespannt auf die zukünftige Arbeit und den ersten Tag an meinem neuen Arbeitsplatz.\nAber bis {{47}} ist ja noch etwas Zeit und deshalb wollte ich Sie fragen, wie ich mich auf meine neue Tätigkeit vorbereiten kann. Vielleicht können Sie mir fachspezifische Internetseiten empfehlen, mit {{48}} Hilfe ich mich intensiver mit den Produkten vertraut machen kann.\nBei dem Vorstellungsgespräch sprachen Sie {{49}}, dass Sie mir die Arbeitskleidung zur Verfügung stellen.\nBenötigen Sie {{50}} meine Kleider- und Schuhgröße? Das erforderliche ärztliche Attest vom Gesundheitsamt bringe ich, {{51}} besprochen, zum Arbeitsantritt mit.\nSollten Sie sonst irgendetwas von mir benötigten, können Sie mich natürlich gern kontaktieren.\nMit freundlichen Grüßen"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Ansonsten"
+      },
+      {
+       "key": "b",
+       "text": "Dafür"
+      },
+      {
+       "key": "c",
+       "text": "Dahin"
+      },
+      {
+       "key": "d",
+       "text": "Davon"
+      },
+      {
+       "key": "e",
+       "text": "Deren"
+      },
+      {
+       "key": "f",
+       "text": "Dessen"
+      },
+      {
+       "key": "g",
+       "text": "Hierüber"
+      },
+      {
+       "key": "h",
+       "text": "Was"
+      },
+      {
+       "key": "i",
+       "text": "Wie"
+      },
+      {
+       "key": "j",
+       "text": "Anbei"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "i"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v3_b",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 3 · новая версия",
+   "note": "Новая версия, 100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Arbeitsvertrag",
+       "body": "Sehr geehrte Frau Klingenberg,\nvielen Dank für die positive Nachricht, bereits zum ersten März bei Ihnen anfangen zu dürfen. Hierüber freue ich mich wirklich sehr. In der Anlage sende ich Ihnen den unterschriebenen Arbeitsvertrag {{46}}. Nun bin ich gespannt auf die zukünftige Arbeit und den ersten Tag an meinem neuen Arbeitsplatz.\nAber bis {{47}} ist ja noch etwas Zeit und deshalb wollte ich Sie fragen, wie ich mich auf meine neue Tätigkeit vorbereiten kann. Vielleicht können Sie mir fachspezifische Internetseiten empfehlen, mit {{48}} Hilfe ich mich intensiver mit den Produkten vertraut machen kann.\nBei dem Vorstellungsgespräch sprachen Sie {{49}}, dass Sie mir die Arbeitskleidung stellen. Benötigen Sie {{50}} meine Kleider- und Schuhgrößen?\nDas erforderliche ärztliche Attest vom Gesundheitsamt bringe ich, {{51}} besprochen, zum Arbeitsantritt mit.\nSollten Sie sonst irgendetwas von mir benötigen, können Sie mich natürlich gern kontaktieren.\nMit freundlichen Grüßen\nPhilipp Kunz"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Ansonsten"
+      },
+      {
+       "key": "b",
+       "text": "Dafür"
+      },
+      {
+       "key": "c",
+       "text": "Dahin"
+      },
+      {
+       "key": "d",
+       "text": "Davon"
+      },
+      {
+       "key": "e",
+       "text": "Deren"
+      },
+      {
+       "key": "f",
+       "text": "Dessen"
+      },
+      {
+       "key": "g",
+       "text": "Zurück"
+      },
+      {
+       "key": "h",
+       "text": "Was"
+      },
+      {
+       "key": "i",
+       "text": "Wie"
+      },
+      {
+       "key": "j",
+       "text": "Anbei"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "i"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v3_c",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 3 · версия 07.02.2025",
+   "note": "Новая версия от 07.02.2025",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Arbeitsvertrag",
+       "body": "Sehr geehrte Frau Klingenberg,\nvielen Dank für die positive Nachricht, bereits zum ersten März bei Ihnen anfangen zu dürfen. Hierüber freue ich mich wirklich sehr. In der Anlage sende ich Ihnen den unterschriebenen Arbeitsvertrag {{46}}. Nun bin ich gespannt auf die zukünftige Arbeit und den ersten Tag an meinem neuen Arbeitsplatz.\nAber bis {{47}} ist ja noch etwas Zeit und deshalb wollte ich Sie fragen, wie ich mich auf meine neue Tätigkeit vorbereiten kann. Vielleicht können Sie mir fachspezifische Internetseiten empfehlen, mit {{48}} Hilfe ich mich intensiver mit den Produkten vertraut machen kann.\nBei dem Vorstellungsgespräch sprachen Sie {{49}}, dass Sie mir die Arbeitskleidung stellen. Benötigen Sie {{50}} meine Kleider- und Schuhgrößen?\nDas erforderliche ärztliche Attest vom Gesundheitsamt bringe ich, {{51}} besprochen, zum Arbeitsantritt mit.\nSollten Sie sonst irgendetwas von mir benötigen, können Sie mich natürlich gern kontaktieren.\nMit freundlichen Grüßen\nPhilipp Kunz"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Anbei"
+      },
+      {
+       "key": "b",
+       "text": "Ansonsten"
+      },
+      {
+       "key": "c",
+       "text": "Dafür"
+      },
+      {
+       "key": "d",
+       "text": "Dahin"
+      },
+      {
+       "key": "e",
+       "text": "Davon"
+      },
+      {
+       "key": "f",
+       "text": "Deren"
+      },
+      {
+       "key": "g",
+       "text": "Dessen"
+      },
+      {
+       "key": "h",
+       "text": "Was"
+      },
+      {
+       "key": "i",
+       "text": "Wie"
+      },
+      {
+       "key": "j",
+       "text": "Zurück"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "e"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "i"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v4",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 4",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Kündigung",
+       "body": "Sehr geehrter Herr Dr. Reinicke,\nhiermit kündige ich den mit Ihnen geschlossenen Arbeitsvertrag form- und fristgerecht {{46}} nächstmöglichen Datum.\nWie ich Ihnen in unserem persönlichen Gespräch erklärt habe, habe ich mir die Entscheidung nicht leicht gemacht. Da aber mein Mann von seiner Firma nach Berlin versetzt wurde, wird unsere gesamte Familie so bald wie {{47}} umziehen. Mir ist bewusst, dass ich eine dreimonatige Kündigungsfrist habe, aber dennoch bitte ich Sie um eine {{48}} Freistellung ab dem 15. des nächsten Monats.\nFür die lange Zeit, die ich in dieser Firma hatte, möchte ich mich {{49}} bei Ihnen bedanken. Ich habe viel in Ihrem Unternehmen gelernt und danke Ihnen für die {{50}} Unterstützung, die ich stets in der Firma erfahren habe.\nBitte bestätigen Sie mir den Erhalt meiner Kündigung {{51}} das Datum, zu dem der Arbeitsvertrag endet.\nMit freundlichen Grüßen\nIrina Kaspercik"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "anhaltende"
+      },
+      {
+       "key": "b",
+       "text": "ausdrücklich"
+      },
+      {
+       "key": "c",
+       "text": "möglich"
+      },
+      {
+       "key": "d",
+       "text": "Nötig"
+      },
+      {
+       "key": "e",
+       "text": "Nur"
+      },
+      {
+       "key": "f",
+       "text": "sowie"
+      },
+      {
+       "key": "g",
+       "text": "Spätere"
+      },
+      {
+       "key": "h",
+       "text": "vorzeitige"
+      },
+      {
+       "key": "i",
+       "text": "Wegen"
+      },
+      {
+       "key": "j",
+       "text": "zum"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "h"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "a"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v4_b",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 4 · новый люк №47",
+   "note": "Новый люк №47 от 04.04.25",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Kündigung",
+       "body": "Sehr geehrter Herr Dr. Reinicke,\nhiermit kündige ich den mit Ihnen geschlossenen Arbeitsvertrag form- und fristgerecht {{46}} nächstmöglichen Datum.\n{{47}} ich Ihnen in unserem persönlichen Gespräch erklärt habe, habe ich mir die Entscheidung nicht leicht gemacht. Da aber mein Mann von seiner Firma nach Berlin versetzt wurde, wird unsere gesamte Familie so bald wie möglich umziehen. Mir ist bewusst, dass ich eine dreimonatige Kündigungsfrist habe, aber dennoch bitte ich Sie um eine {{48}} Freistellung ab dem 15. des nächsten Monats.\nFür die lange Zeit, die ich in dieser Firma hatte, möchte ich mich {{49}} bei Ihnen bedanken. Ich habe viel in Ihrem Unternehmen gelernt und danke Ihnen für die {{50}} Unterstützung, die ich stets in der Firma erfahren habe.\nBitte bestätigen Sie mir den Erhalt meiner Kündigung {{51}} das Datum, zu dem der Arbeitsvertrag endet.\nMit freundlichen Grüßen\nIrina Kaspercik"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "anhaltende"
+      },
+      {
+       "key": "b",
+       "text": "ausdrücklich"
+      },
+      {
+       "key": "c",
+       "text": "Wie"
+      },
+      {
+       "key": "d",
+       "text": "Nötig"
+      },
+      {
+       "key": "e",
+       "text": "Nur"
+      },
+      {
+       "key": "f",
+       "text": "sowie"
+      },
+      {
+       "key": "g",
+       "text": "Spätere"
+      },
+      {
+       "key": "h",
+       "text": "vorzeitige"
+      },
+      {
+       "key": "i",
+       "text": "Wegen"
+      },
+      {
+       "key": "j",
+       "text": "zum"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "h"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "a"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v5",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 5",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Probearbeiten",
+       "body": "Sehr geehrte Frau Sabani,\nes freut mich sehr, dass ich in meinem Vorstellungsgespräch einen ersten positiven Eindruck hinterlassen habe und Sie mich {{46}} Probearbeiten einladen. Natürlich nutze ich sehr gern diese Gelegenheit, meine Fähigkeiten {{47}} Beweis zu stellen. Von den beiden Terminvorschlägen, die Sie mir geschickt haben, passt mir der nächste Dienstag am besten. Ich freue mich {{48}}, bei dieser Gelegenheit {{49}} einen ersten Einblick in die Arbeitsabläufe und Abteilungen in Ihrem Haus zu bekommen.\nStellen Sie mir die Arbeitskleidung für diesen Tag zur Verfügung oder soll ich selbst spezielle Kleidung mitbringen? Gibt es noch irgendwas, {{50}} ich vorher besorgen muss? Brauche ich {{51}} noch eine ärztliche Bescheinigung vom Gesundheitsamt?\nDanke im Voraus für eine kurze Beantwortung meiner Fragen."
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Worüber"
+      },
+      {
+       "key": "b",
+       "text": "bereits / schon"
+      },
+      {
+       "key": "c",
+       "text": "eventuell"
+      },
+      {
+       "key": "d",
+       "text": "In"
+      },
+      {
+       "key": "e",
+       "text": "Manchmal"
+      },
+      {
+       "key": "f",
+       "text": "darauf"
+      },
+      {
+       "key": "g",
+       "text": "unter"
+      },
+      {
+       "key": "h",
+       "text": "was"
+      },
+      {
+       "key": "i",
+       "text": "Noch"
+      },
+      {
+       "key": "j",
+       "text": "zum"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "h"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v6",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 6",
+   "note": "Тест №150321, 150301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Fragen zur Ausbildung",
+       "body": "Sehr geehrte Damen und Herren,\nich habe mich sehr darüber gefreut, dass ich meine Ausbildung {{46}} Kauffrau für Büromanagement im August in Ihrem Unternehmen beginnen kann.\nIch würde gern wissen, {{47}} die Ausbildung zeitlich organisiert ist. Im Vorstellungsgespräch teilten Sie mir mit, dass sich die theoretischen und praktischen Blöcke teilt. Im Gegensatz {{48}} praktischen Block müsste ich mir für die Zeit der Theorie ein Zimmer mieten. {{49}} wäre es wichtig, so schnell wie möglich die Termine zu wissen. In diesem Zusammenhang möchte ich nachfragen, {{50}} es möglich wäre, dass die Firma für die Theoriephasen einen Zuschuss für die Miete bezahlt.\nAußerdem würde ich gern erfahren, wer mein Ansprechpartner {{51}} des praktischen Teils der Ausbildung sein wird.\nMit freundlichen Grüßen\nAnna Ivanova"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Dass"
+      },
+      {
+       "key": "b",
+       "text": "deshalb"
+      },
+      {
+       "key": "c",
+       "text": "Innerhalb"
+      },
+      {
+       "key": "d",
+       "text": "ob"
+      },
+      {
+       "key": "e",
+       "text": "während"
+      },
+      {
+       "key": "f",
+       "text": "Weil"
+      },
+      {
+       "key": "g",
+       "text": "wie"
+      },
+      {
+       "key": "h",
+       "text": "Zu"
+      },
+      {
+       "key": "j",
+       "text": "zum"
+      },
+      {
+       "key": "k",
+       "text": "zur"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "k"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "d"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v7",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 7",
+   "note": "Тест №140321, 140301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Kündigung",
+       "body": "Sehr geehrte Frau Schneider,\nich teile Ihnen mit, dass ich mein Arbeitsverhältnis zum 31.03. fristgerecht kündige, weil mein Mann am 01.05. {{46}} einer neuen Tätigkeit in Süddeutschland beginnt und die ganze Familie im April dorthin umziehen wird. Dieser Schritt ist für mich nicht leicht, ich war {{47}} immer sehr gerne hier tätig.\nIch habe noch einige Fragen {{48}} den Formalitäten: Bitte teilen Sie mir mit, bis wann und wo ich den Firmenwagen abgeben und ob ich die Daten von meinem Firmenlaptop löschen soll. {{49}} bitte ich Sie um ein Zwischenzeugnis, da ich mich jetzt schon um eine neue Stelle bewerben möchte. Würden Sie mir bitte auch mitteilen, ob mir mein Arbeitszeugnis am letzten Arbeitstag ausgehändigt oder {{50}} Nachhinein zugeschickt wird?\nIch bedanke {{51}} für die interessante Zeit in Ihrem Unternehmen und die fruchtbare Zusammenarbeit.\nMit freundlichen Grüßen\nMelanie Sommer"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Am"
+      },
+      {
+       "key": "b",
+       "text": "Außerdem"
+      },
+      {
+       "key": "c",
+       "text": "Bis"
+      },
+      {
+       "key": "d",
+       "text": "Deshalb"
+      },
+      {
+       "key": "e",
+       "text": "Ihnen"
+      },
+      {
+       "key": "f",
+       "text": "im"
+      },
+      {
+       "key": "g",
+       "text": "mich"
+      },
+      {
+       "key": "h",
+       "text": "mit"
+      },
+      {
+       "key": "i",
+       "text": "nämlich"
+      },
+      {
+       "key": "j",
+       "text": "zu"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "h"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "i"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "b"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "g"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_1_v8",
+   "part": "SPRACHBAUSTEINE_1",
+   "title": "Вариант 8",
+   "note": "Тест №160201, 160221",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und ergänzen Sie die Lücken 46–51 mit den Wörtern a–j. Jedes Wort passt nur einmal.",
+     "passages": [
+      {
+       "title": "Kündigung",
+       "body": "Sehr geehrte Damen und Herren,\nmit {{46}} Schreiben kündige ich form- und fristgerecht meinen Arbeitsvertrag zum 31.12.20xx. Ich habe mir diese Entscheidung nicht leichtgemacht, {{47}} ich sehr gerne bei der MillerFood GmbH gearbeitet habe.\n{{48}} leider sehe ich hier im Unternehmen keine Möglichkeiten, mich weiterzuentwickeln, und habe mich deshalb dazu entschlossen, eine Stelle in einem größeren Unternehmen anzunehmen.\nMir stehen noch vier Tage Resturlaub {{49}}. Da in unserer Abteilung kurz vor dem Jahresende sehr viel zu tun ist, würde ich vorschlagen, dass Sie mir diese Tage auszahlen und ich noch bis zum Jahresende arbeite.\nSollte das nicht möglich sein, ist mein letzter Arbeitstag der 23.12.20xx, da {{50}} 31.12.20xx auf einen Samstag fällt. Ich bitte um eine schriftliche Bestätigung über den Erhalt meiner Kündigung und den Bescheid, {{51}} wir mit den restlichen Urlaubstagen verfahren sollen.\nIch bedanke mich für die Zusammenarbeit!\nMit freundlichen Grüßen\nMarkus Stein"
+      }
+     ],
+     "sharedOptions": [
+      {
+       "key": "a",
+       "text": "Aber/Doch"
+      },
+      {
+       "key": "b",
+       "text": "Auf"
+      },
+      {
+       "key": "c",
+       "text": "da"
+      },
+      {
+       "key": "d",
+       "text": "Den"
+      },
+      {
+       "key": "e",
+       "text": "Dennoch"
+      },
+      {
+       "key": "f",
+       "text": "der"
+      },
+      {
+       "key": "g",
+       "text": "diesem"
+      },
+      {
+       "key": "h",
+       "text": "Wenn"
+      },
+      {
+       "key": "i",
+       "text": "wie"
+      },
+      {
+       "key": "j",
+       "text": "zu"
+      }
+     ],
+     "questions": [
+      {
+       "number": 46,
+       "prompt": "",
+       "answer": "g"
+      },
+      {
+       "number": 47,
+       "prompt": "",
+       "answer": "c"
+      },
+      {
+       "number": 48,
+       "prompt": "",
+       "answer": "a"
+      },
+      {
+       "number": 49,
+       "prompt": "",
+       "answer": "j"
+      },
+      {
+       "number": 50,
+       "prompt": "",
+       "answer": "f"
+      },
+      {
+       "number": 51,
+       "prompt": "",
+       "answer": "i"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

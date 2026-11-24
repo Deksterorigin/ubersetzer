@@ -1,0 +1,3822 @@
+{
+  "part": "HOEREN_1",
+  "variants": [
+    {
+      "id": "hoeren_1_v1",
+      "part": "HOEREN_1",
+      "title": "Вариант 1",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Hallo Zarif, ich würde gerne über unseren Dienstplan für den Rest der Woche sprechen. In der Spätschicht ist ein Fahrer ausgefallen und wir suchen einen Ersatz."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Für alle Tage?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Ja, von morgen, Mittwoch bis Samstag."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Nun, ich habe noch nie Spätschicht gemacht. Aber mal sehen. Morgen, am Mittwoch habe ich ja frei, da könnte ich auf jeden Fall einspringen. Eventuell könnte ich auch einmal an einem Tag früh und spät arbeiten. Ich arbeite ja immer im Frühdienst."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Nein, das geht nicht. Das gibt es bei uns nicht. Nach sieben Stunden braucht jeder Fahrer eine Pause."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Aber ich habe gestern mit Jasna gesprochen. Sie arbeitet ja nur in Teilzeit und hätte Interesse, weitere Dienste zu übernehmen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Gut, danke für den Tipp. Dann werde ich sie mal kontaktieren. Aber für morgen haben wir es schon geklärt. Das ist ein Anfang."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Muss ich dann in der Spätschicht noch etwas beachten?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Also, sie geht von 15-21 Uhr. Und es gibt noch eine Besonderheit. Wir bieten ja neuerdings den Service an, dass unsere Kunden und Kundinnen gegen eine geringe Gebühr ein konkretes Zeitfenster zwischen 19 und 21 Uhr buchen können, in dem zugestellt wird. Wir kennzeichnen diese Sendungen dann mit dem Begriff: „Wunschzeit gebucht“."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Dann müssen die Kunden also nicht stundenlang warten."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Genau. Dieser Service kostet die Kunden 8 Euro, wenn du also Sendungen im Wagen hast, die mit den Wörtern „Wunschzeit gebucht“ gekennzeichnet sind, diese unbedingt zuerst ausliefern."
+            },
+            {
+              "speaker": "Zarif",
+              "gender": "m",
+              "text": "Gut, habe ich verstanden. Ich übernehme also die Schicht Mittwochabend. Kann ich dann dafür einen Frühdienst in der nächsten Woche frei bekommen?"
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Vorgesetzte muss den Dienstplan ändern.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Zarif",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "übernimmt eine Doppelschicht."
+                },
+                {
+                  "key": "b",
+                  "text": "soll dafür sorgen, dass die Kunden für die Zustellung zahlen."
+                },
+                {
+                  "key": "c",
+                  "text": "muss Regeln bei der Reihenfolge der Zustellungen beachten."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau Lohmann",
+              "gender": "f",
+              "text": "Türenprofi GmbH, Lohmann. Was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Anita Li",
+              "gender": "f",
+              "text": "Guten Tag, hier Anita Li von der Firma Cargo KG. Wir wollen unsere Geschäftsstelle neu gestalten und haben uns überlegt, die Büroräume durch Glastüren voneinander zu trennen. Momentan haben wir Türen aus Holz und das gefällt uns nicht mehr. Wir haben also beschlossen, diese Türen zu entfernen, und sind auf der Suche nach etwas Neuem."
+            },
+            {
+              "speaker": "Frau Lohmann",
+              "gender": "f",
+              "text": "Das kann ich gut verstehen. Räume werden durch Glastüren einfach heller und freundlicher. Wir bieten Türen aus verschiedenem Glas an, aus klarem Glas oder mit Motiven. Haben Sie sich unsere Webseite schon einmal angeschaut?"
+            },
+            {
+              "speaker": "Anita Li",
+              "gender": "f",
+              "text": "Ja, natürlich. Es ist nur nicht einfach, eine Auswahl zu treffen. Auf Klarglas, also vollständig durchsichtiges Glas, möchten wir verzichten. Unsere Mitarbeitenden sollten schon so arbeiten können, dass nicht Kollegen und Kolleginnen aus dem Nebenraum sie rund um die Uhr beobachten können. Und Kunden bei uns am Empfang sollen auch nicht alles sehen können, was in den Räumen, die vom Eingangsbereich abgehen, passiert. Welches Glas ist denn nicht vollständig durchsichtig, hat aber auf der anderen Seite trotzdem einen großen Lichteffekt?"
+            },
+            {
+              "speaker": "Frau Lohmann",
+              "gender": "f",
+              "text": "Das ist etwas schwer am Telefon zu klären. Am besten vereinbaren wir einen Beratungstermin bei uns, dann können wir Ihnen in unserer Ausstellung verschiedene Modelle zeigen."
+            },
+            {
+              "speaker": "Anita Li",
+              "gender": "f",
+              "text": "Ja gerne. Das wollte ich auch schon vorschlagen. Wäre es nicht besser, wenn Sie bei uns vorbeikommen? Vielleicht haben Sie ja sofort einen passenden Vorschlag, wenn Sie unsere Räume vor Ort sehen."
+            },
+            {
+              "speaker": "Frau Lohmann",
+              "gender": "f",
+              "text": "Einverstanden, so können wir es auch machen. Dann können wir auch gleich die Maße aufnehmen usw. Um Ihnen dann unsere Modelle zu präsentieren, können Sie dann ja bei uns vorbeikommen."
+            },
+            {
+              "speaker": "Anita Li",
+              "gender": "f",
+              "text": "Das ist eine gute Idee. Sie können ja schlecht Ihre Modelle zu uns bringen."
+            },
+            {
+              "speaker": "Frau Lohmann",
+              "gender": "f",
+              "text": "Gut, Frau Li, wann würde es Ihnen passen?"
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Frau Li von Cargo KG möchte Holztüren umtauschen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 25,
+              "prompt": "Frau Li möchte",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "Türen, die viel Licht durchlassen, bei denen die Privatsphäre der Mitarbeitenden trotzdem nicht verletzt wird."
+                },
+                {
+                  "key": "b",
+                  "text": "helle Türen für den Eingangsbereich."
+                },
+                {
+                  "key": "c",
+                  "text": "verschiedene Modelle als Muster bekommen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Hallo Frau Groß. Hier Juck, Filialleitung. Das Restaurant „Vier Jahreszeiten“ hat sich bei uns über eine fehlerhafte Lieferung beschwert."
+            },
+            {
+              "speaker": "Frau Groß",
+              "gender": "f",
+              "text": "Was ist passiert?"
+            },
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Es gab zwei falsche Lieferungen. Erstens haben sie einen Gasherd bestellt, wir haben den Elektroherd SurPlus geliefert. Und anstelle eines bestellten Geschirrspülers in der normalen Breite von 60 cm haben wir das Gerät MiniAktiv, 45cm breit geschickt."
+            },
+            {
+              "speaker": "Frau Groß",
+              "gender": "f",
+              "text": "Das sind doch die Geräte aus unserer neuen Kollektion, die besonders gern gekauft werden."
+            },
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Ja, stimmt schon, aber die hat der Kunde nicht bestellt. Der Fehler ist inzwischen behoben, wir haben uns entschuldigt und die richtigen Geräte geschickt. Aber so etwas darf einfach nicht passieren. Könnten Sie bitte überprüfen, wie es zu diesem Fehler kommen konnte?"
+            },
+            {
+              "speaker": "Frau Groß",
+              "gender": "f",
+              "text": "Moment, ich schaue mir einmal die Buchungsunterlagen an. Restaurant „Vier Jahreszeiten“, Bestellung vom 1. März. Stimmt das?"
+            },
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Ja, genau."
+            },
+            {
+              "speaker": "Frau Groß",
+              "gender": "f",
+              "text": "Gut. Nein, hier steht Restaurant „Vier Jahreszeiten“: ein Gasherd Marke Junghand, Bestellnummer 34-822, und ein Geschirrspüler Marke Bohm, Bestellnummer 34-555, 60 cm. Hier wurde kein Fehler gemacht. Die Bestellung ist so rausgegangen. Dann muss ich mal schauen, was im Lager passiert ist."
+            },
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Ist das denn denkbar?"
+            },
+            {
+              "speaker": "Frau Groß",
+              "gender": "f",
+              "text": "Vielleicht gab es Probleme mit der Lagersoftware. Vielleicht hat aber auch der Spediteur hier etwas verwechselt."
+            },
+            {
+              "speaker": "Herr Juck",
+              "gender": "m",
+              "text": "Kümmern Sie sich bitte darum. Das Restaurant „Vier Jahreszeiten“ ist einer unserer besten Kunden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Der Filialleiter informiert über neue Geräte.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Groß soll überprüfen, ob",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "die Bestellung richtig aufgenommen wurde."
+                },
+                {
+                  "key": "b",
+                  "text": "es Fehler im Lager gab."
+                },
+                {
+                  "key": "c",
+                  "text": "die Lieferung bereits korrigiert wurde."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v2",
+      "part": "HOEREN_1",
+      "title": "Вариант 2",
+      "note": "100%",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Guten Tag. Berger von der Firma Michels. Ich bin auf der Suche nach neuen Druckern für unser Büro. Ich habe mir Ihre Angebote im Internet angesehen und bräuchte jetzt bitte Ihren Rat."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Gerne. An was für Geräte haben Sie denn gedacht?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ich kenne mich mit Druckern nicht so gut aus. Können Sie mir nicht etwas empfehlen?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Doch, natürlich. Welche Funktionen soll das Gerät denn haben? Brauchen Sie auch einen Scanner oder Kopierer? Wir haben sehr interessante Kombi-Geräte."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ein Scanner wäre gut, aber Kopierer brauchen wir nicht. Wir haben zwei große im Büro. Sind denn die Kombi-Geräte viel teurer als ein Drucker?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Natürlich ist da ein Preisunterschied, aber mit einem Kombi-Gerät fahren Sie auf jeden Fall günstiger als mit Einzelgeräten. Wie viel drucken Sie denn im Schnitt pro Tag?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Hm, wir sind 15 Mitarbeiter und da kommen schon circa 400 Druckseiten zusammen, denke ich."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Das ist ja nicht so viel. Drucken Sie auch in Farbe?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ja, teilweise schon. Und Bilder drucken wir auch ab und zu."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Dann würde ich Ihnen einen Farblaserdrucker empfehlen. Das Modell LD315 z.B. ist eine Kombination aus Drucker und Scanner und passt auf jeden Schreibtisch. Das Papierfach fasst allerdings leider nur maximal 150 Blatt. Reicht das?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Hm. Ja, ich denke schon. Wie viel kostet das Gerät denn?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Das liegt bei 280 €."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Das ist aber teuer. Bekommen wir einen Mengenrabatt, wenn wir vier Geräte kaufen?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Der LD315 ist der Testsieger und auf jeden Fall sein Geld wert. Bei Abnahme von fünf Druckern könnte ich Ihnen einen Preis von 230 Euro pro Gerät anbieten."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ich bespreche das mit meinem Chef und melde mich nochmal bei Ihnen. Vielen Dank für Ihre Hilfe."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Kundin kann sich nicht um einen Drucker entscheiden.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Verkäufer empfiehlt",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "einen Drucker mit Papierkorb für mehr als 500 Blätter."
+                },
+                {
+                  "key": "b",
+                  "text": "ein multifunktionales Gerät."
+                },
+                {
+                  "key": "c",
+                  "text": "einen weiß-schwarzen Drucker."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "TN 1",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Wir sollten langsam mit der Planung für unser jährliches Betriebsfest beginnen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Was meinen Sie ?"
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Gibt es denn schon eine Agenda?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Darüber wollte ich mit Ihnen sprechen. Unter anderem."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Haben wir überhaupt schon einen Termin?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Nun, so gut wie. Wir haben der Geschäftsführung zwei Vorschläge in der 30. und 31. Kalenderwoche gemacht und bekommen diese Woche noch eine Rückmeldung dazu. Wir würden dann gerne möglichst schnell die Planung abschließen. Wer von Ihnen wäre bereit, sich um das Essen und die Getränke zu kümmern?"
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Das übernehme ich gerne. Ich bin aber erst seit Kurzem im Unternehmen und kenne mich noch nicht so gut aus. Gibt es eine Firma, mit der wir immer zusammenarbeiten? Oder soll ich bei verschiedenen Cateringfirmen um Menüvorschläge bitten?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Super, dass Sie sich darum kümmern möchten. Ich gebe Ihnen nachher die Nummern von zwei Anbietern, mit denen wir gute Erfahrungen gemacht haben und wenn Sie dann noch Fragen haben, kann ich Sie gerne unterstützen."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Danke, das wäre nett. Wie viele Kollegen kommen denn immer so?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Letztes Jahr waren wir ungefähr 180. Wir sollten spätestens Ende des Monats die Einladungen an alle Mitarbeiterinnen und Mitarbeiter verschicken. Sie können dann in eine Liste eintragen, ob sie kommen. Wenn wir genauere Zahlen haben, können wir die finale Planung machen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Beim letzten Fest hatten wir ja eine Band. Das kam doch bei allen ganz gut an. Soll ich sie noch mal anfragen?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Ja, gerne, das ist eine gute Idee."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Und ich mache mir noch ein paar Gedanken wegen der Deko."
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Ich sehe schon, Sie sind ein gutes Team."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "In dem Gespräch geht es um eine Planung.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Für die Betriebsfeier",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "wird eine neue Cateringfirma gesucht. / sollen sofort Einladungen verschickt werden."
+                },
+                {
+                  "key": "b",
+                  "text": "soll eine neue Band gesucht werden. / braucht das Team noch eine neue Band zu finden."
+                },
+                {
+                  "key": "c",
+                  "text": "wurde der Termin noch nicht festgelegt."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Herr Klein, herzlich willkommen im Team. Schön, dass Sie da sind."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ich freue mich auch hier zu sein und bin schon sehr gespannt auf meine Arbeit."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Am besten bringe ich Sie direkt ins Lager. Dort wartet Ihr Vorgesetzter, Herr Lehmann, schon auf Sie. Den kennen Sie ja schon aus dem Vorstellungsgespräch."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, gern."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach so, das hatte ich fast vergessen. Vorher müssen wir noch ein paar Formalitäten erledigen. Den Arbeitsvertrag haben Sie uns ja schon zurückgeschickt. Uns fehlen aber noch Ihr Sozialversicherungsausweis und die Steueridentifikationsnummer. Haben Sie die Sachen dabei? Dann mache ich schnell Kopien davon."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Den Sozialversicherungsausweis habe ich leider nicht hier, aber die Versicherungsnummer kann ich Ihnen geben. Und die Steuer-ID steht hier drauf ."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Die Sozialversicherungsnummer reicht erstmal. Bringen Sie mit dem Ausweis dann einfach die nächsten Tage ins Büro."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das mache ich. Und wie ist das mit der Arbeitskleidung? Bekomme ich die heute schon?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, es ist Pflicht bei der Arbeit die Sicherheitskleidung zu tragen, um Unfälle zu vermeiden. Ich zeige Ihnen gleich auf dem Weg zum Lager, wo Sie sie abholen und sich umziehen können. In der Umkleide haben Sie übrigens auch ein Spind, in dem Sie Ihre persönlichen Sachen abschließen können. Den Schlüssel dafür kann ich Ihnen jetzt schon geben. Hier bitte. Sie haben die Nr. 27."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Vielen Dank."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie werden heute im Lager übrigens nur Herr Lehmann antreffen. Normalerweise sind Sie dort zu viert, aber ein Kollege ist zurzeit im Urlaub und der andere hat sich heute Morgen krankgemeldet."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Kein Problem. Dan lerne ich die Kollegen später kennen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Schmidt und Herr Klein arbeiten zusammen / beide im Lager.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Schmidt",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "gibt Herrn Klein Schutzkleidung. / übergibt Herrn Klein die Arbeitskleidung."
+                },
+                {
+                  "key": "b",
+                  "text": "stellt Herrn Klein dem Leiter vor. / stellt Herrn Klein seinem Vorgesetzten vor."
+                },
+                {
+                  "key": "c",
+                  "text": "verlangt noch einige Unterlagen. / verlangt noch weitere Unterlagen von Herrn Klein."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v2_b",
+      "part": "HOEREN_1",
+      "title": "Вариант 2 · новые вопросы",
+      "note": "100%; новые вопросы 22–23 и 24–25 (12.10.24, 05.04.25, 07.12.24)",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Guten Tag. Berger von der Firma Michels. Ich bin auf der Suche nach neuen Druckern für unser Büro. Ich habe mir Ihre Angebote im Internet angesehen und bräuchte jetzt bitte Ihren Rat."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Gerne. An was für Geräte haben Sie denn gedacht?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ich kenne mich mit Druckern nicht so gut aus. Können Sie mir nicht etwas empfehlen?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Doch, natürlich. Welche Funktionen soll das Gerät denn haben? Brauchen Sie auch einen Scanner oder Kopierer? Wir haben sehr interessante Kombi-Geräte."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ein Scanner wäre gut, aber Kopierer brauchen wir nicht. Wir haben zwei große im Büro. Sind denn die Kombi-Geräte viel teurer als ein Drucker?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Natürlich ist da ein Preisunterschied, aber mit einem Kombi-Gerät fahren Sie auf jeden Fall günstiger als mit Einzelgeräten. Wie viel drucken Sie denn im Schnitt pro Tag?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Hm, wir sind 15 Mitarbeiter und da kommen schon circa 400 Druckseiten zusammen, denke ich."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Das ist ja nicht so viel. Drucken Sie auch in Farbe?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ja, teilweise schon. Und Bilder drucken wir auch ab und zu."
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Dann würde ich Ihnen einen Farblaserdrucker empfehlen. Das Modell LD315 z.B. ist eine Kombination aus Drucker und Scanner und passt auf jeden Schreibtisch. Das Papierfach fasst allerdings leider nur maximal 150 Blatt. Reicht das?"
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Hm. Ja, ich denke schon. Wie viel kostet das Gerät denn?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Das liegt bei 280 €."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Das ist aber teuer. Bekommen wir einen Mengenrabatt, wenn wir vier Geräte kaufen?"
+            },
+            {
+              "speaker": "Verkäufer",
+              "gender": "m",
+              "text": "Der LD315 ist der Testsieger und auf jeden Fall sein Geld wert. Bei Abnahme von fünf Druckern könnte ich Ihnen einen Preis von 230 Euro pro Gerät anbieten."
+            },
+            {
+              "speaker": "Kundin",
+              "gender": "f",
+              "text": "Ich bespreche das mit meinem Chef und melde mich nochmal bei Ihnen. Vielen Dank für Ihre Hilfe."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Kundin braucht eine Beratung für neue Bürogeräte.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Die Kundin möchte",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "mindestens fünf Drucker kaufen."
+                },
+                {
+                  "key": "b",
+                  "text": "mit ihrem Vorgesetzten reden."
+                },
+                {
+                  "key": "c",
+                  "text": "viel kopieren."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "TN 1",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Guten Morgen."
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Wir sollten langsam mit der Planung für unser jährliches Betriebsfest beginnen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Was meinen Sie ?"
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Gibt es denn schon eine Agenda?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Darüber wollte ich mit Ihnen sprechen. Unter anderem."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Haben wir überhaupt schon einen Termin?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Nun, so gut wie. Wir haben der Geschäftsführung zwei Vorschläge in der 30. und 31. Kalenderwoche gemacht und bekommen diese Woche noch eine Rückmeldung dazu. Wir würden dann gerne möglichst schnell die Planung abschließen. Wer von Ihnen wäre bereit, sich um das Essen und die Getränke zu kümmern?"
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Das übernehme ich gerne. Ich bin aber erst seit Kurzem im Unternehmen und kenne mich noch nicht so gut aus. Gibt es eine Firma, mit der wir immer zusammenarbeiten? Oder soll ich bei verschiedenen Cateringfirmen um Menüvorschläge bitten?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Super, dass Sie sich darum kümmern möchten. Ich gebe Ihnen nachher die Nummern von zwei Anbietern, mit denen wir gute Erfahrungen gemacht haben und wenn Sie dann noch Fragen haben, kann ich Sie gerne unterstützen."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Danke, das wäre nett. Wie viele Kollegen kommen denn immer so?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Letztes Jahr waren wir ungefähr 180. Wir sollten spätestens Ende des Monats die Einladungen an alle Mitarbeiterinnen und Mitarbeiter verschicken. Sie können dann in eine Liste eintragen, ob sie kommen. Wenn wir genauere Zahlen haben, können wir die finale Planung machen."
+            },
+            {
+              "speaker": "TN 3",
+              "text": "Beim letzten Fest hatten wir ja eine Band. Das kam doch bei allen ganz gut an. Soll ich sie noch mal anfragen?"
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Ja, gerne, das ist eine gute Idee."
+            },
+            {
+              "speaker": "TN 2",
+              "text": "Und ich mache mir noch ein paar Gedanken wegen der Deko."
+            },
+            {
+              "speaker": "TN 1",
+              "text": "Ich sehe schon, Sie sind ein gutes Team."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "In dem Gespräch geht es darum, was schon geplant ist. / Die Organisation des Betriebsfestes ist abgeschlossen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 25,
+              "prompt": "Für die Betriebsfeier",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "wird eine neue Cateringfirma gesucht. / sollen sofort Einladungen verschickt werden."
+                },
+                {
+                  "key": "b",
+                  "text": "soll eine neue Band gesucht werden. / braucht das Team noch eine neue Band zu finden."
+                },
+                {
+                  "key": "c",
+                  "text": "werden die Aufgaben verteilt."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Herr Klein, herzlich willkommen im Team. Schön, dass Sie da sind."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ich freue mich auch hier zu sein und bin schon sehr gespannt auf meine Arbeit."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Am besten bringe ich Sie direkt ins Lager. Dort wartet Ihr Vorgesetzter, Herr Lehmann, schon auf Sie. Den kennen Sie ja schon aus dem Vorstellungsgespräch."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, gern."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach so, das hatte ich fast vergessen. Vorher müssen wir noch ein paar Formalitäten erledigen. Den Arbeitsvertrag haben Sie uns ja schon zurückgeschickt. Uns fehlen aber noch Ihr Sozialversicherungsausweis und die Steueridentifikationsnummer. Haben Sie die Sachen dabei? Dann mache ich schnell Kopien davon."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Den Sozialversicherungsausweis habe ich leider nicht hier, aber die Versicherungsnummer kann ich Ihnen geben. Und die Steuer-ID steht hier drauf ."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Die Sozialversicherungsnummer reicht erstmal. Bringen Sie mit dem Ausweis dann einfach die nächsten Tage ins Büro."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das mache ich. Und wie ist das mit der Arbeitskleidung? Bekomme ich die heute schon?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, es ist Pflicht bei der Arbeit die Sicherheitskleidung zu tragen, um Unfälle zu vermeiden. Ich zeige Ihnen gleich auf dem Weg zum Lager, wo Sie sie abholen und sich umziehen können. In der Umkleide haben Sie übrigens auch ein Spind, in dem Sie Ihre persönlichen Sachen abschließen können. Den Schlüssel dafür kann ich Ihnen jetzt schon geben. Hier bitte. Sie haben die Nr. 27."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Vielen Dank."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie werden heute im Lager übrigens nur Herr Lehmann antreffen. Normalerweise sind Sie dort zu viert, aber ein Kollege ist zurzeit im Urlaub und der andere hat sich heute Morgen krankgemeldet."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Kein Problem. Dan lerne ich die Kollegen später kennen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Schmidt und Herr Klein arbeiten zusammen / beide im Lager.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Schmidt",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "gibt Herrn Klein Schutzkleidung. / übergibt Herrn Klein die Arbeitskleidung."
+                },
+                {
+                  "key": "b",
+                  "text": "stellt Herrn Klein dem Leiter vor. / stellt Herrn Klein seinem Vorgesetzten vor."
+                },
+                {
+                  "key": "c",
+                  "text": "verlangt noch einige Unterlagen. / verlangt noch weitere Unterlagen von Herrn Klein."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v3",
+      "part": "HOEREN_1",
+      "title": "Вариант 3",
+      "note": "100%; тест 040321, 100221",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Wir müssen dringend über unsere Verkaufszahlen sprechen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, darauf wollte ich Sie auch schon ansprechen. Die Entwicklung macht mir langsam Sorgen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Haben Sie eine Idee, warum sich unsere Produkte nicht mehr so gut verkaufen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Wir haben ja schon öfter darüber gesprochen, dass wir vor einigen Monaten einen großen Konkurrenten bekommen haben. Wie Sie wissen, verkauft die Firma Sportslife ähnliche Sportbekleidung wie wir. Und einige Kunden sind zur Konkurrenz übergelaufen. Ich habe mir deren Angebot angeschaut. Die haben viel günstigere Preise."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Aber die Kunden müssen das doch merken, dass die Qualität gar nicht vergleichbar ist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, allerdings geht die Firma viel offensiver auf die Kunden zu als wir. Haben Sie in der Fußgängerzone die Leute gesehen, die Flyer verteilen? Darauf wird massiv mit Sonderangeboten und Rabattaktionen geworben."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Nein, die habe ich nicht gesehen. Aber ich denke, dass solche Maßnahmen nicht zu uns passen würden."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Der Meinung bin ich auch. Aber etwas ändern müssen wir. Bisher konnten wir uns darauf verlassen, dass unser guter Name wirkt. Aber das reicht nicht mehr. Wir müssen auf jeden Fall mehr Werbung machen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Mir wäre es auch wichtig, dass wir unser Verkaufspersonal in den Läden besser schulen und ihnen Argumente liefern, warum die Kunden unsere Produkte kaufen sollen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Und wir müssen uns klar von den Billigprodukten abgrenzen. Ein Argument könnte sein, dass wir nicht im Ausland und nur zu fairen Konditionen produzieren lassen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Der Ansatz gefällt mir. Arbeiten Sie doch mal eine Strategie aus, und dann sprechen wir nochmal darüber. Wir sollten schnell handeln. Deshalb wäre es gut, wenn Sie bis zum 14.03. ein Konzept fertig hätten."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Geschäftsführer und die Marketingleiterin sprechen über Maßnahmen zur Umsatzsteigerung.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Die Firma möchte",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ihre Preise senken."
+                },
+                {
+                  "key": "b",
+                  "text": "im Ausland produzieren."
+                },
+                {
+                  "key": "c",
+                  "text": "das Verkaufspersonal schulen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einrichtungsgeschäft Home. Thoma, mein Name. Was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Lüdeke vom Logina, guten Tag, Ich rufe wegen Ihres Kostenvoranschlags für die Renovierung unserer Büroräume an."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ah, ja. Worum geht es denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie haben mir zwei Alternativen für den Teppichboden angeboten. Der Preisunterschied ist ja doch ziemlich groß. Wie unterscheiden sich denn die beiden Teppiche?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Sie sind aus verschiedenen Materialien. Der eine Teppich ist aus reiner Schurwolle, und der andere hat eine Acrylbeimischung. Der ist dadurch natürlich preiswerter."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Die Muster sehen ja sehr ähnlich aus."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das ist richtig. Optisch ähneln sich die beiden Teppiche zwar, aber der Laufkomfort auf dem Teppich aus reiner Schurwolle ist viel größer. Er ist weicher und federt mehr."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Und welcher ist strapazierfähiger? Er soll ja in den Büros und in den Fluren liegen, und da laufen täglich viele Leute drüber. Er muss also schon was aushalten."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Also robuster ist das Material mit Acrylbeimischung. Aber erfahrungsgemäß sehen die etwas teureren Teppiche trotzdem länger schöner aus. Ich würde Ihnen auf jeden Fall die reine Schurwolle empfehlen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Was passiert denn, wenn der Teppich später mal beschädigt ist? Muss ich ihn dann gleich ganz austauschen lassen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nein, das ist nicht nötig. Von diesem Teppich gibt es nicht nur Meterware, sondern auch Fliesen. Das sind einzelne kleine Quadrate, die als durchgehender Teppichboden verlegt werden und unabhängig voneinander ausgetauscht werden können."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hm, das ist natürlich ein Argument. Kann ich mir die Fliesen bei Ihnen im Laden mal anschauen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, natürlich. Kommen Sie gerne vorbei."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Herr Thoma verkauft Bodenbeläge (Teppich).",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Frau Lüdeke",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "reklamiert einen Schaden."
+                },
+                {
+                  "key": "b",
+                  "text": "trifft ihre Entscheidung aufgrund des Musters."
+                },
+                {
+                  "key": "c",
+                  "text": "wundert sich über den Preisunterschied."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Hallo Frau Herbst. Herzlich willkommen im Team."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Guten Morgen. Dankeschön."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Das ist Ignacio Lopez. Ignacio, das ist Frau Herbst."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Hallo. Wir arbeiten zusammen in der Gänseblümchen-Gruppe. Wollen wir uns nicht duzen?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja klar, gerne. Ich bin Amira. Ich dachte, ich wäre in der Mäuse-Gruppe."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Normalerweise schon. Aber diese Woche mussten wir das etwas anders organisieren. Denn heute Morgen hat sich eine Kollegin aus der Mäuse-Gruppe krankgemeldet. Und ich muss zwischen den beiden Gruppen hin und her springen."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Das ist für mich in Ordnung. Wenn du mir zeigst, wo ich alles finde, komme ich schon klar."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Wir sollten noch mal kurz in den Dienstplan schauen, bevor Sie anfangen."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja, gibt es da denn Änderungen?"
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Da die Kollegin leider die ganze Woche ausfällt, müssen wir die Schichten anders verteilen. Ich hatte Sie eigentlich für die Frühschicht eingetragen. Wäre es möglich, dass Sie stattdessen in den nächsten Tagen den Spätdienst übernehmen?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja, das geht. Ich hätte zwar lieber den Frühdienst gemacht, da ich diese Woche einige Termine habe. Aber die kann ich verschieben."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Das ist prima. Aber wenn dir das Probleme bereitet, kann ich auch mal schauen, ob ich den Spätdienst machen kann."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ach nein, das passt schon. Trotzdem, danke für dein Angebot."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Wunderbar, dann ist das ja geklärt. Ich zeige Ihnen gleich alles, bevor die Kinder kommen."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Das kann ich doch auch gerne übernehmen. Wo hast du denn früher gearbeitet?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ich bin erst vor Kurzem mit meinem Mann hierher gezogen. Vorher war ich in einer Kita in Darmstadt."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Ignacio ist Amiras Kollege.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Die Erzieherin (Amira Herbst)",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "arbeitet diese Woche in einer anderen Gruppe."
+                },
+                {
+                  "key": "b",
+                  "text": "kann diese Woche keinen Spätdienst übernehmen. / erklärt ihrem Kollegen die Abläufe in der Kita."
+                },
+                {
+                  "key": "c",
+                  "text": "muss diese Woche zwei Gruppen betreuen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v3_b",
+      "part": "HOEREN_1",
+      "title": "Вариант 3 · новые вопросы",
+      "note": "100%; новые варианты вопросов 22–23, 24 и 26",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Wir müssen dringend über unsere Verkaufszahlen sprechen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, darauf wollte ich Sie auch schon ansprechen. Die Entwicklung macht mir langsam Sorgen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Haben Sie eine Idee, warum sich unsere Produkte nicht mehr so gut verkaufen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Wir haben ja schon öfter darüber gesprochen, dass wir vor einigen Monaten einen großen Konkurrenten bekommen haben. Wie Sie wissen, verkauft die Firma Sportslife ähnliche Sportbekleidung wie wir. Und einige Kunden sind zur Konkurrenz übergelaufen. Ich habe mir deren Angebot angeschaut. Die haben viel günstigere Preise."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Aber die Kunden müssen das doch merken, dass die Qualität gar nicht vergleichbar ist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, allerdings geht die Firma viel offensiver auf die Kunden zu als wir. Haben Sie in der Fußgängerzone die Leute gesehen, die Flyer verteilen? Darauf wird massiv mit Sonderangeboten und Rabattaktionen geworben."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Nein, die habe ich nicht gesehen. Aber ich denke, dass solche Maßnahmen nicht zu uns passen würden."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Der Meinung bin ich auch. Aber etwas ändern müssen wir. Bisher konnten wir uns darauf verlassen, dass unser guter Name wirkt. Aber das reicht nicht mehr. Wir müssen auf jeden Fall mehr Werbung machen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Mir wäre es auch wichtig, dass wir unser Verkaufspersonal in den Läden besser schulen und ihnen Argumente liefern, warum die Kunden unsere Produkte kaufen sollen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Und wir müssen uns klar von den Billigprodukten abgrenzen. Ein Argument könnte sein, dass wir nicht im Ausland und nur zu fairen Konditionen produzieren lassen."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Der Ansatz gefällt mir. Arbeiten Sie doch mal eine Strategie aus, und dann sprechen wir nochmal darüber. Wir sollten schnell handeln. Deshalb wäre es gut, wenn Sie bis zum 14.03. ein Konzept fertig hätten."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Geschäftsführer und die Marketingleiterin sprechen über die guten Umsatzzahlen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Die Firma",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "hat einen neuen Mitbewerber."
+                },
+                {
+                  "key": "b",
+                  "text": "möchte ihre Preise senken."
+                },
+                {
+                  "key": "c",
+                  "text": "schreibt gute Zahlen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einrichtungsgeschäft Home. Thoma, mein Name. Was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Lüdeke vom Logina, guten Tag, Ich rufe wegen Ihres Kostenvoranschlags für die Renovierung unserer Büroräume an."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ah, ja. Worum geht es denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie haben mir zwei Alternativen für den Teppichboden angeboten. Der Preisunterschied ist ja doch ziemlich groß. Wie unterscheiden sich denn die beiden Teppiche?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Sie sind aus verschiedenen Materialien. Der eine Teppich ist aus reiner Schurwolle, und der andere hat eine Acrylbeimischung. Der ist dadurch natürlich preiswerter."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Die Muster sehen ja sehr ähnlich aus."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das ist richtig. Optisch ähneln sich die beiden Teppiche zwar, aber der Laufkomfort auf dem Teppich aus reiner Schurwolle ist viel größer. Er ist weicher und federt mehr."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Und welcher ist strapazierfähiger? Er soll ja in den Büros und in den Fluren liegen, und da laufen täglich viele Leute drüber. Er muss also schon was aushalten."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Also robuster ist das Material mit Acrylbeimischung. Aber erfahrungsgemäß sehen die etwas teureren Teppiche trotzdem länger schöner aus. Ich würde Ihnen auf jeden Fall die reine Schurwolle empfehlen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Was passiert denn, wenn der Teppich später mal beschädigt ist? Muss ich ihn dann gleich ganz austauschen lassen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nein, das ist nicht nötig. Von diesem Teppich gibt es nicht nur Meterware, sondern auch Fliesen. Das sind einzelne kleine Quadrate, die als durchgehender Teppichboden verlegt werden und unabhängig voneinander ausgetauscht werden können."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hm, das ist natürlich ein Argument. Kann ich mir die Fliesen bei Ihnen im Laden mal anschauen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, natürlich. Kommen Sie gerne vorbei."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Herr Thoma verkauft Frau Lüdeke einen neuen Teppich.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 25,
+              "prompt": "Frau Lüdeke",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "reklamiert einen Schaden."
+                },
+                {
+                  "key": "b",
+                  "text": "trifft ihre Entscheidung aufgrund des Musters."
+                },
+                {
+                  "key": "c",
+                  "text": "wundert sich über den Preisunterschied."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Hallo Frau Herbst. Herzlich willkommen im Team."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Guten Morgen. Dankeschön."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Das ist Ignacio Lopez. Ignacio, das ist Frau Herbst."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Hallo. Wir arbeiten zusammen in der Gänseblümchen-Gruppe. Wollen wir uns nicht duzen?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja klar, gerne. Ich bin Amira. Ich dachte, ich wäre in der Mäuse-Gruppe."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Normalerweise schon. Aber diese Woche mussten wir das etwas anders organisieren. Denn heute Morgen hat sich eine Kollegin aus der Mäuse-Gruppe krankgemeldet. Und ich muss zwischen den beiden Gruppen hin und her springen."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Das ist für mich in Ordnung. Wenn du mir zeigst, wo ich alles finde, komme ich schon klar."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Wir sollten noch mal kurz in den Dienstplan schauen, bevor Sie anfangen."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja, gibt es da denn Änderungen?"
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Da die Kollegin leider die ganze Woche ausfällt, müssen wir die Schichten anders verteilen. Ich hatte Sie eigentlich für die Frühschicht eingetragen. Wäre es möglich, dass Sie stattdessen in den nächsten Tagen den Spätdienst übernehmen?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ja, das geht. Ich hätte zwar lieber den Frühdienst gemacht, da ich diese Woche einige Termine habe. Aber die kann ich verschieben."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Das ist prima. Aber wenn dir das Probleme bereitet, kann ich auch mal schauen, ob ich den Spätdienst machen kann."
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ach nein, das passt schon. Trotzdem, danke für dein Angebot."
+            },
+            {
+              "speaker": "Frau Müller",
+              "gender": "f",
+              "text": "Wunderbar, dann ist das ja geklärt. Ich zeige Ihnen gleich alles, bevor die Kinder kommen."
+            },
+            {
+              "speaker": "Ignacio Lopez",
+              "gender": "m",
+              "text": "Das kann ich doch auch gerne übernehmen. Wo hast du denn früher gearbeitet?"
+            },
+            {
+              "speaker": "Amira Herbst",
+              "gender": "f",
+              "text": "Ich bin erst vor Kurzem mit meinem Mann hierher gezogen. Vorher war ich in einer Kita in Darmstadt."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Ignacio und Amira sprechen über den Dienstplan.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Die Erzieherin (Amira Herbst)",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "arbeitet diese Woche in einer anderen Gruppe."
+                },
+                {
+                  "key": "b",
+                  "text": "kann diese Woche keinen Spätdienst übernehmen. / erklärt ihrem Kollegen die Abläufe in der Kita."
+                },
+                {
+                  "key": "c",
+                  "text": "muss diese Woche zwei Gruppen betreuen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v4",
+      "part": "HOEREN_1",
+      "title": "Вариант 4",
+      "note": "100%; Nr. 22–23 от 14.10.24",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Hallo Karl, was gibt’s?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Leider haben wir ein Problem mit unserem Termin mit der Schneider Barbara GmbH. Wir wollten ja ursprünglich in den kommenden Wochen nach München fahren."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ja stimmt, was ist denn los?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Der Termin kann nicht wie geplant stattfinden. Die französische Firma La Grande hat sich überraschend für Donnerstag an uns angemeldet. Die Delegation ist vom 5. bis zum 10. August in Deutschland und hat spontan einen Termin zum persönlichen Kennenlernen vorgeschlagen. Diese Gelegenheit sollten wir unbedingt nutzen."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Hm, schon. Aber Christina hat doch schon alles für München gebucht. Hotels, Zugtickets. Kann denn niemand anders die Leute von La Grande treffen und wir fahren trotzdem?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Oh, sie sind ein sehr wichtiger Geschäftspartner von uns und ich würde das Gespräch schon gerne selbst führen."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Aber die Schneider Barbara GmbH ist auch ein wichtiger Geschäftspartner. Immerhin hat sie uns einen Büroaufenthalt angekündigt. Ich denke, das sollten wir nicht so einfach aufs Spiel setzen. Außerdem war es schwierig genug, mit ihr einen Termin zu finden."
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Du hast schon recht. Dann schlage ich Folgendes vor. Du fährst nach München und ich nehme den Termin in La Grande wahr. Was hälst du davon?"
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ich will halbwierig diese Lösung nicht, aber es ist ein guter Kompromiss. Ich würde aber gerne Nathalie mitnehmen, denn sie kennt die Kunden schon besser."
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Nathalie spricht sehr gut Französisch. Die hätte ich gerne bei den Treffen in La Grande dabei. Aber du könntest doch mit Ebol fahren. Er ist doch schon lange in den Projekten."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ja gut, dann sage ich ihm direkt Bescheid."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Karl und Michaela verschieben einen wichtigen Termin.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Michaela soll",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ihre geplante Dienstreise absagen."
+                },
+                {
+                  "key": "b",
+                  "text": "mit der Firma La Grande verhandeln."
+                },
+                {
+                  "key": "c",
+                  "text": "mit einem Kollegen nach München fahren."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Spedition Fix, guten Tag. Ich habe eine gute Nachricht für Sie. Wir haben den 15. ja den Liefertermin vereinbart, aber die Lieferung kommt schon drei Tage früher."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Oh, die Nachricht ist leider gar nicht so gut. Wir müssen unser Lager baldest räumen, bevor die neue Lieferung kommt. Die Winterware muss ja noch raus. Warum wird der Liefertermin denn vorgezogen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wir müssen dies Mal aus betrieblichen Gründen unsere Kunden in einer anderen Reihenfolge liefern."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das verstehe ich ja, aber wir müssen natürlich auch sehen, wie wir klarkommen. Da müsste ich jetzt ziemlich viel umdisponieren."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Es tut mir wirklich leid, dass wir Ihnen eine Umstellung machen. Aber ich kann es leider nicht ändern. Ich kann Ihnen aber anbieten, dass sie eine Woche später kommen. Aber am 15. klappt es leider definitiv nicht."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, später wird auch nicht. Dann würden sich ja alle Abläufe bei uns verzögern. Können wir die Lieferung wenigstens auf den späten Nachmittag legen, sodass wir an diesem Tag noch das Lager organisieren können?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, gerne. Da können wir uns nach Ihnen richten. Wir versuchen dann so zwischen 16 und 17 Uhr bei Ihnen zu sein. Unser Fahrer wird sich eine halbe Stunde vorher bei Ihnen melden. Wäre das für Sie so in Ordnung?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Naja, die Situation ist nicht ideal. Aber manchmal muss man halt flexibel sein. Und sonst klappt die Zusammenarbeit mit Ihnen ja immer gut. Dann halten wir den 12. ab 16 Uhr fest."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wunderbar. Und noch einmal vielen Dank für Ihr Verständnis."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Frau Leipold beschwert sich über eine verspätete Lieferung.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 25,
+              "prompt": "Die Firma \"Spedition Fix\"",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "beliefert Frau Leipold zum ersten Mal."
+                },
+                {
+                  "key": "b",
+                  "text": "hat die Tourenplanung geändert."
+                },
+                {
+                  "key": "c",
+                  "text": "verschiebt den Termin um sieben Tage."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Ich möchte Sie nochmal ausdrücklich darauf aufmerksam machen, dass die Sicherheitsregeln eingehalten werden müssen. Gestern wäre es hier im Lager beinahe zu einem Unfall gekommen."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Davon habe ich gehört. Franziska hat es heute Morgen erwähnt. Ich bin nur heute aus dem Urlaub wiedergekommen. Was ist denn genau passiert?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Herr Thoma hat keinen Schutzhelm getragen und hätte sich beinahe verletzt. Als er etwas aus einem Regal nehmen wollte, sind dabei andere schwere Gegenstände herausgerutscht und wären fast auf den Kopf gefallen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Ich stand daneben und habe einen riesigen Schreck bekommen. Zum Glück ist nichts passiert, aber es hätte böse ausgehen können."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Naja, dieses Mal ist es glimpflich ausgegangen, aber es hätte nicht passieren dürfen. Sie haben von uns Schutzkleidung bekommen, und ich weise Sie hiermit noch mal eindringlich darauf hin, dass Sie verpflichtet sind, diese Sachen noch zu tragen. Denken Sie auch an Ihren Versicherungsschutz. Wenn Sie Ihre Gesundheit fahrlässig riskieren und es zu einem Unfall kommt, zahlt die Versicherung nicht."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Da haben Sie natürlich recht. Aber ich muss gestehen, dass ich jetzt im Sommer den Helm manchmal abnehme, weil es so warm und heiß ist."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Das glaube ich, aber die Sicherheit geht vor. Und noch was. Ich habe kürzlich gesehen, dass zwei Kollegen auf einem Gabelstapler gefahren sind. Das ist auch streng untersagt."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Kann ich die Vorschriften denn irgendwo nachlesen? Jemand hat sie mir bei der Einweisung am ersten Arbeitstag erklärt. Aber das ist schon so lange her."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Die hängen in dem Pausenraum an der Tür. Vielleicht sollten wir aber einen Ort finden, wo der Aushang für alle besser sichtbar ist."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Der Chef bespricht mit den Mitarbeitern die Sicherheitsvorschrift. / Der Chef weist auf die wichtige Sicherheitsvorschriften hin.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Es gab keinen Unfall,",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "da die Mitarbeiter alle Schutzkleidung getragen haben."
+                },
+                {
+                  "key": "b",
+                  "text": "obwohl die Mitarbeiter die Vorschriften missachtet haben."
+                },
+                {
+                  "key": "c",
+                  "text": "weil sich die Mitarbeiter an die Regeln gehalten haben."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v4_b",
+      "part": "HOEREN_1",
+      "title": "Вариант 4 · версия 21.12.24",
+      "note": "100%; новый вариант от 21.12.24 и второй вариант вопроса 26",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Hallo Karl, was gibt’s?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Leider haben wir ein Problem mit unserem Termin mit der Schneider Barbara GmbH. Wir wollten ja ursprünglich in den kommenden Wochen nach München fahren."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ja stimmt, was ist denn los?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Der Termin kann nicht wie geplant stattfinden. Die französische Firma La Grande hat sich überraschend für Donnerstag an uns angemeldet. Die Delegation ist vom 5. bis zum 10. August in Deutschland und hat spontan einen Termin zum persönlichen Kennenlernen vorgeschlagen. Diese Gelegenheit sollten wir unbedingt nutzen."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Hm, schon. Aber Christina hat doch schon alles für München gebucht. Hotels, Zugtickets. Kann denn niemand anders die Leute von La Grande treffen und wir fahren trotzdem?"
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Oh, sie sind ein sehr wichtiger Geschäftspartner von uns und ich würde das Gespräch schon gerne selbst führen."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Aber die Schneider Barbara GmbH ist auch ein wichtiger Geschäftspartner. Immerhin hat sie uns einen Büroaufenthalt angekündigt. Ich denke, das sollten wir nicht so einfach aufs Spiel setzen. Außerdem war es schwierig genug, mit ihr einen Termin zu finden."
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Du hast schon recht. Dann schlage ich Folgendes vor. Du fährst nach München und ich nehme den Termin in La Grande wahr. Was hälst du davon?"
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ich will halbwierig diese Lösung nicht, aber es ist ein guter Kompromiss. Ich würde aber gerne Nathalie mitnehmen, denn sie kennt die Kunden schon besser."
+            },
+            {
+              "speaker": "Karl",
+              "gender": "m",
+              "text": "Nathalie spricht sehr gut Französisch. Die hätte ich gerne bei den Treffen in La Grande dabei. Aber du könntest doch mit Ebol fahren. Er ist doch schon lange in den Projekten."
+            },
+            {
+              "speaker": "Michaela",
+              "gender": "f",
+              "text": "Ja gut, dann sage ich ihm direkt Bescheid."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Karl und Michaela verschieben einen wichtigen Termin.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Michaela soll",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ihre geplante Dienstreise absagen."
+                },
+                {
+                  "key": "b",
+                  "text": "mit der Firma La Grande verhandeln."
+                },
+                {
+                  "key": "c",
+                  "text": "mit einem Kollegen nach München fahren."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Spedition Fix, guten Tag. Ich habe eine gute Nachricht für Sie. Wir haben den 15. ja den Liefertermin vereinbart, aber die Lieferung kommt schon drei Tage früher."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Oh, die Nachricht ist leider gar nicht so gut. Wir müssen unser Lager baldest räumen, bevor die neue Lieferung kommt. Die Winterware muss ja noch raus. Warum wird der Liefertermin denn vorgezogen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wir müssen dies Mal aus betrieblichen Gründen unsere Kunden in einer anderen Reihenfolge liefern."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das verstehe ich ja, aber wir müssen natürlich auch sehen, wie wir klarkommen. Da müsste ich jetzt ziemlich viel umdisponieren."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Es tut mir wirklich leid, dass wir Ihnen eine Umstellung machen. Aber ich kann es leider nicht ändern. Ich kann Ihnen aber anbieten, dass sie eine Woche später kommen. Aber am 15. klappt es leider definitiv nicht."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, später wird auch nicht. Dann würden sich ja alle Abläufe bei uns verzögern. Können wir die Lieferung wenigstens auf den späten Nachmittag legen, sodass wir an diesem Tag noch das Lager organisieren können?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, gerne. Da können wir uns nach Ihnen richten. Wir versuchen dann so zwischen 16 und 17 Uhr bei Ihnen zu sein. Unser Fahrer wird sich eine halbe Stunde vorher bei Ihnen melden. Wäre das für Sie so in Ordnung?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Naja, die Situation ist nicht ideal. Aber manchmal muss man halt flexibel sein. Und sonst klappt die Zusammenarbeit mit Ihnen ja immer gut. Dann halten wir den 12. ab 16 Uhr fest."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wunderbar. Und noch einmal vielen Dank für Ihr Verständnis."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Frau Leipold vereinbart telefonisch (am Telefon) einen Termin für Lieferung (Liefertermin).",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Die Firma \"Spedition Fix\"",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "beliefert Frau Leipold zum ersten Mal."
+                },
+                {
+                  "key": "b",
+                  "text": "hat die Tourenplanung geändert."
+                },
+                {
+                  "key": "c",
+                  "text": "verschiebt den Termin um sieben Tage."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Ich möchte Sie nochmal ausdrücklich darauf aufmerksam machen, dass die Sicherheitsregeln eingehalten werden müssen. Gestern wäre es hier im Lager beinahe zu einem Unfall gekommen."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Davon habe ich gehört. Franziska hat es heute Morgen erwähnt. Ich bin nur heute aus dem Urlaub wiedergekommen. Was ist denn genau passiert?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Herr Thoma hat keinen Schutzhelm getragen und hätte sich beinahe verletzt. Als er etwas aus einem Regal nehmen wollte, sind dabei andere schwere Gegenstände herausgerutscht und wären fast auf den Kopf gefallen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Ich stand daneben und habe einen riesigen Schreck bekommen. Zum Glück ist nichts passiert, aber es hätte böse ausgehen können."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Naja, dieses Mal ist es glimpflich ausgegangen, aber es hätte nicht passieren dürfen. Sie haben von uns Schutzkleidung bekommen, und ich weise Sie hiermit noch mal eindringlich darauf hin, dass Sie verpflichtet sind, diese Sachen noch zu tragen. Denken Sie auch an Ihren Versicherungsschutz. Wenn Sie Ihre Gesundheit fahrlässig riskieren und es zu einem Unfall kommt, zahlt die Versicherung nicht."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Da haben Sie natürlich recht. Aber ich muss gestehen, dass ich jetzt im Sommer den Helm manchmal abnehme, weil es so warm und heiß ist."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Das glaube ich, aber die Sicherheit geht vor. Und noch was. Ich habe kürzlich gesehen, dass zwei Kollegen auf einem Gabelstapler gefahren sind. Das ist auch streng untersagt."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Kann ich die Vorschriften denn irgendwo nachlesen? Jemand hat sie mir bei der Einweisung am ersten Arbeitstag erklärt. Aber das ist schon so lange her."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Die hängen in dem Pausenraum an der Tür. Vielleicht sollten wir aber einen Ort finden, wo der Aushang für alle besser sichtbar ist."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Der Chef bespricht mit den Mitarbeitern die neuen Sicherheitsvorschriften.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Es gab keinen Unfall,",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "da die Mitarbeiter alle Schutzkleidung getragen haben."
+                },
+                {
+                  "key": "b",
+                  "text": "obwohl die Mitarbeiter die Vorschriften missachtet haben."
+                },
+                {
+                  "key": "c",
+                  "text": "weil sich die Mitarbeiter an die Regeln gehalten haben."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v5",
+      "part": "HOEREN_1",
+      "title": "Вариант 5",
+      "note": "100%",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Gut, Melanie, dann will ich dir mal unseren Friseursalon zeigen. Also, hier haben wir den großen Raum mit zehn Stühlen. In der Regel arbeiten hier vier bis fünf Kollegen pro Schicht. Und dort hinten ist noch ein kleiner separater Raum mit einem Stuhl."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Das heißt, dass wir hier auch an zwei Stühlen gleichzeitig arbeiten können?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Ja, das soll sogar so sein. Wenn du einer Kundin die Haare färbst und sie warten muss, kannst du währenddessen schon den nächsten Kunden bedienen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Ja, das kenne ich auch so. Und da muss kein Kunde allzu lange warten."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Dann gehen wir jetzt ins Lager. Da findest du Shampoo, Spüle und so weiter. In dieses Buch hier tragen wir immer ein, was wir entnehmen, damit bei Bedarf nachbestellt werden kann."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Wie funktioniert das denn mit den Bestellungen? Wann und wie oft wird bestellt? Und wer macht das?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Es gibt immer eine Beauftragte pro Quartal, die dafür verantwortlich ist. Es geht reihum , das heißt, jeder ist mal dran . Normalerweise bestellen wir einmal im Monat."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Dürfen wir den Kunden bestimmte Produkte empfehlen? Oder ist das nicht erwünscht ?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Doch, zur Beratung gehört schon, dass wir geeignete Produkte empfehlen. Aber wir drängen die Kunden nicht zum Kauf."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Und wenn jemand eine Marke wissen will?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Dann empfehlen wir natürlich die, die wir hier benutzen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Und wie ist das mit dem Trinkgeld ? Behält das jeder für sich oder gibt es eine gemeinsame Kasse?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Wir haben eine Kasse, in der wir das ganze Trinkgeld sammeln und einmal im Monat wird es verteilt. Also jeder bekommt gleich viel. Wir sind davon aber auch schon mal gemeinsam essen gegangen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Das ist ja eine schöne Idee."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Hast du sonst noch Fragen?"
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Chef erklärt Melanie, mit welchen Produkten der Salon arbeitet.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Im Friseursalon",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "dürfen keine Produkte bestimmter Marken empfohlen werden."
+                },
+                {
+                  "key": "b",
+                  "text": "ist der Chef für die Bestellung der Ware zuständig."
+                },
+                {
+                  "key": "c",
+                  "text": "wird das Trinkgeld regelmäßig unter den Mitarbeitern aufgeteilt."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Lasst uns mal über die Urlaubsplanung fürs nächste Jahr sprechen. Wisst ihr schon, wann ihr euch freinehmen wollt?"
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Ich würde gerne die ersten drei Wochen in den Sommerferien nehemen, da ich eine größere Reise plane."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Oh, das könnte schwierig werden. Gerade in den Sommerferien wollen die Kollegen mit schulpflichtigen Kindern Urlaub machen."
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Ja, stimmt. Daran habe ich gar nicht gedacht. Es ist nur so, dass ich mit einer Freundin verreisen möchte, die nur zu dieser Zeit Urlaub nehmen kann."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Ich habe ja zwei schulpflichtige Kinder, und wir haben überlegt, in den ersten beiden Wochen wegzufahren."
+            },
+            {
+              "speaker": "Mustafa",
+              "gender": "m",
+              "text": "Oh-je, genau zu der Zeit wollte ich zu meiner Familie nach Horburg. Meine Lieblingskusine heiratet."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Hm, naja, wir haben noch nichts gebucht. Ich könnte auch die letzten beiden Ferienwochen nehmen. Nur in der Mitte kann meine Frau nicht."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Na Prima, dann passt das doch. Mustafa nimmt die ersten beiden Ferienwochen, und Thomas die letzten beiden."
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Könnte ich dann in der Mitte drei Wochen freinehmen? Oder wäre es schlimm, wenn Mustafa und ich eine Woche gleichzeitig weg wären ?"
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Nein, das wäre schon okay. Ich bin in dieser Zeit ja auch da."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Ich hätte übrigens auch ganz gerne noch zwei Wochen am Stück in den Winterferien. Da würden wir nämlich gern zum Skilaufen nach Österreich fahren."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Über den Winterurlaub können wir später noch sprechen. Wichtig ist, dass wir jetzt den Sommerurlaub planen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Alle Kollegen können im Sommer Urlaub nehmen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "In den Sommerferien",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "können nur Mitarbeitende mit Kindern Urlaub machen."
+                },
+                {
+                  "key": "b",
+                  "text": "möchte Sandra zwei Wochen verreisen."
+                },
+                {
+                  "key": "c",
+                  "text": "will Mustafa die ersten beiden Wochen freinehmen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Hallo, hier ist Michaela Schulz von Kaffeesahneschnitte in Bremen. Guten Tag. Einer unserer Kaffeeautomaten ist gestern leider kaputt gegangen. Und wir wollen bei der Gelegenheit gleich in eine modernere Maschine investieren. Auf Ihrer Homepage habe ich den Esam 320 gesehen, den ich sehr interessant finde. Ich hätte aber noch ein paar Fragen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Gerne, Frau Schulz. Wie kann ich Ihnen helfen?"
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "In unserem Café haben wir Platz für 60 Gäste. Reicht dafür der Esam 320 aus ?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wie viele Liter Kaffee bereiten Sie denn im Schnitt pro Tag zu?"
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Ich denke, ein Wasserbehälter, den 10 Liter fasst, sollte reichen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das passt genau. Der Isar 320 hat einen 10-Liter-Tank. Der ist allerdings auch größer als herkömmliche Kaffeeautomaten."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das ist kein Problem. Wir haben ausreichend Platz. Uns wäre es aber wichtig, dass die Maschine ein leises Mahlwerk hat. Wenn es zu laut ist, stört sie die Gäste."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Keine Sorge. Das Gerät hat eines der leisesten Mahlwerke, die im Moment auf dem Markt sind. Außerdem können Sie 13 verschiedene Mahlstufen für sehr feinen bis grobgemahlenen Kaffee einstellen."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das ist gut. Wir haben so viele verschiedene Kaffeesorten und Röstungen. Und unsere jetzigen Maschinen haben nur sieben verschiedene Mahlstufen. Hat die Maschine denn auch eine Selbstreinigungsfunktion?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Natürlich hat das Gerät verschiedene automatische Reinigungs- und Entkalkungsprogramme, die alle sehr schnell fertig sind. Und die Bedienung ist auch sehr einfach."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das klingt ja sehr gut. Vielen Dank. Ich werde nochmal kurz mit meinem Geschäftspartner Rücksprache halten und melde mich spätestens morgen bei Ihnen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Schulz braucht mehrere neue Kaffeemaschinen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Schulz findet das Gerät ESAM 320 gut, obwohl es",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "echt groß ist."
+                },
+                {
+                  "key": "b",
+                  "text": "sich nicht selbst reinigen kann."
+                },
+                {
+                  "key": "c",
+                  "text": "ziemlich laut ist."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v5_b",
+      "part": "HOEREN_1",
+      "title": "Вариант 5 · новые вопросы",
+      "note": "100%; новые варианты вопросов 24 и 26",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Gut, Melanie, dann will ich dir mal unseren Friseursalon zeigen. Also, hier haben wir den großen Raum mit zehn Stühlen. In der Regel arbeiten hier vier bis fünf Kollegen pro Schicht. Und dort hinten ist noch ein kleiner separater Raum mit einem Stuhl."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Das heißt, dass wir hier auch an zwei Stühlen gleichzeitig arbeiten können?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Ja, das soll sogar so sein. Wenn du einer Kundin die Haare färbst und sie warten muss, kannst du währenddessen schon den nächsten Kunden bedienen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Ja, das kenne ich auch so. Und da muss kein Kunde allzu lange warten."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Dann gehen wir jetzt ins Lager. Da findest du Shampoo, Spüle und so weiter. In dieses Buch hier tragen wir immer ein, was wir entnehmen, damit bei Bedarf nachbestellt werden kann."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Wie funktioniert das denn mit den Bestellungen? Wann und wie oft wird bestellt? Und wer macht das?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Es gibt immer eine Beauftragte pro Quartal, die dafür verantwortlich ist. Es geht reihum , das heißt, jeder ist mal dran . Normalerweise bestellen wir einmal im Monat."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Dürfen wir den Kunden bestimmte Produkte empfehlen? Oder ist das nicht erwünscht ?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Doch, zur Beratung gehört schon, dass wir geeignete Produkte empfehlen. Aber wir drängen die Kunden nicht zum Kauf."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Und wenn jemand eine Marke wissen will?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Dann empfehlen wir natürlich die, die wir hier benutzen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Und wie ist das mit dem Trinkgeld ? Behält das jeder für sich oder gibt es eine gemeinsame Kasse?"
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Wir haben eine Kasse, in der wir das ganze Trinkgeld sammeln und einmal im Monat wird es verteilt. Also jeder bekommt gleich viel. Wir sind davon aber auch schon mal gemeinsam essen gegangen."
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Das ist ja eine schöne Idee."
+            },
+            {
+              "speaker": "Chef",
+              "gender": "m",
+              "text": "Hast du sonst noch Fragen?"
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Chef erklärt Melanie, mit welchen Produkten der Salon arbeitet.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Im Friseursalon",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "dürfen keine Produkte bestimmter Marken empfohlen werden."
+                },
+                {
+                  "key": "b",
+                  "text": "ist der Chef für die Bestellung der Ware zuständig."
+                },
+                {
+                  "key": "c",
+                  "text": "wird das Trinkgeld regelmäßig unter den Mitarbeitern aufgeteilt."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Lasst uns mal über die Urlaubsplanung fürs nächste Jahr sprechen. Wisst ihr schon, wann ihr euch freinehmen wollt?"
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Ich würde gerne die ersten drei Wochen in den Sommerferien nehemen, da ich eine größere Reise plane."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Oh, das könnte schwierig werden. Gerade in den Sommerferien wollen die Kollegen mit schulpflichtigen Kindern Urlaub machen."
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Ja, stimmt. Daran habe ich gar nicht gedacht. Es ist nur so, dass ich mit einer Freundin verreisen möchte, die nur zu dieser Zeit Urlaub nehmen kann."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Ich habe ja zwei schulpflichtige Kinder, und wir haben überlegt, in den ersten beiden Wochen wegzufahren."
+            },
+            {
+              "speaker": "Mustafa",
+              "gender": "m",
+              "text": "Oh-je, genau zu der Zeit wollte ich zu meiner Familie nach Horburg. Meine Lieblingskusine heiratet."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Hm, naja, wir haben noch nichts gebucht. Ich könnte auch die letzten beiden Ferienwochen nehmen. Nur in der Mitte kann meine Frau nicht."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Na Prima, dann passt das doch. Mustafa nimmt die ersten beiden Ferienwochen, und Thomas die letzten beiden."
+            },
+            {
+              "speaker": "Sandra",
+              "gender": "f",
+              "text": "Könnte ich dann in der Mitte drei Wochen freinehmen? Oder wäre es schlimm, wenn Mustafa und ich eine Woche gleichzeitig weg wären ?"
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Nein, das wäre schon okay. Ich bin in dieser Zeit ja auch da."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Ich hätte übrigens auch ganz gerne noch zwei Wochen am Stück in den Winterferien. Da würden wir nämlich gern zum Skilaufen nach Österreich fahren."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Über den Winterurlaub können wir später noch sprechen. Wichtig ist, dass wir jetzt den Sommerurlaub planen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Die Kollegen einigen sich darauf, wer wann Urlaub nehmen kann.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "In den Sommerferien",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "können nur Mitarbeitende mit Kindern Urlaub machen."
+                },
+                {
+                  "key": "b",
+                  "text": "möchte Sandra zwei Wochen verreisen."
+                },
+                {
+                  "key": "c",
+                  "text": "will Mustafa die ersten beiden Wochen freinehmen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Hallo, hier ist Michaela Schulz von Kaffeesahneschnitte in Bremen. Guten Tag. Einer unserer Kaffeeautomaten ist gestern leider kaputt gegangen. Und wir wollen bei der Gelegenheit gleich in eine modernere Maschine investieren. Auf Ihrer Homepage habe ich den Esam 320 gesehen, den ich sehr interessant finde. Ich hätte aber noch ein paar Fragen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Gerne, Frau Schulz. Wie kann ich Ihnen helfen?"
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "In unserem Café haben wir Platz für 60 Gäste. Reicht dafür der Esam 320 aus ?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wie viele Liter Kaffee bereiten Sie denn im Schnitt pro Tag zu?"
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Ich denke, ein Wasserbehälter, den 10 Liter fasst, sollte reichen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das passt genau. Der Isar 320 hat einen 10-Liter-Tank. Der ist allerdings auch größer als herkömmliche Kaffeeautomaten."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das ist kein Problem. Wir haben ausreichend Platz. Uns wäre es aber wichtig, dass die Maschine ein leises Mahlwerk hat. Wenn es zu laut ist, stört sie die Gäste."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Keine Sorge. Das Gerät hat eines der leisesten Mahlwerke, die im Moment auf dem Markt sind. Außerdem können Sie 13 verschiedene Mahlstufen für sehr feinen bis grobgemahlenen Kaffee einstellen."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das ist gut. Wir haben so viele verschiedene Kaffeesorten und Röstungen. Und unsere jetzigen Maschinen haben nur sieben verschiedene Mahlstufen. Hat die Maschine denn auch eine Selbstreinigungsfunktion?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Natürlich hat das Gerät verschiedene automatische Reinigungs- und Entkalkungsprogramme, die alle sehr schnell fertig sind. Und die Bedienung ist auch sehr einfach."
+            },
+            {
+              "speaker": "Frau Schulz",
+              "gender": "f",
+              "text": "Das klingt ja sehr gut. Vielen Dank. Ich werde nochmal kurz mit meinem Geschäftspartner Rücksprache halten und melde mich spätestens morgen bei Ihnen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Eine Frau möchte neue Kaffeemaschine kaufen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Schulz findet das Gerät ESAM 320 gut, obwohl es",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "echt groß ist."
+                },
+                {
+                  "key": "b",
+                  "text": "sich nicht selbst reinigen kann."
+                },
+                {
+                  "key": "c",
+                  "text": "ziemlich laut ist."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v6",
+      "part": "HOEREN_1",
+      "title": "Вариант 6",
+      "note": "тест №150321, 150301",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Simmering",
+              "gender": "m",
+              "text": "Guten Morgen, Frau Barthum. Ja, vielen Dank. Und jetzt freue ich mich sehr, hier am Wilhelmsgymnasium anzufangen."
+            },
+            {
+              "speaker": "Barthum",
+              "gender": "f",
+              "text": "Sie übernehmen ja die Klassenleitung der 8B. Heute, am ersten Schultag nach den Sommerferien, lernen Sie erstmal nur Ihre Klasse kennen. Und morgen geht es dann mit dem normalen Unterrichtsbetrieb los. Ihren Stundenplan haben Sie bekommen, oder?"
+            },
+            {
+              "speaker": "Simmering",
+              "gender": "m",
+              "text": "Ja, den habe ich letzte Woche erhalten."
+            },
+            {
+              "speaker": "Barthum",
+              "gender": "f",
+              "text": "Gut, dann bringe ich Sie jetzt zu Frau Alimi, meiner Assistentin. Sie führt Sie erstmal herum und kann Ihnen alle Fragen beantworten. Hallo Frau Alimi, hier bringe ich Ihnen Herrn Simmering, den neuen Kollegen, der die 8B übernimmt."
+            },
+            {
+              "speaker": "Alimi",
+              "gender": "f",
+              "text": "Guten Morgen, Herr Simmering. Schön, dass Sie da sind. Am besten gehen wir als Erstes ins Lehrerzimmer. Dort stehen die Schränke für die Lehrer. Alle Kolleg*innen haben ein abschließbares Fach, wo sie ihre Sachen unterbringen können. Sie haben dort auch einen Computer und zwei Kopierer, um Unterrichtsmaterial vorzubereiten. Für die Kopierer bekommen Sie gleich noch einen Code. Ah, sehen Sie, da ist Herr Timbur, unser Fachbereichsleiter für Fremdsprachen. Hallo Herr Timbur, darf ich Ihnen Herrn Simmering vorstellen?"
+            },
+            {
+              "speaker": "Timbur",
+              "gender": "m",
+              "text": "Guten Morgen, Herr Simmering. Entschuldigen Sie bitte, ich bin gerade ein bisschen in Eile. Frau Alimi, ist denn der Gesamtstundenplan aller Kolleg*innen schon fertig? Frau Michaelis hat sich krank gemeldet und ich wollte nachschauen, wer einspringen kann."
+            },
+            {
+              "speaker": "Simmering",
+              "gender": "m",
+              "text": "Organisieren das die Lehrer unter sich?"
+            },
+            {
+              "speaker": "Alimi",
+              "gender": "f",
+              "text": "Normalerweise mache ich das, aber wenn es mal schnell gehen muss oder ich beschäftigt bin, klären die Kollegen auch mal unter sich, wer eine Vertretung übernehmen kann."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Am ersten Schultag unterhalten sich die Personen über organisatorische Fragen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Frau Alimi",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ist Frau Barthum Mitarbeiterin."
+                },
+                {
+                  "key": "b",
+                  "text": "ist eine neue Lehrerin."
+                },
+                {
+                  "key": "c",
+                  "text": "vertritt eine Kollegin."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo Markus, hast du kurz Zeit? Ich würde gerne was mit dir besprechen."
+            },
+            {
+              "speaker": "Markus",
+              "gender": "m",
+              "text": "Klar, worum geht’s?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Bei uns in der Personalabteilung wird doch ein neues Betriebssystem auf den Computern installiert. Und ihr von der IT-Abteilung organisiert das doch, oder ?"
+            },
+            {
+              "speaker": "Markus",
+              "gender": "m",
+              "text": "Ja, genau."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Weißt du schon, wann das stattfinden soll ? Am besten an einem Wochenende, oder ?"
+            },
+            {
+              "speaker": "Markus",
+              "gender": "m",
+              "text": "Ja, ich bin mit der Softwarefirma in Kontakt. Die meinen, die Systemumstellung sei in zwei Tagen erledigt. Also starten sie an einem Freitagnachmittag."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das ist eine gute Idee. Freitags arbeiten wir in der Personalabteilung, ja sowieso nur bis Mittag. Da könnte die Softwarefirma spätestens um 14 Uhr beginnen. Sagst du mir Bescheid, an welchem Wochenende die Firma hier sein wird ? Es wird Zeit, dass wir ein neues System bekommen. Mit dem alten ist die Arbeit wirklich mühsam."
+            },
+            {
+              "speaker": "Markus",
+              "gender": "m",
+              "text": "Das mache ich. Und wenn die Techniker dann kommen, können wir sie ja nicht allein hier arbeiten lassen. Ich bin also auf jeden Fall vor Ort. Aber von euch aus der Personalabteilung sollte schon auch mindestens eine Kollegin oder ein Kollege anwesend sein."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, das stimmt. Ich werde mal nachfragen, wer bereit ist, da zu kommen. An einem der Tage kann ich das auf jeden Fall übernehmen. Wer arbeitet uns denn eigentlich dann in das neue System ein? Macht ihr das von der IT-Abteilung ?"
+            },
+            {
+              "speaker": "Markus",
+              "gender": "m",
+              "text": "Nein, das macht auch die Softwarefirma. Es wird einige neue Funktionen geben und wir alle können da sicher noch was lernen. Die Schulung sollte dann direkt am darauffolgenden Montagmorgen stattfinden."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Alles klar. Danke, dass du dich um alles kümmerst."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "In dem Gespräch unterhalten sich zwei IT-Spezialisten.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 25,
+              "prompt": "Die Mitarbeiter*innen der Personalabteilung",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "kennen das neue Betriebssystem bereits."
+                },
+                {
+                  "key": "b",
+                  "text": "müssen das ganze Wochenende in der Firma sein."
+                },
+                {
+                  "key": "c",
+                  "text": "werden in das neue Betriebssystem eingewiesen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Kerner hier, von der Firma Orphitec. Guten Tag, Herr Neumeyer."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Hallo Frau Kerner, was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Wir haben gerade Ihre Lieferung bekommen. Sie wissen schon, die zwölf Multifunktionsgeräte, die wir vor zwei Wochen bestellt haben. Aber leider sind nur zehn bei uns angekommen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Kleinen Moment bitte, Frau Kerner. Ich sehe mal nach. Können Sie mir die Bestellnummer sagen? Dann finde ich den Vorgang schneller."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, natürlich. Das ist die 5437892. Der Auftrag ist vom 3. August."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Danke. Ah ja, da habe ich ihn. Aber da muss ein Missverständnis vorliegen. Auf der Bestellung stehen nur 10 Geräte."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das ist richtig, aber ich habe letzte Woche nochmal angerufen und zwei Geräte nachbestellt. Ihre Kollegin sagte mir, das ginge so in Ordnung."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wissen Sie, mit wem Sie gesprochen haben? Und haben Sie eine schriftliche Bestätigung der Auftragsänderung erhalten?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Den Namen der Kollegin weiß ich leider nicht. Und ehrlich gesagt habe ich auf eine schriftliche Bestätigung Ihrerseits gar nicht mehr geachtet. Ich habe mich einfach darauf verlassen, dass das klappt. Sonst funktioniert das ja auch immer wunderbar."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Da muss etwas schiefgegangen sein. Offensichtlich hat die Kollegin die Änderung nicht weitergegeben. Reicht es denn, wenn wir die beiden fehlenden Geräte mit der nächsten Lieferung mitschicken? Oder brauchen Sie sie dringend?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Mit der nächsten Lieferung ist zu spät. Der Kunde wartet darauf."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Okay, dann kümmere ich mich gleich persönlich darum und sehe zu, dass Sie die Geräte morgen haben. Voraussetzung dafür ist natürlich, dass wir noch welche auf Lager haben."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Gut, ich verlasse mich auf Sie. Herzlichen Dank für Ihre Unterstützung."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Gerne, Frau Kerner , und entschuldigen Sie die Unannehmlichkeiten."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Herr Neumeier nimmt eine Reklamation entgegen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Frau Kerner",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "benötigt eine Auftragsbestätigung."
+                },
+                {
+                  "key": "b",
+                  "text": "braucht noch zwei Geräte für einen Kunden."
+                },
+                {
+                  "key": "c",
+                  "text": "hat einen Auftrag für zwölf Geräte geschickt."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v7",
+      "part": "HOEREN_1",
+      "title": "Вариант 7",
+      "note": "100%; тест №140321, 140301",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Herzlich willkommen in unserem Team, Frau Blume. Schön, dass es mit Ihrem Arbeitsantritt so schnell geklappt hat. Der Herbst ist ja unsere Hochsaison und wir können wirklich jede Hilfe gebrauchen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich freue mich auch, dass ich hier bin."
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, prima. Dann stelle ich Sie jetzt mal allen vor. Hier im Großraumbüro hat jeder Mitarbeiter seinen festen Arbeitsplatz. Sie sitzen hier neben Herrn Gombert, ein sehr erfahrener Kollege. Er arbeitet schon seit zehn Jahren im Kundenservice und wird Sie einarbeiten und bei Fragen unterstützen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Soll ich denn von Anfang an telefonische Kundengespräche führen?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Nein, ich denke, Sie werden zuerst die per E-Mail eingegangenen Anfragen bearbeiten. Und sobald Sie mit diesen Abläufen vertraut sind, können Sie unsere Kunden auch persönlich betreuen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie hatten im Vorstellungsgespräch ja gesagt, dass wir in Schichten arbeiten. Ist der Dienstplan für diesen Monat schon fertig?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, wir haben Sie in den ersten beiden Wochen zusammen mit Herrn Gombert für die Frühschicht von 7 bis 14 Uhr eingeteilt. Die Spätschicht geht von 13 bis 20 Uhr. Die machen Sie dann in der zweiten Monatshälfte. Der Dienstplan wird 30 Tage im Voraus ins Intranet gestellt. Der Spätdienst hat übrigens Küchendienst. Dafür kocht die Frühschicht Kaffee für alle."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Alles klar. Kann man die Schichten auch tauschen?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, das ist möglich. Allerdings nur nach Rücksprache mit mir. Auch die Urlaubsanträge müssen zunächst von mir genehmigt werden. Im Kundenservice dürfen nicht so viele Mitarbeiter gleichzeitig fehlen. Wir finden aber immer eine Lösung. Und jetzt stelle ich Ihnen die anderen Kollegen vor."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, gerne."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Teamleiter zeigt einer neuen Mitarbeiterin ihren Arbeitsplatz.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Frau Blume",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "darf ihre Schichten selbst bestimmen."
+                },
+                {
+                  "key": "b",
+                  "text": "wird ab sofort im Kundeservice eingesetzt."
+                },
+                {
+                  "key": "c",
+                  "text": "wird die Kunden nur per E-Mail betreuen."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Guten Morgen zusammen. Es gibt heute gar nicht viel zu besprechen. Ich möchte mich nur kurz mit euch über die bevorstehende Buchmesse unterhalten. Wie ihr wisst, haben wir dieses Jahr einen größeren Stand. Das heißt, wir, die Marketingabteilung, werden alle Hände voll zu tun haben."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Kriegt das Team denn keine Unterstützung von anderen Abteilungen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Doch, schon. Aber wir werden vor Ort dieses Mal trotzdem nicht so viele Mitarbeiter sein. Die Kollegen aus dem Außendienst sind natürlich da. Und ihr beiden, Tim und Joshua, helft uns ja auch wieder. Wer sonst noch da sein wird, muss sich noch aushandeln."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Oh, wir Azubis dürfen auch wieder mit. Cool. Sind wir dann den ganzen Tag am Stand oder können wir uns auch auf der Messe umsehen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich hätte euch gerne den ganzen Tag am Stand. Ich denke, ihr seid mittlerweile mit all unseren Produkten vertraut und könnt sie den Kunden bestimmt sehr gut präsentieren. Das wäre uns eine große Hilfe."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Schade. Ich hatte gehofft, dass ich mir auch angucken kann, wie sich die Konkurrenz präsentiert. Das ist für uns Auszubildende schließlich auch wichtig."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Ja, das hätte ich mir auch gewünscht. Den ganzen Tag am Stand zu stehen, finde ich auch total anstrengend."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach komm, Messezeit ist immer anstrengend. Aber das gehört zu unserem Job einfach dazu."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Trotzdem."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Okay. Wenn am Stand nicht so viel los ist, kann ja vielleicht einer von euch mal Viertelstunde weg. Aber bitte nicht beide zusammen."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Das ist doch eine gute Lösung. Auch wenn ich mir gewünscht hätte, mit Joshua zusammen über die Messe gehen zu können."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Die Auszubildenden handeln einen Kompromiss mit der Abteilungsleiterin aus.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Die beiden Auszubildenden",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "dürfen gleichzeitig den Stand verlassen."
+                },
+                {
+                  "key": "b",
+                  "text": "dürfen keine Kundengespräche führen."
+                },
+                {
+                  "key": "c",
+                  "text": "wollen die Konkurrenz beobachten."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Büro Möbelnab. Mein Name ist Karl Sachter. Guten Tag. Was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Guten Tag, Herr Sachter. Hier ist Eva Leutner, Firma Digitec aus Stuttgart. Wir ziehen in neue Räumlichkeiten um und möchten gerne bei der Gelegenheit unsere Büroausstattung erneuern."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Woran genau haben Sie denn gedacht?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Wir brauchen eine komplette Büroausstattung mit Arbeitsplätzen, Regalen und Schränken. Besonders wichtig sind uns ergonomische Schreibtische und rückenfreundliche Stühle. Auf Ihrer Homepage haben wir die elektrisch höhenverstellbaren Tische gesehen, die für uns in Frage kommen. Allerdings bräuchten wir einige Informationen dazu."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Gerne. Momentan ist diese Art von Tischen sehr gefragt. Wie kann ich Ihnen denn weiterhelfen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich habe diese Tische nur rechteckig und in einer Größe gefunden. Bieten Sie die auch in anderen Formen und mit anderen Maßen an?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja. Auf der Homepage ist nur die Standardvariante abgebildet. Sie können den Tisch aber auch in anderen Größen und Formen bei uns bestellen. Ganz nach Ihren persönlichen Wünschen. Je nach Ausführung liegt die Lieferzeit dann zwischen ein bis zwei Wochen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das wäre kein Problem. Noch eine Frage hätte ich. Im Internet steht, dass man die Tische auch mit Rollen bekommen kann."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das stimmt. Die Tische können entweder mit oder ohne Rollen bestellt werden."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach super. Tische mit Rollen wären vielleicht wirklich ganz praktisch für uns. Würden Sie uns bitte eine Preisliste Ihres Gesamtsortiments zukommen lassen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Selbstverständlich. Noch ein wichtiger Hinweis. Unsere Möbel liefern wir nur zerlegt und unsere Monteure bauen sie dann vor Ort auf. Das kostet Sie als Kunden natürlich nichts extra."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Leutner bestellt telefonisch neue Möbel.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Die Möbelfirma",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bietet nur kostenpflichtige Montage der Ware."
+                },
+                {
+                  "key": "b",
+                  "text": "hat Lieferzeiten von mindestens zwei Wochen."
+                },
+                {
+                  "key": "c",
+                  "text": "kann Möbelstücke in verschiedenen Ausführungen herstellen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v7_b",
+      "part": "HOEREN_1",
+      "title": "Вариант 7 · версия 07.03.25",
+      "note": "100%; новый вариант вопроса от 07.03.25",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "transcript": [
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Herzlich willkommen in unserem Team, Frau Blume. Schön, dass es mit Ihrem Arbeitsantritt so schnell geklappt hat. Der Herbst ist ja unsere Hochsaison und wir können wirklich jede Hilfe gebrauchen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich freue mich auch, dass ich hier bin."
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, prima. Dann stelle ich Sie jetzt mal allen vor. Hier im Großraumbüro hat jeder Mitarbeiter seinen festen Arbeitsplatz. Sie sitzen hier neben Herrn Gombert, ein sehr erfahrener Kollege. Er arbeitet schon seit zehn Jahren im Kundenservice und wird Sie einarbeiten und bei Fragen unterstützen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Soll ich denn von Anfang an telefonische Kundengespräche führen?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Nein, ich denke, Sie werden zuerst die per E-Mail eingegangenen Anfragen bearbeiten. Und sobald Sie mit diesen Abläufen vertraut sind, können Sie unsere Kunden auch persönlich betreuen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sie hatten im Vorstellungsgespräch ja gesagt, dass wir in Schichten arbeiten. Ist der Dienstplan für diesen Monat schon fertig?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, wir haben Sie in den ersten beiden Wochen zusammen mit Herrn Gombert für die Frühschicht von 7 bis 14 Uhr eingeteilt. Die Spätschicht geht von 13 bis 20 Uhr. Die machen Sie dann in der zweiten Monatshälfte. Der Dienstplan wird 30 Tage im Voraus ins Intranet gestellt. Der Spätdienst hat übrigens Küchendienst. Dafür kocht die Frühschicht Kaffee für alle."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Alles klar. Kann man die Schichten auch tauschen?"
+            },
+            {
+              "speaker": "Teamleiter",
+              "gender": "m",
+              "text": "Ja, das ist möglich. Allerdings nur nach Rücksprache mit mir. Auch die Urlaubsanträge müssen zunächst von mir genehmigt werden. Im Kundenservice dürfen nicht so viele Mitarbeiter gleichzeitig fehlen. Wir finden aber immer eine Lösung. Und jetzt stelle ich Ihnen die anderen Kollegen vor."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja, gerne."
+            }
+          ],
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Teamleiter spricht mit der Mitarbeiterin über Schichtplan / Dienstplan.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 23,
+              "prompt": "Frau Blume",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "darf ihre Schichten selbst bestimmen."
+                },
+                {
+                  "key": "b",
+                  "text": "wird ab sofort im Kundeservice eingesetzt."
+                },
+                {
+                  "key": "c",
+                  "text": "wird die Kunden nur per E-Mail betreuen."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "transcript": [
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Guten Morgen zusammen. Es gibt heute gar nicht viel zu besprechen. Ich möchte mich nur kurz mit euch über die bevorstehende Buchmesse unterhalten. Wie ihr wisst, haben wir dieses Jahr einen größeren Stand. Das heißt, wir, die Marketingabteilung, werden alle Hände voll zu tun haben."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Kriegt das Team denn keine Unterstützung von anderen Abteilungen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Doch, schon. Aber wir werden vor Ort dieses Mal trotzdem nicht so viele Mitarbeiter sein. Die Kollegen aus dem Außendienst sind natürlich da. Und ihr beiden, Tim und Joshua, helft uns ja auch wieder. Wer sonst noch da sein wird, muss sich noch aushandeln."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Oh, wir Azubis dürfen auch wieder mit. Cool. Sind wir dann den ganzen Tag am Stand oder können wir uns auch auf der Messe umsehen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich hätte euch gerne den ganzen Tag am Stand. Ich denke, ihr seid mittlerweile mit all unseren Produkten vertraut und könnt sie den Kunden bestimmt sehr gut präsentieren. Das wäre uns eine große Hilfe."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Schade. Ich hatte gehofft, dass ich mir auch angucken kann, wie sich die Konkurrenz präsentiert. Das ist für uns Auszubildende schließlich auch wichtig."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Ja, das hätte ich mir auch gewünscht. Den ganzen Tag am Stand zu stehen, finde ich auch total anstrengend."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach komm, Messezeit ist immer anstrengend. Aber das gehört zu unserem Job einfach dazu."
+            },
+            {
+              "speaker": "1 Azubi",
+              "gender": "m",
+              "text": "Trotzdem."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Okay. Wenn am Stand nicht so viel los ist, kann ja vielleicht einer von euch mal Viertelstunde weg. Aber bitte nicht beide zusammen."
+            },
+            {
+              "speaker": "2 Azubi",
+              "gender": "m",
+              "text": "Das ist doch eine gute Lösung. Auch wenn ich mir gewünscht hätte, mit Joshua zusammen über die Messe gehen zu können."
+            }
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Die Auszubildenden handeln einen Kompromiss mit der Abteilungsleiterin aus.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Die beiden Auszubildenden",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "dürfen gleichzeitig den Stand verlassen."
+                },
+                {
+                  "key": "b",
+                  "text": "dürfen keine Kundengespräche führen."
+                },
+                {
+                  "key": "c",
+                  "text": "wollen die Konkurrenz beobachten."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "transcript": [
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Büro Möbelnab. Mein Name ist Karl Sachter. Guten Tag. Was kann ich für Sie tun?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Guten Tag, Herr Sachter. Hier ist Eva Leutner, Firma Digitec aus Stuttgart. Wir ziehen in neue Räumlichkeiten um und möchten gerne bei der Gelegenheit unsere Büroausstattung erneuern."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Woran genau haben Sie denn gedacht?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Wir brauchen eine komplette Büroausstattung mit Arbeitsplätzen, Regalen und Schränken. Besonders wichtig sind uns ergonomische Schreibtische und rückenfreundliche Stühle. Auf Ihrer Homepage haben wir die elektrisch höhenverstellbaren Tische gesehen, die für uns in Frage kommen. Allerdings bräuchten wir einige Informationen dazu."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Gerne. Momentan ist diese Art von Tischen sehr gefragt. Wie kann ich Ihnen denn weiterhelfen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich habe diese Tische nur rechteckig und in einer Größe gefunden. Bieten Sie die auch in anderen Formen und mit anderen Maßen an?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja. Auf der Homepage ist nur die Standardvariante abgebildet. Sie können den Tisch aber auch in anderen Größen und Formen bei uns bestellen. Ganz nach Ihren persönlichen Wünschen. Je nach Ausführung liegt die Lieferzeit dann zwischen ein bis zwei Wochen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das wäre kein Problem. Noch eine Frage hätte ich. Im Internet steht, dass man die Tische auch mit Rollen bekommen kann."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das stimmt. Die Tische können entweder mit oder ohne Rollen bestellt werden."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach super. Tische mit Rollen wären vielleicht wirklich ganz praktisch für uns. Würden Sie uns bitte eine Preisliste Ihres Gesamtsortiments zukommen lassen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Selbstverständlich. Noch ein wichtiger Hinweis. Unsere Möbel liefern wir nur zerlegt und unsere Monteure bauen sie dann vor Ort auf. Das kostet Sie als Kunden natürlich nichts extra."
+            }
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Leutner bestellt telefonisch neue Möbel.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 27,
+              "prompt": "Die Möbelfirma",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bietet nur kostenpflichtige Montage der Ware."
+                },
+                {
+                  "key": "b",
+                  "text": "hat Lieferzeiten von mindestens zwei Wochen."
+                },
+                {
+                  "key": "c",
+                  "text": "kann Möbelstücke in verschiedenen Ausführungen herstellen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoeren_1_v8",
+      "part": "HOEREN_1",
+      "title": "Вариант 8",
+      "note": "100%; тест №160201, 160221. Записи нет: вопросы по воспоминаниям (22–23: Schutzausrüstung; 24–25: кафе; 26–27: заказ мебели)",
+      "segments": [
+        {
+          "title": "Nummer 22–23",
+          "questions": [
+            {
+              "number": 22,
+              "prompt": "Der Abteilungsleiter erklärt Jana wichtige Arbeitsschritte.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 23,
+              "prompt": "Jana",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "arbeitet nicht immer an der selben Maschine."
+                },
+                {
+                  "key": "b",
+                  "text": "bekommt jedes Jahr drei Schutzanzüge von der Firma."
+                },
+                {
+                  "key": "c",
+                  "text": "braucht nicht überall in der Produktion eine Schutzausrüstung."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 24–25",
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Im Café werden die heutigen Aufgaben verteilt.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 25,
+              "prompt": "Im Café",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "erwartet man eine Lieferung am Nachmittag."
+                },
+                {
+                  "key": "b",
+                  "text": "meldete sich heute eine Kollegin krank."
+                },
+                {
+                  "key": "c",
+                  "text": "wird heute viel zu tun sein."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        },
+        {
+          "title": "Nummer 26–27",
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "Frau Koch und der Lieferant sprechen einen Termin ab.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 27,
+              "prompt": "Die Möbelfirma",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "arbeitet jeden Tag in der Woche."
+                },
+                {
+                  "key": "b",
+                  "text": "benötigt zwei Tage für den Aufbau der Möbel."
+                },
+                {
+                  "key": "c",
+                  "text": "hat die Bestellung am Mittwoch erhalten."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

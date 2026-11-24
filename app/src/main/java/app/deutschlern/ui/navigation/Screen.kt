@@ -94,6 +94,42 @@ sealed class Screen(
         fun createRoute(mode: TrainerMode, pool: WordPool): String = "trainer/${mode.name}/${pool.name}"
     }
 
+    data object ExamHub : Screen(
+        route = "exam_hub",
+        titleRes = R.string.exam_hub_title,
+        icon = Icons.Outlined.School
+    )
+
+    data object ExamPart : Screen(
+        route = "exam_part/{part}",
+        titleRes = R.string.exam_hub_title,
+        icon = Icons.Outlined.School
+    ) {
+        fun createRoute(part: app.deutschlern.domain.exam.ExamPart): String = "exam_part/${part.name}"
+    }
+
+    data object ExamVariant : Screen(
+        route = "exam_variant/{variantId}",
+        titleRes = R.string.exam_hub_title,
+        icon = Icons.Outlined.School
+    ) {
+        fun createRoute(variantId: String): String = "exam_variant/${android.net.Uri.encode(variantId)}"
+    }
+
+    data object ExamSpeaking : Screen(
+        route = "exam_speaking/{teil}",
+        titleRes = R.string.exam_hub_title,
+        icon = Icons.Outlined.School
+    ) {
+        fun createRoute(teil: String): String = "exam_speaking/${android.net.Uri.encode(teil)}"
+    }
+
+    data object ExamGuide : Screen(
+        route = "exam_guide",
+        titleRes = R.string.exam_guide_title,
+        icon = Icons.Outlined.School
+    )
+
     data object Onboarding : Screen(
         route = "onboarding",
         titleRes = R.string.app_name,

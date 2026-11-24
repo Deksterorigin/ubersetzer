@@ -1,0 +1,795 @@
+{
+  "part": "LESEN_1",
+  "variants": [
+    {
+      "id": "lesen_1_v1",
+      "part": "LESEN_1",
+      "title": "Вариант 1",
+      "note": "100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Auf ins Abenteuer!\nDu hast Lust auf Sonne, Strand und eine fremde Sprache? Eine Sprachreise ermöglicht es dir nicht nur Land und Leute kennenzulernen, sondern auch deine frisch erworbenen Fähigkeiten direkt anzuwenden. Wo kannst du welche Sprachen lernen?"
+            },
+            {
+              "key": "b",
+              "text": "Deutsch-japanische Zusammenarbeit.\nJapan gilt als innovativ und hat in der Forschung in Deutschland ein hohes Ansehen. So arbeiten beide Länder zum Beispiel eng in der Meeresforschung und im Umweltschutz zusammen. Die Bundesrepublik fördert die Zusammenarbeit erfahrener deutscher und japanischer Wissenschaftler."
+            },
+            {
+              "key": "c",
+              "text": "Job mit guten Zukunftsaussichten.\nWer verschiedene Sprachen fließend beherrscht und zwischen ihnen ohne Mühe hin- und herwechseln kann, ist der geborene Fremdsprachenkorrespondent. In diesem Jobprofil kann er oder sie seine/ihre Leidenschaft für Sprachen nämlich voll und ganz ausleben."
+            },
+            {
+              "key": "d",
+              "text": "Nutzen Sie das Recht für sich!\nBaumert & Partner helfen Ihnen, Ihr Recht durchzusetzen. Im Interview geben die Experten für Familienrecht Tipps zu folgenden Fragen: Wie gehen Sie aus einer Scheidung als Sieger heraus? Wie können Sie sich im Sorgerechtsstreit behaupten? Und welcher Anteil des Gehalts Ihres Expartners steht Ihnen zu?"
+            },
+            {
+              "key": "e",
+              "text": "Umgangsformen im Berufsalltag.\nGewisse Verhaltensweisen, die im privaten Kontext völlig in Ordnung sind, können auf der Arbeit zu unangenehmen Stolpersteinen werden. Wie kleide ich mich richtig im Büro? Duzen oder siezen? Welche Themen sollten Sie im Smalltalk vermeiden?"
+            },
+            {
+              "key": "f",
+              "text": "Souverän am Telefon.\nDie Begrüßung am Telefon dauert in der Regel nur zwei bis drei Sekunden, ist aber für den ersten Eindruck entscheidend. Die richtige Formulierung hängt davon ab, ob es sich um ein eingehendes Telefonat oder einen aktiven Anruf handelt. Worauf sollen Sie achten?"
+            },
+            {
+              "key": "g",
+              "text": "Warum nicht mal ganz weit weg?\nDu träumst von einem Job im Ausland, dann knüpfe erste Kontakte durch ein Praktikum. Ohne großen Aufwand kannst du so auch deine Sprachkenntnisse perfektionieren. Aber es gibt noch mehr überzeugende Gründe für ein Auslandspraktikum."
+            },
+            {
+              "key": "h",
+              "text": "Zahl der Klagen rückläufig.\nSeit einigen Jahren geht die Zahl der Kündigungsschutzklagen kontinuierlich zurück, das bestätigt der Deutsche Anwaltsverein. Warum nur jeder Fünfte nach einer Kündigung Klage bei Gericht einreicht, warum es sich trotzdem für Sie lohnen kann und wie Sie dabei vorgehen müssen, erklärt der Arbeitsrechtsexperte Lars Hansso."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Moutasem fragt sich, wie er neue Kollegen korrekt ansprechen sollte.",
+              "answer": "e"
+            },
+            {
+              "number": 2,
+              "prompt": "Selma wurde entlassen und will sich dagegen wehren.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Anka überlegt, eine Ausbildung im Fremdsprachenbereich zu machen.",
+              "answer": "c"
+            },
+            {
+              "number": 4,
+              "prompt": "Sean ist Professor für Biologie und sucht einen Job im internationalen Umfeld.",
+              "answer": "b"
+            },
+            {
+              "number": 5,
+              "prompt": "Yassin möchte erste Berufserfahrungen im Ausland sammeln.",
+              "answer": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v1_b",
+      "part": "LESEN_1",
+      "title": "Вариант 1 · версия 08.2024",
+      "note": "Новая версия от 08.2024, 100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Auf ins Abenteuer!\nDu hast Lust auf Sonne, Strand und eine fremde Sprache? Eine Sprachreise ermöglicht es dir nicht nur Land und Leute kennenzulernen, sondern auch deine frisch erworbenen Fähigkeiten direkt anzuwenden. Wo kannst du welche Sprachen lernen?"
+            },
+            {
+              "key": "b",
+              "text": "Innovativer Klimaschutz.\nDeutschland hat in der Forschung auf der ganzen Welt ein hohes Ansehen. Das Land arbeitet in den Bereichen Umweltschutz und Meeresbiologie eng mit anderen Ländern zusammen. So fördert die Bundesrepublik Deutschland Austauschprogramme zwischen internationalen Forschern."
+            },
+            {
+              "key": "c",
+              "text": "Job mit guten Zukunftsaussichten.\nWer verschiedene Sprachen fließend beherrscht und zwischen ihnen ohne Mühe hin- und herwechseln kann, ist der geborene Fremdsprachenkorrespondent. Es gibt unterschiedliche Möglichkeiten und Wege, diesen Beruf zu erlernen und damit die eigene Leidenschaft für Sprachen auszuleben."
+            },
+            {
+              "key": "d",
+              "text": "Nutzen Sie das Recht für sich!\nBaumert & Partner helfen Ihnen, Ihr Recht durchzusetzen. Im Interview geben die Experten für Familienrecht Tipps zu folgenden Fragen: Wie gehen Sie aus einer Scheidung als Sieger hervor? Wie können Sie sich im Sorgerechtsstreit behaupten? Und welcher Anteil des Gehalts Ihres Expartners steht Ihnen zu?"
+            },
+            {
+              "key": "e",
+              "text": "Umgangsformen im Berufsalltag.\nGewisse Verhaltensweisen, die im privaten Kontext völlig in Ordnung sind, können auf der Arbeit zu unangenehmen Stolpersteinen werden. Wie kleide ich mich richtig im Büro? Duzen oder siezen? Welche Themen sollten Sie im Smalltalk vermeiden?"
+            },
+            {
+              "key": "f",
+              "text": "Souverän am Telefon.\nDie Begrüßung am Telefon dauert in der Regel nur zwei bis drei Sekunden, ist aber für den ersten Eindruck entscheidend. Die richtige Formulierung hängt davon ab, ob es sich um ein eingehendes Telefonat oder einen aktiven Anruf handelt. Worauf sollen Sie achten?"
+            },
+            {
+              "key": "g",
+              "text": "Warum nicht mal ganz weit weg?\nDu träumst von einem Job im Ausland, dann knüpfe erste Kontakte durch ein Praktikum. Ohne großen Aufwand kannst du so auch deine Sprachkenntnisse perfektionieren. Aber es gibt noch mehr überzeugende Gründe für ein Auslandspraktikum."
+            },
+            {
+              "key": "h",
+              "text": "Zahl der Klagen rückläufig.\nSeit einigen Jahren geht die Zahl der Kündigungsschutzklagen kontinuierlich zurück, dass bestätigt der Deutsche Anwaltsverein. Warum nur jeder Fünfte nach einer Kündigung Klage bei Gericht einreicht, warum es sich trotzdem für Sie lohnen kann und wie Sie dabei vorgehen müssen, erklärt der Arbeitsrechtsexperte Lars Hansson."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Moutasem fragt sich, wie er neue Kollegen korrekt ansprechen sollte.",
+              "answer": "e"
+            },
+            {
+              "number": 2,
+              "prompt": "Selma wurde entlassen und will sich dagegen wehren.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Anka überlegt, eine Ausbildung im Fremdsprachenbereich zu machen.",
+              "answer": "c"
+            },
+            {
+              "number": 4,
+              "prompt": "Sean ist Professor für Biologie und sucht einen Job im internationalen Umfeld.",
+              "answer": "b"
+            },
+            {
+              "number": 5,
+              "prompt": "Yassin möchte erste Berufserfahrungen im Ausland sammeln.",
+              "answer": "g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v1_c",
+      "part": "LESEN_1",
+      "title": "Вариант 1 · версия 07.02.2025",
+      "note": "Новая версия от 07.02.2025, 100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Auf ins Abenteuer!\nDu hast Lust auf Sonne, Strand und eine fremde Sprache? Eine Sprachreise ermöglicht es dir, nicht nur Land und Leute kennenzulernen, sondern auch deine frisch erworbenen Fähigkeiten direkt anzuwenden. Wo kannst du welche Sprachen lernen?"
+            },
+            {
+              "key": "b",
+              "text": "Innovativer Klimaschutz.\nDeutschland hat in der Forschung auf der ganzen Welt ein hohes Ansehen. Das Land arbeitet in den Bereichen Umweltschutz und Meeresbiologie eng mit anderen Ländern zusammen. So fördert die Bundesrepublik Deutschland Austauschprogramme zwischen internationalen Forschern."
+            },
+            {
+              "key": "c",
+              "text": "Job mit guten Zukunftsaussichten.\nWer verschiedene Sprachen fließend beherrscht und zwischen ihnen ohne Mühe hin- und herwechseln kann, ist der geborene Fremdsprachenkorrespondent. Es gibt unterschiedliche Möglichkeiten und Wege, diesen Beruf zu erlernen und damit die eigene Leidenschaft für Sprachen auszuleben."
+            },
+            {
+              "key": "d",
+              "text": "Nutzen Sie das Recht für sich!\nBaumert & Partner helfen Ihnen, Ihr Recht durchzusetzen. Im Interview geben die Experten für Familienrecht Tipps zu folgenden Fragen: Wie gehen Sie aus einer Scheidung als Sieger hervor? Wie können Sie sich im Sorgerechtsstreit behaupten? Und welcher Anteil des Gehalts Ihres Expartners steht Ihnen zu?"
+            },
+            {
+              "key": "e",
+              "text": "Umgangsformen im Berufsalltag.\nGewisse Verhaltensweisen, die im privaten Kontext völlig in Ordnung sind, können auf der Arbeit zu unangenehmen Stolpersteinen werden. Wie kleide ich mich richtig im Büro? Duzen oder siezen? Welche Themen sollten Sie im Smalltalk vermeiden?"
+            },
+            {
+              "key": "f",
+              "text": "Souverän am Telefon.\nDie Begrüßung am Telefon dauert in der Regel nur zwei bis drei Sekunden, ist aber für den ersten Eindruck entscheidend. Die richtige Formulierung hängt davon ab, ob es sich um ein eingehendes Telefonat oder einen aktiven Anruf handelt. Worauf sollen Sie achten?"
+            },
+            {
+              "key": "g",
+              "text": "Warum nicht mal ganz weit weg?\nDu träumst von einem Job im Ausland? Dann knüpfe erste Kontakte durch ein Praktikum. Ohne großen Aufwand kannst du so auch deine Sprachkenntnisse perfektionieren. Aber es gibt noch mehr überzeugende Gründe für ein Auslandspraktikum."
+            },
+            {
+              "key": "h",
+              "text": "Zahl der Klagen rückläufig.\nSeit einigen Jahren geht die Zahl der Kündigungsschutzklagen kontinuierlich zurück, das bestätigt der Deutsche Anwaltsverein. Warum nur jeder Fünfte nach einer Kündigung Klage bei Gericht einreicht, warum es sich trotzdem für Sie lohnen kann und wie Sie dabei vorgehen müssen, erklärt der Arbeitsrechtsexperte Lars Hansson."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Mariarita wurde entlassen und will sich dagegen wehren.",
+              "answer": "h"
+            },
+            {
+              "number": 2,
+              "prompt": "Ettorina überlegt, eine Ausbildung im Fremdsprachenbereich zu machen.",
+              "answer": "c"
+            },
+            {
+              "number": 3,
+              "prompt": "Thom ist Wissenschaftler und sucht einen Job im internationalen Umfeld.",
+              "answer": "b"
+            },
+            {
+              "number": 4,
+              "prompt": "Baldassarre möchte erste Berufserfahrungen in verschiedenen Ländern sammeln.",
+              "answer": "g"
+            },
+            {
+              "number": 5,
+              "prompt": "Levi fragt sich, wie er neue Kollegen korrekt ansprechen sollte.",
+              "answer": "e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v2",
+      "part": "LESEN_1",
+      "title": "Вариант 2",
+      "note": "100%; тест №140321, 140301",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Achtung Kündigung.\nDas Arbeitsrecht unterscheidet zwischen personenbedingter, betriebsbedingter und verhaltensbedingter Beendigung des Arbeitsverhältnisses. Lesen Sie hier alle Informationen darüber, aus welchen Gründen der Arbeitgeber berechtigt ist zu kündigen."
+            },
+            {
+              "key": "b",
+              "text": "Automobilbranche boomt nach wie vor.\nVor allem im Südwesten Deutschlands können sich die Menschen weiterhin auf sichere und gut bezahlte Anstellungen in der Automobilindustrie verlassen. Warum lohnt es sich, bei einem Autobauer oder Zulieferer zu arbeiten? Welche Berufe sind am meisten gefragt?"
+            },
+            {
+              "key": "c",
+              "text": "Firmen setzen auf flexible Arbeitsbedingungen.\nIn vielen Branchen sind Fachkräfte gefragt wie nie zuvor. Dabei haben immer mehr Firmen Schwierigkeiten, ihre Angestellten langfristig zu halten. Wer kann, wechselt schnell zu einem Arbeitgeber mit besseren Bedingungen. Viele große Unternehmen setzen nun verstärkt auf Flexibilität und familienfreundliche Leistungen wie Firmen-Kita oder Homeoffice."
+            },
+            {
+              "key": "d",
+              "text": "Förderung von Selbstständigen.\nIn den letzten Jahren ist die Zahl der Selbstständigen stetig gestiegen. Das liegt unter anderem auch an neuen staatlichen Förderungsmöglichkeiten für Jungunternehmer, die ihren eigenen Betrieb aufmachen möchten."
+            },
+            {
+              "key": "e",
+              "text": "Sein eigener Chef sein!\nDu willst keine starren Arbeitszeiten, weiten Anfahrtswege und keinen nervigen Umgang mit Kollegen und Chefs? Dann ist der Weg in die Existenzgründung eine echte Alternative. Ob als Übersetzer, Programmierer oder Steuerberater - Theo Geertz berät dich, wie du dein Fachwissen nutzen kannst, um zu Hause und auf eigene Rechnung zu arbeiten."
+            },
+            {
+              "key": "f",
+              "text": "Ungelernte Arbeitskräfte weiterhin benachteiligt.\nJe höher die Qualifikation, desto besser die Chancen auf dem Arbeitsmarkt. Wer keine Berufsausbildung hat, läuft Gefahr, in die Langzeitarbeitslosigkeit abzustürzen. Wer Arbeit hat, muss als Ungelernter mit geringerem Gehalt und schlechteren Aufstiegschancen rechnen."
+            },
+            {
+              "key": "g",
+              "text": "Möglichkeiten, mit einer Kündigung umzugehen.\nDu fühlst dich nach einer Kündigung gedemütigt und alleine gelassen und weißt nicht, wie es weitergehen soll? Das kann auch eine Chance sein, sich neu zu orientieren und vielleicht sogar die eigene Berufung zu finden."
+            },
+            {
+              "key": "h",
+              "text": "Wege und Chancen.\nDas Bundesministerium für Bildung und Forschung unterstützt bei der beruflichen Qualifizierung Es hat ein Portal eingerichtet, um vor allem Ungelernte und Geringqualifizierte sowie Arbeitnehmer in Elternzeit über passende Aus- und Weiterbildungsmöglichkeiten zu informieren."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Junis ist gelernter KIZ-Mechatroniker und möchte eine eigene Werkstatt gründen.",
+              "answer": "d"
+            },
+            {
+              "number": 2,
+              "prompt": "Maria arbeitet als Hilfsarbeiterin und möchte nun eine Berufsausbildung machen.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Nikolett möchte sich nicht zwischen Familie und Arbeit entscheiden müssen.",
+              "answer": "c"
+            },
+            {
+              "number": 4,
+              "prompt": "Amin studiert Fremdsprachen und möchte nach seinem Abschluss freiberuflich arbeiten.",
+              "answer": "e"
+            },
+            {
+              "number": 5,
+              "prompt": "Samita soll aus betriebsbedingten Gründen gekündigt werden und sie möchte dagegen vorgehen.",
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v3",
+      "part": "LESEN_1",
+      "title": "Вариант 3",
+      "note": "100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Pflegefreistellung für Mütter und Väter.\nArbeitnehmerinnen und Arbeitnehmer haben das Recht auf Freistellung am Arbeitsplatz, wenn ein im Haushalt lebendes Kind erkrankt und keine Betreuungsmöglichkeit vorhanden ist. Die Freistellung ist pro Arbeitsjahr begrenzt. In der Probezeit sollte man damit vorsichtig sein, da hier andere Kündigungsfristen gelten."
+            },
+            {
+              "key": "b",
+              "text": "Tipps für Frauen im Beruf.\nFrauen verkaufen sich oft unter Wert. Es ist besonders wichtig, dass Sie ausreichend über Ihre Rechte im Berufsleben informiert sind. Unsere Expertin für Arbeitsrecht gibt Tipps für Gehaltsverhandlungen und ein selbstbewusstes Auftreten. Außerdem informiert sie darüber, was Sie in einem Bewerbungsgespräch nicht erzählen müssen."
+            },
+            {
+              "key": "c",
+              "text": "Damit sich der Aufwand lohnt.\nStellenangebote online zu schalten, kann für Unternehmen schnell sehr kostspielig werden. Nicht nur die Bekanntheit der Webseite ist dafür entscheidend, sondern auch die regionale Reichweite und der Grad der Spezialisierung."
+            },
+            {
+              "key": "d",
+              "text": "Der Bundesverband der Tourismusbranche informiert.\nTrotz anhaltend großer Nachfrage von Seiten der Arbeitgeber ist die Zahl der Bewerbungen rückläufig. Auch auf dem Ausbildungsmarkt fehlt es an jungen Menschen, die sich für dieses Arbeitsfeld interessieren. Offene Stellen werden demzufolge zügig besetzt."
+            },
+            {
+              "key": "e",
+              "text": "Informationen rund um den Mutterschutz.\nFrauen dürfen nach dem Mutterschutzgesetz während einer Schwangerschaft und bis zu vier Monate nach der Geburt nicht gekündigt werden. Voraussetzung hierfür ist jedoch, dass der Arbeitgeber zum Zeitpunkt der Kündigung von der Schwangerschaft wusste."
+            },
+            {
+              "key": "f",
+              "text": "Rechte berufstätiger Eltern.\nEltern haben keinen Rechtsanspruch darauf, ihre Kinder am Arbeitsplatz zu betreuen. Die Entscheidung unterliegt der Zustimmung des Arbeitgebers und viele sind damit einverstanden, wenn sich so vermeiden lässt, dass sich die Eltern krankschreiben lassen. Arbeitsplätze, bei denen die Sicherheit des Kindes gefährdet ist, sind von dieser Regelung ausgeschlossen."
+            },
+            {
+              "key": "g",
+              "text": "Vom Traum zur Realität.\nAls angehender Gründer brauchen Sie nicht nur Branchenkenntnisse, sondern auch Wissen über betriebswirtschaftliche Vorgänge. Vom Businessplan und der richtigen Finanzierung über vernünftige Personalplanung bis hin zur Einholung der notwendigen Lizenzen kommen nun viele Dinge auf Sie zu."
+            },
+            {
+              "key": "h",
+              "text": "Die richtige Wahl spart Zeit und Frust.\nDie Suche nach einer neuen Stelle ist extrem zeitaufwendig. Im Internet erscheint das Angebot an offenen Stellen riesig, dennoch bleibt der Erfolge oft aus. Eine der wichtigsten Voraussetzungen ist es also, Jobangebote richtig zu filtern, um ohne großen Zeitaufwand die richtige Anzeige zu finden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Lamia überlegt, ob sie im Vorstellungsgespräch ihre Schwangerschaft erwähnen muss.",
+              "answer": "b"
+            },
+            {
+              "number": 2,
+              "prompt": "Raymond möchte im Internet einen Job finden.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Karl will sich in der Gastronomie selbstständig machen.",
+              "answer": "g"
+            },
+            {
+              "number": 4,
+              "prompt": "Sean ist unsicher, ob er seinen kranken Sohn mit ins Büro nehmen darf.",
+              "answer": "f"
+            },
+            {
+              "number": 5,
+              "prompt": "Ramona interessiert sich für Jobchancen als Reiseverkehrskauffrau.",
+              "answer": "d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v3_b",
+      "part": "LESEN_1",
+      "title": "Вариант 3 · версия 07.2024",
+      "note": "Новая версия от 07.2024, 100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Familienmitglieder betreuen.\nEltern haben einen Rechtsanspruch darauf, ihre kranken Kinder zu pflegen. Dafür haben sie eine bestimmte Anzahl an Tagen zur Verfügung, an denen sie freinehmen können. Aber generell gilt kranke Personen müssen zu Hause bleiben."
+            },
+            {
+              "key": "b",
+              "text": "Tipps für Frauen im Beruf.\nFrauen verkaufen sich oft unter Wert. Es ist besonders wichtig, dass Sie ausreichend über Ihre Rechte im Berufsleben informiert sind. Unsere Expertin für Arbeitsrecht gibt Tipps für Gehaltsverhandlungen und ein selbstbewusstes Auftreten. Außerdem informiert sie darüber, was Sie in einem Bewerbungsgespräch nicht erzählen müssen."
+            },
+            {
+              "key": "c",
+              "text": "Damit sich der Aufwand lohnt.\nStellenangebote online zu schalten, kann für Unternehmen schnell sehr kostspielig werden. Für den Erfolg muss unbedingt das richtige Stelleportal gewählt werden. Das gilt insbesondere für neu gegründete Unternehmen, die sich mehrfache Anzeigen finanziell nicht leisten können."
+            },
+            {
+              "key": "d",
+              "text": "Der Bundesverband der Tourismusbranche informiert.\nTrotz anhaltend großer Nachfrage von Seiten der Arbeitgeber ist die Zahl der Bewerbungen rückläufig. Auch auf dem Ausbildungsmarkt fehlt es an jungen Menschen, die sich für dieses Arbeitsfeld interessieren. Demzufolge gibt es aktuell eine Reihe offener Stellen."
+            },
+            {
+              "key": "e",
+              "text": "Informationen rund um den Mutterschutz.\nFrauen dürfen nach dem Mutterschutzgesetz während einer Schwangerschaft und bis zu vier Monate nach der Geburt nicht gekündigt werden. Voraussetzung hierfür ist jedoch, dass der Arbeitgeber zum Zeitpunkt der Kündigung von der Schwangerschaft wusste."
+            },
+            {
+              "key": "f",
+              "text": "Kinder am Arbeitsplatz.\nHäufig stimmen Arbeitgeber der Bitte von Eltern zu, ihre Kinder mit zur Arbeit zu bringen, wenn deren Betreuung kurzfristig ausfällt. Damit können Fehlzeiten vermieden werden. Diese Möglichkeit besteht nicht, wenn die Sicherheit des Kindes am Arbeitsplatz gefährdet ist."
+            },
+            {
+              "key": "g",
+              "text": "Vom Traum zur Realität.\nAls angehender Gründer brauchen Sie nicht nur Branchenkenntnisse, sondern auch Wissen über betriebswirtschaftliche Vorgänge. Vom Businessplan und der richtigen Finanzierung über vernünftige Personalplanung bis hin zur Einholung der notwendigen Lizenzen kommen nun viele Dinge auf Sie zu."
+            },
+            {
+              "key": "h",
+              "text": "Die richtige Wahl spart Zeit und Frust.\nDer Stellemarkt spielt sich heutzutage fast ausschließlich online ab. Im Internet erscheint das Angebot an offenen Stellen riesig, dennoch bleibt der Erfolge oft aus. Eine der wichtigsten Voraussetzungen ist es also, Jobangebote richtig zu filtern, um ohne großen Zeitaufwand die richtige Anzeige zu finden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Yuan Javier möchte im Internet einen Job finden",
+              "answer": "h"
+            },
+            {
+              "number": 2,
+              "prompt": "Paul will sich in der Gastronomie selbstständig machen.",
+              "answer": "g"
+            },
+            {
+              "number": 3,
+              "prompt": "Avio ist unsicher, ob er seinen kranken Sohn mit ins Büro nehmen darf.",
+              "answer": "a"
+            },
+            {
+              "number": 4,
+              "prompt": "Nora interessiert sich für Jobchancen als Reiseverkehrskauffrau.",
+              "answer": "d"
+            },
+            {
+              "number": 5,
+              "prompt": "Anna Maria überlegt, ob sie im Vorstellungsgespräch ihre Schwangerschaft erwähnen muss.",
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v4",
+      "part": "LESEN_1",
+      "title": "Вариант 4",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Erfolgreich neue Wege gehen.\nDas Buch „Mit Erfolg durchstarten\" von Dr. Vera Baumgart richtet sich vor allem an Akademikerinnen, die erfolgreich ein eigenes Unternehmen aufbauen wollen. Egal ob Sie sich in der Immobilienbranche, im Bauwesen oder im Gesundheitsbereich selbstständig machen, die Autorin hat Antworten auf alle wichtigen Fragen."
+            },
+            {
+              "key": "b",
+              "text": "Ein grüner Arbeitsplatz.\nDie Firma Heller aus Rostock will mit gutem Beispiel vorangehen und behauptet: „Klimafreundliche Energie und Müllvermeidung werden bei uns ganz großgeschrieben\". Aber geht das bei einer Transportund Logistikfirma überhaupt? Die Antwort ist ein klares „Ja\". Alle Details heute um 19:30 Uhr bei Neo TV."
+            },
+            {
+              "key": "c",
+              "text": "Verändertes Kaufverhalten.\nNeuesten Statistiken zufolge greifen Verbraucher in vielen Ländern der Europäischen Union immer mehr zu regionalen und ökologisch angebauten Lebensmitteln. Auch in deutschen Haushalten wird viel Wert auf gesunde Ernährung gelegt. Die Nachfrage nach Bioprodukten ist in den letzten Jahren stetig angestiegen."
+            },
+            {
+              "key": "d",
+              "text": "Jetzt im Buchhandel.\nIn seinem neuen Bestseller beschreibt Georg Könitz auf eindrucksvolle Weise, wie er von seinem ständig schlecht gelaunten Chef und zwei Mitarbeitern in seinem Team schikaniert, ausgegrenzt und lächerlich gemacht wurde - und wie es ihm schließlich gelang, diesen Teufelskreis zu durchbrechen. Von seinen Erfahrungen können alle, die Ähnliches erleben, profitieren."
+            },
+            {
+              "key": "e",
+              "text": "Der richtige Praktikumsplatz.\nEin Praktikum bietet tolle Möglichkeiten, den Berufsalltag kennenzulernen. Viele Praktikanten sind aber enttäuscht, dass sie nur Hilfsarbeiten verrichten dürfen und dafür schlecht oder gar nicht bezahlt werden. Auf dem Portaldein- praktikum.de findest du jetzt aktuelle Infos und interessante Praktikumsstellen in ganz Deutschland."
+            },
+            {
+              "key": "f",
+              "text": "Eine Erfolgsgeschichte.\nDie Bilanz von Rita Jäger (34): Zwei abgebrochene Lehren und zahllose Hilfsjobs. Dann kam Tochter Samantha und Rita musste Verantwortung übernehmen. Im Interview erzählt sie, wie sie in einem Friseursalon die Chance bekam, ein Praktikum und anschließend eine Ausbildung zu machen. Nun hat sie ihren eigenen Salon eröffnet."
+            },
+            {
+              "key": "g",
+              "text": "Immobilienunternehmen expandiert.\nDie Frankfurter Immobilienfirma ImmoInvest expandiert nach Süd- und Osteuropa. In den letzten Jahren hat das Unternehmen hohe Gewinne erwirtschaftet und plant nun, außerhalb Deutschlands mehrere Niederlassungen zu gründen. Über die Erfolgsgeschichte des Unternehmens berichtet der Geschäftsführer Herbert Grünberg in unserem Interview."
+            },
+            {
+              "key": "h",
+              "text": "Neue Broschüre.\nSie überlegen, Ihren Lebensmittelpunkt in ein anderes Land zu verlegen? Ein Neuanfang ist eine große Chance, aber immer auch eine Herausforderung – besonders für den Partner oder die Partnerin und die Kinder. Unsere neue Broschüre bietet ausführliche Informationen und Hilfestellungen zum Leben und Arbeiten in der EU."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Laura möchte während des Studiums Berufserfahrung sammeln.",
+              "answer": "e"
+            },
+            {
+              "number": 2,
+              "prompt": "Igor hat Familie und möchte im europäischen Ausland arbeiten.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Jens interessiert sich für das Thema Umweltschutz in Unternehmen.",
+              "answer": "b"
+            },
+            {
+              "number": 4,
+              "prompt": "Jasmin hat Probleme mit ihren Kollegen und braucht Hilfe.",
+              "answer": "d"
+            },
+            {
+              "number": 5,
+              "prompt": "Somayeh ist Architektin und möchte ihr eigenes Architekturbüro eröffnen.",
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v5",
+      "part": "LESEN_1",
+      "title": "Вариант 5",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Hilfe für Betroffene.\nBeleidigungen, Ausgrenzung, versteckte Drohungen - am Arbeitsplatz ist Mobbing leider weit verbreitet. Für viele Angestellte ist der Arbeitsalltag oft mit Angst verbunden. Das führt schnell zu gesundheitlichen und psychischen Problemen. Inzwischen gibt es zahlreiche Coaching-Programme für Mitarbeiter, die Strategien aufzeigen, wie man mit solchen Situationen besser umgehen kann."
+            },
+            {
+              "key": "b",
+              "text": "Ein starkes Team.\nPünktlich zum Start der Weltmeisterschaft präsentiert der Handballbund seine neue Vertragspartnerin, die deutsche Handwerkskammer. Wie passt das zusammen? „Ganz einfach\", so der Sprecher des Handballbundes. „Was für den Handballer die Weltmeisterschaft ist, ist für den Handwerker die Meisterprüfung.\""
+            },
+            {
+              "key": "c",
+              "text": "Deutsche sind risikoscheu.\nIn Deutschland ist die Zahl der Unternehmensgründungen stark rückläufig, obwohl insbesondere viele jüngere Menschen angeben, dass sie sich gerne selbständig machen würden. Warum der Sprung in die Selbstständigkeit oft doch nicht klappt, hat vielerlei Gründe. Während Frauen häufig das finanzielle Risiko scheuen, fürchten Männer den Karriereknick."
+            },
+            {
+              "key": "d",
+              "text": "Handwerk und Karriere - passt das?\nFleischer, Klempner, Tischler - laut der Bundesagentur für Arbeit werden bei uns ca.150.000 Handwerker gesucht. Doch viele Stellen bleiben unbesetzt. Dabei bieten Handwerksberufe gerade jungen Leuten die allerbesten Chancen für eine erfolgreiche Karriere. Fachkräfte brauchen sich um ihre Zukunft nicht zu sorgen."
+            },
+            {
+              "key": "e",
+              "text": "Stressfrei zum Ziel.\nAuch Fortbildungen können für eine Meisterprüfung im Handwerk anerkannt werden. Wenn Sie z B. als Kfz-Servicetechniker einen Kurs in Elektronik erfolgreich absolviert haben, wird dieser Teil nicht noch einmal gesondert geprüft. Die Interessengemeinschaft „Das Handwerk\" hat die wichtigsten Zulassungsvoraussetzungen zur Meisterprüfung zusammengefasst."
+            },
+            {
+              "key": "f",
+              "text": "Nie wieder Opfer.\nSie wurde in ihrer Firma gemobbt und konnte es ihrem Chef nicht nachweisen. Aber die Atmosphäre verschlechterte sich zusehends. Die Arbeit wurde jeden Tag mehr zur Qual. Die Autorin Stephanie Hauser verarbeitet in ihrem Roman „Nie wieder Opfer\" auf eindrucksvolle Weise ihre eigenen Erfahrungen zum Thema „Mobbing\"."
+            },
+            {
+              "key": "g",
+              "text": "Verpflichtend oder freiwillig.\nDie Anforderungen der Berufswelt ändern sich rasant und somit entsteht auch die Notwendigkeit für die Belegschaft, sich kontinuierlich weiterzubilden. Prinzipiell gilt, dass Mitarbeiter zur Teilnahme an Seminaren verpflichtet sind, wenn diese zur Ausübung ihrer Tätigkeit notwendig sind und in der normalen Arbeitszeit stattfinden."
+            },
+            {
+              "key": "h",
+              "text": "Karriereplan für eine vielversprechende Laufbahn.\nVor allem in Großstädten bieten immer mehr junge Unternehmen interessante Jobmöglichkeiten. Dennoch setzen die meisten Uniabsolventen nach wie vor auf große Konzerne, von denen sie sich eher Sicherheit und vielversprechende Karrierechancen erhoffen. Doch das können sie auch bei jungen Start-up- Unternehmen finden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Yasmina sucht nach dem Realschulabschluss einen Beruf mit guten Perspektiven.",
+              "answer": "d"
+            },
+            {
+              "number": 2,
+              "prompt": "Jason überlegt, ob er bei einem neu gegründeten Unternehmen arbeiten soll.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Hannah wird von ihren Kollegen schlecht behandelt und sucht Hilfe.",
+              "answer": "a"
+            },
+            {
+              "number": 4,
+              "prompt": "Gacer fragt sich, ob sie Fortbildungen besuchen muss.",
+              "answer": "g"
+            },
+            {
+              "number": 5,
+              "prompt": "Assem braucht Informationen zur Meisterprüfung.",
+              "answer": "e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v6",
+      "part": "LESEN_1",
+      "title": "Вариант 6",
+      "note": "100%",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Die Lebensmittelbranche boomt.\nDer Einzelhandel ist einer der größten und umsatzstärksten Wirtschaftszweige national und international. Es werden dort ständig qualifizierte Mitarbeiter gesucht. Allein in Hessen werden jährlich 160.000 junge Menschen ausgebildet. Der Einzelhandel ist außerdem krisenfest, denn gegessen wird immer."
+            },
+            {
+              "key": "b",
+              "text": "Aus Fehlern anderer lernen.\nViele Unternehmer machen zu Beginn ihrer Selbstständigkeit ähnliche Fehler. Heute weiß man, dass ein durchdachter Businessplan und eine genaue Konkurrenzanalyse unverzichtbar sind. Worauf es noch ankommt, erfährst du in den Tipps des Erfolgscoachs Gregor Daub."
+            },
+            {
+              "key": "c",
+              "text": "Chancen im Einzelhandel.\nDie FOOD Unternehmensgruppe betreibt Supermärkte in zehn Ländern Europas. Der Branchenriese möchte weiter expandieren und hat gerade die Filialen der Jennings GmbH übernommen. Erfahrene Mitarbeiter finden dort interessante Möglichkeiten zur beruflichen Weiterentwicklung."
+            },
+            {
+              "key": "d",
+              "text": "Gute Nachrichten für gekündigte Mitarbeiter.\nDie Tankstellenkette Fairtank hat Bankrott angekündigt und schließt zum 31. März ihre 25 Filialen in Brandenburg. Rund 100 Mitarbeiter sind betroffen und suchen nun einen neuen Job. Für einige von ihnen gibt es eine Lösung: Tankstellen in der Umgebung haben ihre Unterstützung zugesagt und versprochen, Mitarbeiter von Fairtank zu übernehmen."
+            },
+            {
+              "key": "e",
+              "text": "Was nun?\nEgal, ob die ganze Firma pleitegeht, eine Abteilung dichtmacht oder nur der eigene Job weg ist, eine Entlassung ist immer ein Schock. Arbeitsmarktexpertin Caroline Cuyper erklärt, was man als Angestellter tun muss, um möglichst schnell eine neue Stelle zu bekommen."
+            },
+            {
+              "key": "f",
+              "text": "Neue Kursreihe bei Arcadio.\nAb sofort bietet das Institut Arcadio neben seinen Computerkursen für Senioren auch Weiterbildungen für Teilnehmer mit geringen Deutschkenntnissen an. Das Besondere daran: Die Dozenten verwenden eine einfache Sprache. Was hinter diesem innovativen Konzept steht, erzählt der Institutsgründer Benjamin von Adler im Interview."
+            },
+            {
+              "key": "g",
+              "text": "Wenn die Mitarbeiter kündigen.\nImmer mehr Mitarbeiter kündigen und verlassen ihre Firma. Und zwar selbst dann, wenn sie mehr Gehalt bekommen als bei der Konkurrenz. Die Unternehmensberatung Schindler hat die häufigsten Gründe analysiert, warum sich Angestellte entscheiden, ihren Job zu wechseln."
+            },
+            {
+              "key": "h",
+              "text": "Bildung im neuen Zeitalter.\nSchneller technologischer Fortschritt, Globalisierung und Veränderungen auf dem Arbeitsmarkt haben dazu geführt, dass Fortbildungen im Beruf eine immer wichtigere Rolle spielen. Zunehmend werden Online-Kurse und Webinare am Computer angeboten, die den Teilnehmern maximale Flexibilität versprechen. Wo findet man passende Fortbildungen ?"
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Silvie ist gelernte Verkäuferin und möchte in ihrem Job aufsteigen.",
+              "answer": "c"
+            },
+            {
+              "number": 2,
+              "prompt": "Brian sucht Computerkurse, die er von zu Hause aus machen kann.",
+              "answer": "h"
+            },
+            {
+              "number": 3,
+              "prompt": "Carl ist Umwelttechniker und möchte seine eigene Beratungsagentur gründen.",
+              "answer": "b"
+            },
+            {
+              "number": 4,
+              "prompt": "Mira ist unsicher, wie es nach ihrem Arbeitsplatzverlust weitergehen soll.",
+              "answer": "e"
+            },
+            {
+              "number": 5,
+              "prompt": "Karim sucht einen Ausbildungsplatz in einer sicheren Branche.",
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v7",
+      "part": "LESEN_1",
+      "title": "Вариант 7",
+      "note": "100%; тест №150321, 150301",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Den Arbeitsplatz produktiv gestalten.\nDie richtige Atmosphäre am Arbeitsplatz ist für die effektive Erledigung der Aufgaben unerlässlich. Gerlinde Strauß beschreibt, wie man mit den richtigen Möbeln, Dekoartikeln, Licht, Ordnung am Arbeitsplatz und vielem mehr die eigene Umgebung so gestaltet, dass man die Zeit am Arbeitsplatz gerne und erfolgreich verbringt."
+            },
+            {
+              "key": "b",
+              "text": "Ohne Selbstdisziplin geht es nicht.\nDie Arbeit von zu Hause aus erfordert ein hohes Maß an Selbstdisziplin und die Fähigkeit des Selbstmanagements. Privates und Arbeit sollten strikt getrennt werden. Doch wie funktioniert das am besten? Helga Brinkmann hat einen Ratgeber für Arbeitskräfte herausgegeben, deren Unternehmen diese Form der Arbeit anbieten."
+            },
+            {
+              "key": "c",
+              "text": "Hobbys im Lebenslauf richtig einsetzen.\nAusbildung und Qualifikation sind in erster Linie wichtig, wenn man den Lebenslauf eines Bewerbers liest. Doch auch, welche Hobbys eine Person hat, kann Auskunft darüber geben, ob sie zum Unternehmen passt oder nicht. Lesen Sie hier wichtige Tipps und Tricks für eine überzeugende Bewerbung."
+            },
+            {
+              "key": "d",
+              "text": "Was unsere Körpersprache über uns verrät.\nOb beim Vorstellungsgespräch, bei wichtigen Verhandlungen mit Kunden oder am ersten Arbeitstag – unsere Körpersprache gibt immer Auskunft darüber, wie wir uns gerade fühlen, z. B. angespannt oder selbstsicher. Lernen Sie in unserem Seminar, wie Sie Körpersprache wirksam einsetzen und wie Sie Ihr Gegenüber einschätzen können."
+            },
+            {
+              "key": "e",
+              "text": "Der erste Arbeitstag in der neuen Firma.\nSo klappt es mit den Kolleginnen. Anspannung ist ganz normal: Beim Start im neuen Job ist es wichtig, gut vorbereitet zu sein. Im folgenden Artikel von Irene Miller finden Sie eine Checkliste mit den wichtigsten Punkten, die Sie beachten sollten, damit der Einstieg gelingt."
+            },
+            {
+              "key": "f",
+              "text": "Angemessene Bezahlung?\nJeder möchte für seine Leistung fair bezahlt werden. Doch in vielen Berufsfeldern haben die Arbeitnehmer das Gefühl, unterbezahlt zu sein. Die Folge davon sind Motivationsverlust und Zweifel daran, ob man wirklich den richtigen Beruf gewählt hat. Lesen Sie hier, wie Sie erfolgreich Gehaltsverhandlungen führen."
+            },
+            {
+              "key": "g",
+              "text": "Körperliche Folgen von Stress.\nNicht jeder Stress macht krank. Es gibt auch positiven Stress, der die Leistungsfähigkeit eines Menschen erhöht. Wer aber unter Daueranspannung steht und körperliche Symptome wie Bluthochdruck. Magenbeschwerden oder eine anhaltende innere Anspannung spürt, muss etwas ändern. Wie, das erfahren Sie im neusten Buch von Harald Erhard."
+            },
+            {
+              "key": "h",
+              "text": "Frauen verdienen immer noch zu wenig.\nEuropaweit ist das Ziel der Gleichstellung noch längst nicht erreicht. Man denke hier nur an die nach wie vor ungleiche Bezahlung von Männern und Frauen und an die Besetzung von Stellen in der Führungsetage. Deutschland liegt bei diesem Vergleich noch immer auf einem der letzten Plätze."
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Kurt sucht einen Job und braucht Anregungen für seine Unterlagen.",
+              "answer": "c"
+            },
+            {
+              "number": 2,
+              "prompt": "Juliette arbeitet gerne, fühlt sich aber oft erschöpft.",
+              "answer": "g"
+            },
+            {
+              "number": 3,
+              "prompt": "Peter ist vor seinem Start im neuen Unternehmen nervös.",
+              "answer": "e"
+            },
+            {
+              "number": 4,
+              "prompt": "Katharina ist wegen des niedrigen Verdienstes in ihrer Branche frustriert.",
+              "answer": "f"
+            },
+            {
+              "number": 5,
+              "prompt": "Carlos braucht Tipps für seine Tätigkeit im Homeoffice.",
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_1_v8",
+      "part": "LESEN_1",
+      "title": "Вариант 8",
+      "note": "100%; тест №160201, 160221",
+      "segments": [
+        {
+          "instruction": "Lesen Sie die Situationen 1–5 und die Überschriften a–h. Welche Überschrift passt zu welcher Person?",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Internationale Fachkräfte gesucht\nIm Ausland zu arbeiten, kann eine hervorragende Chance für Menschen in aller Welt sein. Erfahren Sie als Arbeitgeber, mit welchen Strategien Sie dringend benötigte Arbeitskräfte aus dem Ausland für sich gewinnen, um Ihr Unternehmen wettbewerbsfähiger zu machen."
+            },
+            {
+              "key": "b",
+              "text": "Auf zu neuen Ufern!\nIm Job ist es nie zu spät, mit etwas Neuem zu beginnen, um sich weiterzuentwickeln. Manchmal fehlen nur ein bisschen Mut und Unterstützung. Oder man weiß erst gar nicht, welche Möglichkeiten es gibt. Eine gute Beratung ist darum wichtig. Wo Sie die bekommen, erfahren Sie hier."
+            },
+            {
+              "key": "c",
+              "text": "Zufriedene Mitarbeiter\nViele Firmen überlegen, wie sie ihren Angestellten das Arbeitsleben abwechslungsreicher gestalten können. Manche schicken ihre Mitarbeitenden auf Dienstreisen ins Ausland, andere finanzieren ihnen Sprachkurse oder verteilen großzügig Prämien. Was noch möglich ist und wie sich das steuerlich auswirkt, erklärt der Steuerberater Michael Hahne."
+            },
+            {
+              "key": "d",
+              "text": "Dschungel in der Arbeitswelt\nWie viel Urlaub steht einem zu? Wie viel sollte man in seinem Beruf verdienen? Wie viele Stunden arbeitet man üblicherweise? Bekommt man einen Zuschuss für Sprachkurse? Mit vielen gesetzlichen Dingen muss man sich auskennen, wenn man im Arbeitsleben steht. Die wichtigsten Informationen finden Sie hier zusammengefasst."
+            },
+            {
+              "key": "e",
+              "text": "Chefsache\nEin erfolgreiches Unternehmen gibt es nur mit einem motivierten Team. Aber wie motiviert man seine Mitarbeiter? Hören Sie ihnen aufmerksam zu! Kontrollieren Sie nicht jeden Arbeitsschritt, sondern delegieren Sie! Nehmen Sie Mobbing ernst! Zahlen Sie faire Gehälter! Diese und noch viele andere Ratschläge lesen Sie hier."
+            },
+            {
+              "key": "f",
+              "text": "Vielseitig qualifiziert!\nVon Arbeitnehmer*innen wird immer mehr verlangt. Nicht nur die aktuellen fachlichen Kenntnisse und die souveräne Arbeit mit dem PC sind eine Selbstverständlichkeit, sondern auch die sprachlichen Kompetenzen werden immer wichtiger. Hier findet jeder den richtigen Kurs für sich, von Englisch über Japanisch bis Suaheli."
+            },
+            {
+              "key": "g",
+              "text": "Lassen Sie sich von Kolleg*innen den Arbeitsalltag nicht schwermachen\nSie erfahren von der Sitzung zuletzt? In der Kantine sitzen Sie allein? Es passiert immer häufiger in deutschen Unternehmen, dass manche Kollegen anderen das Leben aus unklaren Gründen schwermachen. Lesen Sie in diesem Ratgeber, wo Sie Hilfe bekommen können."
+            },
+            {
+              "key": "h",
+              "text": "Den Horizont erweitern\nManche zieht die Liebe in ein anderes Land. Andere sehen dort interessantere berufliche Möglichkeiten. Manchmal ist das die reine Abenteuerlust. Auslandsaufenthalte können"
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Barbara braucht beruflich Grundkenntnisse in Spanisch.",
+              "answer": "f"
+            },
+            {
+              "number": 2,
+              "prompt": "Frank denkt, dass sein Gehalt nicht branchenüblich ist.",
+              "answer": "d"
+            },
+            {
+              "number": 3,
+              "prompt": "Petra fühlt sich am Arbeitsplatz gemobbt.",
+              "answer": "g"
+            },
+            {
+              "number": 4,
+              "prompt": "Sandra möchte im Ausland berufliche Erfahrungen sammeln.",
+              "answer": "h"
+            },
+            {
+              "number": 5,
+              "prompt": "Felix möchte sich beruflich verändern.",
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

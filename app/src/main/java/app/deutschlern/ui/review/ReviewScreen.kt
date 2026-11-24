@@ -59,6 +59,7 @@ import app.deutschlern.ui.components.HairlineDivider
 @Composable
 fun ReviewScreen(
     onOpenTrainer: (TrainerMode, WordPool) -> Unit,
+    onOpenExamHub: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: ReviewViewModel = hiltViewModel()
 ) {
@@ -90,7 +91,7 @@ fun ReviewScreen(
             }
 
             if (selectedTab == 1) {
-                TrainerHub(onOpenTrainer = onOpenTrainer, modifier = Modifier.weight(1f))
+                TrainerHub(onOpenTrainer = onOpenTrainer, onOpenExamHub = onOpenExamHub, modifier = Modifier.weight(1f))
                 return@Column
             }
 

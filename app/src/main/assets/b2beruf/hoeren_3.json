@@ -1,0 +1,1786 @@
+{
+ "part": "HOEREN_3",
+ "variants": [
+  {
+   "id": "hoeren_3_v1",
+   "part": "HOEREN_3",
+   "title": "Вариант 1",
+   "note": "Ответы на вопрос 35 на экзамене могут быть другими, эти даны для ориентира. Звуковая дорожка от 14.10.24",
+   "segments": [
+    {
+     "title": "Nummer 32–35",
+     "transcript": [
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Und jetzt gehe ich zum wichtigsten Punkt unserer Besprechung, dem Thema Arbeitsschutz und Sicherheit. Wie ihr alle wisst, arbeiten wir als Betriebsrat eng mit der Geschäftsleitung zusammen, um die Sicherheitsmaßnahmen in unserer Firma zu optimieren und Sicherheitslücken zu schließen. Leider lassen sich Arbeitsunfälle oder plötzliche Erkrankungen trotz aller Sicherheitsmaßnahmen nie ganz ausschließen. Umso wichtiger ist es, dass im Notfall schnell jemand zur Stelle ist, der sich um einen verletzten oder erkrankten Kollegen kümmern kann, bis der Rettungsdienst eintrifft. Wir haben deshalb der Geschäftsleitung den Vorschlag gemacht, zusätzliche betriebliche Ersthelfer auszubilden und haben grünes Licht bekommen."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Entschuldigung, kurze Zwischenfrage. Wer sind ja eigentlich die betrieblichen Ersthelfer in unserer Firma? Ich wusste gar nicht, dass wir überhaupt welche haben."
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Doch, betriebliche Ersthelfer sind Pflicht. Die Anzahl ist sogar gesetzlich geregelt. Ein Unternehmen unserer Größe muss mindestens zwei Ersthelfer haben. Bei uns sind das Frederik Gerling, der früher sogar hauptberuflich als Rettungssanitäter gearbeitet hat, und Paulina Jovic. Die Namen der Ersthelfer findet ihr übrigens zusammen mit den Notrufnummern und dem Notfallplan am schwarzen Bretten. Da Paulina die nächste Rente geht, brauchen wir jemanden, der an ihre Stelle tritt und sie als Ersthelferin ersetzt. Es wäre toll, wenn darüber hinaus noch zwei oder drei weitere Personen bereit wären, die Ausbildung zum Ersthelfer zu machen."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Wie würde die Ausbildung denn genau ablaufen?"
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Also, ihr macht zunächst die Grundausbildung, einen neunstündigen Erste-Hilfe-Lehrgang. Da lernt man, was man wissen muss, um bei fast jedem Notfall richtig helfen zu können. Wer Ersthelfer bleiben möchte, muss danach alle zwei Jahre eine Fortbildung machen, um sein Wissen aufzufrischen. Grund- und Fortbildungen werden von verschiedenen Organisationen angeboten, z.B. dem roten Kreuz oder dem Malteser Hilfsdienst. Die Malteser sind ja hier gleich in der Parallelstraße. Deshalb habe ich euch die Kurstermine für die zweite Jahreshälfte mal mitgebracht. Ich gebe die mal um. Aber wie gesagt, ihr könnt auch woanders hingehen. Der Lehrgang ist für euch übrigens kostenlos. Die Teilnahme zählt leider nicht als Arbeitszeit, aber immerhin bekommt ihr die Fahrtkosten zum Kursort erstattet."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Also, ich muss da nicht lange überlegen. Ich würde sehr gerne Ersthelferin werden. Was man in der Grundausbildung lernt, kann man ja nicht nur im Beruf, sondern auch in der Freizeit gut gebrauchen. Wo muss man sich denn anmelden?"
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Die Anmeldung sollte nach Möglichkeit über unser Personalbüro laufen. Das ist am einfachsten, nicht nur für die Firma, sondern auch für euch. Ihr braucht dort nur Bescheid zu sagen und die Kollegen kümmern sich um alles. Wenn es euch lieber ist, könnt ihr euch aber auch selbst bei der Organisation anmelden, die den Kurs durchführt. In diesem Fall benötigt ihr eine Bescheinigung des Arbeitgebers, die bestätigt, dass ihr in der Firma als Ersthelfer eingesetzt werden sollt. Diese Bescheinigung ist wichtig für die Kostenübernahme. Ihr könnt sie euch ebenfalls im Personalbüro holen. Ach ja, noch etwas... Damit wir planen können, sollten die Anmeldungen bis zum 15. September erfolgen. Das heißt, ihr habt noch zwei Wochen Zeit, um euch zu überlegen, ob ihr den Lehrgang machen wollt. Okay? Habt ihr noch weitere Fragen? Ja, Murat?"
+      },
+      {
+       "speaker": "Murat",
+       "gender": "m",
+       "text": "Ich würde mich auch gerne als betrieblicher Ersthelfer zur Verfügung stellen. Ich habe sogar früher eine Ausbildung zum Krankenpfleger gemacht."
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Ah, in diesem Fall kannst du tatsächlich als Ersthelfer eingesetzt werden, ohne den Erste-Hilfe-Lehrgang zu absolvieren. Du müsstest lediglich ein Zeugnis vorlegen, und das deinen Ausbildungsabschluss bestätigt. Dann bekommst du von der Firma eine sogenannte Ernennungsurkunde, also ein Papier, auf dem steht, dass du offiziell als betrieblicher Ersthelfer eingesetzt werden darfst. Diese speziellen Situationen können wir aber im Anschluss nochmal besprechen. Gibt's sonst noch Fragen? Gut, dann vielen Dank. Ich finde es toll, dass sich spontan schon zwei Kollegen gemeldet haben, die bereit sind als Ersthelfer aktiv zu werden. Ideal wäre, wenn noch eine oder zwei weitere Personen dazu kämen. Lasst euch das einfach nochmal in Ruhe durch den Kopf gehen. Jetzt habt aber erstmal einen schönen Feiertag."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "An dem Betrieb gibt es zurzeit",
+       "options": [
+        {
+         "key": "a",
+         "text": "mehr Ersthelfer, als gesetzlich vorgeschrieben."
+        },
+        {
+         "key": "b",
+         "text": "genug Ersthelfer, als gesetzlich vorgeschrieben."
+        },
+        {
+         "key": "c",
+         "text": "weniger Ersthelfer, als gesetzlich vorgeschrieben."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 33,
+       "prompt": "Ausbildung zum Ersthelfer",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist kostenfrei."
+        },
+        {
+         "key": "b",
+         "text": "erlaubt nur beim Malteser."
+        },
+        {
+         "key": "c",
+         "text": "zählt zum Arbeitszeit."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 34,
+       "prompt": "Die Mitarbeiter",
+       "options": [
+        {
+         "key": "a",
+         "text": "müssen sich in Personalbüro anmelden."
+        },
+        {
+         "key": "b",
+         "text": "können sich bei dem Chef anmelden."
+        },
+        {
+         "key": "c",
+         "text": "sollen sich in 2 Wochen anmelden."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Murat ist nicht sicher, / Murat möchte wissen,",
+       "options": [
+        {
+         "key": "a",
+         "text": "ob er als Ersthelfer arbeiten darf."
+        },
+        {
+         "key": "b",
+         "text": "welche Dokumente er braucht."
+        },
+        {
+         "key": "c",
+         "text": "?"
+        }
+       ],
+       "answer": null
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/124140"
+  },
+  {
+   "id": "hoeren_3_v1_b",
+   "part": "HOEREN_3",
+   "title": "Вариант 1 · старый вариант вопросов",
+   "segments": [
+    {
+     "title": "Nummer 32–35",
+     "transcript": [
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Und jetzt gehe ich zum wichtigsten Punkt unserer Besprechung, dem Thema Arbeitsschutz und Sicherheit. Wie ihr alle wisst, arbeiten wir als Betriebsrat eng mit der Geschäftsleitung zusammen, um die Sicherheitsmaßnahmen in unserer Firma zu optimieren und Sicherheitslücken zu schließen. Leider lassen sich Arbeitsunfälle oder plötzliche Erkrankungen trotz aller Sicherheitsmaßnahmen nie ganz ausschließen. Umso wichtiger ist es, dass im Notfall schnell jemand zur Stelle ist, der sich um einen verletzten oder erkrankten Kollegen kümmern kann, bis der Rettungsdienst eintrifft. Wir haben deshalb der Geschäftsleitung den Vorschlag gemacht, zusätzliche betriebliche Ersthelfer auszubilden und haben grünes Licht bekommen."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Entschuldigung, kurze Zwischenfrage. Wer sind ja eigentlich die betrieblichen Ersthelfer in unserer Firma? Ich wusste gar nicht, dass wir überhaupt welche haben."
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Doch, betriebliche Ersthelfer sind Pflicht. Die Anzahl ist sogar gesetzlich geregelt. Ein Unternehmen unserer Größe muss mindestens zwei Ersthelfer haben. Bei uns sind das Frederik Gerling, der früher sogar hauptberuflich als Rettungssanitäter gearbeitet hat, und Paulina Jovic. Die Namen der Ersthelfer findet ihr übrigens zusammen mit den Notrufnummern und dem Notfallplan am schwarzen Bretten. Da Paulina die nächste Rente geht, brauchen wir jemanden, der an ihre Stelle tritt und sie als Ersthelferin ersetzt. Es wäre toll, wenn darüber hinaus noch zwei oder drei weitere Personen bereit wären, die Ausbildung zum Ersthelfer zu machen."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Wie würde die Ausbildung denn genau ablaufen?"
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Also, ihr macht zunächst die Grundausbildung, einen neunstündigen Erste-Hilfe-Lehrgang. Da lernt man, was man wissen muss, um bei fast jedem Notfall richtig helfen zu können. Wer Ersthelfer bleiben möchte, muss danach alle zwei Jahre eine Fortbildung machen, um sein Wissen aufzufrischen. Grund- und Fortbildungen werden von verschiedenen Organisationen angeboten, z.B. dem roten Kreuz oder dem Malteser Hilfsdienst. Die Malteser sind ja hier gleich in der Parallelstraße. Deshalb habe ich euch die Kurstermine für die zweite Jahreshälfte mal mitgebracht. Ich gebe die mal um. Aber wie gesagt, ihr könnt auch woanders hingehen. Der Lehrgang ist für euch übrigens kostenlos. Die Teilnahme zählt leider nicht als Arbeitszeit, aber immerhin bekommt ihr die Fahrtkosten zum Kursort erstattet."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Also, ich muss da nicht lange überlegen. Ich würde sehr gerne Ersthelferin werden. Was man in der Grundausbildung lernt, kann man ja nicht nur im Beruf, sondern auch in der Freizeit gut gebrauchen. Wo muss man sich denn anmelden?"
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Die Anmeldung sollte nach Möglichkeit über unser Personalbüro laufen. Das ist am einfachsten, nicht nur für die Firma, sondern auch für euch. Ihr braucht dort nur Bescheid zu sagen und die Kollegen kümmern sich um alles. Wenn es euch lieber ist, könnt ihr euch aber auch selbst bei der Organisation anmelden, die den Kurs durchführt. In diesem Fall benötigt ihr eine Bescheinigung des Arbeitgebers, die bestätigt, dass ihr in der Firma als Ersthelfer eingesetzt werden sollt. Diese Bescheinigung ist wichtig für die Kostenübernahme. Ihr könnt sie euch ebenfalls im Personalbüro holen. Ach ja, noch etwas... Damit wir planen können, sollten die Anmeldungen bis zum 15. September erfolgen. Das heißt, ihr habt noch zwei Wochen Zeit, um euch zu überlegen, ob ihr den Lehrgang machen wollt. Okay? Habt ihr noch weitere Fragen? Ja, Murat?"
+      },
+      {
+       "speaker": "Murat",
+       "gender": "m",
+       "text": "Ich würde mich auch gerne als betrieblicher Ersthelfer zur Verfügung stellen. Ich habe sogar früher eine Ausbildung zum Krankenpfleger gemacht."
+      },
+      {
+       "speaker": "Leiter",
+       "gender": "m",
+       "text": "Ah, in diesem Fall kannst du tatsächlich als Ersthelfer eingesetzt werden, ohne den Erste-Hilfe-Lehrgang zu absolvieren. Du müsstest lediglich ein Zeugnis vorlegen, und das deinen Ausbildungsabschluss bestätigt. Dann bekommst du von der Firma eine sogenannte Ernennungsurkunde, also ein Papier, auf dem steht, dass du offiziell als betrieblicher Ersthelfer eingesetzt werden darfst. Diese speziellen Situationen können wir aber im Anschluss nochmal besprechen. Gibt's sonst noch Fragen? Gut, dann vielen Dank. Ich finde es toll, dass sich spontan schon zwei Kollegen gemeldet haben, die bereit sind als Ersthelfer aktiv zu werden. Ideal wäre, wenn noch eine oder zwei weitere Personen dazu kämen. Lasst euch das einfach nochmal in Ruhe durch den Kopf gehen. Jetzt habt aber erstmal einen schönen Feiertag."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die Firma hat zurzeit",
+       "options": [
+        {
+         "key": "a",
+         "text": "mehr Ersthelfer als gesetzlich vorgeschrieben."
+        },
+        {
+         "key": "b",
+         "text": "so viele Ersthelfer wie gesetzlich vorgeschrieben."
+        },
+        {
+         "key": "c",
+         "text": "weniger Ersthelfer als gesetzlich vorgeschrieben."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 33,
+       "prompt": "Die Mitarbeiter",
+       "options": [
+        {
+         "key": "a",
+         "text": "dürfen den Lehrgang während der Arbeitszeit machen."
+        },
+        {
+         "key": "b",
+         "text": "können den Lehrgang zu unterschiedlichen Terminen besuchen."
+        },
+        {
+         "key": "c",
+         "text": "müssen den Lehrgang beim Malteser Hilfsdienst absolvieren."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 34,
+       "prompt": "Wer sich anmelden möchte,",
+       "options": [
+        {
+         "key": "a",
+         "text": "kann sich an das Personalbüro wenden."
+        },
+        {
+         "key": "b",
+         "text": "muss dem Arbeitgeber eine Bescheinigung vorlegen."
+        },
+        {
+         "key": "c",
+         "text": "sollte dies spätestens zwei Wochen vor Kursbeginn tun."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Es ist noch ungeklärt,",
+       "options": [
+        {
+         "key": "a",
+         "text": "ob Murat überhaupt als Ersthelfer tätig sein darf."
+        },
+        {
+         "key": "b",
+         "text": "welche Dokumente Murat vorlegen muss."
+        },
+        {
+         "key": "c",
+         "text": "wie viele neue Ersthelfer die Firma haben wird."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/124140"
+  },
+  {
+   "id": "hoeren_3_v2",
+   "part": "HOEREN_3",
+   "title": "Вариант 2",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Der Arbeitsschutz",
+     "transcript": [
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Meine Damen und Herren, ich begrüße Sie herzlich zu unserer Mitarbeiterversammlung. Wie Sie der Tagesordnung entnehmen können, ist eines unserer Themen heute der Arbeitsschutz. In unserem Unternehmen halten wir die gesetzlichen Regeln natürlich strikt ein. Wir haben aber in Absprache mit der Geschäftsführung und dem Betriebsrat beschlossen, ein Managementsystem zum Arbeitsschutz einzuführen, um unsere Sicherheit weiter zu verbessern. Gerne können Sie Zwischenfragen stellen."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ja, gut. Dann möchte ich gleich mit einer ersten Frage beginnen. Was kann ich mir denn unter so einem Managementsystem vorstellen?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Genau das möchte ich Ihnen jetzt erklären. Uns geht es bei diesem Thema nicht nur um die Vermeidung von Arbeitsunfällen und das Verhalten in Notsituationen. Wir möchten, dass Sie als Mitarbeiter zufrieden sind, sich bei der Arbeit sicher fühlen und gesund bleiben. Im ersten Schritt werden wir die aktuelle Situation an den einzelnen Arbeitsplätzen analysieren, indem wir in jeder Abteilung eine Gefährdungsbeurteilung durchführen. Dabei handelt es sich um einen Fragebogen, der von Fachleuten entwickelt wurde. Wir sind sehr froh, dass wir die Firma Worksek ins Boot holen konnten, die auf diesem Gebiet zu den führenden Dienstleistern in Deutschland gehört. Sie entwickeln in den nächsten Wochen einen für uns passenden Fragenkatalog. Sobald er uns vorliegt, wird er an die Teamleitenden weitergereicht. Diese füllen ihn für ihre Abteilungen aus."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Entschuldigung, ich habe da auch eine Frage zu. Was passiert dann mit den Fragebögen? Können wir sicher sein, dass die Daten vertraulich behandelt werden?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Selbstverständlich. Sie brauchen sich darüber keine Sorgen zu machen. Die ausgefüllten Fragebögen werden dann verschlüsselt an die Firma Worksek gesendet. Dort werden sie ausgewertet. Dabei liegt besondere Aufmerksamkeit auf der Arbeitsumgebung und den betrieblichen Abläufen, sodass festgestellt werden kann, wo eventuell gesundheitliche Risiken bestehen. Im Anschluss werden uns die Ergebnisse und der eventuelle Handlungsbedarf von einem Mitarbeiter von Worksek präsentiert. Je nach Bedarf müssen wir dann aktiv werden und eventuell Arbeitsgruppen gründen. Die Fragebögen werden anschließend selbstverständlich vernichtet, sodass der Datenschutz gewahrt bleibt."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Das klingt alles nach einem sehr langwierigen Prozess. Wie lange wird es dauern, bis wir wirklich sichere Arbeitsplätze haben?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Frau Klinger, Sie haben bereits jetzt sichere Arbeitsplätze. Alle Vorschriften sind erfüllt, da kann ich Sie beruhigen. Wir möchten aber, dass unsere Mitarbeiter sich mit den Sicherheitsvorkehrungen noch besser auskennen. Daher wird es unter anderem vierteljährlich eine Begehung der Fluchtwege geben, an der neue Mitarbeiter teilnehmen müssen. Dabei erhalten diese auch eine Einweisung in die Verwendung der Feuerlöscher durch unsere Sicherheitsbeauftragte, Frau Fernandez Suarez. Sie können unseren Brandschutzbeauftragten, Herrn Dr. Yilmaz, jederzeit darauf ansprechen. Bitte informieren Sie sich, welcher Sammelpunkt bei Feueralarm für Sie vorgesehen ist. Denken Sie bitte daran, bei Feueralarm ruhig zu bleiben und höchstens Ihre persönlichen Wertsachen mitzunehmen, weil es dann wirklich schnell gehen muss."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ich habe noch eine Frage. Ich bin ja erst seit Kurzem im Unternehmen. Wie ist das eigentlich, wenn ein Unfall passiert? Wer sind die Ersthelfer, an die man sich dann wenden kann?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Gut, dass Sie das ansprechen. Für ein Unternehmen unserer Größe sind fünf Ersthelfer gesetzlich vorgeschrieben. Da Herr Fischer und Frau Homance in Rente bzw. Mutterschutz gegangen sind, müssen zwei weitere Mitarbeiter zu Ersthelfern ausgebildet werden. Aktuell sind Herr Ohoven, Frau Smirnow und Herr Albertall unsere Ersthelfer. Diese sind unter der Durchwahl 111 jederzeit für Sie erreichbar. Vielen Dank für Ihren Einsatz. Wer Ersthelfer werden möchte, wird einen Erste-Hilfe-Kurs besuchen und kann dann ebenfalls im Notfall angerufen werden. Wenn jemand Interesse hat, als Ersthelfer in der Firma zu fungieren, freuen wir uns über Ihre Rückmeldung. Sie können sich auch gerne direkt nach dem Vortrag an mich oder einen der Ersthelfer wenden. Vielen Dank für Ihre Aufmerksamkeit."
+      },
+      {
+       "text": "Da Sie im letzten Jahr während unserer Umstrukturierung so viel Einsatz gezeigt haben, haben wir noch eine besondere Überraschung für Sie. Wir möchten Sie nun alle zu einem Mittagessen einladen. Die Metzgerei Müller hat das Essen bereits in der Kantine aufgebaut. Greifen Sie ordentlich zu.",
+       "speaker": "Chefin",
+       "gender": "f"
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Das Unternehmen",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat ein anderes Unternehmen beauftragt."
+        },
+        {
+         "key": "b",
+         "text": "wird alle Mitarbeiter einzeln befragen."
+        },
+        {
+         "key": "c",
+         "text": "wird intern einen Fragebogen entwickeln."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 33,
+       "prompt": "Die Fragebögen werden",
+       "options": [
+        {
+         "key": "a",
+         "text": "im Haus ausgewertet."
+        },
+        {
+         "key": "b",
+         "text": "nach der Analyse weiter aufbewahrt."
+        },
+        {
+         "key": "c",
+         "text": "vom Fachleuten analysiert."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Die Begehung der Fluchtwege",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Mitarbeiter müssen der Fluchtwege kontrollieren."
+        },
+        {
+         "key": "b",
+         "text": "während Alarmierung alle Sachen zurücknehmen."
+        },
+        {
+         "key": "c",
+         "text": "den genauen Sammelplatz bei Notfällen kennen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Geschäftsführung",
+       "options": [
+        {
+         "key": "a",
+         "text": "bietet einen Erste-Hilfe-Kurs für alle an."
+        },
+        {
+         "key": "b",
+         "text": "sucht weitere Ersthelfer."
+        },
+        {
+         "key": "c",
+         "text": "verabschiedet Herrn Fischer."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158142"
+  },
+  {
+   "id": "hoeren_3_v2_b",
+   "part": "HOEREN_3",
+   "title": "Вариант 2 · новый вариант вопроса 34",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Der Arbeitsschutz",
+     "transcript": [
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Meine Damen und Herren, ich begrüße Sie herzlich zu unserer Mitarbeiterversammlung. Wie Sie der Tagesordnung entnehmen können, ist eines unserer Themen heute der Arbeitsschutz. In unserem Unternehmen halten wir die gesetzlichen Regeln natürlich strikt ein. Wir haben aber in Absprache mit der Geschäftsführung und dem Betriebsrat beschlossen, ein Managementsystem zum Arbeitsschutz einzuführen, um unsere Sicherheit weiter zu verbessern. Gerne können Sie Zwischenfragen stellen."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ja, gut. Dann möchte ich gleich mit einer ersten Frage beginnen. Was kann ich mir denn unter so einem Managementsystem vorstellen?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Genau das möchte ich Ihnen jetzt erklären. Uns geht es bei diesem Thema nicht nur um die Vermeidung von Arbeitsunfällen und das Verhalten in Notsituationen. Wir möchten, dass Sie als Mitarbeiter zufrieden sind, sich bei der Arbeit sicher fühlen und gesund bleiben. Im ersten Schritt werden wir die aktuelle Situation an den einzelnen Arbeitsplätzen analysieren, indem wir in jeder Abteilung eine Gefährdungsbeurteilung durchführen. Dabei handelt es sich um einen Fragebogen, der von Fachleuten entwickelt wurde. Wir sind sehr froh, dass wir die Firma Worksek ins Boot holen konnten, die auf diesem Gebiet zu den führenden Dienstleistern in Deutschland gehört. Sie entwickeln in den nächsten Wochen einen für uns passenden Fragenkatalog. Sobald er uns vorliegt, wird er an die Teamleitenden weitergereicht. Diese füllen ihn für ihre Abteilungen aus."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Entschuldigung, ich habe da auch eine Frage zu. Was passiert dann mit den Fragebögen? Können wir sicher sein, dass die Daten vertraulich behandelt werden?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Selbstverständlich. Sie brauchen sich darüber keine Sorgen zu machen. Die ausgefüllten Fragebögen werden dann verschlüsselt an die Firma Worksek gesendet. Dort werden sie ausgewertet. Dabei liegt besondere Aufmerksamkeit auf der Arbeitsumgebung und den betrieblichen Abläufen, sodass festgestellt werden kann, wo eventuell gesundheitliche Risiken bestehen. Im Anschluss werden uns die Ergebnisse und der eventuelle Handlungsbedarf von einem Mitarbeiter von Worksek präsentiert. Je nach Bedarf müssen wir dann aktiv werden und eventuell Arbeitsgruppen gründen. Die Fragebögen werden anschließend selbstverständlich vernichtet, sodass der Datenschutz gewahrt bleibt."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Das klingt alles nach einem sehr langwierigen Prozess. Wie lange wird es dauern, bis wir wirklich sichere Arbeitsplätze haben?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Frau Klinger, Sie haben bereits jetzt sichere Arbeitsplätze. Alle Vorschriften sind erfüllt, da kann ich Sie beruhigen. Wir möchten aber, dass unsere Mitarbeiter sich mit den Sicherheitsvorkehrungen noch besser auskennen. Daher wird es unter anderem vierteljährlich eine Begehung der Fluchtwege geben, an der neue Mitarbeiter teilnehmen müssen. Dabei erhalten diese auch eine Einweisung in die Verwendung der Feuerlöscher durch unsere Sicherheitsbeauftragte, Frau Fernandez Suarez. Sie können unseren Brandschutzbeauftragten, Herrn Dr. Yilmaz, jederzeit darauf ansprechen. Bitte informieren Sie sich, welcher Sammelpunkt bei Feueralarm für Sie vorgesehen ist. Denken Sie bitte daran, bei Feueralarm ruhig zu bleiben und höchstens Ihre persönlichen Wertsachen mitzunehmen, weil es dann wirklich schnell gehen muss."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ich habe noch eine Frage. Ich bin ja erst seit Kurzem im Unternehmen. Wie ist das eigentlich, wenn ein Unfall passiert? Wer sind die Ersthelfer, an die man sich dann wenden kann?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Gut, dass Sie das ansprechen. Für ein Unternehmen unserer Größe sind fünf Ersthelfer gesetzlich vorgeschrieben. Da Herr Fischer und Frau Homance in Rente bzw. Mutterschutz gegangen sind, müssen zwei weitere Mitarbeiter zu Ersthelfern ausgebildet werden. Aktuell sind Herr Ohoven, Frau Smirnow und Herr Albertall unsere Ersthelfer. Diese sind unter der Durchwahl 111 jederzeit für Sie erreichbar. Vielen Dank für Ihren Einsatz. Wer Ersthelfer werden möchte, wird einen Erste-Hilfe-Kurs besuchen und kann dann ebenfalls im Notfall angerufen werden. Wenn jemand Interesse hat, als Ersthelfer in der Firma zu fungieren, freuen wir uns über Ihre Rückmeldung. Sie können sich auch gerne direkt nach dem Vortrag an mich oder einen der Ersthelfer wenden. Vielen Dank für Ihre Aufmerksamkeit."
+      },
+      {
+       "text": "Da Sie im letzten Jahr während unserer Umstrukturierung so viel Einsatz gezeigt haben, haben wir noch eine besondere Überraschung für Sie. Wir möchten Sie nun alle zu einem Mittagessen einladen. Die Metzgerei Müller hat das Essen bereits in der Kantine aufgebaut. Greifen Sie ordentlich zu.",
+       "speaker": "Chefin",
+       "gender": "f"
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Das Unternehmen",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat ein anderes Unternehmen beauftragt."
+        },
+        {
+         "key": "b",
+         "text": "wird alle Mitarbeiter einzeln befragen."
+        },
+        {
+         "key": "c",
+         "text": "wird intern einen Fragebogen entwickeln."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 33,
+       "prompt": "Die Fragebögen werden",
+       "options": [
+        {
+         "key": "a",
+         "text": "im Haus ausgewertet."
+        },
+        {
+         "key": "b",
+         "text": "nach der Analyse weiter aufbewahrt."
+        },
+        {
+         "key": "c",
+         "text": "vom Fachleuten analysiert."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Die Mitarbeiter müssen",
+       "options": [
+        {
+         "key": "a",
+         "text": "alle Fluchtwege regelmäßig kontrollieren."
+        },
+        {
+         "key": "b",
+         "text": "bei einem Feueralarm alles zurücklassen."
+        },
+        {
+         "key": "c",
+         "text": "im Brandfall ihren Sammelpunkt kennen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Geschäftsführung",
+       "options": [
+        {
+         "key": "a",
+         "text": "bietet einen Erste-Hilfe-Kurs für alle an."
+        },
+        {
+         "key": "b",
+         "text": "sucht weitere Ersthelfer."
+        },
+        {
+         "key": "c",
+         "text": "verabschiedet Herrn Fischer."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158142"
+  },
+  {
+   "id": "hoeren_3_v2_c",
+   "part": "HOEREN_3",
+   "title": "Вариант 2 · другой вариант вопроса 34",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Der Arbeitsschutz",
+     "transcript": [
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Meine Damen und Herren, ich begrüße Sie herzlich zu unserer Mitarbeiterversammlung. Wie Sie der Tagesordnung entnehmen können, ist eines unserer Themen heute der Arbeitsschutz. In unserem Unternehmen halten wir die gesetzlichen Regeln natürlich strikt ein. Wir haben aber in Absprache mit der Geschäftsführung und dem Betriebsrat beschlossen, ein Managementsystem zum Arbeitsschutz einzuführen, um unsere Sicherheit weiter zu verbessern. Gerne können Sie Zwischenfragen stellen."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ja, gut. Dann möchte ich gleich mit einer ersten Frage beginnen. Was kann ich mir denn unter so einem Managementsystem vorstellen?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Genau das möchte ich Ihnen jetzt erklären. Uns geht es bei diesem Thema nicht nur um die Vermeidung von Arbeitsunfällen und das Verhalten in Notsituationen. Wir möchten, dass Sie als Mitarbeiter zufrieden sind, sich bei der Arbeit sicher fühlen und gesund bleiben. Im ersten Schritt werden wir die aktuelle Situation an den einzelnen Arbeitsplätzen analysieren, indem wir in jeder Abteilung eine Gefährdungsbeurteilung durchführen. Dabei handelt es sich um einen Fragebogen, der von Fachleuten entwickelt wurde. Wir sind sehr froh, dass wir die Firma Worksek ins Boot holen konnten, die auf diesem Gebiet zu den führenden Dienstleistern in Deutschland gehört. Sie entwickeln in den nächsten Wochen einen für uns passenden Fragenkatalog. Sobald er uns vorliegt, wird er an die Teamleitenden weitergereicht. Diese füllen ihn für ihre Abteilungen aus."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Entschuldigung, ich habe da auch eine Frage zu. Was passiert dann mit den Fragebögen? Können wir sicher sein, dass die Daten vertraulich behandelt werden?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Selbstverständlich. Sie brauchen sich darüber keine Sorgen zu machen. Die ausgefüllten Fragebögen werden dann verschlüsselt an die Firma Worksek gesendet. Dort werden sie ausgewertet. Dabei liegt besondere Aufmerksamkeit auf der Arbeitsumgebung und den betrieblichen Abläufen, sodass festgestellt werden kann, wo eventuell gesundheitliche Risiken bestehen. Im Anschluss werden uns die Ergebnisse und der eventuelle Handlungsbedarf von einem Mitarbeiter von Worksek präsentiert. Je nach Bedarf müssen wir dann aktiv werden und eventuell Arbeitsgruppen gründen. Die Fragebögen werden anschließend selbstverständlich vernichtet, sodass der Datenschutz gewahrt bleibt."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Das klingt alles nach einem sehr langwierigen Prozess. Wie lange wird es dauern, bis wir wirklich sichere Arbeitsplätze haben?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Frau Klinger, Sie haben bereits jetzt sichere Arbeitsplätze. Alle Vorschriften sind erfüllt, da kann ich Sie beruhigen. Wir möchten aber, dass unsere Mitarbeiter sich mit den Sicherheitsvorkehrungen noch besser auskennen. Daher wird es unter anderem vierteljährlich eine Begehung der Fluchtwege geben, an der neue Mitarbeiter teilnehmen müssen. Dabei erhalten diese auch eine Einweisung in die Verwendung der Feuerlöscher durch unsere Sicherheitsbeauftragte, Frau Fernandez Suarez. Sie können unseren Brandschutzbeauftragten, Herrn Dr. Yilmaz, jederzeit darauf ansprechen. Bitte informieren Sie sich, welcher Sammelpunkt bei Feueralarm für Sie vorgesehen ist. Denken Sie bitte daran, bei Feueralarm ruhig zu bleiben und höchstens Ihre persönlichen Wertsachen mitzunehmen, weil es dann wirklich schnell gehen muss."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ich habe noch eine Frage. Ich bin ja erst seit Kurzem im Unternehmen. Wie ist das eigentlich, wenn ein Unfall passiert? Wer sind die Ersthelfer, an die man sich dann wenden kann?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Gut, dass Sie das ansprechen. Für ein Unternehmen unserer Größe sind fünf Ersthelfer gesetzlich vorgeschrieben. Da Herr Fischer und Frau Homance in Rente bzw. Mutterschutz gegangen sind, müssen zwei weitere Mitarbeiter zu Ersthelfern ausgebildet werden. Aktuell sind Herr Ohoven, Frau Smirnow und Herr Albertall unsere Ersthelfer. Diese sind unter der Durchwahl 111 jederzeit für Sie erreichbar. Vielen Dank für Ihren Einsatz. Wer Ersthelfer werden möchte, wird einen Erste-Hilfe-Kurs besuchen und kann dann ebenfalls im Notfall angerufen werden. Wenn jemand Interesse hat, als Ersthelfer in der Firma zu fungieren, freuen wir uns über Ihre Rückmeldung. Sie können sich auch gerne direkt nach dem Vortrag an mich oder einen der Ersthelfer wenden. Vielen Dank für Ihre Aufmerksamkeit."
+      },
+      {
+       "text": "Da Sie im letzten Jahr während unserer Umstrukturierung so viel Einsatz gezeigt haben, haben wir noch eine besondere Überraschung für Sie. Wir möchten Sie nun alle zu einem Mittagessen einladen. Die Metzgerei Müller hat das Essen bereits in der Kantine aufgebaut. Greifen Sie ordentlich zu.",
+       "speaker": "Chefin",
+       "gender": "f"
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Das Unternehmen",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat ein anderes Unternehmen beauftragt."
+        },
+        {
+         "key": "b",
+         "text": "wird alle Mitarbeiter einzeln befragen."
+        },
+        {
+         "key": "c",
+         "text": "wird intern einen Fragebogen entwickeln."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 33,
+       "prompt": "Die Fragebögen werden",
+       "options": [
+        {
+         "key": "a",
+         "text": "im Haus ausgewertet."
+        },
+        {
+         "key": "b",
+         "text": "nach der Analyse weiter aufbewahrt."
+        },
+        {
+         "key": "c",
+         "text": "vom Fachleuten analysiert."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Die Begehung der Fluchtwege",
+       "options": [
+        {
+         "key": "a",
+         "text": "findet jährlich statt."
+        },
+        {
+         "key": "b",
+         "text": "ist für die neuen Mitarbeiter verpflichtend."
+        },
+        {
+         "key": "c",
+         "text": "leitet Frau Fernandez Suarez."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Geschäftsführung",
+       "options": [
+        {
+         "key": "a",
+         "text": "bietet einen Erste-Hilfe-Kurs für alle an."
+        },
+        {
+         "key": "b",
+         "text": "sucht weitere Ersthelfer."
+        },
+        {
+         "key": "c",
+         "text": "verabschiedet Herrn Fischer."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158142"
+  },
+  {
+   "id": "hoeren_3_v3",
+   "part": "HOEREN_3",
+   "title": "Вариант 3",
+   "note": "100%. В источнике ответ на вопрос 33 не выделен (по тексту: c)",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Das Logo",
+     "transcript": [
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Guten Morgen, liebe Mitarbeiterinnen und Mitarbeiter. Als ich diese Firma vor acht Jahren von meinem Vater übernommen habe, war sie noch ein ganz kleiner Betrieb mit großen finanziellen Schwierigkeiten. Doch in den letzten Jahren hat sich einiges bewegt. Wir haben, dank Ihres großen Engagements, viele innovative Ideen umgesetzt und konnten dadurch ein stetiges Wachstum erreichen. Dies ist eine fantastische Entwicklung, die ich natürlich fortsetzen möchte. Deshalb stehen auch in diesem Jahr einige Veränderungen an. Ich habe unter anderem eine Grafikagentur beauftragt unser Firmenlogo neu zu gestalten. Und darüber möchte ich Sie heute informieren. Ja, Herr Gertenbach, Sie haben eine Frage?"
+      },
+      {
+       "speaker": "Herr Gertenbach",
+       "gender": "m",
+       "text": "Macht die Grafikagentur Compton das neue Logo? War nicht letztens Frau Seidel von Compton hier im Haus? Die Agentur hat doch vor zwei Jahren so tolle Plakate für uns gestaltet."
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ja, Frau Seidel hat mich auch diesmal sofort mit ihren guten Ideen überzeugt. Aber dazu gleich mehr. Lassen Sie mich zuerst kurz erklären, warum ich mich überhaupt für ein neues Logo entschieden habe. Das alte Logo ist ja nicht schlecht. Obwohl es vor über zehn Jahren entworfen wurde, ist es immer noch zeitgemäß. Das schlichte, unkomplizierte Design ist unabhängig von Trends und hat außerdem den Vorteil, dass es vielseitig verwendbar ist. Es funktioniert ganz klein auf einer Visitenkarte, aber auch großflächig als Print auf einem LKW. Trotzdem, durch die Erweiterung unseres Sortiments und die neuen Produkte, die wir auf den Markt gebracht haben, hat sich das Gesicht unserer Firma verändert. Das neue Logo soll dazu beitragen, dass dies auch von unseren Kunden so wahrgenommen wird. Sie möchten etwas fragen, Frau Bräuer?"
+      },
+      {
+       "speaker": "Frau Bräuer",
+       "gender": "f",
+       "text": "Ja, ich wollte fragen, ob die Einführung eines neuen Logos nicht auch ein Risiko sein kann. Die Kunden sind schließlich mit dem alten Logo vertraut und erkennen es sofort."
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ja, absolut. Die Einführung eines neuen Logos wird gut überlegt sein. Ich habe mich deshalb auch ausführlich beraten lassen, bevor ich eine Entscheidung getroffen habe. Frau Seidel hat vorgeschlagen, kein ganz neues Logo zu entwerfen, sondern das alte weiterzuentwickeln. Das heißt, wir übernehmen einige Elemente aus dem bisherigen Design und diese werden die Kunden dann auch wiedererkennen. Das neue Logo wird, wie gehabt, ein Rechteck sein, auf dem die Buchstaben F, A, N stehen, also die Initiale des Firmengründers Florian-Alexander Niehaus. Das Rechteck bleibt dunkelblau, die gelbe Schrift wird allerdings durch eine leuchtende Orangefarbe ersetzt. Außerdem verwenden wir eine andere Schriftart, die etwas dynamischer aussieht. Und der kleine Fußball, der früher unser gesamtes Sortiment repräsentiert hat und bisher Teil des Logos war, fällt weg. Dadurch wirkt das Design noch klarer."
+      },
+      {
+       "speaker": "Tom",
+       "gender": "m",
+       "text": "Anschauen können wir uns das neue Logo aber noch nicht."
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Nein, die Agentur arbeitet noch daran. Frau Seidel hat die Entwürfe für den 15. März angekündigt. Sie bespricht diese dann zunächst mit Herrn Aydin, dem neuen Leiter unserer Marketingabteilung. Eventuelle Änderungswünsche werden dann realisiert und spätestens Ende März können wir Ihnen dann hoffentlich das endgültige Ergebnis präsentieren. Ich weiß, dass es noch ein paar Wochen hin, aber es ist mir wichtig, Sie frühzeitig zu informieren, denn die Einführung des neuen Logos bedeutet natürlich eine Menge Arbeit. Bedenken Sie bitte, dass wir das Logo auf all unseren Plattformen und Firmenmaterialien aktualisieren müssen. Das betrifft Visitenkarten, Briefköpfe, Formulare, Werbematerialien, unsere Webseite und, und, und. Sogar ein neues Türschild muss her. Herr Aydin wird sich um alles kümmern. Er wird aber hin und wieder Ihre Unterstützung benötigen."
+      },
+      {
+       "speaker": "Frau Müller",
+       "gender": "f",
+       "text": "Und wann wird das neue Logo dann offiziell verwendet?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ich habe lange überlegt, wie wir den Übergang vom alten zum neuen Logo am besten hinbekommen. Und habe mich dagegen entschieden, ein Datum festzulegen, an dem von heute auf morgen alles umgestellt wird. Ein Zeitraum von 6 bis 8 Wochen, in dem wir die Umstellung nach und nach vornehmen, erscheint mir sinnvoll. Spätestens Ende Juni sollte der ganze Prozess aber abgeschlossen sein. Und wenn alles geschafft ist, stoßen wir mit einem Gläschen auf den schönen Erfolg an, okay?"
+      },
+      {
+       "text": "Gut, mit diesen Aussichten lasse ich Sie nun an Ihre Arbeitsplätze zurückkehren und bedanke mich für Ihre Aufmerksamkeit.",
+       "speaker": "Chefin",
+       "gender": "f"
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Das alte Logo",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist nicht überall einsetzbar."
+        },
+        {
+         "key": "b",
+         "text": "passt nicht mehr zum Angebot."
+        },
+        {
+         "key": "c",
+         "text": "wirkt unmodern."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 33,
+       "prompt": "Das neue Logo enthält",
+       "options": [
+        {
+         "key": "a",
+         "text": "den vollständigen Namen der Firma."
+        },
+        {
+         "key": "b",
+         "text": "ein Symbol für Sport."
+        },
+        {
+         "key": "c",
+         "text": "zwei farbige Elemente."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Herr Aydin",
+       "options": [
+        {
+         "key": "a",
+         "text": "wird sich bei den Mitarbeitern Hilfe holen."
+        },
+        {
+         "key": "b",
+         "text": "soll den Mitarbeitern das neue Logo vorstellen."
+        },
+        {
+         "key": "c",
+         "text": "wird die Logo-Entwürfe erst Ende März sehen."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Einführung des neuen Logos soll",
+       "options": [
+        {
+         "key": "a",
+         "text": "an einem bestimmten Tag stattfinden."
+        },
+        {
+         "key": "b",
+         "text": "gefeiert werden."
+        },
+        {
+         "key": "c",
+         "text": "nicht länger als einen Monat dauern."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195152"
+  },
+  {
+   "id": "hoeren_3_v4",
+   "part": "HOEREN_3",
+   "title": "Вариант 4",
+   "note": "100%. Тоже № 160201, 160221",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Der Umweltschutz",
+     "transcript": [
+      {
+       "speaker": "Chef",
+       "gender": "m",
+       "text": "Guten Morgen an alle. Heute geht es um ein äußerst wichtiges Thema, nämlich den Umweltschutz. Regelmäßig suchen wir nach Möglichkeiten, den ökologischen Fußabdruck unseres Unternehmens zu verringern. Wie erfolgreich die Lage waren, beweist, dass wir letztes Jahr den Nachhaltigkeitspreis des Landes bekommen haben. Heute ist Frau Seibert vom Landesamt für Umwelt bei uns. Sie kennen sie ja schon von ihrem letzten Vortrag bei uns im Haus. Sie wird uns Tipps zum umweltgerechten Verhalten geben. Herzlich willkommen, Frau Seibert. Sie sind bereits zum zweiten Mal in unserem Unternehmen."
+      },
+      {
+       "speaker": "Frau Seibert",
+       "gender": "f",
+       "text": "Vielen Dank. Ich freue mich, dass Sie mich eingeladen haben. Damit ein Büro zum nachhaltigen Büro wird, kommt das besonders auf die Menschen an, die dort arbeiten, also auf Sie. Jeder Einzelne ist gefragt. Einige konkrete Maßnahmen zum täglichen Umweltschutz möchte ich gleich vorstellen. Bitte unterbrechen Sie mich gerne jederzeit, wenn Sie eine Frage haben. Als Arbeitsmittel Nummer 1 steht der Computer bei dem Umweltschutz für das Büro ganz vorne. Wichtig ist, dass Sie keinen Bildschirmschoner verwenden. Stellen Sie Ihren PC besser so ein, dass er nach einigen Minuten der Nichtbenutzung automatisch in den Schlaf- bzw. Ruhemodus umschaltet. Die Energieersparnis zum Normalbetrieb liegt so bei ca. 70%. Auch das Ausschalten des Bildschirms während der Pausen oder Besprechungen kann viel Energie sparen. Wenn Sie mit der Arbeit fertig sind, sollten Sie den Computer ganz ausschalten."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Ich habe vor Kurzem etwas über papierlose Büros gelesen. Wir sind davon ja noch sehr weit entfernt, denn wir drucken hier noch fast alles aus. Ist der Energieverbrauch beim Drucken wirklich so groß?"
+      },
+      {
+       "speaker": "Frau Seibert",
+       "gender": "f",
+       "text": "Das kommt drauf an. Man sollte sich vorher überlegen, ob es notwendig ist, Dokumente auszudrucken und was überhaupt gedruckt werden muss. Für den internen Gebrauch empfiehlt es sich immer, auch die Rückseite zu bedrucken. Außerdem druckt man viel sparsamer, wenn man den Entwurfmodus verwendet. Die Dokumente sind auch in dieser Einstellung von sehr guter Qualität. Und man spart wirklich richtig viel Tinte bzw. Toner. Probieren Sie es so mal aus. Wenn man diese Maßnahmen umsetzt, kann man eventuell auf graues Recyclingpapier verzichten, denn darauf kann man oft nicht so gut lesen."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Ich hätte da mal eine ganz andere Frage. Was sagen Sie zur Mülltrennung?"
+      },
+      {
+       "speaker": "Frau Seibert",
+       "gender": "f",
+       "text": "Ebenso wichtig wie selbstverständlich ist natürlich der Hinweis aufs Müllsortieren. Aber ich sehe hier schon überall die unterschiedlichen Tonnen mit verschiedenen Farben für jede Müllsorte stehen. Noch wichtiger wäre es, Müll zu vermeiden, sofern es möglich ist. Wenn alle sich daranhalten, würde die Frage des Recyclings in den Hintergrund treten. Übrigens würden dann die Kosten für die Abfallbeseitigung sinken."
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Wenn wir schon beim Thema Geld sind. Geschäftsreisen verursachen ja auch hohe Kosten und sind außerdem nicht gut für die Umwelt. Was würden Sie empfehlen?"
+      },
+      {
+       "speaker": "Frau Seibert",
+       "gender": "f",
+       "text": "Guter Punkt. Das ist das letzte Thema meiner Präsentation. Dank moderner Kommunikationsmittel sind Dienstreisen in bestimmten Fällen nicht mehr erforderlich. Einiges kann schon in einer Telefon- oder Videokonferenz besprochen werden. Allerdings möchte ich auch darauf hinweisen, dass Videokonferenzen für Teilnehmer meist anstrengender sind, weil sie mehr Konzentration erfordern. Manchmal sind Reisen unvermeidbar. Aber man kann sie auch durchaus umweltfreundlich durchführen. Viele Unternehmen befürchten aber, dass dies hohe Kosten verursacht. Das ist aber nicht unbedingt der Fall. Die richtige Wahl des Verkehrsmittels kann hier die Kosten senken. Bahnfahrten sind nämlich nicht nur günstiger als Businessflüge und besser für die Umwelt als Autofahren, sondern haben auch weitere positive Seiten. Denn man muss sich nicht auf den Verkehr konzentrieren und kann sogar im Zug arbeiten."
+      },
+      {
+       "speaker": "Chef",
+       "gender": "m",
+       "text": "Danke für diese Anlegungen, Frau Seibert. Wir haben noch viel zu tun in diesem Bereich. Das sehen wir jetzt deutlich. Und jetzt kommt noch der praktische Teil. Wir schauen uns die konkrete Situation in unseren Büros genauer an. Dabei hoffe ich dann auf Ihre Fragen und Vorschläge zum Thema „Wie wird unser Büro ein nachhaltiges Büro?“"
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Ein Computer sollte",
+       "options": [
+        {
+         "key": "a",
+         "text": "nicht mehrmals ein- und ausgeschaltet werden."
+        },
+        {
+         "key": "b",
+         "text": "nur selten ganz heruntergefahren werden."
+        },
+        {
+         "key": "c",
+         "text": "von allein in den Ruhemodus schalten."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 33,
+       "prompt": "Frau Seibert empfiehlt,",
+       "options": [
+        {
+         "key": "a",
+         "text": "den Entwurfmodus zu verwenden."
+        },
+        {
+         "key": "b",
+         "text": "immer Recyclingpapier zu benutzen."
+        },
+        {
+         "key": "c",
+         "text": "Unterlagen für Kunden beidseitig zu bedrucken."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 34,
+       "prompt": "Frau Seibert findet es wichtig, dass",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Firma den Müll sorgfältiger trennt."
+        },
+        {
+         "key": "b",
+         "text": "mehr recycelt wird."
+        },
+        {
+         "key": "c",
+         "text": "weniger Abfall produziert wird."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Geschäftsreisen",
+       "options": [
+        {
+         "key": "a",
+         "text": "lassen sich problemlos durch Videokonferenzen ersetzen."
+        },
+        {
+         "key": "b",
+         "text": "mit der Bahn haben verschiedene Vorteile."
+        },
+        {
+         "key": "c",
+         "text": "sind teurer, wenn sie umweltfreundlich sind."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/140342"
+  },
+  {
+   "id": "hoeren_3_v5",
+   "part": "HOEREN_3",
+   "title": "Вариант 5",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Eröffnung der neuen Filiale in Frankfurt",
+     "transcript": [
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Zum Schluss unserer wöchentlichen Teamleitersitzung noch ein kurzes Update zur Eröffnung der neuen Filiale in Frankfurt. Wie Sie ja bereits wissen, sind wir aktuell nur in Norddeutschland zu finden und wollen nun auch andere Regionen erobern. Wir, die Geschäftsführung, sind davon überzeugt, dass unsere junge Mode in ganz Deutschland positiv aufgenommen werden wird. Wir haben nun das Glück, dass gerade in einer Ladenzeile im Zentrum Frankfurts ein Geschäft frei wird, das in der Größe genau passt. Es ist ca. 1000 Quadratmeter groß und hat zwei Stockwerke. Das hat den Vorteil, dass wir die exklusivere und die preisgünstigere Mode räumlich voneinander trennen können."
+      },
+      {
+       "speaker": "Herr 1",
+       "gender": "m",
+       "text": "Ich bin sehr gespannt, wie das Frankfurter Publikum unsere Kleidung annimmt."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Hoffentlich gut. Damit dies gelingt, müssen wir jetzt als erstes das Geschäft einrichten, Verkaufspersonal finden und schließlich die Kunden durch gezielte Werbung auf unsere Neueröffnung aufmerksam und neugierig machen. Wir haben wieder die Agentur Neuer beauftragt, einen Vorschlag zu entwickeln. Wie Sie ja wissen, hat sie schon die Werbung für die anderen Geschäfte gemacht. In circa zwei Wochen wird dieser vorliegen. Wir planen klassische Werbung im Radio und mit Flyern. Außerdem soll eine E-Mail-Kampagne gestartet werden. Und in den sozialen Medien sind wir ja sowieso aktiv vertreten. Auf Zeitungsanzeigen werden wir diesmal jedoch verzichten, weil sich das letzte Mal schon gezeigt hat, dass wir damit unsere Zielgruppe nicht erreichen."
+      },
+      {
+       "speaker": "Frau 1",
+       "gender": "f",
+       "text": "Für wann ist denn die Eröffnung geplant?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Wir wollen das Geschäft am 1. Juli eröffnen. Der Vormieter wird die Räumlichkeiten zum nächsten Ersten verlassen. Dann bleibt genug Zeit für den Umbau und die Einrichtung des Ladens. Parallel dazu suchen wir auch schon nach Personal. Das scheint aber nicht so schwer zu sein. Wir waren positiv überrascht, wie viele vielversprechende Bewerber sich schon bei uns gemeldet haben. Die Schwierigkeit ist nun eher, daraus eine Auswahl zu treffen. Deshalb werden wir erst mal Ihre Profile in den sozialen Medien angucken und dann entscheiden, wer in die engere Wahl kommt."
+      },
+      {
+       "speaker": "Herr 2",
+       "gender": "m",
+       "text": "Ich hätte noch eine Frage zum ersten Punkt. Wie soll denn die Filiale eingerichtet werden? Übernehmen wir das Konzept, das wir auch an den anderen Standorten haben, oder soll hier etwas Neues ausprobiert werden?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Nun, wir werden relativ große Verkaufsräume haben. Daher müssen wir uns überlegen, wie wir die Fläche geschickt unterteilen. Denn wenn dies gelingt, wirkt der Raum abwechslungsreicher und lädt zum Verweilen ein. Wir haben uns auch noch was ganz Neues überlegt. Auf der oberen Etage wollen wir eine Espresso-Bar integrieren, die zu einer entspannten Atmosphäre beitragen soll. Außerdem setzen wir auf eine andere Lichtplanung. Da Umfragen immer wieder gezeigt haben, dass sich die Kundinnen und Kunden mit dem Licht nicht wohlfühlen. Besonders in den Umkleidekabinen ist Licht von oben unvorteilhaft und sorgt dafür, dass Farben nicht richtig zur Geltung kommen. Deshalb wollen wir in der neuen Filiale ein neues System ausprobieren. So werden wir warmes gedämpftes Licht einsetzen, das Gesicht und Körper schattenfrei ausleuchtet. Außerdem wird der authentische Look der Kleidung gewahrt, so lassen sich Blau und Schwarz gut unterscheiden. Wenn sich dies bewährt, wollen wir auch die alten Filialen umrüsten."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Ich hätte da auch noch eine Frage."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, bitte, Frau Dörfer."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Gibt es auch Änderungen beim Warensortiment?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, das wird sich tatsächlich auch von dem in den anderen Läden unterscheiden. Eine Marktanalyse hat ergeben, dass die zu erwartende Kundschaft vorwiegend trendorientiert ist und auch bereit ist, für qualitativ hochwertige Mode etwas mehr zu bezahlen. Wir wollen einerseits diese Käufergruppe bedienen, aber andererseits auch andere finanziell besser Gestellte nicht ausschließen. Denn gerade in Frankfurt ist die Kaufkraft besonders hoch, sodass wir auch hier unsere exklusive Designer Linie an die Frau bzw. an den Mann bringen können und sollten. Weiterhin haben wir uns dazu entschieden, auf nur vier Kollektionen im Jahr zu setzen. Dieses Konzept lässt sich gut mit unserem Anspruch an nachhaltige Mode vereinbaren und geht auf die Agentur Neuer zurück. Ja, das war alles von meiner Seite. Haben Sie denn noch weitere Fragen? Im Moment nicht? Gut, dann können wir unsere Sitzung schließen. Bis nächste Woche."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die neue Werbekampagne",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist schon fertig."
+        },
+        {
+         "key": "b",
+         "text": "wird intern konzipiert."
+        },
+        {
+         "key": "c",
+         "text": "gestaltet eine Agentur."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 33,
+       "prompt": "Die sozialen Medien werden dazu genutzt, um",
+       "options": [
+        {
+         "key": "a",
+         "text": "aktiv neue Bewerber zu finden."
+        },
+        {
+         "key": "b",
+         "text": "Bewerbungsgespräche zu führen."
+        },
+        {
+         "key": "c",
+         "text": "die Bewerber besser kennenzulernen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Das Beleuchtungskonzept der anderen Filialen",
+       "options": [
+        {
+         "key": "a",
+         "text": "führte zu Unzufriedenheit bei der Kundschaft."
+        },
+        {
+         "key": "b",
+         "text": "soll als Modell für die neue Filiale dienen."
+        },
+        {
+         "key": "c",
+         "text": "wird zurzeit neu ausgearbeitet."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Im Kaufhaus wird",
+       "options": [
+        {
+         "key": "a",
+         "text": "in allen Läden das gleiche Sortiment angeboten."
+        },
+        {
+         "key": "b",
+         "text": "nur teure Kleidung."
+        },
+        {
+         "key": "c",
+         "text": "Kleidung mit guter Qualität verkauft."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/190823"
+  },
+  {
+   "id": "hoeren_3_v5_b",
+   "part": "HOEREN_3",
+   "title": "Вариант 5 · новый вопрос 34",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Eröffnung der neuen Filiale in Frankfurt",
+     "transcript": [
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Zum Schluss unserer wöchentlichen Teamleitersitzung noch ein kurzes Update zur Eröffnung der neuen Filiale in Frankfurt. Wie Sie ja bereits wissen, sind wir aktuell nur in Norddeutschland zu finden und wollen nun auch andere Regionen erobern. Wir, die Geschäftsführung, sind davon überzeugt, dass unsere junge Mode in ganz Deutschland positiv aufgenommen werden wird. Wir haben nun das Glück, dass gerade in einer Ladenzeile im Zentrum Frankfurts ein Geschäft frei wird, das in der Größe genau passt. Es ist ca. 1000 Quadratmeter groß und hat zwei Stockwerke. Das hat den Vorteil, dass wir die exklusivere und die preisgünstigere Mode räumlich voneinander trennen können."
+      },
+      {
+       "speaker": "Herr 1",
+       "gender": "m",
+       "text": "Ich bin sehr gespannt, wie das Frankfurter Publikum unsere Kleidung annimmt."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Hoffentlich gut. Damit dies gelingt, müssen wir jetzt als erstes das Geschäft einrichten, Verkaufspersonal finden und schließlich die Kunden durch gezielte Werbung auf unsere Neueröffnung aufmerksam und neugierig machen. Wir haben wieder die Agentur Neuer beauftragt, einen Vorschlag zu entwickeln. Wie Sie ja wissen, hat sie schon die Werbung für die anderen Geschäfte gemacht. In circa zwei Wochen wird dieser vorliegen. Wir planen klassische Werbung im Radio und mit Flyern. Außerdem soll eine E-Mail-Kampagne gestartet werden. Und in den sozialen Medien sind wir ja sowieso aktiv vertreten. Auf Zeitungsanzeigen werden wir diesmal jedoch verzichten, weil sich das letzte Mal schon gezeigt hat, dass wir damit unsere Zielgruppe nicht erreichen."
+      },
+      {
+       "speaker": "Frau 1",
+       "gender": "f",
+       "text": "Für wann ist denn die Eröffnung geplant?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Wir wollen das Geschäft am 1. Juli eröffnen. Der Vormieter wird die Räumlichkeiten zum nächsten Ersten verlassen. Dann bleibt genug Zeit für den Umbau und die Einrichtung des Ladens. Parallel dazu suchen wir auch schon nach Personal. Das scheint aber nicht so schwer zu sein. Wir waren positiv überrascht, wie viele vielversprechende Bewerber sich schon bei uns gemeldet haben. Die Schwierigkeit ist nun eher, daraus eine Auswahl zu treffen. Deshalb werden wir erst mal Ihre Profile in den sozialen Medien angucken und dann entscheiden, wer in die engere Wahl kommt."
+      },
+      {
+       "speaker": "Herr 2",
+       "gender": "m",
+       "text": "Ich hätte noch eine Frage zum ersten Punkt. Wie soll denn die Filiale eingerichtet werden? Übernehmen wir das Konzept, das wir auch an den anderen Standorten haben, oder soll hier etwas Neues ausprobiert werden?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Nun, wir werden relativ große Verkaufsräume haben. Daher müssen wir uns überlegen, wie wir die Fläche geschickt unterteilen. Denn wenn dies gelingt, wirkt der Raum abwechslungsreicher und lädt zum Verweilen ein. Wir haben uns auch noch was ganz Neues überlegt. Auf der oberen Etage wollen wir eine Espresso-Bar integrieren, die zu einer entspannten Atmosphäre beitragen soll. Außerdem setzen wir auf eine andere Lichtplanung. Da Umfragen immer wieder gezeigt haben, dass sich die Kundinnen und Kunden mit dem Licht nicht wohlfühlen. Besonders in den Umkleidekabinen ist Licht von oben unvorteilhaft und sorgt dafür, dass Farben nicht richtig zur Geltung kommen. Deshalb wollen wir in der neuen Filiale ein neues System ausprobieren. So werden wir warmes gedämpftes Licht einsetzen, das Gesicht und Körper schattenfrei ausleuchtet. Außerdem wird der authentische Look der Kleidung gewahrt, so lassen sich Blau und Schwarz gut unterscheiden. Wenn sich dies bewährt, wollen wir auch die alten Filialen umrüsten."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Ich hätte da auch noch eine Frage."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, bitte, Frau Dörfer."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Gibt es auch Änderungen beim Warensortiment?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, das wird sich tatsächlich auch von dem in den anderen Läden unterscheiden. Eine Marktanalyse hat ergeben, dass die zu erwartende Kundschaft vorwiegend trendorientiert ist und auch bereit ist, für qualitativ hochwertige Mode etwas mehr zu bezahlen. Wir wollen einerseits diese Käufergruppe bedienen, aber andererseits auch andere finanziell besser Gestellte nicht ausschließen. Denn gerade in Frankfurt ist die Kaufkraft besonders hoch, sodass wir auch hier unsere exklusive Designer Linie an die Frau bzw. an den Mann bringen können und sollten. Weiterhin haben wir uns dazu entschieden, auf nur vier Kollektionen im Jahr zu setzen. Dieses Konzept lässt sich gut mit unserem Anspruch an nachhaltige Mode vereinbaren und geht auf die Agentur Neuer zurück. Ja, das war alles von meiner Seite. Haben Sie denn noch weitere Fragen? Im Moment nicht? Gut, dann können wir unsere Sitzung schließen. Bis nächste Woche."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die neue Werbekampagne",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist schon fertig."
+        },
+        {
+         "key": "b",
+         "text": "wird intern konzipiert."
+        },
+        {
+         "key": "c",
+         "text": "gestaltet eine Agentur."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 33,
+       "prompt": "Die sozialen Medien werden dazu genutzt, um",
+       "options": [
+        {
+         "key": "a",
+         "text": "aktiv neue Bewerber zu finden."
+        },
+        {
+         "key": "b",
+         "text": "Bewerbungsgespräche zu führen."
+        },
+        {
+         "key": "c",
+         "text": "die Bewerber besser kennenzulernen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Neue Filiale in Frankfurt wird",
+       "options": [
+        {
+         "key": "a",
+         "text": "ein Modell für andere Filialen."
+        },
+        {
+         "key": "b",
+         "text": "?"
+        },
+        {
+         "key": "c",
+         "text": "zurzeit neu ausgearbeitet."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Im Kaufhaus wird",
+       "options": [
+        {
+         "key": "a",
+         "text": "in allen Läden das gleiche Sortiment angeboten."
+        },
+        {
+         "key": "b",
+         "text": "nur teure Kleidung."
+        },
+        {
+         "key": "c",
+         "text": "Kleidung mit guter Qualität verkauft."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/190823"
+  },
+  {
+   "id": "hoeren_3_v5_c",
+   "part": "HOEREN_3",
+   "title": "Вариант 5 · новая версия вопроса 35 (21.12.24, 17.05.25)",
+   "note": "100%",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Eröffnung der neuen Filiale in Frankfurt",
+     "transcript": [
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Zum Schluss unserer wöchentlichen Teamleitersitzung noch ein kurzes Update zur Eröffnung der neuen Filiale in Frankfurt. Wie Sie ja bereits wissen, sind wir aktuell nur in Norddeutschland zu finden und wollen nun auch andere Regionen erobern. Wir, die Geschäftsführung, sind davon überzeugt, dass unsere junge Mode in ganz Deutschland positiv aufgenommen werden wird. Wir haben nun das Glück, dass gerade in einer Ladenzeile im Zentrum Frankfurts ein Geschäft frei wird, das in der Größe genau passt. Es ist ca. 1000 Quadratmeter groß und hat zwei Stockwerke. Das hat den Vorteil, dass wir die exklusivere und die preisgünstigere Mode räumlich voneinander trennen können."
+      },
+      {
+       "speaker": "Herr 1",
+       "gender": "m",
+       "text": "Ich bin sehr gespannt, wie das Frankfurter Publikum unsere Kleidung annimmt."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Hoffentlich gut. Damit dies gelingt, müssen wir jetzt als erstes das Geschäft einrichten, Verkaufspersonal finden und schließlich die Kunden durch gezielte Werbung auf unsere Neueröffnung aufmerksam und neugierig machen. Wir haben wieder die Agentur Neuer beauftragt, einen Vorschlag zu entwickeln. Wie Sie ja wissen, hat sie schon die Werbung für die anderen Geschäfte gemacht. In circa zwei Wochen wird dieser vorliegen. Wir planen klassische Werbung im Radio und mit Flyern. Außerdem soll eine E-Mail-Kampagne gestartet werden. Und in den sozialen Medien sind wir ja sowieso aktiv vertreten. Auf Zeitungsanzeigen werden wir diesmal jedoch verzichten, weil sich das letzte Mal schon gezeigt hat, dass wir damit unsere Zielgruppe nicht erreichen."
+      },
+      {
+       "speaker": "Frau 1",
+       "gender": "f",
+       "text": "Für wann ist denn die Eröffnung geplant?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Wir wollen das Geschäft am 1. Juli eröffnen. Der Vormieter wird die Räumlichkeiten zum nächsten Ersten verlassen. Dann bleibt genug Zeit für den Umbau und die Einrichtung des Ladens. Parallel dazu suchen wir auch schon nach Personal. Das scheint aber nicht so schwer zu sein. Wir waren positiv überrascht, wie viele vielversprechende Bewerber sich schon bei uns gemeldet haben. Die Schwierigkeit ist nun eher, daraus eine Auswahl zu treffen. Deshalb werden wir erst mal Ihre Profile in den sozialen Medien angucken und dann entscheiden, wer in die engere Wahl kommt."
+      },
+      {
+       "speaker": "Herr 2",
+       "gender": "m",
+       "text": "Ich hätte noch eine Frage zum ersten Punkt. Wie soll denn die Filiale eingerichtet werden? Übernehmen wir das Konzept, das wir auch an den anderen Standorten haben, oder soll hier etwas Neues ausprobiert werden?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Nun, wir werden relativ große Verkaufsräume haben. Daher müssen wir uns überlegen, wie wir die Fläche geschickt unterteilen. Denn wenn dies gelingt, wirkt der Raum abwechslungsreicher und lädt zum Verweilen ein. Wir haben uns auch noch was ganz Neues überlegt. Auf der oberen Etage wollen wir eine Espresso-Bar integrieren, die zu einer entspannten Atmosphäre beitragen soll. Außerdem setzen wir auf eine andere Lichtplanung. Da Umfragen immer wieder gezeigt haben, dass sich die Kundinnen und Kunden mit dem Licht nicht wohlfühlen. Besonders in den Umkleidekabinen ist Licht von oben unvorteilhaft und sorgt dafür, dass Farben nicht richtig zur Geltung kommen. Deshalb wollen wir in der neuen Filiale ein neues System ausprobieren. So werden wir warmes gedämpftes Licht einsetzen, das Gesicht und Körper schattenfrei ausleuchtet. Außerdem wird der authentische Look der Kleidung gewahrt, so lassen sich Blau und Schwarz gut unterscheiden. Wenn sich dies bewährt, wollen wir auch die alten Filialen umrüsten."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Ich hätte da auch noch eine Frage."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, bitte, Frau Dörfer."
+      },
+      {
+       "speaker": "Frau 2",
+       "gender": "f",
+       "text": "Gibt es auch Änderungen beim Warensortiment?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ja, das wird sich tatsächlich auch von dem in den anderen Läden unterscheiden. Eine Marktanalyse hat ergeben, dass die zu erwartende Kundschaft vorwiegend trendorientiert ist und auch bereit ist, für qualitativ hochwertige Mode etwas mehr zu bezahlen. Wir wollen einerseits diese Käufergruppe bedienen, aber andererseits auch andere finanziell besser Gestellte nicht ausschließen. Denn gerade in Frankfurt ist die Kaufkraft besonders hoch, sodass wir auch hier unsere exklusive Designer Linie an die Frau bzw. an den Mann bringen können und sollten. Weiterhin haben wir uns dazu entschieden, auf nur vier Kollektionen im Jahr zu setzen. Dieses Konzept lässt sich gut mit unserem Anspruch an nachhaltige Mode vereinbaren und geht auf die Agentur Neuer zurück. Ja, das war alles von meiner Seite. Haben Sie denn noch weitere Fragen? Im Moment nicht? Gut, dann können wir unsere Sitzung schließen. Bis nächste Woche."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die neue Werbekampagne",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist schon fertig."
+        },
+        {
+         "key": "b",
+         "text": "wird intern konzipiert."
+        },
+        {
+         "key": "c",
+         "text": "gestaltet eine Agentur."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 33,
+       "prompt": "Die sozialen Medien werden dazu genutzt, um",
+       "options": [
+        {
+         "key": "a",
+         "text": "aktiv neue Bewerber zu finden."
+        },
+        {
+         "key": "b",
+         "text": "Bewerbungsgespräche zu führen."
+        },
+        {
+         "key": "c",
+         "text": "die Bewerber besser kennenzulernen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Das Beleuchtungskonzept der anderen Filialen",
+       "options": [
+        {
+         "key": "a",
+         "text": "führte zu Unzufriedenheit bei der Kundschaft."
+        },
+        {
+         "key": "b",
+         "text": "soll als Modell für die neue Filiale dienen."
+        },
+        {
+         "key": "c",
+         "text": "wird zurzeit neu ausgearbeitet."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Das Modehaus",
+       "options": [
+        {
+         "key": "a",
+         "text": "bietet in allen Filialen das gleiche Sortiment an."
+        },
+        {
+         "key": "b",
+         "text": "in Frankfurt arbeitet nur für reiche Kundinnen und Kunden. / hat in Frankfurt nur reiche Kundinnen und Kunden."
+        },
+        {
+         "key": "c",
+         "text": "hat Ware von hoher Qualität."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/190823"
+  },
+  {
+   "id": "hoeren_3_v5_d",
+   "part": "HOEREN_3",
+   "title": "Вариант 5 · другое аудио (Werbekampagne)",
+   "note": "100%. Звуковая дорожка от 03.04.25 (Hören 7-й вариант, 070201)",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Werbekampagne",
+     "transcript": [
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Guten Morgen alle zusammen. Ich hoffe, Sie hatten alle einen guten Start in den Tag. Bevor wir gleich in den Arbeitsalltag starten, möchte ich die Gelegenheit nutzen, um Sie über ein wirklich spannendes Projekt zu informieren. Wir arbeiten schon seit einiger Zeit daran und jetzt, da die ersten Schritte in die Wege geleitet sind, möchte ich Sie alle ins Boot holen. Es geht um unsere neue Werbekampagne. Sie wissen ja, dass unser altes Konzept in den letzten Jahren wirklich gut funktioniert hat. Aber, wie das so ist, wir müssen uns weiterentwickeln und die Zeit steht ja bekanntlich nicht still, richtig? Deshalb habe ich beschlossen, dass wir dieses Mal eine völlig neue Richtung einschlagen. Und ja, bevor die Frage aufkommt, ich habe eine professionelle Agentur damit beauftragt, uns dabei zu unterstützen. Die Jungs und Mädels von dieser Agentur, ich sage Ihnen, die haben wirklich was drauf. Wir haben ja schon einmal mit ihnen zusammengearbeitet und das hat damals super geklappt."
+      },
+      {
+       "speaker": "Herr Müller",
+       "gender": "m",
+       "text": "Ah, das klingt spannend. Und ich nehme an, die Agentur übernimmt dann alles komplett. Oder wie läuft das?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ganz genau, Herr Müller, wobei wir natürlich auch unseren Input geben werden. Es soll ja am Ende auch zu uns passen. Wir haben regelmäßige Meetings mit der Agentur, um sicherzustellen, dass die Kampagne wirklich unsere Botschaft transportiert. Aber die grobe Gestaltung liegt bei ihnen. Der erste Entwurf soll schon nächsten Monat kommen. Wenn alles nach Plan läuft, können wir im Frühling richtig durchstarten."
+      },
+      {
+       "speaker": "Frau Meier",
+       "gender": "f",
+       "text": "Aha, das klingt vielversprechend. Und werden wir dann auch verstärkt auf soziale Medien setzen? Sie wissen ja, das ist heutzutage fast wichtiger als klassische Werbung."
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Genau, das ist ein großer Punkt, Frau Meier. Die sozialen Netzwerke spielen eine enorm wichtige Rolle in der neuen Kampagne. Wir wollen sie nicht nur nutzen, um unsere Produkte zu bewerben, sondern auch, um potenzielle Mitarbeiter anzusprechen. Es ist kein Geheimnis, dass viele junge Talente über Plattformen wie LinkedIn oder Instagram auf uns aufmerksam werden. Bevor wir uns in den klassischen Bewerbungsprozess stürzen, möchten wir da schon früh Kontakt aufnehmen. So können wir die Bewerber auch ein wenig besser kennenlernen, bevor es zu einem Vorstellungsgespräch kommt."
+      },
+      {
+       "speaker": "Herr Müller",
+       "gender": "m",
+       "text": "Und wie sieht es eigentlich mit unserer neuen Filiale aus? Da war doch die Rede von einem speziellen Beleuchtungskonzept, oder?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Ganz richtig. Da sind wir noch mitten in der Planung. Es hat sich herausgestellt, dass einige Kunden mit der bisherigen Beleuchtung in den anderen Filialen nicht ganz zufrieden waren. Es war manchmal etwas dunkel und das passt einfach nicht zu unserem Image. Deswegen arbeiten wir gerade an einem komplett neuen Konzept, das wir zunächst in der neuen Filiale testen wollen. Wenn es gut ankommt, wird das dann das Modell für alle zukünftigen Standorte. Ich denke, das wird ein echter Hingucker."
+      },
+      {
+       "speaker": "Frau Meier",
+       "gender": "f",
+       "text": "Und was sagen unsere Kunden zu den Produkten? Haben wir da schon Feedback, wie sie die aktuellen Kollektionen finden?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Oh ja, das Feedback ist super. Wir haben wirklich viele Rückmeldungen bekommen und es ist ganz klar, unsere Kunden legen viel mehr Wert auf Qualität als auf den Preis. Das hat mich ehrlich gesagt ein wenig überrascht, aber es zeigt, dass wir auf dem richtigen Weg sind. Natürlich müssen wir darauf achten, weiterhin diesen hohen Qualitätsstandard zu halten. Aber keine Sorge, wir haben da schon einige Ideen, wie wir das noch weiter ausbauen können."
+      },
+      {
+       "speaker": "Herr Müller",
+       "gender": "m",
+       "text": "Aber sagen Sie mal, wann geht das denn alles los? Ich meine, die neue Kampagne und das neue Beleuchtungskonzept, wann sehen wir da die ersten Ergebnisse?"
+      },
+      {
+       "speaker": "Leiterin",
+       "gender": "f",
+       "text": "Gute Frage. Also, was die Werbekampagne angeht, habe ich bereits mit der Agentur vereinbart, dass die ersten Entwürfe Mitte nächsten Monats kommen. Da werden wir dann noch ein paar Feinheiten anpassen und spätestens im Frühling sollte alles startklar sein. Was das Beleuchtungskonzept angeht, da müssen wir noch ein bisschen Geduld haben. Das wird Schritt für Schritt umgesetzt und ich denke, es wird Ende des Sommers, bis wir alle Filialen umgestellt haben. Aber ich kann Ihnen versprechen, dass es die Mühe wert sein wird."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die Werbekampagne",
+       "options": [
+        {
+         "key": "a",
+         "text": "gestaltet eine Agentur."
+        },
+        {
+         "key": "b",
+         "text": "ist schon fertig."
+        },
+        {
+         "key": "c",
+         "text": "wird intern konzipiert."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 33,
+       "prompt": "Die sozialen Medien werden dazu genutzt, um",
+       "options": [
+        {
+         "key": "a",
+         "text": "aktiv neue Bewerber zu finden."
+        },
+        {
+         "key": "b",
+         "text": "Bewerbungsgespräche zu führen."
+        },
+        {
+         "key": "c",
+         "text": "die Bewerber besser kennenzulernen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Das Beleuchtungskonzept der anderen Filialen",
+       "options": [
+        {
+         "key": "a",
+         "text": "führte zu Unzufriedenheit bei der Kundschaft."
+        },
+        {
+         "key": "b",
+         "text": "soll als Modell für die neue Filiale dienen."
+        },
+        {
+         "key": "c",
+         "text": "wird zurzeit neu ausgearbeitet."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Kundschaft",
+       "options": [
+        {
+         "key": "a",
+         "text": "achtet mehr auf die Qualität als auf den Preis."
+        },
+        {
+         "key": "b",
+         "text": "interessiert sich ausschließlich für Luxusmode."
+        },
+        {
+         "key": "c",
+         "text": "bevorzugt Mode im unteren Preisbereich."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/171846"
+  },
+  {
+   "id": "hoeren_3_v6",
+   "part": "HOEREN_3",
+   "title": "Вариант 6",
+   "note": "Тест № 150321, 150301. Звуковая дорожка от 28.01.25",
+   "segments": [
+    {
+     "title": "Nummer 32–35 · Das Bonussystem",
+     "transcript": [
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Nun zu einem weiteren Punkt unserer Tagesordnung. Der Vorstand hat beschlossen, im Unternehmen ein sogenanntes Bonussystem für die Mitarbeiter*innen einzuführen. Was meinen wir damit? Wir stellen uns vor, dass sowohl jede und jeder Einzelne, als auch Abteilungen und Teams von den Erfolgen der Firma profitieren, indem besondere Leistungen extra belohnt werden. Wir erwarten uns davon, dass die Motivation aller Mitarbeitenden, sich für das Unternehmen einzusetzen, gesteigert wird."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Das klingt ja prinzipiell sehr interessant, aber geht es dabei nicht eher um einen Wettbewerb unter den Mitarbeiter*innen? Das würde die Stimmung im Unternehmen sicherlich verschlechtern."
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Das ist eine berechtigte Frage, Frau Schmidt. Genau darüber haben wir auch viel diskutiert. Wir werden ein System einführen, das die Einschätzung der einzelnen Personen wie auch der Abteilungen gleichermaßen in Betracht zieht. Dafür haben wir zwei Fragebögen erstellt. Einen für die Mitarbeitenden und einen anderen für die einzelnen Abteilungen. Zunächst soll mit den Fragebögen grundsätzlich das Kompetenzprofil von jedem Einzelnen und auch von jeder Abteilung erfasst werden. Dazu gehören solche Informationen wie die Qualifikationen, Ausbildungen und Berufserfahrungen. Gleichzeitig sollen auf der Basis dieser Informationen auch die Entwicklungsmöglichkeiten innerhalb des Betriebs ermittelt werden. Im Gegensatz dazu geht es bei den Zielen der Abteilungen beispielsweise um Kostenersparnis und Umsatzsteigerung."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Werden dann auch die Interessen von uns Mitarbeitenden dabei berücksichtigt? Also ich meine, kann man auch Wünsche äußern?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ja, natürlich. Wenn Sie das auf Ihre persönliche Karriereentwicklung beziehen, ist dieses Feedback sogar sehr wichtig. Wir möchten unter anderem von Ihnen gerne erfahren, ob Sie bei Ihrer Arbeit persönliche Entwicklungsmöglichkeiten sehen. Dazu kommt aber auch noch eine Analyse Ihrer Stärken und Schwächen, die uns und Ihnen ein klares Bild Ihrer Kompetenzen geben. Jetzt mal ein Beispiel. Für uns als Arbeitgeber ist die Pünktlichkeit von großem Interesse. Damit meinen wir nicht, dass Sie jeden Morgen pünktlich am Arbeitsplatz erscheinen, sondern eher, ob Sie Ihre Arbeit fristgerecht und sorgfältig ausführen. Das ist das, was man allgemein unter gutem Zeitmanagement versteht. Ein weiteres Kriterium ist auch die Bereitschaft an Weiterbildungsseminaren teilzunehmen. Wie Sie ja selber wissen, muss man immer auf dem neuesten Stand sein."
+      },
+      {
+       "text": "Nach Ablauf von zwölf Monaten wird dann ein erstes obligatorisches Feedback-Gespräch zwischen den Mitarbeitenden und den Vorgesetzten geführt und geschaut, wie die Entwicklung war. Diese Gespräche sollten von beiden Seiten, also vom Arbeitgeber und vom Arbeitnehmer, gleichermaßen gut vorbereitet sein. Hierzu sollten beide Seiten im Laufe des Jahres Notizen zur gelungenen Umsetzung der Ziele machen, um dann gemeinsam zu schauen, was und wie etwas erreicht wurde und warum etwas vielleicht nicht erreicht wurde. Das ermöglicht uns auch zukünftig, die Mitarbeiter*innen ihren Ressourcen und Wünschen entsprechend optimal im Unternehmen beziehungsweise in der Abteilung einzusetzen, wovon sowohl Sie als Arbeitnehmer*innen als auch wir als Arbeitgeber profitieren. Je nachdem, inwieweit die gemeinsam vereinbarten Ziele erreicht wurden, werden Punkte vergeben. Und ab einer bestimmten Punktzahl gibt es Prämien.",
+       "speaker": "Chefin",
+       "gender": "f"
+      },
+      {
+       "speaker": "TN 3",
+       "text": "Und was für Prämien sind das?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Bei den Prämien denken wir an Leistungen wie zum Beispiel an einen Zuschuss für eine Mitgliedschaft im Fitnessstudio oder auch an einen Tankgutschein. Diese Gutscheine sind jeweils zwölf Monate gültig und können nicht ausgezahlt werden."
+      },
+      {
+       "speaker": "TN 2",
+       "text": "Könnte man nicht auch andere Sachen, wie zum Beispiel Eintrittskarten für die ganze Familie in den Zoo, in einen Freizeitpark oder in ein Erlebnisbad bekommen?"
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ja, wir sind da ganz offen. Gerne können Sie Ihre Ideen an uns weiterleiten. Das gleiche gilt auch, wenn wir die Boni für die Abteilungen betrachten. Wir denken in die Richtung gemeinsame Städtereisen oder andere Wochenendausflüge. Aber auch ein Bowling-Abend mit Kolleg*innen und anschließendem Restaurantbesuch wäre möglich."
+      },
+      {
+       "speaker": "TN 1",
+       "text": "Das klingt nach einem gut durchdachten und fairen System."
+      },
+      {
+       "speaker": "Chefin",
+       "gender": "f",
+       "text": "Ja, das denken wir auch. So erwarten wir uns davon natürlich nicht nur eine Produktivitätssteigerung und zufriedenere Kunden, sondern auch engagiertere Mitarbeitende. Gemeinsam erreichte Ziele stärken das Zusammengehörigkeitsgefühl genauso wie gemeinsame Aktivitäten, die aufgrund des Bonus-Systems unternommen werden können. Das geht auch um Spaß, denn schließlich ist Arbeit nur das halbe Leben."
+      }
+     ],
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Das Bonussystem",
+       "options": [
+        {
+         "key": "a",
+         "text": "dient der Einsatzbereitschaft der Mitarbeitenden."
+        },
+        {
+         "key": "b",
+         "text": "verstärkt die Konkurrenz unter den Kollegen."
+        },
+        {
+         "key": "c",
+         "text": "wird von den Mitarbeitenden gefordert."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 33,
+       "prompt": "Mit den Fragebögen wird",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Stimmung im Unternehmen ermittelt."
+        },
+        {
+         "key": "b",
+         "text": "die Entwicklung der Firma dokumentierte."
+        },
+        {
+         "key": "c",
+         "text": "ein Mitarbeiterprofil erstellt."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 34,
+       "prompt": "Das erste Gespräch",
+       "options": [
+        {
+         "key": "a",
+         "text": "findet nach einem Jahr statt."
+        },
+        {
+         "key": "b",
+         "text": "ist freiwillig."
+        },
+        {
+         "key": "c",
+         "text": "muss nicht vorbereitet werden."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 35,
+       "prompt": "Als Bonus für gute Leistungen",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommen alle Mitarbeitenden Geld."
+        },
+        {
+         "key": "b",
+         "text": "erhalten die Angestellten eine Sachleistung."
+        },
+        {
+         "key": "c",
+         "text": "gehen die Mitarbeitenden mit den Familien essen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/153246"
+  },
+  {
+   "id": "hoeren_3_v7",
+   "part": "HOEREN_3",
+   "title": "Вариант 7",
+   "note": "Тест № 140321, 140301. В источнике нет аудио и текста, только вопросы",
+   "segments": [
+    {
+     "title": "Nummer 32–35",
+     "questions": [
+      {
+       "number": 32,
+       "prompt": "Die Kita plant,",
+       "options": [
+        {
+         "key": "a",
+         "text": "ausschließlich Auszubildende einzusetzen."
+        },
+        {
+         "key": "b",
+         "text": "die Mitarbeitenden zu motivieren."
+        },
+        {
+         "key": "c",
+         "text": "neues Personal rekrutieren."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 33,
+       "prompt": "In jedem Team",
+       "options": [
+        {
+         "key": "a",
+         "text": "arbeiten Erzieher*innen gleichen Alters."
+        },
+        {
+         "key": "b",
+         "text": "können Springer*innen eingesetzt werden."
+        },
+        {
+         "key": "c",
+         "text": "sind vier Betreuer*innen tätig."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 34,
+       "prompt": "Die Kitaleitung",
+       "options": [
+        {
+         "key": "a",
+         "text": "führt bereits Vorstellungsgespräche."
+        },
+        {
+         "key": "b",
+         "text": "hat die Teams zusammengestellt."
+        },
+        {
+         "key": "c",
+         "text": "organisiert Workshops für die Mitarbeitenden."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 35,
+       "prompt": "Die Mitarbeitenden sollen",
+       "options": [
+        {
+         "key": "a",
+         "text": "an einem Kochkurs teilnehmen."
+        },
+        {
+         "key": "b",
+         "text": "besser zusammenarbeiten."
+        },
+        {
+         "key": "c",
+         "text": "ihre Persönlichkeit stärken."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

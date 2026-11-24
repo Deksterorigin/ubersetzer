@@ -28,6 +28,11 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.deutschlern.R
+import app.deutschlern.ui.exam.ExamGuideScreen
+import app.deutschlern.ui.exam.ExamHubScreen
+import app.deutschlern.ui.exam.ExamPartScreen
+import app.deutschlern.ui.exam.ExamSpeakingScreen
+import app.deutschlern.ui.exam.ExamVariantScreen
 import app.deutschlern.ui.onboarding.OnboardingExit
 import app.deutschlern.ui.onboarding.OnboardingScreen
 import app.deutschlern.ui.review.ReviewScreen
@@ -207,11 +212,50 @@ fun AppNavigation(
             }
             composable(Screen.Review.route) {
                 ReviewScreen(
-                    onOpenTrainer = { mode, pool -> navController.navigate(Screen.Trainer.createRoute(mode, pool)) }
+                    onOpenTrainer = { mode, pool -> navController.navigate(Screen.Trainer.createRoute(mode, pool)) },
+                    onOpenExamHub = { navController.navigate(Screen.ExamHub.route) }
                 )
             }
             composable(Screen.Trainer.route) {
                 TrainerScreen(onBack = { navController.popBackStack() })
+            }
+            composable(Screen.ExamHub.route) {
+                ExamHubScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenPart = { part -> navController.navigate(Screen.ExamPart.createRoute(part)) },
+                    onOpenSpeaking = { teil -> navController.navigate(Screen.ExamSpeaking.createRoute(teil)) },
+                    onOpenGuide = { navController.navigate(Screen.ExamGuide.route) }
+                )
+            }
+            composable(
+                route = Screen.ExamPart.route,
+                arguments = listOf(androidx.navigation.navArgument("part") { type = androidx.navigation.NavType.StringType })
+            ) {
+                ExamPartScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenVariant = { id -> navController.navigate(Screen.ExamVariant.createRoute(id)) }
+                )
+            }
+            composable(
+                route = Screen.ExamVariant.route,
+                arguments = listOf(androidx.navigation.navArgument("variantId") { type = androidx.navigation.NavType.StringType })
+            ) {
+                ExamVariantScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenSettings = { navController.navigate(Screen.Settings.route) }
+                )
+            }
+            composable(
+                route = Screen.ExamSpeaking.route,
+                arguments = listOf(androidx.navigation.navArgument("teil") { type = androidx.navigation.NavType.StringType })
+            ) {
+                ExamSpeakingScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenSettings = { navController.navigate(Screen.Settings.route) }
+                )
+            }
+            composable(Screen.ExamGuide.route) {
+                ExamGuideScreen(onBack = { navController.popBackStack() })
             }
             composable(Screen.Settings.route) {
                 SettingsScreen(

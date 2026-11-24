@@ -1,0 +1,1232 @@
+{
+  "part": "LESEN_2",
+  "variants": [
+    {
+      "id": "lesen_2_t1_v1",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 1",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Zugangskontrolle und Zeiterfassung\nAls Mitarbeiterinnen und Mitarbeiter erhalten Sie zu Beginn Ihres Arbeitsverhältnisses einen Firmenausweis mit Chip-Karte. Dieser berechtigt zum Zugang in das Unternehmensgebäude und dient gleichzeitig zur Erfassung der Arbeitszeit. Außerdem können Sie mit Ihrem Firmenausweis in der Kantine und am Getränkeautomaten bezahlen und das hauseigene Fitnessstudio benutzen.\nNeben den Aufzügen im Erdgeschoss finden Sie ein digitales Zeiterfassungsgerät. Bitte halten Sie beim Betreten und Verlassen des Gebäudes Ihren Firmenausweis an die blau markierte Fläche und vergewissern Sie sich, dass die Zeit des Arbeitsbeginns und Arbeitsendes richtig erfasst wurde. Dies erkennen Sie anhand der Anzeige des Geräts, die Ihnen Ihre monatliche Arbeitszeit anzeigt.\nDie Zeiterfassung berechnet automatisch die reguläre Arbeitszeit sowie eventuelle Über- als auch Minusstunden. Die Personalabteilung richtet Ihnen einen Zugang zu unserem Arbeitskonten-System PersoTime ein. Damit können Sie im Intranet Ihr Arbeitszeitkonto jederzeit einsehen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Der Firmenausweis hat neben der Arbeitszeiterfassung auch andere Funktionen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Überstunden",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "können online eingesehen werden."
+                },
+                {
+                  "key": "b",
+                  "text": "sind in der Firma grundsätzlich nicht erlaubt."
+                },
+                {
+                  "key": "c",
+                  "text": "werden von der Zeiterfassung nicht registriert."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v1_b",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 1 · новый вариант",
+      "note": "Новый вариант, 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Zugangskontrolle und Zeiterfassung\nAls Mitarbeiterinnen und Mitarbeiter erhalten Sie zu Beginn Ihres Arbeitsverhältnisses einen Firmenausweis mit Chip-Karte. Dieser berechtigt zum Zugang in das Unternehmensgebäude und dient gleichzeitig zur Erfassung der Arbeitszeit. Außerdem können Sie mit Ihrem Firmenausweis in der Kantine und am Getränkeautomaten bezahlen und das hauseigene Fitnessstudio benutzen.\nNeben den Aufzügen im Erdgeschoss finden Sie ein digitales Zeiterfassungsgerät. Bitte halten Sie beim Betreten und Verlassen des Gebäudes Ihren Firmenausweis an die blau markierte Fläche und vergewissern Sie sich, dass die Zeit des Arbeitsbeginns und Arbeitsendes richtig erfasst wurde. Dies erkennen Sie anhand der Anzeige des Geräts, die Ihnen Ihre monatliche Arbeitszeit anzeigt.\nDie Zeiterfassung berechnet automatisch die reguläre Arbeitszeit sowie eventuelle Über- als auch Minusstunden. Die Personalabteilung richtet Ihnen einen Zugang zu unserem Arbeitskonten-System PersoTime ein. Damit können Sie im Intranet Ihr Arbeitszeitkonto jederzeit einsehen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Ein Firmenausweis kann innerhalb des Firmengebäudes als Zahlungsmittel verwendet werden. / Der Firmenausweis dient als firmeninternes Zahlungsmittel.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Das persönliche Arbeitszeitkonto",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ist nur über die Personalabteilung einsehbar. / kann in der Personalabteilung eingesehen werden."
+                },
+                {
+                  "key": "b",
+                  "text": "buchen die Mitarbeiter ihre Stunden selbst. / müssen die Mitarbeiter selbst anlegen."
+                },
+                {
+                  "key": "c",
+                  "text": "wird täglich aktualisiert."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v2",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 2",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Arbeitszeit\nIn unserem Unternehmen arbeiten wir nach dem Gleitzeitsystem. Die Kernarbeitszeit ist Montag bis Freitag zwischen 9.00 Uhr und 15.30 Uhr. In dieser Zeit müssen alle Mitarbeitenden anwesend sein. Jede Abwesenheit während dieser Zeit muss genehmigt sein.\nDie tägliche Rahmenarbeitszeit ist von 6.00 Uhr bis 19.30 Uhr. Bitte beachten Sie, dass innerhalb dieses Zeitrahmens maximal acht, in Ausnahmefällen zehn, Stunden täglich gearbeitet werden darf.\nAlle Mitarbeitenden müssen beim Betreten und Verlassen des Gebäudes mit der Zeiterfassungskarte am Lesegerät ein- und ausstechen. So wird die tägliche Arbeitszeit auf dem Zeitkonto festgehalten. Dieses kann jederzeit am Lesegerät eingesehen werden.\nBei entsprechendem Guthaben kann einmal pro Monat ein ganzer Arbeitstag (acht Stunden) als Gleitzeittag genommen werden. Zu berücksichtigen ist, dass ein Minuskontostand im Folgemonat auszugleichen ist. Zusätzlich können im Monat Dezember bis zu vier Arbeitstage als Gleitzeittage genommen werden, um sie zwischen Weihnachten und Neujahr zu nutzen, wenn das Arbeitszeitkonto ein ausreichendes Guthaben aufweist."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Bei Gleitzeit können Mitarbeitende täglich beliebig viele Stunden arbeiten.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 7,
+              "prompt": "Durch Gleitzeit ist es den Mitarbeitenden möglich,",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "ein Stundenguthaben aufzubauen."
+                },
+                {
+                  "key": "b",
+                  "text": "jeden Monat einige Tage freizunehmen."
+                },
+                {
+                  "key": "c",
+                  "text": "täglich mehr als acht Stunden zu arbeiten."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v2_b",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 2 · новый вариант",
+      "note": "Новый вариант",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Arbeitszeit\nDie wöchentliche Arbeitszeit beträgt 40 Stunden - bei einem Arbeitstag von acht Stunden, wobei die Pausen nicht mitgerechnet werden. Es gilt die Fünf-Tage-Woche. Betriebsbedingt ist es möglich, dass Sie bis zu zehn Stunden pro Tag arbeiten. Diese Mehrarbeit ist aber nur in Ausnahmefällen erlaubt und muss innerhalb von sechs Monaten durch entsprechend kürzerer Arbeitstage ausgeglichen werden.\nWir haben flexible Arbeitszeiten. Sie können selbst bestimmen, wann Sie morgens anfangen zu arbeiten und wann Sie aufhören. Zwischen 10 und 15 Uhr, in der sogenannten Kernzeit, müssen Sie jedoch anwesend sein. Gleitzeiten sind zwischen 8 und 10 Uhr und 15 und 17 Uhr. Innerhalb dieser Zeiten können Sie anfangen bzw. aufhören zu arbeiten. Aus betrieblichen Gründen kann der Arbeitgeber die Gleitzeit für eine gewisse Zeit aussetzen.\nUnser elektronisches Zeiterfassungssystem registriert täglich die Zahl der von Ihnen geleisteten Arbeitsstunden auf Ihrem persönlichen Arbeitszeitkonto. Haben Sie in einer Woche mehr als 40 Stunden gearbeitet, sollten Ihre Überstunden bereits vor Monatsende durch weniger Arbeit abgebaut werden. Wenn ein Abbau nicht möglich ist, wird mit der Geschäftsführung eine rasche Lösung besprochen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Die Beschäftigten dürfen mit der Arbeit anfangen, wann sie wollen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 7,
+              "prompt": "Ergibt sich auf einem Arbeitszeitkonto ein Plus,",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "kann der Betrieb den Acht-Stunden-Tag verlängern oder verkürzen."
+                },
+                {
+                  "key": "b",
+                  "text": "ist schnellstmöglich ein Ausgleich zu finden."
+                },
+                {
+                  "key": "c",
+                  "text": "kann der Betrieb die Gleitzeitregelungen ändern."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v3",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 3",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Urlaub\nJedem Mitarbeiter und jeder Mitarbeiterin in unserem Unternehmen stehen je nach Betriebszugehörigkeit bis zu 26 Tage Urlaub zu. Der Urlaub sollte nach Möglichkeit innerhalb des laufenden Kalenderjahres genommen werden. In Ausnahmefällen kann diese Frist bis zum 31.3. des Folgejahres verlängert werden.\nGrundsätzlich besteht der volle Urlaubsanspruch erst nach Ablauf der sechsmonatigen Probezeit. Ein anteiliger Urlaub ist jedoch nach Rücksprache auch bereits während dieser Zeit möglich.\nUrlaubsanträge für das folgende Kalenderjahr sind spätestens bis zum 15.11. mittels des dafür vorgesehenen Formulars beim Abteilungsleiter bzw. seiner Vertretung einzureichen. Den Urlaubswünschen der einzelnen Mitarbeiter wird entsprochen, sofern diese mit den Betriebsabläufen vereinbar sind. Sollten sich die beantragten Urlaubszeiten einzelner Kollegen und Kolleginnen überschneiden, wird nach sozialen Aspekten entschieden.\nDer Abteilungsleiter prüft alle Urlaubsanträge unverzüglich. Sollten die Wünsche der Mitarbeiter unvereinbar sein, wird der Betriebsrat mit dem Ziel der Einigung hinzugezogen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Im ersten halben Jahr nach Neueinstellung ist kein Urlaub möglich.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 7,
+              "prompt": "Urlaubsanträge müssen",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "durch den Betriebsrat genehmigt werden."
+                },
+                {
+                  "key": "b",
+                  "text": "in jedem Fall bewilligt werden."
+                },
+                {
+                  "key": "c",
+                  "text": "rechtzeitig im Vorjahr gestellt werden."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v4",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 4",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Regelungen am Arbeitsplatz\nEs ist wichtig, dass auf dem Betriebsgelände der AKO.KG alle Maßnahmen eingehalten werden, damit Sie sich selbst und andere nicht gefährden. Bei der Bedienung der Maschinen sind die jeweiligen Sicherheitsbestimmungen zu befolgen, angepasst an die neuen Richtlinien laut Arbeitsschutzgesetz vom Januar dieses Jahres. Die Sicherheitsbestimmungen finden Sie in der Anlage zu dieser Willkommensmappe und zusammengefasst auch auf Informationsblättern an den Maschinen.\nSollten Sie hierzu Fragen haben, setzen Sie sich bitte mit unserer Sicherheitsbeauftragten Frau Scholz, Zimmer 122, Durchwahl - 308, in Verbindung. Dies ist auch die Kontaktstelle für alle Störungen, Unfälle, Brand oder bei für Sie unklaren Situationen. In diesen Fällen kontaktieren Sie bitte auch immer den Empfang, Durchwahl -100.\nNach Verlassen der Werkstätten sind diese immer ordnungsgemäß abzuschließen, damit sich kein Unbefugter den Anlagen und Maschinen nähern kann. Der Arbeitsplatz muss sauber gehalten werden, damit umherliegender Unrat nicht zu einer Gefahrenquelle werden kann. Achten Sie dabei bitte auch auf die vorgeschriebene Trennung der Abfälle in die hierfür vorgesehenen Container im Hof.\nAuf dem gesamten Betriebsgelände ist Filmen und Fotografieren sowie der Konsum von Alkohol und Zigarettenkonsum nicht gestattet."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Die Regelungen am Arbeitsplatz wurden aktualisiert.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Auf dem Firmengelände",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "darf kein Abfall entsorgt werden."
+                },
+                {
+                  "key": "b",
+                  "text": "ist bei Gefahr Frau Scholz zu informieren."
+                },
+                {
+                  "key": "c",
+                  "text": "ist es nicht erlaubt, Nahrungsmittel zu sich zu nehmen."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v5",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 5",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Betriebssport\nSportliche Aktivitäten werden bei uns großgeschrieben. So bieten wir unseren Mitarbeitern im Untergeschoss einen Fitnessraum mit Bodenmatten und mehreren Fitnessgeräten, wie z B. zwei Indoor- Fahrradtrainern. Dieser ist für alle ganztägig frei und ohne Gebühr zugänglich und kann selbstverständlich auch in den Pausen genutzt werden.\nAußerdem nehmen wir als Unternehmen jedes Jahr am städtischen Firmenlauf teil. Es hat sich die Tradition entwickelt, dass sich die teilnehmenden Kolleginnen und Kollegen gemeinsam in einem wöchentlichen Lauftreff auf dieses Event vorbereiten. Dieser findet jeden Mittwoch um 17:30 Uhr statt.\nAbwechslungsreich gestaltete Arbeitsplätze in den Büros tragen zur Steigerung der Aktivität auch während der Arbeit bei und wirken den negativen Auswirkungen langen Sitzens entgegen. Alle Schreibtische sind höhenverstellbar, sodass Arbeiten auch im Stehen möglich ist.\nZusätzlich bieten wir das sogenannte „Deskbike\" an - eine Art Büro-Fahrrad, das sich einfach unter einen höhenverstellbaren Schreibtisch rollen lässt. Damit möchten wir Ihnen die Möglichkeit bieten, Ihre Gesundheit zu stärken. Nicht zuletzt macht Bewegung auch einfach Spaß."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Der Fitnessraum ist während der Arbeitszeit geöffnet.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Die Mitarbeiter",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "erhalten einen Zuschuss für ein Deskbike."
+                },
+                {
+                  "key": "b",
+                  "text": "haben teilweise spezielle Schreibtische in Stehhöhe."
+                },
+                {
+                  "key": "c",
+                  "text": "können das hausinterne Fitnessstudio gratis nutzen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v5_b",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 5 · другая версия",
+      "note": "100%; тест №150321, 150301",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Betriebssport\nSportliche Aktivitäten werden bei uns großgeschrieben. So bieten wir unseren Mitarbeitern im Untergeschoss einen Fitnessraum mit Bodenmatten und mehreren Fitnessgeräten, wie z B. zwei Indoor- Fahrradtrainern. Dieser ist für alle ganztägig frei und ohne Gebühr zugänglich und kann selbstverständlich auch in den Pausen genutzt werden.\nAußerdem nehmen wir als Unternehmen jedes Jahr am städtischen Firmenlauf teil. Es hat sich die Tradition entwickelt, dass sich die teilnehmenden Kolleginnen und Kollegen gemeinsam in einem wöchentlichen Lauftreff auf dieses Event vorbereiten. Dieser findet jeden Mittwoch um 17:30 Uhr statt.\nAbwechslungsreich gestaltete Arbeitsplätze in den Büros tragen zur Steigerung der Aktivität auch während der Arbeit bei und wirken den negativen Auswirkungen langen Sitzens entgegen. Alle Schreibtische sind höhenverstellbar, sodass Arbeiten auch im Stehen möglich ist.\nZusätzlich bieten wir das sogenannte „Deskbike\" an - eine Art Büro-Fahrrad, das sich einfach unter einen höhenverstellbaren Schreibtisch rollen lässt. Damit möchten wir Ihnen die Möglichkeit bieten, Ihre Gesundheit zu stärken. Nicht zuletzt macht Bewegung auch einfach Spaß."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Der Fitnessraum ist während der Arbeitszeit geöffnet.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Die Mitarbeiter",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "haben teilweise spezielle Schreibtische in Stehhöhe."
+                },
+                {
+                  "key": "b",
+                  "text": "können das hausinterne Fitnessstudio gratis nutzen."
+                },
+                {
+                  "key": "c",
+                  "text": "erhalten einen Zuschuss für ein Deskbike."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v6",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 6",
+      "note": "Вопрос 7 в источнике для этой версии не приведён",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Einführungstag\nUnsere Personalreferentin führt mehrmals jährlich einen Einführungstag für unsere neuen Mitarbeiterinnen und Mitarbeiter durch, an dem diese mit unterschiedlichen Arbeitsbereichen sowie den rechtlichen und organisatorischen Prozessen vertraut gemacht werden. Wir möchten darauf hinweisen, dass die Teilnahme an einer solchen Informationsveranstaltung verpflichtend ist. Am Einführungstag besteht außerdem die Möglichkeit, Kolleginnen und Kollegen aus anderen Abteilungen kennenzulernen. Die Abteilungsleiter werden bei dieser Gelegenheit in kurzen Worten einen Einblick in den Tätigkeitsbereich ihrer Teams geben.\nDa unser Unternehmen in einem hochsensiblen Bereich arbeitet, haben wir für unser gesamtes Gebäude ein komplexes Sicherheitssystem. Auch dieses stellen wir Ihnen im Rahmen des Orientierungstages im Detail vor. Weitere Einzelheiten zu diesem Tag, wie den Treffpunkt und den Ablauf, finden Sie in dieser Mappe. Eine gesonderte Anmeldung ist nicht erforderlich. Für Rückfragen zum Einführungstag steht die Personalabteilung gerne zur Verfügung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Alle Mitarbeiter (Mitarbeitende) müssen ein paar Mal pro Jahr am Einführungstag (einer Informationsveranstaltung) teilnehmen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v6_b",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 6 · новый вариант",
+      "note": "Новый вариант, 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Einführungstag\nUnsere Personalreferentin führt mehrmals jährlich einen Einführungstag für unsere neuen Mitarbeiterinnen und Mitarbeiter durch, an dem diese mit unterschiedlichen Arbeitsbereichen sowie den rechtlichen und organisatorischen Prozessen vertraut gemacht werden. Wir möchten darauf hinweisen, dass die Teilnahme an einer solchen Informationsveranstaltung verpflichtend ist. Am Einführungstag besteht außerdem die Möglichkeit, Kolleginnen und Kollegen aus anderen Abteilungen kennenzulernen. Die Abteilungsleiter werden bei dieser Gelegenheit in kurzen Worten einen Einblick in den Tätigkeitsbereich ihrer Teams geben.\nDa unser Unternehmen in einem hochsensiblen Bereich arbeitet, haben wir für unser gesamtes Gebäude ein komplexes Sicherheitssystem. Auch dieses stellen wir Ihnen im Rahmen des Orientierungstages im Detail vor. Weitere Einzelheiten zu diesem Tag, wie den Treffpunkt und den Ablauf, finden Sie in dieser Mappe. Eine gesonderte Anmeldung ist nicht erforderlich. Für Rückfragen zum Einführungstag steht die Personalabteilung gerne zur Verfügung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Neue Mitarbeiter sollten sich in der Personalabteilung zum Einführungstag anmelden.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 7,
+              "prompt": "Am Einführungstag",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "müssen sich die Teilnehmenden in der Personalabteilung melden."
+                },
+                {
+                  "key": "b",
+                  "text": "stellt ein Abteilungsleiter alle Kolleginnen und Kollegen vor."
+                },
+                {
+                  "key": "c",
+                  "text": "werden neue Mitarbeitende in die Sicherheitsregeln im Unternehmen eingeführt."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v6_c",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 6 · версия 21.12.24",
+      "note": "Новый вариант от 21.12.24",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Einführungstag\nUnsere Personalreferentin führt mehrmals jährlich einen Einführungstag für unsere neuen Mitarbeiterinnen und Mitarbeiter durch, an dem diese mit unterschiedlichen Arbeitsbereichen sowie den rechtlichen und organisatorischen Prozessen vertraut gemacht werden. Wir möchten darauf hinweisen, dass die Teilnahme an einer solchen Informationsveranstaltung verpflichtend ist. Am Einführungstag besteht außerdem die Möglichkeit, Kolleginnen und Kollegen aus anderen Abteilungen kennenzulernen. Die Abteilungsleiter werden bei dieser Gelegenheit in kurzen Worten einen Einblick in den Tätigkeitsbereich ihrer Teams geben.\nDa unser Unternehmen in einem hochsensiblen Bereich arbeitet, haben wir für unser gesamtes Gebäude ein komplexes Sicherheitssystem. Auch dieses stellen wir Ihnen im Rahmen des Orientierungstages im Detail vor. Weitere Einzelheiten zu diesem Tag, wie den Treffpunkt und den Ablauf, finden Sie in dieser Mappe. Eine gesonderte Anmeldung ist nicht erforderlich. Für Rückfragen zum Einführungstag steht die Personalabteilung gerne zur Verfügung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Neue Mitarbeiter sollten sich in der Personalabteilung zum Einführungstag anmelden.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 7,
+              "prompt": "Die neuen Mitarbeiter",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bekommen vom Abteilungsleiter eine Führung durch das Unternehmen."
+                },
+                {
+                  "key": "b",
+                  "text": "können an einem Einführungstag im Betrieb teilnehmen."
+                },
+                {
+                  "key": "c",
+                  "text": "werden mit den Funktionen des Sicherheitssystems vertraut gemacht."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v7",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 7",
+      "note": "тест №140321, 140301",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Essen in der Kantine\nUnser Unternehmen arbeitet an sieben Tagen rund um die Uhr im Drei-Schicht-System. Deshalb steht auch unsere Kantine, die für die Mitarbeiterverpflegung sorgt, täglich 24 Stunden zur Verfügung. Um unnötige Wartezeiten in der Mittagszeit zu vermeiden, wurden in Abstimmung mit dem Betriebsrat aber folgende Essenszeiten für die einzelnen Abteilungen festgelegt : Während das Personal aus der Produktion und dem Lager in der ersten Gruppe von 12.00 bis 13.00 Uhr eine warme Mahlzeit zu sich nehmen kann, folgen die Mitarbeiterinnen und Mitarbeiter der Verwaltung in der zweiten Gruppe von 13.00 bis 14.00 Uhr.\nAußerdem können die Mitarbeitenden jederzeit frisch zubereitete Snacks oder kleine Mahlzeiten wie Suppen oder Nudelgerichte aus den in der Kantine aufgestellten Automaten entnehmen. Darüber hinaus befindet sich dort eine Mikrowelle, in der Sie mitgebrachte Speisen erwärmen können. Zusätzliche Automaten für kalte und warme Getränke befinden sich auf jeder Etage in unserem Firmengebäude."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Die Kantine ist immer geöffnet.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "Die Mitarbeiterinnen und Mitarbeiter",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bekommen in der Kantine keine Getränke."
+                },
+                {
+                  "key": "b",
+                  "text": "können nachts in der Kantine essen."
+                },
+                {
+                  "key": "c",
+                  "text": "müssen mittags oft sehr lange anstehen."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t1_v8",
+      "part": "LESEN_2",
+      "title": "Text 1 · Вариант 8",
+      "note": "100%; тест №160201, 160221",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Firmenorganigramm\nFür Sie als neue Mitarbeiterin / neuer Mitarbeiter in unserem Traditionsunternehmen ist es wichtig zu wissen, wie das Unternehmen aufgebaut ist, d. h. welche Abteilungen es gibt, wer wofür verantwortlich ist und an wen Sie sich mit Ihren Fragen wenden können. Dafür wollen wir Ihnen im Folgenden Orientierung geben und hoffen, Ihnen den Einstieg in unser Unternehmen mit diesem Organigramm zu erleichtern.\nDas Dach unseres Unternehmens bildet die Geschäftsleitung. Hier laufen alle Fäden zusammen. Die nächste Ebene umfasst unsere Bereiche Produktion, Vertrieb und Personalwesen. In der Personalabteilung wenden Sie sich an Ihrem ersten Arbeitstag an Frau Müller. Von ihr erhalten Sie Ihren Mitarbeiterausweis, die für Sie notwendigen Schlüssel und die Arbeitskleidung. Für Urlaubsangelegenheiten steht Ihnen Herr Scholz zur Verfügung. Gehaltsfragen können Sie mit Herr Kleinschmidt besprechen. Sollten Sie eine Dienstreise unternommen haben, rechnen Sie die entstandenen Kosten mit Herrn Friedrich ab."
+            }
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Den neuen Mitarbeitenden wird die Organisationsstruktur des Unternehmens vorgestellt.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 7,
+              "prompt": "In der Personalabteilung",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bekommen die Mitarbeitenden ihre Ausstattung."
+                },
+                {
+                  "key": "b",
+                  "text": "bezahlt man die Arbeitskleidung."
+                },
+                {
+                  "key": "c",
+                  "text": "bucht man Dienstreisen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v1",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 1",
+      "note": "Старый вариант ответов до 08.2024; 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Arbeitsunfälle\nArbeitsunfälle sind Unfälle, die Beschäftigte bei der Ausübung ihrer Arbeit oder einer Dienstreise erleiden. Es muss also ein ursächlicher Zusammenhang mit der beruflichen Tätigkeit bestehen.\nNach einem Arbeitsunfall müssen Beschäftigte ihren Arbeitgeber umgehend über den Unfall in Kenntnis setzen und sich ggf. in Behandlung begeben. Außerdem ist, sobald es der Gesundheitszustand des Geschädigten zulässt, ein detaillierter Unfallbericht zu verfassen und der Personalabteilung vorzulegen.\nIm Falle einer Arbeitsunfähigkeit nach einem Arbeitsunfall erhalten Arbeitnehmende für sechs Wochen eine Lohnfortzahlung vom Arbeitgeber, danach übernimmt die Berufsgenossenschaft (BG), zahlt u. a. Verletztengeld in Höhe von 80 Prozent des Bruttogehalts und kommt ggf. auch für weitere Kosten auf.\nZu Arbeitsunfällen zählen auch Wegeunfälle, also Unfälle, die sich auf dem direkten Weg zwischen dem Wohngebäude und der Arbeitsstätte ereignen. Dieser Weg beginnt vor der eigenen Haustür und endet, sobald die Arbeitnehmenden das Unternehmen erreicht haben. Dabei sind bestimmte notwendige Umwege mitversichert, wie etwa der Weg zur Kita, Umleitungen oder im Falle von Fahrgemeinschaften, unabhängig davon, mit welchen Verkehrsmitteln man sich fortbewegt.\nDer Versicherungsschutz umfasst ausschließlich Personenschäden; Sachschäden, wie z. B. Schäden am Fahrzeug, sind hierbei nicht mitversichert. Die BG übernimmt in diesem Fall z. B. die Behandlungskosten sowie ggf. Krankenpflege oder medizinische Rehabilitation."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Ein Fahrradunfall auf dem Weg zur Arbeit zählt nicht als Arbeitsunfall.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Nach einem Arbeitsunfall",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bezahlt die Berufsgenossenschaft sofort Verletztengeld."
+                },
+                {
+                  "key": "b",
+                  "text": "erhalten Arbeitnehmer sechs Wochen volles Gehalt."
+                },
+                {
+                  "key": "c",
+                  "text": "muss ein Bericht vom Arzt beim Arbeitgeber abgegeben werden."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v1_b",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 1 · новый вариант",
+      "note": "Новый вариант №160201, 160221; 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Arbeitsunfälle\nArbeitsunfälle sind Unfälle, die Beschäftigte bei der Ausübung ihrer Arbeit oder einer Dienstreise erleiden. Es muss also ein ursächlicher Zusammenhang mit der beruflichen Tätigkeit bestehen.\nNach einem Arbeitsunfall müssen Beschäftigte ihren Arbeitgeber umgehend über den Unfall in Kenntnis setzen und sich ggf. in Behandlung begeben. Außerdem ist, sobald es der Gesundheitszustand des Geschädigten zulässt, ein detaillierter Unfallbericht zu verfassen und der Personalabteilung vorzulegen.\nIm Falle einer Arbeitsunfähigkeit nach einem Arbeitsunfall erhalten Arbeitnehmende für sechs Wochen eine Lohnfortzahlung vom Arbeitgeber, danach übernimmt die Berufsgenossenschaft (BG), zahlt u. a. Verletztengeld in Höhe von 80 Prozent des Bruttogehalts und kommt ggf. auch für weitere Kosten auf.\nZu Arbeitsunfällen zählen auch Wegeunfälle, also Unfälle, die sich auf dem direkten Weg zwischen dem Wohngebäude und der Arbeitsstätte ereignen. Dieser Weg beginnt vor der eigenen Haustür und endet, sobald die Arbeitnehmenden das Unternehmen erreicht haben. Dabei sind bestimmte notwendige Umwege mitversichert, wie etwa der Weg zur Kita, Umleitungen oder im Falle von Fahrgemeinschaften, unabhängig davon, mit welchen Verkehrsmitteln man sich fortbewegt.\nDer Versicherungsschutz umfasst ausschließlich Personenschäden; Sachschäden, wie z. B. Schäden am Fahrzeug, sind hierbei nicht mitversichert. Die BG übernimmt in diesem Fall z. B. die Behandlungskosten sowie ggf. Krankenpflege oder medizinische Rehabilitation."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Im Falle eines Arbeitsunfalls muss man sofort einen Bericht beim Arbeitgeber einreichen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Nach einem Arbeitsunfall",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bezahlt die Berufsgenossenschaft sofort Verletztengeld."
+                },
+                {
+                  "key": "b",
+                  "text": "erhalten Arbeitnehmer sechs Wochen volles Gehalt."
+                },
+                {
+                  "key": "c",
+                  "text": "trägt der Arbeitgeber die Kosten für die medizinische Versorgung."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v2",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 2",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Wichtige Hinweise zum Datenschutz\nUnser Unternehmen ist dem Datenschutz gemäß der EU-Datenschutz-Grundverordnung (DSGVO) verpflichtet. Grundsätzlich dürfen die Daten unserer Mitarbeiterinnen und Mitarbeiter nur dann erhoben werden, wenn diese vorher ausdrücklich zugestimmt haben. Mit Ihrem Arbeitsvertrag haben Sie bereits ein Formular erhalten, mit dessen Unterschrift Sie bestätigt haben, dass Sie mit der Speicherung Ihrer personenbezogenen Daten einverstanden sind. Sollten Sie zukünftig Fragen zum Datenschutz haben, können Sie sich an unseren internen Datenschutzbeauftragten Herrn Koljak (Durchwahl-814) oder seine Stellvertreterin Frau Dombrovski (Durchwahl -485) wenden. Wir erwarten von unseren Mitarbeiterinnen und Mitarbeitern, sich beim Thema Datenschutzverordnung immer auf dem neuesten Stand zu halten und bieten daher jedes Jahr Schulungen zu diesem Zweck an. Diese werden von unserem externen Schulungspartner WissMax durchgeführt und finden zu unterschiedlichen Terminen, jeweils am Wochenende, bei uns im Haus statt. Der Besuch des Seminars wird als Arbeitszeit angerechnet und ist für unsere Mitarbeiter kostenfrei. Eine Teilnahme an einem solchen Training muss spätestens alle drei Jahre erfolgen und durch ein Zertifikat nachgewiesen werden. Reichen Sie dieses bitte unaufgefordert bei der Personalabteilung ein. Alternativ können Sie auch eine vergleichbare Schulung bei einem anderen Anbieter besuchen. In diesem Fall bitten wir Sie jedoch, eine solche Teilnahme im Vorfeld mit unserer Personalabteilung abzusprechen, sodass Ihnen das Seminar genehmigt und eine Kostenübernahme garantiert werden kann."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Die Mitarbeiter müssen einmal pro Jahr ein Seminar zum Datenschutz belegen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Die Teilnahme am Seminar",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "gilt als Arbeitszeit."
+                },
+                {
+                  "key": "b",
+                  "text": "ist kostenpflichtig."
+                },
+                {
+                  "key": "c",
+                  "text": "muss bei WissMax erfolgen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v2_b",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 2 · новый вариант",
+      "note": "Новый вариант",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Wichtige Hinweise zum Datenschutz\nUnser Unternehmen ist dem Datenschutz gemäß der EU-Datenschutz-Grundverordnung (DSGVO) verpflichtet. Grundsätzlich dürfen die Daten unserer Mitarbeiterinnen und Mitarbeiter nur dann erhoben werden, wenn diese vorher ausdrücklich zugestimmt haben.\nMit Ihrem Arbeitsvertrag haben Sie bereits ein Formular erhalten, mit dessen Unterschrift Sie bestätigt haben, dass Sie mit der Speicherung Ihrer personenbezogenen Daten einverstanden sind. Sollten Sie zukünftig Fragen zum Datenschutz haben, können Sie sich an unseren internen Datenschutzbeauftragten Herrn Koljak (Durchwahl-814) oder seine Stellvertreterin Frau Dombrovski (Durchwahl -485) wenden.\nWir erwarten von unseren Mitarbeiterinnen und Mitarbeitern, sich beim Thema Datenschutzverordnung immer auf dem neuesten Stand zu halten und bieten daher jedes Jahr Schulungen zu diesem Zweck an. Diese werden von unserem externen Schulungspartner WissMax durchgeführt und finden zu unterschiedlichen Terminen, jeweils am Wochenende, bei uns im Haus statt. Der Besuch des Seminars wird als Arbeitszeit angerechnet und ist für unsere Mitarbeiter kostenfrei.\nEine Teilnahme an einem solchen Training muss jedes Jahr erfolgen und durch ein Zertifikat nachgewiesen werden. Reichen Sie dieses bitte unaufgefordert bei der Personalabteilung ein.\nAlternativ können Sie auch eine vergleichbare Schulung bei einem anderen Anbieter besuchen. In diesem Fall bitten wir Sie jedoch, eine solche Teilnahme im Vorfeld mit unserer Personalabteilung abzusprechen, sodass Ihnen das Seminar genehmigt und eine Kostenübernahme garantiert werden kann."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Die Mitarbeiter müssen einmal pro Jahr ein Seminar zum Datenschutz belegen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 9,
+              "prompt": "Die Teilnahme am Seminar",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "gilt als Arbeitszeit."
+                },
+                {
+                  "key": "b",
+                  "text": "ist kostenpflichtig."
+                },
+                {
+                  "key": "c",
+                  "text": "muss bei WissMax erfolgen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v3",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 3",
+      "note": "Старая версия до 07.2024; 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Rauchen\nIm gesamten Betrieb gilt striktes Rauchverbot. Auf dem Betriebsgelände befinden sich vier durch Hinweisschilder gekennzeichnete Raucherzonen, Bitte benutzen Sie für Ihre Zigarettenreste die Standaschenbecher. Allerdings ist im Umkreis von mindestens 50 Metern rund um die Produktionshallen das Rauchen auch im Freien untersagt, Eine Missachtung dieser Regel zieht eine Abmahnung nach sich. Im Wiederholungsfall droht eine fristlose Kündigung. Das Rauchverbot schließt Zigaretten, Zigarren, Pfeifen und den Konsum ähnlich verwendbarer Substanzen sowie jeglichen Gebrauch von E-Zigaretten mit ein. Bei Veranstaltungen ist das Rauchen auch auf der Dachterrasse des Gebäudes A zulässig, Beschäftigte, die dort rauchen, sind dazu angehalten, die Terrassentür geschlossen zu halten. Zigarettenpausen während der Arbeitszeit sind grundsätzlich zulässig, dabei sind folgende Regelungen zu beachten. Raucherpausen sind nicht Bestandteil der Arbeitszeit, deshalb müssen sich Mitarbeiter ordnungsgemäß vom Zeiterfassungssystem ab- bzw. nach Beendigung der Pause wieder anmelden.\nDa die Raucherpause nicht zur Arbeitszeit gehört, greift währenddessen nach dem Arbeitsrecht die Unfallversicherung nicht. Daher ist ein Arbeitsunfall während der Raucherpausen, z. B. ein Treppensturz, nicht über die Unfallversicherung abgedeckt.\nDie Gesundheit unserer MitarbeiterInnen liegt uns am Herzen. Aus diesem Grund übernehmen wir in Kooperation mit unserer betrieblichen Krankenkasse die Kosten für einen Raucherentwöhnungskurs. Für weitere Informationen wenden Sie sich bitte vertrauensvoll an unsere Personalabteilung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Das Rauchverbot auf dem Firmengelände schließt E-Zigaretten aus.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Raucher",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "müssen ihre Pausenzeiten nicht dokumentieren."
+                },
+                {
+                  "key": "b",
+                  "text": "sind auch in der Raucherpause bei Unfällen versichert."
+                },
+                {
+                  "key": "c",
+                  "text": "sollen die Terrassentür beim Rauchen schließen."
+                }
+              ],
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v3_b",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 3 · версия 07.2024",
+      "note": "Новая версия от 07.2024; 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Rauchen\nIm gesamten Betrieb gilt striktes Rauchverbot. Auf dem Betriebsgelände befinden sich vier durch Hinweisschilder gekennzeichnete Raucherzonen, Bitte benutzen Sie für Ihre Zigarettenreste die Standaschenbecher. Allerdings ist im Umkreis von mindestens 50 Metern rund um die Produktionshallen das Rauchen auch im Freien untersagt, Eine Missachtung dieser Regel zieht eine Abmahnung nach sich. Im Wiederholungsfall droht eine fristlose Kündigung. Das Rauchverbot schließt Zigaretten, Zigarren, Pfeifen und den Konsum ähnlich verwendbarer Substanzen sowie jeglichen Gebrauch von E-Zigaretten mit ein. Bei Veranstaltungen ist das Rauchen auch auf der Dachterrasse des Gebäudes A zulässig, Beschäftigte, die dort rauchen, sind dazu angehalten, die Terrassentür geschlossen zu halten. Zigarettenpausen während der Arbeitszeit sind grundsätzlich zulässig, dabei sind folgende Regelungen zu beachten. Raucherpausen sind nicht Bestandteil der Arbeitszeit, deshalb müssen sich Mitarbeiter ordnungsgemäß vom Zeiterfassungssystem ab- bzw. nach Beendigung der Pause wieder anmelden.\nDa die Raucherpause nicht zur Arbeitszeit gehört, greift währenddessen nach dem Arbeitsrecht die Unfallversicherung nicht. Daher ist ein Arbeitsunfall während der Raucherpausen, z. B. ein Treppensturz, nicht über die Unfallversicherung abgedeckt.\nDie Gesundheit unserer MitarbeiterInnen liegt uns am Herzen. Aus diesem Grund übernehmen wir in Kooperation mit unserer betrieblichen Krankenkasse die Kosten für einen Raucherentwöhnungskurs. Für weitere Informationen wenden Sie sich bitte vertrauensvoll an unsere Personalabteilung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Das Rauchverbot auf dem Firmengelände schließt E-Zigaretten ein.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 9,
+              "prompt": "Raucher",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "erhalten weitere Informationen zu den Raucherbestimmungen in der Personalabteilung."
+                },
+                {
+                  "key": "b",
+                  "text": "müssen ihre Pausenzeiten dokumentieren."
+                },
+                {
+                  "key": "c",
+                  "text": "sind auch in der Raucherpause bei Unfällen versichert."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v3_c",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 3 · версия 05.2025",
+      "note": "Новая версия от 05.2025; 100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Rauchen\nIm gesamten Betrieb gilt striktes Rauchverbot. Auf dem Betriebsgelände befinden sich vier durch Hinweisschilder gekennzeichnete Raucherzonen, Bitte benutzen Sie für Ihre Zigarettenreste die Standaschenbecher. Allerdings ist im Umkreis von mindestens 50 Metern rund um die Produktionshallen das Rauchen auch im Freien untersagt, Eine Missachtung dieser Regel zieht eine Abmahnung nach sich. Im Wiederholungsfall droht eine fristlose Kündigung. Das Rauchverbot schließt Zigaretten, Zigarren, Pfeifen und den Konsum ähnlich verwendbarer Substanzen sowie jeglichen Gebrauch von E-Zigaretten mit ein. Bei Veranstaltungen ist das Rauchen auch auf der Dachterrasse des Gebäudes A zulässig, Beschäftigte, die dort rauchen, sind dazu angehalten, die Terrassentür geschlossen zu halten. Zigarettenpausen während der Arbeitszeit sind grundsätzlich zulässig, dabei sind folgende Regelungen zu beachten. Raucherpausen sind nicht Bestandteil der Arbeitszeit, deshalb müssen sich Mitarbeiter ordnungsgemäß vom Zeiterfassungssystem ab- bzw. nach Beendigung der Pause wieder anmelden.\nDa die Raucherpause nicht zur Arbeitszeit gehört, greift währenddessen nach dem Arbeitsrecht die Unfallversicherung nicht. Daher ist ein Arbeitsunfall während der Raucherpausen, z. B. ein Treppensturz, nicht über die Unfallversicherung abgedeckt.\nDie Gesundheit unserer MitarbeiterInnen liegt uns am Herzen. Aus diesem Grund übernehmen wir in Kooperation mit unserer betrieblichen Krankenkasse die Kosten für einen Raucherentwöhnungskurs. Für weitere Informationen wenden Sie sich bitte vertrauensvoll an unsere Personalabteilung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Das Rauchverbot auf dem Firmengelände schließt E-Zigaretten aus.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Raucher",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "erhalten weitere Informationen zu den Raucherbestimmungen in der Personalabteilung."
+                },
+                {
+                  "key": "b",
+                  "text": "müssen ihre Pausenzeiten dokumentieren."
+                },
+                {
+                  "key": "c",
+                  "text": "sind auch in der Raucherpause bei Unfällen versichert."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v4",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 4",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Lebensarbeitszeitkonto\nIn unserem Unternehmen wird die Möglichkeit angeboten, ein Lebensarbeitszeitkonto zu führen. Als Arbeitnehmer können Sie Arbeitszeit, zum Beispiel geleistete Überstunden, als Guthaben auf diesem Konto stehen lassen. Ähnlich wie bei einem Bankkonto, mit dem Unterschied, dass auch die Währung 'Zeit' akzeptiert wird.\nBei Bedarf können Sie Ihre angesparten Stunden wieder einlösen. Das Lebensarbeitszeitkonto bietet die Chance, adäquat auf verschiedene Bedürfnisse zu verschiedenen Zeiten im Laufe des Arbeitslebens einzugehen. Beispielsweise könnte die angesparte Zeit etwa für die Betreuung von pflegebedürftigen Angehörigen genutzt werden.\nAußerdem bietet unser Teilzeitangebot „Classic Vario\" eine Kombination von Teil- und Vollzeit bei flexibler Einteilung der Arbeitszeit. Nach rechtzeitiger Rücksprache mit dem Arbeitgeber (mindestens drei Monate vorher) kann die zu leistende Arbeitszeit auch zwischen Teil- und Vollzeit angepasst werden.\nWenn Sie eine gewisse zeitliche Flexibilität brauchen, können Sie auch kurzfristig nach Absprache im Homeoffice arbeiten. Für die Arbeit von zu Hause stehen den Mitarbeitern und Mitarbeiterinnen ein firmeneigener Laptop und ein Diensthandy zur Verfügung.\nSollten Sie eine komplette Auszeit nehmen wollen, können Sie das für einen Zeitraum von bis zu maximal zwölf Monaten vorübergehend tun. Wir sichern Ihnen einen gleichwertigen Arbeitsplatz nach Ihrer Rückkehr zu.\nAls familienfreundliche Firma bieten wir neben den oben beschriebenen flexiblen Arbeitszeitmodellen Betreuungsmöglichkeiten während der Schulferien für die Kinder unserer Mitarbeiter und Mitarbeiterinnen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Das Unternehmen unterstützt die Mitarbeiter finanziell bei privaten Problemen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Die Mitarbeiter können",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "bei Bedarf von zu Hause aus arbeiten."
+                },
+                {
+                  "key": "b",
+                  "text": "sich maximal ein halbes Jahr beurlauben lassen."
+                },
+                {
+                  "key": "c",
+                  "text": "Geldleistungen für die Pflege von Angehörigen erhalten."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v5",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 5",
+      "note": "100%",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Berichtsheft\nDas Berichtsheft ist der Nachweis, dass die Ausbildung ordnungsgemäß verläuft. In diesem wird alles dokumentiert, was man während der Ausbildung macht und lernt. Sie sollten nicht nur Ihre Tätigkeiten im Betrieb beschreiben, sondern auch alle Einweisungen, Schulungen und den innerbetrieblichen Unterricht vermerken. Wie Sie sehen, ist das Führen der Ausbildungsnachweise ein wichtiger Inhalt Ihrer Ausbildung, bei dem Sie lernen, Ihre Tätigkeiten zeitlich und inhaltlich zu dokumentieren. Darüber hinaus bietet es Ihnen die Möglichkeit, den Zeitaufwand für bestimmte Tätigkeiten präziser einzuschätzen und Ihre Aufgaben zu reflektieren.\nWeiterhin wird Ihr Tätigkeitsbereich für Beteiligte im Unternehmen und für die Stellen, die für die Berufsausbildung zuständig sind, nachvollziehbar dargestellt. Es ist Pflicht, das Berichtsheft jeweils vor der Zwischen- und der Abschlussprüfung vorzulegen. Nur wenn es vollständig ist, wird der Prüfungsausschuss Sie zu den Prüfungen zulassen. Wenn Sie zwischen zwei Noten stehen, können Ihre Berichte sogar Ihre Endnote beeinflussen.\nNeben den Wochenberichten, die Sie jeden Freitag an Ihren Teamleiter schicken, müssen Sie nach dem Durchlaufen einer Abteilung einen zusätzlichen Bericht verfassen. Dieser ergänzt den Wochenbericht und verschafft Ihnen einen genaueren Überblick über die Aufgaben in der jeweiligen Abteilung. Sie dürfen Ihre Berichte während der Arbeitszeit schreiben und können sie sowohl in klassischer Heftform als auch in digitaler Form auf unserer firmeninternen Plattform führen und einreichen. In festen Abständen haben Sie das Heft Ihrem Ausbildungsleiter zur Kenntnisnahme vorzulegen. In Ihrem eigenen Interesse empfehlen wir Ihnen, es immer zeitnah zu vervollständigen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Auszubildende ohne ordentlich geführtes Berichtsheft dürfen nicht an der Abschlussprüfung teilnehmen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "r"
+            },
+            {
+              "number": 9,
+              "prompt": "Das Berichtsheft muss",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "in der Freizeit geführt werden."
+                },
+                {
+                  "key": "b",
+                  "text": "dem Ausbildungsleiter regelmäßig gezeigt werden."
+                },
+                {
+                  "key": "c",
+                  "text": "jeden Tag ausgefüllt werden."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v6",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 6",
+      "note": "100%; тест №150321, 150301",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Datenschutz\nIhre im Unternehmen verwendeten Passwörter dürfen unter keinen Umständen weitergegeben und müssen regelmäßig alle sechs Monate geändert werden. Bitte verwenden Sie keine Passwörter, die Sie auch für private Konten nutzen, und generieren Sie sichere Passwörter mit einem Passwortgenerator. USB-Sticks und Ihnen unbekannte Geräte sind vor Inbetriebnahme in isolierter Umgebung zu prüfen. Es darf keine Software aus dem Internet heruntergeladen oder selbstständig auf dem Arbeitslaptop oder dem PC installiert werden. Außerdem ist es untersagt, Daten lokal abzuspeichern.\nBitte achten Sie bei Dienstreisen darauf, Ihren Laptop vor Fremden zu sichern! Bedenken Sie bitte auch, dass bei der Arbeit möglicherweise vertrauliche Informationen auf Ihrem Bildschirm zu sehen sind. Schützen Sie diese vor fremden Blicken.\nVertrauliche Telefonate dürfen nicht in der Öffentlichkeit geführt werden. Die private Nutzung von Diensthandys oder Laptops ist untersagt.\nVertrauliche und personenbezogene Daten müssen nach Dienstschluss verschlossen werden. Sie dürfen zudem nicht länger als unbedingt erforderlich aufgehoben oder gespeichert werden. Über interne Information Unternehmensangelegenheiten oder Dienstgeheimnisse ist Verschwiegenheit zu wahren. Unterlagen, Datenträg Abschriften oder Kopien dürfen nicht weitergegeben werden oder versehentlich in die Hände unbefugter Person gelangen. Vertrauliche Daten in Papierform sind in dafür bereitgestellten Schreddern zu vernichten.\nBitte melden Sie ungewöhnliche Vorkommnisse oder Feststellungen umgehend der Geschäftsführung oder unsere Datenschutzbeauftragten, Herrn Dr. Sevici. Er ist unter der Durchwahl -33 zu erreichen und steht Ihnen auch bei Fragen bezüglich des Datenschutzes in unserem Unternehmen zur Verfügung."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Die Mitarbeitenden dürfen ihre Passwörter frühestens alle sechs Monate ändern.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Vertrauliche Daten",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "dürfen nicht auf dem PC gespeichert werden."
+                },
+                {
+                  "key": "b",
+                  "text": "müssen nach einer bestimmten Zeit gelöscht werden."
+                },
+                {
+                  "key": "c",
+                  "text": "sollen ausgedruckt und abgeheftet werden."
+                }
+              ],
+              "answer": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesen_2_t2_v7",
+      "part": "LESEN_2",
+      "title": "Text 2 · Вариант 7",
+      "note": "тест №140321, 140301",
+      "segments": [
+        {
+          "passages": [
+            {
+              "title": "Willkommensmappe für neue Mitarbeiterinnen und Mitarbeiter",
+              "body": "Arbeitsunfall und Berufsgenossenschaft (BG)\nMit dem Arbeitsantritt in unserem Unternehmen sind Sie als Arbeitnehmer*in automatisch gesetzlich unfallversichert.\nDer Träger dieser Unfallversicherung ist die Berufsgenossenschaft, deren Aufgaben in erster Linie darin bestehen, Arbeits- und Wegeunfälle, Berufskrankheiten sowie arbeitsbedingte Gesundheitsgefahren zu vermeiden. Das wird gewährleistet, indem regelmäßig Kontrollen der Arbeitssicherheit durch die Berufsgenossenschaft stattfinden. Bei diesen Kontrollen sind unsere Mitarbeiter*innen des Qualitätsmanagements mit vor Ort.\nSollte dennoch ein Unglücksfall eintreten, übernimmt die Berufsgenossenschaft sämtliche Kosten für Heilbehandlungen und Schadensersatzzahlungen. Dafür muss von Ihnen folgendes Prozedere eingehalten werden: Nach einem Arbeitsunfall wird zunächst der Ersthelfer oder die Ersthelferin informiert. Je nach Schwere des Unfalls wird ein Rettungswagen dazu gerufen. Ob mit oder ohne Krankenhausaufenthalt, müssen Sie aber in jedem Fall von einem Durchgangsarzt untersucht werden. Gleichzeitig sind wir als Arbeitgeber verpflichtet, den Unfall der Berufsgenossenschaft zu melden. Damit setzt der Prozess ein, dass die Berufsgenossenschaft Ihre Behandlung und deren Kosten übernimmt. Damit für Sie als Arbeitnehmer*in keine finanziellen Probleme entstehen, zahlt die Berufsgenossenschaft Ihnen den Lohn ab der siebten Woche der Arbeitsunfähigkeit weiter.\nDamit es aber gar nicht erst so weit kommt, führen wir regelmäßig Schulungen zur Arbeitssicherheit durch. Diese beinhalten auf der einen Seite Einweisungen zum korrekten Tragen der Schutzkleidung und auf der anderen Seite konkrete Anweisungen zur richtigen Bedienung der Maschinen."
+            }
+          ],
+          "questions": [
+            {
+              "number": 8,
+              "prompt": "Alle Mitarbeitenden müssen für eine Arbeitsunfallversicherung sorgen.",
+              "options": [
+                {
+                  "key": "r",
+                  "text": "Richtig"
+                },
+                {
+                  "key": "f",
+                  "text": "Falsch"
+                }
+              ],
+              "answer": "f"
+            },
+            {
+              "number": 9,
+              "prompt": "Nach einem Arbeitsunfall",
+              "options": [
+                {
+                  "key": "a",
+                  "text": "muss man sich einem Durchgangsarzt vorstellen."
+                },
+                {
+                  "key": "b",
+                  "text": "schickt die BG einen Arzt oder Rettungswagen."
+                },
+                {
+                  "key": "c",
+                  "text": "übernimmt die BG sofort die Gehaltsfortzahlungen."
+                }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

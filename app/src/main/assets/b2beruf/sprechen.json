@@ -1,0 +1,1651 @@
+{
+ "prompts": [
+  {
+   "id": "sprechen_t1_a1",
+   "teil": "1",
+   "number": 1,
+   "title": "Arbeitgeber beschreiben",
+   "de": "Beschreiben Sie einen Arbeitgeber, für den Sie gearbeitet haben oder arbeiten möchten (z. B. Branche, Produkte und Dienstleistungen, Abteilungen und ihre Aufgaben, Besonderheiten)."
+  },
+  {
+   "id": "sprechen_t1_a2",
+   "teil": "1",
+   "number": 2,
+   "title": "Gutes Arbeitsumfeld",
+   "de": "Beschreiben Sie, wie Sie sich ein gutes Arbeitsumfeld vorstellen (z. B. Jobsicherheit, Lohn / Gehalt, Karrierechancen, Kommunikation in der Firma, Beispiele aus Ihrer Berufserfahrung)."
+  },
+  {
+   "id": "sprechen_t1_a3",
+   "teil": "1",
+   "number": 3,
+   "title": "Einflüsse auf die Berufswahl",
+   "de": "Beschreiben Sie Ereignisse und Erfahrungen, die Ihre Berufswahl beeinflusst haben (z. B. Stationen, wichtige Personen, Motivation, Folgen)."
+  },
+  {
+   "id": "sprechen_t1_a4",
+   "teil": "1",
+   "number": 4,
+   "title": "Berufliches Vorbild",
+   "de": "Beschreiben Sie eine Person aus Ihrem Umfeld, die für Sie ein berufliches Vorbild ist (z. B. Beziehung zu dieser Person, Eigenschaften, Einfluss auf Sie)."
+  },
+  {
+   "id": "sprechen_t1_a5",
+   "teil": "1",
+   "number": 5,
+   "title": "Arbeitssuche in einem Land",
+   "de": "Beschreiben Sie das Vorgehen bei der Arbeitssuche für ein Land Ihrer Wahl (z. B. Angebote finden, Erstkontakt, Bewerbungsunterlagen oder -gespräch)."
+  },
+  {
+   "id": "sprechen_t1_a6",
+   "teil": "1",
+   "number": 6,
+   "title": "Bewerbungsgespräch",
+   "de": "Beschreiben Sie, worauf es bei einem Bewerbungsgespräch ankommt. Sprechen Sie über ein Land Ihrer Wahl (z. B. Berufsfeld, Vorbereitung, Kleidung, typische Fragen)."
+  },
+  {
+   "id": "sprechen_t1_a7",
+   "teil": "1",
+   "number": 7,
+   "title": "Produkt oder Dienstleistung",
+   "de": "Beschreiben Sie ein Produkt/eine Dienstleistung Ihrer Wahl (z.B. Merkmale, Nutzen für Kunden, Vor- und Nachteile, Erfolg)."
+  },
+  {
+   "id": "sprechen_t1_a8",
+   "teil": "1",
+   "number": 8,
+   "title": "Geschäftsidee",
+   "de": "Sie möchten sich selbstständig machen. Beschreiben Sie Ihre Geschäftsidee (z. B. welches Produkt/welche Dienstleistung, Besonderheiten, Zielgruppe)."
+  },
+  {
+   "id": "sprechen_t2_q1",
+   "teil": "2",
+   "number": 1,
+   "de": "Ich finde, wir als Praktikant*innen sollten eigentlich keine Überstunden machen. Was meinst du?",
+   "ru": "Я считаю, что мы, как стажёры, не должны работать сверхурочно. Что ты думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q2",
+   "teil": "2",
+   "number": 2,
+   "de": "Ich gehe in der Mittagspause meist zum Imbiss um die Ecke. Wo isst du?",
+   "ru": "Я обычно хожу в закусочную за углом во время обеденного перерыва. А ты где ешь?"
+  },
+  {
+   "id": "sprechen_t2_q3",
+   "teil": "2",
+   "number": 3,
+   "de": "Der Chef möchte, dass ich einen Computerkurs mache. Weißt du, wie ich das organisieren kann?",
+   "ru": "Шеф хочет, чтобы я прошел курс по компьютеру. Ты знаешь, как это организовать?"
+  },
+  {
+   "id": "sprechen_t2_q4",
+   "teil": "2",
+   "number": 4,
+   "de": "Im Sommer fahre ich gerne an einen See zum Baden. Du auch oder magst du Freibäder lieber?",
+   "ru": "Летом я люблю ездить на озеро купаться. А ты? Или ты предпочитаешь бассейны под открытым небом?"
+  },
+  {
+   "id": "sprechen_t2_q5",
+   "teil": "2",
+   "number": 5,
+   "de": "Wie und wann buchst du deinen Urlaub?",
+   "ru": "Как и когда ты бронируешь свой отпуск?"
+  },
+  {
+   "id": "sprechen_t2_q6",
+   "teil": "2",
+   "number": 6,
+   "de": "Ich habe noch fünf Tage Resturlaub. Was passiert mit diesen Tagen? / Ich habe vom Urlaub in diesem Jahr noch 5 Tage übrig. Was passiert eigentlich mit dem Resturlaub?",
+   "ru": "У меня осталось пять дней неиспользованного отпуска. Что с ними будет?"
+  },
+  {
+   "id": "sprechen_t2_q7",
+   "teil": "2",
+   "number": 7,
+   "de": "Wie kann man die verbleibenden 5 Urlaubstage am besten nutzen?",
+   "ru": "Как лучше провести оставшиеся 5 дней отпуска?"
+  },
+  {
+   "id": "sprechen_t2_q8",
+   "teil": "2",
+   "number": 8,
+   "de": "Ich arbeite im Homeoffice. Ich habe kein Diensthandy bekommen. Denkst du, dass ich mein Privathandy benutzen soll?",
+   "ru": "Я работаю из дома и не получил служебный телефон. Как думаешь, стоит ли использовать личный телефон?"
+  },
+  {
+   "id": "sprechen_t2_q9",
+   "teil": "2",
+   "number": 9,
+   "de": "Der Chef möchte von Mitarbeitern die Arbeitsunfähigkeitsbescheinigung ab dem ersten Tag und nicht am dritten Tag. Was hältst du davon?",
+   "ru": "Шеф хочет, чтобы сотрудники приносили больничный с первого дня, а не с третьего. Что ты думаешь об этом?"
+  },
+  {
+   "id": "sprechen_t2_q10",
+   "teil": "2",
+   "number": 10,
+   "de": "Am Samstag ist der Tag der offenen Tür im Unternehmen. Wir können unsere Kinder mitbringen. Bist du dabei?",
+   "ru": "В субботу в компании день открытых дверей. Мы можем привести детей. Ты пойдешь?"
+  },
+  {
+   "id": "sprechen_t2_q11",
+   "teil": "2",
+   "number": 11,
+   "de": "Das Unternehmen gewährt keine Boni für dieses Jahr. Was hältst du davon?",
+   "ru": "Компания в этом году не выплачивает бонусы. Что ты об этом думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q12",
+   "teil": "2",
+   "number": 12,
+   "de": "80% der Mitarbeiter kommen mit dem Fahrrad zur Arbeit. Findest du es auch toll?",
+   "ru": "80% сотрудников приезжают на работу на велосипеде. Ты тоже считаешь это классным?"
+  },
+  {
+   "id": "sprechen_t2_q13",
+   "teil": "2",
+   "number": 13,
+   "de": "Im Dezember gibt es Urlaubsperre. Findest du das fair?",
+   "ru": "В декабре запрещено брать отпуск. Ты считаешь это справедливым?"
+  },
+  {
+   "id": "sprechen_t2_q14",
+   "teil": "2",
+   "number": 14,
+   "de": "Wo verbringst du am liebsten deine Mittagspause? Ich verbringe sie gerne außerhalb des Betriebs. / 181",
+   "ru": "Где ты предпочитаешь проводить обеденный перерыв? Я люблю обедать вне офиса."
+  },
+  {
+   "id": "sprechen_t2_q15",
+   "teil": "2",
+   "number": 15,
+   "de": "Wo ist es besser, Mittag zu essen: im Büro oder draußen, mit Kollegen oder alleine?",
+   "ru": "Где лучше обедать: внутри офиса или снаружи, с коллегами или одному?"
+  },
+  {
+   "id": "sprechen_t2_q16",
+   "teil": "2",
+   "number": 16,
+   "de": "Arbeitest du bevorzugt im Büro oder lieber von zu Hause aus? / Was ist besser: Homeoffice oder Büroarbeit?",
+   "ru": "Ты предпочитаешь работать в офисе или из дома? / Что лучше: работать из дома или в обычном офисе?"
+  },
+  {
+   "id": "sprechen_t2_q17",
+   "teil": "2",
+   "number": 17,
+   "de": "Ich bevorzuge im Herbst Urlaub zu nehmen, weil es viele Vorteile hat. Und du? Wann machst du Urlaub? / Ist es gut, im Herbst Urlaub zu nehmen?",
+   "ru": "Я предпочитаю брать отпуск осенью, потому что это имеет много преимуществ. А ты? Когда ты берешь отпуск? / Хорошо ли брать отпуск осенью?"
+  },
+  {
+   "id": "sprechen_t2_q18",
+   "teil": "2",
+   "number": 18,
+   "de": "Ich würde gerne in meiner Freizeit ehrenamtlich arbeiten. Hast du eine Idee, was man machen könnte?",
+   "ru": "Я бы хотел заниматься волонтерской работой в свободное время. У тебя есть идеи, чем можно заняться?"
+  },
+  {
+   "id": "sprechen_t2_q19",
+   "teil": "2",
+   "number": 19,
+   "de": "Wie kann man mit ehrenamtlicher Arbeit anfangen?",
+   "ru": "Как начать заниматься волонтёрской деятельностью?"
+  },
+  {
+   "id": "sprechen_t2_q20",
+   "teil": "2",
+   "number": 20,
+   "de": "Ich habe nächste Woche meine erste Nachtschicht. Was machst du, um wach zu bleiben?",
+   "ru": "На следующей неделе у меня первая ночная смена. Что ты делаешь, чтобы не уснуть?"
+  },
+  {
+   "id": "sprechen_t2_q21",
+   "teil": "2",
+   "number": 21,
+   "de": "Bist du auch produktiver in der Frühschicht? Das trifft auf mich zu. / Was hältst du von Frühschichten?",
+   "ru": "Ты тоже продуктивнее в утреннюю смену? Это про меня."
+  },
+  {
+   "id": "sprechen_t2_q22",
+   "teil": "2",
+   "number": 22,
+   "de": "Brauchst du nach der Arbeit auch erstmal Ruhe, wie ich? / Wie entspannst du dich am besten nach der Arbeit? / Was tun, wenn man nach der Arbeit Ruhe haben möchte?",
+   "ru": "Тебе тоже нужно немного отдыха после работы, как и мне?"
+  },
+  {
+   "id": "sprechen_t2_q23",
+   "teil": "2",
+   "number": 23,
+   "de": "Sollen wir mittags etwas bestellen? Wie wäre es mit einem gemeinsamen Mittagessen?",
+   "ru": "Может, закажем что-то на обед? Как насчет совместного обеда?"
+  },
+  {
+   "id": "sprechen_t2_q24",
+   "teil": "2",
+   "number": 24,
+   "de": "Nächsten Monat kann ich leider keine Überstunden machen. Denkst du, dass es geht?",
+   "ru": "В следующем месяце я, к сожалению, не могу работать сверхурочно. Как думаешь, это возможно?"
+  },
+  {
+   "id": "sprechen_t2_q25",
+   "teil": "2",
+   "number": 25,
+   "de": "Meine neue Kollegin ist unfreundlich. Hast du vielleicht Ratschläge, wie ich damit umgehen könnte?",
+   "ru": "Моя новая коллега недружелюбна. У тебя есть советы, как с этим справиться?"
+  },
+  {
+   "id": "sprechen_t2_q26",
+   "teil": "2",
+   "number": 26,
+   "de": "Ich soll am Samstag für eine Kollegin einspringen. Weißt du, ob ich dafür nächste Woche einen anderen Tag frei bekomme?",
+   "ru": "Мне нужно заменить коллегу в субботу. Знаешь, получу ли я за это выходной на следующей неделе?"
+  },
+  {
+   "id": "sprechen_t2_q27",
+   "teil": "2",
+   "number": 27,
+   "de": "Mein Kind weint in der Kita. Hast du Erfahrungen damit und Tipps, was ich tun könnte?",
+   "ru": "Мой ребенок плачет в детском саду. У тебя есть опыт в этом и советы, что делать?"
+  },
+  {
+   "id": "sprechen_t2_q28",
+   "teil": "2",
+   "number": 28,
+   "de": "Ich möchte meine Kollegen besser kennenlernen. Hast du eine Idee, wie ich das machen könnte?",
+   "ru": "Я хочу лучше узнать своих коллег. У тебя есть идеи, как это сделать?"
+  },
+  {
+   "id": "sprechen_t2_q29",
+   "teil": "2",
+   "number": 29,
+   "de": "Ich möchte gerne mal im Sommer Urlaub machen. Leider dürfen das nur Kolleg*innen mit Kindern. Findest du das fair? / Nur Mitarbeitende mit schulpflichtigen Kindern dürfen Urlaub in den Sommerferien machen. Findest du das fair?",
+   "ru": "Я бы хотел взять отпуск летом, но это разрешено только сотрудникам с детьми. Ты считаешь это справедливым?"
+  },
+  {
+   "id": "sprechen_t2_q30",
+   "teil": "2",
+   "number": 30,
+   "de": "Bei uns in der Firma haben wir eine dreimonatige Kündigungsfrist. Ist das nicht zu viel? / Findest du dreimonatige Kündigungsfrist fair?",
+   "ru": "У нас в компании срок увольнения — три месяца. Это не слишком долго?"
+  },
+  {
+   "id": "sprechen_t2_q31",
+   "teil": "2",
+   "number": 31,
+   "de": "Ich würde am Wochenende mit Freunden bei mir im Garten grillen. Magst du auch kommen?",
+   "ru": "Я собираюсь на выходных устроить барбекю в саду с друзьями. Хочешь присоединиться?"
+  },
+  {
+   "id": "sprechen_t2_q32",
+   "teil": "2",
+   "number": 32,
+   "de": "Eine Freundin von mir sagt, dass in ihrer Firma freitags schon um 14 Uhr Feierabend ist. Was hältst du davon? / 182",
+   "ru": "Моя подруга говорит, что в её компании в пятницу рабочий день заканчивается в 14:00. Что ты об этом думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q33",
+   "teil": "2",
+   "number": 33,
+   "de": "Im Unternehmen findet ein Seminar zur Stressbewältigung statt. Ich würde es gerne besuchen. Bist du auch dabei?",
+   "ru": "В компании проводится семинар по управлению стрессом. Я бы хотел его посетить. Ты тоже?"
+  },
+  {
+   "id": "sprechen_t2_q34",
+   "teil": "2",
+   "number": 34,
+   "de": "Ich arbeite schon lange hier und würde mich gerne weiterentwickeln. Hast du Ideen, was ich machen könnte?",
+   "ru": "Я уже давно работаю здесь и хочу развиваться. У тебя есть идеи, что мне можно сделать?"
+  },
+  {
+   "id": "sprechen_t2_q35",
+   "teil": "2",
+   "number": 35,
+   "de": "Ich brauche ein zusätzliches Einkommen. Denkst du es ist eine gute Idee, einen Nebenjob anzunehmen?",
+   "ru": "Мне нужен дополнительный доход. Ты думаешь, подработка – это хорошая идея?"
+  },
+  {
+   "id": "sprechen_t2_q36",
+   "teil": "2",
+   "number": 36,
+   "de": "Wie kann man das Einkommen erhöhen, wenn die Ausgaben gestiegen sind?",
+   "ru": "Как можно увеличить доходы, если расходы выросли?"
+  },
+  {
+   "id": "sprechen_t2_q37",
+   "teil": "2",
+   "number": 37,
+   "de": "Was hältst du von zusätzlicher Arbeit wie einem Minijob?",
+   "ru": "Что ты думаешь о дополнительной работе, например, мини-джоб?"
+  },
+  {
+   "id": "sprechen_t2_q38",
+   "teil": "2",
+   "number": 38,
+   "de": "In der Firma soll es Maßnahmen zur betrieblichen Gesundheitsförderung geben. Wie findest du das?",
+   "ru": "В компании должны внедрить меры по укреплению здоровья сотрудников. Как ты к этому относишься?"
+  },
+  {
+   "id": "sprechen_t2_q39",
+   "teil": "2",
+   "number": 39,
+   "de": "Wie stehen Sie zu Gesundheitsvorsorge-Veranstaltungen?",
+   "ru": "Как Вы относитесь к мероприятиям по профилактике здоровья?"
+  },
+  {
+   "id": "sprechen_t2_q40",
+   "teil": "2",
+   "number": 40,
+   "de": "Findest du es auch super, dass in unserer Kantine mehr vegane und vegetarische Gerichte angeboten werden?",
+   "ru": "Ты тоже считаешь классным, что в нашей столовой стало больше веганских и вегетарианских блюд?"
+  },
+  {
+   "id": "sprechen_t2_q41",
+   "teil": "2",
+   "number": 41,
+   "de": "Spielst du ein Musikinstrument? Ich würde gerne eins lernen. Kennst du hier gute Lehrmöglichkeiten?",
+   "ru": "Ты играешь на музыкальном инструменте? Я бы хотел научиться. Знаешь хорошие курсы?"
+  },
+  {
+   "id": "sprechen_t2_q42",
+   "teil": "2",
+   "number": 42,
+   "de": "Diesen Sommer fahren wir im Urlaub nicht in die Heimat, sondern bleiben hier. Wollen wir mal etwas zusammen unternehmen?",
+   "ru": "Этим летом мы не поедем в отпуск на родину, а останемся здесь. Давай что-нибудь вместе организуем?"
+  },
+  {
+   "id": "sprechen_t2_q43",
+   "teil": "2",
+   "number": 43,
+   "de": "Die Firma plant, ab diesem Jahr nur noch ein Sommerfest zu veranstalten. Die Weihnachtsfeier wird gestrichen. Wie findest du das?",
+   "ru": "Компания планирует теперь проводить только летний праздник, а рождественскую вечеринку отменить. Как тебе это?"
+  },
+  {
+   "id": "sprechen_t2_q44",
+   "teil": "2",
+   "number": 44,
+   "de": "Weißt du, wie das in der Firma eigentlich mit der Krankmeldung geregelt ist?",
+   "ru": "Ты знаешь, как у нас в компании оформляют больничный?"
+  },
+  {
+   "id": "sprechen_t2_q45",
+   "teil": "2",
+   "number": 45,
+   "de": "Hast du von dem Zuschuss der Firma für den Kauf eines E-Bikes gehört? Was denkst du darüber?",
+   "ru": "Ты слышал, что компания дает субсидию на покупку электровелосипеда? Что думаешь об этом?"
+  },
+  {
+   "id": "sprechen_t2_q46",
+   "teil": "2",
+   "number": 46,
+   "de": "Verbringst du wichtige Feiertage eher mit der Familie oder mit Freunden?",
+   "ru": "Ты важные праздники проводишь с семьей или с друзьями?"
+  },
+  {
+   "id": "sprechen_t2_q47",
+   "teil": "2",
+   "number": 47,
+   "de": "Was hältst du von Fahrgemeinschaften auf dem Weg zur Arbeit? Auf diese Weise könnte man Fahrtkosten sparen. / Hast du Lust, eine Fahrgemeinschaft zu bilden? / Was hältst du von gemeinsamen Fahrten mit Kollegen nach Hause?",
+   "ru": "Что ты думаешь о совместных поездках на работу? Так можно сэкономить на проезде."
+  },
+  {
+   "id": "sprechen_t2_q48",
+   "teil": "2",
+   "number": 48,
+   "de": "Bevorzugst du bargeldlose Zahlungen oder zahlst du lieber bar?",
+   "ru": "Ты предпочитаешь безналичную оплату или платишь наличными?"
+  },
+  {
+   "id": "sprechen_t2_q49",
+   "teil": "2",
+   "number": 49,
+   "de": "Denkst du, es ist eine gute Idee, sich selbstständig zu machen? / Was hälst du von Selbstständigkeit? 183",
+   "ru": "Ты считаешь хорошей идеей открыть собственное дело?"
+  },
+  {
+   "id": "sprechen_t2_q50",
+   "teil": "2",
+   "number": 50,
+   "de": "Hast du auch mitbekommen, unsere Kantine wird für zwei Monate geschlossen, weil sie umgebaut wird? Was sagst du dazu?",
+   "ru": "Ты слышал, что нашу столовую закроют на два месяца из-за ремонта? Что ты думаешь об этом?"
+  },
+  {
+   "id": "sprechen_t2_q51",
+   "teil": "2",
+   "number": 51,
+   "de": "Meinst du, dass man wirklich alle zwei Jahre ein neues Handy benötigt?",
+   "ru": "Ты считаешь, что действительно нужно менять телефон каждые два года?"
+  },
+  {
+   "id": "sprechen_t2_q52",
+   "teil": "2",
+   "number": 52,
+   "de": "Nächsten Monat muss ich in eine Wohnung umziehen. Könntest du mir mit der Renovierung helfen?",
+   "ru": "В следующем месяце я переезжаю в новую квартиру. Ты мог бы помочь с ремонтом?"
+  },
+  {
+   "id": "sprechen_t2_q53",
+   "teil": "2",
+   "number": 53,
+   "de": "Ich muss bald umziehen. Wo finde ich einen guten Handwerker für den Umzug?",
+   "ru": "Мне предстоит переезд. Где найти хорошего мастера для переезда?"
+  },
+  {
+   "id": "sprechen_t2_q54",
+   "teil": "2",
+   "number": 54,
+   "de": "Findest du eine Betriebsfeier mit oder ohne Partner besser?",
+   "ru": "Как ты считаешь, корпоратив лучше проводить с партнерами или без них?"
+  },
+  {
+   "id": "sprechen_t2_q55",
+   "teil": "2",
+   "number": 55,
+   "de": "Soll man einen Partner/eine Partnerin zur Firmenfeier mitbringen?",
+   "ru": "Нужно ли брать партнёра на корпоративную вечеринку?"
+  },
+  {
+   "id": "sprechen_t2_q56",
+   "teil": "2",
+   "number": 56,
+   "de": "Ich mache gerne Überstunden. Du auch?",
+   "ru": "Мне нравится работать сверхурочно. А тебе?"
+  },
+  {
+   "id": "sprechen_t2_q57",
+   "teil": "2",
+   "number": 57,
+   "de": "Hast du gehört, dass es in der Firma bald kostenlose Sportkurse geben soll? Ich würde gerne dran teilnehmen. Und du?",
+   "ru": "Ты слышал, что скоро в компании будут бесплатные спортивные занятия? Я хочу участвовать. А ты?"
+  },
+  {
+   "id": "sprechen_t2_q58",
+   "teil": "2",
+   "number": 58,
+   "de": "Für mich wäre Schichtarbeit kein Problem. Wie siehst du das?",
+   "ru": "Мне было бы несложно работать посменно. А как ты к этому относишься?"
+  },
+  {
+   "id": "sprechen_t2_q59",
+   "teil": "2",
+   "number": 59,
+   "de": "Wollen wir mal an einem Abend (morgen Abend) etwas mit Kolleg*innen unternehmen? (Может, какнибудь вечером / организуем что-то с коллегами?)",
+   "ru": "завтра вечером"
+  },
+  {
+   "id": "sprechen_t2_q60",
+   "teil": "2",
+   "number": 60,
+   "de": "Arbeitest du lieber im Team oder alleine? Ich persönlich bevorzuge, im Team zu arbeiten.",
+   "ru": "Ты предпочитаешь работать в команде или самостоятельно? Лично я предпочитаю работать в команде."
+  },
+  {
+   "id": "sprechen_t2_q61",
+   "teil": "2",
+   "number": 61,
+   "de": "Unser Betriebsausflug findet am Samstag statt. Was hältst du davon?",
+   "ru": "Наш корпоративный выезд состоится в субботу. Как ты к этому относишься?"
+  },
+  {
+   "id": "sprechen_t2_q62",
+   "teil": "2",
+   "number": 62,
+   "de": "Ich nehme an Brückentagen immer frei. Und du?",
+   "ru": "Я всегда беру выходной на стыке праздников. А ты?"
+  },
+  {
+   "id": "sprechen_t2_q63",
+   "teil": "2",
+   "number": 63,
+   "de": "Ich finde einen Tag extra Urlaub für einen Umzug sehr wenig. Was denkst du darüber?",
+   "ru": "Я считаю, что один день отпуска на переезд – это мало. Что ты думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q64",
+   "teil": "2",
+   "number": 64,
+   "de": "Alle Fortbildungen sollen dieses Jahr an Wochenenden stattfinden. Was hältst du davon?",
+   "ru": "Все курсы повышения квалификации в этом году будут проводиться по выходным. Как тебе это?"
+  },
+  {
+   "id": "sprechen_t2_q65",
+   "teil": "2",
+   "number": 65,
+   "de": "Du arbeitest doch Vollzeit, oder? Wie schaffst du das denn mit deinem Kind? / Du arbeitest ganztägig. Wer passt während dieser Zeit auf die Kinder auf?",
+   "ru": "Ты же работаешь полный день, верно? Как ты справляешься с этим и с ребенком?"
+  },
+  {
+   "id": "sprechen_t2_q66",
+   "teil": "2",
+   "number": 66,
+   "de": "Dieses Jahr fällt unser Betriebsausflug aus. Was hältst du davon?",
+   "ru": "В этом году наш корпоративный выезд отменили. Как ты к этому относишься?"
+  },
+  {
+   "id": "sprechen_t2_q67",
+   "teil": "2",
+   "number": 67,
+   "de": "Was wäre eine gute Idee für unseren nächsten Betriebsausflug?",
+   "ru": "Какая идея для следующего корпоративного выезда была бы хорошей?"
+  },
+  {
+   "id": "sprechen_t2_q68",
+   "teil": "2",
+   "number": 68,
+   "de": "Bald ziehen wir um. Im neuen Gebäude arbeiten wir im Großraumbüro. Freust du dich auch darauf?",
+   "ru": "Скоро мы переезжаем. В новом здании у нас будет офис открытого типа. Ты этому рад?"
+  },
+  {
+   "id": "sprechen_t2_q69",
+   "teil": "2",
+   "number": 69,
+   "de": "Ich wünsche, es gäbe mehr vegetarische Gerichte in der Kantine. Was denkst du darüber? / Ich fände es gut, wenn es mehr vegetarische Gerichte in der Kantine geben würde. Was denkst du darüber? 184",
+   "ru": "Я бы хотел, чтобы в столовой было больше вегетарианских блюд. Что ты об этом думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q70",
+   "teil": "2",
+   "number": 70,
+   "de": "Ich finde es gut, wenn wir uns einmal im Monat abends zu einem Stammtisch treffen würden. Und du? Machst du mit? / Hast du etwas dagegen, wenn wir einen Stammtisch organisieren?",
+   "ru": "Я думаю, было бы здорово встречаться раз в месяц вечером за неформальным столом. А ты? Присоединишься?"
+  },
+  {
+   "id": "sprechen_t2_q71",
+   "teil": "2",
+   "number": 71,
+   "de": "Ich überlege, meine Stunden zu reduzieren und in Teilzeit zu arbeiten. Was denkst du? Ist das gut? / Ich möchte meine Stunden reduziere. Hast du darüber auch nachgedacht?",
+   "ru": "Я думаю о том, чтобы сократить рабочие часы и работать на полставки. Как ты считаешь, это хорошая идея?"
+  },
+  {
+   "id": "sprechen_t2_q72",
+   "teil": "2",
+   "number": 72,
+   "de": "Mein Zug kommt jeden Morgen spät. Ich habe Angst, ich bekomme bald Ärger vom Chef. Was soll ich machen?",
+   "ru": "Мой поезд каждое утро опаздывает. Боюсь, что начальник начнет ругаться. Что мне делать?"
+  },
+  {
+   "id": "sprechen_t2_q73",
+   "teil": "2",
+   "number": 73,
+   "de": "Was tun, wenn der Zug ständig Verspätung hat?",
+   "ru": "Что делать, если поезд постоянно опаздывает?"
+  },
+  {
+   "id": "sprechen_t2_q74",
+   "teil": "2",
+   "number": 74,
+   "de": "Was kann man tun, wenn man 45 Minuten im Zug verbringen muss?",
+   "ru": "Чем заняться, если предстоит провести 45 минут в поезде?"
+  },
+  {
+   "id": "sprechen_t2_q75",
+   "teil": "2",
+   "number": 75,
+   "de": "Ich möchte gerne mal einen Bildungsurlaub machen. Weißt du, wie das bei uns in der Firma geregelt ist?",
+   "ru": "Я хочу взять учебный отпуск. Ты знаешь, как это устроено в нашей компании?"
+  },
+  {
+   "id": "sprechen_t2_q76",
+   "teil": "2",
+   "number": 76,
+   "de": "Unsere Abteilung plant, in ein Kochstudio zu gehen, um gemeinsam zu kochen. Mir gefällt diese Idee. Wie findest du sie?",
+   "ru": "Наш отдел планирует сходить в кулинарную студию и приготовить что-то вместе. Мне нравится эта идея. А тебе?"
+  },
+  {
+   "id": "sprechen_t2_q77",
+   "teil": "2",
+   "number": 77,
+   "de": "Weißt du schon, wohin du in den Urlaub fährst? Bist du auf die Schulferien angewiesen?",
+   "ru": "Ты уже знаешь, куда поедешь в отпуск? Ты зависишь от школьных каникул?"
+  },
+  {
+   "id": "sprechen_t2_q78",
+   "teil": "2",
+   "number": 78,
+   "de": "In der Kantine kann man nur noch abgepackte Brötchen kaufen. Ich würde gerne eine warme Mahlzeit essen. Wie ist das bei dir?",
+   "ru": "В столовой теперь можно купить только упакованные булочки. Я бы хотел есть теплую еду. А ты?"
+  },
+  {
+   "id": "sprechen_t2_q79",
+   "teil": "2",
+   "number": 79,
+   "de": "Als neues Angebot für eine aktive Pause gibt es jetzt Tischtennis. Wollen wir mal in der Pause spielen?",
+   "ru": "Теперь в качестве активного отдыха на работе есть настольный теннис. Может, поиграем в перерыв?"
+  },
+  {
+   "id": "sprechen_t2_q80",
+   "teil": "2",
+   "number": 80,
+   "de": "Die Firma plant einen Betriebsausflug über das ganze Wochenende. Was hältst du davon?",
+   "ru": "Компания планирует корпоративный выезд на целый уик-энд. Как ты к этому относишься?"
+  },
+  {
+   "id": "sprechen_t2_q81",
+   "teil": "2",
+   "number": 81,
+   "de": "Soll man an den Betriebsausflügen teilnehmen?",
+   "ru": "Обязаны ли участвовать в корпоративных эскурсиях?"
+  },
+  {
+   "id": "sprechen_t2_q82",
+   "teil": "2",
+   "number": 82,
+   "de": "Hast du eine Idee / weißt du, was man in den Ferien mit Kindern hier in der Stadt unternehmen kann?",
+   "ru": "У тебя есть идеи, чем можно заняться с детьми в городе во время каникул?"
+  },
+  {
+   "id": "sprechen_t2_q83",
+   "teil": "2",
+   "number": 83,
+   "de": "Weißt du schon, was du für unsere Weihnachtsfeier anziehst? Sie findet schon nächste Woche statt.",
+   "ru": "Ты уже знаешь, что наденешь на нашу рождественскую вечеринку? Она уже на следующей неделе."
+  },
+  {
+   "id": "sprechen_t2_q84",
+   "teil": "2",
+   "number": 84,
+   "de": "Was soll man zur Party mit den Kollegen anziehen?",
+   "ru": "Что надеть на вечеринку с коллегами?"
+  },
+  {
+   "id": "sprechen_t2_q85",
+   "teil": "2",
+   "number": 85,
+   "de": "Ich finde flexible Arbeitszeiten großartig. Wann fängst du morgens mit der Arbeit an?",
+   "ru": "Я считаю, что гибкий график работы – это здорово. Во сколько ты начинаешь работать по утрам?"
+  },
+  {
+   "id": "sprechen_t2_q86",
+   "teil": "2",
+   "number": 86,
+   "de": "Ich finde die Uniform langweilig. Was ist deine Meinung?",
+   "ru": "Я считаю, что униформа скучная. Каково твое мнение?"
+  },
+  {
+   "id": "sprechen_t2_q87",
+   "teil": "2",
+   "number": 87,
+   "de": "Findest du es fair, dass wir die Kosten für die Fortbildungen selbst tragen sollen?",
+   "ru": "Ты считаешь справедливым, что мы должны сами оплачивать курсы повышения квалификации?"
+  },
+  {
+   "id": "sprechen_t2_q88",
+   "teil": "2",
+   "number": 88,
+   "de": "Ich finde die Gleitzeit sehr familienfreundlich. Und du auch?",
+   "ru": "Я считаю, что гибкий график работы удобен для семейных людей. Ты согласен?"
+  },
+  {
+   "id": "sprechen_t2_q89",
+   "teil": "2",
+   "number": 89,
+   "de": "Was denkst du? Was könnte eine gute Idee für eine aktive Pause sein?",
+   "ru": "Как ты думаешь, какая идея для активного перерыва была бы хорошей?"
+  },
+  {
+   "id": "sprechen_t2_q90",
+   "teil": "2",
+   "number": 90,
+   "de": "Was ist wichtiger? Familie oder Karriere? / 185",
+   "ru": "Что важнее? Семья или карьера?"
+  },
+  {
+   "id": "sprechen_t2_q91",
+   "teil": "2",
+   "number": 91,
+   "de": "Ich habe so viele Überstunden. Ist es besser, diese abzubummeln oder sich diese auszahlen zu lassen?",
+   "ru": "У меня так много переработок. Лучше взять отгулы или получить за них деньги?"
+  },
+  {
+   "id": "sprechen_t2_q92",
+   "teil": "2",
+   "number": 92,
+   "de": "Ich bin nach der Arbeit immer so müde. Hast du Idee, wie ich mich trotz Familie erholen kann?",
+   "ru": "Я всегда такой уставший после работы. У тебя есть идея, как я могу отдохнуть, несмотря на семью?"
+  },
+  {
+   "id": "sprechen_t2_q93",
+   "teil": "2",
+   "number": 93,
+   "de": "Wie kann man Müdigkeit von der Arbeit nicht ins Familienleben tragen?",
+   "ru": "Как не переносить усталость с работы в семью?"
+  },
+  {
+   "id": "sprechen_t2_q94",
+   "teil": "2",
+   "number": 94,
+   "de": "Was kann man nach der Arbeit tun, um die Stimmung zu verbessern?",
+   "ru": "Что можно делать после работы для улучшения настроения?"
+  },
+  {
+   "id": "sprechen_t2_q95",
+   "teil": "2",
+   "number": 95,
+   "de": "Müssen wir eigentlich im Homeoffice unser privates Handy für die Arbeit benutzen? Ich habe nämlich kein Diensthandy bekommen.",
+   "ru": "Должны ли мы вообще в хоум-офисе использовать свой личный телефон для работы? Дело в том, что мне не выдали служебный телефон."
+  },
+  {
+   "id": "sprechen_t2_q96",
+   "teil": "2",
+   "number": 96,
+   "de": "Gibt es in deinem Heimatland auch so viele Formulare und Bürokratie wie hier in Deutschland?",
+   "ru": "В твоей родной стране тоже так много формуляров, как здесь, в Германии?"
+  },
+  {
+   "id": "sprechen_t2_q97",
+   "teil": "2",
+   "number": 97,
+   "de": "In der Firma ist die Rede davon, dass wir an einer Spendenaktion teilnehmen sollen. Machst du mit?",
+   "ru": "В компании говорят о том, что мы должны принять участие в благотворительной акции. Ты будешь участвовать?"
+  },
+  {
+   "id": "sprechen_t2_q98",
+   "teil": "2",
+   "number": 98,
+   "de": "Wir bekommen Zuschuss für das Mittagessen in der Kantine. Findest du das gut?",
+   "ru": "Мы получаем дотацию на обед в столовой. Ты считаешь это хорошим?"
+  },
+  {
+   "id": "sprechen_t2_q99",
+   "teil": "2",
+   "number": 99,
+   "de": "Wäre ein Seminar für Konfliktmanagement für unsere Team nützlich? Was meinst du?",
+   "ru": "Был бы полезен семинар по управлению конфликтами для нашей команды? Как ты думаешь?"
+  },
+  {
+   "id": "sprechen_t2_q100",
+   "teil": "2",
+   "number": 100,
+   "de": "Ich hätte gerne rückenfreundliche Bürostühle, aber die Firma bezahlt das nicht.",
+   "ru": "Я бы хотел удобные для спины офисные стулья, но компания за это не платит."
+  },
+  {
+   "id": "sprechen_t2_q101",
+   "teil": "2",
+   "number": 101,
+   "de": "Wie stehen Sie zum zusätzlichen Lernen oder zur Weiterbildung am Arbeitsplatz?",
+   "ru": "Как Вы относитесь к дополнительному обучению на работе?"
+  },
+  {
+   "id": "sprechen_t2_q102",
+   "teil": "2",
+   "number": 102,
+   "de": "Was soll man machen, wenn im Büro Hunde erlaubt sind und man Angst vor ihn hat?",
+   "ru": "Что делать, если в офисе разрешают приводить собак, а у меня страх?"
+  },
+  {
+   "id": "sprechen_t2_q103",
+   "teil": "2",
+   "number": 103,
+   "de": "Wie kann man die Balance zwischen Freizeit und Arbeit halten?",
+   "ru": "Как поддерживать баланс между свободным временем и работой?"
+  },
+  {
+   "id": "sprechen_t2_q104",
+   "teil": "2",
+   "number": 104,
+   "de": "Liest du lieber Bücher oder hörst du Hörbücher?",
+   "ru": "Тебе больше нравиться читать книги или слушать аудиокниги?"
+  },
+  {
+   "id": "sprechen_t3_s1",
+   "teil": "3",
+   "number": 1,
+   "title": "Würmer im Mehl",
+   "de": "Sie arbeiten in einer Konditorei. Heute haben Sie Würmer/ kleine Tierchen im Mehl im Lager gefunden. Es muss schnell eine Lösung gefunden werden. Jetzt können Sie damit nicht backen, aber Sie haben wie immer viele Vorbestellungen für Kuchen.",
+   "tasks": [
+    "Chef: Wie kontaktieren?",
+    "Kunden: Wie informieren? Was anbieten?",
+    "Lager: Was tun?",
+    "Neues Mehl: Woher nehmen? Wo lagern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s2",
+   "teil": "3",
+   "number": 2,
+   "title": "Backofen defekt",
+   "de": "Sie arbeiten in einer Bäckerei. Der Backofen ist kaputt, und Sie müssen entscheiden, wie der Betrieb fortgesetzt wird.",
+   "tasks": [
+    "Den Laden öffnen.",
+    "Wen anrufen?",
+    "Was verkaufen? Preise.",
+    "Langfristig: Welche andere Handwerksfirma?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s3",
+   "teil": "3",
+   "number": 3,
+   "title": "Konflikte im Team",
+   "de": "Sie arbeiten in einem Produktionsunternehmen, und es gibt ständige Konflikte zwischen drei Mitarbeiterinnen im Team. Dies beeinträchtigt das Arbeitsklima und die Arbeitsleistung.",
+   "tasks": [
+    "Mit wem Gespräche führen.",
+    "Jobrotation möglich.",
+    "Produktionsleiter ansprechen.",
+    "Wie Atmosphäre verbessern.",
+    "Gruppenaktivitäten."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s4",
+   "teil": "3",
+   "number": 4,
+   "title": "Essen im Altenheim",
+   "de": "Sie arbeiten in einem Altenheim. Einige Bewohner beschweren sich über das (geschmackliche) Essen, was dazu führt, dass sie weniger essen und abnehmen.",
+   "tasks": [
+    "Gespräch mit dem Küchenchef.",
+    "Neue Rezeptideen.",
+    "Lieblingsgericht der Bewohner erfragen.",
+    "Lebensmittel: Wo einkaufen?",
+    "Vegetarische oder vegane Speisen."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s5",
+   "teil": "3",
+   "number": 5,
+   "title": "Transportboxen öffnen sich",
+   "de": "Sie arbeiten bei einem Fastfood-Service und nutzen neue Transportboxen. Diese öffnen sich beim Transport, und das Essen kommt kalt bei den Kunden an. / Sie arbeiten in einem Pizzaservice und haben seit einiger Zeit neue Transportboxen im Einsatz. Leider gehen diese während des Transports leicht auf, sodass das Essen kalt bei den Kunden ankommt.",
+   "tasks": [
+    "Kurzfristig: Wie Ware transportieren?",
+    "Kunden: Wie kontaktieren und was anbieten?",
+    "Hersteller: Was verlangen (fordern)?",
+    "Langfristig: andere Transportboxen suchen."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s6",
+   "teil": "3",
+   "number": 6,
+   "title": "Wasserschaden im Restaurant",
+   "de": "Sie arbeiten in einem Restaurant, und am Abend ist eine Großveranstaltung geplant. Leider gibt es einen Wasserschaden, weshalb die Veranstaltung abgesagt werden muss.",
+   "tasks": [
+    "Wasserschaden: Was tun? Handwerker: Wie finden?",
+    "Kunden: Wie informieren und was anbieten?",
+    "Lebensmittel: Was damit tun?",
+    "Aushilfskräfte: Wie kontaktieren?",
+    "Langfristige Problemlösungen."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s7",
+   "teil": "3",
+   "number": 7,
+   "title": "Heizung funktioniert nicht",
+   "de": "Ein Mitarbeiter hat eine Heizung für einen Kunden installiert, aber sie funktioniert nicht richtig. (In allen Wohnungen die Batterien nicht funktionieren)",
+   "tasks": [
+    "Was macht die Firma?",
+    "Was kann der Mitarbeiter anbieten?",
+    "Langfristige Lösung.",
+    "Was fordern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s8",
+   "teil": "3",
+   "number": 8,
+   "title": "Fehlerhafte Bestellsoftware",
+   "de": "Sie arbeiten in einem Möbelunternehmen und verarbeiten Online-Bestellungen. Die neu installierte Bestellsoftware hat technische Fehler, wodurch viele Aufträge verloren gegangen sind. ( Sie arbeiten zusammen in einem Möbelunternehmen und bearbeiten dort die eingegangene Online-Bestellungen. Vor Kurzem wurde eine neue Bestell-Software installiert. Diese hat technische Fehler, sodass viele Aufträge verloren gegangen sind.)",
+   "tasks": [
+    "Verlorene Bestellungen: Was tun?",
+    "Kunden: Wie informieren und was anbieten?",
+    "Software-Firma: Wie kontaktieren und was fordern?",
+    "Langfristig: andere Softwarelösungen in Betracht ziehen."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s9",
+   "teil": "3",
+   "number": 9,
+   "title": "Beschwerde von Patienten",
+   "de": "Sie arbeiten in einem Krankenhaus, und es gibt eine Beschwerde von Patienten. (Patienten beschweren sich über einen Kollegen.)",
+   "tasks": [
+    "Wo liegt die Beschwerde?",
+    "Was anbieten?",
+    "Kurzfristige Lösung.",
+    "Langfristige Lösung."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s10",
+   "teil": "3",
+   "number": 10,
+   "title": "Reinigungsgerät kaputt",
+   "de": "Sie arbeiten in einer Reinigungsfirma, und ein wichtiges Reinigungsgerät ( ein Gerät für Teppichboden) ist kaputt. Es gibt jedoch dringende Aufträge.",
+   "tasks": [
+    "Kunden: Was anbieten?",
+    "Vorübergehende Lösung?",
+    "Alternative Geräte?",
+    "Langfristige Lösung."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s11",
+   "teil": "3",
+   "number": 11,
+   "title": "Unfreundlicher Kollege im Café",
+   "de": "Sie arbeiten in einem Café, und Kunden beschweren sich über die Unfreundlichkeit eines Kollegen oder einer Kollegin.",
+   "tasks": [
+    "Problem ansprechen.",
+    "Chef informieren.",
+    "Kunden die Situation erklären.",
+    "Unterstützung für den Kollegen oder die Kollegin."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s12",
+   "teil": "3",
+   "number": 12,
+   "title": "Falsch einsortierte Lebensmittel",
+   "de": "Sie leiten einen Supermarkt, und Kunden beschweren sich über fehlende oder falsch einsortierte Lebensmittel.",
+   "tasks": [
+    "Beschwerden: welche Regale betroffen?",
+    "Teambesprechung: Wie ist die Maßnahmen zur Verbesserung.",
+    "Kunden: Kommunikation."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s13",
+   "teil": "3",
+   "number": 13,
+   "title": "Geschirrspüler defekt",
+   "de": "Sie arbeiten in einem Restaurant, und der Geschirrspüler ist defekt. Das Geschirr muss manuell nachgespült werden. / Sie arbeiten zusammen in einem Café. Meist hat das Geschirr nach der Reinigung mit dem Geschirrspüler noch Rückstände, sodass man es noch einmal mit der Hand spülen muss.",
+   "tasks": [
+    "Geschirrspüler defekt: Reparatur.",
+    "Neuen Geschirrspüler kaufen.",
+    "Alternatives Reinigungsmittel.",
+    "Aushilfen besser anlernen."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s14",
+   "teil": "3",
+   "number": 14,
+   "title": "Falsche oder kalte Pizza",
+   "de": "Sie arbeiten bei einem Pizza-Lieferdienst, und Kunden beschweren sich über falsche oder kalte Lieferungen.",
+   "tasks": [
+    "Falsche oder späte Lieferungen: Was tun?",
+    "Kunden: Wie reagieren und was anbieten?",
+    "Langfristig: Was tun, damit Pizzen richtig und pünktlich geliefert werden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s15",
+   "teil": "3",
+   "number": 15,
+   "title": "Drucker funktioniert nicht",
+   "de": "Der Drucker in Ihrem Geschäft funktioniert nicht, und es gibt viele Kunden.",
+   "tasks": [
+    "Kunden: Wie reagieren?",
+    "Kunden: Was anbieten?",
+    "Techniker kontaktieren."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s16",
+   "teil": "3",
+   "number": 16,
+   "title": "Schlechter Zimmerservice",
+   "de": "Sie arbeiten in einem großen Hotel. Manche Gäste haben sich beschwert, dass der Zimmerservice seine Arbeit nicht gut macht. Im Badezimmer werden schmutzige Handtücher oft nicht ausgetauscht, und die Betten sind oft nicht ordentlich hergerichtet.",
+   "tasks": [
+    "Schlechter Zimmerservice: Was tun?",
+    "Gäste: Wie kontaktieren?",
+    "Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Zimmer stets ordentlich geputzt und aufgeräumt werden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s17",
+   "teil": "3",
+   "number": 17,
+   "title": "Abgelaufene Lebensmittel",
+   "de": "Sie arbeiten in einem kleinen Lebensmittelgeschäft. Manche Kunden und Kundinnen haben sich darüber beschwert, dass gekaufte Lebensmittel nicht mehr haltbar waren.",
+   "tasks": [
+    "Lebensmittel: Was tun?",
+    "Kunden und Kundinnen: Wie kontaktieren?",
+    "Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Haltbarkeit stets gewährleistet ist?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s18",
+   "teil": "3",
+   "number": 18,
+   "title": "Mangelhafte Malerarbeiten",
+   "de": "Sie arbeiten bei einem Malerbetrieb und sollten das Wohnzimmer einer Kundin streichen. Die Kundin hat sich beschwert, dass die Arbeiten sehr schlecht ausgeführt wurden. Es gibt an einigen Stellen an der Wand Flecken. Außerdem ist bei den Malerarbeiten eine Lampe der Kundin kaputtgegangen.",
+   "tasks": [
+    "Schlecht ausgeführte Arbeit: Was tun?",
+    "Kaputte Lampe: Ersetzen?",
+    "Wie bei Kundin entschuldigen?",
+    "Langfristig: Wie Beschwerden vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s19",
+   "teil": "3",
+   "number": 19,
+   "title": "Schlechter Kaffee",
+   "de": "Sie arbeiten in einem kleinen Café. Einige Gäste haben sich beschwert, dass der Kaffee dort in letzter Zeit überhaupt nicht mehr schmeckt. Sie möchten den Kaffee am Ende nicht bezahlen und sind sehr unzufrieden.",
+   "tasks": [
+    "Kaffee: Was tun?",
+    "Kaffeeautomaten kontrollieren?",
+    "Wie bei Gästen entschuldigen?",
+    "Langfristig: Wie Qualität gewährleisten?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s20",
+   "teil": "3",
+   "number": 20,
+   "title": "Busse fahren zu früh ab",
+   "de": "Sie arbeiten bei einem städtischen Verkehrsbetrieb. Einige Fahrgäste haben sich beschwert, dass die Busfahrer und Busfahrerinnen oft zu früh losfahren, manchmal schon 3 Minuten vor der angegebenen Zeit. Dadurch verpassen viele Fahrgäste ihren Bus.",
+   "tasks": [
+    "Zu frühe Abfahrtszeiten: Was tun?",
+    "Mit Busfahrern / -fahrerinnen sprechen?",
+    "Wie bei Fahrgästen entschuldigen?",
+    "Langfristig: Wie Zeiten einhalten?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s21",
+   "teil": "3",
+   "number": 21,
+   "title": "Baulärm in der Sprachschule",
+   "de": "Sie arbeiten bei einer Sprachschule. Einige Schüler und Schülerinnen haben sich beschwert, dass es oft sehr laut ist, weil es draußen eine Baustelle gibt. Deshalb können sie sich nicht gut konzentrieren.",
+   "tasks": [
+    "Lärm von Baustelle: Was tun?",
+    "Andere Räume?",
+    "Wie bei Schülern / Schülerinnen entschuldigen?",
+    "Langfristig: Wie Lärm / Störungen vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s22",
+   "teil": "3",
+   "number": 22,
+   "title": "Zu wenig Beratung im Elektrofachgeschäft",
+   "de": "Sie arbeiten bei einem Elektrofachgeschäft. Einige Kunden und Kundinnen haben sich beschwert, dass sie oft keinen Verkäufer oder keine Verkäuferin finden, wenn sie Hilfe brauchen. Auch die Beratung sei oft schlecht.",
+   "tasks": [
+    "Zu wenig Verkäufer/innen: Was tun?",
+    "Schlechte Beratung: Was tun?",
+    "Wie bei Kund/innen entschuldigen?",
+    "Langfristig: Wie Service verbessern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s23",
+   "teil": "3",
+   "number": 23,
+   "title": "Unfreundlicher Erzieher",
+   "de": "Sie arbeiten bei einem Kindergarten. Einige Eltern haben sich beschwert, dass ein neuer Erzieher sehr unfreundlich zu den Kindern ist. Die Kinder haben teilweise sogar Angst, in den Kindergarten zu gehen.",
+   "tasks": [
+    "Unfreundlicher Erzieher: Was tun?",
+    "Kündigung? / Neuen Erzieher einstellen?",
+    "Wie bei Eltern entschuldigen?",
+    "Wie mit Kindern umgehen?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s24",
+   "teil": "3",
+   "number": 24,
+   "title": "Kaffeeautomat und Aufzug defekt",
+   "de": "Sie arbeiten in einer großen Firma. Einige Kunden und Kundinnen haben sich beschwert, dass der Kaffeeautomat nicht funktioniert. Außerdem funktioniert auch der Aufzug oft nicht.",
+   "tasks": [
+    "Kaffeeautomat: Was tun?",
+    "Aufzug: Techniker rufen?",
+    "Wie bei Kunden / Kundinnen entschuldigen?",
+    "Langfristig: Wie Probleme vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s25",
+   "teil": "3",
+   "number": 25,
+   "title": "Kaltes Buffet und kein WLAN",
+   "de": "Sie arbeiten in einem Hotel. Einige Gäste haben sich beschwert, dass das Essen vom Buffet oft kalt ist. Außerdem gibt es auf den Zimmern manchmal kein WLAN und die Gäste können nicht im Internet surfen.",
+   "tasks": [
+    "Kaltes Essen: Was tun?",
+    "Kein WLAN: Welche Lösung?",
+    "Entschädigung / Rabatt für Gäste?",
+    "Langfristig: Wie Service verbessern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s26",
+   "teil": "3",
+   "number": 26,
+   "title": "Eintöniges Essen im Altenheim",
+   "de": "Sie arbeiten in einem Altenheim. Einige Bewohner haben sich beschwert, dass das Essen immer gleich ist und oft nicht schmeckt.",
+   "tasks": [
+    "Essen: Was tun?",
+    "Bewohner: Umfragen? Wie kontaktieren?",
+    "Wie entschuldigen?",
+    "Langfristig: Menü ändern? Neue Rezepte finden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s27",
+   "teil": "3",
+   "number": 27,
+   "title": "Beschädigte Ware im Onlineshop",
+   "de": "Sie arbeiten zusammen für einen Onlineshop. Einige Kunden und Kundinnen haben sich darüber beschwert, dass bestellte Ware schlecht verpackt oder in beschädigtem Zustand bei ihnen angekommen ist.",
+   "tasks": [
+    "Beschädigte Ware: Was tun?",
+    "Kunden und Kundinnen: Wie kontaktieren? Was als Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Ware in einwandfreiem Zustand ankommt?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s28",
+   "teil": "3",
+   "number": 28,
+   "title": "Alte Geräte im Fitnessstudio",
+   "de": "Sie arbeiten in einem kleinen Fitnessstudio. Einige Kundinnen und Kunden haben sich beschwert, dass die Fitness-Geräte zu alt sind und schlechte Qualität haben. Außerdem findet man oft keine/n Trainer/in, wenn man eine Frage hat.",
+   "tasks": [
+    "Fitness-Geräte: Was tun?",
+    "Wie Service im Studio verbessern?",
+    "Wie entschuldigen? Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Kundinnen und Kunden zufrieden sind?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s29",
+   "teil": "3",
+   "number": 29,
+   "title": "Besuch eines ausländischen Kunden",
+   "de": "Sie sind in einem großen Produktionsbetrieb tätig. Ein bedeutender ausländischer Kunde plant nächsten Monat einen viertägigen Aufenthalt in Ihrer Stadt. Ihr Vorgesetzter hat Sie beauftragt, die Organisation dieses Aufenthalts zu übernehmen. / Ein Gast aus dem Ausland sollte für eine Rast arrangiert werden.",
+   "tasks": [
+    "Übernachtungsmöglichkeiten?",
+    "Wie abholen?",
+    "Wen treffen?",
+    "Was zeigen? Abendprogramm?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s30",
+   "teil": "3",
+   "number": 30,
+   "title": "Kollegin kommt zu spät",
+   "de": "Sie arbeiten zusammen in einer Bäckerei, und einer Ihrer Kolleginnen kommt morgens immer wieder zu spät, obwohl Sie sie bereits mehrmals darauf hingewiesen haben. Die Arbeit zu zweit zu bewältigen, wird dadurch zu einer Herausforderung.",
+   "tasks": [
+    "Kollegin: Was tun?",
+    "Chef*in: Wie Problem ansprechen?",
+    "Kurzfristig: Wie reagieren?",
+    "Arbeitsablauf: Was umorganisieren?",
+    "Langfristig: Was ändern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s31",
+   "teil": "3",
+   "number": 31,
+   "title": "Haarfarben verblassen",
+   "de": "Sie arbeiten zusammen in einem großen Frisörsalon und benutzen seit einiger Zeit neue Produkte (Haarfarben). Einige Kundinnen und Kunden haben sich beschwert, dass die Haarfarben nicht lange halten und schnell verblassen.",
+   "tasks": [
+    "Haarfarben: Was tun?",
+    "Kunden und Kundinnen: Wie kontaktieren?",
+    "Entschädigung anbieten?",
+    "Langfristig: Welche Produkte/Haarfarben im Salon."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s32",
+   "teil": "3",
+   "number": 32,
+   "title": "Orangenlimonade schmeckt nicht",
+   "de": "Sie arbeiten als Kellner/in in einem Restaurant. Seit einiger Zeit steht eine neue Orangenlimonade auf der Getränkekarte, die den meisten Gästen nicht schmeckt.",
+   "tasks": [
+    "Limonade: Was tun?",
+    "Kunden: Wie reagieren? Was anbieten?",
+    "Lieferanten: Wie kontaktieren? Was fordern?",
+    "Langfristig: Welche Limonade?",
+    "Welcher Lieferant?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s33",
+   "teil": "3",
+   "number": 33,
+   "title": "Zu wenig Auswahl am Buffet",
+   "de": "Sie arbeiten in einem Restaurant, das ein „All you can eat“-Buffet anbietet. Einige Kunden haben sich darüber beschwert, dass es zu wenig Auswahl gibt und fast alle Gerichte mit Fleisch sind.",
+   "tasks": [
+    "Buffet: Um welche Speisen erweitern?",
+    "Kunden: Wie Wünsche erfragen?",
+    "Koch: Alternativen besprechen?",
+    "Langfristig: Lieferant für Gemüse/Obst ansprechen?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s34",
+   "teil": "3",
+   "number": 34,
+   "title": "Fehlende Waren im Supermarkt",
+   "de": "Sie leiten einen Supermarkt und arbeiten oft mit Aushilfskräften. Kunden beschweren sich, dass in den Regalen oft Lebensmittel fehlen oder falsch eingeordnet sind.",
+   "tasks": [
+    "Beschwerden: Welche Regale?",
+    "Teambesprechung: Wie ist die Situation?",
+    "Maßnahmen/Verbesserungen: Welche? Wie?",
+    "Kunden: Situation erklären?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s35",
+   "teil": "3",
+   "number": 35,
+   "title": "Lärm im Großraumbüro",
+   "de": "Sie arbeiten in einem Großraumbüro. In letzter Zeit gab es wegen der hohen Lautstärke oft Beschwerden von Kollegen, die sich nicht auf ihre Arbeit konzentrieren konnten.",
+   "tasks": [
+    "Kollegen: Was stört?",
+    "Andere Kollegen: Wie ansprechen? Was tun?",
+    "Büro: Alternative?",
+    "Langfristig: Wie Lärm reduzieren?",
+    "Wie konzentriert arbeiten?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s36",
+   "teil": "3",
+   "number": 36,
+   "title": "Zu viel Zucker im Kindergartenessen",
+   "de": "Sie arbeiten in einem Kindergarten. Einige Eltern haben sich über das Essen des neuen Lieferanten beschwert, weil immer eine ungesunde Süßspeise wie Pudding enthalten ist.",
+   "tasks": [
+    "Zu viel Zucker: Was tun?",
+    "Eltern: Wie ansprechen?",
+    "Einzeln oder zusammen?",
+    "Lieferanten: Was fordern?",
+    "Langfristig: Welcher Lieferant?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s37",
+   "teil": "3",
+   "number": 37,
+   "title": "Falsche Pizza geliefert",
+   "de": "Sie arbeiten bei einem Pizza-Lieferdienst. In letzter Zeit haben sich Kunden beschwert, dass die falsche Pizza geliefert wurde oder die Pizza schon kalt war, als sie ankam.",
+   "tasks": [
+    "Falsche/zu späte Lieferung: Was tun?",
+    "Kunden: Wie beruhigen? Was anbieten?",
+    "Fahrer: Wie ansprechen? Was tun?",
+    "Langfristig: Neue Kartons? Besseres Bestellsystem?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s38",
+   "teil": "3",
+   "number": 38,
+   "title": "Personalmangel im Kaufhaus",
+   "de": "Sie arbeiten in einem großen Kaufhaus. Aufgrund von Krankheitsfällen stehen in den einzelnen Abteilungen zu wenig Mitarbeiterinnen und Mitarbeiter zur Verfügung, besonders in der beliebten Vorweihnachtszeit.",
+   "tasks": [
+    "Wie Personal bekommen?",
+    "Öffnungszeiten ändern?",
+    "Überstunden ändern?",
+    "Urlaubssperre?",
+    "Abteilung schließen?",
+    "Danke für Mitarbeiter?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s39",
+   "teil": "3",
+   "number": 39,
+   "title": "Umzugsunternehmen insolvent",
+   "de": "Ihre Firma plant, im nächsten Monat umzuziehen. Bedauerlicherweise ist das beauftragte Umzugsunternehmen insolvent und kann den Umzug nicht durchführen.",
+   "tasks": [
+    "Andere Umzugsfirmen?",
+    "Umzug anders organisieren?",
+    "Wer könnte helfen?",
+    "Vermieter kontaktieren?",
+    "Schadenersatz?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s40",
+   "teil": "3",
+   "number": 40,
+   "title": "Kühlraum in der Großküche defekt",
+   "de": "Sie arbeiten in einer Großküche. Der Kühlraum funktioniert nicht. Weil es heiß ist, sind einige Lebensmittel schon schlecht geworden und der Rest muss schnell gekühlt werden.",
+   "tasks": [
+    "Kühlraum: Was tun? Wen kontaktieren?",
+    "Schlecht gewordene Lebensmittel: Woher Ersatz?",
+    "Andere Lebensmittel: Wie verwenden?",
+    "Langfristig: Welche Kühlalternativen möglich?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s41",
+   "teil": "3",
+   "number": 41,
+   "title": "Falsches Produkt geliefert",
+   "de": "Sie arbeiten bei einer Möbelspedition und stellen beim Kunden fest, dass ein falsches Produkt geliefert wurde.",
+   "tasks": [
+    "Wer verantwortlich?",
+    "Wen informieren?",
+    "Wann richtige Lieferung möglich? Was Kunden anbieten?",
+    "Kosten für die zweite Lieferung?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s42",
+   "teil": "3",
+   "number": 42,
+   "title": "Verspätetes und kaltes Mittagessen",
+   "de": "Sie arbeiten in einem Altenheim, und der Essenslieferant bringt das Mittagessen für die Bewohner regelmäßig verspätet und kalt. Die Bewohner beschweren sich darüber.",
+   "tasks": [
+    "Lieferzeit: Wie ändern?",
+    "Essen: Wie aufwärmen?",
+    "Lieferanten: Wie kontaktieren? Was fordern?",
+    "Langfristig: Wie neuen Lieferanten finden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s43",
+   "teil": "3",
+   "number": 43,
+   "title": "Salben und Öle nicht geliefert",
+   "de": "Sie arbeiten in der Physiotherapie-Abteilung eines Krankenhauses. Für die anstehenden Anwendungen sind verschiedene Salben und Öle erforderlich, die jedoch nicht geliefert wurden. Aber der Terminkalender ist voll.",
+   "tasks": [
+    "Kurzfristige Lösung: Wo Produkte kaufen?",
+    "Termine: Wie Patienten erreichen?",
+    "Lieferanten: Wie kontaktieren? Was fordern?",
+    "Langfristig: Wie neuen Lieferanten finden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s44",
+   "teil": "3",
+   "number": 44,
+   "title": "Doppelbuchungen im Hotel",
+   "de": "Sie arbeiten in einem Hotel, und es kommt häufig vor, dass mehrere Buchungen für dasselbe Zimmer im gleichen Zeitraum vorgenommen werden.",
+   "tasks": [
+    "Doppelbuchungen: Was tun?",
+    "Gäste: Was anbieten?",
+    "Sofortmaßnahmen: Wie Ersatz organisieren?",
+    "Wie die nächsten Buchungen kontrollieren?",
+    "Langfristig: Wie in Zukunft vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s45",
+   "teil": "3",
+   "number": 45,
+   "title": "Zerbrochene Schoko-Hasen",
+   "de": "Sie arbeiten in einem Supermarkt, und Ihre Kunden freuen sich jedes Jahr vor Ostern auf Schoko-Hasen( vor Weihnachten auf Schoko-Nikoläuse), die Sie anbieten. Die Lieferung ist heute eingetroffen, aber leider sind alle Schoko-Hasen (Schoko-Nikoläuse), während des Transports zerbrochen.",
+   "tasks": [
+    "Schoko-Hasen (Schoko-Nikoläuse): Was tun?",
+    "Kunden: Wie kommunizieren? Was anbieten?",
+    "Lieferanten: Wie kontaktieren? Was fordern?",
+    "Langfristig: Schoko-Hasen (Schoko-Nikoläuse), fürs nächste Jahr? Anderer Lieferant?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s46",
+   "teil": "3",
+   "number": 46,
+   "title": "Schreibwaren nicht geliefert",
+   "de": "Sie arbeiten in einem Supermarkt. Es ist Montagmorgen, und laut Prospekt sollten ab heute günstige Schreibwaren zum Schulanfang erhältlich sein. Leider sind diese nicht geliefert worden, obwohl viele Kunden bereits danach fragen. / Die Schulsaison steht vor der Tür und der Lieferant verzögert die Lieferung von Schreibwaren.",
+   "tasks": [
+    "Kunden: Wie beruhigen? Was anbieten?",
+    "Lieferant: Wie kontaktieren? Was verlangen?",
+    "Langfristig: Lieferanten wechseln?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s47",
+   "teil": "3",
+   "number": 47,
+   "title": "Eisregen auf dem Parkplatz",
+   "de": "Sie arbeiten in einem großen Möbelgeschäft am Stadtrand. Draußen hat es starken Eisregen gegeben, wodurch der Parkplatz so rutschig ist, dass die Kund*innen nicht mehr wegfahren können.",
+   "tasks": [
+    "Winterdienst informieren?",
+    "Wie Kund*innen beruhigen?",
+    "Was Kund*innen anbieten?",
+    "Was selbst tun?",
+    "Erste-Hilfe nötig?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s48",
+   "teil": "3",
+   "number": 48,
+   "title": "Unpünktliche Lieferung vom Bauernhof",
+   "de": "Sie arbeiten als Koch in einem Restaurant. Sie arbeiten seit Kurzem mit einem regionalen Bauernhof und bekommen frisches Obst und Gemüse. Leider werden in der letzten Zeit die Lieferzeiten öfter nicht eingehalten, was regelmäßig zu Problemen führt.",
+   "tasks": [
+    "Obst/Gemüse heute nicht geliefert: Was machen?",
+    "Heute: Wie Ersatz anschaffen?",
+    "Lieferant: Wie kontaktieren? Was fordern?",
+    "Langfristig: Welcher Lieferant?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s49",
+   "teil": "3",
+   "number": 49,
+   "title": "Verdorbener Fisch",
+   "de": "Sie arbeiten in einem Restaurant für Fischspezialitäten. Für heute Abend hat sich eine größere Gesellschaft angesagt. Leider hat Ihr Lieferant verdorbene Ware geliefert. Sie können das geplante Menü nicht vorbereiten.",
+   "tasks": [
+    "Lieferant: Wie kontaktieren? Was fordern?",
+    "Fisch: Woanders kaufen?",
+    "Gäste: Wie informieren? Was als Entschädigung anbieten?",
+    "Langfristig: Weitere Zusammenarbeit mit Lieferanten möglich?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s50",
+   "teil": "3",
+   "number": 50,
+   "title": "Vegetarisches Catering fehlt",
+   "de": "Sie arbeiten in einer Firma und bestellen regelmäßig vegetarisches Essen von der CateringFirma. Leider hat die Catering-Firma schon wieder mal nicht Vegetarier-Variante.",
+   "tasks": [
+    "Catering: was bitten?",
+    "Andere Catering: Wo finden? Wie kontaktieren?",
+    "Langfristig: Anderen Catering."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s51",
+   "teil": "3",
+   "number": 51,
+   "title": "Kühlung in der Fleischtheke defekt",
+   "de": "Sie arbeiten in einer Metzgerei. Heute morgen haben Sie gemerkt, dass die Kühlung in einer der Fleischtheken nicht richtig funktioniert.",
+   "tasks": [
+    "Fleisch: Was tun?",
+    "Techniker: Wen kontaktieren?",
+    "Gaste: Lösung?",
+    "Langfristig : neu kaufen oder reparieren?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s52",
+   "teil": "3",
+   "number": 52,
+   "title": "Antiker Spiegel beschädigt",
+   "de": "Sie arbeiten für ein Umzugsunternehmen. Beim Transport ist ein antiker Spiegel auf die Treppe gefallen und wurde beschädigt. Der Kunde ist sehr verärgert, der Spiegel ist nicht zu ersetzen.",
+   "tasks": [
+    "Wen informieren?",
+    "Kosten: Wer bezahlt den Schaden?",
+    "Kunde: Was anbieten?",
+    "Langfristig: Wie Schäden vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s53",
+   "teil": "3",
+   "number": 53,
+   "title": "Umsatzrückgang in der Buchhandlung",
+   "de": "Wir arbeiten in Buchhandlung, die Umsätze rückläufig sind wegen Online- Geschäften. Der Chef hat uns mit einer Aufgabe beauftragt, um die Kunden zurückzugewinnen.",
+   "tasks": [
+    "Angebote: Wir erweitern? Verkaufsstrategie?",
+    "Internetpräsenz?",
+    "Das Geschäft verkleinern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s54",
+   "teil": "3",
+   "number": 54,
+   "title": "Mieterhöhung in der Konditorei",
+   "de": "Sie sind zu zweit Inhaberinnen einer Konditorei, ihr Vermieter hat zum nächsten Monat die Miete stark erhöht. Die Nebenkosten sind auch gestiegen.",
+   "tasks": [
+    "Vermieter: Was vorschlagen?",
+    "Mehreinnahmen: Wie?",
+    "Einsparmöglichkeiten?",
+    "Langfristig: neues Geschäft suchen, wie und was?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s55",
+   "teil": "3",
+   "number": 55,
+   "title": "Übellauniger Abteilungsleiter",
+   "de": "Sie arbeiten gemeinsam in einer Firma. Ihr Abteilungsleiter ist in den letzten Wochen übellaunig: Man merkt, dass er sehr gereizt ist und lässt es leider an den Mitarbeitern aus. Dadurch ist die Arbeitsatmosphäre schlecht geworden.",
+   "tasks": [
+    "Problem: Wie der Teamleiter ansprechen beziehungsweise wie mit ihm umgehen?",
+    "Den Chef informieren?",
+    "Mitarbeiter: Wie motivieren?",
+    "Andere Ideen oder Vorschläge."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s56",
+   "teil": "3",
+   "number": 56,
+   "title": "Teambildung-Nachmittag ohne Resonanz",
+   "de": "Sie arbeiten in einer Computerfirma und haben vor Wochen einen Teambildung-Nachmittag vorgeschlagen, leider hat niemand darauf reagiert. Sie versteht nicht warum, dabei wäre es zu Verbesserung Ihrer Zusammenarbeit relevant.",
+   "tasks": [
+    "Persönlich ansprechen",
+    "Gründe: Zeitmangel?",
+    "Desinteresse?",
+    "Gegenvorschläge?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s57",
+   "teil": "3",
+   "number": 57,
+   "title": "Hund im Büro",
+   "de": "Einer von unseren Kollegen bringt seinen Hund zur Arbeit und wir mögen keine Tiere.",
+   "tasks": [
+    "Team Sitzung organisieren und sprechen",
+    "Vorschläge",
+    "Wie wir mit unseren Kollegen vorgehen",
+    "Lösung"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s58",
+   "teil": "3",
+   "number": 58,
+   "title": "Zu kleine und versalzene Portionen",
+   "de": "Sie arbeiten gemeinsam in einer Restaurantküche. Einige Gäste haben sich darüber beschwert, dass die Portionsgrößen oft zu klein sind und das Essen manchmal versalzen ist.",
+   "tasks": [
+    "Portionsgrößen: Was tun?",
+    "Versalzenes Essen: Wie verhindern?",
+    "Was Gästen als Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Gäste mit Essen zufrieden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s59",
+   "teil": "3",
+   "number": 59,
+   "title": "Stornierter Cateringauftrag",
+   "de": "Sie sollen für eine Betriebsfeier das Essen liefern. Der Auftrag wurde vom Kunden kurzfristig ohne Begründung storniert. Die Speisen sind bereits zubereitet und das Team gebucht.",
+   "tasks": [
+    "Was mit dem Essen machen?",
+    "Wen informieren?",
+    "Kosten: wer bezahlt?",
+    "Kunde: was fordern?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s60",
+   "teil": "3",
+   "number": 60,
+   "title": "Drucker mit Blaustich",
+   "de": "Sie arbeiten in einer Werbefirma und müssen für Kunden bis morgen Werbematerialien wie Flyer, Visitenkarten ausdrucken. Trotz einer vorherigen Wartung des Druckers durch einen Techniker haben alle Ausdrucke einen unerwünschten Blaustich.",
+   "tasks": [
+    "Drucker: Was mit dem kaputten Drucker tun?",
+    "Kunden: Wie kontaktieren? Was anbieten?",
+    "Techniker: Wie kontaktieren? Was fordern?",
+    "Langfristig: Welche anderen Möglichkeiten?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s61",
+   "teil": "3",
+   "number": 61,
+   "title": "Verfärbtes Abendkleid",
+   "de": "Sie arbeiten in einem Reinigungsunternehmen. Ein teures Abendkleid ist verfärbt. Die Kundin ist sehr wütend, weil sie das Kleid am Abend braucht. Sie droht mit dem Anwalt.",
+   "tasks": [
+    "wen informieren?",
+    "Kosten: Schaden beheben.",
+    "Kundin: Was anbieten?",
+    "Langfristig: Wie solche Fälle vermeiden?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s62",
+   "teil": "3",
+   "number": 62,
+   "title": "Lange Reparaturzeiten beim IT-Service",
+   "de": "Sie arbeiten bei einem IT-Reparaturdienst. Manche Kundinnen und Kunden haben sich beschwert, dass die Reparaturen oft sehr lange dauern oder Computer-Fehler erst gar nicht gefunden werden.",
+   "tasks": [
+    "Reparatur-Service: Wie verbessern?",
+    "Schulungen für Mitarbeitende?",
+    "Was Kunden und Kundinnen als Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Kundschaft zufrieden ist?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s63",
+   "teil": "3",
+   "number": 63,
+   "title": "Firmenjubiläum organisieren",
+   "de": "Ihr Unternehmen feiert in 3 Monaten sein 25 jähriges Bestehen. Und ihr Chef hat sie gebeten, die Feier zu organisieren.",
+   "tasks": [
+    "Datum: Was ist das Beste? Warum?",
+    "Seite: im eigenen Zimmer? Zimmervermietung?",
+    "Programmvorschläge und Ideen: selbst organisieren? jemanden einstellen?",
+    "Sonderaktionen für Kunden: Sonderangebote? Werbegeschenke?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s64",
+   "teil": "3",
+   "number": 64,
+   "title": "Unfreundliche Taxifahrer",
+   "de": "Sie arbeiten für ein Taxi-Unternehmen. Einige Fahrgäste haben sich beschwert, dass manche Taxifahrer und -fahrerinnen nicht freundlich sind und zu lange brauchen, um eine Adresse zu finden.",
+   "tasks": [
+    "Freundlichkeit: Wie verbessern?",
+    "Wie Adressen schneller finden?",
+    "Was Fahrgästen als Entschädigung anbieten?",
+    "Langfristig: Was tun, damit Fahrgäste zufrieden sind?"
+   ]
+  },
+  {
+   "id": "sprechen_t3_s65",
+   "teil": "3",
+   "number": 65,
+   "title": "Falsche Arbeitstische geliefert",
+   "de": "Für Ihr Büro wurden neue Arbeitstische bestellt. Die Lieferung ist gerade eingetroffen. Bei der Überprüfung stellen Sie fest, dass sie fehlerhaft ist. Geliefert wurden Arbeitstische einer anderen Marke. Außerdem stimmen die Maße der Tische mit der Bestellung nicht überein.",
+   "tasks": [
+    "Ware: Was wurde bestellt? Warum wird es dringend benötigt?",
+    "Lieferung: Welche Fehler? Wie können sie behoben werden? Ware abholen? Richtige Ware nachliefern? Bis wann?",
+    "Lieferant: Wen und wie kontaktieren? Was fordern?",
+    "Kaufvertrag kündigen: Bestellung stornieren, wenn nicht innerhalb der 5 Werktage richtige Ware geliefert wird."
+   ]
+  },
+  {
+   "id": "sprechen_t3_s66",
+   "teil": "3",
+   "number": 66,
+   "title": "Falsche Kindertoiletten geliefert",
+   "de": "Sie arbeiten in einem Kindergarten. Für die neu renovierten Toiletten wurden neue Waschbecken und Kindertoiletten bestellt. Bei der Überprüfung der Lieferung haben Sie festgestellt, dass sie fehlerhaft ist. Geliefert wurden Toiletten und Waschbecken für Erwachsene. Außerdem stimmt weder die Menge noch die Farbe mit der Bestellung überein.",
+   "tasks": [
+    "Ware: Was wurde bestellt? Was stimmt nicht?",
+    "Lieferung: Welche Fehler? Wie können sie behoben werden? Ware abholen? Richtige Ware nachliefern? Bis wann?",
+    "Lieferant: Wen und wie kontaktieren? Was fordern?",
+    "Preisnachlass: Vom Kaufvertrag zurücktreten?"
+   ]
+  }
+ ]
+}
