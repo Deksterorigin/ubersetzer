@@ -1,0 +1,1493 @@
+{
+ "part": "HOEREN_4",
+ "variants": [
+  {
+   "id": "hoeren_4_v1",
+   "part": "HOEREN_4",
+   "title": "Вариант 1",
+   "note": "100%. Звуковая дорожка от 18.06.25",
+   "segments": [
+    {
+     "title": "Nummer 36 · Andrea",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Andrea Faber. Wir sind doch am Freitag zum Arbeitsfrühstück verabredet. Leider kann ich unseren Termin nicht einhalten. Wir haben ein spontanes Treffen mit unserem Vertreter aus Wien. Kannst du auch nächste Woche Montag? Das ist der 25. Ich halte dir mal den Vormittag frei. Sei doch so nett und gib mir bitte heute noch Bescheid, ob dir der Termin passt. Es ist wichtig, dass wir uns zeitnah zusammensetzen. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Andrea",
+       "options": [
+        {
+         "key": "a",
+         "text": "kann den geplanten Termin nicht einhalten."
+        },
+        {
+         "key": "b",
+         "text": "möchte sich Montag wieder melden."
+        },
+        {
+         "key": "c",
+         "text": "trifft einen Vertreter zum Arbeitsfrühstück."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Frau Plassberg",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Zeuner, der neuen Assistent der Geschäftsleitung. Sie wollten am Dienstag die neue Werbekampagne mit Frau Plassberg besprechen, aber sie ist leider wegen einer Steuerprüfung hier im Haus verhindert. Die restliche Woche ist sie auf Dienstreise. Ginge bei Ihnen auch der Dienstag nächster Woche zur selben Zeit. Bevor unser Kunde am Freitag kommender Woche zur Präsentation kommt, müssen noch wichtige Dinge geklärt werden. Bitte bestätigen Sie den Termin. Vielen Dank."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Frau Plassberg",
+       "options": [
+        {
+         "key": "a",
+         "text": "möchte eine Steuerprüfung auswerten."
+        },
+        {
+         "key": "b",
+         "text": "möchte die neue Werbekampagne diskutieren."
+        },
+        {
+         "key": "c",
+         "text": "möchte über die Dienstreise sprechen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Daniela Schöller",
+     "transcript": [
+      {
+       "text": "Hallo, Daniela Schöller von der Firma Neuhaus. Die für heute angekündigte Ware ist jetzt versandfertig. Ich habe Ihnen ja schon gesagt, dass das Transporthub sehr zerbrechlich ist und nicht gestattet werden darf. Wie Sie wissen, ist die Lieferung sehr eilig und der Kunde hat den Eilzuschlag gezahlt. Es ist also unumgänglich, dass die Kisten heute noch abgeholt werden. Bitte bestätigen Sie mir kurz, dass das heute noch klappt. Bis später."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Daniela Schöller",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet um heutige Abholung der Ware."
+        },
+        {
+         "key": "b",
+         "text": "braucht die Lieferung dringend."
+        },
+        {
+         "key": "c",
+         "text": "hat den Eilzuschlag bezahlt."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Lattermann",
+     "transcript": [
+      {
+       "text": "Hallo, Guido Lattermann von der Firma Top Elektronik. Ich muss Ihnen leider mitteilen, dass die von Ihnen bestellte Maschine heute wegen des Sturms in Hamburg nicht verladen werden konnte. Die Lieferung verzögert sich wahrscheinlich um eine Woche. So wie es aussieht, kommt das Schiff am 16. Mai bei Ihnen in Dresden an. Es wäre nett, wenn Sie uns dann den Empfang der Ware bestätigen können. Ein kurzer Anruf reicht. Ich wünsche Ihnen einen schönen Tag und bitte entschuldigen Sie die Unannehmlichkeiten."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Herr Lattermann",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommt eine Maschine aus Hamburg."
+        },
+        {
+         "key": "b",
+         "text": "bestätigt den Empfang der Maschine."
+        },
+        {
+         "key": "c",
+         "text": "liefert Maschine nach Dresden."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Bernhardt",
+     "transcript": [
+      {
+       "text": "Bernhardt, Geschäftsleitung. Ich habe mir Ihren Entwurf für unsere neue Homepage angesehen. Im Großen und Ganzen gefällt er mir recht gut, aber ich habe noch ein paar Änderungen. Wir sollten mehr hervorheben, was uns von anderen Firmen unterscheidet. Z.B. die zehnjährige Garantie, die wir auf unsere Produkte geben. Das ist aber noch nicht alles. Bitte melden Sie sich bei meiner Sekretärin Frau Zimmer für einen Termin, bei dem ich Ihnen die Punkte kurz erläutern kann."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Frau Bernhardt",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat Änderungswünsche für die Homepage."
+        },
+        {
+         "key": "b",
+         "text": "meldet sich bei ihrer Sekretärin."
+        },
+        {
+         "key": "c",
+         "text": "möchte die Garantie verlängern."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195147"
+  },
+  {
+   "id": "hoeren_4_v1_b",
+   "part": "HOEREN_4",
+   "title": "Вариант 1 · варианты ответов от 14.04.25 (вопрос 36)",
+   "note": "В источнике ответ на новый вопрос 36 не выделен",
+   "segments": [
+    {
+     "title": "Nummer 36 · Andrea",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Andrea Faber. Wir sind doch am Freitag zum Arbeitsfrühstück verabredet. Leider kann ich unseren Termin nicht einhalten. Wir haben ein spontanes Treffen mit unserem Vertreter aus Wien. Kannst du auch nächste Woche Montag? Das ist der 25. Ich halte dir mal den Vormittag frei. Sei doch so nett und gib mir bitte heute noch Bescheid, ob dir der Termin passt. Es ist wichtig, dass wir uns zeitnah zusammensetzen. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Andrea",
+       "options": [
+        {
+         "key": "a",
+         "text": "wird mit dem Vertreter frühstücken."
+        },
+        {
+         "key": "b",
+         "text": "sagt den Termin ab."
+        },
+        {
+         "key": "c",
+         "text": "möchte sich Montag wieder melden."
+        }
+       ],
+       "answer": null
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Frau Plassberg",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Zeuner, der neuen Assistent der Geschäftsleitung. Sie wollten am Dienstag die neue Werbekampagne mit Frau Plassberg besprechen, aber sie ist leider wegen einer Steuerprüfung hier im Haus verhindert. Die restliche Woche ist sie auf Dienstreise. Ginge bei Ihnen auch der Dienstag nächster Woche zur selben Zeit. Bevor unser Kunde am Freitag kommender Woche zur Präsentation kommt, müssen noch wichtige Dinge geklärt werden. Bitte bestätigen Sie den Termin. Vielen Dank."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Frau Plassberg",
+       "options": [
+        {
+         "key": "a",
+         "text": "möchte eine Steuerprüfung auswerten."
+        },
+        {
+         "key": "b",
+         "text": "möchte die neue Werbekampagne diskutieren."
+        },
+        {
+         "key": "c",
+         "text": "möchte über die Dienstreise sprechen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Daniela Schöller",
+     "transcript": [
+      {
+       "text": "Hallo, Daniela Schöller von der Firma Neuhaus. Die für heute angekündigte Ware ist jetzt versandfertig. Ich habe Ihnen ja schon gesagt, dass das Transporthub sehr zerbrechlich ist und nicht gestattet werden darf. Wie Sie wissen, ist die Lieferung sehr eilig und der Kunde hat den Eilzuschlag gezahlt. Es ist also unumgänglich, dass die Kisten heute noch abgeholt werden. Bitte bestätigen Sie mir kurz, dass das heute noch klappt. Bis später."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Daniela Schöller",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet um heutige Abholung der Ware."
+        },
+        {
+         "key": "b",
+         "text": "braucht die Lieferung dringend."
+        },
+        {
+         "key": "c",
+         "text": "hat den Eilzuschlag bezahlt."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Lattermann",
+     "transcript": [
+      {
+       "text": "Hallo, Guido Lattermann von der Firma Top Elektronik. Ich muss Ihnen leider mitteilen, dass die von Ihnen bestellte Maschine heute wegen des Sturms in Hamburg nicht verladen werden konnte. Die Lieferung verzögert sich wahrscheinlich um eine Woche. So wie es aussieht, kommt das Schiff am 16. Mai bei Ihnen in Dresden an. Es wäre nett, wenn Sie uns dann den Empfang der Ware bestätigen können. Ein kurzer Anruf reicht. Ich wünsche Ihnen einen schönen Tag und bitte entschuldigen Sie die Unannehmlichkeiten."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Herr Lattermann",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommt eine Maschine aus Hamburg."
+        },
+        {
+         "key": "b",
+         "text": "bestätigt den Empfang der Maschine."
+        },
+        {
+         "key": "c",
+         "text": "liefert Maschine nach Dresden."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Bernhardt",
+     "transcript": [
+      {
+       "text": "Bernhardt, Geschäftsleitung. Ich habe mir Ihren Entwurf für unsere neue Homepage angesehen. Im Großen und Ganzen gefällt er mir recht gut, aber ich habe noch ein paar Änderungen. Wir sollten mehr hervorheben, was uns von anderen Firmen unterscheidet. Z.B. die zehnjährige Garantie, die wir auf unsere Produkte geben. Das ist aber noch nicht alles. Bitte melden Sie sich bei meiner Sekretärin Frau Zimmer für einen Termin, bei dem ich Ihnen die Punkte kurz erläutern kann."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Frau Bernhardt",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat Änderungswünsche für die Homepage."
+        },
+        {
+         "key": "b",
+         "text": "meldet sich bei ihrer Sekretärin."
+        },
+        {
+         "key": "c",
+         "text": "möchte die Garantie verlängern."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195147"
+  },
+  {
+   "id": "hoeren_4_v1_c",
+   "part": "HOEREN_4",
+   "title": "Вариант 1 · варианты ответов от 14.11.25 (вопрос 38)",
+   "note": "В источнике в новом вопросе 38 вариант b пустой",
+   "segments": [
+    {
+     "title": "Nummer 36 · Andrea",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Andrea Faber. Wir sind doch am Freitag zum Arbeitsfrühstück verabredet. Leider kann ich unseren Termin nicht einhalten. Wir haben ein spontanes Treffen mit unserem Vertreter aus Wien. Kannst du auch nächste Woche Montag? Das ist der 25. Ich halte dir mal den Vormittag frei. Sei doch so nett und gib mir bitte heute noch Bescheid, ob dir der Termin passt. Es ist wichtig, dass wir uns zeitnah zusammensetzen. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Andrea",
+       "options": [
+        {
+         "key": "a",
+         "text": "kann den geplanten Termin nicht einhalten."
+        },
+        {
+         "key": "b",
+         "text": "möchte sich Montag wieder melden."
+        },
+        {
+         "key": "c",
+         "text": "trifft einen Vertreter zum Arbeitsfrühstück."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Frau Plassberg",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Zeuner, der neuen Assistent der Geschäftsleitung. Sie wollten am Dienstag die neue Werbekampagne mit Frau Plassberg besprechen, aber sie ist leider wegen einer Steuerprüfung hier im Haus verhindert. Die restliche Woche ist sie auf Dienstreise. Ginge bei Ihnen auch der Dienstag nächster Woche zur selben Zeit. Bevor unser Kunde am Freitag kommender Woche zur Präsentation kommt, müssen noch wichtige Dinge geklärt werden. Bitte bestätigen Sie den Termin. Vielen Dank."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Frau Plassberg",
+       "options": [
+        {
+         "key": "a",
+         "text": "möchte eine Steuerprüfung auswerten."
+        },
+        {
+         "key": "b",
+         "text": "möchte die neue Werbekampagne diskutieren."
+        },
+        {
+         "key": "c",
+         "text": "möchte über die Dienstreise sprechen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Daniela Schöller",
+     "transcript": [
+      {
+       "text": "Hallo, Daniela Schöller von der Firma Neuhaus. Die für heute angekündigte Ware ist jetzt versandfertig. Ich habe Ihnen ja schon gesagt, dass das Transporthub sehr zerbrechlich ist und nicht gestattet werden darf. Wie Sie wissen, ist die Lieferung sehr eilig und der Kunde hat den Eilzuschlag gezahlt. Es ist also unumgänglich, dass die Kisten heute noch abgeholt werden. Bitte bestätigen Sie mir kurz, dass das heute noch klappt. Bis später."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Die Ware",
+       "options": [
+        {
+         "key": "a",
+         "text": "wird heute versendet."
+        },
+        {
+         "key": "b",
+         "text": "?"
+        },
+        {
+         "key": "c",
+         "text": "wird vom Kunden abgeholt."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Lattermann",
+     "transcript": [
+      {
+       "text": "Hallo, Guido Lattermann von der Firma Top Elektronik. Ich muss Ihnen leider mitteilen, dass die von Ihnen bestellte Maschine heute wegen des Sturms in Hamburg nicht verladen werden konnte. Die Lieferung verzögert sich wahrscheinlich um eine Woche. So wie es aussieht, kommt das Schiff am 16. Mai bei Ihnen in Dresden an. Es wäre nett, wenn Sie uns dann den Empfang der Ware bestätigen können. Ein kurzer Anruf reicht. Ich wünsche Ihnen einen schönen Tag und bitte entschuldigen Sie die Unannehmlichkeiten."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Herr Lattermann",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommt eine Maschine aus Hamburg."
+        },
+        {
+         "key": "b",
+         "text": "bestätigt den Empfang der Maschine."
+        },
+        {
+         "key": "c",
+         "text": "liefert Maschine nach Dresden."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Bernhardt",
+     "transcript": [
+      {
+       "text": "Bernhardt, Geschäftsleitung. Ich habe mir Ihren Entwurf für unsere neue Homepage angesehen. Im Großen und Ganzen gefällt er mir recht gut, aber ich habe noch ein paar Änderungen. Wir sollten mehr hervorheben, was uns von anderen Firmen unterscheidet. Z.B. die zehnjährige Garantie, die wir auf unsere Produkte geben. Das ist aber noch nicht alles. Bitte melden Sie sich bei meiner Sekretärin Frau Zimmer für einen Termin, bei dem ich Ihnen die Punkte kurz erläutern kann."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Frau Bernhardt",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat Änderungswünsche für die Homepage."
+        },
+        {
+         "key": "b",
+         "text": "meldet sich bei ihrer Sekretärin."
+        },
+        {
+         "key": "c",
+         "text": "möchte die Garantie verlängern."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195147"
+  },
+  {
+   "id": "hoeren_4_v2",
+   "part": "HOEREN_4",
+   "title": "Вариант 2",
+   "note": "100%. Звуковая дорожка от 18.06.25",
+   "segments": [
+    {
+     "title": "Nummer 36 · Robert Krüger",
+     "transcript": [
+      {
+       "text": "Hi, Robert Krüger hier. Ich habe die Organisation der diesjährigen Weihnachtsfeier ja von dir übernommen. Ich weiß aber noch nicht, welches Restaurant ich reservieren soll. Ich bin ja noch ziemlich neu in der Stadt. Ihr wart letztes Jahr doch beim Griechen, oder? Dieses Jahr sollte es etwas anderes sein. Vielleicht eins, wo es eine größere Auswahl an Fleischlosen Gerichten gibt. Deine Meinung hier wäre mir wichtig."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Robert Krüger",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat letztes Jahr die Weihnachtsfeier organisiert."
+        },
+        {
+         "key": "b",
+         "text": "möchte bei einem Griechen feiern."
+        },
+        {
+         "key": "c",
+         "text": "denkt an die Interessen der Vegetarier"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Katrin",
+     "transcript": [
+      {
+       "text": "Hallo Bettina. Katrin hier. Hast du schon gehört, dass Heli Joni nächste Woche einen runden Geburtstag feiert? Wir, ihr Team, brauchen noch ein Geschenk für sie, haben aber keine Idee. Du kennst sie ja privat. Hast du vielleicht einen Vorschlag? Normalerweise gibt jeder 5 €. Es darf also etwa 70 € kosten. Wenn es etwas mehr kostet, ist es aber auch nicht schlimm. Kannst du mich später zurückrufen? Das wäre super."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Katrin",
+       "options": [
+        {
+         "key": "a",
+         "text": "will Bettina mit einem Geschenk überraschen."
+        },
+        {
+         "key": "b",
+         "text": "sucht eine Anregung für ein Geschenk."
+        },
+        {
+         "key": "c",
+         "text": "möchte ein kleines Geschenk für fünf Euro kaufen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Stefan Körner",
+     "transcript": [
+      {
+       "text": "Hallo, Stefan Körner hier. Ich wollte Sie nur daran erinnern, dass die Brandmelder in den Büros demnächst ausgetauscht werden müssen. Bei der letzten Wartung hat uns der Fachmann von der Müller Brandschutz GmbH darauf aufmerksam gemacht, dass wir sie nur noch bis Ende des Jahres in Betrieb haben dürfen. Können Sie bitte bei der Firma anrufen und fragen, wann jemand bei uns vorbeikommen kann? Bei Fragen rufen Sie mich einfach zurück."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Stefan Körner bittet seinen Kollegen,",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Wartung zu beauftragen."
+        },
+        {
+         "key": "b",
+         "text": "einen Termin zu vereinbaren."
+        },
+        {
+         "key": "c",
+         "text": "die Brandmelder zu warten."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Barbara",
+     "transcript": [
+      {
+       "text": "Hallo, Barbara hier. Ich rufe noch mal an wegen des Besuchs der Kollegen aus unserer französischen Niederlassung. Soviel ich weiß, ist am Montagmorgen eine Betriebsbesichtigung geplant und am Nachmittag gibt es dann noch ein großes Begegnungsfest. Ich brauche bitte noch die genaue Zahl der Anmeldungen, damit ich das Essen und die Getränke bestellen kann. Du hast den Raum ja schon gebucht, richtig? Melde dich doch einfach, wenn du wieder am Platz bist."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Barbara",
+       "options": [
+        {
+         "key": "a",
+         "text": "organisiert allein das Begegnungsfest."
+        },
+        {
+         "key": "b",
+         "text": "wird den französischen Kollegen die Firma zeigen."
+        },
+        {
+         "key": "c",
+         "text": "kümmert sich um die Verpflegung der Gäste"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Michaell Brüger",
+     "transcript": [
+      {
+       "text": "Hallo, Michaell Brüger von der Brüger Hausverwaltung. Wie ich Ihnen gestern schon auf den Anrufbeantworter gesprochen habe, ist bei uns im Haus in der Ludwigsstraße 8 seit vorgestern die Heizung defekt. Das Problem muss umgehend behoben werden, da in den nächsten Tagen -5 Grad erwartet werden. Ich hätte eigentlich gestern mit einem zeitnahen Rückruf gerechnet. Das hat in den letzten Jahren ja immer geklappt. Rufen Sie mich bitte in den nächsten Stunden zurück."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Michaell Brüger möchte, dass",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Heizung repariert wird."
+        },
+        {
+         "key": "b",
+         "text": "er in den nächsten Tagen zurückgerufen wird."
+        },
+        {
+         "key": "c",
+         "text": "die Heizkörper ausgetauscht werden."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195150"
+  },
+  {
+   "id": "hoeren_4_v3",
+   "part": "HOEREN_4",
+   "title": "Вариант 3",
+   "note": "100%. Звуковая дорожка от 14.10.24",
+   "segments": [
+    {
+     "title": "Nummer 36 · Waldemar",
+     "transcript": [
+      {
+       "text": "Hallo, Waldemar Hahrmann, Öffentlichkeitsarbeit. Die Lehrerin von meiner Tochter hat angerufen. Die Kleine hat Fieber und muss abgeholt werden. Heute sollte ich doch gegen 10:30 Uhr die potenziellen Partner unserer Firma durch den Betrieb führen. Könntest du das übernehmen? Wäre super. Ist auch ganz unproblematisch. Treffpunkt ist der Eingangsbereich des Verwaltungsgebäudes. Dann geht es sofort über zu der neuen Produktionshalle und danach noch in die Lagerhalle. Nach einem kurzen Rundgang durch die Büros auf der ersten Etage schließen wir mit Kaffee und Kuchen in der Kantine ab."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Waldemar",
+       "options": [
+        {
+         "key": "a",
+         "text": "trifft die Partner an der Produktionshalle."
+        },
+        {
+         "key": "b",
+         "text": "geht es nicht so gut."
+        },
+        {
+         "key": "c",
+         "text": "muss seine Tochter abholen. / muss sich um seine Tochter kümmern."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Jana",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Jana Wartner von Hessen-Grönland. Danke für den Kostenvoranschlag, den Sie mir gestern noch gemailt haben. Wir möchten einen Probeauftrag für zehn Laserdrucker Modell X3 aufheben. Bei unserem letzten Gespräch haben wir 5% Einführungsrabatt vereinbart. Die Zahlung erfolgt bar bei der Lieferung. Den Auftrag bekommen Sie natürlich noch ganz offiziell da näher. Aber wir brauchen die Drucker wirklich dringend für unser neues Großraumbüro. Können Sie mir garantieren, dass die Lieferung rechtzeitig eintreffen wird? Bitte um gute Antwort."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Jana",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat den Auftrag bereits gemailt."
+        },
+        {
+         "key": "b",
+         "text": "mochte einen höheren Rabatt vereinbaren."
+        },
+        {
+         "key": "c",
+         "text": "benötigt die Drucker für das Großraumbüro."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Erisia",
+     "transcript": [
+      {
+       "text": "Hallo, Erisia hier. Frau Schmidt musste dringend kurz weg und wird erst gegen Mittag wieder hier sein. Deshalb ist Jana alleine am Empfang. Jetzt ist der Zug aus Russland auch noch früher gekommen als geplant. Jana kann doch keine Russen speisen. Wir bräuchten deine Hilfe zum Dolmetschen. Ich habe die Gatten in den Konferenzraum gebracht und ihnen den Kaffee und Snacks angeboten. Könntest du dich um sie kümmern, bis Frau Schmidt zurück ist? Das wäre super. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Erisia",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist allein am Empfang."
+        },
+        {
+         "key": "b",
+         "text": "schickt Frau Schmidt in den Konferenzraum."
+        },
+        {
+         "key": "c",
+         "text": "braucht einen Dolmetscher."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Trixi",
+     "transcript": [
+      {
+       "text": "Hi, Trixi nochmal. Es geht schon wieder um den Messeauftritt in Köln nächste Woche. Ich habe nun endlich eine preisgünstige Spedition gefunden, die unsere Ausstellungsstücke von Leipzig nach Köln und zurück transportiert. Kontenmappe, Broschüren und Werbeposter haben wir alles schon verpackt. Ich kann sie mitnehmen, weil ich selbst vor Ort sein werde. Nur eins noch. Für den Auf- und Abbau des Standes brauche ich zwei handkräftige Kollegen zur Unterstützung. Bitte heute noch melden, wer mithelfen könnte, sodass ich die Hotelzimmer für die Woche verwirklich buchen kann. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Trixi",
+       "options": [
+        {
+         "key": "a",
+         "text": "fährt mit zur Messe nach Köln."
+        },
+        {
+         "key": "b",
+         "text": "hat die Hotelzimmer schon gebucht."
+        },
+        {
+         "key": "c",
+         "text": "findet keine kostengünstige Spedition."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Julius",
+     "transcript": [
+      {
+       "text": "Hallo, Julius Lehmann, Personalabteilung. Wegen der Fortbildung bei Händelbau nächste Woche. Kannst du bitte den Teilnehmern noch einmal deutlich sagen, dass dort im ganzen Haus Rauchverbot besteht? Der Raucherbereich befindet sich frei. Die Kollegen sollen außerdem zu ihrer eigenen Sicherheit stets auf den grün markierten Bereichen bleiben, wegen der Gefahr von Gabelstaplern angefangen zu werden. Das sind Sicherheitsvorschriften, die wir unbedingt einhalten müssen. Sonst würden wir in diesem Unternehmen keine Fortbildung mehr machen. Das wäre sehr schade, denn bisher gab es nur gute Rückmeldungen zu den Veranstaltungen. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Julius",
+       "options": [
+        {
+         "key": "a",
+         "text": "darf keine Fortbildung mehr buchen."
+        },
+        {
+         "key": "b",
+         "text": "erinnert an die Sicherheitsregeln zur Fortbildung."
+        },
+        {
+         "key": "c",
+         "text": "hat negative Reaktionen zu Fortbildungen bekommen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/124141"
+  },
+  {
+   "id": "hoeren_4_v4",
+   "part": "HOEREN_4",
+   "title": "Вариант 4",
+   "note": "100%. Звуковая дорожка от 13.02.25",
+   "segments": [
+    {
+     "title": "Nummer 36 · Rita",
+     "transcript": [
+      {
+       "text": "Hallo, Rita hier. Du hast mir doch erzählt, dass dein Sohn einen Laptop sucht. Nächste Woche bekommt unsere Abteilung neue Computer und neue Drucker. Deshalb werden die alten Geräte günstig an interessierte Mitarbeiter abgegeben. Das heißt, wer noch für zu Hause Computer, Laptops oder Drucker braucht, kann sich bis Freitag in eine Liste am schwarzen Brett eintragen. Der Verkauf findet dann ab Montag ab 14:30 Uhr im Großraumbüro 2 statt. Man kann die Geräte dann direkt mitnehmen. Der Erlös wird übrigens für die Finanzierung unseres Sommerfests verwendet."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Rita",
+       "options": [
+        {
+         "key": "a",
+         "text": "informiert über den Verkauf der Firmencomputer."
+        },
+        {
+         "key": "b",
+         "text": "möchte ihren privaten Computer günstig verkaufen."
+        },
+        {
+         "key": "c",
+         "text": "sorgt sich um die Finanzierung des Sommerfests."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Konstantinos Pagonas",
+     "transcript": [
+      {
+       "text": "Guten Tag, Konstantinos Pagonas von der Firma Pizzos. Ich wollte mich nochmal wegen Ihres Besuchs in der nächsten Woche melden. Sie brauchen sich nicht um den Transfer vom Flughafen zur Firma kümmern. Meine Kollegin wird Sie in der Ausgangshalle A am Infopoint empfangen und mit Ihnen zusammen zu unserem Werk in Thessaloniki fahren. Dort warte ich auf Sie und wir machen gemeinsam eine Werksbesichtigung. Ich freue mich schon, Sie persönlich kennenzulernen."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Konstantinos Pagonas ruft an, um",
+       "options": [
+        {
+         "key": "a",
+         "text": "einen Firmenbesuch anzukündigen."
+        },
+        {
+         "key": "b",
+         "text": "nach dem Weg zur Firma zu fragen."
+        },
+        {
+         "key": "c",
+         "text": "organisatorische Informationen mitzuteilen."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Lara Hartmann",
+     "transcript": [
+      {
+       "text": "Lara Hartmann aus der Personalabteilung. Ich habe Sie bisher leider nicht persönlich erreicht, deshalb spreche ich jetzt auf die Mailbox. Unser Steuerbüro hat gestern angerufen. Dort benötigt man dringend die Belege für Ihre Dienstreise nach Berlin im Mai des vergangenen Jahres. Können Sie mir diese bitte im Original am Montag im Büro vorbeibringen? Vielen Dank und entschuldigen Sie die kurze Frist. Für Rückfragen erreichen Sie mich heute noch bis 17 Uhr."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Lara Hartmann",
+       "options": [
+        {
+         "key": "a",
+         "text": "benötigt Dokumente für das Steuerbüro."
+        },
+        {
+         "key": "b",
+         "text": "bringt der Kollegin die Belege vorbei."
+        },
+        {
+         "key": "c",
+         "text": "hat gestern das Steuerbüro angerufen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Thomas Barthel",
+     "transcript": [
+      {
+       "text": "Thomas Barthel, IT-Abteilung. Sie hatten angerufen, weil Sie Ihren PC nicht mehr runterfahren können. Entschuldigen Sie, dass ich mich jetzt erst melde, aber seit der Systemumstellung haben wir im ganzen Haus viel zu tun, weil viele Kollegen Fragen dazu haben. Aber Ihr Problem, denke ich, kann ich per Fernwartung lösen. Dazu bräuchte ich Sie aber am Telefon. Bitte rufen Sie mich zurück. Ich bin heute bis 18 Uhr im Büro."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Thomas Barthel",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat Schwierigkeiten mit seinem Computer."
+        },
+        {
+         "key": "b",
+         "text": "kann das aufgetretene Problem wohl schnell lösen."
+        },
+        {
+         "key": "c",
+         "text": "soll eine Systemumstellung im Haus vornehmen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Klara Günther",
+     "transcript": [
+      {
+       "text": "Clara Günther, Personalabteilung hier. Die Geschäftsführung hatte doch beschlossen, dass die Urlaubsplanung für das kommende Jahr zentral gemacht werden soll. Daher wurden alle Mitarbeiterinnen und Mitarbeiter aufgefordert, ihre Urlaubswünsche bis zum 30. November im Intranet einzutragen. Heute ist schon der 29. und ich habe gesehen, dass Sie noch nichts angegeben haben. Deshalb dachte ich, ich sage noch mal kurz Bescheid. Für den Fall, dass Sie es vergessen haben. Schönen Tag noch."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Klara Günther",
+       "options": [
+        {
+         "key": "a",
+         "text": "erinnert an die neue Urlaubsplanung."
+        },
+        {
+         "key": "b",
+         "text": "legt die Urlaubsplanung zentral fest."
+        },
+        {
+         "key": "c",
+         "text": "möchte am 29. November Urlaub nehmen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158141"
+  },
+  {
+   "id": "hoeren_4_v5",
+   "part": "HOEREN_4",
+   "title": "Вариант 5",
+   "note": "100%. Звуковая дорожка от 26.11.24",
+   "segments": [
+    {
+     "title": "Nummer 36 · Jana / Katia",
+     "transcript": [
+      {
+       "text": "Hallo, Jana / Katia Müller hier. Es geht nochmal um unseren Workshop am 8. Mai. Könntest du bitte dafür sorgen, dass im Raum K7 ein funktionstüchtiger Beamer steht? Und Internet brauchen wir natürlich auch. Ich würde vor der Veranstaltung alle Tops auf einen Flipchart schreiben. Wir müssen dann nur sicherstellen, dass der auch im Raum bleibt. Nicht, dass wir wieder kurz vor Veranstaltungsbeginn danach suchen müssen. Und Moderationskarten und Marker bringe ich übrigens mit."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Jana / Katia",
+       "options": [
+        {
+         "key": "a",
+         "text": "benötigt einen Internetzugang im Raum."
+        },
+        {
+         "key": "b",
+         "text": "besorgt einen Beamer für die Veranstaltung."
+        },
+        {
+         "key": "c",
+         "text": "stellt den Flipchart in den Veranstaltungsraum."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Felix",
+     "transcript": [
+      {
+       "text": "Hi, Felix hier. Ich habe gute Nachrichten. Unsere Kollegen vom Kundenservice bekommen jetzt ihre Schulung und wir sollen das vorbereiten. Um Zeit und Kosten zu sparen, soll diese Fortbildung online stattfinden. Und ich habe schon mehrere Anbieter für die Schulungssoftware angefragt. Ich hoffe, die Angebote kommen nächste Woche. Dann können wir uns vielleicht gleich für eins entscheiden. Wir müssen auch noch einen Feedbackbogen und einen Abschlusstest entwerfen. Wann würde es dir denn am besten passen?"
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Felix",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet um einen Terminvorschlag."
+        },
+        {
+         "key": "b",
+         "text": "hat schon Angebote für die Software."
+        },
+        {
+         "key": "c",
+         "text": "soll an einer Schulung teilnehmen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Kathrin Schönberner",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Kathrin Schönberner von der Kundenbetreuung. Ich habe heute schon wieder einige Beschwerden von Kunden bekommen, auch von Standkunden übrigens, weil es immer wieder Probleme mit der Spedition „Flink und Sicher“ gibt. Wenn die weiterhin die vereinbarten Lieferfristen nicht einhalten, gehen unsere Kunden zur Konkurrenz. Ich glaube, wir sollten dringend handeln und uns zusammensetzen, um eine Lösung zu finden. Vielleicht müssen wir uns nach einem neuen Partner umschauen. Passt Ihnen morgen um drei."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Kathrin Schönberner hat",
+       "options": [
+        {
+         "key": "a",
+         "text": "Angst, Kunden zu verlieren."
+        },
+        {
+         "key": "b",
+         "text": "eine neue Spedition gefunden."
+        },
+        {
+         "key": "c",
+         "text": "Fristen nicht beachtet."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Daniel Meyer",
+     "transcript": [
+      {
+       "text": "Daniel Meyer von der Firma Busch. Guten Tag. Nächste Woche wechseln Sie ja die Telefonanlage bei uns in der Semperstraße 2 aus. Und dazu habe ich noch ein paar Fragen. Wie lange werden wir denn nicht telefonieren können? Außerdem hatten Sie gesagt, dass die Telefonapparate ausgetauscht werden müssen. Bringen Sie die neuen gleich mit? Und wir brauchen noch eine Einweisung in die Nutzung der neuen Anlage. Es wäre sinnvoll, wenn wir das an dem Tag auch gleich machen könnten."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Daniel Meyer möchte wissen,",
+       "options": [
+        {
+         "key": "a",
+         "text": "ob die Telefonapparate ausgetauscht werden."
+        },
+        {
+         "key": "b",
+         "text": "wer den Kollegen die Anlage erklärt."
+        },
+        {
+         "key": "c",
+         "text": "wie lange die Telefonanlage nicht funktionieren wird."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Anja",
+     "transcript": [
+      {
+       "text": "Hallo, hier ist Anja nochmal. Du kommst doch am Freitag auch zu der außerplanmäßigen Abteilungsbesprechung, oder? Zumindest habe ich deinen Namen auf der Liste gelesen. Kannst du bitte Katharinas Präsentation übernehmen? Sie ist die ganze nächste Woche auf einer Schulung und kommt dann erst wieder Montag ins Haus. Ihr habt doch die Verkaufszahlen vom letzten Quartal zusammen ausgewertet. Ich habe darüber leider keinen Überblick und kann es nicht selbst machen. Gibst du mir bitte kurz Bescheid, ob es klappt? Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Anja",
+       "options": [
+        {
+         "key": "a",
+         "text": "kann nicht zur Besprechung kommen."
+        },
+        {
+         "key": "b",
+         "text": "kennt die Verkaufszahlen nicht."
+        },
+        {
+         "key": "c",
+         "text": "steht nicht auf der Teilnehmerliste."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/136295"
+  },
+  {
+   "id": "hoeren_4_v6",
+   "part": "HOEREN_4",
+   "title": "Вариант 6",
+   "note": "Тест № 150321, 150301. Звуковая дорожка от 28.01.25; отдельные записи по номерам: 153252 (36), 153251 (37), 153250 (38), 153249 (39), 153248 (40)",
+   "segments": [
+    {
+     "title": "Nummer 36 · Juri",
+     "transcript": [
+      {
+       "text": "Hi Tim, Juri hier. Ich habe gehört, dass du den Raum für meine Präsentation morgen vorbereitest. Ich wollte dich bitten, folgende technische Ausstattung für mich bereitzuhalten. Da ich Power-Point nutzen werde, brauche ich einen Laptop und einen Beamer. Außerdem wären noch ein Flipchart und eine weiße Tafel mit den passenden Stiften gut. Die Unterlagen, die bei allen Besuchern auf dem Stuhl liegen sollen, bringe ich dir später vorbei. Wir rechnen mit ca. 150 Teilnehmern. Ich würde dich also bitten, entsprechend viele Mappen vorzubereiten. Danke dir."
+      }
+     ],
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Juri",
+       "options": [
+        {
+         "key": "a",
+         "text": "bereitet den Raum für die Veranstaltung vor."
+        },
+        {
+         "key": "b",
+         "text": "braucht von Tim eine Power-Point-präsentation."
+        },
+        {
+         "key": "c",
+         "text": "hält am nächsten Tag einen Vortrag."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Anita",
+     "transcript": [
+      {
+       "text": "Anita aus der Buchhaltung hier. Hallo Steffi. Ich kann für die Rechnung Nr. C134, die wir vor 6 Wochen an die Firma Schneider Waren geschickt haben, noch immer keinen Zahlungseingang feststellen. Weißt du, was da los ist? Sie haben die Ware doch erhalten, oder? Schau doch bitte mal in deinen Unterlagen nach und sag mir Bescheid. Wenn von unserer Seite aus alles in Ordnung ist, werde ich nämlich heute eine Zahlungserinnerung an die Firma rausschicken. Ruf mich doch bitte kurz an."
+      }
+     ],
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Anita",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet Steffi, die Rechnung zu bezahlen."
+        },
+        {
+         "key": "b",
+         "text": "hat vor sechs Wochen eine Rechnung bezahlt."
+        },
+        {
+         "key": "c",
+         "text": "möchte eine Zahlungsaufforderung verschicken."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Mario Groß",
+     "transcript": [
+      {
+       "text": "Weinhandel Winzer, Mario Groß, guten Tag. Ich habe Ihr Angebot bekommen und würde mich gerne persönlich mit Ihnen darüber unterhalten. Die Preise scheinen mir bei der Stückzahl an Flaschen, die wir monatlich abnehmen würden, sehr hoch. Und ich wollte mal nachfragen, ob wir darüber noch verhandeln können. Mehr als 7,50 Euro pro Flasche können wir leider nicht bezahlen. Es gibt andere Weingüter, die durchaus gute Weine zu diesem Preis anbieten. Wir finden aber Ihre Qualität sehr überzeugend und würden uns freuen, wenn wir uns einig werden könnten."
+      }
+     ],
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Mario Groß",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet um ein schriftliches Angebot."
+        },
+        {
+         "key": "b",
+         "text": "kennt auch andere Weingüter mit guter Qualität."
+        },
+        {
+         "key": "c",
+         "text": "möchte den Wein günstiger liefern."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Irina Müller",
+     "transcript": [
+      {
+       "text": "Irina Müller, Sekretariat Dr. Schmidt, guten Tag. Herr Dr. Schmidt hat Ihr Angebot für die Schneidemaschinen erhalten und ist daran interessiert. Allerdings würde er sich die Geräte gerne erst ansehen, bevor wir eine Bestellung aufgeben. Wäre es möglich, dass Sie ihm die Geräte persönlich vorführen? Könnte Herr Dr. Schmidt vielleicht für eine Präsentation bei Ihnen in der Firma vorbeikommen? Der nächste Freitag würde für ihn gut passen. Am besten vormittags. Wenn es geht, um 11 Uhr. Bitte rufen Sie mich doch zurück. Vielen Dank."
+      }
+     ],
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Irina Müller",
+       "options": [
+        {
+         "key": "a",
+         "text": "bereitet eine Präsentation vor."
+        },
+        {
+         "key": "b",
+         "text": "bittet um einen Besuchstermin für ihren Chef."
+        },
+        {
+         "key": "c",
+         "text": "hat Interesse an einem Angebot."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Taro Klein",
+     "transcript": [
+      {
+       "text": "Werbeagentur Pfeiffer & Partner, Taro Klein am Apparat. Guten Tag, Herr Weiß, Sie haben doch die Werbekampagne für das Autohaus Scherm geplant. Unsere Geschäftsführerin, Frau Dr. Pfeiffer, hat morgen Nachmittag einen Termin bei den Kunden und hätte gerne, dass Sie sie begleiten. Sie können am besten Rede und Antwort stehen, wenn es Rückfragen zu den Entwürfen gibt und beurteilen, inwieweit irgendwelche Änderungsvorschläge realisierbar sind oder nicht. Bitte rufen Sie mich an, um den Termin zu bestätigen. Danke."
+      }
+     ],
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Taro Klein",
+       "options": [
+        {
+         "key": "a",
+         "text": "bittet Frau Pfeiffer um Unterstützung."
+        },
+        {
+         "key": "b",
+         "text": "hatte gerade einen Termin mit dem Autohaus."
+        },
+        {
+         "key": "c",
+         "text": "möchte die Werbekampagne verändern."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/153252"
+  },
+  {
+   "id": "hoeren_4_v7",
+   "part": "HOEREN_4",
+   "title": "Вариант 7",
+   "note": "Тест № 140321, 140301. В источнике нет аудио и текстов, только вопросы",
+   "segments": [
+    {
+     "title": "Nummer 36 · Jan",
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Jan",
+       "options": [
+        {
+         "key": "a",
+         "text": "kennt bereits die Kosten für die Farben."
+        },
+        {
+         "key": "b",
+         "text": "kontaktiert den Techniker."
+        },
+        {
+         "key": "c",
+         "text": "kümmert sich um die Farbauswahl."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Software Solution",
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Die Firma Software Solution",
+       "options": [
+        {
+         "key": "a",
+         "text": "liefert in fünf bis sechs Stunden ihre Kassen."
+        },
+        {
+         "key": "b",
+         "text": "möchte mit dem Supermarkt einen Termin vereinbaren."
+        },
+        {
+         "key": "c",
+         "text": "überwacht die Sicherheit in Kassenbereich."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Gabi",
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Gabi soll",
+       "options": [
+        {
+         "key": "a",
+         "text": "den Operationsplan ändern."
+        },
+        {
+         "key": "b",
+         "text": "Herrn Sommer anrufen."
+        },
+        {
+         "key": "c",
+         "text": "mit dem Hausarzt über die Blutwerte sprechen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Anna",
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Anna",
+       "options": [
+        {
+         "key": "a",
+         "text": "bestellt italienisches Essen für alle."
+        },
+        {
+         "key": "b",
+         "text": "organisiert eine Aktivität für das Team."
+        },
+        {
+         "key": "c",
+         "text": "will nur mit Claudia ins Kino gehen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Stefan",
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Stefan berichtet, dass",
+       "options": [
+        {
+         "key": "a",
+         "text": "der Lieferant erkrankt ist."
+        },
+        {
+         "key": "b",
+         "text": "die Kolleg*innen streiken wollen."
+        },
+        {
+         "key": "c",
+         "text": "nicht pünktlich geliefert werden kann."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hoeren_4_v8",
+   "part": "HOEREN_4",
+   "title": "Вариант 8",
+   "note": "Тест № 160201, 160221. В источнике нет аудио и текстов, только вопросы",
+   "segments": [
+    {
+     "title": "Nummer 36 · Jörg",
+     "questions": [
+      {
+       "number": 36,
+       "prompt": "Jörg soll",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Reservierungen überprüfen."
+        },
+        {
+         "key": "b",
+         "text": "eine Versammlung für die Agro Import AG organisieren."
+        },
+        {
+         "key": "c",
+         "text": "in den Kalender eine Reservierung eintragen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 37 · Viktor",
+     "questions": [
+      {
+       "number": 37,
+       "prompt": "Viktor",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat eine gute Idee für den Betriebsausflug."
+        },
+        {
+         "key": "b",
+         "text": "informiert Anna über das Programm beim Ausflug."
+        },
+        {
+         "key": "c",
+         "text": "muss noch einen Bowlingtermin reservieren."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 38 · Kochen von Zauberhand",
+     "questions": [
+      {
+       "number": 38,
+       "prompt": "Die Firma „Kochen von Zauberhand“",
+       "options": [
+        {
+         "key": "a",
+         "text": "bereitete das Essen für die Firmenfeier zu."
+        },
+        {
+         "key": "b",
+         "text": "möchte eine Rechnung nicht bezahlen."
+        },
+        {
+         "key": "c",
+         "text": "war mit ihrem Service zufrieden."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 39 · Jakob",
+     "questions": [
+      {
+       "number": 39,
+       "prompt": "Jakob",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist ein neuer Azubi in der Firma."
+        },
+        {
+         "key": "b",
+         "text": "stößt auf ein technisches Problem."
+        },
+        {
+         "key": "c",
+         "text": "will seinem Kollegen helfen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    },
+    {
+     "title": "Nummer 40 · Gabi",
+     "questions": [
+      {
+       "number": 40,
+       "prompt": "Gabi",
+       "options": [
+        {
+         "key": "a",
+         "text": "bestellte den Klempner für den Friseursalon."
+        },
+        {
+         "key": "b",
+         "text": "bittet Sandra um die Annahme einer Lieferung."
+        },
+        {
+         "key": "c",
+         "text": "möchte sich den neuen Waschtisch anschauen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

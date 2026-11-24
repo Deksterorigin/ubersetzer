@@ -1,0 +1,216 @@
+{
+ "sections": [
+  {
+   "id": "letter_anrede",
+   "title": "1. Anrede",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Sehr geehrte Frau … / Sehr geehrter Herr … + FAMILIENNAME",
+     "ru": "Уважаемая госпожа … / Уважаемый господин … + фамилия"
+    }
+   ]
+  },
+  {
+   "id": "letter_dank",
+   "title": "2. Dank",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Vielen Dank für Ihre E-Mail.",
+     "ru": "Большое спасибо за Ваше письмо."
+    },
+    {
+     "de": "Ich bedanke mich (im Namen des Teams) für Ihre E-Mail.",
+     "ru": "Благодарю (от имени команды) за Ваше письмо."
+    },
+    {
+     "de": "Vielen Dank, dass Sie uns sofort kontaktiert haben.",
+     "ru": "Спасибо, что сразу обратились к нам."
+    },
+    {
+     "de": "Vielen Dank, dass Sie uns auf die Mängel / den Fehler hingewiesen haben.",
+     "ru": "Спасибо, что указали нам на недостатки / ошибку."
+    },
+    {
+     "de": "Wir sind Ihnen dankbar, dass Sie uns über das Problem / die Mängel informieren.",
+     "ru": "Мы благодарны, что Вы сообщили нам о проблеме / недостатках."
+    },
+    {
+     "de": "Vielen Dank für Ihre E-Mail, in der Sie uns auf die Probleme mit … hinweisen.",
+     "ru": "Спасибо за Ваше письмо, в котором Вы указываете на проблемы с …"
+    }
+   ]
+  },
+  {
+   "id": "letter_entschuldigung",
+   "title": "3. Entschuldigung",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Wir bedauern sehr, dass … / Es tut uns sehr leid, dass …",
+     "ru": "Мы очень сожалеем, что …"
+    },
+    {
+     "de": "… Sie mit unserem Service / unseren Leistungen / Ihrer Bestellung nicht zufrieden sind.",
+     "ru": "… Вы недовольны нашим сервисом / нашими услугами / Вашим заказом."
+    },
+    {
+     "de": "… es Probleme mit unserem Service / der Hygiene / einem Mitarbeiter von uns / der Lieferung gab.",
+     "ru": "… возникли проблемы с нашим сервисом / гигиеной / нашим сотрудником / доставкой."
+    },
+    {
+     "de": "… die Lieferung fehlerhaft / noch nicht bei Ihnen eingetroffen ist.",
+     "ru": "… доставка с браком / ещё не прибыла к Вам."
+    },
+    {
+     "de": "… es zu Unannehmlichkeiten gekommen ist.",
+     "ru": "… возникли неудобства."
+    },
+    {
+     "de": "Bitte entschuldigen Sie, dass es Probleme mit der Organisation / der Bestellung / der Lieferung gab.",
+     "ru": "Пожалуйста, извините, что возникли проблемы с организацией / заказом / доставкой."
+    },
+    {
+     "de": "Wir bitten Sie, die Unannehmlichkeiten, die Sie unseretwegen hatten, zu entschuldigen.",
+     "ru": "Просим извинить за неудобства, которые Вы испытали по нашей вине."
+    }
+   ]
+  },
+  {
+   "id": "letter_erklaerung",
+   "title": "4. Erklärung",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Lassen Sie mich bitte kurz erklären, was genau passiert ist.",
+     "ru": "Позвольте кратко объяснить, что именно произошло."
+    },
+    {
+     "de": "Dieses Problem ist aufgetreten, weil …",
+     "ru": "Эта проблема возникла, потому что …"
+    },
+    {
+     "de": "Der Grund für das aufgetretene Problem ist der folgende:",
+     "ru": "Причина возникшей проблемы следующая:"
+    }
+   ]
+  },
+  {
+   "id": "letter_loesung",
+   "title": "5. Lösung anbieten",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Wir werden uns so schnell wie möglich um die Angelegenheit kümmern.",
+     "ru": "Мы как можно скорее займёмся этим вопросом."
+    },
+    {
+     "de": "Wir versprechen Ihnen, dass wir das Problem so schnell wie möglich beheben.",
+     "ru": "Обещаем, что устраним проблему как можно скорее."
+    },
+    {
+     "de": "Wir möchten Ihnen Folgendes vorschlagen: Ein Mitarbeiter von uns wird am … um … Uhr bei Ihnen vorbeikommen und sich den Schaden vor Ort ansehen.",
+     "ru": "Предлагаем следующее: наш сотрудник приедет к Вам … в … часов и осмотрит ущерб на месте."
+    },
+    {
+     "de": "Unser Mitarbeiter kann morgen um … Uhr bei Ihnen vorbeikommen und sich um das Problem kümmern.",
+     "ru": "Наш сотрудник может завтра в … часов приехать к Вам и заняться проблемой."
+    },
+    {
+     "de": "Gern schicken wir morgen um … Uhr einen Mitarbeiter zu Ihnen, der sich um die Angelegenheit kümmert.",
+     "ru": "С удовольствием пришлём завтра в … часов сотрудника, который займётся этим вопросом."
+    },
+    {
+     "de": "Bitte bestätigen Sie den Termin oder schlagen Sie eine andere Zeit vor.",
+     "ru": "Пожалуйста, подтвердите срок или предложите другое время."
+    },
+    {
+     "de": "Wir werden mit dem zuständigen Mitarbeiter / der zuständigen Mitarbeiterin sprechen und ihn / sie darauf hinweisen, dass er / sie in Zukunft …",
+     "ru": "Мы поговорим с ответственным сотрудником / сотрудницей и укажем, что в будущем он / она должен …"
+    },
+    {
+     "de": "In Zukunft werden wir …",
+     "ru": "В будущем мы будем …"
+    }
+   ]
+  },
+  {
+   "id": "letter_wiedergutmachung",
+   "title": "6. Wiedergutmachung",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Um Sie als Kunden / Kundin nicht zu verlieren, bieten wir Ihnen Folgendes an:",
+     "ru": "Чтобы не потерять Вас как клиента, предлагаем Вам следующее:"
+    },
+    {
+     "de": "Als Wiedergutmachung bieten wir Ihnen einen Rabatt in Höhe von ___% für Ihre nächste Bestellung an.",
+     "ru": "В качестве компенсации предлагаем Вам скидку ___% на следующий заказ."
+    },
+    {
+     "de": "Als kleine Entschädigung möchten wir Ihnen einen Rabatt von … % auf Ihre nächste Bestellung anbieten.",
+     "ru": "В качестве небольшой компенсации хотим предложить скидку … % на Ваш следующий заказ."
+    },
+    {
+     "de": "Sie bekommen von uns einen Rabatt in Höhe von ___%, um uns nochmals zu entschuldigen.",
+     "ru": "Вы получите от нас скидку ___%, чтобы мы могли ещё раз извиниться."
+    },
+    {
+     "de": "Natürlich wird die Reparatur / der Versand / die Kontrolle usw. für Sie kostenlos sein.",
+     "ru": "Разумеется, ремонт / отправка / проверка и т. д. будут для Вас бесплатными."
+    },
+    {
+     "de": "Selbstverständlich übernehmen wir die Kosten dafür.",
+     "ru": "Разумеется, мы берём расходы на себя."
+    },
+    {
+     "de": "Als Dankeschön, dass Sie uns treu geblieben sind, haben wir ein kleines Geschenk für Sie vorbereitet, das wir Ihnen zuschicken werden / das Sie am Empfang unserer Firma abholen können.",
+     "ru": "В благодарность за Вашу верность мы подготовили небольшой подарок, который отправим Вам / который Вы можете забрать на ресепшене нашей фирмы."
+    }
+   ]
+  },
+  {
+   "id": "letter_schluss",
+   "title": "7. Schluss",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Wir hoffen, dass Sie mit dem Vorschlag einverstanden sind.",
+     "ru": "Надеемся, что Вы согласны с предложением."
+    },
+    {
+     "de": "Wenn Sie noch Fragen oder Anregungen haben, können Sie sich jederzeit an mich wenden.",
+     "ru": "Если у Вас остались вопросы или пожелания, можете в любое время обратиться ко мне."
+    },
+    {
+     "de": "Eine vergleichbare Situation wird sich nicht wiederholen.",
+     "ru": "Подобная ситуация не повторится."
+    },
+    {
+     "de": "Bitte sehen Sie uns den Fehler nach und schenken Sie uns weiterhin Ihr Vertrauen.",
+     "ru": "Пожалуйста, простите нам ошибку и продолжайте нам доверять."
+    },
+    {
+     "de": "Vielen Dank für Ihr Verständnis.",
+     "ru": "Спасибо за Ваше понимание."
+    },
+    {
+     "de": "Sollten Sie weitere Fragen haben, stehe ich Ihnen gerne jederzeit zur Verfügung.",
+     "ru": "Если у Вас возникнут вопросы, я всегда к Вашим услугам."
+    }
+   ]
+  },
+  {
+   "id": "letter_gruss",
+   "title": "Gruß",
+   "category": "LETTER",
+   "items": [
+    {
+     "de": "Mit freundlichen Grüßen\nVorname Name",
+     "ru": "С уважением, имя и фамилия"
+    }
+   ]
+  }
+ ]
+}

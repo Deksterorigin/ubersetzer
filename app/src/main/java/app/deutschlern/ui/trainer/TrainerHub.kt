@@ -24,6 +24,8 @@ import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.material.icons.filled.Spellcheck
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.WorkspacePremium
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -104,6 +106,7 @@ class TrainerHubViewModel @Inject constructor(
 @Composable
 fun TrainerHub(
     onOpenTrainer: (TrainerMode, WordPool) -> Unit,
+    onOpenExamHub: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: TrainerHubViewModel = hiltViewModel()
 ) {
@@ -116,6 +119,9 @@ fun TrainerHub(
         contentPadding = PaddingValues(bottom = 24.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
+        item {
+            ExamPrepCard(onClick = onOpenExamHub)
+        }
         item {
             StreakCard(stats = state.stats)
         }
@@ -147,6 +153,46 @@ fun TrainerHub(
 }
 
 private fun minimumWords(mode: TrainerMode): Int = if (mode == TrainerMode.CHOICE) 4 else 1
+
+@Composable
+private fun ExamPrepCard(onClick: () -> Unit) {
+    Surface(
+        color = MaterialTheme.colorScheme.primaryContainer,
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .clickable(onClick = onClick)
+    ) {
+        Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                Icons.Default.WorkspacePremium,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                modifier = Modifier.size(32.dp)
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    stringResource(R.string.exam_prep_card_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer
+                )
+                Text(
+                    stringResource(R.string.exam_prep_card_desc),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer
+                )
+            }
+            Icon(
+                Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onPrimaryContainer
+            )
+        }
+    }
+}
 
 @Composable
 private fun StreakCard(stats: TrainerStats) {

@@ -1,0 +1,1557 @@
+{
+ "part": "FORUM",
+ "variants": [
+  {
+   "id": "forum_v1",
+   "part": "FORUM",
+   "title": "Zusätzliche Aufgaben",
+   "note": "Экзамены: 010301, 010401 · Другая формулировка (010301): Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma müssen mehr Aufgaben übernehmen, da keine neuen Mitarbeitenden eingestellt werden können.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ab sofort zusätzliche Aufgaben übernehmen, da es zu wenige Bewerbungen auf freigewordene Stellen gibt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v2",
+   "part": "FORUM",
+   "title": "Ärztliche Krankmeldung",
+   "note": "Экзамены: 010301, 010401",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen im Krankheitsfall schon ab dem ersten Tag eine ärztliche Krankmeldung vorlegen. Andernfalls gelten die Tage als Fehlzeit.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v3",
+   "part": "FORUM",
+   "title": "Jobticket",
+   "note": "Экзамены: 010321, 010421 · Другая формулировка (010321): Ab dem kommenden Jahr sollen alle Mitarbeiterinnen und Mitarbeiter auf ihr Gehalt verzichten, um ein kostenloses Jobticket zu bekommen.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen ein Jobticket für das gesamte Netz der öffentlichen Verkehrsmittel bekommen, das auch privat genutzt werden kann. Dafür wird eine monatliche Gebühr vom Gehalt abgezogen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v4",
+   "part": "FORUM",
+   "title": "Workshop zum Zeitmanagement",
+   "note": "Экзамены: 010321, 010421, 020301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen an einem Workshop zum Zeitmanagement teilnehmen, um Ihre Arbeitsabläufe effizienter gestalten zu können.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v5",
+   "part": "FORUM",
+   "title": "Privattelefonate nur in den Pausen",
+   "note": "Экзамены: 020201, 020321, 040321, 080221 · Другая формулировка (040321, «Handynutzung»): Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen während der Arbeitszeit ihre privaten Handys nicht mehr benutzen dürfen. Diese Regelung gilt nicht für leitende Angestellte.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ihre Mobiltelefone während der Arbeitszeit im Aufenthaltsraum aufbewahren. Privattelefone sind nur in den Pausen gestattet. Nur die leitenden Angestellten dürfen das.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v6",
+   "part": "FORUM",
+   "title": "Urlaubsplanung (Sommerferien)",
+   "note": "Экзамены: 020201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden in Ihrer Firma sollen ihren Urlaub planen. In den Sommerferien sollen nur Mitarbeiter mit schulpflichtigen Kindern Urlaub bekommen. Mitarbeiter ohne Kinder müssen zu anderen Zeiten Urlaub machen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v7",
+   "part": "FORUM",
+   "title": "Keine Überstunden",
+   "note": "Экзамены: 020301 · Другая формулировка: Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen keine Überstunden mehr leisten. Zur Durchsetzung dieser Maßnahme wird man nach acht Arbeitsstunden automatisch aus dem Computer-System abgemeldet.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Die Geschäftsleitung plant, in Zukunft keine Überstunden mehr zu erlauben.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v8",
+   "part": "FORUM",
+   "title": "Überstunden",
+   "note": "Экзамены: 020321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen bereit sein, Überstunden zu leisten. Diese werden nicht extra bezahlt, sondern sind mit dem übertariflichen Gehalt ausgeglichen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v9",
+   "part": "FORUM",
+   "title": "Weiterbildung. Zuschlag 50 Euro",
+   "note": "Экзамены: 030201, 030321 · Другая формулировка (030321): Alle Mitarbeiterinnen und Mitarbeiter in Ihre Firma müssen Weiterbildung nach der Arbeitszeit mindesten 2 Mal pro Jahr machen. Die Firma unterstützt Sie dabei und bezahlt einen Zuschlag 50 Euro. Краткая формулировка (030201): Weiterbildung zweimal pro Jahr am Wochenende, außerhalb der Arbeitszeiten.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen Bonuszahlung in Höhe 50 Euro erhalten, wenn sie mindestens zwei Mal pro Jahr an einer Weiterbildung außerhalb der Arbeitszeit teilgenommen haben.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v10",
+   "part": "FORUM",
+   "title": "Parkplatz, 50 Euro Gebühr",
+   "note": "Экзамены: 030201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Ihre Firma möchte für alle Mitarbeitenden ein kostenloses Jobticket für die Fahrten mit dem ÖPNV einführen. Dafür soll Parken auf dem Firmenparkplatz in Zukunft Geld kosten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v11",
+   "part": "FORUM",
+   "title": "Firmenumzug",
+   "note": "Экзамены: 030301, 040301 · Другая формулировка (040301): Alle Mitarbeiterinnen und Mitarbeiter müssen an einen anderen Standort ziehen. Die Firma unterstützt Sie dabei und gewährt einen zusätzlichen Urlaubstag sowie fünf weitere Urlaubstage.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma müssen umziehen, weil das Unternehmen in eine andere Stadt zieht; die Kosten für den Umzug werden erstattet.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v12",
+   "part": "FORUM",
+   "title": "Parken nur für Kunden",
+   "note": "Экзамены: 030301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma dürfen nicht mehr ihre Autos auf dem Firmengelände parken. Das Parken ist jetzt nur noch für Kunden. Das Unternehmen übernimmt die Kosten nur noch den öffentlichen Nahverkehr.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v13",
+   "part": "FORUM",
+   "title": "Fitnessstudio",
+   "note": "Экзамены: 030321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen die Möglichkeit haben, die neue Fitnessstudio-Einrichtung am Arbeitsplatz während der Pausen zu nutzen. Dafür wird eine Gebühr von 15 Euro pro Monat direkt vom Gehalt abgezogen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v14",
+   "part": "FORUM",
+   "title": "Fitnessstudio (35 Euro weniger Gehalt)",
+   "note": "Экзамены: 040301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen 35 Euro weniger Gehalt bekommen. Dafür bezahlt die Firma die Mitgliedschaft im Fitnessstudio.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v15",
+   "part": "FORUM",
+   "title": "Keine Frühstückspause, 1 Stunde Mittagspause",
+   "note": "Экзамены: 040201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Nicht mehr 15 Minuten Frühstückspause, sondern verlängert sich die Mittagspause vom 45 Minuten zu einer Stunde in einem Stück.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v16",
+   "part": "FORUM",
+   "title": "Nur Vegan-Menü, plus 20% mehr bezahlen",
+   "note": "Экзамены: 040201 · Другая формулировка: Alle Mitarbeitenden in Ihrer Firma sollen in der Kantine nur noch zwischen fleischlosen Gerichten wählen können. Alles soll Bioqualität haben und dafür etwas mehr kosten.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Vegetarische Essen in Kantine, dafür sollen alle Mitarbeiter 20% höher bezahlen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v17",
+   "part": "FORUM",
+   "title": "Wochenendreise statt Weihnachtsfeier",
+   "note": "Экзамены: 040321 · Другая формулировка: Die Geschäftsleitung plant, statt des Weihnachtsferien zu Weihnachten mit allen Mitarbeiter*innen und ihren Familien nach einer europäischen Stadt fahren.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen zukünftig auf die Weihnachtsfeier verzichten. Stattdessen lädt das Unternehmen sie mit ihren Familien zu einer gemeinsamen Wochenendreise ein.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v18",
+   "part": "FORUM",
+   "title": "Großraumbüro",
+   "note": "Экзамены: 050201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden in Ihrer Firma sollen zukünftig gemeinsam in einem Großraumbüro arbeiten. Einzelbüro wird es nicht mehr geben.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v19",
+   "part": "FORUM",
+   "title": "Mitarbeiter*in des Jahres",
+   "note": "Экзамены: 050301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Die Firma plant, jedes Jahr einen \"Mitarbeiter*in des Jahres\" zu wählen. Der oder die Gewinner*in erhält eine finanzielle Belohnung.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v20",
+   "part": "FORUM",
+   "title": "Spanischkurs",
+   "note": "Экзамены: 050301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen verpflichtet werden, einen Spanischkurs zu besuchen, weil das Unternehmen einen neuen Standort in Spanien eröffnet. Die Kursgebühren übernimmt die Firma.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v21",
+   "part": "FORUM",
+   "title": "Italien / Auslandsdienst",
+   "note": "Экзамены: 050321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiter in ihrer Firma sollen einen/eine Kolleg*in von jeder Abteilung auswählen, der/die für 6 Monaten nach Italien geht, um neue Kollegen*innen im Firmenstandort einzuarbeiten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v22",
+   "part": "FORUM",
+   "title": "Keine festangestellten Kollegen",
+   "note": "Экзамены: 050321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiter in der Firma sollen keine festangestellten Kollegen erhalten. Die Firma leiht sich bei Bedarf Mitarbeiter von externen Firmen, um Stellen zu besetzen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v23",
+   "part": "FORUM",
+   "title": "Firmen-Kita 24/7",
+   "note": "Экзамены: 060201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Schichtarbeit haben jetzt die Möglichkeit, die Firmen-Kita flexibel zu nutzen. Die Öffnungszeiten sind auf eine 24h Betreuung ausgeweitet worden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v24",
+   "part": "FORUM",
+   "title": "Kostenfreies Mittagessen",
+   "note": "Экзамены: 060201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma, die samstags arbeiten müssen, erhalten an diesem Tag zukünftig ein kostenfreies Mittagessen in der Firmenkantine.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v25",
+   "part": "FORUM",
+   "title": "Die Schließung der Kantine",
+   "note": "Экзамены: 060301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihren Firma sollen zukünftig nicht mehr in der Kantine essen können. Diese wird geschlossen. Stattdessen werden Essenmarken für verschiedene Restaurants in der Nähe ausgegeben.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v26",
+   "part": "FORUM",
+   "title": "Sparpläne",
+   "note": "Экзамены: 060301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihren Firma sollen zukünftig ihre Büros erst ab Oktober heizen und die Raumtemperatur auf maximal 19°C begrenzen. Das Unternehmen möchte damit die Energiekosten reduzieren.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v27",
+   "part": "FORUM",
+   "title": "Urlaubstage bis zum Ende eines jeden Jahres",
+   "note": "Экзамены: 060321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden müssen die verbleibenden Urlaubstage bis zum Ende eines jeden Jahres verbraucht werden, sonst verfallen sie.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v28",
+   "part": "FORUM",
+   "title": "Private Geräte verboten",
+   "note": "Экзамены: 060321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "In eurer Firma wurde es verboten, private Geräte jeglicher Art zu benutzen oder sie über die Steckdosen der Firma aufzuladen. Es dürfen nur firmeneigene elektronische Geräte verwendet werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v29",
+   "part": "FORUM",
+   "title": "Samstags 2 Mal pro Jahr an Fortbildungen",
+   "note": "Экзамены: 070201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen samstags 2 Mal pro Jahr an Fortbildungen teilnehmen. Zusätzlich bekommen sie einen Urlaubstag.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v30",
+   "part": "FORUM",
+   "title": "Mitarbeiterbindung",
+   "note": "Экзамены: 070201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Um die Mitarbeiterbindung zu stärken, möchte unsere Firma in Zukunft den Mitarbeiterinnen und Mitarbeitern alle 5 Jahre den Urlaub um einen Tag verlängern.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v31",
+   "part": "FORUM",
+   "title": "Zusätzliche Urlaubstage, nicht mehr Bonuszahlungen",
+   "note": "Экзамены: 070301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen für besonders gute Arbeitsleistungen nicht mehr wie bisher Bonuszahlungen erhalten. Stattdessen bekommen sie zusätzliche Urlaubstage.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v32",
+   "part": "FORUM",
+   "title": "Soziales Engagement",
+   "note": "Экзамены: 070301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen sich anstelle eines Betriebsausflugs dieses Jahr an einem sozialen Tag gemeinsam ehrenamtlich engagieren. Auch dieser Tag zählt als Arbeitszeit.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v33",
+   "part": "FORUM",
+   "title": "Erste-Hilfe-Kurse",
+   "note": "Экзамены: 070321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen verpflichtet Erste-Hilfe-Kurse machen, die vom Unternehmen finanziert werden. Dafür gibt es Freizeitausgleich.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v34",
+   "part": "FORUM",
+   "title": "Kommunikationstraining",
+   "note": "Экзамены: 070321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Die Geschäftsleitung möchte, dass die Mitarbeitenden am Wochenende an einem verpflichtenden Kommunikationstraining teilnehmen. Aufgrund der derzeit hohen Arbeitsbelastung wird der Kurs am Wochenende durchgeführt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v35",
+   "part": "FORUM",
+   "title": "Firmenhandy",
+   "note": "Экзамены: 080101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in ihrer Firma sollen ein Firmenhandy bekommen. Dafür müssen sie bereit sein 24 Stunden auf Nachrichten zu reagieren.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v36",
+   "part": "FORUM",
+   "title": "Am Wochenende und an Feiertagen arbeiten",
+   "note": "Экзамены: 080101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter Ihrer Firma sollen am Wochenende und an Feiertagen arbeiten. Zusätzlich bekommen sie vier Urlaubstagen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v37",
+   "part": "FORUM",
+   "title": "Urlaubsplanung (bis Oktober)",
+   "note": "Экзамены: 080201 · Другая формулировка: Alle Mitarbeitenden in Ihrer Firma sollen spätestens bis Oktober dieses Jahr Bescheid geben, wann sie ihr Urlaub nächstes Jahr haben möchte.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in ihrer Firma sollen schon im Oktober ihre Urlaubsplanung für das nächste Jahr eintragen. Urlaubsanträge, die später eingereicht werden, können eventuell nicht mehr berücksichtig werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v38",
+   "part": "FORUM",
+   "title": "Dienstkleidung in den Firmenfarben – Weiß und Rot",
+   "note": "Экзамены: 080201 · Другая формулировка: Alle Mitarbeitenden in Ihrer Firma sollen während Arbeitszeit Hemden/Blusen in roten/weißen Farben tragen. Sie sollen aber neue Kleidung selbst kaufen und Firma übernimmt keine Kosten.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in ihrer Firma sollen zukünftig Blusen, Hemden oder Pullover in den Firmenfarben Rot und Weiß tragen. Diese Kleidung müssen sie privat anschaffen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v39",
+   "part": "FORUM",
+   "title": "Homeoffice, 1 Tag",
+   "note": "Экзамены: 080221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter der Firma sollen künftig an vier Tagen pro Woche im Office arbeiten. Die Arbeit von zu Hause ist nur noch an einem Tag möglich.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v40",
+   "part": "FORUM",
+   "title": "Weiterbildung",
+   "note": "Экзамены: 090101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen an der kostenfreien Weiterbildung “Erfolgreich mit den Kunden kommunizieren” 2 Mal pro Jahr teilnehmen, die in der Arbeitszeit stattfinden wird.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v41",
+   "part": "FORUM",
+   "title": "Homeoffice",
+   "note": "Экзамены: 090101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen die Möglichkeit erhalten, mehr Stunden im Homeoffice zu verbringen, um Familie und Beruf besser miteinander vereinbaren zu können.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v42",
+   "part": "FORUM",
+   "title": "Büromöbel",
+   "note": "Экзамены: 090201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma sollen ihre Überstunden durch Freizeit ausgleichen. Die dadurch eingesparten Mittel werden für die Anschaffung neuer Büromöbel verwendet.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v43",
+   "part": "FORUM",
+   "title": "Gesundheitscheck jährlich",
+   "note": "Экзамены: 090201 · В источнике дана только тема, без текста задания.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Gesundheitsvorsorge",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v44",
+   "part": "FORUM",
+   "title": "Elternzeit + Weiterbildungen",
+   "note": "Экзамены: 090222",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Allen Kolleg*innen wurde mitgeteilt, dass sie während der Elternzeit entweder an Teambesprechungen oder an Weiterbildungen teilnehmen sollen. Der Grund dafür ist, dass sie den Kontakt zur Firma nicht verlieren.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v45",
+   "part": "FORUM",
+   "title": "Firmenchat",
+   "note": "Экзамены: 090222",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma werden nach der Kündigung aus dem Firmenchat entfernt, damit sie nicht auf die aktuellen Informationen der Firma zugreifen können.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v46",
+   "part": "FORUM",
+   "title": "An Samstagen arbeiten",
+   "note": "Экзамены: 100101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen aufgrund der guten Auftragslage auch an Samstagen arbeiten. Diese Arbeitszeiten werden mit einem Zuschlag in Höhe von 120 Prozent vergütet.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v47",
+   "part": "FORUM",
+   "title": "Firmenlaptop",
+   "note": "Экзамены: 100101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma erhalten einen Laptop. Dieser darf auch privat genutzt werden. Allerdings müssen sie dafür eine Laptopversicherung abschließen und diese selbst bezahlen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v48",
+   "part": "FORUM",
+   "title": "Unternehmen vorstellen",
+   "note": "Экзамены: 100201 · Другая формулировка: Mitarbeiter in Ihrer Firma sollen in den Schulen ihrer Region das Unternehmen vorstellen. Zeit ist, für das Ausbildungsangebot des Betriebs zu werben und neue Auszubildende zu gewinnen.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter Ihrer Firma sollen künftig in den Schulen der Region das Unternehmen vorstellen. Ziel dieser Maßnahme ist es, für das Ausbildungsangebot des Betriebs zu werben und neue Auszubildende zu gewinnen. Nicht alle ihn Team sind von dieser Idee begeistert.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v49",
+   "part": "FORUM",
+   "title": "Zigarettenpause",
+   "note": "Экзамены: 100201 · Другая формулировка: Alle Mitarbeiterinnen und Mitarbeiter Ihrer Firma sollen täglich 15 Minuten länger arbeiten, wenn sie während der Arbeitszeit eine Raucherpause einlegen. Dafür müssen sie sich für diese Pause nicht ausstempeln.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "In jedem Firmengebäude soll ein Raucherraum eingerichtet werden. Damit Raucher ihre 5Minuten-Zigarettenpause schneller machen können, ohne vor das Gebäude zu gehen. Raucher sollen jedoch 15 Minuten länger arbeiten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v50",
+   "part": "FORUM",
+   "title": "Papierlose Lohnabrechnung",
+   "note": "Экзамены: 100221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma erhalten künftig keine Lohn-/Gehaltsabrechnungen mehr in Papierform, sondern können diese selbst online einsehen. Sie müssen diese ab sofort selbst von ihrem persönlichen Konto im Intranet herunterladen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v51",
+   "part": "FORUM",
+   "title": "Urlaub während der Betriebsferien",
+   "note": "Экзамены: 100221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ab dem kommenden Jahr während der dreiwöchigen Betriebsferien im August Urlaub nehmen. Die restlichen Urlaubstage können sie selbst planen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v52",
+   "part": "FORUM",
+   "title": "Homeoffice und Büro wechseln",
+   "note": "Экзамены: 110101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen in Ihrer Firma zwischen Homeoffice und Büro wechseln. Dafür haben sie keinen eigenen Schreibtisch mehr, sondern persönliches Arbeitsmaterial im Rollcontainer.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v53",
+   "part": "FORUM",
+   "title": "Im Firmengebäude parken",
+   "note": "Экзамены: 110101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen im Firmengebäude parken und jeden Monat 20€ bezahlen. Dafür wird der Parkplatz bewacht.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v54",
+   "part": "FORUM",
+   "title": "Obst – 5 Euro monatlich",
+   "note": "Экзамены: 110201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen für das bisher kostenfreie Obst monatlich 5 Euro bezahlen. Sie befinden sich in der Teeküche. Damit möchte die Firma die regionale Landwirtschaft der Stadt unterstützen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v55",
+   "part": "FORUM",
+   "title": "Bürowände mit Glas / Besseres Betriebsklima",
+   "note": "Экзамены: 110201 · Другая формулировка: Alle Mitarbeiterinnen und Mitarbeiter werden zukünftig ihre Einzelbüros mit gemauerten Bürowänden durch Büros mit Glas ersetzt. Das soll sich positiv auf das Betriebsklima auswirken.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen zwar ihre Einzelbüros behalten, doch die gemauerten Bürowände werden demnächst durch Glas ersetzt. Damit soll ein besseres Betriebsklima gefördert werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v56",
+   "part": "FORUM",
+   "title": "Dresscode",
+   "note": "Экзамены: 110221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma sollen einen Dresscode anhalten und formelle Kleidung statt Jeans und Sportschuhe tragen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v57",
+   "part": "FORUM",
+   "title": "Arbeitsplätze selbst aufräumen",
+   "note": "Экзамены: 110221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma sollen selbst ihre Arbeitsplätze aufräumen. Als Vergütung bekommt man dann Snacks, Obst und Gemüse.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v58",
+   "part": "FORUM",
+   "title": "Fortbildung 5 Mal / Jahr",
+   "note": "Экзамены: 120101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma können fünfmal pro Jahr an einer Weiterbildung teilnehmen. Die Weiterbildung sollen sie selbst bezahlen, aber sie findet während der Arbeitszeit statt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v59",
+   "part": "FORUM",
+   "title": "Firmenräume",
+   "note": "Экзамены: 120101",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma dürfen Räume, Küche und Garten für private Veranstaltungen kostenlos nutzen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v60",
+   "part": "FORUM",
+   "title": "Englisch sprechen während der Arbeitszeit",
+   "note": "Экзамены: 120201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden sollen zukünftig ausschließlich Englisch miteinander sprechen, weil das Unternehmen einen neuen Eigentümer aus Großbritannien hat. Intensive Englischkurse werden während der Arbeitszeit angeboten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v61",
+   "part": "FORUM",
+   "title": "Geburtstagsgeschenke",
+   "note": "Экзамены: 120201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden sollen einen Beitrag von 5 € monatlich einzahlen. Das Geld wird für die Geburtstagsgeschenke finanziert.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v62",
+   "part": "FORUM",
+   "title": "4-Tage-Woche – 10 Stunden pro Tag",
+   "note": "Экзамены: 120221 · Другая формулировка: Alle Mitarbeitenden sollen künftig vier Tage pro Woche arbeiten. Dafür wird der Arbeitstag von acht auf zehn Stunden erhöht. Aber sie bekommen einen zusätzlichen freien Tag.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen zukünftig nur noch an vier Tage pro Woche arbeiten. Dafür wird die Arbeitszeit an den anderen Tagen auf zehn Stunden erhöht.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v63",
+   "part": "FORUM",
+   "title": "Essverbot am Arbeitsplatz",
+   "note": "Экзамены: 120221 · Другая формулировка: Allen Mitarbeiterinnen und Mitarbeiter in Ihrer Firma ist es aus hygienischen Gründen verboten, am Arbeitsplatz zu essen.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen aus hygienischen Gründen nicht mehr am Arbeitsplatz essen. Selbst ein Stückchen Schokolade darf ausschließlich in der Teeküche gegessen werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v64",
+   "part": "FORUM",
+   "title": "Verpflichtende Konfliktmanagementseminare",
+   "note": "Экзамены: 130201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrem Unternehmen sollen an einem Seminar teilnehmen, um die Kommunikation und das Arbeitsklima im Unternehmen zu verbessern.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v65",
+   "part": "FORUM",
+   "title": "Fahrrad + Zuschuss für Reparaturen",
+   "note": "Экзамены: 130201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma, die mit dem Fahrrad zur Arbeit kommen, sollen einen Zuschuss für die Reparaturen und Wartung erhalten. Autofahrer bekommen aber nichts.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v66",
+   "part": "FORUM",
+   "title": "Kurze Kleidung ist verboten",
+   "note": "Экзамены: 130301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Allen Mitarbeiterinnen und Mitarbeiter in Ihrer Firma ist es im Sommer nicht erlaubt, unangemessen kurze Kleidung bei der Arbeit zu tragen. Außerdem sollten kurze Hosen, Miniröcke und ärmellose Oberteile nicht getragen werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v67",
+   "part": "FORUM",
+   "title": "Chat einrichten",
+   "note": "Экзамены: 130301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen einen Chat einrichten, um Probleme während der Arbeit oder in den Pausen schnell zu lösen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v68",
+   "part": "FORUM",
+   "title": "Azubi-Betreuung",
+   "note": "Экзамены: 130321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ab sofort in die Betreuung der Auszubildenden aktiver eingebunden werden und dazu einen Plan erstellen, wer welche Aufgaben übernimmt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v69",
+   "part": "FORUM",
+   "title": "Pausenhof statt Parkplatz",
+   "note": "Экзамены: 130321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen demnächst nicht mehr im Innenhof parken können. Die Fläche soll bepflanz und Sitzgelegenheiten für die Pausen ausgestattet werden.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v70",
+   "part": "FORUM",
+   "title": "Mehr Fortbildungen",
+   "note": "Экзамены: 140301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen mehr Fortbildungen besuchen. Für jede absolvierte Fortbildung erhalten sie Punkte, die später gegen Gutscheine (z. B. für Freizeitangebote oder Einkaufsgutscheine) eingetauscht werden können.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v71",
+   "part": "FORUM",
+   "title": "Verschiedenen Einsatzorten arbeiten",
+   "note": "Экзамены: 140301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "In Ihrer Firma ist geplant, dass im Sommer alle Mitarbeiterinnen und Mitarbeiter an verschiedenen Einsatzorten arbeiten sollen. Die Fahrkosten werden jedoch nicht erstatten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v72",
+   "part": "FORUM",
+   "title": "Kita am Freitag geschlossen",
+   "note": "Экзамены: 140321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiter und Mitarbeiterinnen in Ihrer Firma sollen freitags für eine private Kinderbetreuung sorgen. Die Firmen-Kita ist ab sofort an diesem Tag wegen Personalmangels geschlossen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v73",
+   "part": "FORUM",
+   "title": "Hunde im Büro sind erlaubt",
+   "note": "Экзамены: 140321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ihre Hunde ins Büro mitbringen dürfen. Diese Regelung dient der Förderung des Betriebsklimas. Allerdings dürfen die Hunde andere Kolleg*innen nicht stören.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v74",
+   "part": "FORUM",
+   "title": "Gleitzeit wird abgeschafft",
+   "note": "Экзамены: 150301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen von 8:30 bis 17 arbeiten. Gleitzeit wird abgeschafft.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v75",
+   "part": "FORUM",
+   "title": "Kurze Dienstreise nur online",
+   "note": "Экзамены: 150301",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter Ihrer Firma sollen kurze Dienstreise zwischen Mitarbeitern und Kunden aus anderen Städten nur noch virtuell durchführen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v76",
+   "part": "FORUM",
+   "title": "Weiterbildungen ausschließlich online",
+   "note": "Экзамены: 150321 · Другая формулировка: Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen auch im nächsten Jahr wieder an Weiterbildungen teilnehmen. Diese werden dann aber ausschließlich online angeboten.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Die Geschäftsleitung Ihrer Firma hat beschlossen, dass alle Mitarbeiterinnen und Mitarbeiter im nächsten Jahr an einer Weiterbildung teilnehmen sollen. Dabei werden ausschließlich Online-Kurse berücksichtigt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v77",
+   "part": "FORUM",
+   "title": "Einsatz für die Umwelt",
+   "note": "Экзамены: 150321",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen nach Möglichkeit am kommenden Wochenende an einer Baumpflanz-Aktion im Stadtwald teilnehmen, um das Umweltengagement der Firma zu unterstützen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v78",
+   "part": "FORUM",
+   "title": "Betriebsausflug",
+   "note": "Экзамены: 160201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Der diesjährige Betriebsausflug soll an einem Samstag stattfinden. Die Teilnahme ist Pflicht. Dafür können alle Mitarbeiterinnen und Mitarbeiter innerhalb der folgenden zwei Wochen einen freien Tag unter der Woche nehmen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v79",
+   "part": "FORUM",
+   "title": "Homeoffice, privater Laptop",
+   "note": "Экзамены: 160201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen die Möglichkeit bekommen, zukünftig ein bis zwei Tage pro Woche von zu Hause aus zu arbeiten. Sie sollen dafür ihre privaten Laptops benutzen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v80",
+   "part": "FORUM",
+   "title": "Videokamera",
+   "note": "Экзамены: 160221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen die Videokamera bei Videokonferenzen immer eingeschaltet haben. Firma möchte Online-Konferenzen für Mitarbeiter durchführen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v81",
+   "part": "FORUM",
+   "title": "Urlaubssperre wegen des Großauftrags",
+   "note": "Экзамены: 160221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Ihre Firma hat im August und September Urlaubssperre wegen des Großauftrags. Es wurde vorgeschlagen, als Ausgleich für Urlaub eine Geldprämie in Höhe von 500 € zu zahlen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v82",
+   "part": "FORUM",
+   "title": "Überstunden durch Freizeit ausgleichen",
+   "note": "Экзамены: 170201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Die Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ihre Überstunden zukünftig in Form von Freizeit ausgleichen. Die Absprache mit der Abteilungsleitung ist erforderlich. Eine Auszahlung ist nicht mehr möglich.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v83",
+   "part": "FORUM",
+   "title": "Kurzarbeit",
+   "note": "Экзамены: 170201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen aufgrund der schlechten Auftragslage ab sofort in Kurzarbeit gehen. Die Arbeitszeit wird für die gesamte Belegschaft um 50% verringert.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v84",
+   "part": "FORUM",
+   "title": "Abdeckung zwischen Weihnachten und Neujahr",
+   "note": "Экзамены: 170221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma sollen auf zwei Tage ihres Urlaubs verzichten, damit alle Betriebsferien zwischen Weihnachten und Neujahr abgedeckt sind.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v85",
+   "part": "FORUM",
+   "title": "Innenhof gestalten",
+   "note": "Экзамены: 170221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma sollen dabei helfen, den Innenhof als Aufenthaltsbereich für die Pause zu gestalten. Sie sollen ihn auch am Wochenende und in ihrer Freizeit pflegen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v86",
+   "part": "FORUM",
+   "title": "Umweltschutz",
+   "note": "Экзамены: 180201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen motiviert werden, aus Gründen des Umweltschutzes ab sofort das Auto stehenzulassen. Dafür erhalten sie ein kostenfreies Jahres-Abo für Bus und Bahn.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v87",
+   "part": "FORUM",
+   "title": "Ein Urlaubstag für Fortbildungen",
+   "note": "Экзамены: 180201",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen ab dem kommenden Jahr für Fortbildungen einen Urlaubstag nehmen. Bezahlt werden die Fortbildungen aber weiterhin von der Firma.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v88",
+   "part": "FORUM",
+   "title": "Papierverbrauch",
+   "note": "Экзамены: 180221 · Другая формулировка: Alle Mitarbeitenden Ihrer Firma müssen Papier sparen. Bis dahin wird eine Begrenzung des Drucker- und Papierverbrauchs festgelegt, um Umwelt zu schützen.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Das Unternehmen hat beschlossen, in Zukunft aus Gründen des Umweltschutzes den Papierverbrauch im Unternehmen zu minimieren und die Anzahl der Kopien pro Mitarbeiter zu limitieren.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v89",
+   "part": "FORUM",
+   "title": "Kleidung spenden",
+   "note": "Экзамены: 180221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeitenden Ihrer Firma können sich auf Wunsch an einer Sammelaktion für Kinderkleidung beteiligen. Der gesamte Erlös kommt einer Spende zugute.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v90",
+   "part": "FORUM",
+   "title": "Firmenausflug mit eigenem Essen",
+   "note": "Экзамены: 190201 · Краткая формулировка: Alle sollen das Essen mitbringen. Firma spart Geld.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma müssen Essen für einen Betriebsausflug mitbringen. Sie müssen das Essen, das sie gerne essen, selbst zubereiten und mitbringen. Die Firma möchte Geld sparen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v91",
+   "part": "FORUM",
+   "title": "Kostenlose Freizeitbadkarte",
+   "note": "Экзамены: 190201 · Другая формулировка: Um unseren Stress zu senken, schenkt das Unternehmen allen Mitarbeitern einjährige kostenlose Freizeitbadkarte.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen von Ihrer Firma Jahresjobtickets für das Freizeitbad der Stadt geschickt bekommen, um die Arbeit Alltagsstress abzubauen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v92",
+   "part": "FORUM",
+   "title": "Geschäftsreisen. Bahn anstelle des eigenen Autos",
+   "note": "Экзамены: 190221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sind angehalten, für Geschäftsreisen vermehrt Verkehrsmittel wie die Bahn anstelle des eigenen Autos zu nutzen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v93",
+   "part": "FORUM",
+   "title": "Getränke nicht mehr bereitgestellt",
+   "note": "Экзамены: 190221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen Kaffee und andere Getränke ab sofort vor zu Hause mitbringen, da die Firma diese nicht mehr bereitstellt.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v94",
+   "part": "FORUM",
+   "title": "Keine Handys in der Großküche",
+   "note": "Экзамены: 200101, 200201 · Другие формулировки: Aus hygienischen Gründen dürfen die Küchenmitarbeiter kein Handy während der Arbeitszeit benutzen. Die Handys sollen im Spind eingeschlossen sein. / Sie arbeiten in einer großen Küche. Aus hygienischen Gründen können Sie keine Mobiltelefone verwenden - sie müssen in einer Spind (Zelle) geschlossen werden.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihre Firma in der Großküche sollen aus Hygiene am Arbeitsplatz die Handys nicht benutzen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v95",
+   "part": "FORUM",
+   "title": "Fahrgemeinschaft",
+   "note": "Экзамены: 200101, 200201 · Другие формулировки: Alle Mitarbeitende, die einen Fahrgemeinschaft auf dem Weg zur Arbeit organisieren, bekommen einen Zuschuss von Benzingeld. Die einzelnen Fahrer erhalten keine Unterstützung. / Alle Mitarbeiter, die Fahrgemeinschaft bilden, erhalten den Benzinzuschlag. Diejenigen, die persönliche Autos fahren werden, werden Benzinzuschlag nicht bekommen.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter in Ihrer Firma sollen zukünftig Fahrgemeinschaften bilden, um gemeinsam mit dem Auto zur Arbeit zu kommen. Es gibt einen Zuschuss für Benzinkosten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v96",
+   "part": "FORUM",
+   "title": "Energie sparen",
+   "note": "Экзамены: 200221 · Другая формулировка: Die Firma soll Energie sparen und weniger heizen. Auf Firmenkosten werden die Fleecejacken angeschafft.",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "In der Firma soll Energie gespart und nicht mehr so viel geheizt werden. Im Winter können die Mitarbeitenden, wenn ihnen zu kalt ist, in Winterkleidung (Fleece Jacke von der Firma) im Büro arbeiten.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  },
+  {
+   "id": "forum_v97",
+   "part": "FORUM",
+   "title": "Team-Bildung-Event",
+   "note": "Экзамены: 200221",
+   "writing": {
+    "kind": "FORUM",
+    "situation": "Alle Mitarbeiterinnen und Mitarbeiter sollen an einem Teambildungs-Event in einer anderen Stadt am Wochenende teilnehmen.",
+    "points": [
+     "Ihre Meinung",
+     "Vor- und Nachteile / Argumente",
+     "Beispiele oder Erfahrungen",
+     "Vorschlag / Fazit"
+    ]
+   }
+  }
+ ]
+}

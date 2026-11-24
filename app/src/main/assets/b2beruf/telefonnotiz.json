@@ -1,0 +1,1306 @@
+{
+ "part": "TELEFONNOTIZ",
+ "variants": [
+  {
+   "id": "telefonnotiz_v1",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 1 · Autovermietung",
+   "note": "Старый вариант",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Schmitt",
+       "gender": "m",
+       "text": "Guten Morgen. Herr Schmitt am Apparat. Vielen Dank für Ihr Interesse an unserer Autovermietung. Gerne bestätigen wir den Eingang Ihrer Anfrage und möchten Ihnen einige weitere Details zu unserem Angebot mitteilen. Wir haben ein kleines Auto für Sie verfügbar, dass zu einem besonderen Preis von 75 € pro Tag angeboten wird. Bitte beachten Sie, dass das Auto mit einem vollen Tank Benzin bereitgestellt wird. Bitte beachten Sie auch, dass wir derzeit keine großen Fahrzeuge mehr verfügbar haben, sondern nur noch kleine. In Bezug auf das bereits gesprochene andere Auto stehen wir Ihnen natürlich weiterhin zur Verfügung, um Ihre Fragen zu beantworten. Die Rückgabe des Autos kann entweder von Ihnen persönlich vorgenommen werden, oder wir können dies für Sie arrangieren. Abschließend möchten wir gerne noch über die Versicherungsoptionen sprechen. Bitte rufen Sie uns zurück, damit wir diese Details klären können. Sie können uns unter der Telefonnummer 0 171 88 45 545 erreichen. Mein Name ist Schmitt. Ich buchstabiere S-C-H-M-I-T-T. Vielen Dank für Ihr Verständnis und Ihre Zusammenarbeit."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schmitt"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0171 88 45 545"
+     },
+     {
+      "label": "Information 1",
+      "answer": "75 € pro Tag ein kleines Auto"
+     },
+     {
+      "label": "Information 2",
+      "answer": "das Auto mit vollem Tank Benzin"
+     },
+     {
+      "label": "Information 3",
+      "answer": "kein großes Auto verfügbar haben"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Rückgabe des Autos persönlich oder sie können arrangieren"
+     },
+     {
+      "label": "Information 5",
+      "answer": "über die Versicherungsoptionen sprechen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und Details klären können."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/108835?single"
+  },
+  {
+   "id": "telefonnotiz_v1_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 1 · версия 08.2024",
+   "note": "Новый вариант от 08.2024",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Schmidt",
+       "gender": "m",
+       "text": "Guten Morgen, hier spricht Herr Schmidt. Wir bedanken uns herzlich für Ihr Interesse an unserer Autovermietung. Gerne bestätigen wir den Erhalt Ihrer Anfrage und möchten Ihnen einige weitere Einzelheiten zu unserem Angebot erläutern. Wir haben ein kleines Fahrzeug für Sie verfügbar, das zu einem Sonderpreis von 80 Euro pro Tag angeboten wird. Bitte beachten Sie, dass das Auto mit vollem Benzintank bereitgestellt wird. Außerdem möchten wir Sie darauf hinweisen, dass wir momentan keine großen Fahrzeuge mehr zur Verfügung haben, sondern nur noch kleine. Für Fragen zu dem bereits besprochenen anderen Fahrzeug stehen wir Ihnen natürlich weiterhin gerne zur Verfügung. Die Rückgabe des Autos kann entweder persönlich durch Sie erfolgen oder wir können dies für Sie organisieren. Zum Abschluss möchten wir noch über die möglichen Versicherungsoptionen sprechen. Bitte rufen Sie uns zurück, damit wir diese Details klären können. Sie erreichen uns unter der Telefonnummer 0171 8845 5545. Mein Name ist Schmidt, buchstabiert S-C-H-M-I-DT. Vielen Dank für Ihr Verständnis und Ihre Zusammenarbeit."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schmidt"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0171 88 45 545"
+     },
+     {
+      "label": "Information 1",
+      "answer": "80 € pro Tag ein kleines Fahrzeug"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Das Auto mit vollem Benzintank"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Keine großen Fahrzeuge zur Verfügung haben"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Die Rückgabe des Autos persönlich oder sie können organisieren"
+     },
+     {
+      "label": "Information 5",
+      "answer": "Über die Versicherungsoptionen sprechen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und Details klären."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v1_c",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 1/1 · Autovermietung Klein",
+   "note": "Новый вариант. Запись от 12.10.24",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Adriane Schmid",
+       "gender": "f",
+       "text": "Guten Tag, hier spricht Adriane Schmid von der Autovermietung Klein. Sie haben angerufen und um ein Angebot gebeten. Ich kann Ihnen dieses Mal einen Mittelklassewagen für Sie zum Sonderpreis von 99 Euro pro Tag anbieten. Sonst tragen Sie ja immer einen Kleinwagen. Wir haben schon mehrmals über andere Optionen gesprochen. Sie können das Auto vollgetankt wieder abgeben oder wir machen das kostenpflichtig für Sie. Außerdem wissen Sie ja, dass Sie mit uns die Versicherung bilden müssen. Bitte rufen Sie mich zurück und sagen Sie mir, ob Sie das Angebot so annehmen.\nIch wiederhole nochmal meinen Namen. Adriane Schmid, S-C-H-M-I-D Telefon 0173 721 572 6\nIch wünsche Ihnen noch einen schönen Tag und freue mich auf Ihren Anruf."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schmid"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0173 721 572 6"
+     },
+     {
+      "label": "Information 1",
+      "answer": "99 € pro Tag ein Mittelklassewagen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "das Auto vollgetankt wieder abgeben oder sie machen das kostenpflichtig für uns"
+     },
+     {
+      "label": "Information 3",
+      "answer": "die Versicherung bilden müssen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen, ob wir das Angebot so annehmen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/123640"
+  },
+  {
+   "id": "telefonnotiz_v1_d",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 1/1 · версия 03–06.2025",
+   "note": "Новый вариант от 22.03.25, от 17.05.25 (запись от 18.06.25). Другие варианты ответов: Name: Schmitt; Telefonnummer: 0171 880 922 7; Mittelklassewagen von nur 75 € pro Tag; Zu erledigen: Zurück anrufen und bestätigen.",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Roman Schmitz",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Roman Schmitz von der Autovermietung Devid. Sie hatten angerufen und um ein Angebot gebeten. Also, ich hätte dieses Mal leider nur einen kleinen Wagen für Sie zum Sonderpreis von nur 55 Euro pro Tag. Sonst haben Sie immer einen Mittelklassewagen. Wir haben schon mehrmals über andere Optionen gesprochen. Sie können das Auto vollgetankt wieder abgeben oder wir machen das kostenpflichtig für Sie. Außerdem wissen Sie ja, dass Sie mit uns die Versicherung regeln müssen. Bitte rufen Sie mich zurück und sagen Sie mir, ob Sie das Angebot so annehmen.\nIch wiederhole nochmal meinen Namen. Roman Schmitz, S-C-H-M-I-T-Z. Telefon 0173 916 94 42.\nIch wünsche Ihnen noch einen schönen Tag und freue mich auf Ihren Anruf. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schmitz"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0173 916 94 42"
+     },
+     {
+      "label": "Information 1",
+      "answer": "55 € pro Tag ein kleiner Wagen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Vollgetankt wieder abgeben"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Oder sie machen das kostenpflichtig für uns"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Die Versicherung regeln müssen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen, ob wir das Angebot so annehmen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195107"
+  },
+  {
+   "id": "telefonnotiz_v2",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 2 · Malerarbeit",
+   "note": "Старый вариант. Другие варианты ответов: Name: Mayer / Meyer / Azrael; Telefonnummer: 01151 953 2921; Farbe: weiß und rot; Zu erledigen: Termin neu, Maler schicken",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Dr. Mayer",
+       "text": "Guten Tag. Hier spricht Dr. Mayer. Wir müssen dringend etwas klären. Wir hatten doch vor ein paar Tagen verabredet, dass Ihre Firma heute unsere Praxis streicht. Wir haben extra unsere Praxis geschlossen und alles für Sie vorbereitet. Und jetzt höre ich von meinen Mitarbeitern, dass die Maler gar nicht gekommen sind. Wie stellen Sie sich das jetzt vor? Wir haben zuletzt vor fünf Jahren streichen lassen. Da gab es solche Probleme gar nicht. Ach ja? Sie denken auch daran, dass Sie weiße und grüne Farbe mitbringen. Ich erwarte, dass bis morgen Mittag die Wände gestrichen sind. Ich bitte dringend um Rückruf. Mein Name ist Mayer. M-A-Y-E-R. Sie erreichen mich unter der Nummer 05123 72 85 618. Danke und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Mayer"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "05123 72 85 618"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Heute Praxis streichen würde"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die Maler gar nicht gekommen sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Weiße und grüne Farbe mitbringen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Bis morgen Mittag die Wände gestrichen sind"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "dringend Rückruf"
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/109520"
+  },
+  {
+   "id": "telefonnotiz_v2_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 2 · версия 08.2024",
+   "note": "Новый вариант от 08.2024",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Dr. Meyer",
+       "text": "Guten Tag, hier ist Dr. Meyer. Wir müssen dringend etwas besprechen. Vor ein paar Tagen hatten wir vereinbart, dass Ihre Firma heute unsere Praxis streichen würde. Wir haben extra dafür die Praxis geschlossen und alles vorbereitet. Nun höre ich von meinen Mitarbeitern, dass die Maler überhaupt nicht erschienen sind. Wie gedenken Sie jetzt weiter vorzugehen?\nAls wir vor fünf Jahren das letzte Mal gestrichen haben, gab es solche Probleme nicht. Denken Sie auch daran, weiße und grüne Farbe mitzubringen. Ich erwarte, dass die Wände bis morgen um 13 Uhr fertig gestrichen sind. Bitte rufen Sie mich umgehend zurück. Mein Name ist Meyer, buchstabiert M-E-Y-E-R. Sie können mich unter der Nummer 0512 37 285 618 erreichen. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Meyer"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0512 37 285 618"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Heute Praxis streichen würde"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die Maler überhaupt nicht erschienen sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Weiße und grüne Farbe mitbringen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Bis morgen um 13 Uhr fertig gestrichen sind"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "umgehend zurückrufen."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v2_c",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 2 · версия 03–05.2025",
+   "note": "Новый вариант от 07.03.25 / 03.05.25. Другие варианты ответов: Name: Maier / Schröder; Telefonnummer: 0155 623 66 85; Friseursalon; weiße und grüne / pinke Farbe; bis Montagmittag",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Meier",
+       "text": "Guten Tag, hier ist Meier. Wir müssen dringend etwas besprechen. Vor ein paar Tagen hatten wir vereinbart, dass Ihre Firma heute unser Geschäft streichen würde. Wir haben extra dafür das Geschäft geschlossen und alles vorbereitet. Nun höre ich von meinen Mitarbeitern, dass die Maler überhaupt nicht erschienen sind. Wie gedenken Sie jetzt weiter vorzugehen? Denken Sie auch daran, weiße und blaue Farbe mitzubringen. Ich erwarte, dass die Wände bis morgen Mittag fertig gestrichen sind. Bitte rufen Sie mich umgehend zurück. Mein Name ist Meier, buchstabiert M-E-I-E-R. Sie können mich unter der Nummer 0512 37 285 618 erreichen. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Meier"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0512 37 285 618"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Heute Geschäft streichen würde"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die Maler überhaupt nicht erschienen sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Weiße und blaue Farbe mitbringen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Bis morgen Mittag Wände streichen müssen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "umgehend Zurückrufen."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v3",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 3 · Büromaterialien",
+   "note": "Старый вариант",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Städtler",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Städtler, buchstabiert S-T-Ä-D-T-L-E-R. Ich habe kürzlich 180 Prospekte bei Ihnen bestellt. Allerdings sind nur 100 angekommen. Ich würde darum bitten, die fehlenden 80 Prospekte bis morgen zu liefern. Bitte rufen Sie mich zurück, um die Lieferung zu bestätigen. Sie erreichen mich unter der Telefonnummer 0173 536 47 15. Vielen Dank und auf Wiederhören"
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Städtler"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0173 536 47 15"
+     },
+     {
+      "label": "Information 1",
+      "answer": "180 Prospekte bestellt und nur 100 angekommen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die fehlenden 80 Prospekte bis morgen zu liefern"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen, die Lieferung bestätigen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/125046"
+  },
+  {
+   "id": "telefonnotiz_v3_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 3 · версия 08.2024",
+   "note": "Новый вариант от 08.2024",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Hoffmann",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Hoffmann, buchstabiert H-O-F-F-M-A-N-N. Ich habe kürzlich 200 Prospekte bei Ihnen bestellt, allerdings sind nur 120 angekommen. Ich würde darum bitten, die fehlenden 80 Prospekte bis morgen zu liefern. Bitte rufen Sie mich zurück, um die Lieferung zu bestätigen. Sie erreichen mich unter der Telefonnummer 0179 536 47 15. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Hoffmann"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0179 536 47 15"
+     },
+     {
+      "label": "Information 1",
+      "answer": "200 Prospekte bestellt und nur 120 angekommen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die fehlenden 80 Prospekte bis morgen zu liefern"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen, die Lieferung bestätigen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/125047"
+  },
+  {
+   "id": "telefonnotiz_v3_c",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 3 · версия 07.02.2025",
+   "note": "Номер от 07.02.2025 (100%). Другие варианты ответов: Name: Brandt / Brand; Telefonnummer: 015225173510; 200 / 500 Schnellhefter bestellt, 100 / 400 Schnellhefter erhalten; unbedingt morgen; sofort fehlende Schnellhefter abschicken",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Paul Becker",
+       "gender": "m",
+       "text": "Guten Morgen, hier spricht Paul Becker von der Firma KBL. Ich rufe wegen Ihrer Lieferung an. Wir hatten bei Ihnen letzte Woche 200 Prospekthüllen bestellt. Wir kaufen ja oft Büromaterialien bei Ihnen ein. Gerade eben habe ich die Lieferung bekommen und habe gesehen, dass in dem Paket nur insgesamt 150 Prospekthüllen sind. Ich brauche die fehlenden Hüllen unbedingt übermorgen. Können Sie sie bitte spätestens morgen abschicken? Bitte rufen Sie mich zurück. Mein Name ist Becker. B-E-C-K-E-R. Telefon 0175 933 797 6\nIch danke Ihnen. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Becker"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0175 933 797 6"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Letzte Woche 200 Prospekthüllen bestellt haben"
+     },
+     {
+      "label": "Information 2",
+      "answer": "In dem Paket nur insgesamt 150 Prospekthüllen sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Brauchen die fehlenden Hüllen unbedingt übermorgen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Spätestens morgen abschicken"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158143"
+  },
+  {
+   "id": "telefonnotiz_v3_d",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 3/1 · версия 07.02.2025",
+   "note": "Номер от 07.02.2025",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Eno Hofmann",
+       "gender": "m",
+       "text": "Guten Morgen. Hier spricht Eno Hofmann von der Firma Multico.\nIch rufe wegen Ihrer Lieferung an. Wir hatten bei Ihnen Anfang der Woche 200 Prospekthüllen bestellt. Wir kaufen ja oft Büromaterialen bei Ihnen ein.\nGerade eben habe ich die Lieferung bekommen und habe gesehen, dass in dem Paket nur insgesamt 80 Prospekthüllen sind. Ich brauche die fehlenden Hüllen unbedingt morgen.\nKönnen Sie sie bitte sofort losschicken?\nBitte rufen Sie mich zurück. Mein Name ist Hofmann, H-O-F-M-A-N-N. Telefon 0173 715 720 3.\nIch danke Ihnen. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Hofmann"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0173 715 720 3"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Anfang der Woche 200 Prospekthüllen bestellt haben"
+     },
+     {
+      "label": "Information 2",
+      "answer": "In dem Paket nur insgesamt 80 Prospekthüllen sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Brauchen die fehlenden Hüllen unbedingt morgen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Sofort losschicken"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158144?single"
+  },
+  {
+   "id": "telefonnotiz_v3_e",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 3/1 · версия 01.04.2026",
+   "note": "Номер от 01.04.2026",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Eno Hoffmann",
+       "gender": "m",
+       "text": "Guten Morgen. Hier spricht Eno Hoffmann von der Firma Multico.\nIch rufe wegen Ihrer Lieferung an. Wir hatten bei Ihnen vergangene Woche 200 Umschläge in DIN A4 bestellt. Wir kaufen ja oft Büromaterialen bei Ihnen ein.\nIch habe die Lieferung bekommen und habe gesehen, dass in dem Paket nur insgesamt 80 Umschläge sind. Ich brauche die fehlenden Umschläge unbedingt morgen.\nKönnen Sie sie bitte sofort abschicken?\nBitte rufen Sie mich zurück. Mein Name ist Hofmann, H-O-F-F-M-A-N-N. Telefon 017996512356.\nIch danke Ihnen. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Hoffmann"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "017996512356"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Vergangene Woche 200 Umschläge in DIN A4 bestellt haben"
+     },
+     {
+      "label": "Information 2",
+      "answer": "In dem Paket nur insgesamt 80 Umschläge sind"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Brauchen die fehlenden Umschläge unbedingt morgen"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Sofort abschicken"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v4",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 4 · Premiumpapier",
+   "note": "Старый вариант. Другие варианты ответов: Premiumpapier im Angebot 150 Stück für 90,99 / 16,99 für 100 Stück; 16 oder 20% Rabatt; Expresslieferung / 2 Tage lieferbar; Name: Strauß / Strauss; Telefonnummer: 01734174377",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Kienzle",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Kienzle, buchstabiert K-I-E-N-Z-L-E.\nIch wollte Ihnen bezüglich Ihrer Visitenkartenbestellung ein Angebot unterbreiten. Aktuell haben wir Premiumpapier im Angebot. 100 Stück für 60,99. Die Lieferung erfolgt innerhalb von zwei Tagen per Expressversand. Bitte rufen Sie mich zurück, um die gewünschte Papiersorte zu bestätigen. Sie erreichen mich unter der Telefonnummer 0179-335-36 37. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Kienzle"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0179 335 36 37"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Die Visitenkartenbestellung"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Premiumpapier im Angebot 100 Stück für 60,99"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Die Lieferung erfolgt innerhalb von zwei Tagen per Expressversand"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und bestätigen die Papiersorte."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/125091"
+  },
+  {
+   "id": "telefonnotiz_v4_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 4 · версия Fröhlich",
+   "note": "Новый вариант",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Fröhlich",
+       "text": "Guten Tag, hier spricht Fröhlich, buchstabiert F-r-ö-h-l-i-ch.\nIch wollte Ihnen bezüglich Ihrer Visitenkartenbestellung ein Angebot unterbreiten. Visitenkarten mit dem Premiumpapier gibt es momentan schon ab 16.32€ für 25 Stück. Wir können Ihnen die Visitenkarten im Rahmen des Expressversands innerhalb 2 Tagen liefern. Wenn Sie bis 20:00 Uhr bestellen, können wir Ihnen diesen garantieren. Bitte rufen Sie mich zurück und bestätigen die Papiersorte. Sie erreichen mich unter der Telefonnummer 0178-939-584-2. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Fröhlich"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0178 939 584 2"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Die Visitenkartenbestellung"
+     },
+     {
+      "label": "Information 2",
+      "answer": "schon ab 16.32€ für 25 Stück"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Expressversand innerhalb 2 Tagen – bis 20:00 Uhr bestellen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und bestätigen die Papiersorte."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v4_c",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 4 · версия Walter (130301)",
+   "note": "Новый вариант. Запись от 30.09.25",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Walter",
+       "text": "Guten Tag, hier spricht … Walter von der Firma Groß und Co. Ich rufe wegen Ihrer Kopierpapierbestellung an. Zu Ihren Fragen: Wir haben aktuell das Premiumpapier im Angebot. Sie nehmen ja immer unser Standardpapier. Kopierpapier in Premiumqualität gibt es momentan Standard 4,49 € pro 500 Blatt. Wir können Ihnen das Kopierpapier im Rahmen des Expressversands innerhalb eines Tages liefern. Wenn Sie bis 18:00 Uhr bestellen, können wir Ihnen dieses garantieren. Bitte rufen Sie mich zurück und bestätigen die Papiersorte. Mein Name ist Walter. W-A-L-T-E-R. Meine Telefonnummer ist die 0174 113 806 6. Ich wünsche Ihnen noch einen schönen Tag. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Walter"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0174 113 806 6"
+     },
+     {
+      "label": "Information 1",
+      "answer": "wegen der Kopierpapierbestellung"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Premiumpapier im Angebot"
+     },
+     {
+      "label": "Information 3",
+      "answer": "4,49 € pro 500 Blatt"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Expressversand innerhalb eines Tages, wenn bis 18:00 Uhr bestellen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und bestätigen die Papiersorte."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/219642"
+  },
+  {
+   "id": "telefonnotiz_v4_d",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 4/1 · Walther",
+   "note": "Новый вариант",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Walther",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Walther.\nIch wollte Ihnen ein Angebot unterbreiten. Kopierpapier aus Premiumpapier sind derzeit bereits ab 7,89 Euro für 500 Blatt erhältlich. Wir bieten Ihnen einen Expressversand bis morgen an. Wenn Sie bis 15:00 Uhr bestellen, können wir Ihnen diese Garantie bieten.\nBitte rufen Sie mich zurück, um die gewünschte Papiersorte zu bestätigen. Sie erreichen mich unter der Telefonnummer 01734174737. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Walther"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "01734174737"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Kopierpapier aus Premiumpapier"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Ab 7,89 Euro für 500 Blatt"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Expressversand bis morgen, wenn bis 15:00 Uhr bestellen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und bestätigen die Papiersorte."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v5",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 5 · Tischreservierung",
+   "note": "Старый вариант. Другие варианты ответов: Name: Meßner; Telefonnummer: 041-337-843-009",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Messner",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Messner, buchstabiert M-E-S-S-N-E-R. Ich möchte für kommenden Freitagabend, den 19.30 Uhr, eine Tischreservierung für fünf Personen vornehmen. Außerdem würde ich gerne wissen, ob für Ihre Gäste Parkmöglichkeiten zur Verfügung stehen. Es wäre ideal, wenn Sie für unsere Gruppe das Menü Nr. 1 vorbereiten könnten. Bitte bestätigen Sie mir die Reservierung sowie die Verfügbarkeit eines Parkplatzes. Sie erreichen mich unter der Telefonnummer 041-337-843-009. Vielen Dank im Voraus für Ihre Rückmeldung. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Buchung",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Messner"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "04133 784 30 09"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Einen Tisch reservieren für 5 Personen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Am Freitagabend um 19:30 Uhr"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Haben Sie einen Parkplatz für Gäste?"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Menu №1 vorbereiten"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Rückruf und bestätigen die Reservierung und Parkplätze."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/114261"
+  },
+  {
+   "id": "telefonnotiz_v5_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 5 · версия 09.2024",
+   "note": "Новый вариант от 09.2024",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Nikol Meßner",
+       "text": "Nikol Meßner, Firma Karcher & Söhne. Guten Tag. Wir waren letzte Woche bei Ihnen zum Essen, und ich muss sagen, es hat hervorragend geschmeckt. Derzeit würde ich jetzt gerne einen Tisch für fünf Personen reservieren. Es geht um ein Geschäftsessen für meinen Chef und vier Kunden, und zwar für Freitagabend um 19.30 Uhr. Ich bestelle auch jetzt gleich das Essen, damit dann alles problemlos funktioniert. Bitte bereiten Sie für alle das Menü 1 vor. Haben Sie eigentlich einen Parkplatz für Gäste? Bitte rufen Sie mich zurück, um meine Reservierung zu bestätigen. Mein Name ist MEßNER, M-E-ß-N-E-R. Meine Telefonnummer lautet 0413 378 430 09. Vielen Dank. Auf Wiedersehen."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Buchung",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Meßner"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0413 378 430 09"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Einen Tisch reservieren für 5 Personen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Am Freitagabend um 19:30 Uhr"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Haben Sie einen Parkplatz für Gäste?"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Menu №1 vorbereiten"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Rückruf und bestätigen die Reservierung und Parkplätze."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/120162"
+  },
+  {
+   "id": "telefonnotiz_v5_c",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 5 · версия 08.2024",
+   "note": "Новый вариант от 08.2024. Другие варианты ответов: Name: Herrmanns / Lorenz; Telefonnummer: 0157 340 4825; am Mittwochabend um 18:00 Uhr; Menu №3",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Herrmann",
+       "gender": "m",
+       "text": "Guten Tag, hier spricht Herr Herrmann. Ich möchte für kommenden Donnerstagabend um 18.30 eine Tischreservierung für sechs Personen vornehmen. Es handelt sich dabei um fünf Kunden sowie mich als Leiter. Darüber hinaus würde ich gerne in Erfahrung bringen, ob für unsere Gäste Parkplätze zur Verfügung stehen. Zudem bitte ich um Bestätigung, dass das Menü 2 für uns bereitgestellt wird. Ich wäre Ihnen sehr dankbar, wenn Sie mir die Reservierung sowie die Verfügbarkeit des Parkplatzes telefonisch bestätigen könnten. Sie erreichen mich unter der Nummer 0172 439 378 6. Mein Name wird wie folgt buchstabiert H-E-RR-M-A-NN. Vielen Dank und auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Buchung",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Herrmann"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0172 439 378 6"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Einen Tisch reservieren für 6 Personen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Am Donnerstagabend um 18:30 Uhr"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Haben Sie einen Parkplatz für Gäste?"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Menu №2 bestätigen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Rückruf und bestätigen die Reservierung und Parkplätze."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/125035"
+  },
+  {
+   "id": "telefonnotiz_v5_d",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 5 · версия 04.04.25 (без записи)",
+   "note": "Новый вариант от 04.04.25. В источнике есть только готовая заметка, текста записи нет. Другой вариант имени: Müller",
+   "phoneNote": {
+    "title": "Buchung",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Möller"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0151 130 686 4"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Einen Tisch reservieren für 2 Personen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Am Freitagabend um 12:30"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Haben Sie einen Parkplatz für Gäste?"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Menu №4 vorbereiten"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Rückruf und bestätigen die Reservierung und Parkplätze."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v6",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 6 · Wasser und Saft",
+   "note": "Тест №150321, 150301. Другие варианты ответов: Name: Knopper / Knooper; über 100 Personen; 30 Kisten Wasser und 10 Kisten gemischte Säfte",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Stefan Wolff",
+       "gender": "m",
+       "text": "Stefan Wolff, Restaurant Ätna, guten Tag. Wir haben für heute Getränke für eine Veranstaltung mit über 200 Personen bestellt, aber leider ist die Lieferung noch nicht da und es ist bereits 11 Uhr. Wir warten auf 50 Kästen Wasser und 15 gemischte Saftkisten. Die Sachen müssen bis spätestens 14:30 Uhr bei uns sein, da wir noch alles vorbereiten müssen. Bitte schicken Sie so schnell wie möglich die bestellten Getränke oder geben Sie Bescheid, wann wir mit der Lieferung rechnen können. Sollte ich bis 12 Uhr nichts von Ihnen gehört haben, muss ich versuchen, die Sachen bei einem anderen Getränkemarkt zu bekommen. Das war dann aber auch unser letzter Auftrag für Sie. Sie erreichen mich unter der Nummer 0162 744 642 8. Mein Name ist Wolff. W-O-L-FF."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Wolff"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0162 744 642 8"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Getränke für die Veranstaltung mit über 200 Personen sind für heute bestellt"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Die Lieferung um 11 Uhr ist nicht angekommen"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Auf 50 Kästen Wasser und 15 gemischte Saftkisten warten"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Die Sachen müssen bis spätestens 14:30 Uhr ankommen"
+     },
+     {
+      "label": "Information 5",
+      "answer": "Auf Rückruf bis 12 Uhr warten"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Die Lieferung so schnell wie möglich schicken und bis 12 Uhr Bescheid sagen."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/153235"
+  },
+  {
+   "id": "telefonnotiz_v7",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 7 · Kopierer",
+   "note": "Тест №140321, 140301",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Anna Schulze",
+       "gender": "f",
+       "text": "Mein Name ist Anna Schulze, Firma Shell am Apparat. Ich habe mir Ihren defekten Kopierer angesehen. Es liegt ein größeres Problem mit der Elektronik vor, dass man nur in unserer Werkstatt beheben kann. Vor Ort konnte ich ihn nicht wieder zum Laufen bringen.\nEin Austausch würde ca. 4 Wochen dauern, da wir derzeit Probleme mit dem Lieferanten haben. Wenn Sie sich für eine Reparatur entscheiden, müssten wir noch einen Ersatzteil bestellen. Das würde insgesamt ca. 2 Werktage dauern. Leider haben wir zurzeit noch kein Gerät, deswegen Leihweite zur Verfügung stellen können. Die Reparatur würde mein Kollege machen, da ich nächste Woche im Urlaub bin. Die Frage ist nun, ob wir den Kopierer austauschen oder die alte Reparatur besorgen. Rufen Sie mich bitte bis morgen zurück. Schulze, SCH-U-L-Z-E. Meine Telefonnummer ist 0160 335 101 8."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schulze"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0160 335 101 8"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Defekter Kopierer hat ein großes Problem mit der Elektronik"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Das Problem kann man nur in Werkstatt beheben"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Austausch dauert 4 Wochen wegen Lieferschwierigkeiten"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Für die Reparatur müssen Ersatzteile bestellt werden. Das wird ca. 2 Werktage dauern"
+     },
+     {
+      "label": "Information 5",
+      "answer": "zurzeit noch kein Gerät, deswegen Leihweite zur Verfügung stellen können"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Bis morgen zurückrufen. Entscheidung: Reparatur oder Austausch."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/246295"
+  },
+  {
+   "id": "telefonnotiz_v7_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 7 · новая версия (Scholtz, без записи)",
+   "note": "Новый вариант. В источнике есть только готовая заметка, текста записи нет.",
+   "phoneNote": {
+    "title": "Angebot",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Scholtz"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "01740254831"
+     },
+     {
+      "label": "Information 1",
+      "answer": "Defekter Kopierer hat ein großes Problem mit der Elektronik"
+     },
+     {
+      "label": "Information 2",
+      "answer": "Das Problem kann nur in Werkstatt behoben werden"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Austausch dauert 3 Wochen wegen Lieferschwierigkeiten"
+     },
+     {
+      "label": "Information 4",
+      "answer": "Für die Reparatur müssen Ersatzteile bestellt werden. Das wird 5 Tage dauern"
+     },
+     {
+      "label": "Information 5",
+      "answer": "Die Firma kann momentan keine Geräte zur Verfügung stellen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen. Entscheiden, ob Reparatur oder Austausch."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v8",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 8 · Wein und Saft",
+   "note": "Вариант от 29.11.25, тест №160201, 160221",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Guenther",
+       "gender": "m",
+       "text": "Guten Tag, hier ist Herr Guenther. …. Leider mussten wir feststellen, dass statt der 30 Kartons Rotwein nur 25 Kartons angekommen sind. … Wir haben statt 15 Kartons Weißwein 30 bekommen. …. Aber vom roten müssen Sie schnell nachliefern. … Vom Saft sind zwei Flaschen kaputt gegangen. Bitte schicken Sie uns doch eine neue Rechnung für alles. Bitte rufen Sie doch zurück. Mein Name ist Guenther, G-U-E-N-T-H-E-R. Meine Telefonnummer lautet 0135 821 764 9. Vielen Dank. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Guenther"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0135 821 764 9"
+     },
+     {
+      "label": "Information 1",
+      "answer": "statt der 30 Kartons Rotwein nur 25 Kartons angekommen sind"
+     },
+     {
+      "label": "Information 2",
+      "answer": "statt 15 Kartons Weißwein 30 Kartons bekommen haben"
+     },
+     {
+      "label": "Information 3",
+      "answer": "vom roten schnell nachliefern"
+     },
+     {
+      "label": "Information 4",
+      "answer": "vom Saft sind zwei Flaschen kaputt gegangen"
+     },
+     {
+      "label": "Information 5",
+      "answer": "eine neue Rechnung für alles"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und vom roten schnell nachliefern."
+     }
+    ]
+   }
+  },
+  {
+   "id": "telefonnotiz_v8_b",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 8 · версия 19.01.26",
+   "note": "Вариант от 29.11.25, тест №160201, 160221 (запись от 19.01.26, ИИ)",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Herr Guenther",
+       "gender": "m",
+       "text": "Guten Tag, hier ist Herr Guenther. …. Leider mussten wir feststellen, dass statt der 30 Kartons Rotwein nur 25 Kartons angekommen sind. … Wir haben statt 15 Kartons Weißwein 30 bekommen. …. Aber vom Roten müssen Sie schnell nachliefern. … vom Saft sind zwei Flaschen kaputt gegangen. Bitte rufen Sie doch zurück. Mein Name ist Guenther, G-U-E-N-T-H-E-R. Meine Telefonnummer lautet 0135 821 76 49. Vielen Dank. Auf Wiederhören."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Guenther"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": "0135 821 76 49"
+     },
+     {
+      "label": "Information 1",
+      "answer": "statt der 30 Kartons Rotwein nur 25 Kartons angekommen sind"
+     },
+     {
+      "label": "Information 2",
+      "answer": "statt 15 Kartons Weißwein 30 Kartons bekommen haben"
+     },
+     {
+      "label": "Information 3",
+      "answer": "vom roten schnell nachliefern"
+     },
+     {
+      "label": "Information 4",
+      "answer": "vom Saft sind zwei Flaschen kaputt gegangen"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und vom roten schnell nachliefern."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/246297"
+  },
+  {
+   "id": "telefonnotiz_v9",
+   "part": "TELEFONNOTIZ",
+   "title": "Вариант 9 · Teller",
+   "note": "Тест №090201. Сгенерировано GPT со слов участников (запись от 19.01.26, ИИ). В источнике номер телефона не указан (в записи пропуск). Другие варианты имени: Schwietzler / Schwalzer",
+   "segments": [
+    {
+     "title": "Anrufbeantworter",
+     "transcript": [
+      {
+       "speaker": "Frau Schweizer",
+       "gender": "f",
+       "text": "Guten Tag, hier ist Frau Schweizer / Schwietzler / Schwalzer. Ich wollte mich für die Lieferung der Geschirrsets bedanken. Leider ist bei der Lieferung ein Karton mit Tellern zerbrochen angekommen. Es gibt 7 zerbrochene Teller. Da wir nächste Woche eine große Familienfeier mit über 20 Personen haben, wäre es wichtig, Ersatz so schnell wie möglich zu bekommen. Bitte rufen Sie mich unter der Nummer …………. zurück. Vielen Dank."
+      }
+     ]
+    }
+   ],
+   "phoneNote": {
+    "title": "Beschwerde",
+    "fields": [
+     {
+      "label": "Name",
+      "answer": "Schweizer"
+     },
+     {
+      "label": "Telefonnummer",
+      "answer": ""
+     },
+     {
+      "label": "Information 1",
+      "answer": "ein Karton mit Tellern ist zerbrochen angekommen"
+     },
+     {
+      "label": "Information 2",
+      "answer": "es gibt 7 zerbrochene Teller"
+     },
+     {
+      "label": "Information 3",
+      "answer": "Ersatz so schnell wie möglich"
+     },
+     {
+      "label": "Zu erledigen",
+      "answer": "Zurückrufen und schnelle Nachlieferung."
+     }
+    ]
+   },
+   "audioUrl": "https://t.me/B2_C2_Deutsch/65534/246298"
+  }
+ ]
+}

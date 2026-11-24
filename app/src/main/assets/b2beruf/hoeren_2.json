@@ -1,0 +1,2044 @@
+{
+  "part": "HOEREN_2",
+  "variants": [
+    {
+      "id": "hoeren_2_v1",
+      "part": "HOEREN_2",
+      "title": "Вариант 1",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Mitarbeiter sollten ihr Diensthandy nach der Arbeit ausschalten."
+            },
+            {
+              "key": "b",
+              "text": "Im Urlaub sollte man sich Arbeitsangelegenheiten nicht beschäftigen."
+            },
+            {
+              "key": "c",
+              "text": "Arbeit und Freizeit sollten klar getrennt sein, um das Privatleben zu schützen."
+            },
+            {
+              "key": "d",
+              "text": "Für manche Kunden ist es wichtig, dass der Kundenservice auch am Wochenende verfügbar ist."
+            },
+            {
+              "key": "e",
+              "text": "Man sollte das Privatleben respektieren und Arbeitsanfangen außerhalb der Arbeitszeit vermeiden."
+            },
+            {
+              "key": "f",
+              "text": "Manche Mitarbeiter sind bereit, für den Kundenservice am Wochenende erreichbar zu sein."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Habt ihr auch schon davon gehört, dass wir uns alle ein Diensthandy bekommen sollen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wirklich? Wie toll. Dann können wir endlich, wenn wir für die Firma unterwegs sind, das Firmenhandy benutzen und müssen nicht ständig auf unsere Kosten mit unseren privaten Geräten telefonieren."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Müssen wir dann auch in der Freizeit erreichbar sein? Das finde ich nämlich nicht so gut."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wir können es doch einfach am Ende des Arbeitstages und am Wochenende ausschalten. Da sehe ich kein Problem."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Hoffentlich erwartet der Chef nicht, dass er uns dann immer erreichen kann. Darauf habe ich keine Lust."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das geht natürlich nicht. Es muss klar geregelt sein, dass wir nur während der Arbeitszeit erreichbar sein müssen. Aber dann finde ich es praktisch."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Dann lasst uns doch mal mit dem Chef darüber sprechen, wie er sich das vorstellt."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo Max, schön dich wiederzusehen. Wie war dein Urlaub?"
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Der war eigentlich schön, aber ich habe zu viele E-Mails aus dem Büro bekommen. Ich kann gar nicht richtig entspannen, wenn ich immer wieder an die Arbeit denken muss."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Warum schaust du dir deine geschäftlichen Mails überhaupt im Urlaub an? Das würde ich ja nicht machen."
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Mache ich eigentlich auch nicht. Aber wir waren mitten im Projekt, und deshalb habe ich mein Diensthandy mitgenommen. Für den Fall, dass etwas Wichtiges geklärt werden muss. Dass auch noch andere Mails kommen könnten, habe ich nicht bedacht."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Naja, dann darfst du dich aber nicht beschweren. Selbst schuld - wer im Urlaub auch noch an die Arbeit denkt."
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Das war eine besondere Situation. Das nächste Mal lasse ich das Diensthandy lieber zu Hause."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sag mal Thomas, hast du meine Nachricht denn gestern nicht bekommen?"
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Wie? Hast du mir geschrieben? Worum ging's denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach Thomas, warum hast du die Nachricht denn nicht gelesen? Ich wollte etwas wegen des Angebots für unseren Kunden mit dir besprechen und es dann auch ausschicken."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Du weißt doch, dass ich abends mein Handy immer ausschalte. Wir hätten doch im Büro deine Fragen klären können. Ich war schließlich den ganzen Tag da."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich habe es vorher nicht geschafft, deshalb bin ich erst abends dazu gekommen. Und weil der Kunde wichtig ist, wollte ich es noch erledigen."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Das kann ich verstehen, aber ich war schon um 7 Uhr im Büro und dann habe ich wie immer um 17 Uhr Feierabend gemacht und das Handy ausgeschaltet. Aber komm, lass uns das Angebot jetzt schnell zusammen fertig machen."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Kommt ihr auch? Gleich fängt das Meeting mit dem Chef an."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, wir kommen. Wisst ihr, worum es heute geht?"
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Ich habe gehört, um einen Bereitschaftsdienst am Wochenende. Ich bin mal gespannt, was das bedeuten soll."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ich denke, dass an jedem Wochenende immer einer aus dem Team erreichbar sein soll."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Wieso soll das denn? Wir sind doch eh jeden Tag unter der Woche von morgens bis abends erreichbar. Ist das nicht genug?"
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ja, aber unsere Kunden brauchen vielleicht auch am Wochenende einen Ansprechpartner und wenn wir samstags arbeiten, dann sollten wir auch ansprechbar sein"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Naja. Wenn es nur um eine telefonische Erreichbarkeit geht, ist es ja nicht so schlimm... Solange wir nicht ins Büro kommen müssen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Kundenservice ist schon wichtig. Aber irgendwo ist auch mal eine Grenze. Jetzt hören wir erstmal, was der Chef sagt."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "a"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "b"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "e"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "d"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/153245"
+    },
+    {
+      "id": "hoeren_2_v1_b",
+      "part": "HOEREN_2",
+      "title": "Вариант 1 · новый вариант ответов",
+      "note": "тест №150321, 150301",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Diensthandys sollten nur während der Arbeitszeit verwendet werden."
+            },
+            {
+              "key": "b",
+              "text": "Für manche ist Kundenservice am Wochenende selbstverständlich."
+            },
+            {
+              "key": "c",
+              "text": "Im Urlaub hat man Ruhe zum Arbeiten."
+            },
+            {
+              "key": "d",
+              "text": "In der Freizeit und im Urlaub sollte man abschalten."
+            },
+            {
+              "key": "e",
+              "text": "Man sollte das Privatleben der Kollegen respektieren."
+            },
+            {
+              "key": "f",
+              "text": "Wochenenddienste werden immer beliebter."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Habt ihr auch schon davon gehört, dass wir uns alle ein Diensthandy bekommen sollen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wirklich? Wie toll. Dann können wir endlich, wenn wir für die Firma unterwegs sind, das Firmenhandy benutzen und müssen nicht ständig auf unsere Kosten mit unseren privaten Geräten telefonieren."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Müssen wir dann auch in der Freizeit erreichbar sein? Das finde ich nämlich nicht so gut."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wir können es doch einfach am Ende des Arbeitstages und am Wochenende ausschalten. Da sehe ich kein Problem."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Hoffentlich erwartet der Chef nicht, dass er uns dann immer erreichen kann. Darauf habe ich keine Lust."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das geht natürlich nicht. Es muss klar geregelt sein, dass wir nur während der Arbeitszeit erreichbar sein müssen. Aber dann finde ich es praktisch."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Dann lasst uns doch mal mit dem Chef darüber sprechen, wie er sich das vorstellt."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo Max, schön dich wiederzusehen. Wie war dein Urlaub?"
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Der war eigentlich schön, aber ich habe zu viele E-Mails aus dem Büro bekommen. Ich kann gar nicht richtig entspannen, wenn ich immer wieder an die Arbeit denken muss."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Warum schaust du dir deine geschäftlichen Mails überhaupt im Urlaub an? Das würde ich ja nicht machen."
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Mache ich eigentlich auch nicht. Aber wir waren mitten im Projekt, und deshalb habe ich mein Diensthandy mitgenommen. Für den Fall, dass etwas Wichtiges geklärt werden muss. Dass auch noch andere Mails kommen könnten, habe ich nicht bedacht."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Naja, dann darfst du dich aber nicht beschweren. Selbst schuld - wer im Urlaub auch noch an die Arbeit denkt."
+            },
+            {
+              "speaker": "Max",
+              "gender": "m",
+              "text": "Das war eine besondere Situation. Das nächste Mal lasse ich das Diensthandy lieber zu Hause."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sag mal Thomas, hast du meine Nachricht denn gestern nicht bekommen?"
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Wie? Hast du mir geschrieben? Worum ging's denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach Thomas, warum hast du die Nachricht denn nicht gelesen? Ich wollte etwas wegen des Angebots für unseren Kunden mit dir besprechen und es dann auch ausschicken."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Du weißt doch, dass ich abends mein Handy immer ausschalte. Wir hätten doch im Büro deine Fragen klären können. Ich war schließlich den ganzen Tag da."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich habe es vorher nicht geschafft, deshalb bin ich erst abends dazu gekommen. Und weil der Kunde wichtig ist, wollte ich es noch erledigen."
+            },
+            {
+              "speaker": "Thomas",
+              "gender": "m",
+              "text": "Das kann ich verstehen, aber ich war schon um 7 Uhr im Büro und dann habe ich wie immer um 17 Uhr Feierabend gemacht und das Handy ausgeschaltet. Aber komm, lass uns das Angebot jetzt schnell zusammen fertig machen."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Kommt ihr auch? Gleich fängt das Meeting mit dem Chef an."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, wir kommen. Wisst ihr, worum es heute geht?"
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Ich habe gehört, um einen Bereitschaftsdienst am Wochenende. Ich bin mal gespannt, was das bedeuten soll."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ich denke, dass an jedem Wochenende immer einer aus dem Team erreichbar sein soll."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Wieso soll das denn? Wir sind doch eh jeden Tag unter der Woche von morgens bis abends erreichbar. Ist das nicht genug?"
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ja, aber unsere Kunden brauchen vielleicht auch am Wochenende einen Ansprechpartner und wenn wir samstags arbeiten, dann sollten wir auch ansprechbar sein"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Naja. Wenn es nur um eine telefonische Erreichbarkeit geht, ist es ja nicht so schlimm... Solange wir nicht ins Büro kommen müssen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Kundenservice ist schon wichtig. Aber irgendwo ist auch mal eine Grenze. Jetzt hören wir erstmal, was der Chef sagt."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "a"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "d"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "e"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "b"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/153245"
+    },
+    {
+      "id": "hoeren_2_v2",
+      "part": "HOEREN_2",
+      "title": "Вариант 2",
+      "note": "100%; версия 08.03.25: b — дополнительные дни (Bildungsurlaub), d — профессиональный перевод деловых документов",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Die Firma möchte, dass alle Mitarbeiter ihre Englischkenntnisse verbessern."
+            },
+            {
+              "key": "b",
+              "text": "Ein Mitarbeiter nutzt eine besondere Urlaubsregelung, um seine Sprachkenntnisse zu verbessern."
+            },
+            {
+              "key": "c",
+              "text": "Ein Mitarbeiter hilft einem Kollegen bei einem Kundengespräch auf einer fremden Sprache."
+            },
+            {
+              "key": "d",
+              "text": "Die Firma überlegt, ob sie weiterhin Übersetzungsdienste benötigt."
+            },
+            {
+              "key": "e",
+              "text": "Ein Mitarbeiter plant, an einem Intensivsprachkurs teilzunehmen."
+            },
+            {
+              "key": "f",
+              "text": "Ein Kollege übernimmt einen Teil der Arbeit, um einem Team zu helfen."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Jana, ich habe gehört, dass du im nächsten Monat an einem Spanischkurs teilnimmst. Das ist ja toll. Fliegst du dann nach Spanien?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das wäre wirklich super. Aber ich fliege nicht weg, sondern lerne zwei Wochen lang in einem Intensivkurs in einer Sprachschule hier in der Stadt."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nimmst du dafür Urlaubstage?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, das brauche ich nicht. Ich habe nämlich Bildungsurlaub."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Bildungsurlaub?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja. Den können wir doch jedes Jahr nehmen. Im letzten Jahr hatte ich keinen. Und nun stehen mir dieses Jahr sogar zwei Wochen für so eine Weiterbildung zu. Dafür brauche ich keine Urlaubstage zu nehmen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und warum hast du dich für einen Spanischkurs entschieden?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche diese Sprache schon ganz gut und betreue deshalb unsere Kunden in Lateinamerika. Aber E-Mails auf Spanisch zu schreiben fällt mir immer noch schwer."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Dann wünsche ich dir viel Spaß und viel Erfolg."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Stimmt das eigentlich, dass unsere Firma keine professionellen Übersetzer mehr bezahlen will? Habt ihr etwas über diesen Plan gehört?"
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Das kann ich mir nicht vorstellen. Wir müssen doch oft etwas in anderen Sprachen schreiben."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ja, erst gestern habe ich eine Information über das neue Produkt für den französischen Markt geschrieben. Das konnte ich auf Deutsch machen. Zum Glück. Die Übersetzer können das natürlich viel besser auf Französisch ausdrücken als ich."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche überhaupt kein Französisch. Das kann doch auch keiner von uns verlangen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Unser Team ist ja ziemlich international. Vielleicht haben wir genug Mitarbeiter, die Präsentationen und E-Mails in anderen Sprachen schreiben können."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Aber professionell ist das nicht."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ich sehe das auch so wie Julia. Wir brauchen den Übersetzerservice. Hoffentlich behalten wir ihn."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo, Ahmed. Ich brauche deine Hilfe. Hast du einen Moment Zeit?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Natürlich, Gina. Worum geht es denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich bediene gerade einen Kunden, der ein neues Handy kaufen will. Er spricht zwar ganz gut Deutsch, aber wir wollen jetzt über den Vertrag sprechen. Das ist ein bisschen schwierig. Könntest du ihm das wohl auf Arabisch erklären? Der Kunde spricht Arabisch."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das kann ich machen. Am besten übernehme ich den Kunden. Und du machst hier weiter mit den Bestellungen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Eigentlich habe ich ihm schon ziemlich viele Handymodelle gezeigt und würde gerne den Verkauf auch abschließen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und jetzt möchtest du nicht auf deine Verkaufsprovision verzichten? Das kann ich ja auch verstehen. In Ordnung, gehen wir zusammen zu ihm."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Danke, Achmed. Wenn ich dich nicht hätte."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Nächste Woche fangen doch unsere Englischkurse an! Habt ihr euch schon für einen entschieden?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Also ich bin Anfänger. Seit mindestens 20 Jahren habe ich kein Englisch mehr gesprochen und ich werde es in meinem Alter auch bestimmt nicht mehr lernen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Ich weiß gar nicht, wie gut mein Englisch ist. Die Lehrer werden uns sicherlich beraten, welcher Kurs der Richtige ist, oder? Vielleicht machen die ja auch einen Einstufungstest mit uns."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einen Test? Das wird ja immer schlimmer. Ich arbeite seit Jahren hier, ohne dass sich jemand für meine Englischkenntnisse interessiert. Und jetzt soll ich plötzlich in einen Kurs gehen und Tests schreiben? Das gefällt mir gar nicht."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Na ja, Hans, weil du kein Englisch sprichst, muss immer ich mit unseren internationalen Partnern telefonieren. Du sollst das ja auch mal machen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Miriam hat recht. Wir arbeiten mit immer mehr Partnern in verschiedenen Ländern zusammen. Ich finde es gut, dass unsere Firma jetzt Englischkurse für uns anbietet."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "b"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "d"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "c"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "a"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195149"
+    },
+    {
+      "id": "hoeren_2_v2_b",
+      "part": "HOEREN_2",
+      "title": "Вариант 2 · другой вариант ответов",
+      "note": "100%",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Englischkenntnisse werden immer wichtiger."
+            },
+            {
+              "key": "b",
+              "text": "Für Anfänger werden keine Sprachkurse angeboten."
+            },
+            {
+              "key": "c",
+              "text": "Mehrsprachige Kollegen sind eine große Unterstützung beim Kundenkontakt."
+            },
+            {
+              "key": "d",
+              "text": "Bildungsurlaub findet immer am Wochenende statt."
+            },
+            {
+              "key": "e",
+              "text": "Mitarbeitende mit Sprachkenntnissen können ein Übersetzungsbüro nicht ersetzen."
+            },
+            {
+              "key": "f",
+              "text": "Arbeitnehmer haben jedes Jahr Anspruch auf Bildungsurlaub."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Jana, ich habe gehört, dass du im nächsten Monat an einem Spanischkurs teilnimmst. Das ist ja toll. Fliegst du dann nach Spanien?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das wäre wirklich super. Aber ich fliege nicht weg, sondern lerne zwei Wochen lang in einem Intensivkurs in einer Sprachschule hier in der Stadt."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nimmst du dafür Urlaubstage?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, das brauche ich nicht. Ich habe nämlich Bildungsurlaub."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Bildungsurlaub?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja. Den können wir doch jedes Jahr nehmen. Im letzten Jahr hatte ich keinen. Und nun stehen mir dieses Jahr sogar zwei Wochen für so eine Weiterbildung zu. Dafür brauche ich keine Urlaubstage zu nehmen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und warum hast du dich für einen Spanischkurs entschieden?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche diese Sprache schon ganz gut und betreue deshalb unsere Kunden in Lateinamerika. Aber E-Mails auf Spanisch zu schreiben fällt mir immer noch schwer."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Dann wünsche ich dir viel Spaß und viel Erfolg."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Stimmt das eigentlich, dass unsere Firma keine professionellen Übersetzer mehr bezahlen will? Habt ihr etwas über diesen Plan gehört?"
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Das kann ich mir nicht vorstellen. Wir müssen doch oft etwas in anderen Sprachen schreiben."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ja, erst gestern habe ich eine Information über das neue Produkt für den französischen Markt geschrieben. Das konnte ich auf Deutsch machen. Zum Glück. Die Übersetzer können das natürlich viel besser auf Französisch ausdrücken als ich."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche überhaupt kein Französisch. Das kann doch auch keiner von uns verlangen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Unser Team ist ja ziemlich international. Vielleicht haben wir genug Mitarbeiter, die Präsentationen und E-Mails in anderen Sprachen schreiben können."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Aber professionell ist das nicht."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ich sehe das auch so wie Julia. Wir brauchen den Übersetzerservice. Hoffentlich behalten wir ihn."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo, Ahmed. Ich brauche deine Hilfe. Hast du einen Moment Zeit?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Natürlich, Gina. Worum geht es denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich bediene gerade einen Kunden, der ein neues Handy kaufen will. Er spricht zwar ganz gut Deutsch, aber wir wollen jetzt über den Vertrag sprechen. Das ist ein bisschen schwierig. Könntest du ihm das wohl auf Arabisch erklären? Der Kunde spricht Arabisch."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das kann ich machen. Am besten übernehme ich den Kunden. Und du machst hier weiter mit den Bestellungen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Eigentlich habe ich ihm schon ziemlich viele Handymodelle gezeigt und würde gerne den Verkauf auch abschließen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und jetzt möchtest du nicht auf deine Verkaufsprovision verzichten? Das kann ich ja auch verstehen. In Ordnung, gehen wir zusammen zu ihm."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Danke, Achmed. Wenn ich dich nicht hätte."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Nächste Woche fangen doch unsere Englischkurse an! Habt ihr euch schon für einen entschieden?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Also ich bin Anfänger. Seit mindestens 20 Jahren habe ich kein Englisch mehr gesprochen und ich werde es in meinem Alter auch bestimmt nicht mehr lernen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Ich weiß gar nicht, wie gut mein Englisch ist. Die Lehrer werden uns sicherlich beraten, welcher Kurs der Richtige ist, oder? Vielleicht machen die ja auch einen Einstufungstest mit uns."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einen Test? Das wird ja immer schlimmer. Ich arbeite seit Jahren hier, ohne dass sich jemand für meine Englischkenntnisse interessiert. Und jetzt soll ich plötzlich in einen Kurs gehen und Tests schreiben? Das gefällt mir gar nicht."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Na ja, Hans, weil du kein Englisch sprichst, muss immer ich mit unseren internationalen Partnern telefonieren. Du sollst das ja auch mal machen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Miriam hat recht. Wir arbeiten mit immer mehr Partnern in verschiedenen Ländern zusammen. Ich finde es gut, dass unsere Firma jetzt Englischkurse für uns anbietet."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "f"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "e"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "c"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "a"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195149"
+    },
+    {
+      "id": "hoeren_2_v2_c",
+      "part": "HOEREN_2",
+      "title": "Вариант 2 · другой вариант ответов (2)",
+      "note": "100%",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Sprachkurse für alle Kolleg*innen ermöglichen eine bessere internationale Kommunikation."
+            },
+            {
+              "key": "b",
+              "text": "Für Anfänger werden keine Sprachkurse angeboten."
+            },
+            {
+              "key": "c",
+              "text": "Mehrsprachige Kollegen können bei Verkaufsgesprächen eine Hilfe sein."
+            },
+            {
+              "key": "d",
+              "text": "Arbeitgeber sollten Sprachreisen unterstützen."
+            },
+            {
+              "key": "e",
+              "text": "Berufliche Texte sollten von Profis in andere Sprachen übertragen werden."
+            },
+            {
+              "key": "f",
+              "text": "Angestellte haben einen Anspruch auf arbeitsfreie Tage, um sich weiterzubilden."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Jana, ich habe gehört, dass du im nächsten Monat an einem Spanischkurs teilnimmst. Das ist ja toll. Fliegst du dann nach Spanien?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das wäre wirklich super. Aber ich fliege nicht weg, sondern lerne zwei Wochen lang in einem Intensivkurs in einer Sprachschule hier in der Stadt."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nimmst du dafür Urlaubstage?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, das brauche ich nicht. Ich habe nämlich Bildungsurlaub."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Bildungsurlaub?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ja. Den können wir doch jedes Jahr nehmen. Im letzten Jahr hatte ich keinen. Und nun stehen mir dieses Jahr sogar zwei Wochen für so eine Weiterbildung zu. Dafür brauche ich keine Urlaubstage zu nehmen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und warum hast du dich für einen Spanischkurs entschieden?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche diese Sprache schon ganz gut und betreue deshalb unsere Kunden in Lateinamerika. Aber E-Mails auf Spanisch zu schreiben fällt mir immer noch schwer."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Dann wünsche ich dir viel Spaß und viel Erfolg."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Stimmt das eigentlich, dass unsere Firma keine professionellen Übersetzer mehr bezahlen will? Habt ihr etwas über diesen Plan gehört?"
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Das kann ich mir nicht vorstellen. Wir müssen doch oft etwas in anderen Sprachen schreiben."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ja, erst gestern habe ich eine Information über das neue Produkt für den französischen Markt geschrieben. Das konnte ich auf Deutsch machen. Zum Glück. Die Übersetzer können das natürlich viel besser auf Französisch ausdrücken als ich."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich spreche überhaupt kein Französisch. Das kann doch auch keiner von uns verlangen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Unser Team ist ja ziemlich international. Vielleicht haben wir genug Mitarbeiter, die Präsentationen und E-Mails in anderen Sprachen schreiben können."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Aber professionell ist das nicht."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ich sehe das auch so wie Julia. Wir brauchen den Übersetzerservice. Hoffentlich behalten wir ihn."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo, Ahmed. Ich brauche deine Hilfe. Hast du einen Moment Zeit?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Natürlich, Gina. Worum geht es denn?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich bediene gerade einen Kunden, der ein neues Handy kaufen will. Er spricht zwar ganz gut Deutsch, aber wir wollen jetzt über den Vertrag sprechen. Das ist ein bisschen schwierig. Könntest du ihm das wohl auf Arabisch erklären? Der Kunde spricht Arabisch."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das kann ich machen. Am besten übernehme ich den Kunden. Und du machst hier weiter mit den Bestellungen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Eigentlich habe ich ihm schon ziemlich viele Handymodelle gezeigt und würde gerne den Verkauf auch abschließen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Und jetzt möchtest du nicht auf deine Verkaufsprovision verzichten? Das kann ich ja auch verstehen. In Ordnung, gehen wir zusammen zu ihm."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Danke, Achmed. Wenn ich dich nicht hätte."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Nächste Woche fangen doch unsere Englischkurse an! Habt ihr euch schon für einen entschieden?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Also ich bin Anfänger. Seit mindestens 20 Jahren habe ich kein Englisch mehr gesprochen und ich werde es in meinem Alter auch bestimmt nicht mehr lernen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Ich weiß gar nicht, wie gut mein Englisch ist. Die Lehrer werden uns sicherlich beraten, welcher Kurs der Richtige ist, oder? Vielleicht machen die ja auch einen Einstufungstest mit uns."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einen Test? Das wird ja immer schlimmer. Ich arbeite seit Jahren hier, ohne dass sich jemand für meine Englischkenntnisse interessiert. Und jetzt soll ich plötzlich in einen Kurs gehen und Tests schreiben? Das gefällt mir gar nicht."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Na ja, Hans, weil du kein Englisch sprichst, muss immer ich mit unseren internationalen Partnern telefonieren. Du sollst das ja auch mal machen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Miriam hat recht. Wir arbeiten mit immer mehr Partnern in verschiedenen Ländern zusammen. Ich finde es gut, dass unsere Firma jetzt Englischkurse für uns anbietet."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "f"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "e"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "c"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "a"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195149"
+    },
+    {
+      "id": "hoeren_2_v3",
+      "part": "HOEREN_2",
+      "title": "Вариант 3",
+      "note": "100%; тест 190101",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Kleidung für die Feiertage sollten schick aussehen."
+            },
+            {
+              "key": "b",
+              "text": "Auf der Firmenfeier gibt es keine Kleiderordnung."
+            },
+            {
+              "key": "c",
+              "text": "Beim Firmenlauf sollen möglichst viele Mitarbeiter teilnehmen."
+            },
+            {
+              "key": "d",
+              "text": "Die Firma plant aus besonderem Anlass eine Kunden-Kampagne."
+            },
+            {
+              "key": "e",
+              "text": "Es gibt verschiedene Programmpunkte beim Betriebsausflug."
+            },
+            {
+              "key": "f",
+              "text": "Für den Lauf werden sportliche Mitarbeiter gesucht."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "Hallo Mia. Ich suche Kollegen, die Lust haben, beim Firmenlauf mitzumachen. Du bist doch sportlich. Wie sieht das bei dir aus?"
+            },
+            {
+              "speaker": "Mia",
+              "gender": "f",
+              "text": "Firmenlauf? Muss man denn da joggen? Oder kann man da auch walken?"
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "Natürlich kannst du beides machen. Aber je schneller, desto besser. Die Läufer des besten Teams gewinnen nämlich einen tollen Preis."
+            },
+            {
+              "speaker": "Mia",
+              "gender": "f",
+              "text": "Oh, das klingt ja gut. Wann findet das Ganze denn statt?"
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "In einem Monat. Das ist aber wenig Zeit, um für so einen Lauf zu trainieren."
+            },
+            {
+              "speaker": "Mia",
+              "gender": "f",
+              "text": "Ich bin mir nicht sicher, ob ich das schaffe. Wie viele Kilometer muss man denn laufen?"
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "Man läuft nur 6 Kilometer. Aber wir müssen fünf Kollegen sein, die teilnehmen."
+            },
+            {
+              "speaker": "Mia",
+              "gender": "f",
+              "text": "Und was kann man gewinnen?"
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "Eine Jahresmitgliedschaft im Fitnessstudio."
+            },
+            {
+              "speaker": "Mia",
+              "gender": "f",
+              "text": "Das ist super. Okay, du hast mich überzeugt. Ich mache mit."
+            },
+            {
+              "speaker": "Herr Schmidt",
+              "gender": "m",
+              "text": "Toll. Dann müssen wir jetzt nur noch drei andere Personen finden."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Wow, im nächsten Jahr wird unsere Firma 50. Ich habe gehört, das soll groß gefeiert werden."
+            },
+            {
+              "speaker": "Emilia",
+              "gender": "f",
+              "text": "Ja, und für unsere Kunden sind jede Menge Aktionen geplant. Davon bin ich nicht so begeistert."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Warum denn? Ich finde es toll, dass unsere Firma schon so viele Jahre existiert und wir das feiern."
+            },
+            {
+              "speaker": "Emilia",
+              "gender": "f",
+              "text": "Naja, aber für uns bedeutet das vor allem mehr Arbeit, oder?"
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ach, Emilia, sei doch nicht so negativ. Wenn alle so denken würden, könnten wir nichts auf die Beine stellen. Das ist doch mal was anderes. Also, mir gefällt die Idee."
+            },
+            {
+              "speaker": "Emilia",
+              "gender": "f",
+              "text": "Ja, schon. Aber wir arbeiten sowieso schon so viel. Da habe ich keine Lust auf Extraaktionen."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Aber diese Extraaktionen machen uns doch auch Spaß und finden in der Arbeitszeit statt."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ich finde diese Abwechslung auch gut."
+            },
+            {
+              "speaker": "Emilia",
+              "gender": "f",
+              "text": "Ja, ihr habt recht. Und das große Fest am Ende des Jubiläumsjahres wird bestimmt schön."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Michael",
+              "gender": "m",
+              "text": "Ich freue mich schon auf unseren Mitarbeiterausflug übermorgen. Dass wir dies Mal in den Klettergarten gehen, finde ich richtig super!"
+            },
+            {
+              "speaker": "Sabine",
+              "gender": "f",
+              "text": "Hmm, Klettern ist nicht so meins, ehrlich gesagt."
+            },
+            {
+              "speaker": "Michael",
+              "gender": "m",
+              "text": "Warum, hast du etwa Höhenangst?"
+            },
+            {
+              "speaker": "Sabine",
+              "gender": "f",
+              "text": "Ja, habe ich. Ich wäre schon nervös, wenn ich nur auf einen Stuhl steige. Darf ich recht ängstlich auf die Bäume klettern ?"
+            },
+            {
+              "speaker": "Michael",
+              "gender": "m",
+              "text": "Ah, ja. Das kann ich gut verstehen. Aber kommst du trotzdem mit, oder gehst du lieber ins Büro? Zuhause bleiben dürfen wir nicht."
+            },
+            {
+              "speaker": "Sabine",
+              "gender": "f",
+              "text": "Nee, nee, ich komme schon mit. Julia ist ja auch dabei, obwohl sie aufgrund ihrer Schwangerschaft nicht klettern kann."
+            },
+            {
+              "speaker": "Michael",
+              "gender": "m",
+              "text": "Ja, stimmt. Und nach dem Klettern wird ja auch noch zusammen gegrillt. Da sind wir dann alle dabei."
+            },
+            {
+              "speaker": "Sabine",
+              "gender": "f",
+              "text": "Auf das Grillen und das gemeinsame Essen freue ich mich auch schon. Und euch beim Klettern zuzugucken, das wird bestimmt auch ganz witzig."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Lena",
+              "gender": "f",
+              "text": "Diesen Freitag ist ja schon die Weihnachtsfeier. Ich freue mich drauf und ich finde es toll, dass der Chef uns alle dazu einlädt."
+            },
+            {
+              "speaker": "Ella",
+              "gender": "f",
+              "text": "An sich finde ich das auch gut, aber in der Weihnachtszeit haben die meisten Leute viele private Verpflichtungen."
+            },
+            {
+              "speaker": "Tom",
+              "gender": "m",
+              "text": "Meine Frau und ich haben auch einen Termin nachdem anderen, aber die Weihnachtsfeier der Firma gehört auch dazu. Zieht man da eigentlich etwas Besonderes an? Ich bin ja das erste Mal dabei."
+            },
+            {
+              "speaker": "Lena",
+              "gender": "f",
+              "text": "Also, ich habe mir extra ein neues Kleid gekauft, aber man kann anziehen, was man will."
+            },
+            {
+              "speaker": "Ella",
+              "gender": "f",
+              "text": "Ich glaube, ich ziehe mich an wie immer. Mir ist die Kleidung nicht so wichtig, aber ich habe mich noch nicht entschieden."
+            },
+            {
+              "speaker": "Tom",
+              "gender": "m",
+              "text": "Das klingt ja entspannt. Dann werde ich auch was finden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "f"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "d"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "e"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "b"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/195151"
+    },
+    {
+      "id": "hoeren_2_v4",
+      "part": "HOEREN_2",
+      "title": "Вариант 4",
+      "note": "100%; в d второй вариант ответа",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Arbeitnehmer bekommen zu besonderen Anlässen frei."
+            },
+            {
+              "key": "b",
+              "text": "Einige Kollegen können nur zu bestimmten Zeiten Urlaub nehmen."
+            },
+            {
+              "key": "c",
+              "text": "Manchmal müssen Kollegen auch die Aufgaben von anderen übernehmen."
+            },
+            {
+              "key": "d",
+              "text": "Unter gewissen Umständen gehen Urlaubstage nicht verloren. / Im Urlaub kann man sich auch krankschreiben lassen."
+            },
+            {
+              "key": "e",
+              "text": "Viele Menschen träumen während der Arbeitszeit vom Sommerurlaub."
+            },
+            {
+              "key": "f",
+              "text": "Wer im Urlaub krank wird, kann Sonderurlaub beantragen."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Hallo, Lisa-Vera. Wie gut, dass ich dich jetzt noch treffe. Ich wollte vor meinem Urlaub noch etwas mit dir besprechen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach, du machst Urlaub? Wohin geht’s denn?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, nächste Woche bin ich mit der Familie in Südfrankreich. Du weißt ja, unser Projekt muss bald fertig sein. Und leider habe ich es nicht mehr geschafft, die Informationen über den Kreis einzuholen. Könntest du das bitte für mich machen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Eigentlich habe ich überhaupt keine Zeit dafür. Sag mir bitte das nächste Mal früher Bescheid. Aber gut, wer hat denn die Informationen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Franka Pater. Die ist allerdings heute nicht mehr im Haus, aber morgen ist sie wieder da."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "In Ordnung, dann rufe ich mich morgen wieder an. Und dir wünsche ich einen schönen Urlaub."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Danke, du bist super."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wisst ihr eigentlich, bis wann wir unseren Jahresurlaub einreichen müssen?"
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ich denke, wie immer bis Ende Januar. Aber je früher, desto besser, damit wir uns noch absprechen können. Hast du dir denn schon überlegt, wann du Urlaub machen willst?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Am nächsten, im August. Da hat meine Familie in der Türkei auch Urlaub. Dann können wir alle zusammen den Sommer genießen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Das klingt super. Aber du weißt ja, ich bin wegen der Kinder auch auf die Schulferien angewiesen. Wir sollten uns da absprechen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, klar sprechen wir uns mal. Was hältst du davon, wenn ich die erste Augusthälfte freinehme und du die letzten beiden Wochen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das klingt super. Dann bin ich einverstanden. Jetzt warten wir mal, was der Chef dazu sagt."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Hallo Jens. Wie war dein Urlaub. Bist du gut erholt?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nein, gar nicht. Mich hat schon gleich am 1. Urlaubstag eine dicke Erkältung erwischt. Ich lag die meiste Zeit im Bett, statt am Strand in der Sonne."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ach du Armer, das tut mir aber leid. Hast du dir wenigstens einen Attest vom Arzt besorgt, damit du dir die Urlaubstage zurückholen kannst?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Nee, ich war doch im Ausland. Und da wollte ich nicht zum Arzt gehen. Aber wenigstens für die letzten 4 Tage habe ich von meinem Hausarzt hier noch eine Krankschreibung bekommen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Na, immerhin. Dann hast du noch ein paar Urlaubstage, die du später nehmen kannst."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Genau. Aber jetzt fange ich erstmal wieder mit der Arbeit an."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sei einen guten Start."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Ich habe gehört, dass du vor Kurzem umgezogen bist. Wusstest du, dass bei mir demnächst auch ein Umzug ansteht?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ach ja? Na dann viel Spaß. Das ist echt viel Arbeit. Wir haben 2 Tage nur Müll geschleppt. Zum Glück gibt es dafür einen Antrag auf Sonderurlaub."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Sonderurlaub? Das wusste ich gar nicht. Was muss man denn dafür machen?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Einfach einen Antrag stellen. Und später musst du natürlich nachweisen, dass du umgezogen bist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Guter Tipp. Reicht da ein einfaches Schreiben oder muss ich ein Antragsformular ausfüllen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Es gibt ein Formular dafür. Geh einfach mal zu Frau Heilmann ins Sekretariat. Die kann dir genau sagen, was du brauchst. Aber geh rechtzeitig. Die Firma muss mindestens eine Woche vorher wissen, dass du nicht da bist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Okay. Dann erledige ich das mal sofort. Danke dir."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "c"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "b"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "d"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "a"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/124135"
+    },
+    {
+      "id": "hoeren_2_v5",
+      "part": "HOEREN_2",
+      "title": "Вариант 5",
+      "note": "100%; тест 040321, 100221",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Regelungen zur Arbeitsunfähigkeit unterscheiden sich von Unternehmen zu Unternehmen."
+            },
+            {
+              "key": "b",
+              "text": "Die Arbeitsplatzgestaltung hat einen Einfluss auf die Gesundheit der Mitarbeiter."
+            },
+            {
+              "key": "c",
+              "text": "Arbeitgeber sollten mehr für die Hygiene im Betrieb tun."
+            },
+            {
+              "key": "d",
+              "text": "Manche Arbeitgeber bieten Maßnahmen für die Gesundheitsvorsorge an."
+            },
+            {
+              "key": "e",
+              "text": "Das Wohlbefinden der Mitarbeiter sollte ein wichtiges Anliegen sein."
+            },
+            {
+              "key": "f",
+              "text": "Bei Krankheit braucht man ab dem ersten Tag ein Attest vom Arzt."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Wie ist das eigentlich? Könnt ihr mir sagen, was ich machen muss, wenn ich mal krank sein sollte? Ich habe noch gar nicht gefragt, wie das hier gehandhabt wird."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ich bin auch erst kurz hier und weiß das nicht genau. Melanie, was sagst du denn dazu?"
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Wenn man krank ist, soll man morgens so früh wie möglich anrufen und im Büro bei Frau Gumpel Bescheid sagen. Das ist wichtig, sich direkt bei ihr krank zu melden."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ach stimmt, so war das. Frau Gumpel ist auch immer schon früh im Büro."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "In meiner letzten Firma musste ich immer direkt am ersten Krankheitstag ein Attest bringen. Wie ist das hier?"
+            },
+            {
+              "speaker": "Melanie",
+              "gender": "f",
+              "text": "Keine Sorge, hier ist es nicht so streng. Zwei Tage darf man fehlen, aber wenn du länger krank bist, musst du eine Krankmeldung vorlegen."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ah. Danke für die Tipps."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Hast du auch die Information im Pausenraum gesehen? Ich frage mich ja, was das soll. Ich halte sowieso nichts von Grippeschutzimpfungen. Aber warum muss jetzt auch noch ein Arzt in die Firma kommen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Also ich finde, das ist ein tolles Angebot. Ich lasse mich auf jeden Fall impfen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Aber du bist doch jung und gesund. Nur Personen über 60 Jahren wird eine Impfung empfohlen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das kann noch nicht schaden. Außerdem ist es doch wirklich bequem für uns, wenn der Arzt schon extra in die Firma kommt. Dann nehme ich auf jeden Fall das Angebot an."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Jeder kann das selbst entscheiden. Ich habe keine Angst vor der Grippe und lasse mich auch nicht impfen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Du hast doch nur Angst vor der Spritze. Komm, gibt’s zu."
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Monika, hängt bei euch Damen in der Toilette auch ein Infoblatt zum richtigen Händewaschen? Oder wollen sie uns Männern etwas damit sagen?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nee, nee, das hängt bei uns auch. Aber ich frage mich, ob das nicht Allgemeinwissen sein sollte."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Jetzt in der kalten Jahreszeit, in der so viele krank sind, ist eine Erinnerung immer gut. Das macht bestimmt nicht jeder. Herr1 : Schön und gut. Aber was sollen wir denn machen, wenn die Seife immer leer ist? Desinfektionsmittel wäre auch keine schlechte Idee."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das stimmt. Ich finde es auch lästig, dass man immer dran erinnern muss. Kann man die Seife nicht jeden Morgen einfach auffüllen?"
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Ja, aber auch mit Seife muss man wissen, wie man sich richtig die Hände wäscht. Es gibt genug Leute, die das falsch machen."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Hallo Isabel. Wurde dein Arbeitsplatz schon geprüft?"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Nein, noch nicht. Was soll da überhaupt passieren?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Der Experte kontrolliert, ob du in der richtigen Haltung am Schreibtisch sitzen kannst."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Aha. Und wie macht er das?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Naja, er schaut, wie weit du vom Computer entfernt sitzt und ob der Stuhl richtig eingestellt ist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das klingt ja merkwürdig. Ich arbeite doch schon seit Jahren an meinem Schreibtisch. Und plötzlich soll kontrolliert werden, ob das gesund ist?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Wie du weißt, haben viele Kollegen Rückenschmerzen und fallen dadurch bei der Arbeit aus."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Und was kam bei dir dabei heraus? Hat dein Stuhl die richtige Höhe?"
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ja, das schon. Aber der Computer steht jetzt tatsächlich anders, damit ich besser davor sitze."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Na. Ich bin gespannt, was er zu mir sagt."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "a"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "d"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "c"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "b"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/158139?single"
+    },
+    {
+      "id": "hoeren_2_v6",
+      "part": "HOEREN_2",
+      "title": "Вариант 6",
+      "note": "тест №140321, 140301",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Es ist nicht immer einfach, Platz für neue Kolleg*innen zu schaffen."
+            },
+            {
+              "key": "b",
+              "text": "Im Großraumbüro kann man mit den Kolleg*innen besser zusammenarbeiten."
+            },
+            {
+              "key": "c",
+              "text": "Manche Mitarbeiter*innen arbeiten gerne regelmäßig von zu Hause aus."
+            },
+            {
+              "key": "d",
+              "text": "Manchmal tut der räumliche Abstand zu Kolleg*innen gut."
+            },
+            {
+              "key": "e",
+              "text": "Neue Arbeitsplatzmodelle können für Unternehmen attraktiv sein."
+            },
+            {
+              "key": "f",
+              "text": "Über die Neugestaltung des Arbeitsplatzes muss nachgedacht werden."
+            }
+          ],
+          "transcript": [
+            {
+              "text": "Nummer 28."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ich finde es wirklich schlimm, dass wir nächste Woche ins Großraumbüro umziehen müssen. Das ist die schlechteste Entscheidung, die unsere Firma seit Jahren getroffen hat."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Das sehe ich nicht so negativ. Ich war schon mal in so einem Büro - am Anfang war es ungewohnt, aber man gewöhnt sich dran."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ungewohnt? Bei dem ständigen Lärm kann ich doch überhaupt nicht konzentriert arbeiten. Ich werde auf jeden Fall beim Chef nachfragen, ob man wenigstens Raumteiler aufstellen kann oder ob es eine ruhigere Ecke gibt."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Das verstehe ich. Aber denk mal daran, wie oft wir uns im Moment stundenlang E-Mails hinund herschicken, nur weil wir in verschiedenen Zimmern sitzen. Gestern haben Lukas und ich ein Problem in zehn Minuten gelöst - einfach weil wir nebeneinander saßen und direkt reden konnten."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Genau. Spontane Abstimmungen, kurze Rückfragen, gemeinsam an einem Dokument arbeiten - das läuft im Großraumbüro einfach flüssiger. Das merkt man wirklich."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Na gut, vielleicht mag das stimmen. Aber an den Lärm werde ich mich trotzdem nie gewöhnen."
+            },
+            {
+              "text": "Nummer 29."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Du arbeitest jetzt schon seit zwei Jahren fast nur von zu Hause, oder? Ich kann mir das ehrlich gesagt nicht vorstellen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Für mich ist es ideal. Ich mochte gar nicht mehr tauschen."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ich habe das selbst mal drei Monate lang versucht. Aber ich kam einfach nicht los - nach dem Feierabend saß ich immer noch am Laptop, weil mir die Grenze zwischen Arbeit und Privatleben völlig verschwommen ist."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das kenne ich. Das war bei mir am Anfang auch so. Aber das Problem lässt sich lösen. Ich habe mir ein eigenes Arbeitszimmer eingerichtet - das war der entscheidende Schritt."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Ein eigenes Zimmer nur fürs Arbeiten? Das habe ich bei mir leider nicht."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das ist natürlich ideal. Aber auch ohne eigenes Zimmer geht es, wenn man klare Rituale schafft. Bei mir gilt: wenn der Arbeitstag vorbei ist, schließe ich die Tür des Arbeitszimmers zu - und damit ist die Arbeit wirklich abgeschlossen. Dann mache ich Yoga oder gehe spazieren, und der Kopf schaltet vollständig ab."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das klingt wirklich gut. Aber ich glaube, das schaffst du einfach besser als ich."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Das denken viele. Aber es ist vor allem eine Frage der richtigen Organisation. Ich jedenfalls kann"
+            },
+            {
+              "text": "Nummer 30."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Habt ihr schon gehört? Nächsten Monat kommt noch eine neue Kollegin zu uns."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Schon wieder jemand Neues? Wir sitzen doch jetzt schon auf engstem Raum. Wo soll die denn überhaupt hin?"
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Das habe ich auch sofort gefragt. Der Chef sagt, es wird schon irgendwie gehen."
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "In meiner alten Firma war das mal genauso eng. Da haben sie kurzentschlossen einen ungenutzten Raum im Stockwerk darüber umfunktioniert — das Problem war innerhalb einer Woche gelöst. Warum macht man das hier nicht auch so?"
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Das wäre natürlich die einfachste Lösung. Aber hier wird das offenbar anders laufen. Der Chef hat entschieden: der Kopierer kommt in den Flur - dann ist genug Platz für einen neuen Schreibtisch."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "In den Flur? Das ist doch eine Zumutung. Jedes Mal, wenn ich etwas drucken will, muss ich extra rausgehen. Und im Winter, wenn es zieht und man keine Jacke anhat…"
+            },
+            {
+              "speaker": "Frau",
+              "gender": "f",
+              "text": "Genau. Das kostet uns alle täglich Zeit und Nerven."
+            },
+            {
+              "speaker": "Herr 1",
+              "gender": "m",
+              "text": "Ich weiß. Aber irgendwo muss der Platz ja herkommen. Die Neue kommt auf jeden Fall - das steht fest."
+            },
+            {
+              "speaker": "Herr 2",
+              "gender": "m",
+              "text": "Na dann. Enger geht immer."
+            },
+            {
+              "text": "Nummer 31."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Ich habe gerade einen interessanten Bericht gelesen. Immer mehr mittelständische Unternehmen steigen auf sogenannte Co-Working-Spaces um also gemeinsame Büroflächen, die man flexibel mietet, statt ein eigenes Büro langfristig zu binden."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das klingt für mich ehrlich gesagt nach Chaos. Man sitzt dann neben völlig Fremden, kennt niemanden, hat keinen festen Platz."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Dafür spart das Unternehmen enorm - keine teuren Langzeitverträge, flexible Kapazitäten je nach aktuellem Bedarf."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Und solche Spaces sind oft sehr modern ausgestattet - schnelles Internet, professionelle Meetingräume, Gemeinschaftsbereiche."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Das ist doch im Grunde dasselbe wie ein Großraumbüro, nur dass man sich die Fläche mit fremden Firmen teilt. Kein eigener Schreibtisch, kein richtiges Zugehörigkeitsgefühl - ich sehe da keinen Unterschied."
+            },
+            {
+              "speaker": "Frau 1",
+              "gender": "f",
+              "text": "Das ist so nicht ganz richtig. Viele dieser Spaces bieten auch feste Arbeitsplätze und abgeschlossene Bereiche für Teams. Und vor allem: sie machen das Unternehmen attraktiver für qualifizierte Bewerber, die Wert auf moderne und flexible Arbeitsumgebungen legen."
+            },
+            {
+              "speaker": "Frau 2",
+              "gender": "f",
+              "text": "Genau. Gerade für wachsende Firmen ist das wirtschaftlich wirklich interessant - man kann schnell reagieren, ohne sich für Jahre zu binden."
+            },
+            {
+              "speaker": "Herr",
+              "gender": "m",
+              "text": "Na ja. Ich bleibe skeptisch. Aber ich sehe, dass die Argumente Unternehmenssicht aus zumindest einleuchten."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "b"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "c"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "a"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "e"
+            }
+          ]
+        }
+      ],
+      "audioUrl": "https://t.me/B2_C2_Deutsch/65534/278352"
+    },
+    {
+      "id": "hoeren_2_v7",
+      "part": "HOEREN_2",
+      "title": "Вариант 7",
+      "note": "тест №160201, 160221; тема Fortbildung / Weiterbildung; записи нет",
+      "segments": [
+        {
+          "title": "Nummer 28–31",
+          "instruction": "Hören Sie die Gespräche 28–31 und ordnen Sie jedem Gespräch eine Aussage a–f zu.",
+          "sharedOptions": [
+            {
+              "key": "a",
+              "text": "Das Lernen hört im Arbeitsleben nie auf."
+            },
+            {
+              "key": "b",
+              "text": "Die Firma sollte regelmäßig arbeitsplatzbezogene Schulungen organisieren."
+            },
+            {
+              "key": "c",
+              "text": "Es ist sinnvoll, Fortbildungen an unterschiedlichen Tagen anzubieten."
+            },
+            {
+              "key": "d",
+              "text": "Schulungen sollten praxisnah und an realen Fällen orientiert sein."
+            },
+            {
+              "key": "e",
+              "text": "Wer sich weiterbildet, hat bessere Chancen auf eine Beförderung."
+            },
+            {
+              "key": "f",
+              "text": "Nicht alle Schulungen müssen im Betrieb stattfinden."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Nummer 28",
+              "answer": "f"
+            },
+            {
+              "number": 29,
+              "prompt": "Nummer 29",
+              "answer": "a"
+            },
+            {
+              "number": 30,
+              "prompt": "Nummer 30",
+              "answer": "b"
+            },
+            {
+              "number": 31,
+              "prompt": "Nummer 31",
+              "answer": "c"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

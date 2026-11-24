@@ -1,0 +1,1047 @@
+{
+ "part": "BESCHWERDE",
+ "variants": [
+  {
+   "id": "beschwerde_v1",
+   "part": "BESCHWERDE",
+   "title": "Вариант 1 · Putzdienst / Reinigung",
+   "note": "100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Friederike,\ngerade habe ich die angehängte Mail von der Firma Huber GmbH gelesen und bin schockiert. Ich verstehe den Ärger von Herrn Lassner, kann aber kaum glauben, was er da schreibt. Bitte sprich mal mit unseren Leuten und kläre, was da los ist, und antworte dann Herrn Lassner. Es ist ganz wichtig, dass du ihm zusagst, dass so etwas nie wieder vorkommen wird. Gib ihm auch einen Rabatt auf die nächste Rechnung in Höhe von 20 %. Wir dürfen die Firma mit diesem großen Auftrag keinesfalls als Kunden verlieren. Danke dir und schönen Feierabend!\nGruß\nHeike"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Woller,\nleider muss ich mich heute mit einer Beschwerde an Sie wenden. Wir haben einen Vertrag mit Ihrer Firma für die Reinigung unserer Büroräume. In diesem Vertrag sind täglich 3 Stunden Arbeit bei uns festgelegt, und zwar von 6.00 Uhr bis 9.00 Uhr morgens.\nIn den letzten zwei Wochen war unsere Sekretärin einige Male bereits vor 9 Uhr im Büro, von Ihrem Putzdienst war aber niemand zu sehen. Wie kann das sein?\nWenn wir 3 Stunden bezahlen, erwarten wir auch, dass Ihr Personal drei Stunden bei uns arbeitet. Wenn Sie für die Reinigung unserer Räume weniger als die vereinbarte Zeit benötigen, sollten Sie uns darüber informieren, damit wir den Vertrag ändern.\nIch bitte um umgehende Stellungnahme und natürlich die Angleichung der Rechnung an die tatsächlich geleisteten Arbeitsstunden.\nMit freundlichen Grüßen\nTheo Lassner"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Lassner",
+       "options": [
+        {
+         "key": "a",
+         "text": "möchte seine Rechnung nicht begleichen."
+        },
+        {
+         "key": "b",
+         "text": "ist mit der Sauberkeit im Büro nicht zufrieden."
+        },
+        {
+         "key": "c",
+         "text": "will nur die geleisteten Stunden bezahlen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 20,
+       "prompt": "Der Putzdienst",
+       "options": [
+        {
+         "key": "a",
+         "text": "hält die Arbeitszeit ein. / hat flexible Einsatzzeiten."
+        },
+        {
+         "key": "b",
+         "text": "hat zu wenig Stunden gearbeitet."
+        },
+        {
+         "key": "c",
+         "text": "möchte einen neuen Vertrag."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Friederike Baumann. Antworten Sie Herrn Lassner im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "mit unseren Leuten sprechen und klären, was da los ist",
+     "zusagen, dass so etwas nie wieder vorkommen wird",
+     "Rabatt auf die nächste Rechnung in Höhe von 20 %"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Lassner,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Heute wurde mit unseren Mitarbeitern gesprochen und herausgefunden, dass der Grund dafür war, dass unser Dienstfahrzeug in Inspektion war. Deswegen mussten die Mitarbeiter 15 Minuten früher die Arbeit verlassen, um die öffentlichen Verkehrsmittel nicht zu verpassen. Wir möchten Ihnen versichern, dass sich diese Situation nicht wiederholen wird. Natürlich möchten wir Sie als treuen Kunden behalten, deswegen bieten wir Ihnen einen Rabatt auf die nächste Rechnung in Höhe von 20% an.\nWir freuen uns weiterhin auf eine Zusammenarbeit.\nMit freundlichen Grüßen\nFriederike Baumann"
+   }
+  },
+  {
+   "id": "beschwerde_v1_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 1 · новый вариант 21.12.24",
+   "note": "Новый вариант от 21.12.24 (изменён вопрос 20)",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Friederike,\ngerade habe ich die angehängte Mail von der Firma Huber GmbH gelesen und bin schockiert. Ich verstehe den Ärger von Herrn Lassner, kann aber kaum glauben, was er da schreibt. Bitte sprich mal mit unseren Leuten und kläre, was da los ist, und antworte dann Herrn Lassner. Es ist ganz wichtig, dass du ihm zusagst, dass so etwas nie wieder vorkommen wird. Gib ihm auch einen Rabatt auf die nächste Rechnung in Höhe von 20 %. Wir dürfen die Firma mit diesem großen Auftrag keinesfalls als Kunden verlieren. Danke dir und schönen Feierabend!\nGruß\nHeike"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Woller,\nleider muss ich mich heute mit einer Beschwerde an Sie wenden. Wir haben einen Vertrag mit Ihrer Firma für die Reinigung unserer Büroräume. In diesem Vertrag sind täglich 3 Stunden Arbeit bei uns festgelegt, und zwar von 6.00 Uhr bis 9.00 Uhr morgens.\nIn den letzten zwei Wochen war unsere Sekretärin einige Male bereits vor 9 Uhr im Büro, von Ihrem Putzdienst war aber niemand zu sehen. Wie kann das sein?\nWenn wir 3 Stunden bezahlen, erwarten wir auch, dass Ihr Personal drei Stunden bei uns arbeitet. Wenn Sie für die Reinigung unserer Räume weniger als die vereinbarte Zeit benötigen, sollten Sie uns darüber informieren, damit wir den Vertrag ändern.\nIch bitte um umgehende Stellungnahme und natürlich die Angleichung der Rechnung an die tatsächlich geleisteten Arbeitsstunden.\nMit freundlichen Grüßen\nTheo Lassner"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Lassner",
+       "options": [
+        {
+         "key": "a",
+         "text": "möchte seine Rechnung nicht begleichen."
+        },
+        {
+         "key": "b",
+         "text": "ist mit der Sauberkeit im Büro nicht zufrieden."
+        },
+        {
+         "key": "c",
+         "text": "will nur die geleisteten Stunden bezahlen."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 20,
+       "prompt": "Der Putzdienst",
+       "options": [
+        {
+         "key": "a",
+         "text": "hält die Arbeitszeit nicht ein."
+        },
+        {
+         "key": "b",
+         "text": "hat zu wenig Zeit."
+        },
+        {
+         "key": "c",
+         "text": "möchte einen neuen Vertrag."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Friederike Baumann. Antworten Sie Herrn Lassner im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "mit unseren Leuten sprechen und klären, was da los ist",
+     "zusagen, dass so etwas nie wieder vorkommen wird",
+     "Rabatt auf die nächste Rechnung in Höhe von 20 %"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Lassner,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Heute wurde mit unseren Mitarbeitern gesprochen und herausgefunden, dass der Grund dafür war, dass unser Dienstfahrzeug in Inspektion war. Deswegen mussten die Mitarbeiter 15 Minuten früher die Arbeit verlassen, um die öffentlichen Verkehrsmittel nicht zu verpassen. Wir möchten Ihnen versichern, dass sich diese Situation nicht wiederholen wird. Natürlich möchten wir Sie als treuen Kunden behalten, deswegen bieten wir Ihnen einen Rabatt auf die nächste Rechnung in Höhe von 20% an.\nWir freuen uns weiterhin auf eine Zusammenarbeit.\nMit freundlichen Grüßen\nFriederike Baumann"
+   }
+  },
+  {
+   "id": "beschwerde_v2",
+   "part": "BESCHWERDE",
+   "title": "Вариант 2 · Tischlampe",
+   "note": "100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Lieber Herr Klein,\nich habe schon wieder eine Beschwerde einer Kundin vorliegen. Sie hat ihre bestellten Tischlampen nicht bekommen. Bitte antworten Sie Frau Berger und erklären Sie ihr, warum wir im Moment Lieferschwierigkeiten haben. Versuchen Sie auch, sie davon zu überzeugen, noch bis nächste Woche zu warten und den Auftrag nicht zu stornieren. Bieten Sie ihr außerdem ein ähnliches Modell an, das wir auf Lager haben. Danke!\nHerzliche Grüße\nKnut Richter"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Richter,\nvergangene Woche habe ich bei Ihnen 25 Tischlampen Modell TS 13 150 07 für unsere neuen Büroräume bestellt. Mir wurde telefonisch zugesagt, dass die Lampen noch diese Woche geliefert werden, aber jetzt ist schon Freitagnachmittag und sie sind leider noch immer nicht eingetroffen.\nDas ist ärgerlich, da wir am Wochenende unsere Renovierungsarbeiten beenden und die Büros dann vollständig neu einrichten werden. Dazu wurden natürlich auch die Lampen gehören, da wir am Montag unseren Bürobetrieb in funktionstüchtigen Räumen wieder aufnehmen wollen. Ich habe bereits mehrfach versucht, Sie telefonisch zu erreichen, und habe Nachrichten auf Ihrem Anrufbeantworter hinterlassen, aber ich wurde leider nicht zurückgerufen. Inzwischen habe ich einen Lieferanten gefunden, der uns kurzfristig andere Tischlampen liefern könnte.\nWenn Ihre Lampen also bis Montagmittag, 13:00 Uhr, nicht bei uns eingetroffen sind, werde ich die Bestellung bei Ihnen stornieren. Ich bitte um eine schnelle Antwort!\nMit freundlichen Grüßen\nEvelyn Berger"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Frau Berger",
+       "options": [
+        {
+         "key": "a",
+         "text": "beschwert sich über die Qualität des Produktes."
+        },
+        {
+         "key": "b",
+         "text": "hat eine fehlerhafte Lieferung erhalten."
+        },
+        {
+         "key": "c",
+         "text": "wartet dringend auf die Lieferung."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Renovierungsarbeiten",
+       "options": [
+        {
+         "key": "a",
+         "text": "stehen kurz bevor."
+        },
+        {
+         "key": "b",
+         "text": "verzögern sich."
+        },
+        {
+         "key": "c",
+         "text": "sollen zeitnah abgeschlossen werden."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Lukas Klein. Antworten Sie Frau Berger im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Frau Berger antworten und erklären, warum wir im Moment Lieferschwierigkeiten haben",
+     "sie davon überzeugen, noch bis nächste Woche zu warten und den Auftrag nicht zu stornieren",
+     "ein ähnliches Modell anbieten, das wir auf Lager haben"
+    ],
+    "sampleAnswer": "Sehr geehrte Frau Berger,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Heute habe ich mit dem Hersteller gesprochen und ich habe herausgefunden, dass der Grund für die Verzögerung unvorhergesehene Lieferschwierigkeiten sind. Ich möchte Ihnen versichern, dass in der Vergangenheit solche Situationen in wenigen Tagen behoben waren. Deswegen bitten wir Sie noch um Geduld. Falls Ihre Bestellung bis nächste Woche Montag nicht geliefert wird, bieten wir Ihnen ein ähnliches Modell, welches wir auf Lager haben, an. Wir hoffen, dass Sie mit dieser Lösung zufrieden sind und wieder bei uns bestellen werden.\nMit freundlichen Grüßen\nLukas Klein"
+   }
+  },
+  {
+   "id": "beschwerde_v2_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 2 · версия 08.2024 / 07.02.2025",
+   "note": "Новая версия от 08.2024 и от 07.02.2025 (новый вопрос 19)",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nich habe schon wieder eine Beschwerde einer Kundin vorliegen. Sie hat ihre bestellten Tischlampen nicht bekommen. Bitte antworten Sie Frau Lutz und erklären Sie ihr, warum wir im Moment Lieferschwierigkeiten haben. Versuchen Sie auch, sie davon zu überzeugen, noch bis nächste Woche zu warten und den Auftrag nicht zu stornieren. Bieten Sie ihr außerdem ein ähnliches Modell an, das wir auf Lager haben. Danke!\nHerzliche Grüße\nElias Philips"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Phillips,\nvergangene Woche habe ich bei Ihnen 15 Tischlampen Modell TS 13 150 07 für unsere neuen Büroräume bestellt. Mir wurde telefonisch zugesagt, dass die Lampen noch diese Woche geliefert werden, aber jetzt ist schon Freitagnachmittag und sie sind leider noch immer nicht eingetroffen.\nDas ist sehr ärgerlich, da wir am Wochenende unsere Renovierungsarbeiten beenden und die Büros dann vollständig neu einrichten werden. Dazu wurden natürlich auch die Lampen gehören, da wir am Montag unseren Bürobetrieb in funktionstüchtigen Räumen wieder aufnehmen wollen.\nIch habe bereits mehrfach versucht, Sie telefonisch zu erreichen, und habe Nachrichten auf Ihrem Anrufbeantworter hinterlassen, aber ich wurde leider nicht zurückgerufen. Inzwischen habe ich einen Lieferanten gefunden, der uns kurzfristig andere Tischlampen liefern könnte.\nWenn Ihre Lampen also bis Montagmittag, 12:00 Uhr, nicht bei uns eingetroffen sind, werde ich die Bestellung bei Ihnen stornieren. Ich bitte um eine schnelle Antwort!\nMit freundlichen Grüßen\nBetta Lutz"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Frau Lutz",
+       "options": [
+        {
+         "key": "a",
+         "text": "erwartet eine umgehende Rückmeldung."
+        },
+        {
+         "key": "b",
+         "text": "möchte ein anderes Lampenmodell."
+        },
+        {
+         "key": "c",
+         "text": "storniert den Auftrag."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Renovierungsarbeiten",
+       "options": [
+        {
+         "key": "a",
+         "text": "stehen kurz bevor."
+        },
+        {
+         "key": "b",
+         "text": "verzögern sich."
+        },
+        {
+         "key": "c",
+         "text": "sollen zeitnah abgeschlossen werden."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Antworten Sie Frau Lutz im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Frau Lutz antworten und erklären, warum wir im Moment Lieferschwierigkeiten haben",
+     "sie davon überzeugen, noch bis nächste Woche zu warten und den Auftrag nicht zu stornieren",
+     "ein ähnliches Modell anbieten, das wir auf Lager haben"
+    ]
+   }
+  },
+  {
+   "id": "beschwerde_v3",
+   "part": "BESCHWERDE",
+   "title": "Вариант 3 · Webseite",
+   "note": "100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Frau Holsten,\nich habe heute Mittag die untenstehende Mail bekommen. Die vertauschten Namen sind unser Fehler und die verbessern wir auch. Bitte bestätigen Sie dem Kunden das. Aber mehr ist nun wirklich nicht drin. Das ist schon das fünfte Mal, dass er Korrekturwünsche hat, obwohl wir uns immer an die Vorgaben gehalten haben. So viele Korrekturen waren nicht vereinbart!\nWenn wir das noch machen sollten, geht das nur gegen zusätzliche Bezahlung. Ich rechne mit 200 (300) € extra. Bitte teilen Sie ihm dies mit und lassen Sie sich von ihm sein Okay geben.\nDanke und viele Grüße\nJutta Spindler"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Spindler,\nvielen Dank für Ihren Entwurf für unsere neue Firmenwebseite. Ich habe ihn gemeinsam mit dem Team gesichtet und dabei ist uns aufgefallen, dass Ihre Agentur die Vorgaben an zwei Stellen leider nicht umgesetzt hat:\nZum einen hatten wir besprochen, dass das Farbschema grau orange (grün blau) sein sollte. Da statt Grau Blau (Grün Grau) gewählt wurde, glaube ich, dass es zu einem Missverständnis gekommen ist. Zum anderen sind auf der Seite mit den Ansprechpartnern die Namen einiger Mitarbeiter vertauscht worden. Im Anhang schicke ich Ihnen noch einmal eine Auflistung der Namen mit den dazugehörigen Bildern. Könnten Sie diese beide Punkte bitte bis Anfang nächster Woche nachbessern? Eine kurze Rückmeldung wäre nett.\nMit freundlichen Grüßen\nFranz Stiller"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Stiller",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist mit dem Entwurf der Agentur nicht einverstanden."
+        },
+        {
+         "key": "b",
+         "text": "möchte, dass Frau Spindler sich einen Entwurf ansieht."
+        },
+        {
+         "key": "c",
+         "text": "möchte wissen, wer den Entwurf überarbeiten kann."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Agentur sagt, dass sie",
+       "options": [
+        {
+         "key": "a",
+         "text": "Änderungen nur gegen Aufpreis macht."
+        },
+        {
+         "key": "b",
+         "text": "keine Fehler gemacht hat."
+        },
+        {
+         "key": "c",
+         "text": "keine Vorgaben von Herrn Stiller hatte."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Monika Holsten. Antworten Sie Herrn Stiller im Namen Ihrer Agentur. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "die vertauschten Namen sind unser Fehler und die verbessern wir auch – dem Kunden das bestätigen",
+     "So viele Korrekturen waren nicht vereinbart!",
+     "weitere Korrekturen nur gegen zusätzliche Bezahlung: 200 (300) € extra",
+     "sich von ihm sein Okay geben lassen"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Stiller,\nvielen Dank für Ihre Rückmeldung von heute. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Außerdem möchte ich Ihnen versichern, dass wir den Fehler im Nahmen bis Ende dieser Woche korrigieren werden. Bitte beachten Sie, dass das blau orange (grau blau) Farbschema in unserem Vertrag vereinbart ist. Zudem ist das schon die fünfte Bitte um Korrektur. So viele Korrekturen waren nicht vereinbart. Deswegen kostet jede weitere Korrektur 200 (300) €. Wenn Sie mit dieser Lösung einverstanden sind, geben Sie mir bitte Bescheid.\nVielen Dank für Ihr Verständnis.\nMit freundlichen Grüßen\nMonika Holsten"
+   }
+  },
+  {
+   "id": "beschwerde_v4",
+   "part": "BESCHWERDE",
+   "title": "Вариант 4 · Spülmaschine",
+   "note": "100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Frau Retterstein,\nich habe gerade die unten stehende E-Mail von einem großen Kunden bekommen, der sich beschwert hat. Organisieren Sie doch bitte so schnell wie möglich einen Techniker, der sich die Spülmaschine ansieht, und schreiben Sie Herrn Krüger.\nEntschuldigen Sie sich bitte für die Unannehmlichkeiten und sagen Sie ihm zu, dass wir seine Forderungen in seiner E-Mail prüfen werden.\nTeilen Sie Herrn Krüger aber bitte vorsorglich mit, dass die Reparatur eventuell nicht sofort durchgeführt werden kann, falls wir Ersatzteile bestellen müssen.\nDanke und viele Grüße\nDorothee Sturm"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Sturm,\nvor einer Woche haben wir bei Ihnen eine Spülmaschine für unsere Teeküche gekauft. Sie wurde sehr schnell geliefert und auch gleich eingebaut. Leider muss ich Ihnen heute aber mitteilen, dass sie bereits defekt ist. Beim Spülen ist Wasser ausgelaufen und nun ist unser Parkett beschädigt.\nIch bitte Sie, uns umgehend einen Techniker zu schicken, der das Gerät repariert. Wir brauchen die Spülmaschine spätestens übermorgen, da wir ein großes Meeting unserer Außendienstmitarbeiter haben und viele Personen bewirten müssen.\nAußerdem müssen wir einen Teil des Parketts austauschen. Die Kosten dafür werden wir Ihnen in Rechnung stellen.\nBitte schicken Sie mir so schnell wie möglich einer Terminvorschlag für die Reparatur und eine Bestätigung der Kostenübernahme. Vielen Dank!\nMit freundlichen Grüßen\nClaudio Krüger"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Der Kunde",
+       "options": [
+        {
+         "key": "a",
+         "text": "fordert eine neue Spülmaschine."
+        },
+        {
+         "key": "b",
+         "text": "hat einen Wasserschaden in der Küche."
+        },
+        {
+         "key": "c",
+         "text": "beschwert sich über die Reparaturarbeiten."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Firma Küchenbedarf soll",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Reparatur der Spülmaschine in Rechnung stellen."
+        },
+        {
+         "key": "b",
+         "text": "innerhalb von zwei Tagen die Spülmaschine reparieren."
+        },
+        {
+         "key": "c",
+         "text": "das Parkett in der Teeküche umgehend ersetzen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Anika Retterstein. Antworten Sie Herrn Krüger im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "einen Techniker organisieren, der sich die Spülmaschine ansieht",
+     "sich für die Unannehmlichkeiten entschuldigen",
+     "zusagen, dass wir seine Forderungen in seiner E-Mail prüfen werden",
+     "vorsorglich mitteilen, dass die Reparatur eventuell nicht sofort durchgeführt werden kann, falls wir Ersatzteile bestellen müssen"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Krüger,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Unserer Techniker könnte am kommenden Montag 27.05.2024 um 8:00 Uhr kommen, um die Spülmaschine und das beschädigten Parkett zu überprüfen. Bitte teilen Sie uns mit, ob der Termin stattfinden kann. Beachten Sie, dass falls wir Ersatzteile für die Reparatur bestellen müssen, keine umgehende Reparatur möglich ist. Detaillierte Information können wir Ihnen nach der Überprüfung geben. Wir danken Ihnen für Ihr Verständnis.\nMit freundlichen Grüßen\nAnika Retterstein"
+   }
+  },
+  {
+   "id": "beschwerde_v5",
+   "part": "BESCHWERDE",
+   "title": "Вариант 5 · Umzug (Herr Zaun)",
+   "note": "Вариант вопросов с Herr Zaun",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Frau Kühne,\nbitte schauen Sie sich mal die unten stehende E-Mail an.\nDa ist wohl was schiefgegangen. Bitte schreiben Sie Herrn Zaun und erklären Sie ihm, warum es zu den Fehlern gekommen ist. Sagen Sie ihm zu, dass am Mittwochmorgen pünktlich zwei Männer da sein werden, die alles fertig machen.\nNatürlich übernehmen wir auch die Verantwortung für die entstandenen Schäden.\nDie Firma hat uns das erste Mal gebucht und ich würde ungern einen negativen Eindruck hinterlassen. Ich verlasse mich auf Sie.\nDanke und viele Grüße\nFrieda Börne"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Börne,\nam Wochenende ist unser Büro mit Hilfe Ihres Unternehmens von Hanau nach Frankfurt umgezogen. Leider waren wir mit Ihrem Service überhaupt nicht zufrieden.\nIhre Mitarbeiter kamen eine halbe Stunde zu spät und nur zu dritt statt wie vereinbart zu viert. Deshalb dauerte der ganze Umzug natürlich länger als geplant und einige Arbeiten sind auch noch nicht abgeschlossen: Es sind noch nicht alle Möbel aufgebaut, deshalb konnten wir noch nicht unsere Sachen einräumen.\nBitte schicken Sie uns deshalb am Mittwochmorgen noch zwei Personen, die den Möbelaufbau erledigen.\nDes Weiteren sind Glasplatten zu Bruch gegangen und einige Schränke sind verkratzt. Ich gehe davon aus, dass Ihre Firma die Kosten dafür übernimmt.\nMit freundlichen Grüßen\nThomas Zaun"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Zaun beschwert sich über",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Mitarbeiter der Firma."
+        },
+        {
+         "key": "b",
+         "text": "die Qualität von Produkten."
+        },
+        {
+         "key": "c",
+         "text": "eine ausbleibende Lieferung."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 20,
+       "prompt": "Herr Zaun",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist nach Hanau gezogen."
+        },
+        {
+         "key": "b",
+         "text": "musste seinen Umzug verschieben."
+        },
+        {
+         "key": "c",
+         "text": "verlangt Schadensersatz."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Monika Kühne. Antworten Sie Herrn Zaun im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Herrn Zaun schreiben und erklären, warum es zu den Fehlern gekommen ist",
+     "zusagen, dass am Mittwochmorgen pünktlich zwei Männer da sein werden, die alles fertig machen",
+     "Natürlich übernehmen wir auch die Verantwortung für die entstandenen Schäden"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Zaun,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Der Grund dafür war, dass unsere Mitarbeiter auf dem Weg zu Ihnen eine kleine Autopanne hatten. Außerdem hatten sich einige Mitarbeiter in der letzten Woche krank gemeldet, was zu Personalmangel führte. Wir möchten Ihnen versichern, dass diese Situation sich nicht wiederholen wird. Zudem werden zwei unserer Mitarbeiter am Mittwochmorgen pünktlich bei Ihnen sein. Natürlich möchten wir Sie als Kunden zufriedenstellen, deswegen übernehmen wir die Kosten für die beschädigten Möbel.\nWir freuen uns weiterhin auf eine Zusammenarbeit.\nMit freundlichen Grüßen\nMonika Kühne"
+   }
+  },
+  {
+   "id": "beschwerde_v5_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 5 · Umzug (Herr Lozano)",
+   "note": "Второй вариант вопросов (Herr Lozano, Sophia Prince)",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo Frau Kühne,\nbitte schauen Sie sich mal die unten stehende E-Mail an.\nDa ist wohl was schiefgegangen. Bitte schreiben Sie Herrn Lozano und erklären Sie ihm, warum es zu den Fehlern gekommen ist. Sagen Sie ihm zu, dass am Mittwochmorgen pünktlich zwei Männer da sein werden, die alles fertig machen.\nNatürlich übernehmen wir auch die Verantwortung für die entstandenen Schäden.\nDie Firma hat uns das erste Mal gebucht und ich würde ungern einen negativen Eindruck hinterlassen. Ich verlasse mich auf Sie.\nDanke und viele Grüße\nSophia Prince"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Prince,\nam Wochenende ist unser Büro mit Hilfe Ihres Unternehmens von Hanau nach Frankfurt umgezogen. Leider waren wir mit Ihrem Service überhaupt nicht zufrieden.\nIhre Mitarbeiter kamen eine halbe Stunde zu spät und nur zu dritt statt wie vereinbart zu viert. Deshalb dauerte der ganze Umzug natürlich länger als geplant und einige Arbeiten sind auch noch nicht abgeschlossen: Es sind noch nicht alle Möbel aufgebaut, deshalb konnten wir noch nicht unsere Sachen einräumen.\nBitte schicken Sie uns deshalb am Mittwochmorgen noch zwei Personen, die den Möbelaufbau erledigen.\nDes Weiteren sind Glasplatten zu Bruch gegangen und einige Schränke sind verkratzt. Ich gehe davon aus, dass Ihre Firma die Kosten dafür übernimmt.\nMit freundlichen Grüßen\nMatteo Lozano"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Beim Umzug",
+       "options": [
+        {
+         "key": "a",
+         "text": "haben vier Möbelpacker gearbeitet."
+        },
+        {
+         "key": "b",
+         "text": "kam es zu Verzögerungen."
+        },
+        {
+         "key": "c",
+         "text": "wurden nicht alle Möbel transportiert."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 20,
+       "prompt": "Herr Lozano",
+       "options": [
+        {
+         "key": "a",
+         "text": "musste seinen Umzug verschieben."
+        },
+        {
+         "key": "b",
+         "text": "verlangt Schadensersatz."
+        },
+        {
+         "key": "c",
+         "text": "ist nach Hanau gezogen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Monika Kühne. Antworten Sie Herrn Lozano im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Herrn Lozano schreiben und erklären, warum es zu den Fehlern gekommen ist",
+     "zusagen, dass am Mittwochmorgen pünktlich zwei Männer da sein werden, die alles fertig machen",
+     "Natürlich übernehmen wir auch die Verantwortung für die entstandenen Schäden"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Lozano,\nvielen Dank für Ihre Rückmeldung von gestern. Wir bedauern die entstandenen Unannehmlichkeiten sehr und bitten um Entschuldigung. Der Grund dafür war, dass unsere Mitarbeiter auf dem Weg zu Ihnen eine kleine Autopanne hatten. Außerdem hatten sich einige Mitarbeiter in der letzten Woche krank gemeldet, was zu Personalmangel führte. Wir möchten Ihnen versichern, dass diese Situation sich nicht wiederholen wird. Zudem werden zwei unserer Mitarbeiter am Mittwochmorgen pünktlich bei Ihnen sein. Natürlich möchten wir Sie als Kunden zufriedenstellen, deswegen übernehmen wir die Kosten für die beschädigten Möbel.\nWir freuen uns weiterhin auf eine Zusammenarbeit.\nMit freundlichen Grüßen\nMonika Kühne"
+   }
+  },
+  {
+   "id": "beschwerde_v6",
+   "part": "BESCHWERDE",
+   "title": "Вариант 6 · Der Drucker",
+   "note": "Тест №150321, 150301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nschau dir mal die Mail von der Firma Mova an. Laut unserem Techniker lag der Fehler erneut an der falschen Bedienung des Geräts. Antworte Herrn Schmidt bitte und weise ihn höflich daraufhin, dass die Lösung des Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH.\nViele Grüße\nSibyl Aichele"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Aichele,\nvorgestern wurde von einem Ihrer Mitarbeiter unser fast neues Druck- und Kopiergerät der Marke Lexios zum dritten Mal innerhalb von zwei Wochen geprüft, da bei diesem immer wieder Papierstaus aufgetreten sind. Gestern kam es schon wieder zu einer Fehlermeldung, was zur Folge hatte, dass wir Unterlagen nicht fristgerecht einreichen konnten. Aus diesem Grund haben wir eine für uns sehr wichtige Ausschreibung verpasst. Von einer Schadensersatzforderung sehen wir vorerst ab, wir fordern Sie aber auf, uns umgehend auf Ihre Kosten ein anderes Gerät zu liefern. Es handelt sich hier nämlich eindeutig um einen technischen Fehler, den wir nicht zu verantworten haben. Die Rechnungen für die drei vorangegangenen Technikereinsätze werden wir natürlich nicht bezahlen.\nIch erwarte Ihre umgehende Rückmeldung.\nMit freundlichen Grüßen\nBenno Schmidt"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Das Gerät",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist erst seit Kurzem im Einsatz."
+        },
+        {
+         "key": "b",
+         "text": "muss noch mal überprüft werden."
+        },
+        {
+         "key": "c",
+         "text": "wurde immer richtig bedient."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Firma Copyprofi",
+       "options": [
+        {
+         "key": "a",
+         "text": "besteht auf der Bezahlung der Rechnungen."
+        },
+        {
+         "key": "b",
+         "text": "repariert den Kopierer noch einmal kostenfrei."
+        },
+        {
+         "key": "c",
+         "text": "tauscht das Gerät schnellstmöglich aus."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Mitarbeiter der Firma, die den Drucker geliefert hat. Antworten Sie Herrn Schmidt im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Herrn Schmidt höflich darauf hinweisen, dass die Lösung des Problems nicht in unserer Verantwortung liegt",
+     "ein Techniker kommt noch einmal in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein",
+     "die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Schmidt,\nbezugnehmend auf Ihre Beschwerde entschuldigen wir uns für die Unannehmlichkeiten. Es tut uns leid, dass ein Fehler im Drucker aufgetreten ist. Nach Rücksprache mit unserem Techniker wurde festgestellt, dass die Fehler auf eine fehlerhafte Bedienung des Geräts zurückzuführen sind. Wir möchten Sie daher höflich darauf hinweisen, dass die Lösung dieses Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben bei Ihnen.\nWir hoffen, dass Sie trotz des Vorfalls auch weiterhin unser treuer Kunde bleiben.\nMit freundlichen Grüßen\nAlternative Antwort:\nSehr geehrte/r Frau/Herr …,\nvielen Dank für Ihre E-Mail. Wir entschuldigen uns aufrichtig für die Unannehmlichkeiten, die Ihnen entstanden sind. Wir möchten Ihnen mitteilen, dass unsere Firma nur dann Verantwortung übernimmt, wenn die Drucker technische Probleme mit internen Teilen haben. Bei den letzten drei Einsätzen unseres Technikers zur Reparatur Ihres Geräts haben wir festgestellt, dass das Problem nicht auf technische Gründe zurückzuführen ist. Vielmehr funktioniert Ihr Gerät aufgrund falscher Einstellungen nicht ordnungsgemäß, was auf unsachgemäße Nutzung des Geräts zurückzuführen ist. Aus diesem Grund möchten wir Ihnen mitteilen, dass wir dieses Mal einen Techniker kostenfrei zu Ihnen schicken werden, aber Sie die Rechnungen für die letzten drei Einsätze bezahlen müssen. Wenn Sie weitere Fragen oder Anregungen haben, können Sie sich jederzeit an uns wenden.\nVielen Dank für Ihr Verständnis.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v6_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 6 · второй вариант вопросов",
+   "note": "Тест №150321, 150301, второй вариант вопросов",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nschau dir mal die Mail von der Firma Mova an. Laut unserem Techniker lag der Fehler erneut an der falschen Bedienung des Geräts. Antworte Herrn Schmidt bitte und weise ihn höflich daraufhin, dass die Lösung des Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH.\nViele Grüße\nSibyl Aichele"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Aichele,\nvorgestern wurde von einem Ihrer Mitarbeiter unser fast neues Druck- und Kopiergerät der Marke Lexios zum dritten Mal innerhalb von zwei Wochen geprüft, da bei diesem immer wieder Papierstaus aufgetreten sind. Gestern kam es schon wieder zu einer Fehlermeldung, was zur Folge hatte, dass wir Unterlagen nicht fristgerecht einreichen konnten. Aus diesem Grund haben wir eine für uns sehr wichtige Ausschreibung verpasst. Von einer Schadensersatzforderung sehen wir vorerst ab, wir fordern Sie aber auf, uns umgehend auf Ihre Kosten ein anderes Gerät zu liefern. Es handelt sich hier nämlich eindeutig um einen technischen Fehler, den wir nicht zu verantworten haben. Die Rechnungen für die drei vorangegangenen Technikereinsätze werden wir natürlich nicht bezahlen.\nIch erwarte Ihre umgehende Rückmeldung.\nMit freundlichen Grüßen\nBenno Schmidt"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Beim Gerät",
+       "options": [
+        {
+         "key": "a",
+         "text": "handelt sich um ein älteres Modell."
+        },
+        {
+         "key": "b",
+         "text": "kommt es häufig zu Papierstaus."
+        },
+        {
+         "key": "c",
+         "text": "wurde es nur einmal überprüft."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 20,
+       "prompt": "Herr Schmidt",
+       "options": [
+        {
+         "key": "a",
+         "text": "verlangt die Lieferung eines neuen Geräts."
+        },
+        {
+         "key": "b",
+         "text": "möchte weitere Technikertermine vereinbaren."
+        },
+        {
+         "key": "c",
+         "text": "akzeptiert die bisherigen Rechnungen."
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Mitarbeiter der Firma, die den Drucker geliefert hat. Antworten Sie Herrn Schmidt im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Herrn Schmidt höflich darauf hinweisen, dass die Lösung des Problems nicht in unserer Verantwortung liegt",
+     "ein Techniker kommt noch einmal in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein",
+     "die Kosten für die Überprüfung des Geräts bleiben die Angelegenheit der Mova GmbH"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Schmidt,\nbezugnehmend auf Ihre Beschwerde entschuldigen wir uns für die Unannehmlichkeiten. Es tut uns leid, dass ein Fehler im Drucker aufgetreten ist. Nach Rücksprache mit unserem Techniker wurde festgestellt, dass die Fehler auf eine fehlerhafte Bedienung des Geräts zurückzuführen sind. Wir möchten Sie daher höflich darauf hinweisen, dass die Lösung dieses Problems nicht in unserer Verantwortung liegt. Gerne kommt noch einmal ein Techniker in die Firma und weist die Mitarbeiter*innen kostenfrei in die Bedienung ein. Die Kosten für die Überprüfung des Geräts bleiben bei Ihnen.\nWir hoffen, dass Sie trotz des Vorfalls auch weiterhin unser treuer Kunde bleiben.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v6_c",
+   "part": "BESCHWERDE",
+   "title": "Вариант 6 · новый вариант 01.2025",
+   "note": "Новый вариант от 01.2025. Вопросы 19–20 в источнике не приведены",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Guten Morgen,\nVor einer Stunde erhielt ich diese E-Mail von der Cavone GmbH.\nNach Angaben unseres Technikers lag der Fehler wiederum bei der Cavone GmbH. Bitte antworten Sie Frau Zeller und weisen Sie höflich darauf hin, dass es nicht in unserer Verantwortung liegt, das Problem zu lösen.\nDer Techniker kommt gerne wieder ins Unternehmen und führt die Mitarbeiter kostenlos durch den Prozess.\nBitte teilen Sie ihr außerdem mit, dass die Kosten für die Untersuchung des Geräts weiterhin von ihrem Unternehmen, der Cavone GmbH, getragen werden.\nDanke und viele Grüße\nPaco Brenner"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Brenner,\nvor drei Tagen hat einer Ihrer Mitarbeiter das neue ABC-Druck-, Kopier- und Faxgerät inspiziert. Dies war das zweite Mal innerhalb einer Woche, dass beim Versenden eines Faxes ein Fehlerzeichen auftrat.\nLeider kam gestern wieder eine Fehlermeldung, und wir sollten einige wichtige Unterlagen zum Treffen per Fax verschicken. Wir konnten diese jedoch nicht rechtzeitig versenden. Deshalb haben wir einen für uns sehr wichtigen Deal verloren. Wir sehen derzeit von Schadensersatzansprüchen ab, bitten Sie jedoch, uns umgehend und auf Ihre Kosten ein anderes Gerät zuzusenden.\nOffensichtlich handelt es sich hierbei um einen technischen Fehler, für den wir keine Verantwortung übernehmen.\nSelbstverständlich übernehmen wir auch keine Rechnungen für vorangegangene technische Arbeiten.\nIch hoffe, dass wir schnellstmöglich eine Antwort von Ihnen erhalten.\nMit freundlichen Grüßen\nVala Zeller"
+      }
+     ],
+     "questions": []
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Antworten Sie Frau Zeller im Namen Ihrer Firma (Nummer 21: Schreiben Sie eine E-Mail an den Kunden). Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "Frau Zeller antworten und höflich darauf hinweisen, dass es nicht in unserer Verantwortung liegt, das Problem zu lösen",
+     "der Techniker kommt gerne wieder ins Unternehmen und führt die Mitarbeiter kostenlos durch den Prozess",
+     "die Kosten für die Untersuchung des Geräts werden weiterhin von der Cavone GmbH getragen"
+    ],
+    "sampleAnswer": "Sehr geehrte Frau Zeller,\nvielen Dank für Ihre E-Mail und die Schilderung des Sachverhalts. Nach eingehender Prüfung des Problems durch unseren Techniker liegt die Ursache des Fehlers nicht in unserem Verantwortungsbereich, sondern bei der Cavone GmbH. Daher können wir Ihrem Wunsch nach einem kostenlosen Austausch des Geräts nicht entsprechen. Dennoch möchten wir Ihnen entgegenkommen und bieten an, dass unser Techniker gerne bereit ist, Ihr Unternehmen erneut zu besuchen und Ihre Mitarbeiter kostenlos durch den Prozess zu führen, um mögliche Fehlerquellen auszuschließen und eine reibungslose Nutzung des Geräts sicherzustellen. Bitte beachten Sie zudem, dass die Kosten für die Untersuchung des Geräts gemäß unseren Vereinbarungen weiterhin von der Cavone GmbH zu tragen sind. Wir hoffen auf Ihr Verständnis und stehen Ihnen bei weiteren Fragen oder Anliegen jederzeit gerne zur Verfügung.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v7",
+   "part": "BESCHWERDE",
+   "title": "Вариант 7 · Die falsche Rechnung",
+   "note": "Тест №140321, 140301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nich habe heute die unten stehende E-Mail erhalten. Bitte kümmern Sie sich darum und antworten Sie dem Kunden höflich. Die Firma \"Meier\" ist ein langjähriger Kunde von uns. Wir können es uns nicht leisten, ihn zu verlieren. Schreiben Sie ihm bitte von unserem Computerproblem und wie wir es gelöst haben. Natürlich bekommt er den Rabatt wie gewohnt.\nVielen Dank.\nAnna Hoffner"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Hoffner,\nwir haben Ihre Lieferung erhalten und sind mit allen Artikeln absolut zufrieden. Leider muss ich Sie darauf hinweisen, dass die Rechnung einige Unstimmigkeiten beinhaltet: Zunächst wurden statt 100 Stück Pinsel Größe M 200 Stück berechnet. Außerdem wurden 20 Töpfe roter Farbe berechnet. Wir hatten aber grüne Farbe bestellt und geliefert bekommen, die preislich niedriger liegt. Wir bitten Sie, dies zu korrigieren. Des Weiteren waren wir überrascht, dass unser üblicher Rabatt von 10 % in dieser Rechnung nicht gewährt wurde. Das ist wahrscheinlich ein Versehen.\nWir bitten um Berichtigung der Rechnung und erneute Zusendung.\nMit freundlichen Grüßen\nKarl Schmidt"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Schmidt",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat falsche Waren vom Lieferanten erhalten."
+        },
+        {
+         "key": "b",
+         "text": "meldet eine unvollständige Sendung."
+        },
+        {
+         "key": "c",
+         "text": "weist auf falsche Posten in der Zahlungsaufforderung hin."
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Rechnung",
+       "options": [
+        {
+         "key": "a",
+         "text": "hat 100 Pinsel nicht aufgeführt."
+        },
+        {
+         "key": "b",
+         "text": "ist ohne Preisnachlass ausgestellt worden."
+        },
+        {
+         "key": "c",
+         "text": "wurde an einen falschen Adressaten geschickt."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Mitarbeiter der Firma von Frau Hoffner. Antworten Sie Herrn Schmidt (Nummer 21: Schreiben Sie eine E-Mail an den Kunden). Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "dem Kunden höflich antworten",
+     "vom Computerproblem schreiben und wie wir es gelöst haben",
+     "Natürlich bekommt er den Rabatt wie gewohnt"
+    ],
+    "sampleAnswer": "Sehr geehrter Herr Friedrien,\nvielen Dank für Ihre E-Mail und Ihre Geduld. Wir entschuldigen uns aufrichtig für die Unannehmlichkeiten und die Unstimmigkeiten auf Ihrer Rechnung. Leider gab es ein Computerproblem, welches die fehlerhafte Berechnung verursacht hat. Dieses Problem wurde mittlerweile behoben.\nSelbstverständlich haben wir Ihren Auftrag überprüft und die erforderlichen Korrekturen vorgenommen. Die korrekte Anzahl der Pinsel sowie die von Ihnen bestellte grüne Farbe wurden in der neuen Rechnung entsprechend angepasst. Auch Ihr üblicher Rabatt von 10 % wurde nun berücksichtigt.\nWir haben eine neue, korrigierte Rechnung an Sie gesendet. Bei weiteren Fragen oder Anliegen stehen wir Ihnen jederzeit gerne zur Verfügung. Wir schätzen Ihre langjährige Partnerschaft und freuen uns auf die weitere Zusammenarbeit mit Ihnen.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v7_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 7 · Die falsche Rechnung (Joachim Schmidt)",
+   "note": "Тест №140321, 140301, вторая версия",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nich habe gestern die unten stehende Mail erhalten. Bitte kümmere dich darum und antworte dem Kunden höflich. Die Firma Lacke und Farben ist ein langjähriger, guter Kunde. Wir können es uns nicht leisten, ihn zu verlieren. Du kannst ihm ruhig von unseren Computerproblemen berichten und wie wir sie gelöst haben. Selbstverständlich kriegt er den Rabatt wie immer.\nVielen Dank und liebe Grüße\nSonja"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrte Frau Klein,\nwir haben Ihre Lieferung wie gewohnt zu unserer vollsten Zufriedenheit erhalten. Alle Artikel entsprechen absolut unseren Vorstellungen.\nLeider muss ich Sie darauf hinweisen, dass in der beigelegten Rechnung einige Unstimmigkeiten aufgetreten sind. Zunächst wurden statt der 100 Stück Pinsel Größe S 200 Stück berechnet. Außerdem wurden 50 Töpfe rote Farbe aufgeführt. Wir hatten aber grüne Farbe bestellt und geliefert bekommen, die preislich niedriger liegt. Wir bitten das zu korrigieren. Ferner waren wir verwundert, dass uns der übliche Rabatt von 10 % in dieser Rechnung nicht gewährt wurde. Dies ist wahrscheinlich ein Versehen.\nWir bitten um Berichtigung der Rechnung und erneute Zusendung.\nMit freundlichen Grüßen\nJoachim Schmidt"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Der Kunde Joachim Schmidt",
+       "options": [
+        {
+         "key": "a",
+         "text": "ist ein neuer Kunde."
+        },
+        {
+         "key": "b",
+         "text": "ist mit der gelieferten Ware zufrieden."
+        },
+        {
+         "key": "c",
+         "text": "braucht keine neue Rechnung."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Malerbedarffirma",
+       "options": [
+        {
+         "key": "a",
+         "text": "gewährt Herrn Schmidt zum ersten Mal Rabatt."
+        },
+        {
+         "key": "b",
+         "text": "gewährt immer bei Herrn Schmidt einen Rabatt in Höhe 5%."
+        },
+        {
+         "key": "c",
+         "text": "hatte Computerprobleme, die zu Fehlern in der Rechnung führte."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie sind Mitarbeiterin der Firma Lacke und Farben. Antworten Sie Herrn Schmidt im Namen Ihrer Firma. Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "dem Kunden höflich antworten",
+     "von den Computerproblemen berichten und wie wir sie gelöst haben",
+     "Selbstverständlich kriegt er den Rabatt wie immer"
+    ]
+   }
+  },
+  {
+   "id": "beschwerde_v8",
+   "part": "BESCHWERDE",
+   "title": "Вариант 8 · Die Lieferung",
+   "note": "В источнике приведён только образец ответа (без писем и вопросов)",
+   "segments": [],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Antworten Sie dem Kunden im Namen Ihrer Firma: Die Lieferung von 100 T-Shirts verzögert sich, der Kunde wünscht einen Rabatt.",
+    "points": [
+     "sich für die Verzögerung bei der Lieferung entschuldigen",
+     "statt eines Rabatts Erstattung der Versandkosten oder einen Gutschein anbieten"
+    ],
+    "sampleAnswer": "Verzögerung bei der Lieferung 100 T-Shirts\nSehr geehrte/r Frau/Herr …,\nwir möchten uns für die Verzögerung bei der Lieferung Ihrer 100 T-Shirts entschuldigen. Wir haben Ihre Bestellung erhalten und Ihre Zahlung wurde erfolgreich abgewickelt, aber es gab unerwartete Verzögerungen beim Versand. Wir arbeiten daran das Problem so schnell wie möglich zu lösen und werden Sie über den Fortschritt auf dem Laufenden halten. Bitte überprüfen Sie auch Ihre Lieferadresse und Versandmethode, um sicherzustellen, dass sie korrekt sind und dass Ihre T-Shirts so bald wie möglich zu Ihnen geliefert werden.\nWir haben verstanden, dass Sie einen Rabatt wünschen, aber unser Unternehmen ist bestrebt, unseren Kunden eine hochwertige Dienstleistung und Produkte anzubieten. Anstatt eines Rabatts, würden wir Ihnen gerne die Versandkosten erstatten oder Ihnen einen Gutschein für zukünftige Einkäufe anbieten. Wir hoffen, dass diese Lösung Ihre Zufriedenheit sicherstellen wird.\nFalls Sie weitere Fragen oder Bedenken haben, stehen wir Ihnen gerne zu Verfügung.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v8_b",
+   "part": "BESCHWERDE",
+   "title": "Вариант 8 · Die mangelhafte Lieferung",
+   "note": "Новый вариант №8, № 160201, 160221, 100%",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\nmich erreichte die untenstehende E-Mail. Bitte kümmern Sie sich darum und antworten Sie dem Kunden höflich. Entschuldigen Sie sich für die verschmutzte Ware. Der geforderte Rabatt von 60% ist unverschämt. Bieten Sie ihm eine andere Lösung an. Die Nachlieferung der T-Shirts ist leider wegen unserer Mitarbeitersituation erst bis zum 12.05. möglich. Erklären Sie den Grund.\nVielen Dank\nSiegfried Mayer\nTeamleiter"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Mayer,\nleider müssen wir Ihnen mitteilen, dass Ihre Lieferung nicht zu unserer Zufriedenheit ausgefallen ist. Wir müssen zwei Punkte beanstanden. Erstens wurden die Verpackungen der Hosen (Größe M und L) beim Transport beschädigt, sodass der Inhalt verschmutzt ist. In diesem Zustand können wir die Waren auf keinen Fall in den regulären Verkauf geben, sondern sie nur mit einem Rabatt anbieten. Wir halten daher einen Preisnachlass von 60% für angemessen. Des Weiteren teilen wir Ihnen mit, dass von den T-Shirts mit Aufdruck statt der bezahlten 100 Stück nur die Hälfte geliefert wurde. Wegen der beginnenden Sommersaison bitten wir um schnellstmögliche Nachlieferung der fehlenden Stückzahl auf Ihre Kosten spätestens bis zum 10.05. Wir hoffen, dass sich derartige Vorkommnisse in Zukunft vermeiden lassen, und bitten um prompte Erledigung.\nMit freundlichen Grüßen\nMatthias Schramm"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Herr Schramm",
+       "options": [
+        {
+         "key": "a",
+         "text": "bemängelt Qualität und Menge der Lieferung."
+        },
+        {
+         "key": "b",
+         "text": "fand die gesamte Lieferung beschädigt vor."
+        },
+        {
+         "key": "c",
+         "text": "verlangt wegen der Lieferungsverzögerung einen Rabatt."
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 20,
+       "prompt": "Die Nachlieferung",
+       "options": [
+        {
+         "key": "a",
+         "text": "bezahlt der Kunde."
+        },
+        {
+         "key": "b",
+         "text": "kommt im Sommer."
+        },
+        {
+         "key": "c",
+         "text": "umfasst 50 T-Shirts."
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Sie antworten Herrn Schramm im Namen Ihrer Firma (Nummer 21: Schreiben Sie eine E-Mail an den Kunden). Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "sich für die verschmutzte Ware entschuldigen",
+     "Der geforderte Rabatt von 60% ist unverschämt – eine andere Lösung anbieten",
+     "Die Nachlieferung der T-Shirts ist erst bis zum 12.05. möglich",
+     "den Grund erklären (Mitarbeitersituation)"
+    ],
+    "sampleAnswer": "Вариант 1\nSehr geehrter Herr Schramm,\nvielen Dank für Ihre E-Mail, in der Sie uns darüber informieren, dass Sie mit der gelieferten Ware nicht zufrieden sind. Wir entschuldigen uns für die verschmutzten Hosen, können Ihnen aber keinen Preisnachlass in Höhe von 60 Prozent geben. Bitte schicken Sie uns die Hosen zurück. Wir werden Ihnen die Hosen in Größe M und L erneut in einwandfreier Qualität schicken. Aufgrund eines hohen Krankenstandes in unserer Firma ist die Nachlieferung der T-Shirts erst zum 12.05. möglich. Ich hoffe, dass Sie damit einverstanden sind. Bitte lassen Sie uns wissen, ob Sie mit unserem Vorschlag einverstanden sind.\nMit freundlichen Grüßen\nВариант 2\nSehr geehrter Herr Schramm,\nvielen Dank für Ihre E-Mail und für die Hinweise zu unserer letzten Lieferung. Wir bedauern die Unannehmlichkeiten und entschuldigen uns für die verschmutzten Waren sowie die unvollständige Lieferung.\nZu den beschädigten Hosen bieten wir Ihnen einen Preisnachlass von 20 % an. Alternativ können Sie uns die Artikel zurücksenden, und wir liefern Ersatz. Der von Ihnen vorgeschlagene Nachlass von 60 % ist leider nicht möglich.\nDie fehlenden T-Shirts werden wir schnellstmöglich nachliefern, jedoch ist dies aufgrund unserer aktuellen Personalsituation erst bis zum 12.05. realisierbar. Die zusätzlichen Versandkosten übernehmen selbstverständlich wir. Wir entschuldigen uns nochmals und danken Ihnen für Ihr Verständnis. Sollten Sie weitere Fragen haben, stehen wir Ihnen gerne jederzeit zur Verfügung.\nMit freundlichen Grüßen"
+   }
+  },
+  {
+   "id": "beschwerde_v9",
+   "part": "BESCHWERDE",
+   "title": "Вариант 9 · Pflanzenlieferung",
+   "segments": [
+    {
+     "instruction": "Lesen Sie die E-Mails und beantworten Sie die Fragen 19 und 20 (Lesen und Schreiben, Teil Beschwerde).",
+     "passages": [
+      {
+       "title": "Interne E-Mail",
+       "body": "Hallo,\ndie folgende E-Mail ist gestern bei mir eingegangen. Was war denn da los?\nBitte antworten Sie der Kundin höflich und machen Sie Vorschläge für unsere weitere Zusammenarbeit. Wir schätzen Frau Talheim als langjährige Kundin und möchten sie deshalb nicht verlieren. Teilen Sie ihr bitte auch mit, was wir ihr als Entschädigung für die entstandenen Unannehmlichkeiten anbieten. Vielen Dank und viele Grüße\nMichael Herrmann\nTeamleiter"
+      },
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Herrmann,\nleider müssen wir Ihnen mitteilen, dass Ihre Pflanzen- und Blumenauswahl für unsere letzte Veranstaltung gänzlich unpassend war. Wie Sie wissen, war das Thema unserer Ausstellung in der vergangenen Woche: „Nachhaltigkeit & Umweltverträglichkeit im Gartenbau – Lokal und Regional“. Und Sie haben im Eingangsbereich aus dem fernen Ausland importierte exotische Pflanzen platziert, was verständlicherweise zu Beschwerden von Seiten der Besucher geführt hat. Zudem wollten wir den diesjährigen Umweltpreis zusammen mit Blumensträußen vergeben. Diese waren aber mit Orchideen bestückt. Wie passt das zum Thema „regional“? In dieser Situation haben wir daher entschieden, kurzfristigen Ersatz für die Sträuße von einem Aussteller zu beschaffen. Wir bitten Sie, diese zusätzlichen Kosten zu ersetzen. Solche Vorkommnisse müssen in Zukunft unter allen Umständen vermieden werden. Wir erwarten Ihre Vorschläge und stehen für ein Gespräch jederzeit zur Verfügung.\nMit freundlichen Grüßen\nGabi Talheim"
+      }
+     ],
+     "questions": [
+      {
+       "number": 19,
+       "prompt": "Der Lieferant hat",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Dekoration passend zum Thema ausgewählt."
+        },
+        {
+         "key": "b",
+         "text": "die falsche Blumenauswahl getroffen."
+        },
+        {
+         "key": "c",
+         "text": "Ersatzsträuße aus der Region bestellt."
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 20,
+       "prompt": "Der Veranstalter musste",
+       "options": [
+        {
+         "key": "a",
+         "text": "an einen Aussteller Blumen liefern."
+        },
+        {
+         "key": "b",
+         "text": "auf die Beschwerden der Besucher reagieren."
+        },
+        {
+         "key": "c",
+         "text": "den Umweltpreis ohne Blumen überreichen."
+        }
+       ],
+       "answer": "b"
+      }
+     ]
+    }
+   ],
+   "writing": {
+    "kind": "BESCHWERDE",
+    "situation": "Antworten Sie Frau Talheim im Namen Ihrer Firma (Nummer 21: Schreiben Sie eine E-Mail an die Kundin). Beachten Sie die Anweisungen in der internen E-Mail.",
+    "points": [
+     "der Kundin höflich antworten",
+     "Vorschläge für unsere weitere Zusammenarbeit machen",
+     "mitteilen, was wir ihr als Entschädigung für die entstandenen Unannehmlichkeiten anbieten"
+    ],
+    "sampleAnswer": "Sehr geehrte Frau Talheim,\nwir bedanken uns für Ihre E-Mail sowie für den Hinweis auf unser Versehen beziehungsweise darauf, dass Sie statt der bestellten regionalen Blumen Orchideen erhalten haben. Im Namen des ganzen Teams entschuldigen wir uns für die entstandenen Unannehmlichkeiten. Der Grund der falschen Lieferung liegt darin, dass die Artikelnummern während des Bestellprozesses verwechselt wurden. Dadurch haben wir exotische Blumen zukommen lassen, die nicht für das Thema Ihrer Ausstellung geeignet waren. Bezüglich der Situation, dass Sie umgehend eine Ersatzlösung über einen anderen Lieferanten finden mussten, werden wir selbstverständlich die dadurch entstandenen Kosten übernehmen. Darüber hinaus gewähren wir Ihnen einen Preisnachlass von 15% auf die nächste Bestellung. Alternativ kann ein Gutschein für zusätzliche Leistungen angeboten werden. Bitte lassen Sie uns wissen, welche Lösung Sie bevorzugen. Wir würden uns freuen, Sie weiterhin zu unseren zufriedenen Kunden zählen zu dürfen.\nMit freundlichen Grüßen"
+   }
+  }
+ ]
+}

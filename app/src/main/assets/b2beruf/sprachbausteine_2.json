@@ -1,0 +1,1414 @@
+{
+ "part": "SPRACHBAUSTEINE_2",
+ "variants": [
+  {
+   "id": "sprachbausteine_2_v1",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 1",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Stornierung des Auftrages mit Nr. RB 2876/20",
+       "body": "Sehr geehrte Damen und Herren,\nnach dem Besuch Ihres Vertriebsmitarbeiters entschieden wir uns für {{52}} von zwei Kaffeevollautomaten für unsere Krankenhauskantine.\nUnsere Auftragserteilung erfolgte in KW 12. Wir {{53}} eine Auftragsbestätigung mit Liefertermin in KW 16.\n{{54}} der Lieferfrist haben wir Sie telefonisch mehrmals eindringlich darauf hingewiesen, dass wir die Maschinen dringend benötigen.\n{{55}} wir uns in KW 18 und haben die Lieferung immer noch nicht erhalten.\nWir räumen Ihnen letztmalig eine Lieferfrist bis Ablauf der KW 20 ein. Sollte die Ware bis dahin {{56}} sein, machen wir von unserem Widerrufsrecht Gebrauch und stornieren unsere Bestellung. Wir bitten um Ihr Verständnis.\nBitte schicken Sie uns umgehend eine {{57}}.\nMit freundlichen Grüßen\nEva Al Hossan"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "einen Auftrag"
+        },
+        {
+         "key": "b",
+         "text": "eine Bestellung"
+        },
+        {
+         "key": "c",
+         "text": "eine Anforderung"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommen danach"
+        },
+        {
+         "key": "b",
+         "text": "bestellten dann"
+        },
+        {
+         "key": "c",
+         "text": "erhielten daraufhin"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Beim Verlauf"
+        },
+        {
+         "key": "b",
+         "text": "Nach Ablauf"
+        },
+        {
+         "key": "c",
+         "text": "Vor dem Zulauf"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Mittlerweile befinden"
+        },
+        {
+         "key": "b",
+         "text": "Zurzeit haben"
+        },
+        {
+         "key": "c",
+         "text": "Zwischenzeitlich sind"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "nicht eingetroffen"
+        },
+        {
+         "key": "b",
+         "text": "nicht erbracht"
+        },
+        {
+         "key": "c",
+         "text": "nicht erhalten"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "schriftliche Auftragsbestätigung"
+        },
+        {
+         "key": "b",
+         "text": "schriftliche Kündigung"
+        },
+        {
+         "key": "c",
+         "text": "schriftliche Stellungnahme"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v1_b",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 1 · версия 07.2024",
+   "note": "Новый вариант от 07.2024 (изменены пункты 52 и 54), 100%. Тест от 07.02.2025",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Verspätete Lieferung des Auftrages mit Nr. RB 2876/20",
+       "body": "Sehr geehrte Damen und Herren,\nnach dem Besuch Ihres Vertriebsmitarbeiters entschieden wir uns für {{52}} von zwei Kaffeevollautomaten für unsere Krankenhauskantine.\nUnsere Auftragserteilung erfolgte in KW 12. Wir {{53}} eine Auftragsbestätigung mit Liefertermin in KW 16.\nNach Ablauf der Lieferfrist haben wir Sie telefonisch mehrmals eindringlich {{54}}, dass wir die Maschinen dringend benötigen.\n{{55}} wir uns in KW 18 und haben die Lieferung immer noch nicht erhalten.\nWir räumen Ihnen letztmalig eine Lieferfrist bis Ablauf der KW 20 ein. Sollte die Ware bis dahin {{56}} sein, machen wir von unserem Widerrufsrecht Gebrauch und stornieren unsere Bestellung. Wir bitten um Ihr Verständnis.\nBitte schicken Sie uns umgehend eine {{57}}.\nMit freundlichen Grüßen\nEva Al Hossan"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "den Erwerb"
+        },
+        {
+         "key": "b",
+         "text": "den Verkauf"
+        },
+        {
+         "key": "c",
+         "text": "den Verleih"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "bekommen danach"
+        },
+        {
+         "key": "b",
+         "text": "bestellten dann"
+        },
+        {
+         "key": "c",
+         "text": "erhielten daraufhin"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "darauf hingewiesen"
+        },
+        {
+         "key": "b",
+         "text": "davor gewarnt"
+        },
+        {
+         "key": "c",
+         "text": "diesbezüglich gefragt"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Mittlerweile befinden"
+        },
+        {
+         "key": "b",
+         "text": "Zurzeit haben"
+        },
+        {
+         "key": "c",
+         "text": "Zwischenzeitlich sind"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "nicht eingetroffen"
+        },
+        {
+         "key": "b",
+         "text": "nicht erbracht"
+        },
+        {
+         "key": "c",
+         "text": "nicht erhalten"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "schriftliche Auftragsbestätigung"
+        },
+        {
+         "key": "b",
+         "text": "schriftliche Kündigung"
+        },
+        {
+         "key": "c",
+         "text": "schriftliche Stellungnahme"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v2",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 2",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Ihre Beschwerde bezüglich des beschädigten Produktes",
+       "body": "Sehr geehrte Frau Janiashvilli,\nwir danken Ihnen für Ihr Schreiben, mit dem Sie uns auf die Schäden an der Bettcouch aufmerksam machen, die Sie bei uns gekauft haben. Wir haben {{52}} und teilen Ihre Ansicht. Offensichtlich ist bei unserer Qualitätskontrolle {{53}} worden. {{54}} hätte die Couch nicht ausgeliefert werden dürfen.\nHeute erhalten Sie das Ersatzprodukt, das beschädigte Möbelstück wird dann kostenlos mitgenommen. Wir bitten Sie, die entstandenen {{55}}, und wünschen Ihnen viel Vergnügen mit Ihrem neuen Sitzmöbel. Ihre Reklamation haben wir an die Abteilung für Qualitätssicherung weitergegeben, um sicherzustellen, dass solche Fehler zukünftig vermieden werden. Als kleines Dankeschön für Ihr Verständnis finden Sie anbei einen Gutschein {{56}} 50 Euro für Ihren nächsten Besuch in unserem Haus.\nWir würden uns freuen, Sie bald wieder in einer unserer Filialen {{57}}.\nMit freundlichen Grüßen\nLudmilla Dombrowski\nLeiterin Kundenservice"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ihren Auftrag angenommen"
+        },
+        {
+         "key": "b",
+         "text": "Ihre Bestellung erhalten"
+        },
+        {
+         "key": "c",
+         "text": "Ihre Reklamation geprüft"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "das Problem unbemerkt"
+        },
+        {
+         "key": "b",
+         "text": "der Mangel übersehen"
+        },
+        {
+         "key": "c",
+         "text": "der Schaden behoben"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Auf dieser Stelle"
+        },
+        {
+         "key": "b",
+         "text": "In diesem Zustand"
+        },
+        {
+         "key": "c",
+         "text": "Mit dieser Position"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Fehler zu beanstanden"
+        },
+        {
+         "key": "b",
+         "text": "Probleme zu berücksichtigen"
+        },
+        {
+         "key": "c",
+         "text": "Unannehmlichkeiten zu entschuldigen"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "für den Betrag von"
+        },
+        {
+         "key": "b",
+         "text": "in Höhe von"
+        },
+        {
+         "key": "c",
+         "text": "zum Preis von"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "begrüßen zu dürfen"
+        },
+        {
+         "key": "b",
+         "text": "beobachten zu dürfen"
+        },
+        {
+         "key": "c",
+         "text": "besuchen zu dürfen"
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v2_b",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 2 · новый вариант",
+   "note": "Новый вариант",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Ihre Beschwerde",
+       "body": "Sehr geehrte Frau Janiashvilli,\nvielen Dank für Ihr Schreiben, in dem Sie uns auf die Schäden an der bei uns bestellten Bettcouch hinweisen. Wir haben Ihre Reklamation anhand Ihrer mitgeschickten Fotos geprüft. Offensichtlich ist bei unserer Qualitätskontrolle {{52}} worden. Die Couch hätte {{53}} nicht ausgeliefert werden dürfen.\nSelbstverständlich erhalten Sie ein Ersatzprodukt, das beschädigte Möbelstück wird dann kostenlos mitgenommen. Wir bitten Sie, die entstandenen {{54}}. Rufen Sie uns gerne an und teilen Sie uns mit, zu welchem Termin wir die neue {{55}} sollen. Als Entschuldigung finden Sie anbei einen Gutschein {{56}} 50 Euro.\nWir würden uns freuen, Sie bald wieder in einer unserer Filialen {{57}}.\nMit freundlichen Grüßen\nLudmilla Dombrowski"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "das Problem verursacht"
+        },
+        {
+         "key": "b",
+         "text": "der Mangel übersehen"
+        },
+        {
+         "key": "c",
+         "text": "der Schaden behoben"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "an diesen Ort"
+        },
+        {
+         "key": "b",
+         "text": "in diesem Zustand"
+        },
+        {
+         "key": "c",
+         "text": "zu diesem Zeitpunkt"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Fehler zu beanstanden"
+        },
+        {
+         "key": "b",
+         "text": "Probleme zu berücksichtigen"
+        },
+        {
+         "key": "c",
+         "text": "Unannehmlichkeiten zu entschuldigen"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Bestellung aufnehmen"
+        },
+        {
+         "key": "b",
+         "text": "Bettcouch abholen"
+        },
+        {
+         "key": "c",
+         "text": "Lieferung veranlassen"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "für den Betrag von"
+        },
+        {
+         "key": "b",
+         "text": "in Höhe von"
+        },
+        {
+         "key": "c",
+         "text": "zum Preis von"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "begrüßen zu dürfen"
+        },
+        {
+         "key": "b",
+         "text": "beobachten zu dürfen"
+        },
+        {
+         "key": "c",
+         "text": "besuchen zu dürfen"
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v3",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 3",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Zahlungserinnerung",
+       "body": "Sehr geehrter Herr Batic,\nIn Oktober haben wir in Ihrem Firmengebäude an der Heizungsanlage Reparaturarbeiten ausgeführt. Da wir {{52}} gehört haben, gehen wir davon aus, dass alles zu Ihrer Zufriedenheit war.\nAllerdings ist bislang für unsere Rechnung Nr. 2008/123 in Höhe von 2.746,- Euro leider keine {{53}}.\nFür den Fall, dass die Rechnung bei Ihnen verloren gegangen ist, senden wir Ihnen anbei eine neue mit der Bitte um {{54}}.\nDa der Betrag bereits am 31. Oktober {{55}} war, können wir Ihnen den eingeräumten Skonto von 2% leider nicht mehr {{56}}. Wir bitten um Verständnis.\nSollten Sie die Rechnung {{57}} bezahlt haben, betrachten Sie dieses Schreiben bitte als gegenstandslos.\nMit freundlichen Grüßen\nIlka Desgrane (Heizung und Sanitär Resch)"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "nichts Gegenteiliges"
+        },
+        {
+         "key": "b",
+         "text": "nur Anderes"
+        },
+        {
+         "key": "c",
+         "text": "viel Negatives"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Auszahlung veranlasst"
+        },
+        {
+         "key": "b",
+         "text": "Einzahlung gemacht"
+        },
+        {
+         "key": "c",
+         "text": "Zahlung eingegangen"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "nachfolgenden Betrag"
+        },
+        {
+         "key": "b",
+         "text": "schnellstmögliche Überweisung"
+        },
+        {
+         "key": "c",
+         "text": "zeitnahe Korrektur"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "abgelaufen"
+        },
+        {
+         "key": "b",
+         "text": "fällig"
+        },
+        {
+         "key": "c",
+         "text": "verspätet"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "gewähren"
+        },
+        {
+         "key": "b",
+         "text": "leisten"
+        },
+        {
+         "key": "c",
+         "text": "überreichen"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "infolgedessen"
+        },
+        {
+         "key": "b",
+         "text": "währenddessen"
+        },
+        {
+         "key": "c",
+         "text": "zwischenzeitlich"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v4",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 4",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "body": "Sehr geehrte Damen und Herren,\nvielen Dank für Ihr Interesse an unseren Leistungen. Für den regelmäßigen Reinigungsservice Ihres Restaurants hatten wir Ihnen am 24.11. ein Angebot {{52}} unterbreitet. Wie aus der Übersicht auf der zweiten Seite hervorgeht, ist eine Reinigung Ihrer Räumlichkeiten auch am frühen Sonntagmorgen für uns selbstverständlich ohne Probleme machbar. Für diesen Service berechnen wir im Rahmen unserer Rabattaktion keinen Wochenendzuschlag. Hatten Sie schon die Möglichkeit, {{53}}? Bitte denken Sie daran, dass die erwähnte Rabattaktion nur noch bis Ende des Jahres {{54}}. Sollten Sie dazu noch Fragen haben, zögern Sie bitte nicht, sich mit uns {{55}}. Unsere Mitarbeiter im Kundenservice {{56}} Ihnen gerne jederzeit zur Verfügung. Wir freuen uns, Sie zukünftig {{57}} zu können.\nMit freundlichen Grüßen\nHelmuth Heidinger („Tiptop-Service\")"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "aufgrund Ihrer Erfahrung"
+        },
+        {
+         "key": "b",
+         "text": "gemäß Ihren Wünschen"
+        },
+        {
+         "key": "c",
+         "text": "laut Ihrer Zusage"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "das Angebot zu prüfen"
+        },
+        {
+         "key": "b",
+         "text": "die Chancen zu nutzen"
+        },
+        {
+         "key": "c",
+         "text": "die Gelegenheit zu bieten"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "gültig ist"
+        },
+        {
+         "key": "b",
+         "text": "anerkannt wird"
+        },
+        {
+         "key": "c",
+         "text": "einlösbar bleibt"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "in Kontakt zu treten"
+        },
+        {
+         "key": "b",
+         "text": "in Verbindung zu setzen"
+        },
+        {
+         "key": "c",
+         "text": "zur Verfügung zu stellen"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "sind"
+        },
+        {
+         "key": "b",
+         "text": "stehen"
+        },
+        {
+         "key": "c",
+         "text": "stellen"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "bei unseren Kunden besuchen"
+        },
+        {
+         "key": "b",
+         "text": "mit unseren Kunden begrüßen"
+        },
+        {
+         "key": "c",
+         "text": "zu unseren Kunden zählen"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v5",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 5",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Auftragsbestätigung",
+       "body": "Sehr geehrte Frau Mackbock,\nich danke Ihnen für Ihre Bestellung und bestätige hiermit die Zustellung des PKW Bulldog zum Preis von 1078 Euro zzgl. MwSt. an die von {{52}} Lieferadresse. Sollte die Ihre Rechnungsadresse nicht mit der Lieferadresse übereinstimmen, teilen Sie uns dies bitte bis spätestens 07.07 schriftlich mit.\nDie Rechnungszustellung erfolgt per Post. Bitte beachten Sie, dass wir bei Zahlung des Kaufpreises innerhalb von sieben Tagen nach Lieferung {{53}}. Ansonsten muss der Rechnungsbetrag bis 30 Tagen nach Wareneingang {{54}}.\nDie detaillierten Konditionen {{55}} unseren allgemeinen Geschäftsbedingungen auf der Rückseite dieser Auftragsbestätigung.\nBei Rückfragen steht Ihnen unser 24-Stunden-Service unter der Rufnummer 0175 545621 zur Verfügung. Bitte halten Sie hierzu Ihre {{56}}.\nWir versprechen Ihnen eine zuverlässige {{57}} und sind sicher, dass Sie mit unserem Produkt zufrieden sein werden.\nMit freundlichen Grüßen\nChristoph Sellert"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ihnen angegebene"
+        },
+        {
+         "key": "b",
+         "text": "ihr angeordnete"
+        },
+        {
+         "key": "c",
+         "text": "mir angeführte"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "drei Prozent Ermäßigung bezahlen"
+        },
+        {
+         "key": "b",
+         "text": "drei Prozent Rabatt wünschen"
+        },
+        {
+         "key": "c",
+         "text": "drei Prozent Skonto gewähren"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "beglichen werden"
+        },
+        {
+         "key": "b",
+         "text": "dokumentiert werden"
+        },
+        {
+         "key": "c",
+         "text": "verhandelt werden"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "entnehmen Sie bitte"
+        },
+        {
+         "key": "b",
+         "text": "erfahren Sie direkt"
+        },
+        {
+         "key": "c",
+         "text": "finden Sie gerne"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Auftragsnummer bereit"
+        },
+        {
+         "key": "b",
+         "text": "Kundennummer fest"
+        },
+        {
+         "key": "c",
+         "text": "Rechnungsnummer an"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ausführung Ihres Auftrags"
+        },
+        {
+         "key": "b",
+         "text": "Bearbeitung Ihrer Anfrage"
+        },
+        {
+         "key": "c",
+         "text": "Durchführung Ihrer Arbeit"
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v5_b",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 5 · новый вариант",
+   "note": "Новый вариант, изменён люк №55",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Auftragsbestätigung",
+       "body": "Sehr geehrte Frau Mackbock,\nich danke Ihnen für Ihre Bestellung und bestätige hiermit die Zustellung des PKW Bulldog zum Preis von 1078 Euro zzgl. MwSt. an die von {{52}} Lieferadresse. Sollte die Ihre Rechnungsadresse nicht mit der Lieferadresse übereinstimmen, teilen Sie uns dies bitte bis spätestens 07.07 schriftlich mit.\nDie Rechnungszustellung erfolgt per Post. Bitte beachten Sie, dass wir bei Zahlung des Kaufpreises innerhalb von sieben Tagen nach Lieferung {{53}}. Ansonsten muss der Rechnungsbetrag bis 30 Tagen nach Wareneingang {{54}}.\nDie detaillierten Konditionen {{55}} in unseren allgemeinen Geschäftsbedingungen auf der Rückseite unserer Auftragsbestätigung.\nBei Rückfragen steht Ihnen unser 24-Stunden-Service unter der Rufnummer 0175 345621 zur Verfügung. Bitte halten Sie hierzu Ihre {{56}}.\nWir versprechen Ihnen eine zuverlässige {{57}} und sind sicher, dass Sie mit unserem Produkt zufrieden sein werden.\nMit freundlichen Grüßen\nChristoph Sellert"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ihnen angegebene"
+        },
+        {
+         "key": "b",
+         "text": "ihr angeordnete"
+        },
+        {
+         "key": "c",
+         "text": "mir angeführte"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "3% Ermäßigung bezahlen"
+        },
+        {
+         "key": "b",
+         "text": "3% Rabatt wünschen"
+        },
+        {
+         "key": "c",
+         "text": "3% Skonto gewähren"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "beglichen werden"
+        },
+        {
+         "key": "b",
+         "text": "dokumentiert werden"
+        },
+        {
+         "key": "c",
+         "text": "verhandelt werden"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "erklären Sie"
+        },
+        {
+         "key": "b",
+         "text": "schreiben Sie"
+        },
+        {
+         "key": "c",
+         "text": "finden Sie gerne"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Auftragsnummer bereit"
+        },
+        {
+         "key": "b",
+         "text": "Kundennummer fest"
+        },
+        {
+         "key": "c",
+         "text": "Rechnungsnummer an"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ausführung Ihres Auftrags"
+        },
+        {
+         "key": "b",
+         "text": "Bearbeitung Ihrer Anfrage"
+        },
+        {
+         "key": "c",
+         "text": "Durchführung Ihrer Arbeit"
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v6",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 6",
+   "note": "Тест №150321, 150301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Angebot",
+       "body": "Sehr geehrte Damen und Herren,\nwir danken Ihnen für Ihre Anfrage vom 08.12.20xx und unterbreiten Ihnen {{52}} acht Schreibtischcontainer MV 17 WW weiß zum Preis von je 156,99 Euro netto. Ab einem Auftragswert von 900,00 Euro liefern wir frei Haus, ansonsten fällt eine Lieferpauschale {{53}} von 39,00 Euro an.\nGerne montieren wir die Möbel auch vor Ort. Die Kosten für den Aufbau {{54}} nach dem Warenwert und betragen 20% des Nettopreises. Natürlich besteht auch {{55}} die Ware in unserem Lager abzuholen und selbst aufzubauen.\n{{56}} ist 14 Tage bindend. Wir würden uns sehr freuen, {{57}} zu erhalten. Sollten Sie noch Fragen haben, stehen wir Ihnen gerne jederzeit zur Verfügung.\nMit freundlichen Grüßen\nLars Walter"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "folgendes Angebot"
+        },
+        {
+         "key": "b",
+         "text": "folgendes Ergebnis"
+        },
+        {
+         "key": "c",
+         "text": "folgende Informationen"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "in Absprache"
+        },
+        {
+         "key": "b",
+         "text": "in Bezug"
+        },
+        {
+         "key": "c",
+         "text": "in Höhe"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "belaufen sich"
+        },
+        {
+         "key": "b",
+         "text": "ergeben sich"
+        },
+        {
+         "key": "c",
+         "text": "richten sich"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "die Absicht"
+        },
+        {
+         "key": "b",
+         "text": "die Option"
+        },
+        {
+         "key": "c",
+         "text": "die Verpflichtung"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Diese Anfrage"
+        },
+        {
+         "key": "b",
+         "text": "Dieses Angebot"
+        },
+        {
+         "key": "c",
+         "text": "Diese Bestellung"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ihren Auftrag"
+        },
+        {
+         "key": "b",
+         "text": "Ihre Wünsche"
+        },
+        {
+         "key": "c",
+         "text": "Ihr Verständnis"
+        }
+       ],
+       "answer": "a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v7",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 7",
+   "note": "Тест №140321, 140301",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Fehlerhafte Lieferung",
+       "body": "Sehr geehrter Herr Sonneberg,\nvielen Dank für die schnelle Bearbeitung unserer Bestellung vom 29.10.\nFür die Einrichtung unserer Pausenräume hatten wir zehn Sitzeckbänken in der Farbe Weiß bestellt. {{52}} Sie zehn Tische und für jede Sitzeinheit drei Stühle in der gleichen Farbe liefern.\nLeider entspricht die Lieferung nicht {{53}}. Zwei von den zehn Sitzeckbänken wurden in Braun geliefert. Von den 30 Stühlen haben ebenfalls fünf die falsche Farbe. Wir bitten Sie, die reklamierten Möbelstücke {{54}}.\nAußerdem weisen zwei Tische Kratzer an der Oberfläche auf. Wir würden die Tische trotzdem behalten, wenn Sie dafür einen entsprechenden {{55}}. Könnten Sie uns hierfür {{56}}?\nWir bitten um {{57}}. Für Rückfragen stehen wir Ihnen jederzeit zur Verfügung.\nMit freundlichen Grüßen\nSonja Schmidt"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Dafür mussten"
+        },
+        {
+         "key": "b",
+         "text": "Daher konnten"
+        },
+        {
+         "key": "c",
+         "text": "Dazu sollten"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "unserem Angebot"
+        },
+        {
+         "key": "b",
+         "text": "unserem Vorschriften"
+        },
+        {
+         "key": "c",
+         "text": "unserer Bestellung"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "gleich zurückzuschicken"
+        },
+        {
+         "key": "b",
+         "text": "schnellstmöglich auszutauschen"
+        },
+        {
+         "key": "c",
+         "text": "sofort zu reparieren"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Aufpreis anbieten"
+        },
+        {
+         "key": "b",
+         "text": "Preisnachlass gewähren"
+        },
+        {
+         "key": "c",
+         "text": "Rabatt fordern"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "ein Angebot unterbreiten"
+        },
+        {
+         "key": "b",
+         "text": "ein Gutachten erstellen"
+        },
+        {
+         "key": "c",
+         "text": "eine Empfehlung geben"
+        }
+       ],
+       "answer": "b"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "baldige Bezahlung"
+        },
+        {
+         "key": "b",
+         "text": "gleichzeitige Stornierung"
+        },
+        {
+         "key": "c",
+         "text": "umgehende Antwort"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprachbausteine_2_v8",
+   "part": "SPRACHBAUSTEINE_2",
+   "title": "Вариант 8",
+   "note": "Тест №160201, 160221. В источнике приведены только правильные варианты ответов (остальные не указаны)",
+   "segments": [
+    {
+     "instruction": "Lesen Sie den Text und wählen Sie für die Lücken 52–57 die passende Lösung a, b oder c.",
+     "passages": [
+      {
+       "title": "Beschwerde",
+       "body": "Sehr geehrter Herr Vogel,\nwie Sie uns in {{52}} vom 08.08.20xx mitteilten, sollten wir unsere bestellte Ware bis zum 20.08.20xx erhalten. Leider ist sie bis heute nicht bei uns eingetroffen.\nDas hat uns sehr überrascht, da die Zusammenarbeit mit Ihrer Firma bisher immer {{53}} hat.\nWir hatten unserem Kunden die Fertigstellung des Büros bis Ende August zugesagt und können {{54}} nun nicht halten, was uns sehr ärgert.\nDeshalb bitten wir Sie, uns umgehend darüber zu informieren, wann die Möbelstücke definitiv geliefert werden, damit wir unserem Kunden eine {{55}} machen können.\nZusätzlich möchten wir darauf hinweisen, dass wir unserem Kunden {{56}} einen Rabatt von 10% gewähren. Diesen Betrag werden wir von Ihrer {{57}}.\nMit freundlichen Grüßen\nJogi Paulsen"
+      }
+     ],
+     "questions": [
+      {
+       "number": 52,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "Ihrer Auftragsbestätigung"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 53,
+       "prompt": "",
+       "options": [
+        {
+         "key": "c",
+         "text": "problemlos funktioniert"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 54,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "dieses Versprechen"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 55,
+       "prompt": "",
+       "options": [
+        {
+         "key": "c",
+         "text": "verbindliche Auskunft"
+        }
+       ],
+       "answer": "c"
+      },
+      {
+       "number": 56,
+       "prompt": "",
+       "options": [
+        {
+         "key": "a",
+         "text": "aufgrund des Zeitverzugs"
+        }
+       ],
+       "answer": "a"
+      },
+      {
+       "number": 57,
+       "prompt": "",
+       "options": [
+        {
+         "key": "c",
+         "text": "Rechnungssumme abziehen"
+        }
+       ],
+       "answer": "c"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
